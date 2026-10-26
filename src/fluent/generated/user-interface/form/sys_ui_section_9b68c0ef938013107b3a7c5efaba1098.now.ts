@@ -30,3 +30,21 @@ Record({
         sys_ui_section: '9b68c0ef938013107b3a7c5efaba1098',
     },
 })
+Record({
+    $id: Now.ID['dfe7e4eb938c13107b3a7c5efaba10aa'],
+    table: 'sys_ui_element',
+    data: {
+        element: 'status',
+        position: 2,
+        sys_ui_section: '9b68c0ef938013107b3a7c5efaba1098',
+    },
+})
+Record({
+    $id: Now.ID['9be7e4eb938c13107b3a7c5efaba10ab'],
+    table: 'sys_ui_element',
+    data: {
+        element: 'registration_number',
+        position: 3,
+        sys_ui_section: '9b68c0ef938013107b3a7c5efaba1098',
+    },
+})
