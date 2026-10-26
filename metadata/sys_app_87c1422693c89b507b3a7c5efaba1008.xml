@@ -16,7 +16,7 @@
         <logo/>
         <menu/>
         <name>Apollo-Hospitals</name>
-        <package_json/>
+        <package_json display_value="">x_2223823_apollo_0/x-2223823-apollo-hospitals/1.0.0/package.json</package_json>
         <package_resolver_version>1.0.0</package_resolver_version>
         <private>false</private>
         <restrict_table_access>false</restrict_table_access>
