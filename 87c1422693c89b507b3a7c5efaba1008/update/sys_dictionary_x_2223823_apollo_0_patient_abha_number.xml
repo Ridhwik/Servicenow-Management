@@ -29,7 +29,7 @@
         <function_field>false</function_field>
         <internal_type display_value="String">string</internal_type>
         <mandatory>false</mandatory>
-        <max_length>17</max_length>
+        <max_length>14</max_length>
         <name>x_2223823_apollo_0_patient</name>
         <next_element/>
         <primary>false</primary>
@@ -54,7 +54,7 @@
         <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
         <sys_update_name>sys_dictionary_x_2223823_apollo_0_patient_abha_number</sys_update_name>
         <sys_updated_by>jenish.jain</sys_updated_by>
-        <sys_updated_on>2026-10-26 12:05:18</sys_updated_on>
+        <sys_updated_on>2026-10-28 11:21:17</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
