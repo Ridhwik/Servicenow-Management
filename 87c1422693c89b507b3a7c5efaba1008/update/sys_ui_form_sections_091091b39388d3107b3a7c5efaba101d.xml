@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_ui_form_sections form_id="091091b39388d3107b3a7c5efaba101d" sys_domain="global" table="x_2223823_apollo_0_staff" version="3">
+        <sys_ui_form_section action="INSERT_OR_UPDATE">
+            <position>0</position>
+            <sys_created_by>nilesh.chaurasia</sys_created_by>
+            <sys_created_on>2026-10-27 06:50:31</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>851091b39388d3107b3a7c5efaba1022</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_overrides/>
+            <sys_ui_form display_value="x_2223823_apollo_0_staff" name="x_2223823_apollo_0_staff" sys_domain="global" view="Default view">091091b39388d3107b3a7c5efaba101d</sys_ui_form>
+            <sys_ui_section caption="Identity" display_value="Identity" name="x_2223823_apollo_0_staff" sys_domain="global" view="Default view">d638b867934053107b3a7c5efaba103a</sys_ui_section>
+            <sys_updated_by>nilesh.chaurasia</sys_updated_by>
+            <sys_updated_on>2026-10-27 06:50:31</sys_updated_on>
+        </sys_ui_form_section>
+        <sys_ui_form_section action="INSERT_OR_UPDATE">
+            <position>1</position>
+            <sys_created_by>nilesh.chaurasia</sys_created_by>
+            <sys_created_on>2026-10-27 06:50:32</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>c91091b39388d3107b3a7c5efaba1023</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_overrides/>
+            <sys_ui_form display_value="x_2223823_apollo_0_staff" name="x_2223823_apollo_0_staff" sys_domain="global" view="Default view">091091b39388d3107b3a7c5efaba101d</sys_ui_form>
+            <sys_ui_section caption="Roles &amp; Department" display_value="Roles &amp; Department" name="x_2223823_apollo_0_staff" sys_domain="global" view="Default view">051091b39388d3107b3a7c5efaba100a</sys_ui_section>
+            <sys_updated_by>nilesh.chaurasia</sys_updated_by>
+            <sys_updated_on>2026-10-27 06:50:32</sys_updated_on>
+        </sys_ui_form_section>
+        <sys_ui_form_section action="INSERT_OR_UPDATE">
+            <position>2</position>
+            <sys_created_by>nilesh.chaurasia</sys_created_by>
+            <sys_created_on>2026-10-27 06:50:32</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>491091b39388d3107b3a7c5efaba102a</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_overrides/>
+            <sys_ui_form display_value="x_2223823_apollo_0_staff" name="x_2223823_apollo_0_staff" sys_domain="global" view="Default view">091091b39388d3107b3a7c5efaba101d</sys_ui_form>
+            <sys_ui_section caption="Reports To" display_value="Reports To" name="x_2223823_apollo_0_staff" sys_domain="global" view="Default view">011091b39388d3107b3a7c5efaba100c</sys_ui_section>
+            <sys_updated_by>nilesh.chaurasia</sys_updated_by>
+            <sys_updated_on>2026-10-27 06:50:32</sys_updated_on>
+        </sys_ui_form_section>
+        <sys_ui_form_section action="INSERT_OR_UPDATE">
+            <position>3</position>
+            <sys_created_by>nilesh.chaurasia</sys_created_by>
+            <sys_created_on>2026-10-27 06:50:32</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>0d1091b39388d3107b3a7c5efaba1031</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_overrides/>
+            <sys_ui_form display_value="x_2223823_apollo_0_staff" name="x_2223823_apollo_0_staff" sys_domain="global" view="Default view">091091b39388d3107b3a7c5efaba101d</sys_ui_form>
+            <sys_ui_section caption="Work Schedule" display_value="Work Schedule" name="x_2223823_apollo_0_staff" sys_domain="global" view="Default view">c11091b39388d3107b3a7c5efaba101a</sys_ui_section>
+            <sys_updated_by>nilesh.chaurasia</sys_updated_by>
+            <sys_updated_on>2026-10-27 06:50:32</sys_updated_on>
+        </sys_ui_form_section>
+        <sys_ui_form_section action="INSERT_OR_UPDATE">
+            <position>4</position>
+            <sys_created_by>nilesh.chaurasia</sys_created_by>
+            <sys_created_on>2026-10-27 06:50:32</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>c51091b39388d3107b3a7c5efaba1039</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_overrides/>
+            <sys_ui_form display_value="x_2223823_apollo_0_staff" name="x_2223823_apollo_0_staff" sys_domain="global" view="Default view">091091b39388d3107b3a7c5efaba101d</sys_ui_form>
+            <sys_ui_section caption="Status" display_value="Status" name="x_2223823_apollo_0_staff" sys_domain="global" view="Default view">cd1091b39388d3107b3a7c5efaba101b</sys_ui_section>
+            <sys_updated_by>nilesh.chaurasia</sys_updated_by>
+            <sys_updated_on>2026-10-27 06:50:32</sys_updated_on>
+        </sys_ui_form_section>
+        <sys_ui_form action="INSERT_OR_UPDATE">
+            <name>x_2223823_apollo_0_staff</name>
+            <roles/>
+            <sys_class_name>sys_ui_form</sys_class_name>
+            <sys_created_by>nilesh.chaurasia</sys_created_by>
+            <sys_created_on>2026-10-27 06:50:31</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>091091b39388d3107b3a7c5efaba101d</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>x_2223823_apollo_0_staff</sys_name>
+            <sys_overrides/>
+            <sys_package display_value="Apollo-Hospitals" source="x_2223823_apollo_0">87c1422693c89b507b3a7c5efaba1008</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
+            <sys_update_name>sys_ui_form_sections_091091b39388d3107b3a7c5efaba101d</sys_update_name>
+            <sys_updated_by>nilesh.chaurasia</sys_updated_by>
+            <sys_updated_on>2026-10-27 06:50:31</sys_updated_on>
+            <sys_user/>
+            <view display_value="Default view" name="NULL">Default view</view>
+            <view_name/>
+        </sys_ui_form>
+    </sys_ui_form_sections>
+</record_update>

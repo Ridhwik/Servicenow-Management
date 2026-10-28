@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_app_module">
+    <sys_app_module action="DELETE">
+        <active>true</active>
+        <application display_value="Apollo Hospital ">fa536c2f934c13107b3a7c5efaba10a2</application>
+        <assessment/>
+        <device_type/>
+        <filter/>
+        <hint/>
+        <homepage/>
+        <image/>
+        <karuna_route/>
+        <link_type>LIST</link_type>
+        <map_page/>
+        <mobile_title>Doctor Hospital Assignments</mobile_title>
+        <mobile_view_name>Mobile</mobile_view_name>
+        <name>x_2223823_apollo_0_doctor_hospital_assignment</name>
+        <order/>
+        <override_menu_roles>false</override_menu_roles>
+        <query/>
+        <report/>
+        <require_confirmation>true</require_confirmation>
+        <roles>x_2223823_apollo_0.doctor_hospital_assignment_user</roles>
+        <route/>
+        <screen/>
+        <sys_class_name>sys_app_module</sys_class_name>
+        <sys_created_by>nilesh.chaurasia</sys_created_by>
+        <sys_created_on>2026-10-27 10:24:29</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>c70106ff930017107b3a7c5efaba102b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Doctor Hospital Assignments</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Apollo-Hospitals" source="x_2223823_apollo_0">87c1422693c89b507b3a7c5efaba1008</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
+        <sys_update_name>sys_app_module_c70106ff930017107b3a7c5efaba102b</sys_update_name>
+        <sys_updated_by>nilesh.chaurasia</sys_updated_by>
+        <sys_updated_on>2026-10-27 10:24:29</sys_updated_on>
+        <timeline_page/>
+        <title>Doctor Hospital Assignments</title>
+        <uncancelable>false</uncancelable>
+        <ux_list/>
+        <view_name/>
+        <window_name/>
+    </sys_app_module>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</application>
+        <file_path/>
+        <instance_id>1dfc152d3beccb18677f04e0b5e45aed</instance_id>
+        <instance_name>dev393999</instance_name>
+        <name>sys_app_module_c70106ff930017107b3a7c5efaba102b</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_app_module"><sys_app_module action="INSERT_OR_UPDATE"><active>true</active><application display_value="Apollo Hospital ">fa536c2f934c13107b3a7c5efaba10a2</application><assessment/><device_type/><filter/><hint/><homepage/><image/><karuna_route/><link_type>LIST</link_type><map_page/><mobile_title>Doctor Hospital Assignments</mobile_title><mobile_view_name>Mobile</mobile_view_name><name>x_2223823_apollo_0_doctor_hospital_assignment</name><order/><override_menu_roles>false</override_menu_roles><query/><report/><require_confirmation>true</require_confirmation><roles>x_2223823_apollo_0.doctor_hospital_assignment_user</roles><route/><screen/><sys_class_name>sys_app_module</sys_class_name><sys_created_by>nilesh.chaurasia</sys_created_by><sys_created_on>2026-10-27 10:24:29</sys_created_on><sys_domain>global</sys_domain><sys_domain_path>/</sys_domain_path><sys_id>c70106ff930017107b3a7c5efaba102b</sys_id><sys_mod_count>0</sys_mod_count><sys_name>Doctor Hospital Assignments</sys_name><sys_overrides/><sys_package display_value="Apollo-Hospitals" source="x_2223823_apollo_0">87c1422693c89b507b3a7c5efaba1008</sys_package><sys_policy/><sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope><sys_update_name>sys_app_module_c70106ff930017107b3a7c5efaba102b</sys_update_name><sys_updated_by>nilesh.chaurasia</sys_updated_by><sys_updated_on>2026-10-27 10:24:29</sys_updated_on><timeline_page/><title>Doctor Hospital Assignments</title><uncancelable>false</uncancelable><ux_list/><view_name/><window_name/></sys_app_module></record_update>]]></payload>
+        <payload_hash>-1228497835</payload_hash>
+        <record_name>Doctor Hospital Assignments</record_name>
+        <reverted_from/>
+        <source>ec5b916393c853107b3a7c5efaba1073</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>nilesh.chaurasia</sys_created_by>
+        <sys_created_on>2026-10-27 10:24:29</sys_created_on>
+        <sys_id>4b0106ff930017107b3a7c5efaba1030</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1a17ce3d8dd0000001</sys_recorded_at>
+        <sys_updated_by>nilesh.chaurasia</sys_updated_by>
+        <sys_updated_on>2026-10-27 10:24:29</sys_updated_on>
+        <type>Module</type>
+        <update_guid>070106ffe8001710157bc481032ed82f</update_guid>
+        <update_guid_history>070106ffe8001710157bc481032ed82f:-1228497835</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="Doctor Hospital Assignments">89880a88935097107b3a7c5efaba10be</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>nilesh.chaurasia</sys_created_by>
+        <sys_created_on>2026-10-28 05:35:35</sys_created_on>
+        <sys_db_object display_value="" name="sys_app_module">sys_app_module</sys_db_object>
+        <sys_id>6747e39f4b324824985c9aecaefc9f10</sys_id>
+        <sys_metadata>c70106ff930017107b3a7c5efaba102b</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Doctor Hospital Assignments</sys_name>
+        <sys_package display_value="Apollo-Hospitals" source="x_2223823_apollo_0">87c1422693c89b507b3a7c5efaba1008</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
+        <sys_scope_delete display_value="">1a2f7aa8dfc34e3a86d3f0bede3c2784</sys_scope_delete>
+        <sys_update_name>sys_app_module_c70106ff930017107b3a7c5efaba102b</sys_update_name>
+        <sys_update_version display_value="sys_app_module_c70106ff930017107b3a7c5efaba102b">4b0106ff930017107b3a7c5efaba1030</sys_update_version>
+        <sys_updated_by>nilesh.chaurasia</sys_updated_by>
+        <sys_updated_on>2026-10-28 05:35:35</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

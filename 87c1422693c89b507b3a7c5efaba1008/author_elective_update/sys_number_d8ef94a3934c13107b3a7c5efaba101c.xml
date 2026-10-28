@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_number">
+    <sys_number action="DELETE">
+        <category display_value="" name="x_2223823_apollo_0_admission">x_2223823_apollo_0_admission</category>
+        <maximum_digits>5</maximum_digits>
+        <number>0</number>
+        <prefix>ADM</prefix>
+        <sys_class_name>sys_number</sys_class_name>
+        <sys_created_by>harshvardhan.chhapola</sys_created_by>
+        <sys_created_on>2026-10-26 08:41:28</sys_created_on>
+        <sys_id>d8ef94a3934c13107b3a7c5efaba101c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>ADM</sys_name>
+        <sys_package display_value="Apollo-Hospitals" source="x_2223823_apollo_0">87c1422693c89b507b3a7c5efaba1008</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
+        <sys_update_name>sys_number_d8ef94a3934c13107b3a7c5efaba101c</sys_update_name>
+        <sys_updated_by>harshvardhan.chhapola</sys_updated_by>
+        <sys_updated_on>2026-10-26 08:41:28</sys_updated_on>
+    </sys_number>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</application>
+        <file_path/>
+        <instance_id>1dfc152d3beccb18677f04e0b5e45aed</instance_id>
+        <instance_name>dev393999</instance_name>
+        <name>sys_number_d8ef94a3934c13107b3a7c5efaba101c</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_number"><sys_number action="INSERT_OR_UPDATE"><category display_value="" name="x_2223823_apollo_0_admission">x_2223823_apollo_0_admission</category><maximum_digits>5</maximum_digits><number>0</number><prefix>ADM</prefix><sys_class_name>sys_number</sys_class_name><sys_created_by>harshvardhan.chhapola</sys_created_by><sys_created_on>2026-10-26 08:41:28</sys_created_on><sys_id>d8ef94a3934c13107b3a7c5efaba101c</sys_id><sys_mod_count>0</sys_mod_count><sys_name>ADM</sys_name><sys_package display_value="Apollo-Hospitals" source="x_2223823_apollo_0">87c1422693c89b507b3a7c5efaba1008</sys_package><sys_policy/><sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope><sys_update_name>sys_number_d8ef94a3934c13107b3a7c5efaba101c</sys_update_name><sys_updated_by>harshvardhan.chhapola</sys_updated_by><sys_updated_on>2026-10-26 08:41:28</sys_updated_on></sys_number></record_update>]]></payload>
+        <payload_hash>225661234</payload_hash>
+        <record_name>ADM</record_name>
+        <reverted_from/>
+        <source>f244c8e3938013107b3a7c5efaba10ed</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>harshvardhan.chhapola</sys_created_by>
+        <sys_created_on>2026-10-26 08:41:28</sys_created_on>
+        <sys_id>d0ef94a3934c13107b3a7c5efaba109a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1a1775f2c9c0000001</sys_recorded_at>
+        <sys_updated_by>harshvardhan.chhapola</sys_updated_by>
+        <sys_updated_on>2026-10-26 08:41:28</sys_updated_on>
+        <type>Number</type>
+        <update_guid>9cef94a3114c1310975837c2d1d4a098</update_guid>
+        <update_guid_history>9cef94a3114c1310975837c2d1d4a098:225661234</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>harshvardhan.chhapola</sys_created_by>
+        <sys_created_on>2026-10-26 09:05:33</sys_created_on>
+        <sys_db_object display_value="" name="sys_number">sys_number</sys_db_object>
+        <sys_id>245e3723b8e44e80983c8b4a3b184000</sys_id>
+        <sys_metadata>d8ef94a3934c13107b3a7c5efaba101c</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>ADM</sys_name>
+        <sys_package display_value="Apollo-Hospitals" source="x_2223823_apollo_0">87c1422693c89b507b3a7c5efaba1008</sys_package>
+        <sys_parent display_value="">34fc98ab930c13107b3a7c5efaba10a4</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
+        <sys_scope_delete display_value="">1a2f7aa8dfc34e3a86d3f0bede3c2784</sys_scope_delete>
+        <sys_update_name>sys_number_d8ef94a3934c13107b3a7c5efaba101c</sys_update_name>
+        <sys_update_version display_value="sys_number_d8ef94a3934c13107b3a7c5efaba101c">d0ef94a3934c13107b3a7c5efaba109a</sys_update_version>
+        <sys_updated_by>harshvardhan.chhapola</sys_updated_by>
+        <sys_updated_on>2026-10-26 09:05:33</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

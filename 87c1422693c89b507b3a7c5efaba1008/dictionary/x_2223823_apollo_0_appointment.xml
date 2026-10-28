@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element attributes="enforce_dot_walk_cross_scope_access=true" db_object_id="d1e63c63934053107b3a7c5efaba101a" label="Appointment" max_length="40" name="x_2223823_apollo_0_appointment" type="collection">
+        <element attributes="ignore_filter_on_new=true" default="javascript:global.getNextObjNumberPadded();" label="Number" max_length="40" name="number" read_only="true" read_only_option="display_read_only" type="string"/>
+        <element label="Hospital" mandatory="true" max_length="32" name="hospital" reference="x_2223823_apollo_0_hospital" type="reference"/>
+        <element label="Doctor" mandatory="true" max_length="32" name="doctor" reference="x_2223823_apollo_0_doctor" type="reference"/>
+        <element label="Cancellation Reason" max_length="40" name="cancellation_reason" type="string"/>
+        <element label="Reason For Visit" max_length="40" name="reason" type="string"/>
+        <element label="Fee" max_length="20" name="fee" type="currency"/>
+        <element choice="1" label="Cancelled by" max_length="255" name="cancelled_by" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Patient" sequence="0" value="1"/>
+                <element inactive_on_update="false" label="Hospital" sequence="1" value="2"/>
+            </choice>
+        </element>
+        <element label="Checked in at" max_length="255" name="checked_in_at" type="glide_date_time"/>
+        <element label="End" mandatory="true" max_length="255" name="end_time" type="glide_date_time"/>
+        <element choice="1" label="Status" mandatory="true" max_length="255" name="status" read_only="true" read_only_option="display_read_only" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Requested" sequence="0" value="1"/>
+                <element inactive_on_update="false" label="No Show" sequence="7" value="8"/>
+                <element inactive_on_update="false" label="Completed" sequence="5" value="6"/>
+                <element inactive_on_update="false" label="Checked-In" sequence="3" value="4"/>
+                <element inactive_on_update="false" label="Scheduled" sequence="1" value="2"/>
+                <element inactive_on_update="false" label="Needs Rescheduling" sequence="9" value="10"/>
+                <element inactive_on_update="false" label="Confirmed" sequence="2" value="3"/>
+                <element inactive_on_update="false" label="Rescheduled" sequence="8" value="9"/>
+                <element inactive_on_update="false" label="Cancelled" sequence="6" value="7"/>
+                <element inactive_on_update="false" label="In Consultation" sequence="4" value="5"/>
+            </choice>
+        </element>
+        <element label="Start" mandatory="true" max_length="255" name="start_time" type="glide_date_time"/>
+        <element choice="1" label="Type" mandatory="true" max_length="255" name="appointment_type" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Emergency" sequence="2" value="3"/>
+                <element inactive_on_update="false" label="Follow-up" sequence="1" value="2"/>
+                <element inactive_on_update="false" label="First Visit" sequence="0" value="1"/>
+            </choice>
+        </element>
+        <element choice="1" label="Mode" mandatory="true" max_length="255" name="mode" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="In-Person" sequence="0" value="1"/>
+                <element inactive_on_update="false" label="Video" sequence="1" value="2"/>
+            </choice>
+        </element>
+        <element default="0" function_definition="0" label="Reschedule Count" max_length="255" name="reschedule_count" type="integer"/>
+        <element label="Duration(minutes)" mandatory="true" max_length="255" name="duration_minutes" type="integer"/>
+        <element label="Meeting Link" max_length="1024" name="meeting_link" read_only="true" read_only_option="display_read_only" type="url"/>
+        <element choice="1" label="Refund Status" max_length="255" name="refund_status" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Not applicable" sequence="0" value="1"/>
+                <element inactive_on_update="false" label="Not eligible" sequence="3" value="4"/>
+                <element inactive_on_update="false" label="Pending" sequence="1" value="2"/>
+                <element inactive_on_update="false" label="Refunded" sequence="2" value="3"/>
+            </choice>
+        </element>
+        <element label="Patient" mandatory="true" max_length="32" name="patient" reference="x_2223823_apollo_0_patient" type="reference"/>
+        <element label="Hold expires at" max_length="255" name="hold_expires_at" type="glide_date_time"/>
+        <index name="index">
+            <element name="doctor"/>
+        </index>
+        <index name="index2">
+            <element name="hospital"/>
+        </index>
+        <index name="index3">
+            <element name="patient"/>
+        </index>
+    </element>
+</database>

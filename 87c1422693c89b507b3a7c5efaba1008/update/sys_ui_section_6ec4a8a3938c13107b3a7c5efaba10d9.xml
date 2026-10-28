@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_ui_section caption="" section_id="6ec4a8a3938c13107b3a7c5efaba10d9" sys_domain="global" table="x_2223823_apollo_0_qualification" version="3" view="">
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.begin_split</element>
+            <position>0</position>
+            <sys_created_by>ayush.mangal</sys_created_by>
+            <sys_created_on>2026-10-26 09:02:56</sys_created_on>
+            <sys_id>f2c4a8a3938c13107b3a7c5efaba10e3</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_2223823_apollo_0_qualification" sys_domain="global" view="Default view">6ec4a8a3938c13107b3a7c5efaba10d9</sys_ui_section>
+            <sys_updated_by>ayush.mangal</sys_updated_by>
+            <sys_updated_on>2026-10-26 09:02:56</sys_updated_on>
+            <sys_user/>
+            <type>.begin_split</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>name</element>
+            <position>1</position>
+            <sys_created_by>ayush.mangal</sys_created_by>
+            <sys_created_on>2026-10-26 09:02:56</sys_created_on>
+            <sys_id>fec4a8a3938c13107b3a7c5efaba10e3</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_2223823_apollo_0_qualification" sys_domain="global" view="Default view">6ec4a8a3938c13107b3a7c5efaba10d9</sys_ui_section>
+            <sys_updated_by>ayush.mangal</sys_updated_by>
+            <sys_updated_on>2026-10-26 09:02:56</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.split</element>
+            <position>2</position>
+            <sys_created_by>ayush.mangal</sys_created_by>
+            <sys_created_on>2026-10-26 09:02:56</sys_created_on>
+            <sys_id>3ac4a8a3938c13107b3a7c5efaba10fd</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_2223823_apollo_0_qualification" sys_domain="global" view="Default view">6ec4a8a3938c13107b3a7c5efaba10d9</sys_ui_section>
+            <sys_updated_by>ayush.mangal</sys_updated_by>
+            <sys_updated_on>2026-10-26 09:02:56</sys_updated_on>
+            <sys_user/>
+            <type>.split</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>active</element>
+            <position>3</position>
+            <sys_created_by>ayush.mangal</sys_created_by>
+            <sys_created_on>2026-10-26 09:02:56</sys_created_on>
+            <sys_id>f2c4a8a3938c13107b3a7c5efaba10fe</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_2223823_apollo_0_qualification" sys_domain="global" view="Default view">6ec4a8a3938c13107b3a7c5efaba10d9</sys_ui_section>
+            <sys_updated_by>ayush.mangal</sys_updated_by>
+            <sys_updated_on>2026-10-26 09:02:56</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.end_split</element>
+            <position>4</position>
+            <sys_created_by>ayush.mangal</sys_created_by>
+            <sys_created_on>2026-10-26 09:02:56</sys_created_on>
+            <sys_id>bec4a8a3938c13107b3a7c5efaba10fe</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_2223823_apollo_0_qualification" sys_domain="global" view="Default view">6ec4a8a3938c13107b3a7c5efaba10d9</sys_ui_section>
+            <sys_updated_by>ayush.mangal</sys_updated_by>
+            <sys_updated_on>2026-10-26 09:02:56</sys_updated_on>
+            <sys_user/>
+            <type>.end_split</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>test</element>
+            <position>5</position>
+            <sys_created_by>ayush.mangal</sys_created_by>
+            <sys_created_on>2026-10-28 05:19:58</sys_created_on>
+            <sys_id>48f40e80935097107b3a7c5efaba104c</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_2223823_apollo_0_qualification" sys_domain="global" view="Default view">6ec4a8a3938c13107b3a7c5efaba10d9</sys_ui_section>
+            <sys_updated_by>ayush.mangal</sys_updated_by>
+            <sys_updated_on>2026-10-28 05:19:58</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>test2</element>
+            <position>6</position>
+            <sys_created_by>ayush.mangal</sys_created_by>
+            <sys_created_on>2026-10-28 06:31:20</sys_created_on>
+            <sys_id>fd45560893d097107b3a7c5efaba102c</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_2223823_apollo_0_qualification" sys_domain="global" view="Default view">6ec4a8a3938c13107b3a7c5efaba10d9</sys_ui_section>
+            <sys_updated_by>ayush.mangal</sys_updated_by>
+            <sys_updated_on>2026-10-28 06:31:20</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_section action="INSERT_OR_UPDATE">
+            <caption/>
+            <header>false</header>
+            <name>x_2223823_apollo_0_qualification</name>
+            <roles/>
+            <sys_class_name>sys_ui_section</sys_class_name>
+            <sys_created_by>ayush.mangal</sys_created_by>
+            <sys_created_on>2026-10-26 09:02:55</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>6ec4a8a3938c13107b3a7c5efaba10d9</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>x_2223823_apollo_0_qualification</sys_name>
+            <sys_overrides/>
+            <sys_package display_value="Apollo-Hospitals" source="x_2223823_apollo_0">87c1422693c89b507b3a7c5efaba1008</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
+            <sys_update_name>sys_ui_section_6ec4a8a3938c13107b3a7c5efaba10d9</sys_update_name>
+            <sys_updated_by>ayush.mangal</sys_updated_by>
+            <sys_updated_on>2026-10-26 09:02:55</sys_updated_on>
+            <sys_user/>
+            <title>true</title>
+            <view display_value="Default view" name="NULL">Default view</view>
+            <view_name/>
+        </sys_ui_section>
+    </sys_ui_section>
+</record_update>

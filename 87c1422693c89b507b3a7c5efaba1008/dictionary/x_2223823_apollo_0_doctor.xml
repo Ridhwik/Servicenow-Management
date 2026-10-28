@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element attributes="enforce_dot_walk_cross_scope_access=true" db_object_id="9ee688eb938013107b3a7c5efaba10ec" label="Doctor" max_length="40" name="x_2223823_apollo_0_doctor" type="collection">
+        <element active="false" attributes="edge_encryption_enabled=true" label="Medical Council registration no." max_length="40" name="registration_number" staged="true" type="string"/>
+        <element label="Temporarily assigned" max_length="40" name="on_cover" type="boolean"/>
+        <element label="Primary hospital" max_length="32" name="primary_hospital" reference="x_2223823_apollo_0_hospital" type="reference"/>
+        <element label="Qualifications" max_length="40" name="qualifications" reference="x_2223823_apollo_0_qualification" type="glide_list"/>
+        <element choice="1" label="Consultation Type" max_length="255" name="consultation_type" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Video" sequence="1" value="video"/>
+                <element inactive_on_update="false" label="In-Person OPD" sequence="0" value="in_person_opd"/>
+            </choice>
+        </element>
+        <element label="IPD visit schedule" max_length="32" name="ipd_visit_schedule" reference="cmn_schedule" type="reference"/>
+        <element default="15" label="OPD duration (minutes)" max_length="255" name="opd_duration" type="integer"/>
+        <element label="Medical Council registration no." mandatory="true" max_length="30" name="registration_no" type="string"/>
+        <element choice="3" default="1" label="Status" max_length="40" name="status" read_only="true" read_only_option="display_read_only" type="integer">
+            <choice>
+                <element inactive_on_update="false" label="On Leave" sequence="1" value="2"/>
+                <element inactive_on_update="false" label="Inactive" sequence="2" value="3"/>
+                <element inactive_on_update="false" label="Active" sequence="0" value="1"/>
+            </choice>
+        </element>
+        <element attributes="ignore_filter_on_new=true" default="javascript:global.getNextObjNumberPadded();" label="Employee ID" max_length="40" name="number" read_only="true" read_only_option="display_read_only" type="string"/>
+        <element label="Video timings" max_length="32" name="video_schedule" reference="cmn_schedule" type="reference"/>
+        <element default="15" label="Video duration (minutes)" max_length="255" name="video_duration" type="integer"/>
+        <element label="Phone" mandatory="true" max_length="40" name="phone" type="phone_number_e164"/>
+        <element label="User" max_length="32" name="user" reference="sys_user" type="reference"/>
+        <element default="true" label="OPD enabled" max_length="40" name="opd_enabled" type="boolean"/>
+        <element label="Email" mandatory="true" max_length="40" name="email" type="email"/>
+        <element default="true" label="Video enabled" max_length="40" name="video_enabled" type="boolean"/>
+        <element label="OPD fee" max_length="40" name="opd_fee" type="currency"/>
+        <element label="OPD timings" max_length="32" name="opd_schedule" reference="cmn_schedule" type="reference"/>
+        <element label="Video fee" max_length="40" name="video_fee" type="currency"/>
+        <element label="Specialty" max_length="40" name="specialty" type="string"/>
+        <element label="Department" max_length="32" name="department" reference="x_2223823_apollo_0_department" type="reference"/>
+        <index name="index">
+            <element name="ipd_visit_schedule"/>
+        </index>
+        <index name="index2">
+            <element name="opd_schedule"/>
+        </index>
+        <index name="index3" unique="true">
+            <element name="registration_no"/>
+        </index>
+        <index name="index4">
+            <element name="user"/>
+        </index>
+        <index name="index5">
+            <element name="video_schedule"/>
+        </index>
+    </element>
+</database>

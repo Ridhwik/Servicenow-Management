@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_ui_section caption="" section_id="733ab4bb9384d3107b3a7c5efaba1039" sys_domain="global" table="x_2223823_apollo_0_ot_booking" version="3" view="">
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>patient</element>
+            <position>0</position>
+            <sys_created_by>harshvardhan.chhapola</sys_created_by>
+            <sys_created_on>2026-10-27 05:18:59</sys_created_on>
+            <sys_id>cc2bb43f9384d3107b3a7c5efaba1071</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_2223823_apollo_0_ot_booking" sys_domain="global" view="Default view">733ab4bb9384d3107b3a7c5efaba1039</sys_ui_section>
+            <sys_updated_by>harshvardhan.chhapola</sys_updated_by>
+            <sys_updated_on>2026-10-27 05:18:59</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>operation_theatre</element>
+            <position>1</position>
+            <sys_created_by>harshvardhan.chhapola</sys_created_by>
+            <sys_created_on>2026-10-27 05:18:59</sys_created_on>
+            <sys_id>882bb43f9384d3107b3a7c5efaba1072</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_2223823_apollo_0_ot_booking" sys_domain="global" view="Default view">733ab4bb9384d3107b3a7c5efaba1039</sys_ui_section>
+            <sys_updated_by>harshvardhan.chhapola</sys_updated_by>
+            <sys_updated_on>2026-10-27 05:18:59</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>start_time</element>
+            <position>2</position>
+            <sys_created_by>harshvardhan.chhapola</sys_created_by>
+            <sys_created_on>2026-10-27 05:18:59</sys_created_on>
+            <sys_id>442bb43f9384d3107b3a7c5efaba1073</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_2223823_apollo_0_ot_booking" sys_domain="global" view="Default view">733ab4bb9384d3107b3a7c5efaba1039</sys_ui_section>
+            <sys_updated_by>harshvardhan.chhapola</sys_updated_by>
+            <sys_updated_on>2026-10-27 05:18:59</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>status</element>
+            <position>3</position>
+            <sys_created_by>harshvardhan.chhapola</sys_created_by>
+            <sys_created_on>2026-10-27 05:18:59</sys_created_on>
+            <sys_id>002bb43f9384d3107b3a7c5efaba1074</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_2223823_apollo_0_ot_booking" sys_domain="global" view="Default view">733ab4bb9384d3107b3a7c5efaba1039</sys_ui_section>
+            <sys_updated_by>harshvardhan.chhapola</sys_updated_by>
+            <sys_updated_on>2026-10-27 05:18:59</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>surgeon_order</element>
+            <position>4</position>
+            <sys_created_by>harshvardhan.chhapola</sys_created_by>
+            <sys_created_on>2026-10-27 05:18:59</sys_created_on>
+            <sys_id>c82bb43f9384d3107b3a7c5efaba1074</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_2223823_apollo_0_ot_booking" sys_domain="global" view="Default view">733ab4bb9384d3107b3a7c5efaba1039</sys_ui_section>
+            <sys_updated_by>harshvardhan.chhapola</sys_updated_by>
+            <sys_updated_on>2026-10-27 05:18:59</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.split</element>
+            <position>5</position>
+            <sys_created_by>harshvardhan.chhapola</sys_created_by>
+            <sys_created_on>2026-10-27 05:18:59</sys_created_on>
+            <sys_id>842bb43f9384d3107b3a7c5efaba1075</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_2223823_apollo_0_ot_booking" sys_domain="global" view="Default view">733ab4bb9384d3107b3a7c5efaba1039</sys_ui_section>
+            <sys_updated_by>harshvardhan.chhapola</sys_updated_by>
+            <sys_updated_on>2026-10-27 05:18:59</sys_updated_on>
+            <sys_user/>
+            <type>.split</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>hospital</element>
+            <position>6</position>
+            <sys_created_by>harshvardhan.chhapola</sys_created_by>
+            <sys_created_on>2026-10-27 05:18:59</sys_created_on>
+            <sys_id>402bb43f9384d3107b3a7c5efaba1076</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_2223823_apollo_0_ot_booking" sys_domain="global" view="Default view">733ab4bb9384d3107b3a7c5efaba1039</sys_ui_section>
+            <sys_updated_by>harshvardhan.chhapola</sys_updated_by>
+            <sys_updated_on>2026-10-27 05:18:59</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>surgeon</element>
+            <position>7</position>
+            <sys_created_by>harshvardhan.chhapola</sys_created_by>
+            <sys_created_on>2026-10-27 05:18:59</sys_created_on>
+            <sys_id>0c2bb43f9384d3107b3a7c5efaba1076</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_2223823_apollo_0_ot_booking" sys_domain="global" view="Default view">733ab4bb9384d3107b3a7c5efaba1039</sys_ui_section>
+            <sys_updated_by>harshvardhan.chhapola</sys_updated_by>
+            <sys_updated_on>2026-10-27 05:18:59</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>end_time</element>
+            <position>8</position>
+            <sys_created_by>harshvardhan.chhapola</sys_created_by>
+            <sys_created_on>2026-10-27 05:18:59</sys_created_on>
+            <sys_id>c42bb43f9384d3107b3a7c5efaba1077</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_2223823_apollo_0_ot_booking" sys_domain="global" view="Default view">733ab4bb9384d3107b3a7c5efaba1039</sys_ui_section>
+            <sys_updated_by>harshvardhan.chhapola</sys_updated_by>
+            <sys_updated_on>2026-10-27 05:18:59</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>recovery_reservation</element>
+            <position>9</position>
+            <sys_created_by>harshvardhan.chhapola</sys_created_by>
+            <sys_created_on>2026-10-27 05:18:59</sys_created_on>
+            <sys_id>802bb43f9384d3107b3a7c5efaba1078</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_2223823_apollo_0_ot_booking" sys_domain="global" view="Default view">733ab4bb9384d3107b3a7c5efaba1039</sys_ui_section>
+            <sys_updated_by>harshvardhan.chhapola</sys_updated_by>
+            <sys_updated_on>2026-10-27 05:18:59</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>consent_complete</element>
+            <position>10</position>
+            <sys_created_by>harshvardhan.chhapola</sys_created_by>
+            <sys_created_on>2026-10-27 05:18:59</sys_created_on>
+            <sys_id>4c2bb43f9384d3107b3a7c5efaba1078</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_2223823_apollo_0_ot_booking" sys_domain="global" view="Default view">733ab4bb9384d3107b3a7c5efaba1039</sys_ui_section>
+            <sys_updated_by>harshvardhan.chhapola</sys_updated_by>
+            <sys_updated_on>2026-10-27 05:18:59</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_section action="INSERT_OR_UPDATE">
+            <caption/>
+            <header>false</header>
+            <name>x_2223823_apollo_0_ot_booking</name>
+            <roles/>
+            <sys_class_name>sys_ui_section</sys_class_name>
+            <sys_created_by>harshvardhan.chhapola</sys_created_by>
+            <sys_created_on>2026-10-27 05:15:09</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>733ab4bb9384d3107b3a7c5efaba1039</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>x_2223823_apollo_0_ot_booking</sys_name>
+            <sys_overrides/>
+            <sys_package display_value="Apollo-Hospitals" source="x_2223823_apollo_0">87c1422693c89b507b3a7c5efaba1008</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
+            <sys_update_name>sys_ui_section_733ab4bb9384d3107b3a7c5efaba1039</sys_update_name>
+            <sys_updated_by>harshvardhan.chhapola</sys_updated_by>
+            <sys_updated_on>2026-10-27 05:15:09</sys_updated_on>
+            <sys_user/>
+            <title>true</title>
+            <view display_value="Default view" name="NULL">Default view</view>
+            <view_name/>
+        </sys_ui_section>
+    </sys_ui_section>
+</record_update>

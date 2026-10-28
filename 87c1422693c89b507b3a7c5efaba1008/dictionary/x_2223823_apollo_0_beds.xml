@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element attributes="enforce_dot_walk_cross_scope_access=true" db_object_id="4e04e4ef934c13107b3a7c5efaba1012" label="Beds" max_length="40" name="x_2223823_apollo_0_beds" type="collection">
+        <element label="Blocked reason" max_length="255" name="blocked_reason" type="string"/>
+        <element label="Bed number" mandatory="true" max_length="20" name="bed_number" type="string"/>
+        <element label="Expected release date" name="blocked_until" type="glide_date"/>
+        <element label="name" max_length="40" name="name" type="string"/>
+        <element label="Hospital" mandatory="true" name="hospital" read_only="true" read_only_option="instance_configured" reference="x_2223823_apollo_0_hospital" type="reference"/>
+        <element default="1" label="Status" mandatory="true" name="status" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Reserved" value="2"/>
+                <element inactive_on_update="false" label="Under Cleaning" value="4"/>
+                <element inactive_on_update="false" label="Available" value="1"/>
+                <element inactive_on_update="false" label="Under Maintenance" value="5"/>
+                <element inactive_on_update="false" label="Blocked" value="6"/>
+                <element inactive_on_update="false" label="Out of Service" value="7"/>
+                <element inactive_on_update="false" label="Occupied" value="3"/>
+            </choice>
+        </element>
+        <element label="Current admission" name="current_admission" read_only="true" read_only_option="instance_configured" reference="x_2223823_apollo_0_admission" type="reference"/>
+        <element label="Room" mandatory="true" name="room" reference="x_2223823_apollo_0_rooms" type="reference"/>
+        <element label="Gender" name="gender" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Any" value="3"/>
+                <element inactive_on_update="false" label="Female" value="2"/>
+                <element inactive_on_update="false" label="Male" value="1"/>
+            </choice>
+        </element>
+        <element default="true" label="Active" name="active" type="boolean"/>
+        <element label="Counts toward capacity" name="counts_in_capacity" type="boolean"/>
+    </element>
+</database>

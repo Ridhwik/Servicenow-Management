@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_ui_section caption="Admission Details" section_id="2031caff930017107b3a7c5efaba104c" sys_domain="global" table="x_2223823_apollo_0_admission" version="3" view="">
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>admission_type</element>
+            <position>0</position>
+            <sys_created_by>harshvardhan.chhapola</sys_created_by>
+            <sys_created_on>2026-10-27 10:25:08</sys_created_on>
+            <sys_id>f831caff930017107b3a7c5efaba10ce</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Admission Details" display_value="Admission Details" name="x_2223823_apollo_0_admission" sys_domain="global" view="Default view">2031caff930017107b3a7c5efaba104c</sys_ui_section>
+            <sys_updated_by>harshvardhan.chhapola</sys_updated_by>
+            <sys_updated_on>2026-10-27 10:25:08</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.split</element>
+            <position>1</position>
+            <sys_created_by>harshvardhan.chhapola</sys_created_by>
+            <sys_created_on>2026-10-27 10:25:08</sys_created_on>
+            <sys_id>7831caff930017107b3a7c5efaba10cf</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Admission Details" display_value="Admission Details" name="x_2223823_apollo_0_admission" sys_domain="global" view="Default view">2031caff930017107b3a7c5efaba104c</sys_ui_section>
+            <sys_updated_by>harshvardhan.chhapola</sys_updated_by>
+            <sys_updated_on>2026-10-27 10:25:08</sys_updated_on>
+            <sys_user/>
+            <type>.split</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>admission_date</element>
+            <position>2</position>
+            <sys_created_by>harshvardhan.chhapola</sys_created_by>
+            <sys_created_on>2026-10-27 10:25:08</sys_created_on>
+            <sys_id>f431caff930017107b3a7c5efaba10d0</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Admission Details" display_value="Admission Details" name="x_2223823_apollo_0_admission" sys_domain="global" view="Default view">2031caff930017107b3a7c5efaba104c</sys_ui_section>
+            <sys_updated_by>harshvardhan.chhapola</sys_updated_by>
+            <sys_updated_on>2026-10-27 10:25:08</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.end_split</element>
+            <position>3</position>
+            <sys_created_by>harshvardhan.chhapola</sys_created_by>
+            <sys_created_on>2026-10-27 10:25:08</sys_created_on>
+            <sys_id>7431caff930017107b3a7c5efaba10d1</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Admission Details" display_value="Admission Details" name="x_2223823_apollo_0_admission" sys_domain="global" view="Default view">2031caff930017107b3a7c5efaba104c</sys_ui_section>
+            <sys_updated_by>harshvardhan.chhapola</sys_updated_by>
+            <sys_updated_on>2026-10-27 10:25:08</sys_updated_on>
+            <sys_user/>
+            <type>.end_split</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>reason</element>
+            <position>4</position>
+            <sys_created_by>harshvardhan.chhapola</sys_created_by>
+            <sys_created_on>2026-10-27 10:25:08</sys_created_on>
+            <sys_id>f031caff930017107b3a7c5efaba10d2</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Admission Details" display_value="Admission Details" name="x_2223823_apollo_0_admission" sys_domain="global" view="Default view">2031caff930017107b3a7c5efaba104c</sys_ui_section>
+            <sys_updated_by>harshvardhan.chhapola</sys_updated_by>
+            <sys_updated_on>2026-10-27 10:25:08</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_section action="INSERT_OR_UPDATE">
+            <caption>Admission Details</caption>
+            <header>false</header>
+            <name>x_2223823_apollo_0_admission</name>
+            <roles/>
+            <sys_class_name>sys_ui_section</sys_class_name>
+            <sys_created_by>harshvardhan.chhapola</sys_created_by>
+            <sys_created_on>2026-10-27 10:25:07</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>2031caff930017107b3a7c5efaba104c</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>x_2223823_apollo_0_admission</sys_name>
+            <sys_overrides/>
+            <sys_package display_value="Apollo-Hospitals" source="x_2223823_apollo_0">87c1422693c89b507b3a7c5efaba1008</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
+            <sys_update_name>sys_ui_section_2031caff930017107b3a7c5efaba104c</sys_update_name>
+            <sys_updated_by>harshvardhan.chhapola</sys_updated_by>
+            <sys_updated_on>2026-10-27 10:25:07</sys_updated_on>
+            <sys_user/>
+            <title>false</title>
+            <view display_value="Default view" name="NULL">Default view</view>
+            <view_name/>
+        </sys_ui_section>
+    </sys_ui_section>
+</record_update>

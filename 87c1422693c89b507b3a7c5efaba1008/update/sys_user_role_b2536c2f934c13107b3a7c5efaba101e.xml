@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_user_role">
+    <sys_user_role action="INSERT_OR_UPDATE">
+        <assignable_by/>
+        <can_delegate>true</can_delegate>
+        <description/>
+        <elevated_privilege>false</elevated_privilege>
+        <encryption_context/>
+        <federated_id>TtXLlc4jnSJtSGcqHlw4pKVur8yxfQ6AEARMvfcSd0M=</federated_id>
+        <grantable>true</grantable>
+        <includes_roles/>
+        <name>x_2223823_apollo_0.hospital_user</name>
+        <scoped_admin>false</scoped_admin>
+        <suffix>hospital_user</suffix>
+        <sys_class_name>sys_user_role</sys_class_name>
+        <sys_created_by>fatehsingh.meena</sys_created_by>
+        <sys_created_on>2026-10-26 08:56:39</sys_created_on>
+        <sys_id>b2536c2f934c13107b3a7c5efaba101e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_2223823_apollo_0.hospital_user</sys_name>
+        <sys_package display_value="Apollo-Hospitals" source="x_2223823_apollo_0">87c1422693c89b507b3a7c5efaba1008</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
+        <sys_update_name>sys_user_role_b2536c2f934c13107b3a7c5efaba101e</sys_update_name>
+        <sys_updated_by>fatehsingh.meena</sys_updated_by>
+        <sys_updated_on>2026-10-26 08:56:39</sys_updated_on>
+    </sys_user_role>
+</record_update>

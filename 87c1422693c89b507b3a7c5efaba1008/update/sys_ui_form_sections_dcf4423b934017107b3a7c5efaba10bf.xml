@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_ui_form_sections form_id="dcf4423b934017107b3a7c5efaba10bf" sys_domain="global" table="x_2223823_apollo_0_appointment" version="3">
+        <sys_ui_form_section action="INSERT_OR_UPDATE">
+            <position>0</position>
+            <sys_created_by>vikas.singh</sys_created_by>
+            <sys_created_on>2026-10-27 10:41:29</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>10f4423b934017107b3a7c5efaba10c5</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_overrides/>
+            <sys_ui_form display_value="x_2223823_apollo_0_appointment" name="x_2223823_apollo_0_appointment" sys_domain="global" view="Default view">dcf4423b934017107b3a7c5efaba10bf</sys_ui_form>
+            <sys_ui_section caption="NULL" display_value="" name="x_2223823_apollo_0_appointment" sys_domain="global" view="Default view">62e9293f934cd3107b3a7c5efaba1051</sys_ui_section>
+            <sys_updated_by>vikas.singh</sys_updated_by>
+            <sys_updated_on>2026-10-27 10:41:29</sys_updated_on>
+        </sys_ui_form_section>
+        <sys_ui_form_section action="INSERT_OR_UPDATE">
+            <position>1</position>
+            <sys_created_by>vikas.singh</sys_created_by>
+            <sys_created_on>2026-10-27 10:41:29</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>18f4423b934017107b3a7c5efaba10c6</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_overrides/>
+            <sys_ui_form display_value="x_2223823_apollo_0_appointment" name="x_2223823_apollo_0_appointment" sys_domain="global" view="Default view">dcf4423b934017107b3a7c5efaba10bf</sys_ui_form>
+            <sys_ui_section caption="Booking" display_value="Booking" name="x_2223823_apollo_0_appointment" sys_domain="global" view="Default view">14f4423b934017107b3a7c5efaba10a0</sys_ui_section>
+            <sys_updated_by>vikas.singh</sys_updated_by>
+            <sys_updated_on>2026-10-27 10:41:29</sys_updated_on>
+        </sys_ui_form_section>
+        <sys_ui_form_section action="INSERT_OR_UPDATE">
+            <position>2</position>
+            <sys_created_by>vikas.singh</sys_created_by>
+            <sys_created_on>2026-10-27 10:41:30</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>50f4423b934017107b3a7c5efaba10f3</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_overrides/>
+            <sys_ui_form display_value="x_2223823_apollo_0_appointment" name="x_2223823_apollo_0_appointment" sys_domain="global" view="Default view">dcf4423b934017107b3a7c5efaba10bf</sys_ui_form>
+            <sys_ui_section caption="Consultation" display_value="Consultation" name="x_2223823_apollo_0_appointment" sys_domain="global" view="Default view">10f4423b934017107b3a7c5efaba10a2</sys_ui_section>
+            <sys_updated_by>vikas.singh</sys_updated_by>
+            <sys_updated_on>2026-10-27 10:41:30</sys_updated_on>
+        </sys_ui_form_section>
+        <sys_ui_form_section action="INSERT_OR_UPDATE">
+            <position>3</position>
+            <sys_created_by>vikas.singh</sys_created_by>
+            <sys_created_on>2026-10-27 10:41:30</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>9cf4823b934017107b3a7c5efaba1006</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_overrides/>
+            <sys_ui_form display_value="x_2223823_apollo_0_appointment" name="x_2223823_apollo_0_appointment" sys_domain="global" view="Default view">dcf4423b934017107b3a7c5efaba10bf</sys_ui_form>
+            <sys_ui_section caption="Payment and refund" display_value="Payment and refund" name="x_2223823_apollo_0_appointment" sys_domain="global" view="Default view">98f4423b934017107b3a7c5efaba10bc</sys_ui_section>
+            <sys_updated_by>vikas.singh</sys_updated_by>
+            <sys_updated_on>2026-10-27 10:41:30</sys_updated_on>
+        </sys_ui_form_section>
+        <sys_ui_form_section action="INSERT_OR_UPDATE">
+            <position>4</position>
+            <sys_created_by>vikas.singh</sys_created_by>
+            <sys_created_on>2026-10-27 10:41:30</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>1cf4823b934017107b3a7c5efaba100e</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_overrides/>
+            <sys_ui_form display_value="x_2223823_apollo_0_appointment" name="x_2223823_apollo_0_appointment" sys_domain="global" view="Default view">dcf4423b934017107b3a7c5efaba10bf</sys_ui_form>
+            <sys_ui_section caption="Cancellation" display_value="Cancellation" name="x_2223823_apollo_0_appointment" sys_domain="global" view="Default view">94f4423b934017107b3a7c5efaba10be</sys_ui_section>
+            <sys_updated_by>vikas.singh</sys_updated_by>
+            <sys_updated_on>2026-10-27 10:41:30</sys_updated_on>
+        </sys_ui_form_section>
+        <sys_ui_form action="INSERT_OR_UPDATE">
+            <name>x_2223823_apollo_0_appointment</name>
+            <roles/>
+            <sys_class_name>sys_ui_form</sys_class_name>
+            <sys_created_by>vikas.singh</sys_created_by>
+            <sys_created_on>2026-10-27 10:41:29</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>dcf4423b934017107b3a7c5efaba10bf</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>x_2223823_apollo_0_appointment</sys_name>
+            <sys_overrides/>
+            <sys_package display_value="Apollo-Hospitals" source="x_2223823_apollo_0">87c1422693c89b507b3a7c5efaba1008</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
+            <sys_update_name>sys_ui_form_sections_dcf4423b934017107b3a7c5efaba10bf</sys_update_name>
+            <sys_updated_by>vikas.singh</sys_updated_by>
+            <sys_updated_on>2026-10-27 10:41:29</sys_updated_on>
+            <sys_user/>
+            <view display_value="Default view" name="NULL">Default view</view>
+            <view_name/>
+        </sys_ui_form>
+    </sys_ui_form_sections>
+</record_update>

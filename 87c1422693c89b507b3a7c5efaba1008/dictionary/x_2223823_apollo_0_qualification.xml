@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element attributes="enforce_dot_walk_cross_scope_access=true" db_object_id="6663242f934c13107b3a7c5efaba1092" label="Qualification" max_length="40" name="x_2223823_apollo_0_qualification" type="collection">
+        <element default="true" label="Active" max_length="40" name="active" type="boolean"/>
+        <element label="Name" mandatory="true" max_length="60" name="name" type="string"/>
+        <element label="test" max_length="40" name="test" type="string"/>
+        <element label="test2" max_length="40" name="test2" type="integer"/>
+    </element>
+</database>

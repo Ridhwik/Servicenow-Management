@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_documentation element="registration_number" label="Medical Council registration no." language="en" table="x_2223823_apollo_0_doctor">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element>registration_number</element>
+            <help/>
+            <hint/>
+            <label>Medical Council registration no.</label>
+            <language>en</language>
+            <name>x_2223823_apollo_0_doctor</name>
+            <plural>Medical Council registration no.s</plural>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>ridhwik.jangid</sys_created_by>
+            <sys_created_on>2026-10-28 05:38:04</sys_created_on>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>Medical Council registration no.</sys_name>
+            <sys_package display_value="Apollo-Hospitals" source="x_2223823_apollo_0">87c1422693c89b507b3a7c5efaba1008</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
+            <sys_update_name>sys_documentation_x_2223823_apollo_0_doctor_registration_number_en</sys_update_name>
+            <sys_updated_by>ridhwik.jangid</sys_updated_by>
+            <sys_updated_on>2026-10-28 05:38:04</sys_updated_on>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+</record_update>

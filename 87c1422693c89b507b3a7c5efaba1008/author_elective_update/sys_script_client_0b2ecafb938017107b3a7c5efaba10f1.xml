@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script_client">
+    <sys_script_client action="DELETE">
+        <active>true</active>
+        <applies_extended>false</applies_extended>
+        <condition/>
+        <description>End Date can not be earlier than Start Date   if it is show error message and does not allow to submitt fom.</description>
+        <field/>
+        <global>true</global>
+        <isolate_script>true</isolate_script>
+        <messages/>
+        <name>End Date can't be earlier than Start Dat</name>
+        <order/>
+        <script><![CDATA[function onSubmit() {
+    var startDate = g_form.getValue('start_date');
+    var endDate = g_form.getValue('end_date');
+
+    // both fields are not empty
+    if (startDate && endDate) {
+        // if End date is earlier than STart Date
+        if (startDate > endDate) {
+			g_form.setValue('end_date','');
+            g_form.addErrorMessage('End Date can not be earlier than Start Date.');
+            return false; // it stops form to be submitted .
+        }
+    }
+}]]></script>
+        <sys_class_name>sys_script_client</sys_class_name>
+        <sys_created_by>nilesh.chaurasia</sys_created_by>
+        <sys_created_on>2026-10-27 11:27:40</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>0b2ecafb938017107b3a7c5efaba10f1</sys_id>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_name>End Date can't be earlier than Start Dat</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Apollo-Hospitals" source="x_2223823_apollo_0">87c1422693c89b507b3a7c5efaba1008</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
+        <sys_update_name>sys_script_client_0b2ecafb938017107b3a7c5efaba10f1</sys_update_name>
+        <sys_updated_by>nilesh.chaurasia</sys_updated_by>
+        <sys_updated_on>2026-10-27 11:46:43</sys_updated_on>
+        <table>x_2223823_apollo_0_doctor_hospital_assignment</table>
+        <type>onSubmit</type>
+        <ui_type>0</ui_type>
+        <view/>
+    </sys_script_client>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</application>
+        <file_path/>
+        <instance_id>1dfc152d3beccb18677f04e0b5e45aed</instance_id>
+        <instance_name>dev393999</instance_name>
+        <name>sys_script_client_0b2ecafb938017107b3a7c5efaba10f1</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update sys_domain="global" table="sys_script_client"&gt;&lt;sys_script_client action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;applies_extended&gt;false&lt;/applies_extended&gt;&lt;condition/&gt;&lt;description&gt;End Date can not be earlier than Start Date   if it is show error message and does not allow to submitt fom.&lt;/description&gt;&lt;field/&gt;&lt;global&gt;true&lt;/global&gt;&lt;isolate_script&gt;true&lt;/isolate_script&gt;&lt;messages/&gt;&lt;name&gt;End Date can't be earlier than Start Dat&lt;/name&gt;&lt;order/&gt;&lt;script&gt;&lt;![CDATA[function onSubmit() {
+    var startDate = g_form.getValue('start_date');
+    var endDate = g_form.getValue('end_date');
+
+    // both fields are not empty
+    if (startDate &amp;&amp; endDate) {
+        // if End date is earlier than STart Date
+        if (startDate &gt; endDate) {
+			g_form.setValue('end_date','');
+            g_form.addErrorMessage('End Date can not be earlier than Start Date.');
+            return false; // it stops form to be submitted .
+        }
+    }
+}]]&gt;&lt;/script&gt;&lt;sys_class_name&gt;sys_script_client&lt;/sys_class_name&gt;&lt;sys_created_by&gt;nilesh.chaurasia&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2026-10-27 11:27:40&lt;/sys_created_on&gt;&lt;sys_domain&gt;global&lt;/sys_domain&gt;&lt;sys_domain_path&gt;/&lt;/sys_domain_path&gt;&lt;sys_id&gt;0b2ecafb938017107b3a7c5efaba10f1&lt;/sys_id&gt;&lt;sys_mod_count&gt;5&lt;/sys_mod_count&gt;&lt;sys_name&gt;End Date can't be earlier than Start Dat&lt;/sys_name&gt;&lt;sys_overrides/&gt;&lt;sys_package display_value="Apollo-Hospitals" source="x_2223823_apollo_0"&gt;87c1422693c89b507b3a7c5efaba1008&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Apollo-Hospitals"&gt;87c1422693c89b507b3a7c5efaba1008&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_script_client_0b2ecafb938017107b3a7c5efaba10f1&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;nilesh.chaurasia&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2026-10-27 11:46:43&lt;/sys_updated_on&gt;&lt;table&gt;x_2223823_apollo_0_doctor_hospital_assignment&lt;/table&gt;&lt;type&gt;onSubmit&lt;/type&gt;&lt;ui_type&gt;0&lt;/ui_type&gt;&lt;view/&gt;&lt;/sys_script_client&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>350770723</payload_hash>
+        <record_name>End Date can't be earlier than Start Dat</record_name>
+        <reverted_from/>
+        <source>ec5b916393c853107b3a7c5efaba1073</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>nilesh.chaurasia</sys_created_by>
+        <sys_created_on>2026-10-27 11:46:43</sys_created_on>
+        <sys_id>3fd316f793c017107b3a7c5efaba1043</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1a17d2f23cb0000001</sys_recorded_at>
+        <sys_updated_by>nilesh.chaurasia</sys_updated_by>
+        <sys_updated_on>2026-10-27 11:46:43</sys_updated_on>
+        <type>Client Script</type>
+        <update_guid>77d316f753c017108dba447c2a017a42</update_guid>
+        <update_guid_history>77d316f753c017108dba447c2a017a42:350770723,49015673b0c0171080cbbbda9c962684:-2005526115,bd901a3368c0171044c3a26d83389d4e:1029860134,ccdf8abf898017104c3f07a91ddf477e:-880286872,71af86bfb0801710f664aaf746485115:-284673593,f48f027f0b801710812dc650eef17df6:-1483728293</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>nilesh.chaurasia</sys_created_by>
+        <sys_created_on>2026-10-28 05:35:38</sys_created_on>
+        <sys_db_object display_value="" name="sys_script_client">sys_script_client</sys_db_object>
+        <sys_id>24175e57ebcf4e458796a3bd0ae64311</sys_id>
+        <sys_metadata>0b2ecafb938017107b3a7c5efaba10f1</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>End Date can't be earlier than Start Dat</sys_name>
+        <sys_package display_value="Apollo-Hospitals" source="x_2223823_apollo_0">87c1422693c89b507b3a7c5efaba1008</sys_package>
+        <sys_parent display_value="">e8e08ebf930017107b3a7c5efaba10af</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
+        <sys_scope_delete display_value="">1a2f7aa8dfc34e3a86d3f0bede3c2784</sys_scope_delete>
+        <sys_update_name>sys_script_client_0b2ecafb938017107b3a7c5efaba10f1</sys_update_name>
+        <sys_update_version display_value="sys_script_client_0b2ecafb938017107b3a7c5efaba10f1">3fd316f793c017107b3a7c5efaba1043</sys_update_version>
+        <sys_updated_by>nilesh.chaurasia</sys_updated_by>
+        <sys_updated_on>2026-10-28 05:35:38</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

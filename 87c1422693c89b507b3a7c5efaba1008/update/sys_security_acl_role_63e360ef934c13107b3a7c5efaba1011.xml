@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl_role">
+    <sys_security_acl_role action="INSERT_OR_UPDATE">
+        <sys_class_name>sys_security_acl_role</sys_class_name>
+        <sys_created_by>fatehsingh.meena</sys_created_by>
+        <sys_created_on>2026-10-26 08:59:09</sys_created_on>
+        <sys_id>63e360ef934c13107b3a7c5efaba1011</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_2223823_apollo_0_wards.x_2223823_apollo_0.wards_user</sys_name>
+        <sys_package display_value="Apollo-Hospitals" source="x_2223823_apollo_0">87c1422693c89b507b3a7c5efaba1008</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
+        <sys_security_acl display_value="x_2223823_apollo_0_wards">6be360ef934c13107b3a7c5efaba1003</sys_security_acl>
+        <sys_update_name>sys_security_acl_role_63e360ef934c13107b3a7c5efaba1011</sys_update_name>
+        <sys_updated_by>fatehsingh.meena</sys_updated_by>
+        <sys_updated_on>2026-10-26 08:59:09</sys_updated_on>
+        <sys_user_role display_value="x_2223823_apollo_0.wards_user" name="x_2223823_apollo_0.wards_user">57e3a4af934c13107b3a7c5efaba1093</sys_user_role>
+    </sys_security_acl_role>
+</record_update>

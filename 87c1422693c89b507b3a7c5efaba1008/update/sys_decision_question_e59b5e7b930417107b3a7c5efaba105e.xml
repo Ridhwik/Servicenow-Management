@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_decision_question">
+    <sys_decision_question action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <answer>699b5e7b930417107b3a7c5efaba1055</answer>
+        <condition/>
+        <decision_table display_value="Room Category Decision Tables">610a52b7930417107b3a7c5efaba1093</decision_table>
+        <default_answer>true</default_answer>
+        <input_table>var__m_sys_decision_input_610a52b7930417107b3a7c5efaba1093</input_table>
+        <label>Room Category Decision Tables default result</label>
+        <marked_for_deletion>false</marked_for_deletion>
+        <order>100</order>
+        <sys_class_name>sys_decision_question</sys_class_name>
+        <sys_created_by>harshvardhan.chhapola</sys_created_by>
+        <sys_created_on>2026-10-27 12:20:26</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>e59b5e7b930417107b3a7c5efaba105e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Room Category Decision Tables default result</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Apollo-Hospitals" source="x_2223823_apollo_0">87c1422693c89b507b3a7c5efaba1008</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
+        <sys_update_name>sys_decision_question_e59b5e7b930417107b3a7c5efaba105e</sys_update_name>
+        <sys_updated_by>harshvardhan.chhapola</sys_updated_by>
+        <sys_updated_on>2026-10-27 12:20:26</sys_updated_on>
+    </sys_decision_question>
+</record_update>

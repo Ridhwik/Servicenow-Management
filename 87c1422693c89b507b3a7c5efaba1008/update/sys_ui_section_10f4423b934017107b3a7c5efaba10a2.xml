@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_ui_section caption="Consultation" section_id="10f4423b934017107b3a7c5efaba10a2" sys_domain="global" table="x_2223823_apollo_0_appointment" version="3" view="">
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>meeting_link</element>
+            <position>0</position>
+            <sys_created_by>vikas.singh</sys_created_by>
+            <sys_created_on>2026-10-27 10:41:30</sys_created_on>
+            <sys_id>18f4823b934017107b3a7c5efaba104c</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Consultation" display_value="Consultation" name="x_2223823_apollo_0_appointment" sys_domain="global" view="Default view">10f4423b934017107b3a7c5efaba10a2</sys_ui_section>
+            <sys_updated_by>vikas.singh</sys_updated_by>
+            <sys_updated_on>2026-10-27 10:41:30</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.split</element>
+            <position>1</position>
+            <sys_created_by>vikas.singh</sys_created_by>
+            <sys_created_on>2026-10-27 10:41:30</sys_created_on>
+            <sys_id>94f4823b934017107b3a7c5efaba104d</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Consultation" display_value="Consultation" name="x_2223823_apollo_0_appointment" sys_domain="global" view="Default view">10f4423b934017107b3a7c5efaba10a2</sys_ui_section>
+            <sys_updated_by>vikas.singh</sys_updated_by>
+            <sys_updated_on>2026-10-27 10:41:30</sys_updated_on>
+            <sys_user/>
+            <type>.split</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>checked_in_at</element>
+            <position>2</position>
+            <sys_created_by>vikas.singh</sys_created_by>
+            <sys_created_on>2026-10-27 10:41:30</sys_created_on>
+            <sys_id>14f4823b934017107b3a7c5efaba104e</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Consultation" display_value="Consultation" name="x_2223823_apollo_0_appointment" sys_domain="global" view="Default view">10f4423b934017107b3a7c5efaba10a2</sys_ui_section>
+            <sys_updated_by>vikas.singh</sys_updated_by>
+            <sys_updated_on>2026-10-27 10:41:30</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_section action="INSERT_OR_UPDATE">
+            <caption>Consultation</caption>
+            <header>false</header>
+            <name>x_2223823_apollo_0_appointment</name>
+            <roles/>
+            <sys_class_name>sys_ui_section</sys_class_name>
+            <sys_created_by>vikas.singh</sys_created_by>
+            <sys_created_on>2026-10-27 10:41:29</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>10f4423b934017107b3a7c5efaba10a2</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>x_2223823_apollo_0_appointment</sys_name>
+            <sys_overrides/>
+            <sys_package display_value="Apollo-Hospitals" source="x_2223823_apollo_0">87c1422693c89b507b3a7c5efaba1008</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
+            <sys_update_name>sys_ui_section_10f4423b934017107b3a7c5efaba10a2</sys_update_name>
+            <sys_updated_by>vikas.singh</sys_updated_by>
+            <sys_updated_on>2026-10-27 10:41:29</sys_updated_on>
+            <sys_user/>
+            <title>false</title>
+            <view display_value="Default view" name="NULL">Default view</view>
+            <view_name/>
+        </sys_ui_section>
+    </sys_ui_section>
+</record_update>

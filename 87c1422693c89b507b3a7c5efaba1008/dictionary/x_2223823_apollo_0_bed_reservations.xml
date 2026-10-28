@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element attributes="enforce_dot_walk_cross_scope_access=true" db_object_id="5b24ecef934c13107b3a7c5efaba1042" label="Bed Reservations" max_length="40" name="x_2223823_apollo_0_bed_reservations" type="collection">
+        <element label="Patient" max_length="32" name="patient" reference="x_2223823_apollo_0_patient" type="reference"/>
+        <element label="Reserved at " max_length="255" name="reserved_at" type="glide_date_time"/>
+        <element label="Reserved by" max_length="32" name="reserved_by" reference="sys_user" type="reference"/>
+        <element label="Hospital" max_length="32" name="hospital" reference="x_2223823_apollo_0_hospital" type="reference"/>
+        <element choice="1" label="Type" max_length="255" name="type" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Transfer" sequence="2" value="Transfer"/>
+                <element inactive_on_update="false" label="Planned" sequence="0" value="Planned"/>
+                <element inactive_on_update="false" label="Post-surgery recovery" sequence="3" value="Post-surgery recovery"/>
+                <element inactive_on_update="false" label="Emergency" sequence="1" value="Emergency"/>
+            </choice>
+        </element>
+        <element label="Expires at" max_length="255" name="expires_at" type="glide_date_time"/>
+        <element choice="1" label="Status" max_length="255" name="status" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Expired" sequence="2" value="3"/>
+                <element inactive_on_update="false" label="Cancelled" sequence="3" value="4"/>
+                <element inactive_on_update="false" label="Converted to occupied" sequence="1" value="2"/>
+                <element inactive_on_update="false" label="Active" sequence="0" value="1"/>
+            </choice>
+        </element>
+        <element label="Admission" max_length="32" name="admission" reference="x_2223823_apollo_0_admission" type="reference"/>
+        <element label="bed" max_length="32" name="bed" reference="x_2223823_apollo_0_beds" type="reference"/>
+    </element>
+</database>

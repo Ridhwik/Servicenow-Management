@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element attributes="enforce_dot_walk_cross_scope_access=true" db_object_id="72298a0c935097107b3a7c5efaba1087" label="Doctor Request" max_length="40" name="x_2223823_apollo_0_doctor_request" type="collection">
+        <element label="Reason" max_length="255" name="reason" type="string"/>
+        <element label="Affected appointments" max_length="40" name="affected_count" type="integer"/>
+        <element choice="1" label="Type" max_length="40" name="request_type" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Cover" sequence="1" value="cover"/>
+                <element inactive_on_update="false" label="Leave" sequence="0" value="leave"/>
+            </choice>
+        </element>
+        <element label="Approved on" max_length="40" name="approved_on" read_only="true" read_only_option="display_read_only" type="glide_date_time"/>
+        <element label="Approver" max_length="32" name="approver" reference="sys_user" type="reference"/>
+        <element choice="1" label="Status" max_length="40" name="status" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Rejected" sequence="2" value="rejected"/>
+                <element inactive_on_update="false" label="Expired" sequence="4" value="expired"/>
+                <element inactive_on_update="false" label="Requested" sequence="0" value="requested"/>
+                <element inactive_on_update="false" label="Approved" sequence="1" value="approved"/>
+                <element inactive_on_update="false" label="Cancelled" sequence="3" value="cancelled"/>
+            </choice>
+        </element>
+        <element label="Rejection reason" max_length="255" name="rejection_reason" type="string"/>
+        <element label="To" max_length="40" name="end_date" type="glide_date"/>
+        <element label="Hospital" max_length="32" name="hospital" reference="x_2223823_apollo_0_hospital" type="reference"/>
+        <element label="Doctor" max_length="32" name="doctor" reference="x_2223823_apollo_0_doctor" type="reference"/>
+        <element label="From" max_length="40" name="start_date" type="glide_date"/>
+        <element label="Approver group" max_length="32" name="approval_group" reference="sys_user_group" type="reference"/>
+        <index name="index">
+            <element name="approval_group"/>
+        </index>
+        <index name="index2">
+            <element name="approver"/>
+        </index>
+        <index name="index3">
+            <element name="doctor"/>
+        </index>
+        <index name="index4">
+            <element name="hospital"/>
+        </index>
+    </element>
+</database>

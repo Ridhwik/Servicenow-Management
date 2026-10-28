@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_app_application">
+    <sys_app_application action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <category display_value="Custom Applications">e0355b31ef303000a61d5a3615c0fb78</category>
+        <description/>
+        <device_type>browser</device_type>
+        <hint/>
+        <name>Apollo Hospital </name>
+        <order>100</order>
+        <roles>x_2223823_apollo_0.hospital_user</roles>
+        <sys_class_name>sys_app_application</sys_class_name>
+        <sys_created_by>fatehsingh.meena</sys_created_by>
+        <sys_created_on>2026-10-26 08:56:39</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>fa536c2f934c13107b3a7c5efaba10a2</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Apollo Hospital </sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Apollo-Hospitals" source="x_2223823_apollo_0">87c1422693c89b507b3a7c5efaba1008</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
+        <sys_update_name>sys_app_application_fa536c2f934c13107b3a7c5efaba10a2</sys_update_name>
+        <sys_updated_by>fatehsingh.meena</sys_updated_by>
+        <sys_updated_on>2026-10-26 08:56:39</sys_updated_on>
+        <title>Apollo Hospital </title>
+        <view_name/>
+    </sys_app_application>
+</record_update>

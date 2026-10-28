@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element attributes="enforce_dot_walk_cross_scope_access=true" db_object_id="9fcbb423938053107b3a7c5efaba10cd" label="OT Booking" max_length="40" name="x_2223823_apollo_0_ot_booking" type="collection">
+        <element label="Recovery Reservation" max_length="32" name="recovery_reservation" reference="x_2223823_apollo_0_bed_reservations" type="reference"/>
+        <element label="Surgeon" max_length="32" name="surgeon" reference="x_2223823_apollo_0_doctor" type="reference"/>
+        <element label="Surgeon Order" max_length="40" name="surgeon_order" type="boolean"/>
+        <element label="Consent Complete" max_length="40" name="consent_complete" type="boolean"/>
+        <element label="Start Time" max_length="40" name="start_time" type="glide_date_time"/>
+        <element label="Patient" max_length="32" name="patient" reference="x_2223823_apollo_0_patient" type="reference"/>
+        <element label="Hospital" max_length="32" name="hospital" reference="x_2223823_apollo_0_hospital" type="reference"/>
+        <element choice="1" label="Status" max_length="40" name="status" type="integer">
+            <choice>
+                <element inactive_on_update="false" label="Requested" sequence="0" value="1"/>
+                <element inactive_on_update="false" label="Cancelled" sequence="3" value="4"/>
+                <element inactive_on_update="false" label="Approved" sequence="1" value="2"/>
+                <element inactive_on_update="false" label="Completed" sequence="2" value="3"/>
+            </choice>
+        </element>
+        <element label="Operation Theatre" max_length="32" name="operation_theatre" reference="x_2223823_apollo_0_rooms" type="reference"/>
+        <element label="End Time" max_length="40" name="end_time" type="glide_date_time"/>
+        <index name="index">
+            <element name="hospital"/>
+        </index>
+        <index name="index2">
+            <element name="operation_theatre"/>
+        </index>
+        <index name="index3">
+            <element name="patient"/>
+        </index>
+        <index name="index4">
+            <element name="recovery_reservation"/>
+        </index>
+        <index name="index5">
+            <element name="surgeon"/>
+        </index>
+    </element>
+</database>

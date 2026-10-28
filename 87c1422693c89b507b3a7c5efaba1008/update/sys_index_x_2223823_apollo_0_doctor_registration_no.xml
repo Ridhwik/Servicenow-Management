@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_index">
+    <sys_index action="INSERT_OR_UPDATE">
+        <access_method>btree</access_method>
+        <col_name_string>registration_no</col_name_string>
+        <index_col_name element="registration_no" name="x_2223823_apollo_0_doctor">55ad402f93c013107b3a7c5efaba1026</index_col_name>
+        <logical_table_name>x_2223823_apollo_0_doctor</logical_table_name>
+        <sys_class_name>sys_index</sys_class_name>
+        <sys_created_by>system</sys_created_by>
+        <sys_created_on>2026-10-26 09:27:25</sys_created_on>
+        <sys_id>a96a246393cc13107b3a7c5efaba10fe</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_2223823_apollo_0_doctor</sys_name>
+        <sys_package display_value="Apollo-Hospitals" source="x_2223823_apollo_0">87c1422693c89b507b3a7c5efaba1008</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
+        <sys_update_name>sys_index_x_2223823_apollo_0_doctor_registration_no</sys_update_name>
+        <sys_updated_by>system</sys_updated_by>
+        <sys_updated_on>2026-10-26 09:27:25</sys_updated_on>
+        <table display_value="Doctor" name="x_2223823_apollo_0_doctor">9ee688eb938013107b3a7c5efaba10ec</table>
+        <unique_index>true</unique_index>
+    </sys_index>
+</record_update>
