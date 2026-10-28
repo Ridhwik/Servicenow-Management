@@ -5,17 +5,157 @@ declare global {
         namespace Internal {
             interface Keys extends KeysRegistry {
                 explicit: {
+                    '0444a823938c13107b3a7c5efaba10d8': {
+                        table: 'sys_ui_module'
+                        id: '0444a823938c13107b3a7c5efaba10d8'
+                    }
+                    '0444a823938c13107b3a7c5efaba10dd': {
+                        table: 'sys_security_acl'
+                        id: '0444a823938c13107b3a7c5efaba10dd'
+                    }
+                    '0b53ac2f934c13107b3a7c5efaba101c': {
+                        table: 'sys_security_acl'
+                        id: '0b53ac2f934c13107b3a7c5efaba101c'
+                    }
+                    '0f53ac2f934c13107b3a7c5efaba1070': {
+                        table: 'sys_security_acl'
+                        id: '0f53ac2f934c13107b3a7c5efaba1070'
+                    }
+                    '124d44eb93c013107b3a7c5efaba102b': {
+                        table: 'sys_ux_style'
+                        id: '124d44eb93c013107b3a7c5efaba102b'
+                    }
+                    '164d84eb93c013107b3a7c5efaba100b': {
+                        table: 'm2m_style_asset'
+                        id: '164d84eb93c013107b3a7c5efaba100b'
+                    }
+                    '1844e823938c13107b3a7c5efaba1064': {
+                        table: 'sys_security_acl'
+                        id: '1844e823938c13107b3a7c5efaba1064'
+                    }
+                    '1a4d44eb93c013107b3a7c5efaba10f2': {
+                        table: 'm2m_theme_style'
+                        id: '1a4d44eb93c013107b3a7c5efaba10f2'
+                    }
+                    '1be564a7938c13107b3a7c5efaba1009': {
+                        table: 'sys_security_acl'
+                        id: '1be564a7938c13107b3a7c5efaba1009'
+                    }
+                    '1e4d84eb93c013107b3a7c5efaba1035': {
+                        table: 'm2m_style_asset'
+                        id: '1e4d84eb93c013107b3a7c5efaba1035'
+                    }
+                    '1e4d84eb93c013107b3a7c5efaba1051': {
+                        table: 'm2m_style_asset'
+                        id: '1e4d84eb93c013107b3a7c5efaba1051'
+                    }
+                    '1e4d84eb93c013107b3a7c5efaba106d': {
+                        table: 'm2m_style_asset'
+                        id: '1e4d84eb93c013107b3a7c5efaba106d'
+                    }
+                    '2214a8ef934c13107b3a7c5efaba1082': {
+                        table: 'sys_app_module'
+                        id: '2214a8ef934c13107b3a7c5efaba1082'
+                    }
                     '2ab7046f938013107b3a7c5efaba1019': {
                         table: 'sys_app_application'
                         id: '2ab7046f938013107b3a7c5efaba1019'
+                    }
+                    '2e4d84eb93c013107b3a7c5efaba1089': {
+                        table: 'm2m_style_asset'
+                        id: '2e4d84eb93c013107b3a7c5efaba1089'
+                    }
+                    '2e4d84eb93c013107b3a7c5efaba10a5': {
+                        table: 'm2m_style_asset'
+                        id: '2e4d84eb93c013107b3a7c5efaba10a5'
                     }
                     '2eb7046f938013107b3a7c5efaba1027': {
                         table: 'sys_ui_application'
                         id: '2eb7046f938013107b3a7c5efaba1027'
                     }
+                    '32536c2f934c13107b3a7c5efaba10db': {
+                        table: 'sys_security_acl'
+                        id: '32536c2f934c13107b3a7c5efaba10db'
+                    }
+                    '383620e7938c13107b3a7c5efaba10ad': {
+                        table: 'sys_app_application'
+                        id: '383620e7938c13107b3a7c5efaba10ad'
+                    }
+                    '3c3620e7938c13107b3a7c5efaba10be': {
+                        table: 'sys_ui_module'
+                        id: '3c3620e7938c13107b3a7c5efaba10be'
+                    }
+                    '4d3660e7938c13107b3a7c5efaba1020': {
+                        table: 'sys_security_acl'
+                        id: '4d3660e7938c13107b3a7c5efaba1020'
+                    }
+                    '5044e823938c13107b3a7c5efaba1015': {
+                        table: 'sys_security_acl'
+                        id: '5044e823938c13107b3a7c5efaba1015'
+                    }
+                    '5044e823938c13107b3a7c5efaba109b': {
+                        table: 'sys_security_acl'
+                        id: '5044e823938c13107b3a7c5efaba109b'
+                    }
+                    '564d44eb93c013107b3a7c5efaba10c8': {
+                        table: 'm2m_theme_style'
+                        id: '564d44eb93c013107b3a7c5efaba10c8'
+                    }
+                    '5a4d44eb93c013107b3a7c5efaba10cf': {
+                        table: 'm2m_theme_style'
+                        id: '5a4d44eb93c013107b3a7c5efaba10cf'
+                    }
+                    '5a4d84eb93c013107b3a7c5efaba1004': {
+                        table: 'm2m_style_asset'
+                        id: '5a4d84eb93c013107b3a7c5efaba1004'
+                    }
+                    '5a4d84eb93c013107b3a7c5efaba1068': {
+                        table: 'm2m_style_asset'
+                        id: '5a4d84eb93c013107b3a7c5efaba1068'
+                    }
+                    '5be320ef934c13107b3a7c5efaba10fe': {
+                        table: 'sys_ui_module'
+                        id: '5be320ef934c13107b3a7c5efaba10fe'
+                    }
+                    '5e4d44eb93c013107b3a7c5efaba1061': {
+                        table: 'sys_ux_style'
+                        id: '5e4d44eb93c013107b3a7c5efaba1061'
+                    }
+                    '5e4d44eb93c013107b3a7c5efaba10da': {
+                        table: 'm2m_theme_style'
+                        id: '5e4d44eb93c013107b3a7c5efaba10da'
+                    }
                     '62b7046f938013107b3a7c5efaba102e': {
                         table: 'sys_ui_module'
                         id: '62b7046f938013107b3a7c5efaba102e'
+                    }
+                    '63e360ef934c13107b3a7c5efaba109c': {
+                        table: 'sys_security_acl'
+                        id: '63e360ef934c13107b3a7c5efaba109c'
+                    }
+                    '6614a8ef934c13107b3a7c5efaba1087': {
+                        table: 'sys_ui_module'
+                        id: '6614a8ef934c13107b3a7c5efaba1087'
+                    }
+                    '6614a8ef934c13107b3a7c5efaba108c': {
+                        table: 'sys_security_acl'
+                        id: '6614a8ef934c13107b3a7c5efaba108c'
+                    }
+                    '6a4d84eb93c013107b3a7c5efaba1084': {
+                        table: 'm2m_style_asset'
+                        id: '6a4d84eb93c013107b3a7c5efaba1084'
+                    }
+                    '6be360ef934c13107b3a7c5efaba1003': {
+                        table: 'sys_security_acl'
+                        id: '6be360ef934c13107b3a7c5efaba1003'
+                    }
+                    '6ec368af934c13107b3a7c5efaba1075': {
+                        table: 'sys_security_acl'
+                        id: '6ec368af934c13107b3a7c5efaba1075'
+                    }
+                    '6ec368af934c13107b3a7c5efaba10b8': {
+                        table: 'sys_security_acl'
+                        id: '6ec368af934c13107b3a7c5efaba10b8'
                     }
                     '76b7046f938013107b3a7c5efaba1042': {
                         table: 'sys_security_acl'
@@ -29,21 +169,193 @@ declare global {
                         table: 'sys_security_acl'
                         id: '7ab7046f938013107b3a7c5efaba109b'
                     }
+                    '83656067938c13107b3a7c5efaba1020': {
+                        table: 'sys_kmf_module_key_policy'
+                        id: '83656067938c13107b3a7c5efaba1020'
+                    }
+                    '864d04eb93c013107b3a7c5efaba10ff': {
+                        table: 'sys_ux_theme'
+                        id: '864d04eb93c013107b3a7c5efaba10ff'
+                    }
+                    '8b53ac2f934c13107b3a7c5efaba1046': {
+                        table: 'sys_security_acl'
+                        id: '8b53ac2f934c13107b3a7c5efaba1046'
+                    }
+                    '8c44a823938c13107b3a7c5efaba10d2': {
+                        table: 'sys_app_module'
+                        id: '8c44a823938c13107b3a7c5efaba10d2'
+                    }
+                    '924d84eb93c013107b3a7c5efaba1040': {
+                        table: 'm2m_style_asset'
+                        id: '924d84eb93c013107b3a7c5efaba1040'
+                    }
+                    '9be564a7938c13107b3a7c5efaba1040': {
+                        table: 'sys_security_acl'
+                        id: '9be564a7938c13107b3a7c5efaba1040'
+                    }
+                    '9e4d44eb93c013107b3a7c5efaba1025': {
+                        table: 'sys_ux_style'
+                        id: '9e4d44eb93c013107b3a7c5efaba1025'
+                    }
+                    '9e4d44eb93c013107b3a7c5efaba10ec': {
+                        table: 'm2m_theme_style'
+                        id: '9e4d44eb93c013107b3a7c5efaba10ec'
+                    }
+                    '9ec368af934c13107b3a7c5efaba1001': {
+                        table: 'sys_app_module'
+                        id: '9ec368af934c13107b3a7c5efaba1001'
+                    }
+                    a24d84eb93c013107b3a7c5efaba1094: {
+                        table: 'm2m_style_asset'
+                        id: 'a24d84eb93c013107b3a7c5efaba1094'
+                    }
+                    a24d84eb93c013107b3a7c5efaba10b0: {
+                        table: 'm2m_style_asset'
+                        id: 'a24d84eb93c013107b3a7c5efaba10b0'
+                    }
+                    a64d84eb93c013107b3a7c5efaba107f: {
+                        table: 'm2m_style_asset'
+                        id: 'a64d84eb93c013107b3a7c5efaba107f'
+                    }
+                    a7e360ef934c13107b3a7c5efaba103b: {
+                        table: 'sys_security_acl'
+                        id: 'a7e360ef934c13107b3a7c5efaba103b'
+                    }
+                    b03620e7938c13107b3a7c5efaba10b4: {
+                        table: 'sys_app_module'
+                        id: 'b03620e7938c13107b3a7c5efaba10b4'
+                    }
+                    b214a8ef934c13107b3a7c5efaba10c4: {
+                        table: 'sys_security_acl'
+                        id: 'b214a8ef934c13107b3a7c5efaba10c4'
+                    }
+                    b214e8ef934c13107b3a7c5efaba1007: {
+                        table: 'sys_security_acl'
+                        id: 'b214e8ef934c13107b3a7c5efaba1007'
+                    }
                     b627042f938013107b3a7c5efaba1001: {
                         table: 'sys_app_application'
                         id: 'b627042f938013107b3a7c5efaba1001'
+                    }
+                    b6536c2f934c13107b3a7c5efaba10b4: {
+                        table: 'sys_ui_application'
+                        id: 'b6536c2f934c13107b3a7c5efaba10b4'
+                    }
+                    b83620e7938c13107b3a7c5efaba10b9: {
+                        table: 'sys_ui_application'
+                        id: 'b83620e7938c13107b3a7c5efaba10b9'
+                    }
+                    b894ec63938c13107b3a7c5efaba1047: {
+                        table: 'sys_app_module'
+                        id: 'b894ec63938c13107b3a7c5efaba1047'
+                    }
+                    ba536c2f934c13107b3a7c5efaba10ba: {
+                        table: 'sys_ui_module'
+                        id: 'ba536c2f934c13107b3a7c5efaba10ba'
                     }
                     bom_json: {
                         table: 'sys_module'
                         id: '86c40d9fdf204ddbbf2ac03b802a0713'
                     }
+                    c64d44eb93c013107b3a7c5efaba1006: {
+                        table: 'sys_ux_style'
+                        id: 'c64d44eb93c013107b3a7c5efaba1006'
+                    }
+                    cd3660e7938c13107b3a7c5efaba1070: {
+                        table: 'sys_security_acl'
+                        id: 'cd3660e7938c13107b3a7c5efaba1070'
+                    }
+                    cd3660e7938c13107b3a7c5efaba10c0: {
+                        table: 'sys_security_acl'
+                        id: 'cd3660e7938c13107b3a7c5efaba10c0'
+                    }
+                    d24d44eb93c013107b3a7c5efaba106c: {
+                        table: 'sys_ux_style'
+                        id: 'd24d44eb93c013107b3a7c5efaba106c'
+                    }
+                    d24d44eb93c013107b3a7c5efaba10d5: {
+                        table: 'm2m_theme_style'
+                        id: 'd24d44eb93c013107b3a7c5efaba10d5'
+                    }
+                    d3e320ef934c13107b3a7c5efaba10f9: {
+                        table: 'sys_app_module'
+                        id: 'd3e320ef934c13107b3a7c5efaba10f9'
+                    }
+                    d3e524a7938c13107b3a7c5efaba1094: {
+                        table: 'sys_security_acl'
+                        id: 'd3e524a7938c13107b3a7c5efaba1094'
+                    }
+                    d98764ab938c13107b3a7c5efaba1089: {
+                        table: 'sys_app_module'
+                        id: 'd98764ab938c13107b3a7c5efaba1089'
+                    }
+                    dac368af934c13107b3a7c5efaba1013: {
+                        table: 'sys_ui_module'
+                        id: 'dac368af934c13107b3a7c5efaba1013'
+                    }
+                    dac368af934c13107b3a7c5efaba1018: {
+                        table: 'sys_security_acl'
+                        id: 'dac368af934c13107b3a7c5efaba1018'
+                    }
+                    dbe5a467938c13107b3a7c5efaba1011: {
+                        table: 'sys_security_acl'
+                        id: 'dbe5a467938c13107b3a7c5efaba1011'
+                    }
+                    de4d44eb93c013107b3a7c5efaba1066: {
+                        table: 'sys_ux_style'
+                        id: 'de4d44eb93c013107b3a7c5efaba1066'
+                    }
+                    de4d84eb93c013107b3a7c5efaba103a: {
+                        table: 'm2m_style_asset'
+                        id: 'de4d84eb93c013107b3a7c5efaba103a'
+                    }
+                    de4d84eb93c013107b3a7c5efaba1056: {
+                        table: 'm2m_style_asset'
+                        id: 'de4d84eb93c013107b3a7c5efaba1056'
+                    }
+                    e24d84eb93c013107b3a7c5efaba10ce: {
+                        table: 'sys_ux_theme_customization'
+                        id: 'e24d84eb93c013107b3a7c5efaba10ce'
+                    }
+                    ee4d84eb93c013107b3a7c5efaba108e: {
+                        table: 'm2m_style_asset'
+                        id: 'ee4d84eb93c013107b3a7c5efaba108e'
+                    }
+                    ee4d84eb93c013107b3a7c5efaba10aa: {
+                        table: 'm2m_style_asset'
+                        id: 'ee4d84eb93c013107b3a7c5efaba10aa'
+                    }
                     eeb7046f938013107b3a7c5efaba101e: {
                         table: 'sys_app_module'
                         id: 'eeb7046f938013107b3a7c5efaba101e'
                     }
+                    eec368af934c13107b3a7c5efaba10e2: {
+                        table: 'sys_security_acl'
+                        id: 'eec368af934c13107b3a7c5efaba10e2'
+                    }
+                    efe360ef934c13107b3a7c5efaba1071: {
+                        table: 'sys_security_acl'
+                        id: 'efe360ef934c13107b3a7c5efaba1071'
+                    }
+                    f6536c2f934c13107b3a7c5efaba10ab: {
+                        table: 'sys_app_module'
+                        id: 'f6536c2f934c13107b3a7c5efaba10ab'
+                    }
                     f6b7046f938013107b3a7c5efaba10c6: {
                         table: 'sys_security_acl'
                         id: 'f6b7046f938013107b3a7c5efaba10c6'
+                    }
+                    fa14e8ef934c13107b3a7c5efaba103d: {
+                        table: 'sys_security_acl'
+                        id: 'fa14e8ef934c13107b3a7c5efaba103d'
+                    }
+                    fa536c2f934c13107b3a7c5efaba10a2: {
+                        table: 'sys_app_application'
+                        id: 'fa536c2f934c13107b3a7c5efaba10a2'
+                    }
+                    fc3620e7938c13107b3a7c5efaba10d0: {
+                        table: 'sys_security_acl'
+                        id: 'fc3620e7938c13107b3a7c5efaba10d0'
                     }
                     package_json: {
                         table: 'sys_module'
@@ -58,6 +370,13 @@ declare global {
                             name: 'x_2223823_apollo_0_department'
                             element: 'active'
                             language: 'en'
+                        }
+                    },
+                    {
+                        table: 'ua_table_licensing_config'
+                        id: '0206d21a52c246f4b0fa7ffcf74022d2'
+                        key: {
+                            name: 'x_2223823_apollo_0_rooms'
                         }
                     },
                     {
@@ -182,6 +501,13 @@ declare global {
                         }
                     },
                     {
+                        table: 'ua_table_licensing_config'
+                        id: '15ec7b10e23b4d3e843c71f7117ca298'
+                        key: {
+                            name: 'x_2223823_apollo_0_wards'
+                        }
+                    },
+                    {
                         table: 'sys_documentation'
                         id: '163e5ec349524b12b499dcb171ab5053'
                         key: {
@@ -269,6 +595,13 @@ declare global {
                                     name: 'x_2223823_apollo_0.wards_user'
                                 }
                             }
+                        }
+                    },
+                    {
+                        table: 'ua_table_licensing_config'
+                        id: '25003e5b08c342afb29c04874b5ebafe'
+                        key: {
+                            name: 'x_2223823_apollo_0_patient'
                         }
                     },
                     {
@@ -450,6 +783,13 @@ declare global {
                         }
                     },
                     {
+                        table: 'ua_table_licensing_config'
+                        id: '451270b61a12406d8407dc1ea55f3220'
+                        key: {
+                            name: 'x_2223823_apollo_0_beds'
+                        }
+                    },
+                    {
                         table: 'sys_db_object'
                         id: '469360af934c13107b3a7c5efaba1001'
                         key: {
@@ -542,6 +882,13 @@ declare global {
                         }
                     },
                     {
+                        table: 'ua_table_licensing_config'
+                        id: '57c5b655b33c41cb8c1da5115c6f632e'
+                        key: {
+                            name: 'x_2223823_apollo_0_qualification'
+                        }
+                    },
+                    {
                         table: 'sys_user_role'
                         id: '57e3a4af934c13107b3a7c5efaba1093'
                         key: {
@@ -599,6 +946,13 @@ declare global {
                         key: {
                             name: 'x_2223823_apollo_0_doctor'
                             element: 'opd_schedule'
+                        }
+                    },
+                    {
+                        table: 'ua_table_licensing_config'
+                        id: '5ecb58cc08564032a0caa86763ee5c07'
+                        key: {
+                            name: 'x_2223823_apollo_0_admission'
                         }
                     },
                     {
@@ -843,6 +1197,13 @@ declare global {
                         key: {
                             logical_table_name: 'x_2223823_apollo_0_department'
                             col_name_string: 'hospital'
+                        }
+                    },
+                    {
+                        table: 'ua_table_licensing_config'
+                        id: '7f29f596055e409ebe779f19bcdf64a6'
+                        key: {
+                            name: 'x_2223823_apollo_0_hospital'
                         }
                     },
                     {
@@ -1114,7 +1475,7 @@ declare global {
                     {
                         table: 'sys_number'
                         id: 'afe5a4a7938c13107b3a7c5efaba1018'
-                        deleted: true
+                        deleted: false
                         key: {
                             category: 'x_2223823_apollo_0_admission'
                             prefix: 'ADM'
@@ -1594,6 +1955,13 @@ declare global {
                         }
                     },
                     {
+                        table: 'ua_table_licensing_config'
+                        id: 'f3b80227ff434c67b9e380db6babcd46'
+                        key: {
+                            name: 'x_2223823_apollo_0_bed_reservations'
+                        }
+                    },
+                    {
                         table: 'sys_security_acl_role'
                         id: 'f6b7046f938013107b3a7c5efaba10df'
                         key: {
@@ -1654,6 +2022,13 @@ declare global {
                         key: {
                             name: 'x_2223823_apollo_0_department'
                             element: 'hod'
+                        }
+                    },
+                    {
+                        table: 'ua_table_licensing_config'
+                        id: 'fe5c3f90b050469aba03701657e62cc0'
+                        key: {
+                            name: 'x_2223823_apollo_0_department'
                         }
                     },
                     {
