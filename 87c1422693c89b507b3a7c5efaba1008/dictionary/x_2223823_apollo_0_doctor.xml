@@ -16,8 +16,8 @@
         <element choice="3" default="1" label="Status" max_length="40" name="status" read_only="true" read_only_option="display_read_only" type="integer">
             <choice>
                 <element inactive_on_update="false" label="On Leave" sequence="1" value="2"/>
-                <element inactive_on_update="false" label="Inactive" sequence="2" value="3"/>
                 <element inactive_on_update="false" label="Active" sequence="0" value="1"/>
+                <element inactive_on_update="false" label="Inactive" sequence="2" value="3"/>
             </choice>
         </element>
         <element attributes="ignore_filter_on_new=true" default="javascript:global.getNextObjNumberPadded();" label="Employee ID" max_length="40" name="number" read_only="true" read_only_option="display_read_only" type="string"/>

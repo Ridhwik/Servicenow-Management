@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_scope_privilege">
+    <sys_scope_privilege action="DELETE">
+        <operation>read</operation>
+        <source_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</source_scope>
+        <status>allowed</status>
+        <sys_class_name>sys_scope_privilege</sys_class_name>
+        <sys_created_by>fatehsingh.meena</sys_created_by>
+        <sys_created_on>2026-10-27 06:14:48</sys_created_on>
+        <sys_id>61e78dbf9308d3107b3a7c5efaba10a7</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>sp_widget</sys_name>
+        <sys_package display_value="Apollo-Hospitals" source="x_2223823_apollo_0">87c1422693c89b507b3a7c5efaba1008</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
+        <sys_update_name>sys_scope_privilege_61e78dbf9308d3107b3a7c5efaba10a7</sys_update_name>
+        <sys_updated_by>fatehsingh.meena</sys_updated_by>
+        <sys_updated_on>2026-10-27 06:14:48</sys_updated_on>
+        <target_name>sp_widget</target_name>
+        <target_scope display_value="Global">global</target_scope>
+        <target_type>sys_db_object</target_type>
+    </sys_scope_privilege>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</application>
+        <file_path/>
+        <instance_id>1dfc152d3beccb18677f04e0b5e45aed</instance_id>
+        <instance_name>dev393999</instance_name>
+        <name>sys_scope_privilege_61e78dbf9308d3107b3a7c5efaba10a7</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_scope_privilege"><sys_scope_privilege action="INSERT_OR_UPDATE"><operation>read</operation><source_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</source_scope><status>allowed</status><sys_class_name>sys_scope_privilege</sys_class_name><sys_created_by>fatehsingh.meena</sys_created_by><sys_created_on>2026-10-27 06:14:48</sys_created_on><sys_id>61e78dbf9308d3107b3a7c5efaba10a7</sys_id><sys_mod_count>0</sys_mod_count><sys_name>sp_widget</sys_name><sys_package display_value="Apollo-Hospitals" source="x_2223823_apollo_0">87c1422693c89b507b3a7c5efaba1008</sys_package><sys_policy/><sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope><sys_update_name>sys_scope_privilege_61e78dbf9308d3107b3a7c5efaba10a7</sys_update_name><sys_updated_by>fatehsingh.meena</sys_updated_by><sys_updated_on>2026-10-27 06:14:48</sys_updated_on><target_name>sp_widget</target_name><target_scope display_value="Global">global</target_scope><target_type>sys_db_object</target_type></sys_scope_privilege></record_update>]]></payload>
+        <payload_hash>-444754057</payload_hash>
+        <record_name>sp_widget</record_name>
+        <reverted_from/>
+        <source>b8c605fb9308d3107b3a7c5efaba1062</source>
+        <source_table>sys_update_set</source_table>
+        <state>backed_out</state>
+        <sys_created_by>fatehsingh.meena</sys_created_by>
+        <sys_created_on>2026-10-27 06:14:48</sys_created_on>
+        <sys_id>2de7cdbf9308d3107b3a7c5efaba1099</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_recorded_at>1a17bff41a30000001</sys_recorded_at>
+        <sys_updated_by>fatehsingh.meena</sys_updated_by>
+        <sys_updated_on>2026-10-27 06:16:17</sys_updated_on>
+        <type>Cross scope privilege</type>
+        <update_guid>e1e7cdbfc608d3103587312d626b1398</update_guid>
+        <update_guid_history>e1e7cdbfc608d3103587312d626b1398:-444754057</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>fatehsingh.meena</sys_created_by>
+        <sys_created_on>2026-10-27 06:16:17</sys_created_on>
+        <sys_db_object display_value="" name="sys_scope_privilege">sys_scope_privilege</sys_db_object>
+        <sys_id>09738d84fdaa40c08069ee76679786f1</sys_id>
+        <sys_metadata>61e78dbf9308d3107b3a7c5efaba10a7</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>sp_widget</sys_name>
+        <sys_package display_value="Apollo-Hospitals" source="x_2223823_apollo_0">87c1422693c89b507b3a7c5efaba1008</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
+        <sys_scope_delete display_value="">1a2f7aa8dfc34e3a86d3f0bede3c2784</sys_scope_delete>
+        <sys_update_name>sys_scope_privilege_61e78dbf9308d3107b3a7c5efaba10a7</sys_update_name>
+        <sys_update_version display_value="sys_scope_privilege_61e78dbf9308d3107b3a7c5efaba10a7">2de7cdbf9308d3107b3a7c5efaba1099</sys_update_version>
+        <sys_updated_by>fatehsingh.meena</sys_updated_by>
+        <sys_updated_on>2026-10-27 06:16:17</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

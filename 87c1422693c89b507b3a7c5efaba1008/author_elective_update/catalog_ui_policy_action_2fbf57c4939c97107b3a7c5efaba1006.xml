@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="catalog_ui_policy_action">
+    <catalog_ui_policy_action action="DELETE">
+        <catalog_item/>
+        <catalog_variable>IO:08d55700935c97107b3a7c5efaba1010</catalog_variable>
+        <cleared>false</cleared>
+        <disabled>ignore</disabled>
+        <field/>
+        <field_message/>
+        <field_message_type>none</field_message_type>
+        <mandatory>ignore</mandatory>
+        <order>100</order>
+        <sys_class_name>catalog_ui_policy_action</sys_class_name>
+        <sys_created_by>nilesh.chaurasia</sys_created_by>
+        <sys_created_on>2026-10-28 11:56:55</sys_created_on>
+        <sys_id>2fbf57c4939c97107b3a7c5efaba1006</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>return_trip</sys_name>
+        <sys_package display_value="Apollo-Hospitals" source="x_2223823_apollo_0">87c1422693c89b507b3a7c5efaba1008</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
+        <sys_update_name>catalog_ui_policy_action_2fbf57c4939c97107b3a7c5efaba1006</sys_update_name>
+        <sys_updated_by>nilesh.chaurasia</sys_updated_by>
+        <sys_updated_on>2026-10-28 11:56:55</sys_updated_on>
+        <table/>
+        <ui_policy display_value="when emergency is no -&gt; visibility of other fields ">995e5304939c97107b3a7c5efaba10b0</ui_policy>
+        <value/>
+        <value_action>ignore</value_action>
+        <variable>return_trip</variable>
+        <variable_set/>
+        <visible>true</visible>
+    </catalog_ui_policy_action>
+    <sys_translated_text action="DELETE" query="documentkey=2fbf57c4939c97107b3a7c5efaba1006"/>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</application>
+        <file_path/>
+        <instance_id>1dfc152d3beccb18677f04e0b5e45aed</instance_id>
+        <instance_name>dev393999</instance_name>
+        <name>catalog_ui_policy_action_2fbf57c4939c97107b3a7c5efaba1006</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="catalog_ui_policy_action"><catalog_ui_policy_action action="INSERT_OR_UPDATE"><catalog_item/><catalog_variable>IO:08d55700935c97107b3a7c5efaba1010</catalog_variable><cleared>false</cleared><disabled>ignore</disabled><field/><field_message/><field_message_type>none</field_message_type><mandatory>ignore</mandatory><order>100</order><sys_class_name>catalog_ui_policy_action</sys_class_name><sys_created_by>nilesh.chaurasia</sys_created_by><sys_created_on>2026-10-28 11:56:55</sys_created_on><sys_id>2fbf57c4939c97107b3a7c5efaba1006</sys_id><sys_mod_count>0</sys_mod_count><sys_name>return_trip</sys_name><sys_package display_value="Apollo-Hospitals" source="x_2223823_apollo_0">87c1422693c89b507b3a7c5efaba1008</sys_package><sys_policy/><sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope><sys_update_name>catalog_ui_policy_action_2fbf57c4939c97107b3a7c5efaba1006</sys_update_name><sys_updated_by>nilesh.chaurasia</sys_updated_by><sys_updated_on>2026-10-28 11:56:55</sys_updated_on><table/><ui_policy display_value="when emergency is no -&gt; visibility of other fields ">995e5304939c97107b3a7c5efaba10b0</ui_policy><value/><value_action>ignore</value_action><variable>return_trip</variable><variable_set/><visible>true</visible></catalog_ui_policy_action><sys_translated_text action="delete_multiple" query="documentkey=2fbf57c4939c97107b3a7c5efaba1006"/></record_update>]]></payload>
+        <payload_hash>-684216841</payload_hash>
+        <record_name>return_trip</record_name>
+        <reverted_from/>
+        <source>9093becc93d497107b3a7c5efaba1092</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>nilesh.chaurasia</sys_created_by>
+        <sys_created_on>2026-10-29 05:19:50</sys_created_on>
+        <sys_id>808e0bd493d81b107b3a7c5efaba10f7</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1a18619a6230000001</sys_recorded_at>
+        <sys_updated_by>nilesh.chaurasia</sys_updated_by>
+        <sys_updated_on>2026-10-29 05:19:50</sys_updated_on>
+        <type>Catalog UI Policy Action</type>
+        <update_guid>c88e0bd4f1d81b105ae0ced264304bf6</update_guid>
+        <update_guid_history>c88e0bd4f1d81b105ae0ced264304bf6:0,bacf97c4e69c97107e508f734c6bb7cc:-281568122</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="return_trip">8d8ecbd493d81b107b3a7c5efaba10bc</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>nilesh.chaurasia</sys_created_by>
+        <sys_created_on>2026-10-29 05:19:54</sys_created_on>
+        <sys_db_object display_value="" name="catalog_ui_policy_action">catalog_ui_policy_action</sys_db_object>
+        <sys_id>776af8ea57e04454ae3729b19753aa90</sys_id>
+        <sys_metadata>2fbf57c4939c97107b3a7c5efaba1006</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>return_trip</sys_name>
+        <sys_package display_value="Apollo-Hospitals" source="x_2223823_apollo_0">87c1422693c89b507b3a7c5efaba1008</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
+        <sys_scope_delete display_value="">1a2f7aa8dfc34e3a86d3f0bede3c2784</sys_scope_delete>
+        <sys_update_name>catalog_ui_policy_action_2fbf57c4939c97107b3a7c5efaba1006</sys_update_name>
+        <sys_update_version display_value="catalog_ui_policy_action_2fbf57c4939c97107b3a7c5efaba1006">808e0bd493d81b107b3a7c5efaba10f7</sys_update_version>
+        <sys_updated_by>nilesh.chaurasia</sys_updated_by>
+        <sys_updated_on>2026-10-29 05:19:54</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

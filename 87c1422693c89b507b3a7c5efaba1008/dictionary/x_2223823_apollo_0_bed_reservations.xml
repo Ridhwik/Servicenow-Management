@@ -6,22 +6,37 @@
         <element label="Hospital" max_length="32" name="hospital" reference="x_2223823_apollo_0_hospital" type="reference"/>
         <element choice="1" label="Type" max_length="255" name="type" type="choice">
             <choice>
-                <element inactive_on_update="false" label="Transfer" sequence="2" value="Transfer"/>
+                <element inactive_on_update="false" label="Emergency" sequence="1" value="Emergency"/>
                 <element inactive_on_update="false" label="Planned" sequence="0" value="Planned"/>
                 <element inactive_on_update="false" label="Post-surgery recovery" sequence="3" value="Post-surgery recovery"/>
-                <element inactive_on_update="false" label="Emergency" sequence="1" value="Emergency"/>
+                <element inactive_on_update="false" label="Transfer" sequence="2" value="Transfer"/>
             </choice>
         </element>
         <element label="Expires at" max_length="255" name="expires_at" type="glide_date_time"/>
         <element choice="1" label="Status" max_length="255" name="status" type="choice">
             <choice>
                 <element inactive_on_update="false" label="Expired" sequence="2" value="3"/>
-                <element inactive_on_update="false" label="Cancelled" sequence="3" value="4"/>
                 <element inactive_on_update="false" label="Converted to occupied" sequence="1" value="2"/>
                 <element inactive_on_update="false" label="Active" sequence="0" value="1"/>
+                <element inactive_on_update="false" label="Cancelled" sequence="3" value="4"/>
             </choice>
         </element>
         <element label="Admission" max_length="32" name="admission" reference="x_2223823_apollo_0_admission" type="reference"/>
         <element label="bed" max_length="32" name="bed" reference="x_2223823_apollo_0_beds" type="reference"/>
+        <index name="index">
+            <element name="admission"/>
+        </index>
+        <index name="index2">
+            <element name="bed"/>
+        </index>
+        <index name="index3">
+            <element name="hospital"/>
+        </index>
+        <index name="index4">
+            <element name="patient"/>
+        </index>
+        <index name="index5">
+            <element name="reserved_by"/>
+        </index>
     </element>
 </database>

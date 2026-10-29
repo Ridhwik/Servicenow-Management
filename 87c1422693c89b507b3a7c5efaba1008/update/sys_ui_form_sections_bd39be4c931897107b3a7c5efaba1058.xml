@@ -42,6 +42,20 @@
             <sys_updated_by>nilesh.chaurasia</sys_updated_by>
             <sys_updated_on>2026-10-28 09:08:22</sys_updated_on>
         </sys_ui_form_section>
+        <sys_ui_form_section action="INSERT_OR_UPDATE">
+            <position>3</position>
+            <sys_created_by>ridhwik.jangid</sys_created_by>
+            <sys_created_on>2026-10-29 12:01:01</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>6c5aa0a093585b107b3a7c5efaba10e1</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_overrides/>
+            <sys_ui_form display_value="x_2223823_apollo_0_hospital_service" name="x_2223823_apollo_0_hospital_service" sys_domain="global" view="Default view">bd39be4c931897107b3a7c5efaba1058</sys_ui_form>
+            <sys_ui_section caption="NULL" display_value="" name="x_2223823_apollo_0_hospital_service" sys_domain="global" view="Default view">ccac128c931497107b3a7c5efaba10f7</sys_ui_section>
+            <sys_updated_by>ridhwik.jangid</sys_updated_by>
+            <sys_updated_on>2026-10-29 12:01:01</sys_updated_on>
+        </sys_ui_form_section>
         <sys_ui_form action="INSERT_OR_UPDATE">
             <name>x_2223823_apollo_0_hospital_service</name>
             <roles/>

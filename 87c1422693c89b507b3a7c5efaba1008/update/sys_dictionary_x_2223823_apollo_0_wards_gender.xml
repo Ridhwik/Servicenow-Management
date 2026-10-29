@@ -29,7 +29,7 @@
         <function_field>false</function_field>
         <internal_type display_value="Choice">choice</internal_type>
         <mandatory>false</mandatory>
-        <max_length/>
+        <max_length>40</max_length>
         <name>x_2223823_apollo_0_wards</name>
         <next_element/>
         <primary>false</primary>
@@ -48,6 +48,7 @@
         <sys_class_name>sys_dictionary</sys_class_name>
         <sys_created_by>fatehsingh.meena</sys_created_by>
         <sys_created_on>2026-10-27 06:25:08</sys_created_on>
+        <sys_id>f9a5ac72e3d7493f9a5799ab91b8c97e</sys_id>
         <sys_name>Gender</sys_name>
         <sys_package display_value="Apollo-Hospitals" source="x_2223823_apollo_0">87c1422693c89b507b3a7c5efaba1008</sys_package>
         <sys_policy/>

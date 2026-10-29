@@ -6,6 +6,7 @@
             <sys_class_name>sys_choice_set</sys_class_name>
             <sys_created_by>nilesh.chaurasia</sys_created_by>
             <sys_created_on>2026-10-28 05:47:35</sys_created_on>
+            <sys_id>b44bca40939097107b3a7c5efaba10bb</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_name>request_type</sys_name>
             <sys_package display_value="Apollo-Hospitals" source="x_2223823_apollo_0">87c1422693c89b507b3a7c5efaba1008</sys_package>
@@ -29,6 +30,7 @@
             <sys_created_on>2026-10-28 05:47:35</sys_created_on>
             <sys_domain>global</sys_domain>
             <sys_domain_path>/</sys_domain_path>
+            <sys_id>03bec39893d81b107b3a7c5efaba106e</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_updated_by>nilesh.chaurasia</sys_updated_by>
             <sys_updated_on>2026-10-28 05:47:35</sys_updated_on>
@@ -48,6 +50,7 @@
             <sys_created_on>2026-10-28 05:47:35</sys_created_on>
             <sys_domain>global</sys_domain>
             <sys_domain_path>/</sys_domain_path>
+            <sys_id>c7bec39893d81b107b3a7c5efaba106f</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_updated_by>nilesh.chaurasia</sys_updated_by>
             <sys_updated_on>2026-10-28 05:47:35</sys_updated_on>

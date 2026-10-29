@@ -53,11 +53,12 @@
         <sys_class_name>sys_dictionary</sys_class_name>
         <sys_created_by>vikas.singh</sys_created_by>
         <sys_created_on>2026-10-26 10:31:31</sys_created_on>
+        <sys_id>d419742b934053107b3a7c5efaba10a1</sys_id>
         <sys_name>x_2223823_apollo_0_appointment</sys_name>
         <sys_package display_value="Apollo-Hospitals" source="x_2223823_apollo_0">87c1422693c89b507b3a7c5efaba1008</sys_package>
         <sys_policy/>
         <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
-        <sys_update_name>sys_dictionary_x_2223823_apollo_0_appointment_null</sys_update_name>
+        <sys_update_name>sys_dictionary_x_2223823_apollo_0_appointment_NULL</sys_update_name>
         <sys_updated_by>vikas.singh</sys_updated_by>
         <sys_updated_on>2026-10-26 10:31:31</sys_updated_on>
         <table_reference>false</table_reference>

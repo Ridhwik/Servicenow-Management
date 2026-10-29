@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
     <element attributes="enforce_dot_walk_cross_scope_access=true" db_object_id="0aeb5688931497107b3a7c5efaba104d" label="Hospital Service" max_length="40" name="x_2223823_apollo_0_hospital_service" type="collection">
-        <element label="Hospital" max_length="32" name="hospital" reference="x_2223823_apollo_0_hospital" type="reference"/>
         <element label="Enabled" max_length="40" name="enabled" type="boolean"/>
         <element label="Service" max_length="32" name="service" reference="sc_cat_item" type="reference"/>
+        <element label="Hospital" max_length="32" name="hospital" reference="x_2223823_apollo_0_hospital" type="reference"/>
         <index name="index">
             <element name="hospital"/>
         </index>

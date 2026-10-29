@@ -1,16 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
     <element attributes="enforce_dot_walk_cross_scope_access=true" db_object_id="ffd3acaf934c13107b3a7c5efaba1013" label="Wards" max_length="40" name="x_2223823_apollo_0_wards" type="collection">
-        <element label="Head nurse / in-charge" name="head_nurse" reference="x_2223823_apollo_0_staff" reference_cascade_rule="none" type="reference"/>
-        <element label="Department" name="department" reference="x_2223823_apollo_0_department" reference_cascade_rule="restrict" type="reference"/>
+        <element label="Head nurse / in-charge" max_length="32" name="head_nurse" reference="x_2223823_apollo_0_staff" reference_cascade_rule="none" type="reference"/>
+        <element label="Department" max_length="32" name="department" reference="x_2223823_apollo_0_department" reference_cascade_rule="restrict" type="reference"/>
         <element display="true" label="Name" mandatory="true" max_length="100" name="name" type="string"/>
-        <element label="Hospital" mandatory="true" name="hospital" reference="x_2223823_apollo_0_hospital" reference_cascade_rule="restrict" type="reference"/>
-        <element label="Gender" name="gender" type="choice">
+        <element label="Hospital" mandatory="true" max_length="32" name="hospital" reference="x_2223823_apollo_0_hospital" reference_cascade_rule="restrict" type="reference"/>
+        <element label="Gender" max_length="40" name="gender" type="choice">
             <choice>
-                <element inactive_on_update="false" label="Female" sequence="2" value="2"/>
-                <element inactive_on_update="false" label="Any" sequence="3" value="3"/>
                 <element inactive_on_update="false" label="Male" sequence="1" value="1"/>
+                <element inactive_on_update="false" label="Any" sequence="3" value="3"/>
+                <element inactive_on_update="false" label="Female" sequence="2" value="2"/>
             </choice>
         </element>
-        <element label="Floor" mandatory="true" name="floor" reference="cmn_location" reference_cascade_rule="restrict" type="reference"/>
+        <element label="Floor" mandatory="true" max_length="32" name="floor" reference="cmn_location" reference_cascade_rule="restrict" type="reference"/>
+        <index name="index">
+            <element name="department"/>
+        </index>
+        <index name="index2">
+            <element name="floor"/>
+        </index>
+        <index name="index3">
+            <element name="head_nurse"/>
+        </index>
+        <index name="index4">
+            <element name="hospital"/>
+        </index>
     </element>
 </database>

@@ -9,10 +9,10 @@
         </element>
         <element choice="1" label="Status" mandatory="true" max_length="40" name="status" type="choice">
             <choice>
+                <element inactive_on_update="false" label="Completed" sequence="3" value="completed"/>
                 <element inactive_on_update="false" label="In progress" sequence="2" value="in_progress"/>
                 <element inactive_on_update="false" label="Received" sequence="1" value="received"/>
                 <element inactive_on_update="false" label="Rejected" sequence="4" value="rejected"/>
-                <element inactive_on_update="false" label="Completed" sequence="3" value="completed"/>
             </choice>
         </element>
         <element label="Handled by" max_length="32" name="handled_by" reference="x_2223823_apollo_0_staff" type="reference"/>

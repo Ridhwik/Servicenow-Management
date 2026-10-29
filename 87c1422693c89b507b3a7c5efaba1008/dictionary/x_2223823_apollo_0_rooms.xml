@@ -2,16 +2,16 @@
     <element attributes="enforce_dot_walk_cross_scope_access=true" db_object_id="469360af934c13107b3a7c5efaba1001" label="Rooms" max_length="40" name="x_2223823_apollo_0_rooms" type="collection">
         <element choice="1" label="Room Category" max_length="255" name="room_category" type="choice">
             <choice>
-                <element inactive_on_update="false" label="Private / Deluxe / Suite" sequence="1" value=" Private / Deluxe / Suite"/>
-                <element inactive_on_update="false" label="Day Care" sequence="9" value="Day Care"/>
-                <element inactive_on_update="false" label="General Ward" sequence="0" value="General Ward"/>
                 <element inactive_on_update="false" label="Emergency" sequence="7" value="Emergency"/>
-                <element inactive_on_update="false" label="Isolation" sequence="5" value="Isolation"/>
                 <element inactive_on_update="false" label="HDU" sequence="3" value="HDU"/>
-                <element inactive_on_update="false" label="NICU" sequence="4" value="NICU"/>
                 <element inactive_on_update="false" label="ICU" sequence="2" value="ICU"/>
-                <element inactive_on_update="false" label="Operation Theatre" sequence="8" value="Operation Theatre"/>
                 <element inactive_on_update="false" label="Labour / Maternity" sequence="6" value=" Labour / Maternity"/>
+                <element inactive_on_update="false" label="Day Care" sequence="9" value="Day Care"/>
+                <element inactive_on_update="false" label="Isolation" sequence="5" value="Isolation"/>
+                <element inactive_on_update="false" label="Private / Deluxe / Suite" sequence="1" value=" Private / Deluxe / Suite"/>
+                <element inactive_on_update="false" label="General Ward" sequence="0" value="General Ward"/>
+                <element inactive_on_update="false" label="Operation Theatre" sequence="8" value="Operation Theatre"/>
+                <element inactive_on_update="false" label="NICU" sequence="4" value="NICU"/>
             </choice>
         </element>
         <element label="Room number" max_length="40" name="room_number" type="string"/>
@@ -19,5 +19,14 @@
         <element label="Ward" max_length="32" name="ward" reference="x_2223823_apollo_0_wards" type="reference"/>
         <element label="Active" max_length="255" name="active" type="boolean"/>
         <element label="Floor" max_length="32" name="floor" reference="x_2223823_apollo_0_hospital" type="reference"/>
+        <index name="index">
+            <element name="floor"/>
+        </index>
+        <index name="index2">
+            <element name="hospital"/>
+        </index>
+        <index name="index3">
+            <element name="ward"/>
+        </index>
     </element>
 </database>

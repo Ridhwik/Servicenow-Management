@@ -4,19 +4,19 @@
         <element label="Affected appointments" max_length="40" name="affected_count" type="integer"/>
         <element choice="1" label="Type" max_length="40" name="request_type" type="choice">
             <choice>
-                <element inactive_on_update="false" label="Cover" sequence="1" value="cover"/>
                 <element inactive_on_update="false" label="Leave" sequence="0" value="leave"/>
+                <element inactive_on_update="false" label="Cover" sequence="1" value="cover"/>
             </choice>
         </element>
         <element label="Approved on" max_length="40" name="approved_on" read_only="true" read_only_option="display_read_only" type="glide_date_time"/>
         <element label="Approver" max_length="32" name="approver" reference="sys_user" type="reference"/>
         <element choice="1" label="Status" max_length="40" name="status" type="choice">
             <choice>
-                <element inactive_on_update="false" label="Rejected" sequence="2" value="rejected"/>
+                <element inactive_on_update="false" label="Approved" sequence="1" value="approved"/>
                 <element inactive_on_update="false" label="Expired" sequence="4" value="expired"/>
                 <element inactive_on_update="false" label="Requested" sequence="0" value="requested"/>
-                <element inactive_on_update="false" label="Approved" sequence="1" value="approved"/>
                 <element inactive_on_update="false" label="Cancelled" sequence="3" value="cancelled"/>
+                <element inactive_on_update="false" label="Rejected" sequence="2" value="rejected"/>
             </choice>
         </element>
         <element label="Rejection reason" max_length="255" name="rejection_reason" type="string"/>

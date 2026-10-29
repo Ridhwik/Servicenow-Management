@@ -10,25 +10,25 @@
         </element>
         <element choice="1" label="Staff role" max_length="40" name="staff_role" type="choice">
             <choice>
-                <element inactive_on_update="false" label="Billing &amp; Finance Head" sequence="6" value="billing_finance_head"/>
-                <element inactive_on_update="false" label="Bed Manager" sequence="14" value="bed_manager"/>
                 <element inactive_on_update="false" label="Lab Technician" sequence="12" value="lab_technician"/>
-                <element inactive_on_update="false" label="IT Support Agent" sequence="18" value="it_support_agent"/>
-                <element inactive_on_update="false" label="Nurse" sequence="10" value="nurse"/>
-                <element inactive_on_update="false" label="Facilities / Biomedical" sequence="16" value="facilities_biomedical"/>
                 <element inactive_on_update="false" label="IT Service Desk Manager" sequence="8" value="it_service_desk_manager"/>
-                <element inactive_on_update="false" label="Medical Director" sequence="2" value="medical_director"/>
                 <element inactive_on_update="false" label="HOD" sequence="4" value="hod"/>
-                <element inactive_on_update="false" label="Compliance Officer" sequence="17" value="compliance_officer"/>
-                <element inactive_on_update="false" label="Lab &amp; Pharmacy Coordinator" sequence="9" value="lab_pharmacy_coordinator"/>
-                <element inactive_on_update="false" label="Housekeeping" sequence="15" value="housekeeping"/>
-                <element inactive_on_update="false" label="Facilities &amp; Operations Manager" sequence="7" value="facilities_operations_manager"/>
-                <element inactive_on_update="false" label="Pharmacist" sequence="13" value="pharmacist"/>
-                <element inactive_on_update="false" label="Receptionist / Cashier" sequence="11" value="receptionist_cashier"/>
-                <element inactive_on_update="false" label="Head Nurse / Ward In-Charge" sequence="5" value="head_nurse_ward_in_charge"/>
-                <element inactive_on_update="false" label="Nursing Superintendent" sequence="3" value="nursing_superintendent"/>
-                <element inactive_on_update="false" label="Hospital Administrator" sequence="1" value="hospital_administrator"/>
                 <element inactive_on_update="false" label="Corporate Executive" sequence="0" value="corporate_executive"/>
+                <element inactive_on_update="false" label="Facilities / Biomedical" sequence="16" value="facilities_biomedical"/>
+                <element inactive_on_update="false" label="Nursing Superintendent" sequence="3" value="nursing_superintendent"/>
+                <element inactive_on_update="false" label="Housekeeping" sequence="15" value="housekeeping"/>
+                <element inactive_on_update="false" label="Receptionist / Cashier" sequence="11" value="receptionist_cashier"/>
+                <element inactive_on_update="false" label="Facilities &amp; Operations Manager" sequence="7" value="facilities_operations_manager"/>
+                <element inactive_on_update="false" label="Nurse" sequence="10" value="nurse"/>
+                <element inactive_on_update="false" label="Billing &amp; Finance Head" sequence="6" value="billing_finance_head"/>
+                <element inactive_on_update="false" label="Medical Director" sequence="2" value="medical_director"/>
+                <element inactive_on_update="false" label="Bed Manager" sequence="14" value="bed_manager"/>
+                <element inactive_on_update="false" label="IT Support Agent" sequence="18" value="it_support_agent"/>
+                <element inactive_on_update="false" label="Hospital Administrator" sequence="1" value="hospital_administrator"/>
+                <element inactive_on_update="false" label="Pharmacist" sequence="13" value="pharmacist"/>
+                <element inactive_on_update="false" label="Lab &amp; Pharmacy Coordinator" sequence="9" value="lab_pharmacy_coordinator"/>
+                <element inactive_on_update="false" label="Head Nurse / Ward In-Charge" sequence="5" value="head_nurse_ward_in_charge"/>
+                <element inactive_on_update="false" label="Compliance Officer" sequence="17" value="compliance_officer"/>
             </choice>
         </element>
         <element label="Ward" max_length="32" name="ward" reference="x_2223823_apollo_0_wards" type="reference"/>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_package_dependency_m2m">
+    <sys_package_dependency_m2m action="INSERT_OR_UPDATE">
+        <dependency display_value="Customer Service Base Entities" source="com.snc.cs_base">bbe010ab934413107b3a7c5efaba1046</dependency>
+        <min_version>1.0.0</min_version>
+        <sys_created_by>jenish.jain</sys_created_by>
+        <sys_created_on>2026-10-26 09:09:06</sys_created_on>
+        <sys_id>0d36a0e7938c13107b3a7c5efaba103c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_package display_value="Apollo-Hospitals" source="x_2223823_apollo_0">87c1422693c89b507b3a7c5efaba1008</sys_package>
+        <sys_updated_by>jenish.jain</sys_updated_by>
+        <sys_updated_on>2026-10-26 09:09:06</sys_updated_on>
+    </sys_package_dependency_m2m>
+</record_update>

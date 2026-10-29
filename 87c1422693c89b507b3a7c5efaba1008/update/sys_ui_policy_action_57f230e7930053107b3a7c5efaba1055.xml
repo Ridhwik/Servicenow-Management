@@ -19,7 +19,7 @@
         <sys_updated_by>nilesh.chaurasia</sys_updated_by>
         <sys_updated_on>2026-10-26 10:04:57</sys_updated_on>
         <table>x_2223823_apollo_0_doctor</table>
-        <ui_policy display_value="Video duration (minutes) and Video fee  mandatory when Video enabled&#10;">17f230e7930053107b3a7c5efaba101f</ui_policy>
+        <ui_policy display_value="Video duration,  Video fee and video timing  mandatory when Video enabled">17f230e7930053107b3a7c5efaba101f</ui_policy>
         <value/>
         <value_action>ignore</value_action>
         <visible>ignore</visible>

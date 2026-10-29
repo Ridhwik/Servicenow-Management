@@ -6,6 +6,7 @@
             <sys_class_name>sys_choice_set</sys_class_name>
             <sys_created_by>harshvardhan.chhapola</sys_created_by>
             <sys_created_on>2026-10-26 10:52:27</sys_created_on>
+            <sys_id>c7dd7c67938053107b3a7c5efaba101b</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_name>admission_type</sys_name>
             <sys_package display_value="Apollo-Hospitals" source="x_2223823_apollo_0">87c1422693c89b507b3a7c5efaba1008</sys_package>
@@ -29,6 +30,7 @@
             <sys_created_on>2026-10-26 10:52:27</sys_created_on>
             <sys_domain>global</sys_domain>
             <sys_domain_path>/</sys_domain_path>
+            <sys_id>7c5ae0a093585b107b3a7c5efaba10ca</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_updated_by>harshvardhan.chhapola</sys_updated_by>
             <sys_updated_on>2026-10-26 10:52:27</sys_updated_on>
@@ -48,6 +50,7 @@
             <sys_created_on>2026-10-26 10:52:27</sys_created_on>
             <sys_domain>global</sys_domain>
             <sys_domain_path>/</sys_domain_path>
+            <sys_id>305ae0a093585b107b3a7c5efaba10dd</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_updated_by>harshvardhan.chhapola</sys_updated_by>
             <sys_updated_on>2026-10-26 10:52:27</sys_updated_on>
@@ -67,6 +70,7 @@
             <sys_created_on>2026-10-26 10:52:27</sys_created_on>
             <sys_domain>global</sys_domain>
             <sys_domain_path>/</sys_domain_path>
+            <sys_id>f45a24a093585b107b3a7c5efaba1020</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_updated_by>harshvardhan.chhapola</sys_updated_by>
             <sys_updated_on>2026-10-26 10:52:27</sys_updated_on>

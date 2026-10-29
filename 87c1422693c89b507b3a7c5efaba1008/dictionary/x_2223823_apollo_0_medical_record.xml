@@ -8,10 +8,10 @@
         <element label="Diagnosis" max_length="255" name="diagnosis" type="string"/>
         <element choice="1" label="Prescription status" max_length="40" name="prescription_status" type="choice">
             <choice>
-                <element inactive_on_update="false" label="Issued" sequence="1" value="issued"/>
-                <element inactive_on_update="false" label="Sent to pharmacy" sequence="2" value="sent_to_pharmacy"/>
-                <element inactive_on_update="false" label="Partially fulfilled" sequence="3" value="partially_fulfilled"/>
                 <element inactive_on_update="false" label="Fulfilled" sequence="4" value="fulfilled"/>
+                <element inactive_on_update="false" label="Partially fulfilled" sequence="3" value="partially_fulfilled"/>
+                <element inactive_on_update="false" label="Sent to pharmacy" sequence="2" value="sent_to_pharmacy"/>
+                <element inactive_on_update="false" label="Issued" sequence="1" value="issued"/>
             </choice>
         </element>
         <element label="Admission" max_length="32" name="admission" reference="x_2223823_apollo_0_admission" type="reference"/>
@@ -19,9 +19,9 @@
         <element label="Pharmacy request" max_length="32" name="pharmacy_request" reference="sc_req_item" type="reference"/>
         <element choice="1" label="Record type" mandatory="true" max_length="40" name="record_type" type="choice">
             <choice>
-                <element inactive_on_update="false" label="Diagnosis" sequence="1" value="diagnosis"/>
                 <element inactive_on_update="false" label="Prescription" sequence="3" value="prescription"/>
                 <element inactive_on_update="false" label="Clinical note" sequence="2" value="clinical_note"/>
+                <element inactive_on_update="false" label="Diagnosis" sequence="1" value="diagnosis"/>
             </choice>
         </element>
         <element label="Medication details" max_length="4000" name="medication_details" type="string"/>

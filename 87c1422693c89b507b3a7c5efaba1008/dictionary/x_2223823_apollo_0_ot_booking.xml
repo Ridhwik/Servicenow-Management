@@ -9,10 +9,10 @@
         <element label="Hospital" max_length="32" name="hospital" reference="x_2223823_apollo_0_hospital" type="reference"/>
         <element choice="1" label="Status" max_length="40" name="status" type="integer">
             <choice>
+                <element inactive_on_update="false" label="Completed" sequence="2" value="3"/>
+                <element inactive_on_update="false" label="Approved" sequence="1" value="2"/>
                 <element inactive_on_update="false" label="Requested" sequence="0" value="1"/>
                 <element inactive_on_update="false" label="Cancelled" sequence="3" value="4"/>
-                <element inactive_on_update="false" label="Approved" sequence="1" value="2"/>
-                <element inactive_on_update="false" label="Completed" sequence="2" value="3"/>
             </choice>
         </element>
         <element label="Operation Theatre" max_length="32" name="operation_theatre" reference="x_2223823_apollo_0_rooms" type="reference"/>

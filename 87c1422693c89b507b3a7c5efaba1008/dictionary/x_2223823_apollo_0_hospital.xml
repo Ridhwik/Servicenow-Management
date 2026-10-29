@@ -8,5 +8,8 @@
         <element label="Email" max_length="255" name="email" type="email"/>
         <element attributes="ignore_filter_on_new=true" default="javascript:global.getNextObjNumberPadded();" label="Code" mandatory="true" max_length="40" name="number" type="string"/>
         <element default="true" function_definition="true" label="Active" max_length="255" name="active" type="boolean"/>
+        <index name="index">
+            <element name="hospital_administrator"/>
+        </index>
     </element>
 </database>

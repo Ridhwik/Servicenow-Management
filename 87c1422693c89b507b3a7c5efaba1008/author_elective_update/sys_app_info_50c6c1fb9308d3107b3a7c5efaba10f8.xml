@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_app_info">
+    <sys_app_info action="DELETE">
+        <properties>{"generated_using_ba":"true"}</properties>
+        <sys_class_name>sys_app_info</sys_class_name>
+        <sys_created_by>fatehsingh.meena</sys_created_by>
+        <sys_created_on>2026-10-27 06:09:48</sys_created_on>
+        <sys_id>50c6c1fb9308d3107b3a7c5efaba10f8</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Apollo-Hospitals" source="x_2223823_apollo_0">87c1422693c89b507b3a7c5efaba1008</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
+        <sys_update_name>sys_app_info_50c6c1fb9308d3107b3a7c5efaba10f8</sys_update_name>
+        <sys_updated_by>fatehsingh.meena</sys_updated_by>
+        <sys_updated_on>2026-10-27 06:09:48</sys_updated_on>
+    </sys_app_info>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</application>
+        <file_path/>
+        <instance_id>1dfc152d3beccb18677f04e0b5e45aed</instance_id>
+        <instance_name>dev393999</instance_name>
+        <name>sys_app_info_50c6c1fb9308d3107b3a7c5efaba10f8</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_app_info"><sys_app_info action="INSERT_OR_UPDATE"><properties>{"generated_using_ba":"true"}</properties><sys_class_name>sys_app_info</sys_class_name><sys_created_by>fatehsingh.meena</sys_created_by><sys_created_on>2026-10-27 06:09:48</sys_created_on><sys_id>50c6c1fb9308d3107b3a7c5efaba10f8</sys_id><sys_mod_count>0</sys_mod_count><sys_name/><sys_package display_value="Apollo-Hospitals" source="x_2223823_apollo_0">87c1422693c89b507b3a7c5efaba1008</sys_package><sys_policy/><sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope><sys_update_name>sys_app_info_50c6c1fb9308d3107b3a7c5efaba10f8</sys_update_name><sys_updated_by>fatehsingh.meena</sys_updated_by><sys_updated_on>2026-10-27 06:09:48</sys_updated_on></sys_app_info></record_update>]]></payload>
+        <payload_hash>-1326343320</payload_hash>
+        <record_name/>
+        <reverted_from/>
+        <source>feb641fb9308d3107b3a7c5efaba1039</source>
+        <source_table>sys_update_set</source_table>
+        <state>backed_out</state>
+        <sys_created_by>fatehsingh.meena</sys_created_by>
+        <sys_created_on>2026-10-27 06:09:48</sys_created_on>
+        <sys_id>18c6c1fb9308d3107b3a7c5efaba10fc</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_recorded_at>1a17bfaada50000001</sys_recorded_at>
+        <sys_updated_by>fatehsingh.meena</sys_updated_by>
+        <sys_updated_on>2026-10-27 06:16:22</sys_updated_on>
+        <type>Application Information</type>
+        <update_guid>d0c6c1fb5008d3109686921ca90731fb</update_guid>
+        <update_guid_history>d0c6c1fb5008d3109686921ca90731fb:-1326343320</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>fatehsingh.meena</sys_created_by>
+        <sys_created_on>2026-10-27 06:16:22</sys_created_on>
+        <sys_db_object display_value="" name="sys_app_info">sys_app_info</sys_db_object>
+        <sys_id>1110816736d4474c9102116be2ab8164</sys_id>
+        <sys_metadata>50c6c1fb9308d3107b3a7c5efaba10f8</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Apollo-Hospitals" source="x_2223823_apollo_0">87c1422693c89b507b3a7c5efaba1008</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
+        <sys_scope_delete display_value="">1a2f7aa8dfc34e3a86d3f0bede3c2784</sys_scope_delete>
+        <sys_update_name>sys_app_info_50c6c1fb9308d3107b3a7c5efaba10f8</sys_update_name>
+        <sys_update_version display_value="sys_app_info_50c6c1fb9308d3107b3a7c5efaba10f8">18c6c1fb9308d3107b3a7c5efaba10fc</sys_update_version>
+        <sys_updated_by>fatehsingh.meena</sys_updated_by>
+        <sys_updated_on>2026-10-27 06:16:22</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

@@ -16,7 +16,7 @@
         <label>Attendant</label>
         <live_feed_enabled>false</live_feed_enabled>
         <name>x_2223823_apollo_0_attendant</name>
-        <number_ref display_value="ATT">896351a7938853107b3a7c5efaba1084</number_ref>
+        <number_ref/>
         <provider_class/>
         <read_access>true</read_access>
         <scriptable_table>false</scriptable_table>
