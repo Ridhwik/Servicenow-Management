@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_choice action="INSERT_OR_UPDATE" field="status" table="x_2223823_apollo_0_beds" version="3">
+        <sys_choice_set action="INSERT_OR_UPDATE">
+            <element>status</element>
+            <name>x_2223823_apollo_0_beds</name>
+            <sys_class_name>sys_choice_set</sys_class_name>
+            <sys_created_by>fatehsingh.meena</sys_created_by>
+            <sys_created_on>2026-10-27 05:30:34</sys_created_on>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>status</sys_name>
+            <sys_package display_value="Apollo-Hospitals" source="x_2223823_apollo_0">87c1422693c89b507b3a7c5efaba1008</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
+            <sys_update_name>sys_choice_x_2223823_apollo_0_beds_status</sys_update_name>
+            <sys_updated_by>fatehsingh.meena</sys_updated_by>
+            <sys_updated_on>2026-10-27 05:30:34</sys_updated_on>
+        </sys_choice_set>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>status</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Available</label>
+            <language>en</language>
+            <name>x_2223823_apollo_0_beds</name>
+            <sequence/>
+            <synonyms/>
+            <sys_created_by>fatehsingh.meena</sys_created_by>
+            <sys_created_on>2026-10-27 06:25:09</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>fatehsingh.meena</sys_updated_by>
+            <sys_updated_on>2026-10-27 06:25:09</sys_updated_on>
+            <value>1</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>status</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Reserved</label>
+            <language>en</language>
+            <name>x_2223823_apollo_0_beds</name>
+            <sequence/>
+            <synonyms/>
+            <sys_created_by>fatehsingh.meena</sys_created_by>
+            <sys_created_on>2026-10-27 06:25:09</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>fatehsingh.meena</sys_updated_by>
+            <sys_updated_on>2026-10-27 06:25:09</sys_updated_on>
+            <value>2</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>status</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Occupied</label>
+            <language>en</language>
+            <name>x_2223823_apollo_0_beds</name>
+            <sequence/>
+            <synonyms/>
+            <sys_created_by>fatehsingh.meena</sys_created_by>
+            <sys_created_on>2026-10-27 06:25:09</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>fatehsingh.meena</sys_updated_by>
+            <sys_updated_on>2026-10-27 06:25:09</sys_updated_on>
+            <value>3</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>status</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Under Cleaning</label>
+            <language>en</language>
+            <name>x_2223823_apollo_0_beds</name>
+            <sequence/>
+            <synonyms/>
+            <sys_created_by>fatehsingh.meena</sys_created_by>
+            <sys_created_on>2026-10-27 06:25:09</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>fatehsingh.meena</sys_updated_by>
+            <sys_updated_on>2026-10-27 06:25:09</sys_updated_on>
+            <value>4</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>status</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Under Maintenance</label>
+            <language>en</language>
+            <name>x_2223823_apollo_0_beds</name>
+            <sequence/>
+            <synonyms/>
+            <sys_created_by>fatehsingh.meena</sys_created_by>
+            <sys_created_on>2026-10-27 06:25:09</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>fatehsingh.meena</sys_updated_by>
+            <sys_updated_on>2026-10-27 06:25:09</sys_updated_on>
+            <value>5</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>status</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Blocked</label>
+            <language>en</language>
+            <name>x_2223823_apollo_0_beds</name>
+            <sequence/>
+            <synonyms/>
+            <sys_created_by>fatehsingh.meena</sys_created_by>
+            <sys_created_on>2026-10-27 06:25:09</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>fatehsingh.meena</sys_updated_by>
+            <sys_updated_on>2026-10-27 06:25:09</sys_updated_on>
+            <value>6</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>status</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Out of Service</label>
+            <language>en</language>
+            <name>x_2223823_apollo_0_beds</name>
+            <sequence/>
+            <synonyms/>
+            <sys_created_by>fatehsingh.meena</sys_created_by>
+            <sys_created_on>2026-10-27 06:25:09</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>fatehsingh.meena</sys_updated_by>
+            <sys_updated_on>2026-10-27 06:25:09</sys_updated_on>
+            <value>7</value>
+        </sys_choice>
+    </sys_choice>
+</record_update>

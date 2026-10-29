@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_ui_form_sections form_id="673cc97b9348d3107b3a7c5efaba1058" sys_domain="global" table="x_2223823_apollo_0_doctor" version="3">
+        <sys_ui_form_section action="INSERT_OR_UPDATE">
+            <position>0</position>
+            <sys_created_by>nilesh.chaurasia</sys_created_by>
+            <sys_created_on>2026-10-27 06:33:47</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>7f3cc97b9348d3107b3a7c5efaba105e</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_overrides/>
+            <sys_ui_form display_value="x_2223823_apollo_0_doctor" name="x_2223823_apollo_0_doctor" sys_domain="global" view="Default view">673cc97b9348d3107b3a7c5efaba1058</sys_ui_form>
+            <sys_ui_section caption="Identity" display_value="Identity" name="x_2223823_apollo_0_doctor" sys_domain="global" view="Default view">9b68c0ef938013107b3a7c5efaba1098</sys_ui_section>
+            <sys_updated_by>nilesh.chaurasia</sys_updated_by>
+            <sys_updated_on>2026-10-27 06:33:47</sys_updated_on>
+        </sys_ui_form_section>
+        <sys_ui_form_section action="INSERT_OR_UPDATE">
+            <position>1</position>
+            <sys_created_by>nilesh.chaurasia</sys_created_by>
+            <sys_created_on>2026-10-27 06:33:47</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>373cc97b9348d3107b3a7c5efaba1060</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_overrides/>
+            <sys_ui_form display_value="x_2223823_apollo_0_doctor" name="x_2223823_apollo_0_doctor" sys_domain="global" view="Default view">673cc97b9348d3107b3a7c5efaba1058</sys_ui_form>
+            <sys_ui_section caption="Practice" display_value="Practice" name="x_2223823_apollo_0_doctor" sys_domain="global" view="Default view">273cc97b9348d3107b3a7c5efaba1053</sys_ui_section>
+            <sys_updated_by>nilesh.chaurasia</sys_updated_by>
+            <sys_updated_on>2026-10-27 06:33:47</sys_updated_on>
+        </sys_ui_form_section>
+        <sys_ui_form_section action="INSERT_OR_UPDATE">
+            <position>2</position>
+            <sys_created_by>nilesh.chaurasia</sys_created_by>
+            <sys_created_on>2026-10-27 06:33:47</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>7b3cc97b9348d3107b3a7c5efaba1073</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_overrides/>
+            <sys_ui_form display_value="x_2223823_apollo_0_doctor" name="x_2223823_apollo_0_doctor" sys_domain="global" view="Default view">673cc97b9348d3107b3a7c5efaba1058</sys_ui_form>
+            <sys_ui_section caption="Consultation settings" display_value="Consultation settings" name="x_2223823_apollo_0_doctor" sys_domain="global" view="Default view">233cc97b9348d3107b3a7c5efaba1055</sys_ui_section>
+            <sys_updated_by>nilesh.chaurasia</sys_updated_by>
+            <sys_updated_on>2026-10-27 06:33:47</sys_updated_on>
+        </sys_ui_form_section>
+        <sys_ui_form_section action="INSERT_OR_UPDATE">
+            <position>3</position>
+            <sys_created_by>nilesh.chaurasia</sys_created_by>
+            <sys_created_on>2026-10-27 06:33:47</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>3f3cc97b9348d3107b3a7c5efaba107a</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_overrides/>
+            <sys_ui_form display_value="x_2223823_apollo_0_doctor" name="x_2223823_apollo_0_doctor" sys_domain="global" view="Default view">673cc97b9348d3107b3a7c5efaba1058</sys_ui_form>
+            <sys_ui_section caption="Contact" display_value="Contact" name="x_2223823_apollo_0_doctor" sys_domain="global" view="Default view">2f3cc97b9348d3107b3a7c5efaba1056</sys_ui_section>
+            <sys_updated_by>nilesh.chaurasia</sys_updated_by>
+            <sys_updated_on>2026-10-27 06:33:47</sys_updated_on>
+        </sys_ui_form_section>
+        <sys_ui_form action="INSERT_OR_UPDATE">
+            <name>x_2223823_apollo_0_doctor</name>
+            <roles/>
+            <sys_class_name>sys_ui_form</sys_class_name>
+            <sys_created_by>nilesh.chaurasia</sys_created_by>
+            <sys_created_on>2026-10-27 06:33:47</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>673cc97b9348d3107b3a7c5efaba1058</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>x_2223823_apollo_0_doctor</sys_name>
+            <sys_overrides/>
+            <sys_package display_value="Apollo-Hospitals" source="x_2223823_apollo_0">87c1422693c89b507b3a7c5efaba1008</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
+            <sys_update_name>sys_ui_form_sections_673cc97b9348d3107b3a7c5efaba1058</sys_update_name>
+            <sys_updated_by>nilesh.chaurasia</sys_updated_by>
+            <sys_updated_on>2026-10-27 06:33:47</sys_updated_on>
+            <sys_user/>
+            <view display_value="Default view" name="NULL">Default view</view>
+            <view_name/>
+        </sys_ui_form>
+    </sys_ui_form_sections>
+</record_update>

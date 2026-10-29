@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_ui_section caption="Approvers &amp; related " section_id="bc1ecec4939097107b3a7c5efaba10f3" sys_domain="global" table="x_2223823_apollo_0_doctor_request" version="3" view="">
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>approval_group</element>
+            <position>0</position>
+            <sys_created_by>nilesh.chaurasia</sys_created_by>
+            <sys_created_on>2026-10-28 05:59:53</sys_created_on>
+            <sys_id>7c1e0208939097107b3a7c5efaba10fc</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Approvers &amp; related " display_value="Approvers &amp; related " name="x_2223823_apollo_0_doctor_request" sys_domain="global" view="Default view">bc1ecec4939097107b3a7c5efaba10f3</sys_ui_section>
+            <sys_updated_by>nilesh.chaurasia</sys_updated_by>
+            <sys_updated_on>2026-10-28 05:59:53</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>approver</element>
+            <position>1</position>
+            <sys_created_by>nilesh.chaurasia</sys_created_by>
+            <sys_created_on>2026-10-28 05:59:53</sys_created_on>
+            <sys_id>f81e0208939097107b3a7c5efaba10fd</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Approvers &amp; related " display_value="Approvers &amp; related " name="x_2223823_apollo_0_doctor_request" sys_domain="global" view="Default view">bc1ecec4939097107b3a7c5efaba10f3</sys_ui_section>
+            <sys_updated_by>nilesh.chaurasia</sys_updated_by>
+            <sys_updated_on>2026-10-28 05:59:53</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.split</element>
+            <position>2</position>
+            <sys_created_by>nilesh.chaurasia</sys_created_by>
+            <sys_created_on>2026-10-28 05:59:53</sys_created_on>
+            <sys_id>781e0208939097107b3a7c5efaba10fe</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Approvers &amp; related " display_value="Approvers &amp; related " name="x_2223823_apollo_0_doctor_request" sys_domain="global" view="Default view">bc1ecec4939097107b3a7c5efaba10f3</sys_ui_section>
+            <sys_updated_by>nilesh.chaurasia</sys_updated_by>
+            <sys_updated_on>2026-10-28 05:59:53</sys_updated_on>
+            <sys_user/>
+            <type>.split</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>approved_on</element>
+            <position>3</position>
+            <sys_created_by>nilesh.chaurasia</sys_created_by>
+            <sys_created_on>2026-10-28 05:59:53</sys_created_on>
+            <sys_id>f41e0208939097107b3a7c5efaba10ff</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Approvers &amp; related " display_value="Approvers &amp; related " name="x_2223823_apollo_0_doctor_request" sys_domain="global" view="Default view">bc1ecec4939097107b3a7c5efaba10f3</sys_ui_section>
+            <sys_updated_by>nilesh.chaurasia</sys_updated_by>
+            <sys_updated_on>2026-10-28 05:59:53</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_section action="INSERT_OR_UPDATE">
+            <caption>Approvers &amp; related </caption>
+            <header>false</header>
+            <name>x_2223823_apollo_0_doctor_request</name>
+            <roles/>
+            <sys_class_name>sys_ui_section</sys_class_name>
+            <sys_created_by>nilesh.chaurasia</sys_created_by>
+            <sys_created_on>2026-10-28 05:59:52</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>bc1ecec4939097107b3a7c5efaba10f3</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>x_2223823_apollo_0_doctor_request</sys_name>
+            <sys_overrides/>
+            <sys_package display_value="Apollo-Hospitals" source="x_2223823_apollo_0">87c1422693c89b507b3a7c5efaba1008</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
+            <sys_update_name>sys_ui_section_bc1ecec4939097107b3a7c5efaba10f3</sys_update_name>
+            <sys_updated_by>nilesh.chaurasia</sys_updated_by>
+            <sys_updated_on>2026-10-28 05:59:52</sys_updated_on>
+            <sys_user/>
+            <title>false</title>
+            <view display_value="Default view" name="NULL">Default view</view>
+            <view_name/>
+        </sys_ui_section>
+    </sys_ui_section>
+</record_update>

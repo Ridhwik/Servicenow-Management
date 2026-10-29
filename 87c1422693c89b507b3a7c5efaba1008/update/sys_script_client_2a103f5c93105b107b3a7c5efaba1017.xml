@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script_client">
+    <sys_script_client action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <applies_extended>false</applies_extended>
+        <condition/>
+        <description/>
+        <field/>
+        <global>true</global>
+        <isolate_script>true</isolate_script>
+        <messages/>
+        <name>Appointment read-only after first save</name>
+        <order/>
+        <script><![CDATA[function onLoad() {
+    if (!g_form.isNewRecord()) {
+        g_form.setReadOnly('hospital', true);
+        g_form.setReadOnly('patient', true);
+        g_form.setReadOnly('doctor', true);
+        g_form.setReadOnly('start_time', true);
+    }
+}]]></script>
+        <sys_class_name>sys_script_client</sys_class_name>
+        <sys_created_by>vikas.singh</sys_created_by>
+        <sys_created_on>2026-10-29 07:47:36</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>2a103f5c93105b107b3a7c5efaba1017</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>Appointment read-only after first save</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Apollo-Hospitals" source="x_2223823_apollo_0">87c1422693c89b507b3a7c5efaba1008</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
+        <sys_update_name>sys_script_client_2a103f5c93105b107b3a7c5efaba1017</sys_update_name>
+        <sys_updated_by>vikas.singh</sys_updated_by>
+        <sys_updated_on>2026-10-29 10:00:53</sys_updated_on>
+        <table>sn_customerservice_appointment</table>
+        <type>onLoad</type>
+        <ui_type>10</ui_type>
+        <view/>
+    </sys_script_client>
+</record_update>

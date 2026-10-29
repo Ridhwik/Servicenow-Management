@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ui_policy_action">
+    <sys_ui_policy_action action="DELETE">
+        <cleared>false</cleared>
+        <disabled>ignore</disabled>
+        <field>advance_amount</field>
+        <field_message/>
+        <field_message_type>none</field_message_type>
+        <mandatory>false</mandatory>
+        <sys_class_name>sys_ui_policy_action</sys_class_name>
+        <sys_created_by>harshvardhan.chhapola</sys_created_by>
+        <sys_created_on>2026-10-27 06:15:28</sys_created_on>
+        <sys_id>d30845ff9308d3107b3a7c5efaba10c8</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>advance_amount</sys_name>
+        <sys_package display_value="Apollo-Hospitals" source="x_2223823_apollo_0">87c1422693c89b507b3a7c5efaba1008</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
+        <sys_update_name>sys_ui_policy_action_d30845ff9308d3107b3a7c5efaba10c8</sys_update_name>
+        <sys_updated_by>harshvardhan.chhapola</sys_updated_by>
+        <sys_updated_on>2026-10-27 06:15:28</sys_updated_on>
+        <table>x_2223823_apollo_0_admission</table>
+        <ui_policy display_value="Make Advance amount optional when Admission type is Emergency">d70805ff9308d3107b3a7c5efaba1089</ui_policy>
+        <value/>
+        <value_action>ignore</value_action>
+        <visible>ignore</visible>
+    </sys_ui_policy_action>
+    <sys_translated_text action="DELETE" query="documentkey=d30845ff9308d3107b3a7c5efaba10c8"/>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</application>
+        <file_path/>
+        <instance_id>1dfc152d3beccb18677f04e0b5e45aed</instance_id>
+        <instance_name>dev393999</instance_name>
+        <name>sys_ui_policy_action_d30845ff9308d3107b3a7c5efaba10c8</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ui_policy_action"><sys_ui_policy_action action="INSERT_OR_UPDATE"><cleared>false</cleared><disabled>ignore</disabled><field>advance_amount</field><field_message/><field_message_type>none</field_message_type><mandatory>false</mandatory><sys_class_name>sys_ui_policy_action</sys_class_name><sys_created_by>harshvardhan.chhapola</sys_created_by><sys_created_on>2026-10-27 06:15:28</sys_created_on><sys_id>d30845ff9308d3107b3a7c5efaba10c8</sys_id><sys_mod_count>0</sys_mod_count><sys_name>advance_amount</sys_name><sys_package display_value="Apollo-Hospitals" source="x_2223823_apollo_0">87c1422693c89b507b3a7c5efaba1008</sys_package><sys_policy/><sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope><sys_update_name>sys_ui_policy_action_d30845ff9308d3107b3a7c5efaba10c8</sys_update_name><sys_updated_by>harshvardhan.chhapola</sys_updated_by><sys_updated_on>2026-10-27 06:15:28</sys_updated_on><table>x_2223823_apollo_0_admission</table><ui_policy display_value="Make Advance amount optional when Admission type is Emergency">d70805ff9308d3107b3a7c5efaba1089</ui_policy><value/><value_action>ignore</value_action><visible>ignore</visible></sys_ui_policy_action><sys_translated_text action="delete_multiple" query="documentkey=d30845ff9308d3107b3a7c5efaba10c8"/></record_update>]]></payload>
+        <payload_hash>-2040515648</payload_hash>
+        <record_name>advance_amount</record_name>
+        <reverted_from/>
+        <source>f244c8e3938013107b3a7c5efaba10ed</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>harshvardhan.chhapola</sys_created_by>
+        <sys_created_on>2026-10-27 06:15:28</sys_created_on>
+        <sys_id>930845ff9308d3107b3a7c5efaba10ce</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1a17bffdcd60000001</sys_recorded_at>
+        <sys_updated_by>harshvardhan.chhapola</sys_updated_by>
+        <sys_updated_on>2026-10-27 06:15:28</sys_updated_on>
+        <type>UI Policy Action</type>
+        <update_guid>9f0845ffbc08d31081ffde3cf0f1c9cc</update_guid>
+        <update_guid_history>9f0845ffbc08d31081ffde3cf0f1c9cc:-2040515648</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>harshvardhan.chhapola</sys_created_by>
+        <sys_created_on>2026-10-27 11:47:05</sys_created_on>
+        <sys_db_object display_value="" name="sys_ui_policy_action">sys_ui_policy_action</sys_db_object>
+        <sys_id>3b33872f547e493a91ebefcf1f455251</sys_id>
+        <sys_metadata>d30845ff9308d3107b3a7c5efaba10c8</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>advance_amount</sys_name>
+        <sys_package display_value="Apollo-Hospitals" source="x_2223823_apollo_0">87c1422693c89b507b3a7c5efaba1008</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
+        <sys_scope_delete display_value="">1a2f7aa8dfc34e3a86d3f0bede3c2784</sys_scope_delete>
+        <sys_update_name>sys_ui_policy_action_d30845ff9308d3107b3a7c5efaba10c8</sys_update_name>
+        <sys_update_version display_value="sys_ui_policy_action_d30845ff9308d3107b3a7c5efaba10c8">930845ff9308d3107b3a7c5efaba10ce</sys_update_version>
+        <sys_updated_by>harshvardhan.chhapola</sys_updated_by>
+        <sys_updated_on>2026-10-27 11:47:05</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

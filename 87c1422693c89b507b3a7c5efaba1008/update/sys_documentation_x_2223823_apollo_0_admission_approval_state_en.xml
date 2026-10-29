@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_documentation element="approval_state" label="Approval State" language="en" table="x_2223823_apollo_0_admission">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element>approval_state</element>
+            <help/>
+            <hint/>
+            <label>Approval State</label>
+            <language>en</language>
+            <name>x_2223823_apollo_0_admission</name>
+            <plural>Approval States</plural>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>harshvardhan.chhapola</sys_created_by>
+            <sys_created_on>2026-10-26 09:20:32</sys_created_on>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_name>Approval State</sys_name>
+            <sys_package display_value="Apollo-Hospitals" source="x_2223823_apollo_0">87c1422693c89b507b3a7c5efaba1008</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
+            <sys_update_name>sys_documentation_x_2223823_apollo_0_admission_approval_state_en</sys_update_name>
+            <sys_updated_by>harshvardhan.chhapola</sys_updated_by>
+            <sys_updated_on>2026-10-26 10:56:44</sys_updated_on>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+</record_update>

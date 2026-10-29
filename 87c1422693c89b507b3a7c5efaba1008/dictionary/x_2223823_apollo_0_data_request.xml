@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element attributes="enforce_dot_walk_cross_scope_access=true" db_object_id="642074af93cc13107b3a7c5efaba1023" label="Data Request" max_length="40" name="x_2223823_apollo_0_data_request" type="collection">
+        <element choice="1" label="Request type" mandatory="true" max_length="40" name="request_type" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Erasure" sequence="3" value="erasure"/>
+                <element inactive_on_update="false" label="Correction" sequence="2" value="correction"/>
+                <element inactive_on_update="false" label="Access" sequence="1" value="access"/>
+            </choice>
+        </element>
+        <element choice="1" label="Status" mandatory="true" max_length="40" name="status" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="In progress" sequence="2" value="in_progress"/>
+                <element inactive_on_update="false" label="Received" sequence="1" value="received"/>
+                <element inactive_on_update="false" label="Rejected" sequence="4" value="rejected"/>
+                <element inactive_on_update="false" label="Completed" sequence="3" value="completed"/>
+            </choice>
+        </element>
+        <element label="Handled by" max_length="32" name="handled_by" reference="x_2223823_apollo_0_staff" type="reference"/>
+        <element label="Resolution" max_length="1000" name="resolution" type="string"/>
+        <element label="Patient" mandatory="true" max_length="32" name="patient" reference="x_2223823_apollo_0_patient" type="reference"/>
+        <element label="Received on" mandatory="true" max_length="40" name="received_on" type="glide_date_time"/>
+        <index name="index">
+            <element name="handled_by"/>
+        </index>
+        <index name="index2">
+            <element name="patient"/>
+        </index>
+    </element>
+</database>

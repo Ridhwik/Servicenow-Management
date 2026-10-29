@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <active>true</active>
+        <api_name>x_2223823_apollo_0.AdmissionUtilAPI</api_name>
+        <caller_access/>
+        <client_callable>true</client_callable>
+        <description/>
+        <mobile_callable>false</mobile_callable>
+        <name>AdmissionUtilAPI</name>
+        <sandbox_callable>false</sandbox_callable>
+        <script><![CDATA[var AdmissionUtilAPI = Class.create();
+AdmissionUtilAPI.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
+	checkActiveRoom: function() {
+		var current = this.getParameter('sysparm_id');
+		var gr = new GlideRecordSecure('x_2223823_apollo_0_admission');
+		gr.addQuery('bed', current);
+		gr.addEncodedQuery('statusIN1,2,3,4');
+		gr.query();
+		if(gr.next()) {
+			return true;
+		} else {
+			return false;
+		}
+	},
+
+    type: 'AdmissionUtilAPI'
+});]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>harshvardhan.chhapola</sys_created_by>
+        <sys_created_on>2026-10-27 08:38:43</sys_created_on>
+        <sys_id>8298ed7b934cd3107b3a7c5efaba101e</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name>AdmissionUtilAPI</sys_name>
+        <sys_package display_value="Apollo-Hospitals" source="x_2223823_apollo_0">87c1422693c89b507b3a7c5efaba1008</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
+        <sys_update_name>sys_script_include_8298ed7b934cd3107b3a7c5efaba101e</sys_update_name>
+        <sys_updated_by>harshvardhan.chhapola</sys_updated_by>
+        <sys_updated_on>2026-10-27 09:30:07</sys_updated_on>
+    </sys_script_include>
+</record_update>

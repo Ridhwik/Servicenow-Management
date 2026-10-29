@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_ui_section action="DELETE" caption="Assigned Duration" section_id="5ab242f3934017107b3a7c5efaba104a" sys_domain="global" table="x_2223823_apollo_0_doctor_hospital_assignment" version="3" view="">
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>start_date</element>
+            <position>0</position>
+            <sys_created_by>nilesh.chaurasia</sys_created_by>
+            <sys_created_on>2026-10-27 10:31:48</sys_created_on>
+            <sys_id>9ab242f3934017107b3a7c5efaba1084</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Assigned Duration" display_value="Assigned Duration" name="x_2223823_apollo_0_doctor_hospital_assignment" sys_domain="global" view="Default view">5ab242f3934017107b3a7c5efaba104a</sys_ui_section>
+            <sys_updated_by>nilesh.chaurasia</sys_updated_by>
+            <sys_updated_on>2026-10-27 10:31:48</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.split</element>
+            <position>1</position>
+            <sys_created_by>nilesh.chaurasia</sys_created_by>
+            <sys_created_on>2026-10-27 10:31:48</sys_created_on>
+            <sys_id>1ab242f3934017107b3a7c5efaba1085</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Assigned Duration" display_value="Assigned Duration" name="x_2223823_apollo_0_doctor_hospital_assignment" sys_domain="global" view="Default view">5ab242f3934017107b3a7c5efaba104a</sys_ui_section>
+            <sys_updated_by>nilesh.chaurasia</sys_updated_by>
+            <sys_updated_on>2026-10-27 10:31:48</sys_updated_on>
+            <sys_user/>
+            <type>.split</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>end_date</element>
+            <position>2</position>
+            <sys_created_by>nilesh.chaurasia</sys_created_by>
+            <sys_created_on>2026-10-27 10:31:48</sys_created_on>
+            <sys_id>5eb242f3934017107b3a7c5efaba1092</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Assigned Duration" display_value="Assigned Duration" name="x_2223823_apollo_0_doctor_hospital_assignment" sys_domain="global" view="Default view">5ab242f3934017107b3a7c5efaba104a</sys_ui_section>
+            <sys_updated_by>nilesh.chaurasia</sys_updated_by>
+            <sys_updated_on>2026-10-27 10:31:48</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_section action="DELETE">
+            <caption>Assigned Duration</caption>
+            <header>false</header>
+            <name>x_2223823_apollo_0_doctor_hospital_assignment</name>
+            <roles/>
+            <sys_class_name>sys_ui_section</sys_class_name>
+            <sys_created_by>nilesh.chaurasia</sys_created_by>
+            <sys_created_on>2026-10-27 10:31:48</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>5ab242f3934017107b3a7c5efaba104a</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_name>x_2223823_apollo_0_doctor_hospital_assignment</sys_name>
+            <sys_overrides/>
+            <sys_package display_value="Apollo-Hospitals" source="x_2223823_apollo_0">87c1422693c89b507b3a7c5efaba1008</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
+            <sys_update_name>sys_ui_section_5ab242f3934017107b3a7c5efaba104a</sys_update_name>
+            <sys_updated_by>nilesh.chaurasia</sys_updated_by>
+            <sys_updated_on>2026-10-27 11:41:08</sys_updated_on>
+            <sys_user/>
+            <title>false</title>
+            <view display_value="Default view" name="NULL">Default view</view>
+            <view_name/>
+        </sys_ui_section>
+    </sys_ui_section>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</application>
+        <file_path/>
+        <instance_id>1dfc152d3beccb18677f04e0b5e45aed</instance_id>
+        <instance_name>dev393999</instance_name>
+        <name>sys_ui_section_5ab242f3934017107b3a7c5efaba104a</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update><sys_ui_section caption="Assigned Duration" section_id="5ab242f3934017107b3a7c5efaba104a" sys_domain="global" table="x_2223823_apollo_0_doctor_hospital_assignment" version="3" view=""><sys_ui_element action="INSERT_OR_UPDATE"><element>start_date</element><position>0</position><sys_created_by>nilesh.chaurasia</sys_created_by><sys_created_on>2026-10-27 10:31:48</sys_created_on><sys_id>9ab242f3934017107b3a7c5efaba1084</sys_id><sys_mod_count>0</sys_mod_count><sys_ui_formatter/><sys_ui_section caption="Assigned Duration" display_value="Assigned Duration" name="x_2223823_apollo_0_doctor_hospital_assignment" sys_domain="global" view="Default view">5ab242f3934017107b3a7c5efaba104a</sys_ui_section><sys_updated_by>nilesh.chaurasia</sys_updated_by><sys_updated_on>2026-10-27 10:31:48</sys_updated_on><sys_user/><type/></sys_ui_element><sys_ui_element action="INSERT_OR_UPDATE"><element>.split</element><position>1</position><sys_created_by>nilesh.chaurasia</sys_created_by><sys_created_on>2026-10-27 10:31:48</sys_created_on><sys_id>1ab242f3934017107b3a7c5efaba1085</sys_id><sys_mod_count>0</sys_mod_count><sys_ui_formatter/><sys_ui_section caption="Assigned Duration" display_value="Assigned Duration" name="x_2223823_apollo_0_doctor_hospital_assignment" sys_domain="global" view="Default view">5ab242f3934017107b3a7c5efaba104a</sys_ui_section><sys_updated_by>nilesh.chaurasia</sys_updated_by><sys_updated_on>2026-10-27 10:31:48</sys_updated_on><sys_user/><type>.split</type></sys_ui_element><sys_ui_element action="INSERT_OR_UPDATE"><element>end_date</element><position>2</position><sys_created_by>nilesh.chaurasia</sys_created_by><sys_created_on>2026-10-27 10:31:48</sys_created_on><sys_id>5eb242f3934017107b3a7c5efaba1092</sys_id><sys_mod_count>0</sys_mod_count><sys_ui_formatter/><sys_ui_section caption="Assigned Duration" display_value="Assigned Duration" name="x_2223823_apollo_0_doctor_hospital_assignment" sys_domain="global" view="Default view">5ab242f3934017107b3a7c5efaba104a</sys_ui_section><sys_updated_by>nilesh.chaurasia</sys_updated_by><sys_updated_on>2026-10-27 10:31:48</sys_updated_on><sys_user/><type/></sys_ui_element><sys_ui_section action="INSERT_OR_UPDATE"><caption>Assigned Duration</caption><header>false</header><name>x_2223823_apollo_0_doctor_hospital_assignment</name><roles/><sys_class_name>sys_ui_section</sys_class_name><sys_created_by>nilesh.chaurasia</sys_created_by><sys_created_on>2026-10-27 10:31:48</sys_created_on><sys_domain>global</sys_domain><sys_domain_path>/</sys_domain_path><sys_id>5ab242f3934017107b3a7c5efaba104a</sys_id><sys_mod_count>1</sys_mod_count><sys_name>x_2223823_apollo_0_doctor_hospital_assignment</sys_name><sys_overrides/><sys_package display_value="Apollo-Hospitals" source="x_2223823_apollo_0">87c1422693c89b507b3a7c5efaba1008</sys_package><sys_policy/><sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope><sys_update_name>sys_ui_section_5ab242f3934017107b3a7c5efaba104a</sys_update_name><sys_updated_by>nilesh.chaurasia</sys_updated_by><sys_updated_on>2026-10-27 11:41:08</sys_updated_on><sys_user/><title>false</title><view display_value="Default view" name="NULL">Default view</view><view_name/></sys_ui_section></sys_ui_section></record_update>]]></payload>
+        <payload_hash>-1832307630</payload_hash>
+        <record_name>Doctor Hospital Assignment</record_name>
+        <reverted_from/>
+        <source>ec5b916393c853107b3a7c5efaba1073</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>nilesh.chaurasia</sys_created_by>
+        <sys_created_on>2026-10-27 11:41:08</sys_created_on>
+        <sys_id>42929a3793c017107b3a7c5efaba1074</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1a17d2a06180000001</sys_recorded_at>
+        <sys_updated_by>nilesh.chaurasia</sys_updated_by>
+        <sys_updated_on>2026-10-27 11:41:08</sys_updated_on>
+        <type>Form Layout</type>
+        <update_guid>8e929a3716c01710835e5ed4954cef72</update_guid>
+        <update_guid_history>8e929a3716c01710835e5ed4954cef72:-1832307630,dab242f32b4017106c8468b35c276395:1213912836</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>nilesh.chaurasia</sys_created_by>
+        <sys_created_on>2026-10-28 05:35:37</sys_created_on>
+        <sys_db_object display_value="" name="sys_ui_section">sys_ui_section</sys_db_object>
+        <sys_id>3577c16a9f264fde96563e7adc0e2e04</sys_id>
+        <sys_metadata>5ab242f3934017107b3a7c5efaba104a</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Assigned Duration</sys_name>
+        <sys_package display_value="Apollo-Hospitals" source="x_2223823_apollo_0">87c1422693c89b507b3a7c5efaba1008</sys_package>
+        <sys_parent display_value="">e8e08ebf930017107b3a7c5efaba10af</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
+        <sys_scope_delete display_value="">1a2f7aa8dfc34e3a86d3f0bede3c2784</sys_scope_delete>
+        <sys_update_name>sys_ui_section_5ab242f3934017107b3a7c5efaba104a</sys_update_name>
+        <sys_update_version display_value="sys_ui_section_5ab242f3934017107b3a7c5efaba104a">42929a3793c017107b3a7c5efaba1074</sys_update_version>
+        <sys_updated_by>nilesh.chaurasia</sys_updated_by>
+        <sys_updated_on>2026-10-28 05:35:37</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

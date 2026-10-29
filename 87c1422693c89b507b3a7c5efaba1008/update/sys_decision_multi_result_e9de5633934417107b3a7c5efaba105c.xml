@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_decision_multi_result">
+    <sys_decision_multi_result action="INSERT_OR_UPDATE">
+        <decision_table display_value="Room Category Decision Tables">610a52b7930417107b3a7c5efaba1093</decision_table>
+        <label>Is Restricted: false, Has Beds: true</label>
+        <result_elements/>
+        <sys_class_name>sys_decision_multi_result</sys_class_name>
+        <sys_created_by>harshvardhan.chhapola</sys_created_by>
+        <sys_created_on>2026-10-27 12:34:38</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>e9de5633934417107b3a7c5efaba105c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Is Restricted: false, Has Beds: true</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Apollo-Hospitals" source="x_2223823_apollo_0">87c1422693c89b507b3a7c5efaba1008</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
+        <sys_update_name>sys_decision_multi_result_e9de5633934417107b3a7c5efaba105c</sys_update_name>
+        <sys_updated_by>harshvardhan.chhapola</sys_updated_by>
+        <sys_updated_on>2026-10-27 12:34:38</sys_updated_on>
+    </sys_decision_multi_result>
+    <sys_variable_value action="delete_multiple" query="document_key=e9de5633934417107b3a7c5efaba105c"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_decision_multi_result</document>
+        <document_key>e9de5633934417107b3a7c5efaba105c</document_key>
+        <order>300</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>harshvardhan.chhapola</sys_created_by>
+        <sys_created_on>2026-10-27 12:34:38</sys_created_on>
+        <sys_id>69de5633934417107b3a7c5efaba1069</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>harshvardhan.chhapola</sys_updated_by>
+        <sys_updated_on>2026-10-27 12:34:38</sys_updated_on>
+        <value>1</value>
+        <variable display_value="Has Beds">adde1633934417107b3a7c5efaba10cc</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_decision_multi_result</document>
+        <document_key>e9de5633934417107b3a7c5efaba105c</document_key>
+        <order>200</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>harshvardhan.chhapola</sys_created_by>
+        <sys_created_on>2026-10-27 12:34:38</sys_created_on>
+        <sys_id>adde5633934417107b3a7c5efaba1069</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>harshvardhan.chhapola</sys_updated_by>
+        <sys_updated_on>2026-10-27 12:34:38</sys_updated_on>
+        <value/>
+        <variable display_value="Approver">19de963f930417107b3a7c5efaba1079</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_decision_multi_result</document>
+        <document_key>e9de5633934417107b3a7c5efaba105c</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>harshvardhan.chhapola</sys_created_by>
+        <sys_created_on>2026-10-27 12:34:38</sys_created_on>
+        <sys_id>e1de5633934417107b3a7c5efaba106a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>harshvardhan.chhapola</sys_updated_by>
+        <sys_updated_on>2026-10-27 12:34:38</sys_updated_on>
+        <value>0</value>
+        <variable display_value="Is Restricted">5d9b1e7b930417107b3a7c5efaba10f3</variable>
+    </sys_variable_value>
+</record_update>

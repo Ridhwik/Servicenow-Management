@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script_client">
+    <sys_script_client action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <applies_extended>false</applies_extended>
+        <condition/>
+        <description/>
+        <field>admission_date</field>
+        <global>true</global>
+        <isolate_script>true</isolate_script>
+        <messages/>
+        <name>Admit Date validation with discharge dat</name>
+        <order/>
+        <script><![CDATA[function onChange(control, oldValue, newValue, isLoading, isTemplate) {
+   if (isLoading || newValue === '') {
+      return;
+   }
+   var exp_discharge = new Date(g_form.getValue('expected_discharge_date'));
+   var discharge = new Date(g_form.getValue('discharge_date'));
+   var admit = new Date(newValue);
+   if(!exp_discharge && !discharge) {
+	return;
+   }
+   if(admit > exp_discharge || admit > discharge) {
+	g_form.setValue('admission_date', '');
+	g_form.showErrorBox('admission_date', 'Admission Date Cannot Be After Discharge or Expected Discharge Date');
+   }
+   
+}]]></script>
+        <sys_class_name>sys_script_client</sys_class_name>
+        <sys_created_by>harshvardhan.chhapola</sys_created_by>
+        <sys_created_on>2026-10-27 06:53:16</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>95b019f39388d3107b3a7c5efaba1039</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Admit Date validation with discharge dat</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Apollo-Hospitals" source="x_2223823_apollo_0">87c1422693c89b507b3a7c5efaba1008</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
+        <sys_update_name>sys_script_client_95b019f39388d3107b3a7c5efaba1039</sys_update_name>
+        <sys_updated_by>harshvardhan.chhapola</sys_updated_by>
+        <sys_updated_on>2026-10-27 06:53:16</sys_updated_on>
+        <table>x_2223823_apollo_0_admission</table>
+        <type>onChange</type>
+        <ui_type>0</ui_type>
+        <view/>
+    </sys_script_client>
+</record_update>

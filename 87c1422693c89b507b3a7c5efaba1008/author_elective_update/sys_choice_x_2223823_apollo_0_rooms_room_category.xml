@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_choice action="INSERT_OR_UPDATE" field="room_category" table="x_2223823_apollo_0_rooms" version="3">
+        <sys_choice_set action="INSERT_OR_UPDATE">
+            <element>room_category</element>
+            <name>x_2223823_apollo_0_rooms</name>
+            <sys_class_name>sys_choice_set</sys_class_name>
+            <sys_created_by>fatehsingh.meena</sys_created_by>
+            <sys_created_on>2026-10-27 07:28:16</sys_created_on>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>room_category</sys_name>
+            <sys_package display_value="Apollo-Hospitals" source="x_2223823_apollo_0">87c1422693c89b507b3a7c5efaba1008</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
+            <sys_update_name>sys_choice_x_2223823_apollo_0_rooms_room_category</sys_update_name>
+            <sys_updated_by>fatehsingh.meena</sys_updated_by>
+            <sys_updated_on>2026-10-27 07:28:16</sys_updated_on>
+        </sys_choice_set>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>room_category</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>General Ward</label>
+            <language>en</language>
+            <name>x_2223823_apollo_0_rooms</name>
+            <sequence>0</sequence>
+            <synonyms/>
+            <sys_created_by>fatehsingh.meena</sys_created_by>
+            <sys_created_on>2026-10-27 07:28:16</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>fatehsingh.meena</sys_updated_by>
+            <sys_updated_on>2026-10-27 07:28:16</sys_updated_on>
+            <value>General Ward</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>room_category</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Private / Deluxe / Suite</label>
+            <language>en</language>
+            <name>x_2223823_apollo_0_rooms</name>
+            <sequence>1</sequence>
+            <synonyms/>
+            <sys_created_by>fatehsingh.meena</sys_created_by>
+            <sys_created_on>2026-10-27 07:28:16</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>fatehsingh.meena</sys_updated_by>
+            <sys_updated_on>2026-10-27 07:28:16</sys_updated_on>
+            <value> Private / Deluxe / Suite</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>room_category</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>ICU</label>
+            <language>en</language>
+            <name>x_2223823_apollo_0_rooms</name>
+            <sequence>2</sequence>
+            <synonyms/>
+            <sys_created_by>fatehsingh.meena</sys_created_by>
+            <sys_created_on>2026-10-27 07:28:16</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>fatehsingh.meena</sys_updated_by>
+            <sys_updated_on>2026-10-27 07:28:16</sys_updated_on>
+            <value>ICU</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>room_category</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>HDU</label>
+            <language>en</language>
+            <name>x_2223823_apollo_0_rooms</name>
+            <sequence>3</sequence>
+            <synonyms/>
+            <sys_created_by>fatehsingh.meena</sys_created_by>
+            <sys_created_on>2026-10-27 07:28:16</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>fatehsingh.meena</sys_updated_by>
+            <sys_updated_on>2026-10-27 07:28:16</sys_updated_on>
+            <value>HDU</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>room_category</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>NICU</label>
+            <language>en</language>
+            <name>x_2223823_apollo_0_rooms</name>
+            <sequence>4</sequence>
+            <synonyms/>
+            <sys_created_by>fatehsingh.meena</sys_created_by>
+            <sys_created_on>2026-10-27 07:28:16</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>fatehsingh.meena</sys_updated_by>
+            <sys_updated_on>2026-10-27 07:28:16</sys_updated_on>
+            <value>NICU</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>room_category</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Isolation</label>
+            <language>en</language>
+            <name>x_2223823_apollo_0_rooms</name>
+            <sequence>5</sequence>
+            <synonyms/>
+            <sys_created_by>fatehsingh.meena</sys_created_by>
+            <sys_created_on>2026-10-27 07:28:16</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>fatehsingh.meena</sys_updated_by>
+            <sys_updated_on>2026-10-27 07:28:16</sys_updated_on>
+            <value>Isolation</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>room_category</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Labour / Maternity</label>
+            <language>en</language>
+            <name>x_2223823_apollo_0_rooms</name>
+            <sequence>6</sequence>
+            <synonyms/>
+            <sys_created_by>fatehsingh.meena</sys_created_by>
+            <sys_created_on>2026-10-27 07:28:16</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>fatehsingh.meena</sys_updated_by>
+            <sys_updated_on>2026-10-27 07:28:16</sys_updated_on>
+            <value> Labour / Maternity</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>room_category</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Emergency</label>
+            <language>en</language>
+            <name>x_2223823_apollo_0_rooms</name>
+            <sequence>7</sequence>
+            <synonyms/>
+            <sys_created_by>fatehsingh.meena</sys_created_by>
+            <sys_created_on>2026-10-27 07:28:16</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>fatehsingh.meena</sys_updated_by>
+            <sys_updated_on>2026-10-27 07:28:16</sys_updated_on>
+            <value>Emergency</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>room_category</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Operation Theatre</label>
+            <language>en</language>
+            <name>x_2223823_apollo_0_rooms</name>
+            <sequence>8</sequence>
+            <synonyms/>
+            <sys_created_by>fatehsingh.meena</sys_created_by>
+            <sys_created_on>2026-10-27 07:28:16</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>fatehsingh.meena</sys_updated_by>
+            <sys_updated_on>2026-10-27 07:28:16</sys_updated_on>
+            <value>Operation Theatre</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>room_category</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Day Care</label>
+            <language>en</language>
+            <name>x_2223823_apollo_0_rooms</name>
+            <sequence>9</sequence>
+            <synonyms/>
+            <sys_created_by>fatehsingh.meena</sys_created_by>
+            <sys_created_on>2026-10-27 07:28:16</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>fatehsingh.meena</sys_updated_by>
+            <sys_updated_on>2026-10-27 07:28:16</sys_updated_on>
+            <value>Day Care</value>
+        </sys_choice>
+    </sys_choice>
+</record_update>

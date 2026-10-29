@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element attributes="enforce_dot_walk_cross_scope_access=true" db_object_id="990368eb934c13107b3a7c5efaba1042" extends="cmn_location" label="Hospital " max_length="40" name="x_2223823_apollo_0_hospital" type="collection">
+        <element label="Hospital Administrator" max_length="32" name="hospital_administrator" reference="sys_user" type="reference"/>
+        <element default="1" function_definition="1" label="Bed Hold Emergency Hour" max_length="255" name="hold_hours_emergency" type="integer"/>
+        <element label="Phone" max_length="40" name="phon0" type="string"/>
+        <element default="4" function_definition="4" label="Bed Hold Planned Hour" max_length="255" name="hold_hours_planned" type="integer"/>
+        <element function_definition="255" label="Address" max_length="255" name="address" type="string"/>
+        <element label="Email" max_length="255" name="email" type="email"/>
+        <element attributes="ignore_filter_on_new=true" default="javascript:global.getNextObjNumberPadded();" label="Code" mandatory="true" max_length="40" name="number" type="string"/>
+        <element default="true" function_definition="true" label="Active" max_length="255" name="active" type="boolean"/>
+    </element>
+</database>

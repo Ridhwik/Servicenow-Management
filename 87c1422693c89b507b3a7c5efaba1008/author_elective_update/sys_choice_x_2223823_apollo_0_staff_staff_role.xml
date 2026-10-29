@@ -1,0 +1,380 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_choice action="INSERT_OR_UPDATE" field="staff_role" table="x_2223823_apollo_0_staff" version="3">
+        <sys_choice_set action="INSERT_OR_UPDATE">
+            <element>staff_role</element>
+            <name>x_2223823_apollo_0_staff</name>
+            <sys_class_name>sys_choice_set</sys_class_name>
+            <sys_created_by>nilesh.chaurasia</sys_created_by>
+            <sys_created_on>2026-10-26 11:00:05</sys_created_on>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>staff_role</sys_name>
+            <sys_package display_value="Apollo-Hospitals" source="x_2223823_apollo_0">87c1422693c89b507b3a7c5efaba1008</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
+            <sys_update_name>sys_choice_x_2223823_apollo_0_staff_staff_role</sys_update_name>
+            <sys_updated_by>nilesh.chaurasia</sys_updated_by>
+            <sys_updated_on>2026-10-26 11:00:05</sys_updated_on>
+        </sys_choice_set>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>staff_role</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Corporate Executive</label>
+            <language>en</language>
+            <name>x_2223823_apollo_0_staff</name>
+            <sequence>0</sequence>
+            <synonyms/>
+            <sys_created_by>nilesh.chaurasia</sys_created_by>
+            <sys_created_on>2026-10-26 11:00:05</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>nilesh.chaurasia</sys_updated_by>
+            <sys_updated_on>2026-10-26 11:00:05</sys_updated_on>
+            <value>corporate_executive</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>staff_role</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Hospital Administrator</label>
+            <language>en</language>
+            <name>x_2223823_apollo_0_staff</name>
+            <sequence>1</sequence>
+            <synonyms/>
+            <sys_created_by>nilesh.chaurasia</sys_created_by>
+            <sys_created_on>2026-10-26 11:00:05</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>nilesh.chaurasia</sys_updated_by>
+            <sys_updated_on>2026-10-26 11:00:05</sys_updated_on>
+            <value>hospital_administrator</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>staff_role</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Medical Director</label>
+            <language>en</language>
+            <name>x_2223823_apollo_0_staff</name>
+            <sequence>2</sequence>
+            <synonyms/>
+            <sys_created_by>nilesh.chaurasia</sys_created_by>
+            <sys_created_on>2026-10-26 11:00:05</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>nilesh.chaurasia</sys_updated_by>
+            <sys_updated_on>2026-10-26 11:00:05</sys_updated_on>
+            <value>medical_director</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>staff_role</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Nursing Superintendent</label>
+            <language>en</language>
+            <name>x_2223823_apollo_0_staff</name>
+            <sequence>3</sequence>
+            <synonyms/>
+            <sys_created_by>nilesh.chaurasia</sys_created_by>
+            <sys_created_on>2026-10-26 11:00:05</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>nilesh.chaurasia</sys_updated_by>
+            <sys_updated_on>2026-10-26 11:00:05</sys_updated_on>
+            <value>nursing_superintendent</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>staff_role</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>HOD</label>
+            <language>en</language>
+            <name>x_2223823_apollo_0_staff</name>
+            <sequence>4</sequence>
+            <synonyms/>
+            <sys_created_by>nilesh.chaurasia</sys_created_by>
+            <sys_created_on>2026-10-26 11:00:05</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>nilesh.chaurasia</sys_updated_by>
+            <sys_updated_on>2026-10-26 11:00:05</sys_updated_on>
+            <value>hod</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>staff_role</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Head Nurse / Ward In-Charge</label>
+            <language>en</language>
+            <name>x_2223823_apollo_0_staff</name>
+            <sequence>5</sequence>
+            <synonyms/>
+            <sys_created_by>nilesh.chaurasia</sys_created_by>
+            <sys_created_on>2026-10-26 11:00:05</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>nilesh.chaurasia</sys_updated_by>
+            <sys_updated_on>2026-10-26 11:00:05</sys_updated_on>
+            <value>head_nurse_ward_in_charge</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>staff_role</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Billing &amp; Finance Head</label>
+            <language>en</language>
+            <name>x_2223823_apollo_0_staff</name>
+            <sequence>6</sequence>
+            <synonyms/>
+            <sys_created_by>nilesh.chaurasia</sys_created_by>
+            <sys_created_on>2026-10-26 11:00:05</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>nilesh.chaurasia</sys_updated_by>
+            <sys_updated_on>2026-10-26 11:00:05</sys_updated_on>
+            <value>billing_finance_head</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>staff_role</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Facilities &amp; Operations Manager</label>
+            <language>en</language>
+            <name>x_2223823_apollo_0_staff</name>
+            <sequence>7</sequence>
+            <synonyms/>
+            <sys_created_by>nilesh.chaurasia</sys_created_by>
+            <sys_created_on>2026-10-26 11:00:05</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>nilesh.chaurasia</sys_updated_by>
+            <sys_updated_on>2026-10-26 11:00:05</sys_updated_on>
+            <value>facilities_operations_manager</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>staff_role</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>IT Service Desk Manager</label>
+            <language>en</language>
+            <name>x_2223823_apollo_0_staff</name>
+            <sequence>8</sequence>
+            <synonyms/>
+            <sys_created_by>nilesh.chaurasia</sys_created_by>
+            <sys_created_on>2026-10-26 11:00:05</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>nilesh.chaurasia</sys_updated_by>
+            <sys_updated_on>2026-10-26 11:00:05</sys_updated_on>
+            <value>it_service_desk_manager</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>staff_role</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Lab &amp; Pharmacy Coordinator</label>
+            <language>en</language>
+            <name>x_2223823_apollo_0_staff</name>
+            <sequence>9</sequence>
+            <synonyms/>
+            <sys_created_by>nilesh.chaurasia</sys_created_by>
+            <sys_created_on>2026-10-26 11:00:05</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>nilesh.chaurasia</sys_updated_by>
+            <sys_updated_on>2026-10-26 11:00:05</sys_updated_on>
+            <value>lab_pharmacy_coordinator</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>staff_role</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Nurse</label>
+            <language>en</language>
+            <name>x_2223823_apollo_0_staff</name>
+            <sequence>10</sequence>
+            <synonyms/>
+            <sys_created_by>nilesh.chaurasia</sys_created_by>
+            <sys_created_on>2026-10-26 11:00:05</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>nilesh.chaurasia</sys_updated_by>
+            <sys_updated_on>2026-10-26 11:00:05</sys_updated_on>
+            <value>nurse</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>staff_role</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Receptionist / Cashier</label>
+            <language>en</language>
+            <name>x_2223823_apollo_0_staff</name>
+            <sequence>11</sequence>
+            <synonyms/>
+            <sys_created_by>nilesh.chaurasia</sys_created_by>
+            <sys_created_on>2026-10-26 11:00:05</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>nilesh.chaurasia</sys_updated_by>
+            <sys_updated_on>2026-10-26 11:00:05</sys_updated_on>
+            <value>receptionist_cashier</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>staff_role</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Lab Technician</label>
+            <language>en</language>
+            <name>x_2223823_apollo_0_staff</name>
+            <sequence>12</sequence>
+            <synonyms/>
+            <sys_created_by>nilesh.chaurasia</sys_created_by>
+            <sys_created_on>2026-10-26 11:00:05</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>nilesh.chaurasia</sys_updated_by>
+            <sys_updated_on>2026-10-26 11:00:05</sys_updated_on>
+            <value>lab_technician</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>staff_role</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Pharmacist</label>
+            <language>en</language>
+            <name>x_2223823_apollo_0_staff</name>
+            <sequence>13</sequence>
+            <synonyms/>
+            <sys_created_by>nilesh.chaurasia</sys_created_by>
+            <sys_created_on>2026-10-26 11:00:05</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>nilesh.chaurasia</sys_updated_by>
+            <sys_updated_on>2026-10-26 11:00:05</sys_updated_on>
+            <value>pharmacist</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>staff_role</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Bed Manager</label>
+            <language>en</language>
+            <name>x_2223823_apollo_0_staff</name>
+            <sequence>14</sequence>
+            <synonyms/>
+            <sys_created_by>nilesh.chaurasia</sys_created_by>
+            <sys_created_on>2026-10-26 11:00:05</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>nilesh.chaurasia</sys_updated_by>
+            <sys_updated_on>2026-10-26 11:00:05</sys_updated_on>
+            <value>bed_manager</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>staff_role</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Housekeeping</label>
+            <language>en</language>
+            <name>x_2223823_apollo_0_staff</name>
+            <sequence>15</sequence>
+            <synonyms/>
+            <sys_created_by>nilesh.chaurasia</sys_created_by>
+            <sys_created_on>2026-10-26 11:00:05</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>nilesh.chaurasia</sys_updated_by>
+            <sys_updated_on>2026-10-26 11:00:05</sys_updated_on>
+            <value>housekeeping</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>staff_role</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Facilities / Biomedical</label>
+            <language>en</language>
+            <name>x_2223823_apollo_0_staff</name>
+            <sequence>16</sequence>
+            <synonyms/>
+            <sys_created_by>nilesh.chaurasia</sys_created_by>
+            <sys_created_on>2026-10-26 11:00:05</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>nilesh.chaurasia</sys_updated_by>
+            <sys_updated_on>2026-10-26 11:00:05</sys_updated_on>
+            <value>facilities_biomedical</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>staff_role</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Compliance Officer</label>
+            <language>en</language>
+            <name>x_2223823_apollo_0_staff</name>
+            <sequence>17</sequence>
+            <synonyms/>
+            <sys_created_by>nilesh.chaurasia</sys_created_by>
+            <sys_created_on>2026-10-26 11:00:05</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>nilesh.chaurasia</sys_updated_by>
+            <sys_updated_on>2026-10-26 11:00:05</sys_updated_on>
+            <value>compliance_officer</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>staff_role</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>IT Support Agent</label>
+            <language>en</language>
+            <name>x_2223823_apollo_0_staff</name>
+            <sequence>18</sequence>
+            <synonyms/>
+            <sys_created_by>nilesh.chaurasia</sys_created_by>
+            <sys_created_on>2026-10-26 11:00:05</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>nilesh.chaurasia</sys_updated_by>
+            <sys_updated_on>2026-10-26 11:00:05</sys_updated_on>
+            <value>it_support_agent</value>
+        </sys_choice>
+    </sys_choice>
+</record_update>

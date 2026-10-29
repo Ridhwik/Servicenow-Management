@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_ui_section caption="" section_id="e3766ce7938c13107b3a7c5efaba10d0" sys_domain="global" table="x_2223823_apollo_0_patient" version="3" view="">
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>number</element>
+            <position>0</position>
+            <sys_created_by>jenish.jain</sys_created_by>
+            <sys_created_on>2026-10-26 10:55:11</sys_created_on>
+            <sys_id>db7eb0e7938053107b3a7c5efaba1027</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_2223823_apollo_0_patient" sys_domain="global" view="Default view">e3766ce7938c13107b3a7c5efaba10d0</sys_ui_section>
+            <sys_updated_by>jenish.jain</sys_updated_by>
+            <sys_updated_on>2026-10-26 10:55:11</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_section action="INSERT_OR_UPDATE">
+            <caption/>
+            <header>false</header>
+            <name>x_2223823_apollo_0_patient</name>
+            <roles/>
+            <sys_class_name>sys_ui_section</sys_class_name>
+            <sys_created_by>jenish.jain</sys_created_by>
+            <sys_created_on>2026-10-26 09:10:21</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>e3766ce7938c13107b3a7c5efaba10d0</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>x_2223823_apollo_0_patient</sys_name>
+            <sys_overrides/>
+            <sys_package display_value="Apollo-Hospitals" source="x_2223823_apollo_0">87c1422693c89b507b3a7c5efaba1008</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
+            <sys_update_name>sys_ui_section_e3766ce7938c13107b3a7c5efaba10d0</sys_update_name>
+            <sys_updated_by>jenish.jain</sys_updated_by>
+            <sys_updated_on>2026-10-26 09:10:21</sys_updated_on>
+            <sys_user/>
+            <title>true</title>
+            <view display_value="Default view" name="NULL">Default view</view>
+            <view_name/>
+        </sys_ui_section>
+    </sys_ui_section>
+</record_update>

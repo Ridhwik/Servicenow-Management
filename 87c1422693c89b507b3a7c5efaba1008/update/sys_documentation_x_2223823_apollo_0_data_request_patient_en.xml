@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_documentation element="patient" label="Patient" language="en" table="x_2223823_apollo_0_data_request">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element>patient</element>
+            <help/>
+            <hint/>
+            <label>Patient</label>
+            <language>en</language>
+            <name>x_2223823_apollo_0_data_request</name>
+            <plural>Patients</plural>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>ayush.mangal</sys_created_by>
+            <sys_created_on>2026-10-26 09:52:32</sys_created_on>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>Patient</sys_name>
+            <sys_package display_value="Apollo-Hospitals" source="x_2223823_apollo_0">87c1422693c89b507b3a7c5efaba1008</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
+            <sys_update_name>sys_documentation_x_2223823_apollo_0_data_request_patient_en</sys_update_name>
+            <sys_updated_by>ayush.mangal</sys_updated_by>
+            <sys_updated_on>2026-10-26 09:52:32</sys_updated_on>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+</record_update>

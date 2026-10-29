@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_app_application">
+    <sys_app_application action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <category display_value="Custom Applications">e0355b31ef303000a61d5a3615c0fb78</category>
+        <description/>
+        <device_type>browser</device_type>
+        <hint/>
+        <name/>
+        <order>100</order>
+        <roles>snc_internal</roles>
+        <sys_class_name>sys_app_application</sys_class_name>
+        <sys_created_by>ridhwik.jangid</sys_created_by>
+        <sys_created_on>2026-10-26 06:53:44</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>b627042f938013107b3a7c5efaba1001</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>Core Data Model</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Apollo-Hospitals" source="x_2223823_apollo_0">87c1422693c89b507b3a7c5efaba1008</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
+        <sys_update_name>sys_app_application_b627042f938013107b3a7c5efaba1001</sys_update_name>
+        <sys_updated_by>system</sys_updated_by>
+        <sys_updated_on>2026-10-26 07:39:14</sys_updated_on>
+        <title>Core Data Model</title>
+        <view_name/>
+    </sys_app_application>
+</record_update>

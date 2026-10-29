@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element attributes="enforce_dot_walk_cross_scope_access=true" db_object_id="0ee73427934053107b3a7c5efaba107b" label="Staff" max_length="40" name="x_2223823_apollo_0_staff" type="collection">
+        <element label="Department" max_length="32" name="department" reference="x_2223823_apollo_0_department" type="reference"/>
+        <element choice="1" label="Shift" max_length="40" name="shift" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Morning" sequence="0" value="morning"/>
+                <element inactive_on_update="false" label="Night" sequence="2" value="night"/>
+                <element inactive_on_update="false" label="Evening" sequence="1" value="evening"/>
+            </choice>
+        </element>
+        <element choice="1" label="Staff role" max_length="40" name="staff_role" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Billing &amp; Finance Head" sequence="6" value="billing_finance_head"/>
+                <element inactive_on_update="false" label="Bed Manager" sequence="14" value="bed_manager"/>
+                <element inactive_on_update="false" label="Lab Technician" sequence="12" value="lab_technician"/>
+                <element inactive_on_update="false" label="IT Support Agent" sequence="18" value="it_support_agent"/>
+                <element inactive_on_update="false" label="Nurse" sequence="10" value="nurse"/>
+                <element inactive_on_update="false" label="Facilities / Biomedical" sequence="16" value="facilities_biomedical"/>
+                <element inactive_on_update="false" label="IT Service Desk Manager" sequence="8" value="it_service_desk_manager"/>
+                <element inactive_on_update="false" label="Medical Director" sequence="2" value="medical_director"/>
+                <element inactive_on_update="false" label="HOD" sequence="4" value="hod"/>
+                <element inactive_on_update="false" label="Compliance Officer" sequence="17" value="compliance_officer"/>
+                <element inactive_on_update="false" label="Lab &amp; Pharmacy Coordinator" sequence="9" value="lab_pharmacy_coordinator"/>
+                <element inactive_on_update="false" label="Housekeeping" sequence="15" value="housekeeping"/>
+                <element inactive_on_update="false" label="Facilities &amp; Operations Manager" sequence="7" value="facilities_operations_manager"/>
+                <element inactive_on_update="false" label="Pharmacist" sequence="13" value="pharmacist"/>
+                <element inactive_on_update="false" label="Receptionist / Cashier" sequence="11" value="receptionist_cashier"/>
+                <element inactive_on_update="false" label="Head Nurse / Ward In-Charge" sequence="5" value="head_nurse_ward_in_charge"/>
+                <element inactive_on_update="false" label="Nursing Superintendent" sequence="3" value="nursing_superintendent"/>
+                <element inactive_on_update="false" label="Hospital Administrator" sequence="1" value="hospital_administrator"/>
+                <element inactive_on_update="false" label="Corporate Executive" sequence="0" value="corporate_executive"/>
+            </choice>
+        </element>
+        <element label="Ward" max_length="32" name="ward" reference="x_2223823_apollo_0_wards" type="reference"/>
+        <element label="Active" max_length="40" name="active" type="boolean"/>
+        <element label="User" max_length="32" name="user" reference="sys_user" type="reference"/>
+        <element label="Reports to" max_length="32" name="reports_to" reference="x_2223823_apollo_0_staff" type="reference"/>
+        <element label="Hospital" max_length="32" name="hospital" reference="x_2223823_apollo_0_hospital" type="reference"/>
+        <index name="index">
+            <element name="department"/>
+        </index>
+        <index name="index2">
+            <element name="hospital"/>
+        </index>
+        <index name="index3">
+            <element name="reports_to"/>
+        </index>
+        <index name="index4">
+            <element name="user"/>
+        </index>
+        <index name="index5">
+            <element name="ward"/>
+        </index>
+    </element>
+</database>
