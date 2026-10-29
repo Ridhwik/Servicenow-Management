@@ -5,19 +5,19 @@
         <field>opd_schedule</field>
         <field_message/>
         <field_message_type>none</field_message_type>
-        <mandatory>ignore</mandatory>
+        <mandatory>false</mandatory>
         <sys_class_name>sys_ui_policy_action</sys_class_name>
         <sys_created_by>nilesh.chaurasia</sys_created_by>
         <sys_created_on>2026-10-27 11:00:31</sys_created_on>
         <sys_id>be494673938017107b3a7c5efaba10c0</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>1</sys_mod_count>
         <sys_name>opd_schedule</sys_name>
         <sys_package display_value="Apollo-Hospitals" source="x_2223823_apollo_0">87c1422693c89b507b3a7c5efaba1008</sys_package>
         <sys_policy/>
         <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
         <sys_update_name>sys_ui_policy_action_be494673938017107b3a7c5efaba10c0</sys_update_name>
         <sys_updated_by>nilesh.chaurasia</sys_updated_by>
-        <sys_updated_on>2026-10-27 11:00:31</sys_updated_on>
+        <sys_updated_on>2026-10-29 07:12:39</sys_updated_on>
         <table>x_2223823_apollo_0_doctor</table>
         <ui_policy display_value="OPD enabled  is false&#10;Hide that consultation type's duration, fee and timings">36494673938017107b3a7c5efaba1073</ui_policy>
         <value/>
