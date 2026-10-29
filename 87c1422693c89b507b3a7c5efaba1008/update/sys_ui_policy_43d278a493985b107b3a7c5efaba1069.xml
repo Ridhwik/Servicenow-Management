@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_ui_policy">
+    <sys_ui_policy action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <conditions table="x_2223823_apollo_0_beds">status=6^EQ<item endquery="false" field="status" goto="false" newquery="false" operator="=" or="false" value="6"/>
+            <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
+        </conditions>
+        <description/>
+        <global>true</global>
+        <inherit>false</inherit>
+        <isolate_script>true</isolate_script>
+        <model_id/>
+        <model_table/>
+        <on_load>true</on_load>
+        <order>100</order>
+        <reverse_if_false>true</reverse_if_false>
+        <run_scripts>false</run_scripts>
+        <script_false><![CDATA[function onCondition() {
+
+}]]></script_false>
+        <script_true><![CDATA[function onCondition() {
+
+}]]></script_true>
+        <set_values/>
+        <short_description>Bed Status is Blocked</short_description>
+        <sys_class_name>sys_ui_policy</sys_class_name>
+        <sys_created_by>vikalp.pareek</sys_created_by>
+        <sys_created_on>2026-10-29 12:46:57</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>43d278a493985b107b3a7c5efaba1069</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>Bed Status is Blocked</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Apollo-Hospitals" source="x_2223823_apollo_0">87c1422693c89b507b3a7c5efaba1008</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
+        <sys_update_name>sys_ui_policy_43d278a493985b107b3a7c5efaba1069</sys_update_name>
+        <sys_updated_by>vikalp.pareek</sys_updated_by>
+        <sys_updated_on>2026-10-29 12:50:03</sys_updated_on>
+        <table>x_2223823_apollo_0_beds</table>
+        <ui_type>0</ui_type>
+        <view/>
+    </sys_ui_policy>
+</record_update>
