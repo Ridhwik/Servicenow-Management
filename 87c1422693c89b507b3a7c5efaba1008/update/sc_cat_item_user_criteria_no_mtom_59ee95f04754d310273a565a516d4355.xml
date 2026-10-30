@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sc_cat_item_user_criteria_no_mtom">
+    <sc_cat_item_user_criteria_no_mtom action="INSERT_OR_UPDATE">
+        <sc_cat_item display_value="Create Hospital Location Hierarchy">d5eb9d784714d310273a565a516d43df</sc_cat_item>
+        <sys_class_name>sc_cat_item_user_criteria_no_mtom</sys_class_name>
+        <sys_created_by>ridhwik.jangid</sys_created_by>
+        <sys_created_on>2026-10-30 10:29:11</sys_created_on>
+        <sys_id>59ee95f04754d310273a565a516d4355</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Create Hospital Location Hierarchy.SNC External</sys_name>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
+        <sys_update_name>sc_cat_item_user_criteria_no_mtom_59ee95f04754d310273a565a516d4355</sys_update_name>
+        <sys_updated_by>ridhwik.jangid</sys_updated_by>
+        <sys_updated_on>2026-10-30 10:29:11</sys_updated_on>
+        <user_criteria display_value="SNC External">66c1b50e730333009508738234f6a7c9</user_criteria>
+    </sc_cat_item_user_criteria_no_mtom>
+</record_update>
