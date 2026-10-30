@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_choice action="INSERT_OR_UPDATE" field="purpose" table="x_2223823_apollo_0_patient_consent" version="3">
+        <sys_choice_set action="INSERT_OR_UPDATE">
+            <element>purpose</element>
+            <name>x_2223823_apollo_0_patient_consent</name>
+            <sys_class_name>sys_choice_set</sys_class_name>
+            <sys_created_by>jenish.jain</sys_created_by>
+            <sys_created_on>2026-10-30 12:23:08</sys_created_on>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>purpose</sys_name>
+            <sys_package display_value="Apollo-Hospitals" source="x_2223823_apollo_0">87c1422693c89b507b3a7c5efaba1008</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
+            <sys_update_name>sys_choice_x_2223823_apollo_0_patient_consent_purpose</sys_update_name>
+            <sys_updated_by>jenish.jain</sys_updated_by>
+            <sys_updated_on>2026-10-30 12:23:08</sys_updated_on>
+        </sys_choice_set>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>purpose</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Cross-hospital history sharing</label>
+            <language>en</language>
+            <name>x_2223823_apollo_0_patient_consent</name>
+            <sequence>0</sequence>
+            <synonyms/>
+            <sys_created_by>jenish.jain</sys_created_by>
+            <sys_created_on>2026-10-30 12:23:08</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>jenish.jain</sys_updated_by>
+            <sys_updated_on>2026-10-30 12:23:08</sys_updated_on>
+            <value>cross_hospital_history_sharing</value>
+        </sys_choice>
+    </sys_choice>
+</record_update>

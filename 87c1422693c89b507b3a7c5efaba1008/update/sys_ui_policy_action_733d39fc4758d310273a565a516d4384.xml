@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ui_policy_action">
+    <sys_ui_policy_action action="INSERT_OR_UPDATE">
+        <cleared>false</cleared>
+        <disabled>ignore</disabled>
+        <field>under_18</field>
+        <field_message/>
+        <field_message_type>none</field_message_type>
+        <mandatory>ignore</mandatory>
+        <sys_class_name>sys_ui_policy_action</sys_class_name>
+        <sys_created_by>jenish.jain</sys_created_by>
+        <sys_created_on>2026-10-30 12:42:07</sys_created_on>
+        <sys_id>733d39fc4758d310273a565a516d4384</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>under_18</sys_name>
+        <sys_package display_value="Apollo-Hospitals" source="x_2223823_apollo_0">87c1422693c89b507b3a7c5efaba1008</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
+        <sys_update_name>sys_ui_policy_action_733d39fc4758d310273a565a516d4384</sys_update_name>
+        <sys_updated_by>jenish.jain</sys_updated_by>
+        <sys_updated_on>2026-10-30 12:42:07</sys_updated_on>
+        <table>x_2223823_apollo_0_patient</table>
+        <ui_policy display_value="Hide Under 18 Field">4a1df1fc4758d310273a565a516d432a</ui_policy>
+        <value/>
+        <value_action>ignore</value_action>
+        <visible>false</visible>
+    </sys_ui_policy_action>
+    <sys_translated_text action="delete_multiple" query="documentkey=733d39fc4758d310273a565a516d4384"/>
+</record_update>

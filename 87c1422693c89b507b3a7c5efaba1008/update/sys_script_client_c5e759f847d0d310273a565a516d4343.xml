@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script_client">
+    <sys_script_client action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <applies_extended>false</applies_extended>
+        <condition/>
+        <description>Guardian Needed for age under 18</description>
+        <field>date_of_birth</field>
+        <global>true</global>
+        <isolate_script>true</isolate_script>
+        <messages/>
+        <name>Guardian Needed</name>
+        <order/>
+        <script><![CDATA[function onChange(control, oldValue, newValue, isLoading, isTemplate) {
+    if (!newValue) {
+        g_form.setValue('under_18', 'false');
+        return;
+    }
+
+    var birthDate = new Date(newValue);
+    var today = new Date();
+    var age = today.getFullYear() - birthDate.getFullYear();
+    var monthDiff = today.getMonth() - birthDate.getMonth();
+	
+    // Adjusting age if the birth month/day hasn't occurred yet in this year.
+    if (monthDiff < 0 || (monthDiff === 0 && today.getDate() < birthDate.getDate())) {
+        age--;
+    }
+
+    // Set flag true if under 18, else false
+    if (age < 18) {
+        g_form.setValue('under_18', 'true');
+    } else {
+        g_form.setValue('under_18', 'false');
+    }
+}]]></script>
+        <sys_class_name>sys_script_client</sys_class_name>
+        <sys_created_by>jenish.jain</sys_created_by>
+        <sys_created_on>2026-10-30 10:04:24</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>c5e759f847d0d310273a565a516d4343</sys_id>
+        <sys_mod_count>14</sys_mod_count>
+        <sys_name>Guardian Needed</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Apollo-Hospitals" source="x_2223823_apollo_0">87c1422693c89b507b3a7c5efaba1008</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
+        <sys_update_name>sys_script_client_c5e759f847d0d310273a565a516d4343</sys_update_name>
+        <sys_updated_by>jenish.jain</sys_updated_by>
+        <sys_updated_on>2026-10-30 11:29:08</sys_updated_on>
+        <table>x_2223823_apollo_0_patient</table>
+        <type>onChange</type>
+        <ui_type>0</ui_type>
+        <view/>
+    </sys_script_client>
+</record_update>

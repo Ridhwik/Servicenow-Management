@@ -1,27 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
     <element attributes="enforce_dot_walk_cross_scope_access=true" db_object_id="7a45ece3938c13107b3a7c5efaba1039" extends="csm_consumer" label="Patient" max_length="40" name="x_2223823_apollo_0_patient" type="collection">
-        <element label="Prepayment required" max_length="40" name="prepayment_required" type="boolean"/>
-        <element label="Email verified" max_length="40" name="email_verified" type="boolean"/>
-        <element label="ABHA number" max_length="17" name="abha_number" type="string"/>
-        <element label="Mother" max_length="32" name="mother" reference="sys_user" type="reference"/>
-        <element label="Known allergies" max_length="1000" name="known_allergies" type="string"/>
-        <element label="Preferred language" max_length="40" name="preferred_languag0" type="string"/>
-        <element label="Emergency contact phone" max_length="40" name="emergency_contact_phone" type="phone_number_e164"/>
-        <element label="Emergency contact name" max_length="100" name="emergency_contact_name" type="string"/>
         <element label="Government ID" max_length="30" name="government_id" type="string"/>
-        <element label="Consent Given" max_length="255" name="consent_given" type="boolean"/>
+        <element label="Emergency contact phone" max_length="40" name="emergency_contact_phone" type="phone_number_e164"/>
+        <element label="Preferred language" max_length="40" name="preferred_languag0" type="string"/>
+        <element label="Mother" max_length="32" name="mother" reference="sys_user" type="reference"/>
         <element choice="3" default="o" label="Blood group" max_length="255" name="blood_group" type="choice">
             <choice>
-                <element inactive_on_update="false" label="A+" sequence="0" value="a"/>
-                <element inactive_on_update="false" label="A-" value="-a"/>
-                <element inactive_on_update="false" label="O-" value="-o"/>
-                <element inactive_on_update="false" label="AB-" value="-ab"/>
-                <element inactive_on_update="false" label="O+" sequence="6" value="o"/>
-                <element inactive_on_update="false" label="AB+" sequence="4" value="ab"/>
                 <element inactive_on_update="false" label="B+" sequence="2" value="b"/>
+                <element inactive_on_update="false" label="O+" sequence="6" value="o"/>
+                <element inactive_on_update="false" label="AB-" value="-ab"/>
+                <element inactive_on_update="false" label="O-" value="-o"/>
                 <element inactive_on_update="false" label="B-" value="-b"/>
+                <element inactive_on_update="false" label="A+" sequence="0" value="a"/>
+                <element inactive_on_update="false" label="AB+" sequence="4" value="ab"/>
+                <element inactive_on_update="false" label="A-" value="-a"/>
             </choice>
         </element>
+        <element label="Guardian" max_length="32" name="guardian" reference="sys_user" type="reference"/>
+        <element label="Email verified" max_length="40" name="email_verified" type="boolean"/>
+        <element label="Date of Birth" max_length="255" name="date_of_birth" type="glide_date"/>
+        <element label="Known allergies" max_length="1000" name="known_allergies" type="string"/>
         <element label="Temporary profile" max_length="40" name="temporary_profile" type="boolean"/>
+        <element label="Consent Given" max_length="255" name="consent_given" type="boolean"/>
+        <element label="Emergency contact name" max_length="100" name="emergency_contact_name" type="string"/>
+        <element label="ABHA number" max_length="14" name="abha_number" type="string"/>
+        <element label="Prepayment required" max_length="40" name="prepayment_required" type="boolean"/>
+        <element label="under 18" max_length="255" name="under_18" type="boolean"/>
+        <index name="index">
+            <element name="guardian"/>
+        </index>
+        <index name="index2">
+            <element name="mother"/>
+        </index>
     </element>
 </database>

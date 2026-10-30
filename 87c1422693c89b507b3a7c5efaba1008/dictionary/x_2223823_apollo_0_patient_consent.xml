@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element attributes="enforce_dot_walk_cross_scope_access=true" db_object_id="ddf171f44718d310273a565a516d439f" label="Patient Consent" max_length="40" name="x_2223823_apollo_0_patient_consent" type="collection">
+        <element label="Withdrawal date" max_length="40" name="withdrawal_date" type="glide_date"/>
+        <element label="Retention period (months)" max_length="40" name="retention_period" type="integer"/>
+        <element label="Medical Record" max_length="32" name="medical_record" reference="x_2223823_apollo_0_medical_record" type="reference"/>
+        <element label="Notice version" max_length="20" name="notice_version" type="string"/>
+        <element label="Restricted to" max_length="1024" name="restricted_to" reference="x_2223823_apollo_0_department" type="glide_list"/>
+        <element label="Given on" max_length="40" name="given_on" type="glide_date_time"/>
+        <element choice="3" label="Status" max_length="40" name="status" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Withdrawn" sequence="2" value="3"/>
+                <element inactive_on_update="false" label="Denied" sequence="1" value="2"/>
+                <element inactive_on_update="false" label="Granted" sequence="0" value="1"/>
+            </choice>
+        </element>
+        <element choice="1" label="Purpose" max_length="40" name="purpose" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Cross-hospital history sharing" sequence="0" value="cross_hospital_history_sharing"/>
+            </choice>
+        </element>
+        <element label="Patient" max_length="32" name="patient" reference="x_2223823_apollo_0_patient" type="reference"/>
+        <index name="index">
+            <element name="medical_record"/>
+        </index>
+        <index name="index2">
+            <element name="patient"/>
+        </index>
+    </element>
+</database>

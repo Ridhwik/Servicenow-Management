@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_data_policy_rule">
+    <sys_data_policy_rule action="INSERT_OR_UPDATE">
+        <disabled>ignore</disabled>
+        <field>first_name</field>
+        <mandatory>true</mandatory>
+        <sys_class_name>sys_data_policy_rule</sys_class_name>
+        <sys_created_by>jenish.jain</sys_created_by>
+        <sys_created_on>2026-10-30 09:55:20</sys_created_on>
+        <sys_data_policy display_value="First name always mendatory">9af6917847d0d310273a565a516d4386</sys_data_policy>
+        <sys_id>8b17597847d0d310273a565a516d4312</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>first_name</sys_name>
+        <sys_package display_value="Apollo-Hospitals" source="x_2223823_apollo_0">87c1422693c89b507b3a7c5efaba1008</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
+        <sys_update_name>sys_data_policy_rule_8b17597847d0d310273a565a516d4312</sys_update_name>
+        <sys_updated_by>jenish.jain</sys_updated_by>
+        <sys_updated_on>2026-10-30 09:55:20</sys_updated_on>
+        <table>x_2223823_apollo_0_patient</table>
+    </sys_data_policy_rule>
+</record_update>
