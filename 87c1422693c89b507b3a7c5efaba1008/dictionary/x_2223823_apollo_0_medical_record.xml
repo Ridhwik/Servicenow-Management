@@ -1,32 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
     <element attributes="enforce_dot_walk_cross_scope_access=true" db_object_id="910d60e793cc13107b3a7c5efaba10a6" label="Medical Record" max_length="40" name="x_2223823_apollo_0_medical_record" type="collection">
-        <element label="Restricted" max_length="40" name="restricted" type="boolean"/>
-        <element label="Notes" max_length="4000" name="notes" type="string"/>
-        <element label="Recorded on" mandatory="true" max_length="40" name="recorded_on" type="glide_date_time"/>
-        <element label="Hospital" mandatory="true" max_length="32" name="hospital" reference="x_2223823_apollo_0_hospital" type="reference"/>
+        <element label="Follow-up date" max_length="40" name="follow_up_date" type="glide_date"/>
+        <element label="Appointment" max_length="32" name="appointment" reference="x_2223823_apollo_0_appointment" type="reference"/>
+        <element label="Patient" max_length="32" name="patient" reference="x_2223823_apollo_0_patient" type="reference"/>
         <element label="Author" mandatory="true" max_length="32" name="doctor" reference="x_2223823_apollo_0_doctor" type="reference"/>
+        <element label="Pharmacy request" max_length="32" name="pharmacy_request" reference="sc_req_item" type="reference"/>
         <element label="Diagnosis" max_length="255" name="diagnosis" type="string"/>
         <element choice="1" label="Prescription status" max_length="40" name="prescription_status" type="choice">
             <choice>
-                <element inactive_on_update="false" label="Issued" sequence="1" value="issued"/>
                 <element inactive_on_update="false" label="Sent to pharmacy" sequence="2" value="sent_to_pharmacy"/>
-                <element inactive_on_update="false" label="Partially fulfilled" sequence="3" value="partially_fulfilled"/>
+                <element inactive_on_update="false" label="Issued" sequence="1" value="issued"/>
                 <element inactive_on_update="false" label="Fulfilled" sequence="4" value="fulfilled"/>
+                <element inactive_on_update="false" label="Partially fulfilled" sequence="3" value="partially_fulfilled"/>
             </choice>
         </element>
-        <element label="Admission" max_length="32" name="admission" reference="x_2223823_apollo_0_admission" type="reference"/>
-        <element label="Follow-up date" max_length="40" name="follow_up_date" type="glide_date"/>
-        <element label="Pharmacy request" max_length="32" name="pharmacy_request" reference="sc_req_item" type="reference"/>
         <element choice="1" label="Record type" mandatory="true" max_length="40" name="record_type" type="choice">
             <choice>
-                <element inactive_on_update="false" label="Diagnosis" sequence="1" value="diagnosis"/>
                 <element inactive_on_update="false" label="Prescription" sequence="3" value="prescription"/>
                 <element inactive_on_update="false" label="Clinical note" sequence="2" value="clinical_note"/>
+                <element inactive_on_update="false" label="Diagnosis" sequence="1" value="diagnosis"/>
             </choice>
         </element>
+        <element label="Recorded on" mandatory="true" max_length="40" name="recorded_on" type="glide_date_time"/>
+        <element label="Restricted" max_length="40" name="restricted" type="boolean"/>
         <element label="Medication details" max_length="4000" name="medication_details" type="string"/>
-        <element label="Patient" mandatory="true" max_length="32" name="patient" reference="x_2223823_apollo_0_patient" type="reference"/>
-        <element label="Appointment" max_length="32" name="appointment" reference="x_2223823_apollo_0_appointment" type="reference"/>
+        <element label="Admission" max_length="32" name="admission" reference="x_2223823_apollo_0_admission" type="reference"/>
+        <element label="Notes" max_length="4000" name="notes" type="string"/>
+        <element label="Hospital" mandatory="true" max_length="32" name="hospital" reference="x_2223823_apollo_0_hospital" type="reference"/>
         <index name="index">
             <element name="admission"/>
         </index>
