@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_choice action="INSERT_OR_UPDATE" field="kind" table="x_2223823_apollo_0_payment" version="3">
+        <sys_choice_set action="INSERT_OR_UPDATE">
+            <element>kind</element>
+            <name>x_2223823_apollo_0_payment</name>
+            <sys_class_name>sys_choice_set</sys_class_name>
+            <sys_created_by>ayush.mangal</sys_created_by>
+            <sys_created_on>2026-10-31 19:27:05</sys_created_on>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>kind</sys_name>
+            <sys_package display_value="Apollo-Hospitals" source="x_2223823_apollo_0">87c1422693c89b507b3a7c5efaba1008</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
+            <sys_update_name>sys_choice_x_2223823_apollo_0_payment_kind</sys_update_name>
+            <sys_updated_by>ayush.mangal</sys_updated_by>
+            <sys_updated_on>2026-10-31 19:27:05</sys_updated_on>
+        </sys_choice_set>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>kind</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Payment</label>
+            <language>en</language>
+            <name>x_2223823_apollo_0_payment</name>
+            <sequence>1</sequence>
+            <synonyms/>
+            <sys_created_by>ayush.mangal</sys_created_by>
+            <sys_created_on>2026-10-31 19:27:05</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>ayush.mangal</sys_updated_by>
+            <sys_updated_on>2026-10-31 19:27:05</sys_updated_on>
+            <value>payment</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>kind</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Advance</label>
+            <language>en</language>
+            <name>x_2223823_apollo_0_payment</name>
+            <sequence>2</sequence>
+            <synonyms/>
+            <sys_created_by>ayush.mangal</sys_created_by>
+            <sys_created_on>2026-10-31 19:27:07</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>ayush.mangal</sys_updated_by>
+            <sys_updated_on>2026-10-31 19:27:07</sys_updated_on>
+            <value>advance</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>kind</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Refund</label>
+            <language>en</language>
+            <name>x_2223823_apollo_0_payment</name>
+            <sequence>3</sequence>
+            <synonyms/>
+            <sys_created_by>ayush.mangal</sys_created_by>
+            <sys_created_on>2026-10-31 19:27:10</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>ayush.mangal</sys_updated_by>
+            <sys_updated_on>2026-10-31 19:27:10</sys_updated_on>
+            <value>refund</value>
+        </sys_choice>
+    </sys_choice>
+</record_update>
