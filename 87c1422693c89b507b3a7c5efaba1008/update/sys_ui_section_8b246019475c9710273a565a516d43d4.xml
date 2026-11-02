@@ -182,6 +182,20 @@
             <sys_user/>
             <type/>
         </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>invoice</element>
+            <position>13</position>
+            <sys_created_by>ayush.mangal</sys_created_by>
+            <sys_created_on>2026-11-02 08:29:11</sys_created_on>
+            <sys_id>6830a43547941310273a565a516d43a4</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_2223823_apollo_0_payment" sys_domain="global" view="Default view">8b246019475c9710273a565a516d43d4</sys_ui_section>
+            <sys_updated_by>ayush.mangal</sys_updated_by>
+            <sys_updated_on>2026-11-02 08:29:11</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
         <sys_ui_section action="INSERT_OR_UPDATE">
             <caption/>
             <header>false</header>
