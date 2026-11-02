@@ -27,3 +27,4 @@ If you find yourself unable to import your repository due to the presence of fil
    * System (apps/system_user)
    * Customer Service Base Entities
    * Task table schema
+   * Configuration Management (CMDB)
