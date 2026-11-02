@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_ui_section caption="" section_id="e21dbb2547501310273a565a516d434b" sys_domain="global" table="x_2223823_apollo_0_revenue_ledger" version="3" view="">
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.begin_split</element>
+            <position>0</position>
+            <sys_created_by>ayush.mangal</sys_created_by>
+            <sys_created_on>2026-11-02 05:55:51</sys_created_on>
+            <sys_id>721dfb2547501310273a565a516d434f</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_2223823_apollo_0_revenue_ledger" sys_domain="global" view="Default view">e21dbb2547501310273a565a516d434b</sys_ui_section>
+            <sys_updated_by>ayush.mangal</sys_updated_by>
+            <sys_updated_on>2026-11-02 05:55:51</sys_updated_on>
+            <sys_user/>
+            <type>.begin_split</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>hospital</element>
+            <position>1</position>
+            <sys_created_by>ayush.mangal</sys_created_by>
+            <sys_created_on>2026-11-02 05:55:52</sys_created_on>
+            <sys_id>b21dfb2547501310273a565a516d4351</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_2223823_apollo_0_revenue_ledger" sys_domain="global" view="Default view">e21dbb2547501310273a565a516d434b</sys_ui_section>
+            <sys_updated_by>ayush.mangal</sys_updated_by>
+            <sys_updated_on>2026-11-02 05:55:52</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>revenue_type</element>
+            <position>2</position>
+            <sys_created_by>ayush.mangal</sys_created_by>
+            <sys_created_on>2026-11-02 05:55:52</sys_created_on>
+            <sys_id>7e1dfb2547501310273a565a516d4351</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_2223823_apollo_0_revenue_ledger" sys_domain="global" view="Default view">e21dbb2547501310273a565a516d434b</sys_ui_section>
+            <sys_updated_by>ayush.mangal</sys_updated_by>
+            <sys_updated_on>2026-11-02 05:55:52</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>amount</element>
+            <position>3</position>
+            <sys_created_by>ayush.mangal</sys_created_by>
+            <sys_created_on>2026-11-02 05:55:52</sys_created_on>
+            <sys_id>3a1dfb2547501310273a565a516d4352</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_2223823_apollo_0_revenue_ledger" sys_domain="global" view="Default view">e21dbb2547501310273a565a516d434b</sys_ui_section>
+            <sys_updated_by>ayush.mangal</sys_updated_by>
+            <sys_updated_on>2026-11-02 05:55:52</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.split</element>
+            <position>4</position>
+            <sys_created_by>ayush.mangal</sys_created_by>
+            <sys_created_on>2026-11-02 05:55:52</sys_created_on>
+            <sys_id>f21dfb2547501310273a565a516d4353</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_2223823_apollo_0_revenue_ledger" sys_domain="global" view="Default view">e21dbb2547501310273a565a516d434b</sys_ui_section>
+            <sys_updated_by>ayush.mangal</sys_updated_by>
+            <sys_updated_on>2026-11-02 05:55:52</sys_updated_on>
+            <sys_user/>
+            <type>.split</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>posting_date</element>
+            <position>5</position>
+            <sys_created_by>ayush.mangal</sys_created_by>
+            <sys_created_on>2026-11-02 05:55:52</sys_created_on>
+            <sys_id>be1dfb2547501310273a565a516d4353</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_2223823_apollo_0_revenue_ledger" sys_domain="global" view="Default view">e21dbb2547501310273a565a516d434b</sys_ui_section>
+            <sys_updated_by>ayush.mangal</sys_updated_by>
+            <sys_updated_on>2026-11-02 05:55:52</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>payment</element>
+            <position>6</position>
+            <sys_created_by>ayush.mangal</sys_created_by>
+            <sys_created_on>2026-11-02 05:55:52</sys_created_on>
+            <sys_id>7a1dfb2547501310273a565a516d4354</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_2223823_apollo_0_revenue_ledger" sys_domain="global" view="Default view">e21dbb2547501310273a565a516d434b</sys_ui_section>
+            <sys_updated_by>ayush.mangal</sys_updated_by>
+            <sys_updated_on>2026-11-02 05:55:52</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.end_split</element>
+            <position>7</position>
+            <sys_created_by>ayush.mangal</sys_created_by>
+            <sys_created_on>2026-11-02 05:55:52</sys_created_on>
+            <sys_id>361dfb2547501310273a565a516d4355</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_2223823_apollo_0_revenue_ledger" sys_domain="global" view="Default view">e21dbb2547501310273a565a516d434b</sys_ui_section>
+            <sys_updated_by>ayush.mangal</sys_updated_by>
+            <sys_updated_on>2026-11-02 05:55:52</sys_updated_on>
+            <sys_user/>
+            <type>.end_split</type>
+        </sys_ui_element>
+        <sys_ui_section action="INSERT_OR_UPDATE">
+            <caption/>
+            <header>false</header>
+            <name>x_2223823_apollo_0_revenue_ledger</name>
+            <roles/>
+            <sys_class_name>sys_ui_section</sys_class_name>
+            <sys_created_by>ayush.mangal</sys_created_by>
+            <sys_created_on>2026-11-02 05:55:51</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>e21dbb2547501310273a565a516d434b</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>x_2223823_apollo_0_revenue_ledger</sys_name>
+            <sys_overrides/>
+            <sys_package display_value="Apollo-Hospitals" source="x_2223823_apollo_0">87c1422693c89b507b3a7c5efaba1008</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
+            <sys_update_name>sys_ui_section_e21dbb2547501310273a565a516d434b</sys_update_name>
+            <sys_updated_by>ayush.mangal</sys_updated_by>
+            <sys_updated_on>2026-11-02 05:55:51</sys_updated_on>
+            <sys_user/>
+            <title>true</title>
+            <view display_value="Default view" name="NULL">Default view</view>
+            <view_name/>
+        </sys_ui_section>
+    </sys_ui_section>
+</record_update>
