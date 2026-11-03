@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_user_role">
+    <sys_user_role action="DELETE">
+        <assignable_by/>
+        <can_delegate>true</can_delegate>
+        <description>Apollo Hospital Head Nurse Role</description>
+        <elevated_privilege>false</elevated_privilege>
+        <encryption_context/>
+        <federated_id/>
+        <grantable>true</grantable>
+        <includes_roles/>
+        <name>x_2223823_apollo_0.head_nurse</name>
+        <scoped_admin>false</scoped_admin>
+        <suffix>head_nurse</suffix>
+        <sys_class_name>sys_user_role</sys_class_name>
+        <sys_created_by>ayush.mangal</sys_created_by>
+        <sys_created_on>2026-11-03 08:31:22</sys_created_on>
+        <sys_id>e24a658e4750d310273a565a516d43d0</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_2223823_apollo_0.head_nurse</sys_name>
+        <sys_package display_value="Apollo-Hospitals" source="x_2223823_apollo_0">87c1422693c89b507b3a7c5efaba1008</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
+        <sys_update_name>sys_user_role_e24a658e4750d310273a565a516d43d0</sys_update_name>
+        <sys_updated_by>ayush.mangal</sys_updated_by>
+        <sys_updated_on>2026-11-03 08:31:22</sys_updated_on>
+    </sys_user_role>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</application>
+        <file_path/>
+        <instance_id>5ada7edb93d06e50d9f6ddd548373c9d</instance_id>
+        <instance_name>dev304851</instance_name>
+        <name>sys_user_role_e24a658e4750d310273a565a516d43d0</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_user_role"><sys_user_role action="INSERT_OR_UPDATE"><assignable_by/><can_delegate>true</can_delegate><description>Apollo Hospital Head Nurse Role</description><elevated_privilege>false</elevated_privilege><encryption_context/><federated_id/><grantable>true</grantable><includes_roles/><name>x_2223823_apollo_0.head_nurse</name><scoped_admin>false</scoped_admin><suffix>head_nurse</suffix><sys_class_name>sys_user_role</sys_class_name><sys_created_by>ayush.mangal</sys_created_by><sys_created_on>2026-11-03 08:31:22</sys_created_on><sys_id>e24a658e4750d310273a565a516d43d0</sys_id><sys_mod_count>0</sys_mod_count><sys_name>x_2223823_apollo_0.head_nurse</sys_name><sys_package display_value="Apollo-Hospitals" source="x_2223823_apollo_0">87c1422693c89b507b3a7c5efaba1008</sys_package><sys_policy/><sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope><sys_update_name>sys_user_role_e24a658e4750d310273a565a516d43d0</sys_update_name><sys_updated_by>ayush.mangal</sys_updated_by><sys_updated_on>2026-11-03 08:31:22</sys_updated_on></sys_user_role></record_update>]]></payload>
+        <payload_hash>552888492</payload_hash>
+        <record_name>x_2223823_apollo_0.head_nurse</record_name>
+        <reverted_from/>
+        <source>b0855d3447d0d310273a565a516d4318</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>ayush.mangal</sys_created_by>
+        <sys_created_on>2026-11-03 08:31:22</sys_created_on>
+        <sys_id>e24a658e4750d310273a565a516d43d9</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1a1a088cd210000001</sys_recorded_at>
+        <sys_updated_by>ayush.mangal</sys_updated_by>
+        <sys_updated_on>2026-11-03 08:31:22</sys_updated_on>
+        <type>Role</type>
+        <update_guid>a24a658e1150d310f84936b5a5ac06d8</update_guid>
+        <update_guid_history>a24a658e1150d310f84936b5a5ac06d8:552888492</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="x_2223823_apollo_0.head_nurse">7f00fdca4790d310273a565a516d43e9</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>ayush.mangal</sys_created_by>
+        <sys_created_on>2026-11-03 08:56:35</sys_created_on>
+        <sys_db_object display_value="" name="sys_user_role">sys_user_role</sys_db_object>
+        <sys_id>07ddac7cecda496680786f4bbf444629</sys_id>
+        <sys_metadata>e24a658e4750d310273a565a516d43d0</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_2223823_apollo_0.head_nurse</sys_name>
+        <sys_package display_value="Apollo-Hospitals" source="x_2223823_apollo_0">87c1422693c89b507b3a7c5efaba1008</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
+        <sys_scope_delete display_value="">1a2f7aa8dfc34e3a86d3f0bede3c2784</sys_scope_delete>
+        <sys_update_name>sys_user_role_e24a658e4750d310273a565a516d43d0</sys_update_name>
+        <sys_update_version display_value="sys_user_role_e24a658e4750d310273a565a516d43d0">e24a658e4750d310273a565a516d43d9</sys_update_version>
+        <sys_updated_by>ayush.mangal</sys_updated_by>
+        <sys_updated_on>2026-11-03 08:56:35</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

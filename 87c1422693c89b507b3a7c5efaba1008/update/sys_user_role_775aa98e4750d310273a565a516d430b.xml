@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_user_role">
+    <sys_user_role action="INSERT_OR_UPDATE">
+        <assignable_by/>
+        <can_delegate>true</can_delegate>
+        <description>Apollo Hospital Medical Director Role</description>
+        <elevated_privilege>false</elevated_privilege>
+        <encryption_context/>
+        <federated_id>6WpBpZhJznRsMS3Wwq4J3Bs5EVG4q0d4JoaotwTtsEk=</federated_id>
+        <grantable>true</grantable>
+        <includes_roles/>
+        <name>x_2223823_apollo_0.medical_director</name>
+        <scoped_admin>false</scoped_admin>
+        <suffix>medical_director</suffix>
+        <sys_class_name>sys_user_role</sys_class_name>
+        <sys_created_by>ayush.mangal</sys_created_by>
+        <sys_created_on>2026-11-03 08:31:44</sys_created_on>
+        <sys_id>775aa98e4750d310273a565a516d430b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_2223823_apollo_0.medical_director</sys_name>
+        <sys_package display_value="Apollo-Hospitals" source="x_2223823_apollo_0">87c1422693c89b507b3a7c5efaba1008</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
+        <sys_update_name>sys_user_role_775aa98e4750d310273a565a516d430b</sys_update_name>
+        <sys_updated_by>ayush.mangal</sys_updated_by>
+        <sys_updated_on>2026-11-03 08:31:44</sys_updated_on>
+    </sys_user_role>
+</record_update>
