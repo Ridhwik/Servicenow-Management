@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_ui_policy">
+    <sys_ui_policy action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <conditions table="x_2223823_apollo_0_bed_status_log">to_status=6^ORto_status=5^ORto_status=7<item display_value="Blocked" endquery="false" field="to_status" goto="false" newquery="false" operator="=" or="false" value="6"/>
+            <item display_value="Under Maintenance" endquery="false" field="to_status" goto="false" newquery="false" operator="=" or="true" value="5"/>
+            <item display_value="Out of Service" endquery="false" field="to_status" goto="false" newquery="false" operator="=" or="true" value="7"/>
+        </conditions>
+        <description/>
+        <global>true</global>
+        <inherit>false</inherit>
+        <isolate_script>true</isolate_script>
+        <model_id/>
+        <model_table/>
+        <on_load>true</on_load>
+        <order>100</order>
+        <reverse_if_false>true</reverse_if_false>
+        <run_scripts>false</run_scripts>
+        <script_false><![CDATA[function onCondition() {}]]></script_false>
+        <script_true><![CDATA[function onCondition() {}]]></script_true>
+        <set_values/>
+        <short_description>Reason Mandatory for Blocked, Under Maintenance, Out of Service</short_description>
+        <sys_class_name>sys_ui_policy</sys_class_name>
+        <sys_created_by>ridhwik.jangid</sys_created_by>
+        <sys_created_on>2026-11-02 08:57:07</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>c69660f147d41310273a565a516d4360</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Reason Mandatory for Blocked, Under Maintenance, Out of Service</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Apollo-Hospitals" source="x_2223823_apollo_0">87c1422693c89b507b3a7c5efaba1008</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
+        <sys_update_name>sys_ui_policy_c69660f147d41310273a565a516d4360</sys_update_name>
+        <sys_updated_by>ridhwik.jangid</sys_updated_by>
+        <sys_updated_on>2026-11-02 08:57:07</sys_updated_on>
+        <table>x_2223823_apollo_0_bed_status_log</table>
+        <ui_type>0</ui_type>
+        <view/>
+    </sys_ui_policy>
+</record_update>
