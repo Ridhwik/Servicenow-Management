@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="af6de389f0b3031001ffe61a9d6c48b2" defaultsort="-1" dynamic_creation_script="// default on the table level is to create a server&#13;&#10;&#13;&#10;var gr = new GlideRecord(&quot;cmdb_ci_server&quot;);&#13;&#10;gr.initialize();&#13;&#10;gr.name=value;&#13;&#10;gr.insert();" extends="cmdb" label="Configuration Item" max_length="40" name="cmdb_ci" type="collection">
+        <element label="Hospital" mandatory="true" max_length="32" name="x_2223823_apollo_0_hospital" reference="x_2223823_apollo_0_hospital" type="reference"/>
+        <element label="Scheduled For Lab" max_length="255" name="x_2223823_apollo_0_scheduled_for_lab" type="boolean"/>
+        <index name="index">
+            <element name="x_2223823_apollo_0_hospital"/>
+        </index>
+    </element>
+</database>

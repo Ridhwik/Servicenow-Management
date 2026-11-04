@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_properties">
+    <sys_properties action="INSERT_OR_UPDATE">
+        <choices/>
+        <description>Medical Equipments activity formatter fields</description>
+        <ignore_cache>false</ignore_cache>
+        <is_private>false</is_private>
+        <name>glide.ui.x_2223823_apollo_0_cmdb_ci_medical_equipments_activity.fields</name>
+        <read_roles/>
+        <suffix/>
+        <sys_class_name>sys_properties</sys_class_name>
+        <sys_created_by>harshvardhan.chhapola</sys_created_by>
+        <sys_created_on>2026-11-02 12:25:14</sys_created_on>
+        <sys_id>2e361175479c1310273a565a516d4326</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>glide.ui.x_2223823_apollo_0_cmdb_ci_medical_equipments_activity.fields</sys_name>
+        <sys_package display_value="Apollo-Hospitals" source="x_2223823_apollo_0">87c1422693c89b507b3a7c5efaba1008</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
+        <sys_update_name>sys_properties_2e361175479c1310273a565a516d4326</sys_update_name>
+        <sys_updated_by>harshvardhan.chhapola</sys_updated_by>
+        <sys_updated_on>2026-11-02 12:25:14</sys_updated_on>
+        <type>string</type>
+        <value>attested_date,u_equipment_type,skip_sync,operational_status,product_instance_id,most_frequent_user,sys_updated_on,attestation_score,first_discovered,sys_updated_by,discovery_source,due_in,sys_created_on,sys_domain,install_date,invoice_number,gl_account,sys_created_by,warranty_expiration,asset_tag,hardware_substatus,fqdn,change_control,owned_by,internet_facing,checked_out,sys_domain_path,business_unit,delivery_date,maintenance_schedule,hardware_status,install_status,cost_center,attested_by,supported_by,name,dns_domain,assigned,subcategory,purchase_date,life_cycle_stage,short_description,default_gateway,assignment_group,managed_by,managed_by_group,last_discovered,can_print,sys_class_name,manufacturer,sys_id,po_number,sys_class_path,checked_in,vendor,life_cycle_stage_status,mac_address,company,model_number,justification,department,assigned_to,start_date,cost,comments,attestation_status,sys_mod_count,serial_number,monitor,model_id,ip_address,duplicate_of,cost_cc,support_group,order_date,schedule,environment,due,attested,unverified,correlation_id,location,attributes,asset,category,fault_count,lease_id</value>
+        <write_roles/>
+    </sys_properties>
+    <sys_translated_text action="delete_multiple" query="documentkey=2e361175479c1310273a565a516d4326"/>
+</record_update>
