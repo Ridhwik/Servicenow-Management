@@ -34,7 +34,7 @@
         <sys_updated_by>vikas.singh</sys_updated_by>
         <sys_updated_on>2026-10-29 06:46:46</sys_updated_on>
         <update_access>false</update_access>
-        <user_role display_value="x_2223823_apollo_0.appointment_user" name="x_2223823_apollo_0.appointment_user">0019b8e7934053107b3a7c5efaba102c</user_role>
+        <user_role/>
         <ws_access>false</ws_access>
     </sys_db_object>
 </record_update>

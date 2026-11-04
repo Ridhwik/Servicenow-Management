@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
     <element attributes="enforce_dot_walk_cross_scope_access=true" db_object_id="0c8cf3e147501310273a565a516d4326" label="Revenue Ledger" max_length="40" name="x_2223823_apollo_0_revenue_ledger" type="collection">
-        <element label="Invoice" max_length="32" name="invoice" reference="x_2223823_apollo_0_invoice" type="reference"/>
+        <element attributes="edge_encryption_enabled=true,encode_utf8=false" label="Invoice" max_length="32" name="invoice" reference="x_2223823_apollo_0_invoice" type="reference"/>
         <element label="Posting date" mandatory="true" max_length="40" name="posting_date" type="glide_date"/>
-        <element choice="1" label="Revenue type" mandatory="true" max_length="40" name="revenue_type" type="choice">
+        <element attributes="edge_encryption_enabled=true" choice="1" label="Revenue type" mandatory="true" max_length="40" name="revenue_type" type="choice">
             <choice>
+                <element inactive_on_update="false" label="Lab" sequence="2" value="lab"/>
                 <element inactive_on_update="false" label="Surgery" sequence="4" value="surgery"/>
                 <element inactive_on_update="false" label="Consultation" sequence="1" value="consultation"/>
                 <element inactive_on_update="false" label="Bed or room" sequence="3" value="bed_or_room"/>
-                <element inactive_on_update="false" label="Lab" sequence="2" value="lab"/>
             </choice>
         </element>
-        <element label="Payment" max_length="32" name="payment" reference="x_2223823_apollo_0_payment" type="reference"/>
-        <element label="Hospital" mandatory="true" max_length="32" name="hospital" reference="x_2223823_apollo_0_hospital" type="reference"/>
-        <element label="Charge Line" max_length="32" name="charge_line" reference="x_2223823_apollo_0_charge_line" type="reference"/>
-        <element label="Amount" mandatory="true" max_length="20" name="amount" type="currency"/>
+        <element attributes="edge_encryption_enabled=true,encode_utf8=false" label="Payment" max_length="32" name="payment" reference="x_2223823_apollo_0_payment" type="reference"/>
+        <element attributes="edge_encryption_enabled=true,encode_utf8=false" label="Hospital" mandatory="true" max_length="32" name="hospital" reference="x_2223823_apollo_0_hospital" reference_qual="javascript:new x_2223823_apollo_0.HospitalRefQual().getQuery(current)" type="reference" use_reference_qualifier="advanced"/>
+        <element attributes="edge_encryption_enabled=true,encode_utf8=false" label="Charge Line" max_length="32" name="charge_line" reference="x_2223823_apollo_0_charge_line" type="reference"/>
+        <element attributes="edge_encryption_enabled=true,omit_sys_original=true" label="Amount" mandatory="true" max_length="20" name="amount" type="currency"/>
         <index name="index">
             <element name="charge_line"/>
         </index>

@@ -2,10 +2,10 @@
     <sys_dictionary action="INSERT_OR_UPDATE" element="enabled" table="x_2223823_apollo_0_hospital_service">
         <active>true</active>
         <array>false</array>
-        <attributes/>
+        <attributes>edge_encryption_enabled=true</attributes>
         <audit>false</audit>
         <calculation/>
-        <choice>0</choice>
+        <choice/>
         <choice_field/>
         <choice_table/>
         <column_label>Enabled</column_label>

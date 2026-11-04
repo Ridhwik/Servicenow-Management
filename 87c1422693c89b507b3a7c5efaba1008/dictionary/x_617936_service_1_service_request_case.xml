@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element attributes="enforce_dot_walk_cross_scope_access=true" audit="true" db_object_id="b19dd97d47dc1310273a565a516d43d6" extends="sn_customerservice_case" label="Service Request Case" max_length="40" name="x_617936_service_1_service_request_case" type="collection">
+        <element label="Medication details" max_length="1000" name="x_2223823_apollo_0_medication_details" type="string"/>
+        <element label="Destination" max_length="200" name="x_2223823_apollo_0_destination" type="string"/>
+        <element label="Service" max_length="32" name="x_2223823_apollo_0_service" reference="sc_cat_item" type="reference"/>
+        <element label="Needed at" max_length="40" name="x_2223823_apollo_0_needed_at" type="glide_date_time"/>
+        <element label="Pickup location" max_length="200" name="x_2223823_apollo_0_pickup_location" type="string"/>
+    </element>
+</database>

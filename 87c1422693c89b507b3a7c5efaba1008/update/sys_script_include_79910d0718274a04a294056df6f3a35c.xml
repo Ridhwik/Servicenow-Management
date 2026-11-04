@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>x_2223823_apollo_0.HospitalRefQual</api_name>
+        <caller_access/>
+        <client_callable>false</client_callable>
+        <description>Reference qualifier helper for hospital fields. Limits the picker to active hospitals, and for every role except Corporate Executive restricts to the user's own hospital(s) (myHospitals()).</description>
+        <mobile_callable>false</mobile_callable>
+        <name>HospitalRefQual</name>
+        <sandbox_callable>true</sandbox_callable>
+        <script><![CDATA[var HospitalRefQual = Class.create();
+HospitalRefQual.prototype = {
+    initialize: function () {},
+
+    // Full name of the role that is allowed to see every hospital.
+    CORPORATE_EXECUTIVE_ROLE: 'x_2223823_apollo_0.corporate_executive',
+
+    /**
+     * Reference qualifier for the "hospital" reference field.
+     *
+     * - Always limits the list to active hospitals (active=true).
+     * - Corporate Executives (and admins) may choose any active hospital.
+     * - Every other user is limited to the hospital(s) they belong to,
+     *   derived from their active staff record(s) (see myHospitals()).
+     *
+     * @param {GlideRecord} current - the record whose field is being filtered
+     * @returns {string} an encoded query
+     */
+    getQuery: function (current) {
+        var qualifier = 'active=true';
+
+        // Corporate Executives (and platform admins) are not restricted to
+        // their own hospital.
+        if (gs.hasRole(this.CORPORATE_EXECUTIVE_ROLE) || gs.hasRole('admin')) {
+            return qualifier;
+        }
+
+        var hospitals = this.myHospitals();
+        // Restrict to the user's own hospital(s). When the user has no hospital
+        // assignment, "sys_idIN" (empty) resolves to no records, which is the
+        // intended restriction.
+        return qualifier + '^sys_idIN' + hospitals.join(',');
+    },
+
+    /**
+     * Returns the sys_ids of the hospital(s) the current user belongs to,
+     * based on their active staff record(s).
+     *
+     * @returns {string[]} list of hospital sys_ids (may be empty)
+     */
+    myHospitals: function () {
+        var ids = [];
+        var staff = new GlideRecord('x_2223823_apollo_0_staff');
+        staff.addQuery('user', gs.getUserID());
+        staff.addQuery('active', true);
+        staff.addNotNullQuery('hospital');
+        staff.query();
+        while (staff.next()) {
+            var hospitalId = staff.getValue('hospital');
+            if (ids.indexOf(hospitalId) === -1) {
+                ids.push(hospitalId);
+            }
+        }
+        return ids;
+    },
+
+    type: 'HospitalRefQual',
+};
+]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>harshvardhan.chhapola</sys_created_by>
+        <sys_created_on>2026-11-04 06:25:19</sys_created_on>
+        <sys_id>79910d0718274a04a294056df6f3a35c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>HospitalRefQual</sys_name>
+        <sys_package display_value="Apollo-Hospitals" source="x_2223823_apollo_0">87c1422693c89b507b3a7c5efaba1008</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
+        <sys_update_name>sys_script_include_79910d0718274a04a294056df6f3a35c</sys_update_name>
+        <sys_updated_by>harshvardhan.chhapola</sys_updated_by>
+        <sys_updated_on>2026-11-04 06:25:19</sys_updated_on>
+    </sys_script_include>
+</record_update>

@@ -5,24 +5,24 @@
         <element label="Current admission" max_length="32" name="current_admission" read_only="true" read_only_option="instance_configured" reference="x_2223823_apollo_0_admission" type="reference"/>
         <element label="Gender" max_length="40" name="gender" type="choice">
             <choice>
+                <element inactive_on_update="false" label="Any" value="3"/>
                 <element inactive_on_update="false" label="Female" value="2"/>
                 <element inactive_on_update="false" label="Male" value="1"/>
-                <element inactive_on_update="false" label="Any" value="3"/>
             </choice>
         </element>
         <element label="Blocked reason" max_length="255" name="blocked_reason" type="string"/>
-        <element label="Hospital" mandatory="true" max_length="32" name="hospital" reference="x_2223823_apollo_0_hospital" type="reference"/>
+        <element attributes="edge_encryption_enabled=true,encode_utf8=false" label="Hospital" mandatory="true" max_length="32" name="hospital" reference="x_2223823_apollo_0_hospital" reference_qual="javascript:new x_2223823_apollo_0.HospitalRefQual().getQuery(current)" type="reference" use_reference_qualifier="advanced"/>
         <element default="true" label="Active" max_length="40" name="active" type="boolean"/>
         <element label="Bed number" mandatory="true" max_length="20" name="bed_number" type="string"/>
         <element default="1" label="Status" mandatory="true" max_length="40" name="status" type="choice">
             <choice>
-                <element inactive_on_update="false" label="Under Cleaning" value="4"/>
-                <element inactive_on_update="false" label="Out of Service" value="7"/>
                 <element inactive_on_update="false" label="Occupied" value="3"/>
-                <element inactive_on_update="false" label="Blocked" value="6"/>
                 <element inactive_on_update="false" label="Reserved" value="2"/>
+                <element inactive_on_update="false" label="Blocked" value="6"/>
                 <element inactive_on_update="false" label="Under Maintenance" value="5"/>
                 <element inactive_on_update="false" label="Available" value="1"/>
+                <element inactive_on_update="false" label="Out of Service" value="7"/>
+                <element inactive_on_update="false" label="Under Cleaning" value="4"/>
             </choice>
         </element>
         <element label="Counts toward capacity" max_length="40" name="counts_in_capacity" type="boolean"/>
@@ -34,6 +34,9 @@
         </index>
         <index name="index3">
             <element name="room"/>
+        </index>
+        <index name="index4">
+            <element name="status"/>
         </index>
     </element>
 </database>

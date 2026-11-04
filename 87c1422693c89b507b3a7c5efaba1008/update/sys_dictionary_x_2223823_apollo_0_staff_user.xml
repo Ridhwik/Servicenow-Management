@@ -2,10 +2,10 @@
     <sys_dictionary action="INSERT_OR_UPDATE" element="user" table="x_2223823_apollo_0_staff">
         <active>true</active>
         <array>false</array>
-        <attributes/>
+        <attributes>edge_encryption_enabled=true,encode_utf8=false</attributes>
         <audit>false</audit>
         <calculation/>
-        <choice>0</choice>
+        <choice/>
         <choice_field/>
         <choice_table/>
         <column_label>User</column_label>

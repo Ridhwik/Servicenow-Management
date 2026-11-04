@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update>
-    <sys_documentation element="reserved_at" label="Reserved at " language="en" table="x_2223823_apollo_0_bed_reservations">
+    <sys_documentation element="reserved_at" label="Reserved at" language="en" table="x_2223823_apollo_0_bed_reservations">
         <sys_documentation action="INSERT_OR_UPDATE">
             <element>reserved_at</element>
             <help/>
             <hint/>
-            <label>Reserved at </label>
+            <label>Reserved at</label>
             <language>en</language>
             <name>x_2223823_apollo_0_bed_reservations</name>
             <plural/>
