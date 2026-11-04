@@ -1,3 +1,52 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
-    <element attributes="enforce_dot_walk_cross_scope_access=true" db_object_id="90bede9247d85710273a565a516d431f" label="Lab Test Result" max_length="40" name="x_2223823_apollo_0_lab_test_result" type="collection"/>
+    <element attributes="enforce_dot_walk_cross_scope_access=true" db_object_id="90bede9247d85710273a565a516d431f" label="Lab Test Result" max_length="40" name="x_2223823_apollo_0_lab_test_result" type="collection">
+        <element label="Patient" mandatory="true" max_length="32" name="patient" reference="x_2223823_apollo_0_patient" type="reference"/>
+        <element label="Equipment" max_length="32" name="equipment" reference="alm_asset" type="reference"/>
+        <element label="Verifier" max_length="32" name="verifier" reference="x_2223823_apollo_0_staff" reference_qual="javascript:current.hospital ? 'hospital=' + current.hospital + '^active=true^staff_role=lab_technician' + (current.technician ? '^sys_id!=' + current.technician : '') : 'sys_id=-1'" type="reference" use_reference_qualifier="advanced"/>
+        <element label="Report number" max_length="40" name="report_number" type="string"/>
+        <element label="Technician" max_length="32" name="technician" reference="x_2223823_apollo_0_staff" reference_qual="javascript:current.hospital ? 'hospital=' + current.hospital + '^active=true^staff_role=lab_technician' : 'sys_id=-1'" type="reference" use_reference_qualifier="advanced"/>
+        <element label="Hospital" mandatory="true" max_length="32" name="hospital" reference="x_2223823_apollo_0_hospital" type="reference"/>
+        <element label="Locked" max_length="40" name="locked" type="boolean"/>
+        <element label="Sample collected at" max_length="40" name="sample_collected_at" type="glide_date_time"/>
+        <element label="Lab Test" mandatory="true" max_length="32" name="lab_test" reference="x_2223823_apollo_0_lab_test" type="reference"/>
+        <element label="Result values" max_length="40" name="result_values" type="string_full_utf8"/>
+        <element label="Urgent" max_length="40" name="urgent" type="boolean"/>
+        <element choice="1" label="Status" mandatory="true" max_length="40" name="status" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Testing In Progress" sequence="4" value="5"/>
+                <element inactive_on_update="false" label="Sample Collection" sequence="2" value="3"/>
+                <element inactive_on_update="false" label="Patient Notified" sequence="8" value="9"/>
+                <element inactive_on_update="false" label="Result Verified" sequence="6" value="7"/>
+                <element inactive_on_update="false" label="Requested" sequence="0" value="1"/>
+                <element inactive_on_update="false" label="Report Published" sequence="7" value="8"/>
+                <element inactive_on_update="false" label="Result Entered" sequence="5" value="6"/>
+                <element inactive_on_update="false" label="Sample Received" sequence="3" value="4"/>
+                <element inactive_on_update="false" label="Scheduled" sequence="1" value="2"/>
+            </choice>
+        </element>
+        <element label="Request" mandatory="true" max_length="32" name="request" reference="sc_req_item" type="reference"/>
+        <element label="Published at" max_length="40" name="published_at" type="glide_date_time"/>
+        <element label="Verified at" max_length="40" name="verified_at" type="glide_date_time"/>
+        <index name="index">
+            <element name="equipment"/>
+        </index>
+        <index name="index2">
+            <element name="hospital"/>
+        </index>
+        <index name="index3">
+            <element name="lab_test"/>
+        </index>
+        <index name="index4">
+            <element name="patient"/>
+        </index>
+        <index name="index5">
+            <element name="request"/>
+        </index>
+        <index name="index6">
+            <element name="technician"/>
+        </index>
+        <index name="index7">
+            <element name="verifier"/>
+        </index>
+    </element>
 </database>
