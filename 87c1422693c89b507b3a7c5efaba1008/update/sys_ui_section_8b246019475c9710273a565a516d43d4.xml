@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_ui_section caption="" section_id="8b246019475c9710273a565a516d43d4" sys_domain="global" table="x_2223823_apollo_0_payment" version="3" view="">
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>number</element>
+            <position>0</position>
+            <sys_created_by>ayush.mangal</sys_created_by>
+            <sys_created_on>2026-10-31 19:35:04</sys_created_on>
+            <sys_id>2f65a899475c9710273a565a516d4374</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_2223823_apollo_0_payment" sys_domain="global" view="Default view">8b246019475c9710273a565a516d43d4</sys_ui_section>
+            <sys_updated_by>ayush.mangal</sys_updated_by>
+            <sys_updated_on>2026-10-31 19:35:04</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>patient</element>
+            <position>1</position>
+            <sys_created_by>ayush.mangal</sys_created_by>
+            <sys_created_on>2026-10-31 19:35:05</sys_created_on>
+            <sys_id>e765a899475c9710273a565a516d4375</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_2223823_apollo_0_payment" sys_domain="global" view="Default view">8b246019475c9710273a565a516d43d4</sys_ui_section>
+            <sys_updated_by>ayush.mangal</sys_updated_by>
+            <sys_updated_on>2026-10-31 19:35:05</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>hospital</element>
+            <position>2</position>
+            <sys_created_by>ayush.mangal</sys_created_by>
+            <sys_created_on>2026-10-31 19:35:05</sys_created_on>
+            <sys_id>a365a899475c9710273a565a516d4376</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_2223823_apollo_0_payment" sys_domain="global" view="Default view">8b246019475c9710273a565a516d43d4</sys_ui_section>
+            <sys_updated_by>ayush.mangal</sys_updated_by>
+            <sys_updated_on>2026-10-31 19:35:05</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>patient_type</element>
+            <position>3</position>
+            <sys_created_by>ayush.mangal</sys_created_by>
+            <sys_created_on>2026-10-31 19:35:05</sys_created_on>
+            <sys_id>6f65a899475c9710273a565a516d4376</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_2223823_apollo_0_payment" sys_domain="global" view="Default view">8b246019475c9710273a565a516d43d4</sys_ui_section>
+            <sys_updated_by>ayush.mangal</sys_updated_by>
+            <sys_updated_on>2026-10-31 19:35:05</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>reconciliation_status</element>
+            <position>4</position>
+            <sys_created_by>ayush.mangal</sys_created_by>
+            <sys_created_on>2026-10-31 19:35:05</sys_created_on>
+            <sys_id>2b65a899475c9710273a565a516d4377</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_2223823_apollo_0_payment" sys_domain="global" view="Default view">8b246019475c9710273a565a516d43d4</sys_ui_section>
+            <sys_updated_by>ayush.mangal</sys_updated_by>
+            <sys_updated_on>2026-10-31 19:35:05</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>stripe_reference</element>
+            <position>5</position>
+            <sys_created_by>ayush.mangal</sys_created_by>
+            <sys_created_on>2026-10-31 19:35:05</sys_created_on>
+            <sys_id>e365a899475c9710273a565a516d4378</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_2223823_apollo_0_payment" sys_domain="global" view="Default view">8b246019475c9710273a565a516d43d4</sys_ui_section>
+            <sys_updated_by>ayush.mangal</sys_updated_by>
+            <sys_updated_on>2026-10-31 19:35:05</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.split</element>
+            <position>6</position>
+            <sys_created_by>ayush.mangal</sys_created_by>
+            <sys_created_on>2026-10-31 19:35:05</sys_created_on>
+            <sys_id>af65a899475c9710273a565a516d4378</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_2223823_apollo_0_payment" sys_domain="global" view="Default view">8b246019475c9710273a565a516d43d4</sys_ui_section>
+            <sys_updated_by>ayush.mangal</sys_updated_by>
+            <sys_updated_on>2026-10-31 19:35:05</sys_updated_on>
+            <sys_user/>
+            <type>.split</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>mode</element>
+            <position>7</position>
+            <sys_created_by>ayush.mangal</sys_created_by>
+            <sys_created_on>2026-10-31 19:35:05</sys_created_on>
+            <sys_id>6b65a899475c9710273a565a516d4379</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_2223823_apollo_0_payment" sys_domain="global" view="Default view">8b246019475c9710273a565a516d43d4</sys_ui_section>
+            <sys_updated_by>ayush.mangal</sys_updated_by>
+            <sys_updated_on>2026-10-31 19:35:05</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>amount</element>
+            <position>8</position>
+            <sys_created_by>ayush.mangal</sys_created_by>
+            <sys_created_on>2026-10-31 19:35:05</sys_created_on>
+            <sys_id>2765a899475c9710273a565a516d437a</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_2223823_apollo_0_payment" sys_domain="global" view="Default view">8b246019475c9710273a565a516d43d4</sys_ui_section>
+            <sys_updated_by>ayush.mangal</sys_updated_by>
+            <sys_updated_on>2026-10-31 19:35:05</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>collected_by</element>
+            <position>9</position>
+            <sys_created_by>ayush.mangal</sys_created_by>
+            <sys_created_on>2026-10-31 19:35:05</sys_created_on>
+            <sys_id>ef65a899475c9710273a565a516d437a</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_2223823_apollo_0_payment" sys_domain="global" view="Default view">8b246019475c9710273a565a516d43d4</sys_ui_section>
+            <sys_updated_by>ayush.mangal</sys_updated_by>
+            <sys_updated_on>2026-10-31 19:35:05</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>status</element>
+            <position>10</position>
+            <sys_created_by>ayush.mangal</sys_created_by>
+            <sys_created_on>2026-10-31 19:35:05</sys_created_on>
+            <sys_id>ab65a899475c9710273a565a516d437b</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_2223823_apollo_0_payment" sys_domain="global" view="Default view">8b246019475c9710273a565a516d43d4</sys_ui_section>
+            <sys_updated_by>ayush.mangal</sys_updated_by>
+            <sys_updated_on>2026-10-31 19:35:05</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>kind</element>
+            <position>11</position>
+            <sys_created_by>ayush.mangal</sys_created_by>
+            <sys_created_on>2026-10-31 19:35:05</sys_created_on>
+            <sys_id>6765a899475c9710273a565a516d437c</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_2223823_apollo_0_payment" sys_domain="global" view="Default view">8b246019475c9710273a565a516d43d4</sys_ui_section>
+            <sys_updated_by>ayush.mangal</sys_updated_by>
+            <sys_updated_on>2026-10-31 19:35:05</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>original_payment</element>
+            <position>12</position>
+            <sys_created_by>ayush.mangal</sys_created_by>
+            <sys_created_on>2026-10-31 19:35:05</sys_created_on>
+            <sys_id>2365a899475c9710273a565a516d437d</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_2223823_apollo_0_payment" sys_domain="global" view="Default view">8b246019475c9710273a565a516d43d4</sys_ui_section>
+            <sys_updated_by>ayush.mangal</sys_updated_by>
+            <sys_updated_on>2026-10-31 19:35:05</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>invoice</element>
+            <position>13</position>
+            <sys_created_by>ayush.mangal</sys_created_by>
+            <sys_created_on>2026-11-02 08:29:11</sys_created_on>
+            <sys_id>6830a43547941310273a565a516d43a4</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_2223823_apollo_0_payment" sys_domain="global" view="Default view">8b246019475c9710273a565a516d43d4</sys_ui_section>
+            <sys_updated_by>ayush.mangal</sys_updated_by>
+            <sys_updated_on>2026-11-02 08:29:11</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_section action="INSERT_OR_UPDATE">
+            <caption/>
+            <header>false</header>
+            <name>x_2223823_apollo_0_payment</name>
+            <roles/>
+            <sys_class_name>sys_ui_section</sys_class_name>
+            <sys_created_by>ayush.mangal</sys_created_by>
+            <sys_created_on>2026-10-31 19:29:35</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>8b246019475c9710273a565a516d43d4</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>x_2223823_apollo_0_payment</sys_name>
+            <sys_overrides/>
+            <sys_package display_value="Apollo-Hospitals" source="x_2223823_apollo_0">87c1422693c89b507b3a7c5efaba1008</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
+            <sys_update_name>sys_ui_section_8b246019475c9710273a565a516d43d4</sys_update_name>
+            <sys_updated_by>ayush.mangal</sys_updated_by>
+            <sys_updated_on>2026-10-31 19:29:35</sys_updated_on>
+            <sys_user/>
+            <title>true</title>
+            <view display_value="Default view" name="NULL">Default view</view>
+            <view_name/>
+        </sys_ui_section>
+    </sys_ui_section>
+</record_update>

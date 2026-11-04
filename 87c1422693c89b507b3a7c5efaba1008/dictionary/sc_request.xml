@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element attributes="hasWorkflow=true" audit="true" create_roles="catalog_admin" db_object_id="5efe23c9f077031001ffe61a9d6c4810" extends="task" label="Request" max_length="40" name="sc_request" read_roles="catalog,itil" text_index="true" type="collection">
+        <element label="Estimated Value" max_length="20" name="x_2223823_apollo_0_estimated_value" type="currency"/>
+        <element label="Hospital" max_length="32" name="x_2223823_apollo_0_hospital" reference="x_2223823_apollo_0_hospital" type="reference"/>
+        <element choice="1" label="Request Type" max_length="255" name="x_2223823_apollo_0_request_type" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Medical Equipment" sequence="2" value="2"/>
+                <element inactive_on_update="false" label="Facility/Service" sequence="1" value="3"/>
+                <element inactive_on_update="false" label="Other" sequence="3" value="4"/>
+                <element inactive_on_update="false" label="Asset" sequence="0" value="1"/>
+            </choice>
+        </element>
+    </element>
+</database>

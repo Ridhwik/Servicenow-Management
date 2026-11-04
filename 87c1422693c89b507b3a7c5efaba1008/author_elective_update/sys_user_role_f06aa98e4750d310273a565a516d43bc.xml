@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_user_role">
+    <sys_user_role action="DELETE">
+        <assignable_by/>
+        <can_delegate>true</can_delegate>
+        <description>Apollo Hospital Billing Finance Head Role</description>
+        <elevated_privilege>false</elevated_privilege>
+        <encryption_context/>
+        <federated_id/>
+        <grantable>true</grantable>
+        <includes_roles/>
+        <name>x_2223823_apollo_0.billing_finance_head</name>
+        <scoped_admin>false</scoped_admin>
+        <suffix>billing_finance_head</suffix>
+        <sys_class_name>sys_user_role</sys_class_name>
+        <sys_created_by>ayush.mangal</sys_created_by>
+        <sys_created_on>2026-11-03 08:31:47</sys_created_on>
+        <sys_id>f06aa98e4750d310273a565a516d43bc</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_2223823_apollo_0.billing_finance_head</sys_name>
+        <sys_package display_value="Apollo-Hospitals" source="x_2223823_apollo_0">87c1422693c89b507b3a7c5efaba1008</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
+        <sys_update_name>sys_user_role_f06aa98e4750d310273a565a516d43bc</sys_update_name>
+        <sys_updated_by>ayush.mangal</sys_updated_by>
+        <sys_updated_on>2026-11-03 08:31:47</sys_updated_on>
+    </sys_user_role>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</application>
+        <file_path/>
+        <instance_id>5ada7edb93d06e50d9f6ddd548373c9d</instance_id>
+        <instance_name>dev304851</instance_name>
+        <name>sys_user_role_f06aa98e4750d310273a565a516d43bc</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_user_role"><sys_user_role action="INSERT_OR_UPDATE"><assignable_by/><can_delegate>true</can_delegate><description>Apollo Hospital Billing Finance Head Role</description><elevated_privilege>false</elevated_privilege><encryption_context/><federated_id/><grantable>true</grantable><includes_roles/><name>x_2223823_apollo_0.billing_finance_head</name><scoped_admin>false</scoped_admin><suffix>billing_finance_head</suffix><sys_class_name>sys_user_role</sys_class_name><sys_created_by>ayush.mangal</sys_created_by><sys_created_on>2026-11-03 08:31:47</sys_created_on><sys_id>f06aa98e4750d310273a565a516d43bc</sys_id><sys_mod_count>0</sys_mod_count><sys_name>x_2223823_apollo_0.billing_finance_head</sys_name><sys_package display_value="Apollo-Hospitals" source="x_2223823_apollo_0">87c1422693c89b507b3a7c5efaba1008</sys_package><sys_policy/><sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope><sys_update_name>sys_user_role_f06aa98e4750d310273a565a516d43bc</sys_update_name><sys_updated_by>ayush.mangal</sys_updated_by><sys_updated_on>2026-11-03 08:31:47</sys_updated_on></sys_user_role></record_update>]]></payload>
+        <payload_hash>1473661961</payload_hash>
+        <record_name>x_2223823_apollo_0.billing_finance_head</record_name>
+        <reverted_from/>
+        <source>b0855d3447d0d310273a565a516d4318</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>ayush.mangal</sys_created_by>
+        <sys_created_on>2026-11-03 08:31:48</sys_created_on>
+        <sys_id>706aa98e4750d310273a565a516d43de</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1a1a08931860000001</sys_recorded_at>
+        <sys_updated_by>ayush.mangal</sys_updated_by>
+        <sys_updated_on>2026-11-03 08:31:48</sys_updated_on>
+        <type>Role</type>
+        <update_guid>306aa98e9950d310da27190a6eeba1dd</update_guid>
+        <update_guid_history>306aa98e9950d310da27190a6eeba1dd:1473661961</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="x_2223823_apollo_0.billing_finance_head">d8ff69ca4790d310273a565a516d436c</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>ayush.mangal</sys_created_by>
+        <sys_created_on>2026-11-03 08:56:04</sys_created_on>
+        <sys_db_object display_value="" name="sys_user_role">sys_user_role</sys_db_object>
+        <sys_id>15b5588e4b094b4989d625673a41dc99</sys_id>
+        <sys_metadata>f06aa98e4750d310273a565a516d43bc</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_2223823_apollo_0.billing_finance_head</sys_name>
+        <sys_package display_value="Apollo-Hospitals" source="x_2223823_apollo_0">87c1422693c89b507b3a7c5efaba1008</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
+        <sys_scope_delete display_value="">1a2f7aa8dfc34e3a86d3f0bede3c2784</sys_scope_delete>
+        <sys_update_name>sys_user_role_f06aa98e4750d310273a565a516d43bc</sys_update_name>
+        <sys_update_version display_value="sys_user_role_f06aa98e4750d310273a565a516d43bc">706aa98e4750d310273a565a516d43de</sys_update_version>
+        <sys_updated_by>ayush.mangal</sys_updated_by>
+        <sys_updated_on>2026-11-03 08:56:04</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

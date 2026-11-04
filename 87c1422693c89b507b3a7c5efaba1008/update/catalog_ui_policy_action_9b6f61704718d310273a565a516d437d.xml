@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="catalog_ui_policy_action">
+    <catalog_ui_policy_action action="INSERT_OR_UPDATE">
+        <catalog_item display_value="Wheelchair and assistance">6e08693c4794d310273a565a516d432e</catalog_item>
+        <catalog_variable>IO:f54b657447d4d310273a565a516d437f</catalog_variable>
+        <cleared>false</cleared>
+        <disabled>ignore</disabled>
+        <field/>
+        <field_message/>
+        <field_message_type>none</field_message_type>
+        <mandatory>true</mandatory>
+        <order>100</order>
+        <sys_class_name>catalog_ui_policy_action</sys_class_name>
+        <sys_created_by>nilesh.chaurasia</sys_created_by>
+        <sys_created_on>2026-10-30 11:41:41</sys_created_on>
+        <sys_id>9b6f61704718d310273a565a516d437d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>location_to_detail</sys_name>
+        <sys_package display_value="Apollo-Hospitals" source="x_2223823_apollo_0">87c1422693c89b507b3a7c5efaba1008</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
+        <sys_update_name>catalog_ui_policy_action_9b6f61704718d310273a565a516d437d</sys_update_name>
+        <sys_updated_by>nilesh.chaurasia</sys_updated_by>
+        <sys_updated_on>2026-10-30 11:41:41</sys_updated_on>
+        <table/>
+        <ui_policy display_value=" location_to = Other or Ward or room  - &gt; location_to_detail Mandatory ">16fe6dfc47d4d310273a565a516d43c0</ui_policy>
+        <value/>
+        <value_action>ignore</value_action>
+        <variable>location_to_detail</variable>
+        <variable_set/>
+        <visible>ignore</visible>
+    </catalog_ui_policy_action>
+    <sys_translated_text action="delete_multiple" query="documentkey=9b6f61704718d310273a565a516d437d"/>
+</record_update>

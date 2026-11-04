@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_choice action="INSERT_OR_UPDATE" field="revenue_type" table="x_2223823_apollo_0_revenue_ledger" version="3">
+        <sys_choice_set action="INSERT_OR_UPDATE">
+            <element>revenue_type</element>
+            <name>x_2223823_apollo_0_revenue_ledger</name>
+            <sys_class_name>sys_choice_set</sys_class_name>
+            <sys_created_by>ayush.mangal</sys_created_by>
+            <sys_created_on>2026-11-02 05:53:22</sys_created_on>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>revenue_type</sys_name>
+            <sys_package display_value="Apollo-Hospitals" source="x_2223823_apollo_0">87c1422693c89b507b3a7c5efaba1008</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
+            <sys_update_name>sys_choice_x_2223823_apollo_0_revenue_ledger_revenue_type</sys_update_name>
+            <sys_updated_by>ayush.mangal</sys_updated_by>
+            <sys_updated_on>2026-11-02 05:53:22</sys_updated_on>
+        </sys_choice_set>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>revenue_type</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Consultation</label>
+            <language>en</language>
+            <name>x_2223823_apollo_0_revenue_ledger</name>
+            <sequence>1</sequence>
+            <synonyms/>
+            <sys_created_by>ayush.mangal</sys_created_by>
+            <sys_created_on>2026-11-02 05:53:22</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>ayush.mangal</sys_updated_by>
+            <sys_updated_on>2026-11-02 05:53:22</sys_updated_on>
+            <value>consultation</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>revenue_type</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Lab</label>
+            <language>en</language>
+            <name>x_2223823_apollo_0_revenue_ledger</name>
+            <sequence>2</sequence>
+            <synonyms/>
+            <sys_created_by>ayush.mangal</sys_created_by>
+            <sys_created_on>2026-11-02 05:53:25</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>ayush.mangal</sys_updated_by>
+            <sys_updated_on>2026-11-02 05:53:25</sys_updated_on>
+            <value>lab</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>revenue_type</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Bed or room</label>
+            <language>en</language>
+            <name>x_2223823_apollo_0_revenue_ledger</name>
+            <sequence>3</sequence>
+            <synonyms/>
+            <sys_created_by>ayush.mangal</sys_created_by>
+            <sys_created_on>2026-11-02 05:53:27</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>ayush.mangal</sys_updated_by>
+            <sys_updated_on>2026-11-02 05:53:27</sys_updated_on>
+            <value>bed_or_room</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>revenue_type</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Surgery</label>
+            <language>en</language>
+            <name>x_2223823_apollo_0_revenue_ledger</name>
+            <sequence>4</sequence>
+            <synonyms/>
+            <sys_created_by>ayush.mangal</sys_created_by>
+            <sys_created_on>2026-11-02 05:53:29</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>ayush.mangal</sys_updated_by>
+            <sys_updated_on>2026-11-02 05:53:29</sys_updated_on>
+            <value>surgery</value>
+        </sys_choice>
+    </sys_choice>
+</record_update>

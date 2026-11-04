@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="question_choice">
+    <question_choice action="INSERT_OR_UPDATE">
+        <inactive>false</inactive>
+        <order>100</order>
+        <published_ref/>
+        <question display_value="Type of transfer">9a8899fc47d0d310273a565a516d4315</question>
+        <sys_class_name>question_choice</sys_class_name>
+        <sys_created_by>nilesh.chaurasia</sys_created_by>
+        <sys_created_on>2026-10-30 10:18:20</sys_created_on>
+        <sys_id>985cddb84714d310273a565a516d431f</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>Hospital to another hospital or centre</sys_name>
+        <sys_package display_value="Apollo-Hospitals" source="x_2223823_apollo_0">87c1422693c89b507b3a7c5efaba1008</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
+        <sys_update_name>question_choice_985cddb84714d310273a565a516d431f</sys_update_name>
+        <sys_updated_by>nilesh.chaurasia</sys_updated_by>
+        <sys_updated_on>2026-10-30 10:18:38</sys_updated_on>
+        <text>Hospital to another hospital or centre</text>
+        <value>3</value>
+    </question_choice>
+    <fx_price action="delete_multiple" query="id=985cddb84714d310273a565a516d431f"/>
+</record_update>

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_ui_related sys_domain="global" table="x_2223823_apollo_0_department" version="2" view="">
+        <sys_ui_related_list_entry action="INSERT_OR_UPDATE">
+            <filter/>
+            <group_by_field/>
+            <list_id display_value="Department - Default view" name="x_2223823_apollo_0_department" related_list="NULL" sys_domain="global" view="Default view">0ffa64d1479c9710273a565a516d43db</list_id>
+            <order_by/>
+            <position>0</position>
+            <related_list>x_2223823_apollo_0_doctor.department</related_list>
+            <sys_class_name>sys_ui_related_list_entry</sys_class_name>
+            <sys_created_by>ayush.mangal</sys_created_by>
+            <sys_created_on>2026-10-31 19:59:21</sys_created_on>
+            <sys_id>8ffa64d1479c9710273a565a516d43dc</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>ayush.mangal</sys_updated_by>
+            <sys_updated_on>2026-10-31 19:59:21</sys_updated_on>
+        </sys_ui_related_list_entry>
+        <sys_ui_related_list_entry action="INSERT_OR_UPDATE">
+            <filter/>
+            <group_by_field/>
+            <list_id display_value="Department - Default view" name="x_2223823_apollo_0_department" related_list="NULL" sys_domain="global" view="Default view">0ffa64d1479c9710273a565a516d43db</list_id>
+            <order_by/>
+            <position>1</position>
+            <related_list>x_2223823_apollo_0_staff.department</related_list>
+            <sys_class_name>sys_ui_related_list_entry</sys_class_name>
+            <sys_created_by>ayush.mangal</sys_created_by>
+            <sys_created_on>2026-10-31 19:59:21</sys_created_on>
+            <sys_id>07fa64d1479c9710273a565a516d43dd</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>ayush.mangal</sys_updated_by>
+            <sys_updated_on>2026-10-31 19:59:21</sys_updated_on>
+        </sys_ui_related_list_entry>
+        <sys_ui_related_list_entry action="INSERT_OR_UPDATE">
+            <filter/>
+            <group_by_field/>
+            <list_id display_value="Department - Default view" name="x_2223823_apollo_0_department" related_list="NULL" sys_domain="global" view="Default view">0ffa64d1479c9710273a565a516d43db</list_id>
+            <order_by/>
+            <position>2</position>
+            <related_list>x_2223823_apollo_0_wards.department</related_list>
+            <sys_class_name>sys_ui_related_list_entry</sys_class_name>
+            <sys_created_by>ayush.mangal</sys_created_by>
+            <sys_created_on>2026-10-31 19:59:21</sys_created_on>
+            <sys_id>8bfa64d1479c9710273a565a516d43dd</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>ayush.mangal</sys_updated_by>
+            <sys_updated_on>2026-10-31 19:59:21</sys_updated_on>
+        </sys_ui_related_list_entry>
+        <sys_ui_related_list action="INSERT_OR_UPDATE">
+            <calculated_name>Department - Default view</calculated_name>
+            <filter/>
+            <name>x_2223823_apollo_0_department</name>
+            <order_by/>
+            <position/>
+            <related_list/>
+            <sys_class_name>sys_ui_related_list</sys_class_name>
+            <sys_created_by>ayush.mangal</sys_created_by>
+            <sys_created_on>2026-10-31 19:59:21</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>0ffa64d1479c9710273a565a516d43db</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>Department - Default view</sys_name>
+            <sys_package display_value="Apollo-Hospitals" source="x_2223823_apollo_0">87c1422693c89b507b3a7c5efaba1008</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
+            <sys_update_name>sys_ui_related_x_2223823_apollo_0_department_null</sys_update_name>
+            <sys_updated_by>ayush.mangal</sys_updated_by>
+            <sys_updated_on>2026-10-31 19:59:21</sys_updated_on>
+            <sys_user/>
+            <view display_value="Default view" name="NULL">Default view</view>
+            <view_name/>
+        </sys_ui_related_list>
+    </sys_ui_related>
+</record_update>
