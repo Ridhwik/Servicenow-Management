@@ -70,7 +70,7 @@
         <update_guid_history>070106ffe8001710157bc481032ed82f:-1228497835</update_guid_history>
     </sys_update_version>
     <sys_metadata_delete action="INSERT_OR_UPDATE">
-        <sys_audit_delete display_value="Doctor Hospital Assignments">89880a88935097107b3a7c5efaba10be</sys_audit_delete>
+        <sys_audit_delete display_value="">89880a88935097107b3a7c5efaba10be</sys_audit_delete>
         <sys_class_name>sys_metadata_delete</sys_class_name>
         <sys_created_by>nilesh.chaurasia</sys_created_by>
         <sys_created_on>2026-10-28 05:35:35</sys_created_on>

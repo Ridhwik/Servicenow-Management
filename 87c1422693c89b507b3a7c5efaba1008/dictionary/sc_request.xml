@@ -4,10 +4,10 @@
         <element label="Hospital" max_length="32" name="x_2223823_apollo_0_hospital" reference="x_2223823_apollo_0_hospital" type="reference"/>
         <element choice="1" label="Request Type" max_length="255" name="x_2223823_apollo_0_request_type" type="choice">
             <choice>
+                <element inactive_on_update="false" label="Asset" sequence="0" value="1"/>
                 <element inactive_on_update="false" label="Medical Equipment" sequence="2" value="2"/>
                 <element inactive_on_update="false" label="Facility/Service" sequence="1" value="3"/>
                 <element inactive_on_update="false" label="Other" sequence="3" value="4"/>
-                <element inactive_on_update="false" label="Asset" sequence="0" value="1"/>
             </choice>
         </element>
     </element>

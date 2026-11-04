@@ -8,10 +8,10 @@
         <element label="Diagnosis" max_length="255" name="diagnosis" type="string"/>
         <element choice="1" label="Prescription status" max_length="40" name="prescription_status" type="choice">
             <choice>
+                <element inactive_on_update="false" label="Partially fulfilled" sequence="3" value="partially_fulfilled"/>
                 <element inactive_on_update="false" label="Sent to pharmacy" sequence="2" value="sent_to_pharmacy"/>
                 <element inactive_on_update="false" label="Issued" sequence="1" value="issued"/>
                 <element inactive_on_update="false" label="Fulfilled" sequence="4" value="fulfilled"/>
-                <element inactive_on_update="false" label="Partially fulfilled" sequence="3" value="partially_fulfilled"/>
             </choice>
         </element>
         <element choice="1" label="Record type" mandatory="true" max_length="40" name="record_type" type="choice">

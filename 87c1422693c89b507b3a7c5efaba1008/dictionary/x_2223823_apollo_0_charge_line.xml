@@ -3,22 +3,22 @@
         <element label="Invoice" max_length="32" name="invoice" reference="x_2223823_apollo_0_invoice" type="reference"/>
         <element choice="1" label="Status" mandatory="true" max_length="40" name="status" type="choice">
             <choice>
-                <element inactive_on_update="false" label="Cancelled" sequence="3" value="cancelled"/>
                 <element inactive_on_update="false" label="Invoiced" sequence="2" value="invoiced"/>
                 <element inactive_on_update="false" label="Pending" sequence="1" value="pending"/>
+                <element inactive_on_update="false" label="Cancelled" sequence="3" value="cancelled"/>
             </choice>
         </element>
         <element choice="1" label="Charge type" mandatory="true" max_length="40" name="charge_type" type="choice">
             <choice>
-                <element inactive_on_update="false" label="Final bill" sequence="9" value="final_bill"/>
-                <element inactive_on_update="false" label="Service" sequence="8" value="service"/>
-                <element inactive_on_update="false" label="Admission" sequence="5" value="admission"/>
-                <element inactive_on_update="false" label="Advance" sequence="7" value="advance"/>
                 <element inactive_on_update="false" label="Lab" sequence="3" value="lab"/>
-                <element inactive_on_update="false" label="Surgery" sequence="2" value="surgery"/>
-                <element inactive_on_update="false" label="Bed or room" sequence="4" value="bed_or_room"/>
-                <element inactive_on_update="false" label="Consultation" sequence="1" value="consultation"/>
+                <element inactive_on_update="false" label="Advance" sequence="7" value="advance"/>
                 <element inactive_on_update="false" label="Registration" sequence="6" value="registration"/>
+                <element inactive_on_update="false" label="Surgery" sequence="2" value="surgery"/>
+                <element inactive_on_update="false" label="Consultation" sequence="1" value="consultation"/>
+                <element inactive_on_update="false" label="Final bill" sequence="9" value="final_bill"/>
+                <element inactive_on_update="false" label="Admission" sequence="5" value="admission"/>
+                <element inactive_on_update="false" label="Service" sequence="8" value="service"/>
+                <element inactive_on_update="false" label="Bed or room" sequence="4" value="bed_or_room"/>
             </choice>
         </element>
         <element label="Description" max_length="255" name="description" type="string"/>

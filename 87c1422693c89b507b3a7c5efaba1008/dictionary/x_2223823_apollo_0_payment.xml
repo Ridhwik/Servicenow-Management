@@ -2,9 +2,9 @@
     <element attributes="enforce_dot_walk_cross_scope_access=true" db_object_id="5583e495475c9710273a565a516d4390" label="Payment" max_length="40" name="x_2223823_apollo_0_payment" type="collection">
         <element choice="1" label="Patient type" mandatory="true" max_length="40" name="patient_type" type="choice">
             <choice>
-                <element inactive_on_update="false" label="Video" sequence="2" value="video"/>
                 <element inactive_on_update="false" label="OPD" sequence="1" value="opd"/>
                 <element inactive_on_update="false" label="Inpatient" sequence="3" value="inpatient"/>
+                <element inactive_on_update="false" label="Video" sequence="2" value="video"/>
             </choice>
         </element>
         <element label="Patient" mandatory="true" max_length="32" name="patient" reference="x_2223823_apollo_0_patient" type="reference"/>
@@ -12,14 +12,14 @@
         <element label="Stripe transaction reference" max_length="100" name="stripe_reference" type="string"/>
         <element choice="1" label="Mode" mandatory="true" max_length="40" name="mode" type="choice">
             <choice>
-                <element inactive_on_update="false" label="Cash" sequence="1" value="cash"/>
                 <element inactive_on_update="false" label="Online" sequence="2" value="online"/>
+                <element inactive_on_update="false" label="Cash" sequence="1" value="cash"/>
             </choice>
         </element>
         <element choice="1" label="Reconciliation status" max_length="40" name="reconciliation_status" type="choice">
             <choice>
-                <element inactive_on_update="false" label="Unreconciled" sequence="1" value="unreconciled"/>
                 <element inactive_on_update="false" label="Reconciled" sequence="2" value="reconciled"/>
+                <element inactive_on_update="false" label="Unreconciled" sequence="1" value="unreconciled"/>
             </choice>
         </element>
         <element label="Hospital" mandatory="true" max_length="32" name="hospital" reference="x_2223823_apollo_0_hospital" type="reference"/>
@@ -34,9 +34,9 @@
         </element>
         <element choice="1" label="Kind" mandatory="true" max_length="40" name="kind" type="choice">
             <choice>
-                <element inactive_on_update="false" label="Advance" sequence="2" value="advance"/>
                 <element inactive_on_update="false" label="Payment" sequence="1" value="payment"/>
                 <element inactive_on_update="false" label="Refund" sequence="3" value="refund"/>
+                <element inactive_on_update="false" label="Advance" sequence="2" value="advance"/>
             </choice>
         </element>
         <element label="Amount" mandatory="true" max_length="20" name="amount" type="currency"/>
@@ -55,6 +55,9 @@
         </index>
         <index name="index5">
             <element name="patient"/>
+        </index>
+        <index name="index6">
+            <element name="reconciliation_status"/>
         </index>
     </element>
 </database>

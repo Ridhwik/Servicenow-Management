@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_ui_policy">
     <sys_ui_policy action="INSERT_OR_UPDATE">
         <active>true</active>
-        <conditions table="x_2223823_apollo_0_admission">status=5</conditions>
+        <conditions table="x_2223823_apollo_0_admission">status=5<item display_value="Discharged" endquery="false" field="status" goto="false" newquery="false" operator="=" or="false" value="5"/>
+        </conditions>
         <description/>
         <global>true</global>
         <inherit>false</inherit>

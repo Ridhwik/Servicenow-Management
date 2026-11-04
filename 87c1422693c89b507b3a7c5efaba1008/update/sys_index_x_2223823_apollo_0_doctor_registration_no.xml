@@ -2,7 +2,7 @@
     <sys_index action="INSERT_OR_UPDATE">
         <access_method>btree</access_method>
         <col_name_string>registration_no</col_name_string>
-        <index_col_name element="registration_no" name="x_2223823_apollo_0_doctor">55ad402f93c013107b3a7c5efaba1026</index_col_name>
+        <index_col_name element="registration_no" name="x_2223823_apollo_0_doctor">aececdbc4750d310273a565a516d43de</index_col_name>
         <logical_table_name>x_2223823_apollo_0_doctor</logical_table_name>
         <sys_class_name>sys_index</sys_class_name>
         <sys_created_by>system</sys_created_by>

@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
     <element attributes="enforce_dot_walk_cross_scope_access=true" db_object_id="5b24ecef934c13107b3a7c5efaba1042" label="Bed Reservations" max_length="40" name="x_2223823_apollo_0_bed_reservations" type="collection">
-        <element label="Reserved at " mandatory="true" max_length="255" name="reserved_at" type="glide_date_time"/>
+        <element label="Reserved at" mandatory="true" max_length="255" name="reserved_at" type="glide_date_time"/>
         <element label="Expires at" mandatory="true" max_length="255" name="expires_at" type="glide_date_time"/>
         <element choice="1" label="Status" mandatory="true" max_length="255" name="status" type="choice">
             <choice>
-                <element inactive_on_update="false" label="Active" sequence="0" value="1"/>
                 <element inactive_on_update="false" label="Cancelled" sequence="3" value="4"/>
                 <element inactive_on_update="false" label="Expired" sequence="2" value="3"/>
                 <element inactive_on_update="false" label="Converted to occupied" sequence="1" value="2"/>
+                <element inactive_on_update="false" label="Active" sequence="0" value="1"/>
             </choice>
         </element>
         <element label="Reserved by" mandatory="true" max_length="32" name="reserved_by" reference="sys_user" type="reference"/>
@@ -17,10 +17,10 @@
         <element label="Patient" mandatory="true" max_length="32" name="patient" reference="x_2223823_apollo_0_patient" type="reference"/>
         <element choice="1" label="Type" mandatory="true" max_length="255" name="type" type="choice">
             <choice>
+                <element inactive_on_update="false" label="Emergency" sequence="1" value="Emergency"/>
                 <element inactive_on_update="false" label="Planned" sequence="0" value="Planned"/>
                 <element inactive_on_update="false" label="Post-surgery recovery" sequence="3" value="Post-surgery recovery"/>
                 <element inactive_on_update="false" label="Transfer" sequence="2" value="Transfer"/>
-                <element inactive_on_update="false" label="Emergency" sequence="1" value="Emergency"/>
             </choice>
         </element>
         <index name="index">
@@ -30,13 +30,22 @@
             <element name="bed"/>
         </index>
         <index name="index3">
-            <element name="hospital"/>
+            <element name="expires_at"/>
         </index>
         <index name="index4">
-            <element name="patient"/>
+            <element name="hospital"/>
         </index>
         <index name="index5">
+            <element name="patient"/>
+        </index>
+        <index name="index6">
+            <element name="reserved_at"/>
+        </index>
+        <index name="index7">
             <element name="reserved_by"/>
+        </index>
+        <index name="index8">
+            <element name="status"/>
         </index>
     </element>
 </database>

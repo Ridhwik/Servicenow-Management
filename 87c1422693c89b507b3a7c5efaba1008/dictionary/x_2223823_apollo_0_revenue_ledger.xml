@@ -4,8 +4,8 @@
         <element label="Posting date" mandatory="true" max_length="40" name="posting_date" type="glide_date"/>
         <element choice="1" label="Revenue type" mandatory="true" max_length="40" name="revenue_type" type="choice">
             <choice>
-                <element inactive_on_update="false" label="Surgery" sequence="4" value="surgery"/>
                 <element inactive_on_update="false" label="Consultation" sequence="1" value="consultation"/>
+                <element inactive_on_update="false" label="Surgery" sequence="4" value="surgery"/>
                 <element inactive_on_update="false" label="Bed or room" sequence="3" value="bed_or_room"/>
                 <element inactive_on_update="false" label="Lab" sequence="2" value="lab"/>
             </choice>

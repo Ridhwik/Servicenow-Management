@@ -41,7 +41,7 @@
         <update_guid_history>970146ffa9001710292112d93a4d9912:650674672</update_guid_history>
     </sys_update_version>
     <sys_metadata_delete action="INSERT_OR_UPDATE">
-        <sys_audit_delete display_value="x_2223823_apollo_0_doctor_hospital_assignment.x_2223823_apollo_0.doctor_hospital">f0880a88935097107b3a7c5efaba1047</sys_audit_delete>
+        <sys_audit_delete display_value="">f0880a88935097107b3a7c5efaba1047</sys_audit_delete>
         <sys_class_name>sys_metadata_delete</sys_class_name>
         <sys_created_by>nilesh.chaurasia</sys_created_by>
         <sys_created_on>2026-10-28 05:35:35</sys_created_on>

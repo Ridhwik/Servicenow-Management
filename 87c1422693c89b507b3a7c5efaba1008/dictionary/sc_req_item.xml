@@ -4,10 +4,10 @@
         <element label="Estimated Value" max_length="20" name="x_2223823_apollo_0_estimated_value" type="currency"/>
         <element choice="1" label="Requested Type" max_length="255" name="x_2223823_apollo_0_requested_type" type="choice">
             <choice>
-                <element inactive_on_update="false" label="Other" sequence="300" value="4"/>
-                <element inactive_on_update="false" label="Medical Equipment" sequence="200" value="2"/>
-                <element inactive_on_update="false" label="Facility/Service" sequence="100" value="3"/>
                 <element inactive_on_update="false" label="Asset" sequence="0" value="1"/>
+                <element inactive_on_update="false" label="Other" sequence="300" value="4"/>
+                <element inactive_on_update="false" label="Facility/Service" sequence="100" value="3"/>
+                <element inactive_on_update="false" label="Medical Equipment" sequence="200" value="2"/>
             </choice>
         </element>
     </element>

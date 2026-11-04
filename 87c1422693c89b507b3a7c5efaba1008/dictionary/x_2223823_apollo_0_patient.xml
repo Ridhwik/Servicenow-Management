@@ -6,30 +6,44 @@
         <element label="Mother" max_length="32" name="mother" reference="sys_user" type="reference"/>
         <element choice="3" label="Blood group" max_length="40" name="blood_group" type="choice">
             <choice>
-                <element inactive_on_update="false" label="A+" sequence="0" value="a"/>
-                <element inactive_on_update="false" label="A-" sequence="1" value="-a"/>
-                <element inactive_on_update="false" label="O-" sequence="7" value="-o"/>
-                <element inactive_on_update="false" label="AB-" sequence="5" value="-ab"/>
-                <element inactive_on_update="false" label="O+" sequence="6" value="o"/>
-                <element inactive_on_update="false" label="AB+" sequence="4" value="ab"/>
                 <element inactive_on_update="false" label="B+" sequence="2" value="b"/>
+                <element inactive_on_update="false" label="AB+" sequence="4" value="ab"/>
+                <element inactive_on_update="false" label="O+" sequence="6" value="o"/>
+                <element inactive_on_update="false" label="A+" sequence="0" value="a"/>
+                <element inactive_on_update="false" label="O-" sequence="7" value="-o"/>
+                <element inactive_on_update="false" label="A-" sequence="1" value="-a"/>
                 <element inactive_on_update="false" label="B-" sequence="3" value="-b"/>
+                <element inactive_on_update="false" label="AB-" sequence="5" value="-ab"/>
             </choice>
         </element>
         <element label="Guardian" max_length="32" name="guardian" reference="sys_user" type="reference"/>
+        <element label="Policy" max_length="40" name="policy" type="string"/>
         <element label="Email verified" max_length="40" name="email_verified" type="boolean"/>
         <element label="Date of Birth" max_length="255" name="date_of_birth" type="glide_date"/>
+        <element label="Insurance Provider" max_length="40" name="insurance_provider" type="string"/>
         <element label="Known allergies" max_length="1000" name="known_allergies" type="string"/>
         <element label="Temporary profile" max_length="40" name="temporary_profile" type="boolean"/>
-        <element label="Consent Given" max_length="255" name="consent_given" type="boolean"/>
+        <element label="Consent given" max_length="255" name="consent_given" type="boolean"/>
         <element label="Emergency contact name" max_length="100" name="emergency_contact_name" type="string"/>
         <element label="ABHA number" max_length="14" name="abha_number" type="string"/>
         <element label="Prepayment required" max_length="40" name="prepayment_required" type="boolean"/>
         <element label="under 18" max_length="255" name="under_18" type="boolean"/>
         <index name="index">
-            <element name="guardian"/>
+            <element name="abha_number"/>
         </index>
         <index name="index2">
+            <element name="blood_group"/>
+        </index>
+        <index name="index3">
+            <element name="date_of_birth"/>
+        </index>
+        <index name="index4">
+            <element name="government_id"/>
+        </index>
+        <index name="index5">
+            <element name="guardian"/>
+        </index>
+        <index name="index6">
             <element name="mother"/>
         </index>
     </element>

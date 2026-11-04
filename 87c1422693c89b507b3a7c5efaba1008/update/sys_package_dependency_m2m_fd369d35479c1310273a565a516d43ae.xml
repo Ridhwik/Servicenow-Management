@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_package_dependency_m2m">
+    <sys_package_dependency_m2m action="INSERT_OR_UPDATE">
+        <dependency display_value="Configuration Management (CMDB)" source="com.snc.cmdb">666dab49f0b3031001ffe61a9d6c4846</dependency>
+        <min_version>1.1</min_version>
+        <sys_created_by>harshvardhan.chhapola</sys_created_by>
+        <sys_created_on>2026-11-02 12:25:11</sys_created_on>
+        <sys_id>fd369d35479c1310273a565a516d43ae</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_package display_value="Apollo-Hospitals" source="x_2223823_apollo_0">87c1422693c89b507b3a7c5efaba1008</sys_package>
+        <sys_updated_by>harshvardhan.chhapola</sys_updated_by>
+        <sys_updated_on>2026-11-02 12:25:11</sys_updated_on>
+    </sys_package_dependency_m2m>
+</record_update>

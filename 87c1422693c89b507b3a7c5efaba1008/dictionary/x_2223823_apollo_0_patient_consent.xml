@@ -8,9 +8,9 @@
         <element label="Given on" max_length="40" name="given_on" type="glide_date_time"/>
         <element choice="3" label="Status" max_length="40" name="status" type="choice">
             <choice>
+                <element inactive_on_update="false" label="Granted" sequence="0" value="1"/>
                 <element inactive_on_update="false" label="Withdrawn" sequence="2" value="3"/>
                 <element inactive_on_update="false" label="Denied" sequence="1" value="2"/>
-                <element inactive_on_update="false" label="Granted" sequence="0" value="1"/>
             </choice>
         </element>
         <element choice="1" label="Purpose" max_length="40" name="purpose" type="choice">

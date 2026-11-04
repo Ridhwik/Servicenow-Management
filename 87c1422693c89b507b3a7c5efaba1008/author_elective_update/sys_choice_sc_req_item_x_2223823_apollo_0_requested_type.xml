@@ -6,6 +6,7 @@
             <sys_class_name>sys_choice_set</sys_class_name>
             <sys_created_by>nilesh.chaurasia</sys_created_by>
             <sys_created_on>2026-11-02 09:23:31</sys_created_on>
+            <sys_id>f4ac647147181310273a565a516d432f</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_name>x_2223823_apollo_0_requested_type</sys_name>
             <sys_package display_value="Apollo-Hospitals" source="x_2223823_apollo_0">87c1422693c89b507b3a7c5efaba1008</sys_package>
@@ -29,6 +30,7 @@
             <sys_created_on>2026-11-02 09:23:31</sys_created_on>
             <sys_domain>global</sys_domain>
             <sys_domain_path>/</sys_domain_path>
+            <sys_id>1b546292475c5710273a565a516d434e</sys_id>
             <sys_mod_count>2</sys_mod_count>
             <sys_updated_by>nilesh.chaurasia</sys_updated_by>
             <sys_updated_on>2026-11-02 09:24:59</sys_updated_on>
@@ -48,6 +50,7 @@
             <sys_created_on>2026-11-02 09:23:54</sys_created_on>
             <sys_domain>global</sys_domain>
             <sys_domain_path>/</sys_domain_path>
+            <sys_id>9b546292475c5710273a565a516d4365</sys_id>
             <sys_mod_count>2</sys_mod_count>
             <sys_updated_by>nilesh.chaurasia</sys_updated_by>
             <sys_updated_on>2026-11-02 09:25:02</sys_updated_on>
@@ -67,6 +70,7 @@
             <sys_created_on>2026-11-02 09:23:43</sys_created_on>
             <sys_domain>global</sys_domain>
             <sys_domain_path>/</sys_domain_path>
+            <sys_id>d3546292475c5710273a565a516d4389</sys_id>
             <sys_mod_count>2</sys_mod_count>
             <sys_updated_by>nilesh.chaurasia</sys_updated_by>
             <sys_updated_on>2026-11-02 09:25:06</sys_updated_on>
@@ -86,6 +90,7 @@
             <sys_created_on>2026-11-02 09:24:05</sys_created_on>
             <sys_domain>global</sys_domain>
             <sys_domain_path>/</sys_domain_path>
+            <sys_id>1f546292475c5710273a565a516d43ac</sys_id>
             <sys_mod_count>2</sys_mod_count>
             <sys_updated_by>nilesh.chaurasia</sys_updated_by>
             <sys_updated_on>2026-11-02 09:25:11</sys_updated_on>

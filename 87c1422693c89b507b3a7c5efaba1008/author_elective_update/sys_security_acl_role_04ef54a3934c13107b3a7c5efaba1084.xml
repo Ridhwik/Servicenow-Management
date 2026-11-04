@@ -41,7 +41,7 @@
         <update_guid_history>48ef54a3114c13108e9a8f01d37ca29e:-1171896713</update_guid_history>
     </sys_update_version>
     <sys_metadata_delete action="INSERT_OR_UPDATE">
-        <sys_audit_delete display_value="x_2223823_apollo_0_admission.x_2223823_apollo_0.admission_user">8c656827938c13107b3a7c5efaba1085</sys_audit_delete>
+        <sys_audit_delete display_value="">8c656827938c13107b3a7c5efaba1085</sys_audit_delete>
         <sys_class_name>sys_metadata_delete</sys_class_name>
         <sys_created_by>harshvardhan.chhapola</sys_created_by>
         <sys_created_on>2026-10-26 09:05:29</sys_created_on>

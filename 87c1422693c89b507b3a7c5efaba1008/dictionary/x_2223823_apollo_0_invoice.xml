@@ -4,11 +4,11 @@
         <element label="Appointment" max_length="32" name="appointment" reference="x_2223823_apollo_0_appointment" type="reference"/>
         <element choice="1" label="Status" mandatory="true" max_length="40" name="status" type="choice">
             <choice>
-                <element inactive_on_update="false" label="Draft" sequence="1" value="draft"/>
-                <element inactive_on_update="false" label="Paid" sequence="4" value="paid"/>
                 <element inactive_on_update="false" label="Issued" sequence="2" value="issued"/>
                 <element inactive_on_update="false" label="Refunded" sequence="6" value="refunded"/>
                 <element inactive_on_update="false" label="Cancelled" sequence="5" value="cancelled"/>
+                <element inactive_on_update="false" label="Draft" sequence="1" value="draft"/>
+                <element inactive_on_update="false" label="Paid" sequence="4" value="paid"/>
                 <element inactive_on_update="false" label="Partially paid" sequence="3" value="partially_paid"/>
             </choice>
         </element>
@@ -19,9 +19,9 @@
         <element label="Hospital" mandatory="true" max_length="32" name="hospital" reference="x_2223823_apollo_0_hospital" type="reference"/>
         <element choice="1" label="Patient type" mandatory="true" max_length="40" name="patient_type" type="choice">
             <choice>
-                <element inactive_on_update="false" label="OPD" sequence="1" value="opd"/>
                 <element inactive_on_update="false" label="Inpatient" sequence="3" value="inpatient"/>
                 <element inactive_on_update="false" label="Video" sequence="2" value="video"/>
+                <element inactive_on_update="false" label="OPD" sequence="1" value="opd"/>
             </choice>
         </element>
         <element label="Final invoice" max_length="40" name="is_final" type="boolean"/>
@@ -36,7 +36,13 @@
             <element name="hospital"/>
         </index>
         <index name="index4">
+            <element name="is_final"/>
+        </index>
+        <index name="index5">
             <element name="patient"/>
+        </index>
+        <index name="index6">
+            <element name="status"/>
         </index>
     </element>
 </database>

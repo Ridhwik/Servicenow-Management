@@ -20,7 +20,7 @@
         <provider_class/>
         <read_access>true</read_access>
         <scriptable_table>false</scriptable_table>
-        <super_class display_value="Consumer" name="csm_consumer">38f094ab934413107b3a7c5efaba1081</super_class>
+        <super_class display_value="Consumer" name="csm_consumer">db8f10f847109310273a565a516d4303</super_class>
         <sys_class_name>sys_db_object</sys_class_name>
         <sys_created_by>jenish.jain</sys_created_by>
         <sys_created_on>2026-10-26 09:09:05</sys_created_on>

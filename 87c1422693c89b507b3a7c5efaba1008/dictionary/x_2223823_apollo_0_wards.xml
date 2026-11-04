@@ -4,9 +4,9 @@
         <element label="Head nurse / in-charge" max_length="32" name="head_nurse" reference="x_2223823_apollo_0_staff" reference_cascade_rule="none" type="reference"/>
         <element label="Gender" max_length="40" name="gender" type="choice">
             <choice>
+                <element inactive_on_update="false" label="Any" sequence="3" value="3"/>
                 <element inactive_on_update="false" label="Female" sequence="2" value="2"/>
                 <element inactive_on_update="false" label="Male" sequence="1" value="1"/>
-                <element inactive_on_update="false" label="Any" sequence="3" value="3"/>
             </choice>
         </element>
         <element label="Department" max_length="32" name="department" reference="x_2223823_apollo_0_department" reference_cascade_rule="restrict" type="reference"/>
