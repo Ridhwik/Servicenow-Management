@@ -4,16 +4,16 @@
         <element label="Emergency contact phone" max_length="40" name="emergency_contact_phone" type="phone_number_e164"/>
         <element label="Preferred language" max_length="40" name="preferred_languag0" type="string"/>
         <element label="Mother" max_length="32" name="mother" reference="sys_user" type="reference"/>
-        <element choice="3" default="o" label="Blood group" max_length="255" name="blood_group" type="choice">
+        <element choice="3" label="Blood group" max_length="40" name="blood_group" type="choice">
             <choice>
-                <element inactive_on_update="false" label="B+" sequence="2" value="b"/>
-                <element inactive_on_update="false" label="O+" sequence="6" value="o"/>
-                <element inactive_on_update="false" label="AB-" value="-ab"/>
-                <element inactive_on_update="false" label="O-" value="-o"/>
-                <element inactive_on_update="false" label="B-" value="-b"/>
                 <element inactive_on_update="false" label="A+" sequence="0" value="a"/>
+                <element inactive_on_update="false" label="A-" sequence="1" value="-a"/>
+                <element inactive_on_update="false" label="O-" sequence="7" value="-o"/>
+                <element inactive_on_update="false" label="AB-" sequence="5" value="-ab"/>
+                <element inactive_on_update="false" label="O+" sequence="6" value="o"/>
                 <element inactive_on_update="false" label="AB+" sequence="4" value="ab"/>
-                <element inactive_on_update="false" label="A-" value="-a"/>
+                <element inactive_on_update="false" label="B+" sequence="2" value="b"/>
+                <element inactive_on_update="false" label="B-" sequence="3" value="-b"/>
             </choice>
         </element>
         <element label="Guardian" max_length="32" name="guardian" reference="sys_user" type="reference"/>

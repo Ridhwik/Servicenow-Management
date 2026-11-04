@@ -11,7 +11,7 @@
         <column_label>Blood group</column_label>
         <comments/>
         <create_roles/>
-        <default_value>o</default_value>
+        <default_value/>
         <defaultsort/>
         <delete_roles/>
         <dependent/>
@@ -29,7 +29,7 @@
         <function_field>false</function_field>
         <internal_type display_value="Choice">choice</internal_type>
         <mandatory>false</mandatory>
-        <max_length>255</max_length>
+        <max_length>40</max_length>
         <name>x_2223823_apollo_0_patient</name>
         <next_element/>
         <primary>false</primary>
@@ -54,7 +54,7 @@
         <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
         <sys_update_name>sys_dictionary_x_2223823_apollo_0_patient_blood_group</sys_update_name>
         <sys_updated_by>jenish.jain</sys_updated_by>
-        <sys_updated_on>2026-10-27 12:19:18</sys_updated_on>
+        <sys_updated_on>2026-10-28 08:57:59</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>

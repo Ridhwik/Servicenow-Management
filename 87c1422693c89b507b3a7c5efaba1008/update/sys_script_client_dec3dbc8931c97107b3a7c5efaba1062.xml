@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script_client">
+    <sys_script_client action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <applies_extended>false</applies_extended>
+        <condition/>
+        <description/>
+        <field>abha_number</field>
+        <global>true</global>
+        <isolate_script>true</isolate_script>
+        <messages/>
+        <name>Duplicate ABHA Number</name>
+        <order/>
+        <script><![CDATA[function onChange(control, oldValue, newValue, isLoading, isTemplate) {
+   if (isLoading || newValue === '') {
+      return;
+   }
+
+   if(newValue.length < 14){
+		g_form.showFieldMsg('abha_number', 'Fill Correct ABHA Number', 'error');
+		return;
+   }
+
+   var ga = new GlideAjax('CheckUniquenessUtils');
+    ga.addParam('sysparm_name', 'isNumberUnique');
+    ga.addParam('sysparm_number_val', newValue);
+    ga.addParam('sysparm_current_id', g_form.getUniqueValue());
+    
+    ga.getXMLAnswer(function(response) {
+        if (response === 'false') {
+            g_form.showFieldMsg('abha_number', 'This value already exists. Please enter a unique number.', 'error');
+            // g_form.setValue('your_number_field', '');
+        } else {
+            g_form.hideFieldMsg('abha_number');
+        }
+    });
+   
+}]]></script>
+        <sys_class_name>sys_script_client</sys_class_name>
+        <sys_created_by>jenish.jain</sys_created_by>
+        <sys_created_on>2026-10-28 11:17:51</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>dec3dbc8931c97107b3a7c5efaba1062</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_name>Duplicate ABHA Number</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Apollo-Hospitals" source="x_2223823_apollo_0">87c1422693c89b507b3a7c5efaba1008</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
+        <sys_update_name>sys_script_client_dec3dbc8931c97107b3a7c5efaba1062</sys_update_name>
+        <sys_updated_by>jenish.jain</sys_updated_by>
+        <sys_updated_on>2026-10-28 11:26:06</sys_updated_on>
+        <table>x_2223823_apollo_0_patient</table>
+        <type>onChange</type>
+        <ui_type>0</ui_type>
+        <view/>
+    </sys_script_client>
+</record_update>

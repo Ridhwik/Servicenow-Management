@@ -5,14 +5,15 @@
         <element label="Room" mandatory="true" max_length="32" name="room" reference="x_2223823_apollo_0_rooms" type="reference"/>
         <element choice="1" label="Status" max_length="40" name="status" type="integer">
             <choice>
-                <element inactive_on_update="false" label="Awaiting Approval" sequence="1" value="2"/>
-                <element inactive_on_update="false" label="Discharged" sequence="4" value="5"/>
-                <element inactive_on_update="false" label="Admitted" sequence="3" value="4"/>
                 <element inactive_on_update="false" label="Bed Reserved" sequence="2" value="3"/>
+                <element inactive_on_update="false" label="Discharged" sequence="4" value="5"/>
+                <element inactive_on_update="false" label="Awaiting Approval" sequence="1" value="2"/>
                 <element inactive_on_update="false" label="Requested" sequence="0" value="1"/>
                 <element inactive_on_update="false" label="Cancelled" sequence="5" value="6"/>
+                <element inactive_on_update="false" label="Admitted" sequence="3" value="4"/>
             </choice>
         </element>
+        <element label="Admission Date" mandatory="true" max_length="40" name="admission_date" type="glide_date_time"/>
         <element label="Patient" mandatory="true" max_length="32" name="patient" reference="x_2223823_apollo_0_patient" type="reference"/>
         <element label="Reason" mandatory="true" max_length="255" name="reason" type="string_full_utf8"/>
         <element label="Advance Amount" max_length="20" name="advance_amount" type="currency"/>
@@ -23,40 +24,39 @@
         <element label="Expected Discharge Date" max_length="40" name="expected_discharge_date" type="glide_date"/>
         <element choice="1" label="Approval State" max_length="40" name="approval_state" type="integer">
             <choice>
-                <element inactive_on_update="false" label="Pending" sequence="1" value="2"/>
-                <element inactive_on_update="false" label="Rejected" sequence="3" value="4"/>
                 <element inactive_on_update="false" label="Not Required" sequence="0" value="1"/>
+                <element inactive_on_update="false" label="Rejected" sequence="3" value="4"/>
                 <element inactive_on_update="false" label="Approved" sequence="2" value="3"/>
+                <element inactive_on_update="false" label="Pending" sequence="1" value="2"/>
             </choice>
         </element>
         <element label="Attendant Phone" mandatory="true" max_length="40" name="attendant_phone" type="phone_number_e164"/>
-        <element label="Hospital" mandatory="true" max_length="32" name="hospital" reference="x_2223823_apollo_0_hospital" type="reference"/>
-        <element label="Admission Date" mandatory="true" max_length="40" name="admission_date" type="glide_date_time"/>
-        <element label="Diagnosed By" max_length="32" name="diagnosed_by" reference="x_2223823_apollo_0_doctor" type="reference"/>
+        <element label="Hospital" mandatory="true" max_length="32" name="hospital" reference="x_2223823_apollo_0_hospital" reference_qual="active=true^EQ" reference_qual_condition="active=true^EQ" type="reference"/>
+        <element label="Diagnosed By" max_length="32" name="diagnosed_by" reference="x_2223823_apollo_0_doctor" reference_qual="status=1^EQ" reference_qual_condition="status=1^EQ" type="reference"/>
         <element choice="1" label="Admission Type" mandatory="true" max_length="40" name="admission_type" type="integer">
             <choice>
-                <element inactive_on_update="false" label="Emergency" sequence="1" value="2"/>
                 <element inactive_on_update="false" label="Transfer" sequence="2" value="3"/>
+                <element inactive_on_update="false" label="Emergency" sequence="1" value="2"/>
                 <element inactive_on_update="false" label="Planned" sequence="0" value="1"/>
             </choice>
         </element>
         <element choice="1" label="Room Category" mandatory="true" max_length="40" name="room_category" type="choice">
             <choice>
-                <element inactive_on_update="false" label="General Ward" sequence="0" value="General Ward"/>
-                <element inactive_on_update="false" label="Operation Theatre" sequence="11" value="Operation Theatre"/>
-                <element inactive_on_update="false" label="Day Care" sequence="13" value="Day Care"/>
-                <element inactive_on_update="false" label="Emergency" sequence="10" value="Emergency"/>
-                <element inactive_on_update="false" label="Any Exception" sequence="12" value="Any Exception"/>
                 <element inactive="true" inactive_on_update="true" label="Private/Deluxe/Suite" sequence="0" value="Private/Deluxe/Suite"/>
-                <element inactive_on_update="false" label="ICU" sequence="4" value="ICU"/>
-                <element inactive_on_update="false" label="NICU" sequence="6" value="NICU"/>
-                <element inactive_on_update="false" label="HDU" sequence="5" value="HDU"/>
                 <element inactive_on_update="false" label="Isolation" sequence="7" value="Isolation"/>
-                <element inactive_on_update="false" label="Labour" sequence="8" value="Labour"/>
-                <element inactive_on_update="false" label="Maternity" sequence="9" value="Maternity"/>
-                <element inactive_on_update="false" label="Private" sequence="1" value="Private"/>
+                <element inactive_on_update="false" label="ICU" sequence="4" value="ICU"/>
+                <element inactive_on_update="false" label="Operation Theatre" sequence="11" value="Operation Theatre"/>
+                <element inactive_on_update="false" label="General Ward" sequence="0" value="General Ward"/>
                 <element inactive_on_update="false" label="Suite" sequence="3" value="Suite"/>
+                <element inactive_on_update="false" label="Emergency" sequence="10" value="Emergency"/>
+                <element inactive_on_update="false" label="NICU" sequence="6" value="NICU"/>
+                <element inactive_on_update="false" label="Day Care" sequence="13" value="Day Care"/>
                 <element inactive_on_update="false" label="Deluxe" sequence="2" value="Deluxe"/>
+                <element inactive_on_update="false" label="Maternity" sequence="9" value="Maternity"/>
+                <element inactive_on_update="false" label="HDU" sequence="5" value="HDU"/>
+                <element inactive_on_update="false" label="Private" sequence="1" value="Private"/>
+                <element inactive_on_update="false" label="Any Exception" sequence="12" value="Any Exception"/>
+                <element inactive_on_update="false" label="Labour" sequence="8" value="Labour"/>
             </choice>
         </element>
     </element>
