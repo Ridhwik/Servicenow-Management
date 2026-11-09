@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?><database>
-    <element attributes="enforce_dot_walk_cross_scope_access=true" db_object_id="aa52932a47d41b10273a565a516d43f4" max_length="40" name="x_2223823_apollo_0_test_table" type="collection">
-        <element label="FIELD1" max_length="32" name="field1" reference="x_2223823_apollo_0_hospital" reference_qual="javascript:new x_2223823_apollo_0.HospitalRefQual().getQuery(current)" type="reference" use_reference_qualifier="advanced"/>
-    </element>
-</database>

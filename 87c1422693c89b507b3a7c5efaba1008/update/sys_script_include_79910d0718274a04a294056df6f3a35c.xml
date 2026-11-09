@@ -490,6 +490,76 @@ HospitalRefQual.prototype = {
         }
         return 'sys_idISEMPTY';
     },
+
+	    /**
+     * Bed Reservation -> reserved_by:
+     * Returns active users who have the role bed_manager or receptionist
+     * and belong to current.hospital via active staff records.
+     *
+     * @param {string} roles - Comma-separated roles (e.g. 'bed_manager,receptionist')
+     * @param {GlideRecord} current - Current Bed Reservation record
+     * @returns {string} Encoded query for sys_user table
+     */
+    usersWithRole: function (roles, current) {
+        if (!current || !current.hospital) return 'sys_idISEMPTY';
+
+        // 1. Resolve role sys_ids
+        var roleNames = [
+            'x_2223823_apollo_0.bed_manager',
+            'x_2223823_apollo_0.receptionist'
+        ];
+
+        var roleIds = [];
+        var rGr = new GlideRecord('sys_user_role');
+        rGr.addQuery('name', 'IN', roleNames.join(','));
+        rGr.query();
+        while (rGr.next()) {
+            roleIds.push(rGr.getUniqueValue());
+        }
+
+        var userIdsWithRole = [];
+        if (roleIds.length > 0) {
+            var urGr = new GlideRecord('sys_user_has_role');
+            urGr.addQuery('role', 'IN', roleIds.join(','));
+            urGr.addQuery('user.active', true);
+            urGr.query();
+            while (urGr.next()) {
+                var u = urGr.getValue('user');
+                if (u && userIdsWithRole.indexOf(u) === -1) {
+                    userIdsWithRole.push(u);
+                }
+            }
+        }
+
+        // 2. Filter to users who work at current.hospital via active Staff records
+        var hospitalStaffUsers = [];
+        var staffGr = new GlideRecord('x_2223823_apollo_0_staff');
+        staffGr.addQuery('hospital', current.hospital);
+        staffGr.addQuery('active', true);
+        staffGr.addNotNullQuery('user');
+        staffGr.query();
+        while (staffGr.next()) {
+            var staffUser = staffGr.getValue('user');
+            var sRole = staffGr.getValue('staff_role');
+            // Matches if user has the platform role OR staff_role choice is bed_manager / receptionist
+            if (userIdsWithRole.indexOf(staffUser) !== -1 || sRole === 'bed_manager' || sRole === 'receptionist_cashier') {
+                if (hospitalStaffUsers.indexOf(staffUser) === -1) {
+                    hospitalStaffUsers.push(staffUser);
+                }
+            }
+        }
+
+        // Keep existing reserved_by user selectable when reviewing saved records
+        if (current.reserved_by && hospitalStaffUsers.indexOf(current.reserved_by.toString()) === -1) {
+            hospitalStaffUsers.push(current.reserved_by.toString());
+        }
+
+        if (hospitalStaffUsers.length === 0) {
+            return 'sys_idISEMPTY';
+        }
+
+        return 'active=true^sys_idIN' + hospitalStaffUsers.join(',');
+    },
 	
     type: 'HospitalRefQual',
 };
@@ -498,13 +568,13 @@ HospitalRefQual.prototype = {
         <sys_created_by>harshvardhan.chhapola</sys_created_by>
         <sys_created_on>2026-11-04 06:25:19</sys_created_on>
         <sys_id>79910d0718274a04a294056df6f3a35c</sys_id>
-        <sys_mod_count>5</sys_mod_count>
+        <sys_mod_count>6</sys_mod_count>
         <sys_name>HospitalRefQual</sys_name>
         <sys_package display_value="Apollo-Hospitals" source="x_2223823_apollo_0">87c1422693c89b507b3a7c5efaba1008</sys_package>
         <sys_policy/>
         <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
         <sys_update_name>sys_script_include_79910d0718274a04a294056df6f3a35c</sys_update_name>
         <sys_updated_by>ridhwik.jangid</sys_updated_by>
-        <sys_updated_on>2026-11-06 11:29:37</sys_updated_on>
+        <sys_updated_on>2026-11-09 06:56:15</sys_updated_on>
     </sys_script_include>
 </record_update>
