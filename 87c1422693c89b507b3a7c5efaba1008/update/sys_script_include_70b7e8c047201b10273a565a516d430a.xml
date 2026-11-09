@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>x_2223823_apollo_0.Invoice</api_name>
+        <caller_access/>
+        <client_callable>true</client_callable>
+        <description/>
+        <mobile_callable>false</mobile_callable>
+        <name>Invoice</name>
+        <sandbox_callable>false</sandbox_callable>
+        <script><![CDATA[var Invoice = Class.create();
+Invoice.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
+
+	/**
+     * Reference Qualifier for 'appointment' field on Invoice table.
+     * Condition: 
+     * - Matches current invoice's patient (`appointment.patient = current.patient`).
+     * - Matches current invoice's hospital (`appointment.hospital = current.hospital`).
+     */
+    getAppointmentRefQual: function(current) {
+        if (!current) return '';
+
+        var currentPatient = current.getValue('patient');
+        var currentHospital = current.getValue('hospital');
+
+        // Agar patient ya hospital select nahi hai, toh koi appointment show mat karo
+        if (!currentPatient || !currentHospital) {
+            return 'sys_id=00000000000000000000000000000000';
+        }
+
+        var appointmentSysids = [];
+        var appointmentGr = new GlideRecord('x_2223823_apollo_0_appointment'); 
+        
+        appointmentGr.addQuery('patient', currentPatient);
+        appointmentGr.addQuery('hospital', currentHospital);
+        appointmentGr.query();
+
+        while (appointmentGr.next()) {
+            appointmentSysids.push(appointmentGr.getUniqueValue());
+        }
+
+        // Final Encoded Query return karo
+        if (appointmentSysids.length > 0) {
+            return 'sys_idIN' + appointmentSysids.join(',');
+        } else {
+            // Agar koi matching appointment nahi mili
+            return 'sys_id=00000000000000000000000000000000';
+        }
+    },
+
+    type: 'Invoice'
+});]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>nilesh.chaurasia</sys_created_by>
+        <sys_created_on>2026-11-09 08:54:43</sys_created_on>
+        <sys_id>70b7e8c047201b10273a565a516d430a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Invoice</sys_name>
+        <sys_package display_value="Apollo-Hospitals" source="x_2223823_apollo_0">87c1422693c89b507b3a7c5efaba1008</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
+        <sys_update_name>sys_script_include_70b7e8c047201b10273a565a516d430a</sys_update_name>
+        <sys_updated_by>nilesh.chaurasia</sys_updated_by>
+        <sys_updated_on>2026-11-09 08:54:43</sys_updated_on>
+    </sys_script_include>
+</record_update>

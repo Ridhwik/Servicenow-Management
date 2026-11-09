@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>x_2223823_apollo_0.HospitalService</api_name>
+        <caller_access/>
+        <client_callable>true</client_callable>
+        <description/>
+        <mobile_callable>false</mobile_callable>
+        <name>HospitalService</name>
+        <sandbox_callable>false</sandbox_callable>
+        <script><![CDATA[var HospitalService = Class.create();
+HospitalService.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
+	/**
+     * Reference Qualifier for 'service' field on Hospital Service table.
+     * Returns active catalog items (sc_cat_item) that belong to the 'Support / Hospital Services' category (sys_id: 9aa10a2ac3112200b12d9f2974d3aefd).
+     */
+    getServiceRefQual: function(current) {
+        var serviceSysids = [];
+        var categorySysId = '9aa10a2ac3112200b12d9f2974d3aefd'; // Hospital Services category sys_id
+
+        // sc_cat_item table par query run karo
+        var catItemGr = new GlideRecord('sc_cat_item');
+        catItemGr.addQuery('active', true);
+        
+        // Cat item table me category field ya sc_cat_item_category mapping check hoti hai
+        // Standard ServiceNow me sc_cat_item par 'category' reference field hota hai
+        catItemGr.addQuery('category', categorySysId);
+        catItemGr.query();
+
+        while (catItemGr.next()) {
+            serviceSysids.push(catItemGr.getUniqueValue());
+        }
+
+        // Final Encoded Query return karo
+        if (serviceSysids.length > 0) {
+            return 'sys_idIN' + serviceSysids.join(',');
+        } else {
+            // Agar koi item match na ho toh empty result dikhao
+            return 'sys_id=00000000000000000000000000000000';
+        }
+    },
+
+    type: 'HospitalService'
+});]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>nilesh.chaurasia</sys_created_by>
+        <sys_created_on>2026-11-09 06:57:55</sys_created_on>
+        <sys_id>51fc4048472cd710273a565a516d4309</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>HospitalService</sys_name>
+        <sys_package display_value="Apollo-Hospitals" source="x_2223823_apollo_0">87c1422693c89b507b3a7c5efaba1008</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
+        <sys_update_name>sys_script_include_51fc4048472cd710273a565a516d4309</sys_update_name>
+        <sys_updated_by>nilesh.chaurasia</sys_updated_by>
+        <sys_updated_on>2026-11-09 06:57:55</sys_updated_on>
+    </sys_script_include>
+</record_update>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <active>true</active>
+        <api_name>x_2223823_apollo_0.DataRequest</api_name>
+        <caller_access/>
+        <client_callable>true</client_callable>
+        <description/>
+        <mobile_callable>false</mobile_callable>
+        <name>DataRequest</name>
+        <sandbox_callable>false</sandbox_callable>
+        <script><![CDATA[var DataRequest = Class.create();
+DataRequest.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
+
+	/**
+     * Reference Qualifier for 'handled_by' field on Data Request table.
+     * Returns staff records (x_2223823_apollo_0_staff) whose associated user has the 'compliance_officer' role.
+     */
+    getHandledByRefQual: function(current) {
+        var staffSysids = [];
+        
+        // 1. Pehle sys_user_has_role table se un users ko nikalo jinke paas 'compliance_officer' role hai
+        var userSysids = [];
+        var roleGr = new GlideRecord('sys_user_has_role');
+        roleGr.addQuery('role.name', 'x_2223823_apollo_0.compliance_officer'); // Role ka exact role name 
+        roleGr.addQuery('state', 'active'); // Ensure role is active
+        roleGr.query();
+        
+        while (roleGr.next()) {
+            var userId = roleGr.getValue('user');
+            if (userId) {
+                userSysids.push(userId);
+            }
+        }
+
+        // 2. Agar compliance officers mil gaye, toh staff table me query karo jahan staff.user in userSysids ho
+        if (userSysids.length > 0) {
+            var staffGr = new GlideRecord('x_2223823_apollo_0_staff');
+            staffGr.addQuery('user', 'IN', userSysids.join(','));
+            staffGr.query();
+            
+            while (staffGr.next()) {
+                staffSysids.push(staffGr.getUniqueValue());
+            }
+        }
+
+        // 3. Final Query String Return karo
+        if (staffSysids.length > 0) {
+            return 'sys_idIN' + staffSysids.join(',');
+        } else {
+            // Agar koi compliance officer staff nahi mila toh empty result dikhao
+            return 'sys_id=00000000000000000000000000000000';
+        }
+    },
+
+    type: 'DataRequest'
+});]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>nilesh.chaurasia</sys_created_by>
+        <sys_created_on>2026-11-09 06:46:29</sys_created_on>
+        <sys_id>42e9480c47e8d710273a565a516d4384</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>DataRequest</sys_name>
+        <sys_package display_value="Apollo-Hospitals" source="x_2223823_apollo_0">87c1422693c89b507b3a7c5efaba1008</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
+        <sys_update_name>sys_script_include_42e9480c47e8d710273a565a516d4384</sys_update_name>
+        <sys_updated_by>nilesh.chaurasia</sys_updated_by>
+        <sys_updated_on>2026-11-09 06:46:29</sys_updated_on>
+    </sys_script_include>
+</record_update>

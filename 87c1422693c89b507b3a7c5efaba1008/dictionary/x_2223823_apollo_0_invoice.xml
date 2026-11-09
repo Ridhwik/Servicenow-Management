@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
     <element attributes="enforce_dot_walk_cross_scope_access=true" db_object_id="316cc8b947d01310273a565a516d4381" label="Invoice" max_length="40" name="x_2223823_apollo_0_invoice" type="collection">
-        <element label="Appointment" max_length="32" name="appointment" reference="x_2223823_apollo_0_appointment" type="reference"/>
+        <element label="Appointment" max_length="32" name="appointment" reference="x_2223823_apollo_0_appointment" reference_qual="javascript:new Invoice().getAppointmentRefQual(current);" type="reference" use_reference_qualifier="advanced"/>
         <element label="Patient" mandatory="true" max_length="32" name="patient" reference="x_2223823_apollo_0_patient" type="reference"/>
         <element choice="1" label="Status" mandatory="true" max_length="40" name="status" type="choice">
             <choice>
