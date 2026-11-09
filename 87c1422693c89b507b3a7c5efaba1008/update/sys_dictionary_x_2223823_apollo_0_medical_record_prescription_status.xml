@@ -2,7 +2,7 @@
     <sys_dictionary action="INSERT_OR_UPDATE" element="prescription_status" table="x_2223823_apollo_0_medical_record">
         <active>true</active>
         <array>false</array>
-        <attributes>edge_encryption_enabled=true</attributes>
+        <attributes/>
         <audit>false</audit>
         <calculation/>
         <choice>1</choice>

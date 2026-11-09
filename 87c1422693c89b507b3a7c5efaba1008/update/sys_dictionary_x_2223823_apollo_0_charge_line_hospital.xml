@@ -2,7 +2,7 @@
     <sys_dictionary action="INSERT_OR_UPDATE" element="hospital" table="x_2223823_apollo_0_charge_line">
         <active>true</active>
         <array>false</array>
-        <attributes>edge_encryption_enabled=true,encode_utf8=false</attributes>
+        <attributes/>
         <audit>false</audit>
         <calculation/>
         <choice/>

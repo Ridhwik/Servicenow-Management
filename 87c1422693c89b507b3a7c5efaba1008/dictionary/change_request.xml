@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
     <element attributes="email_client=true,hasWorkflow=true,live_feed=true" audit="true" db_object_id="7deea349f077031001ffe61a9d6c4843" extends="task" label="Change Request" max_length="40" name="change_request" text_index="true" type="collection">
-        <element attributes="encode_utf8=false" label="Hospital" max_length="32" name="x_2223823_apollo_0_hospital" reference="x_2223823_apollo_0_hospital" type="reference"/>
+        <element attributes="encode_utf8=false" label="Hospital" max_length="32" name="x_2223823_apollo_0_hospital" reference="x_2223823_apollo_0_hospital" reference_qual="javascript:new x_2223823_apollo_0.HospitalRefQual().getQuery(current)" type="reference" use_reference_qualifier="advanced"/>
     </element>
 </database>

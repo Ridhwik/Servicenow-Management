@@ -1,17 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
     <element attributes="enforce_dot_walk_cross_scope_access=true" db_object_id="a65f45339388d3107b3a7c5efaba10a3" label="Bed Status Log" max_length="40" name="x_2223823_apollo_0_bed_status_log" type="collection">
-        <element choice="1" label="From status" max_length="40" name="from_status" type="choice">
-            <choice>
-                <element inactive_on_update="false" label="Out of Service" sequence="6" value="7"/>
-                <element inactive_on_update="false" label="Occupied" sequence="2" value="3"/>
-                <element inactive_on_update="false" label="Blocked" sequence="5" value="6"/>
-                <element inactive_on_update="false" label="Reserved" sequence="1" value="2"/>
-                <element inactive_on_update="false" label="Under Maintenance" sequence="4" value="5"/>
-                <element inactive_on_update="false" label="Available" sequence="0" value="1"/>
-                <element inactive_on_update="false" label="Under Cleaning" sequence="3" value="4"/>
-            </choice>
-        </element>
-        <element attributes="edge_encryption_enabled=true,encode_utf8=false" label="Bed" mandatory="true" max_length="32" name="bed" reference="x_2223823_apollo_0_beds" type="reference"/>
         <element choice="1" label="To status" mandatory="true" max_length="40" name="to_status" type="choice">
             <choice>
                 <element inactive_on_update="false" label="Out of Service" sequence="6" value="7"/>
@@ -23,10 +11,22 @@
                 <element inactive_on_update="false" label="Under Cleaning" sequence="3" value="4"/>
             </choice>
         </element>
+        <element label="Bed" mandatory="true" max_length="32" name="bed" reference="x_2223823_apollo_0_beds" type="reference"/>
+        <element label="Changed by" mandatory="true" max_length="32" name="changed_by" reference="sys_user" type="reference"/>
         <element label="Reason" max_length="255" name="reason" type="string"/>
-        <element attributes="edge_encryption_enabled=true,encode_utf8=false" label="Hospital" max_length="32" name="hospital" reference="x_2223823_apollo_0_hospital" reference_qual="javascript:new x_2223823_apollo_0.HospitalRefQual().getQuery(current)" type="reference" use_reference_qualifier="advanced"/>
+        <element label="Hospital" max_length="32" name="hospital" reference="x_2223823_apollo_0_hospital" reference_qual="javascript:new x_2223823_apollo_0.HospitalRefQual().getQuery(current)" type="reference" use_reference_qualifier="advanced"/>
+        <element choice="1" label="From status" max_length="40" name="from_status" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Out of Service" sequence="6" value="7"/>
+                <element inactive_on_update="false" label="Occupied" sequence="2" value="3"/>
+                <element inactive_on_update="false" label="Blocked" sequence="5" value="6"/>
+                <element inactive_on_update="false" label="Reserved" sequence="1" value="2"/>
+                <element inactive_on_update="false" label="Under Maintenance" sequence="4" value="5"/>
+                <element inactive_on_update="false" label="Available" sequence="0" value="1"/>
+                <element inactive_on_update="false" label="Under Cleaning" sequence="3" value="4"/>
+            </choice>
+        </element>
         <element label="Changed At" mandatory="true" max_length="40" name="changed_at" type="glide_date_time"/>
-        <element attributes="edge_encryption_enabled=true,encode_utf8=false" label="Changed by" mandatory="true" max_length="32" name="changed_by" reference="sys_user" type="reference"/>
         <index name="index">
             <element name="bed"/>
         </index>

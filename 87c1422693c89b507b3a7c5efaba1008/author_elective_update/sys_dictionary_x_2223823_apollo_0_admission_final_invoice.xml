@@ -1,126 +1,144 @@
-<?xml version="1.0" encoding="UTF-8"?><record_update>
-    <sys_dictionary action="DELETE" element="final_invoice" table="x_2223823_apollo_0_admission">
-        <active>true</active>
-        <array>false</array>
-        <attributes/>
-        <audit>false</audit>
-        <calculation><![CDATA[(function calculatedFieldValue(current) {
-
-	// Add your code here
-	return '';  // return the calculated value
-
-})(current);]]></calculation>
-        <choice/>
-        <choice_field/>
-        <choice_table/>
-        <column_label>Final Invoice</column_label>
-        <comments/>
-        <create_roles/>
-        <default_value/>
-        <defaultsort/>
-        <delete_roles/>
-        <dependent/>
-        <dependent_on_field/>
-        <display>false</display>
-        <dynamic_creation>false</dynamic_creation>
-        <dynamic_creation_script/>
-        <dynamic_default_value/>
-        <dynamic_ref_qual/>
-        <element>final_invoice</element>
-        <element_reference>false</element_reference>
-        <foreign_database/>
-        <formula/>
-        <function_definition/>
-        <function_field>false</function_field>
-        <internal_type display_value="Reference">reference</internal_type>
-        <mandatory>false</mandatory>
-        <max_length>32</max_length>
-        <name>x_2223823_apollo_0_admission</name>
-        <next_element/>
-        <primary>false</primary>
-        <read_only>false</read_only>
-        <read_only_option/>
-        <read_roles/>
-        <reference display_value="" name="x_2223823_apollo_0_invoice">x_2223823_apollo_0_invoice</reference>
-        <reference_cascade_rule/>
-        <reference_floats>false</reference_floats>
-        <reference_key/>
-        <reference_qual/>
-        <reference_qual_condition/>
-        <reference_type/>
-        <spell_check>false</spell_check>
-        <staged>false</staged>
-        <sys_class_name>sys_dictionary</sys_class_name>
-        <sys_created_by>harshvardhan.chhapola</sys_created_by>
-        <sys_created_on>2026-11-04 06:46:40</sys_created_on>
-        <sys_id>efabda1a47985710273a565a516d43f0</sys_id>
-        <sys_name>Final Invoice</sys_name>
-        <sys_package display_value="Apollo-Hospitals" source="x_2223823_apollo_0">87c1422693c89b507b3a7c5efaba1008</sys_package>
-        <sys_policy/>
-        <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
-        <sys_update_name>sys_dictionary_x_2223823_apollo_0_admission_final_invoice</sys_update_name>
-        <sys_updated_by>harshvardhan.chhapola</sys_updated_by>
-        <sys_updated_on>2026-11-04 06:46:40</sys_updated_on>
-        <table_reference>false</table_reference>
-        <text_index>false</text_index>
-        <unique>false</unique>
-        <use_dependent_field>false</use_dependent_field>
-        <use_dynamic_default>false</use_dynamic_default>
-        <use_reference_qualifier>simple</use_reference_qualifier>
-        <virtual>false</virtual>
-        <virtual_type>script</virtual_type>
-        <widget/>
-        <write_roles/>
-        <xml_view>false</xml_view>
-    </sys_dictionary>
-    <sys_update_version action="INSERT_OR_UPDATE">
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_dictionary">
+  <sys_dictionary action="DELETE" apply_defaults="true" element="final_invoice" table="x_2223823_apollo_0_admission">
+    <sys_id>c1de09fc4750d310273a565a516d43c0</sys_id>
+    <sys_scope display_value="x_2223823_apollo_0">87c1422693c89b507b3a7c5efaba1008</sys_scope>
+    <sys_update_name>sys_dictionary_x_2223823_apollo_0_admission_final_invoice</sys_update_name>
+    <active>true</active>
+    <array>false</array>
+    <attributes>encode_utf8=false</attributes>
+    <audit>false</audit>
+    <calculation/>
+    <choice/>
+    <choice_field/>
+    <choice_table/>
+    <column_label>Final Invoice</column_label>
+    <default_value/>
+    <dependent/>
+    <dependent_on_field/>
+    <display>false</display>
+    <dynamic_creation/>
+    <dynamic_creation_script/>
+    <dynamic_ref_qual/>
+    <element>final_invoice</element>
+    <element_reference>false</element_reference>
+    <formula/>
+    <function_definition/>
+    <function_field>false</function_field>
+    <internal_type>reference</internal_type>
+    <mandatory>false</mandatory>
+    <max_length>32</max_length>
+    <name>x_2223823_apollo_0_admission</name>
+    <primary>false</primary>
+    <read_only>false</read_only>
+    <read_only_option/>
+    <reference>x_2223823_apollo_0_invoice</reference>
+    <reference_cascade_rule/>
+    <reference_floats/>
+    <reference_key/>
+    <reference_qual/>
+    <spell_check>false</spell_check>
+    <table_reference>false</table_reference>
+    <text_index>false</text_index>
+    <unique>false</unique>
+    <use_dependent_field>false</use_dependent_field>
+    <use_reference_qualifier>simple</use_reference_qualifier>
+    <virtual/>
+    <virtual_type>script</virtual_type>
+    <widget/>
+    <xml_view>false</xml_view>
+  </sys_dictionary>
+<sys_update_version action="INSERT_OR_UPDATE">
         <action>DELETE</action>
         <application display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</application>
         <file_path/>
         <instance_id>5ada7edb93d06e50d9f6ddd548373c9d</instance_id>
         <instance_name>dev304851</instance_name>
         <name>sys_dictionary_x_2223823_apollo_0_admission_final_invoice</name>
-        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update&gt;&lt;sys_dictionary action="INSERT_OR_UPDATE" element="final_invoice" table="x_2223823_apollo_0_admission"&gt;&lt;active&gt;true&lt;/active&gt;&lt;array&gt;false&lt;/array&gt;&lt;attributes/&gt;&lt;audit&gt;false&lt;/audit&gt;&lt;calculation&gt;&lt;![CDATA[(function calculatedFieldValue(current) {
-
-	// Add your code here
-	return '';  // return the calculated value
-
-})(current);]]&gt;&lt;/calculation&gt;&lt;choice/&gt;&lt;choice_field/&gt;&lt;choice_table/&gt;&lt;column_label&gt;Final Invoice&lt;/column_label&gt;&lt;comments/&gt;&lt;create_roles/&gt;&lt;default_value/&gt;&lt;defaultsort/&gt;&lt;delete_roles/&gt;&lt;dependent/&gt;&lt;dependent_on_field/&gt;&lt;display&gt;false&lt;/display&gt;&lt;dynamic_creation&gt;false&lt;/dynamic_creation&gt;&lt;dynamic_creation_script/&gt;&lt;dynamic_default_value/&gt;&lt;dynamic_ref_qual/&gt;&lt;element&gt;final_invoice&lt;/element&gt;&lt;element_reference&gt;false&lt;/element_reference&gt;&lt;foreign_database/&gt;&lt;formula/&gt;&lt;function_definition/&gt;&lt;function_field&gt;false&lt;/function_field&gt;&lt;internal_type display_value="Reference"&gt;reference&lt;/internal_type&gt;&lt;mandatory&gt;false&lt;/mandatory&gt;&lt;max_length&gt;32&lt;/max_length&gt;&lt;name&gt;x_2223823_apollo_0_admission&lt;/name&gt;&lt;next_element/&gt;&lt;primary&gt;false&lt;/primary&gt;&lt;read_only&gt;false&lt;/read_only&gt;&lt;read_only_option/&gt;&lt;read_roles/&gt;&lt;reference display_value="" name="x_2223823_apollo_0_invoice"&gt;x_2223823_apollo_0_invoice&lt;/reference&gt;&lt;reference_cascade_rule/&gt;&lt;reference_floats&gt;false&lt;/reference_floats&gt;&lt;reference_key/&gt;&lt;reference_qual/&gt;&lt;reference_qual_condition/&gt;&lt;reference_type/&gt;&lt;spell_check&gt;false&lt;/spell_check&gt;&lt;staged&gt;false&lt;/staged&gt;&lt;sys_class_name&gt;sys_dictionary&lt;/sys_class_name&gt;&lt;sys_created_by&gt;harshvardhan.chhapola&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2026-11-04 06:46:40&lt;/sys_created_on&gt;&lt;sys_id&gt;efabda1a47985710273a565a516d43f0&lt;/sys_id&gt;&lt;sys_name&gt;Final Invoice&lt;/sys_name&gt;&lt;sys_package display_value="Apollo-Hospitals" source="x_2223823_apollo_0"&gt;87c1422693c89b507b3a7c5efaba1008&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Apollo-Hospitals"&gt;87c1422693c89b507b3a7c5efaba1008&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_dictionary_x_2223823_apollo_0_admission_final_invoice&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;harshvardhan.chhapola&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2026-11-04 06:46:40&lt;/sys_updated_on&gt;&lt;table_reference&gt;false&lt;/table_reference&gt;&lt;text_index&gt;false&lt;/text_index&gt;&lt;unique&gt;false&lt;/unique&gt;&lt;use_dependent_field&gt;false&lt;/use_dependent_field&gt;&lt;use_dynamic_default&gt;false&lt;/use_dynamic_default&gt;&lt;use_reference_qualifier&gt;simple&lt;/use_reference_qualifier&gt;&lt;virtual&gt;false&lt;/virtual&gt;&lt;virtual_type&gt;script&lt;/virtual_type&gt;&lt;widget/&gt;&lt;write_roles/&gt;&lt;xml_view&gt;false&lt;/xml_view&gt;&lt;/sys_dictionary&gt;&lt;/record_update&gt;</payload>
-        <payload_hash>1032846356</payload_hash>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_dictionary">
+  <sys_dictionary action="INSERT_OR_UPDATE" apply_defaults="true" element="final_invoice" table="x_2223823_apollo_0_admission">
+    <sys_id>c1de09fc4750d310273a565a516d43c0</sys_id>
+    <sys_scope display_value="x_2223823_apollo_0">87c1422693c89b507b3a7c5efaba1008</sys_scope>
+    <sys_update_name>sys_dictionary_x_2223823_apollo_0_admission_final_invoice</sys_update_name>
+    <active>true</active>
+    <array>false</array>
+    <attributes>encode_utf8=false</attributes>
+    <audit>false</audit>
+    <calculation/>
+    <choice/>
+    <choice_field/>
+    <choice_table/>
+    <column_label>Final Invoice</column_label>
+    <default_value/>
+    <dependent/>
+    <dependent_on_field/>
+    <display>false</display>
+    <dynamic_creation/>
+    <dynamic_creation_script/>
+    <dynamic_ref_qual/>
+    <element>final_invoice</element>
+    <element_reference>false</element_reference>
+    <formula/>
+    <function_definition/>
+    <function_field>false</function_field>
+    <internal_type>reference</internal_type>
+    <mandatory>false</mandatory>
+    <max_length>32</max_length>
+    <name>x_2223823_apollo_0_admission</name>
+    <primary>false</primary>
+    <read_only>false</read_only>
+    <read_only_option/>
+    <reference>x_2223823_apollo_0_invoice</reference>
+    <reference_cascade_rule/>
+    <reference_floats/>
+    <reference_key/>
+    <reference_qual/>
+    <spell_check>false</spell_check>
+    <table_reference>false</table_reference>
+    <text_index>false</text_index>
+    <unique>false</unique>
+    <use_dependent_field>false</use_dependent_field>
+    <use_reference_qualifier>simple</use_reference_qualifier>
+    <virtual/>
+    <virtual_type>script</virtual_type>
+    <widget/>
+    <xml_view>false</xml_view>
+  </sys_dictionary>
+</record_update>]]></payload>
+        <payload_hash>22496712</payload_hash>
         <record_name>Admission.Final Invoice</record_name>
         <reverted_from/>
-        <source>23162292479c5710273a565a516d437a</source>
+        <source>0175a7aa47981b10273a565a516d4307</source>
         <source_table>sys_update_set</source_table>
         <state>previous</state>
-        <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2026-11-04 07:31:15</sys_created_on>
-        <sys_id>eb166292479c5710273a565a516d4378</sys_id>
+        <sys_created_by>harshvardhan.chhapola</sys_created_by>
+        <sys_created_on>2026-11-05 06:46:45</sys_created_on>
+        <sys_id>6d85efaa47981b10273a565a516d43dd</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_recorded_at>1a1a5781fdb0000001</sys_recorded_at>
-        <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2026-11-04 07:31:15</sys_updated_on>
+        <sys_recorded_at>1a1aa75bd920000001</sys_recorded_at>
+        <sys_updated_by>harshvardhan.chhapola</sys_updated_by>
+        <sys_updated_on>2026-11-05 06:46:45</sys_updated_on>
         <type>Dictionary</type>
-        <update_guid>b6eb529a0298571053736574abdc9371</update_guid>
-        <update_guid_history>b6eb529a0298571053736574abdc9371:1032846356,3eb5e69e1f5c571035b32e610d0cb054:0,b6eb529a0298571053736574abdc9371:1032846356,e8442a12165c57100453358b2750fd94:0,b6eb529a0298571053736574abdc9371:1032846356,85bfdada04d85710f0baefc534cddcd3:0,26eb529a8e98571062f65b4b81b5f627:1032846356,b98bd61acf9857102ea2fa3ecc645882:543607415,68ee49302190d3100c45651140966289:0,7a2ecdf4c550d3101e5e846c4ebeb212:177666687,5daf183cc2109310df4eb08da8d83dd3:0,55af183c7a109310533700092c4936b3:-1585906237</update_guid_history>
+        <update_guid>e985efaafa981b106e0eb9a607627bdc</update_guid>
+        <update_guid_history>e985efaafa981b106e0eb9a607627bdc:-1861216829,9d998f56249497108e0e31aab044ce37:0,75368b5e57d097106cfdb5ae1160f1f9:543607415,8fe003d275909710a19247e1e23b376c:-1585906237,0735f2561f109710c3f753b54d8e006b:1512917448,b6eb529a0298571053736574abdc9371:1032846356,3eb5e69e1f5c571035b32e610d0cb054:0,b6eb529a0298571053736574abdc9371:1032846356,e8442a12165c57100453358b2750fd94:0,b6eb529a0298571053736574abdc9371:1032846356,85bfdada04d85710f0baefc534cddcd3:0,26eb529a8e98571062f65b4b81b5f627:1032846356,b98bd61acf9857102ea2fa3ecc645882:543607415,68ee49302190d3100c45651140966289:0,7a2ecdf4c550d3101e5e846c4ebeb212:177666687,5daf183cc2109310df4eb08da8d83dd3:0,55af183c7a109310533700092c4936b3:-1585906237</update_guid_history>
     </sys_update_version>
     <sys_metadata_delete action="INSERT_OR_UPDATE">
         <sys_audit_delete/>
         <sys_class_name>sys_metadata_delete</sys_class_name>
         <sys_created_by>harshvardhan.chhapola</sys_created_by>
-        <sys_created_on>2026-11-04 08:37:17</sys_created_on>
+        <sys_created_on>2026-11-06 06:44:42</sys_created_on>
         <sys_db_object display_value="" name="sys_dictionary">sys_dictionary</sys_db_object>
-        <sys_id>36ad9c2c1ba443d5882280629a606a89</sys_id>
-        <sys_metadata>efabda1a47985710273a565a516d43f0</sys_metadata>
+        <sys_id>3a30e4a459214c7ab8a6ad7bfdead629</sys_id>
+        <sys_metadata>c1de09fc4750d310273a565a516d43c0</sys_metadata>
         <sys_mod_count>0</sys_mod_count>
         <sys_name>Final Invoice</sys_name>
         <sys_package display_value="Apollo-Hospitals" source="x_2223823_apollo_0">87c1422693c89b507b3a7c5efaba1008</sys_package>
-        <sys_parent display_value="AIDS">9aa56867938c13107b3a7c5efaba10c9</sys_parent>
+        <sys_parent display_value="">9aa56867938c13107b3a7c5efaba10c9</sys_parent>
         <sys_policy/>
         <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
         <sys_scope_delete display_value="">1a2f7aa8dfc34e3a86d3f0bede3c2784</sys_scope_delete>
         <sys_update_name>sys_dictionary_x_2223823_apollo_0_admission_final_invoice</sys_update_name>
-        <sys_update_version display_value="sys_dictionary_x_2223823_apollo_0_admission_final_invoice">eb166292479c5710273a565a516d4378</sys_update_version>
+        <sys_update_version display_value="sys_dictionary_x_2223823_apollo_0_admission_final_invoice">6d85efaa47981b10273a565a516d43dd</sys_update_version>
         <sys_updated_by>harshvardhan.chhapola</sys_updated_by>
-        <sys_updated_on>2026-11-04 08:37:17</sys_updated_on>
+        <sys_updated_on>2026-11-06 06:44:42</sys_updated_on>
     </sys_metadata_delete>
 </record_update>

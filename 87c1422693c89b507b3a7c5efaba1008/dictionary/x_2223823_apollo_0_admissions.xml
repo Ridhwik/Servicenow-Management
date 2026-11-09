@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element attributes="enforce_dot_walk_cross_scope_access=true" db_object_id="c2964ce6479c9710273a565a516d433f" max_length="40" name="x_2223823_apollo_0_admissions" type="collection">
+        <element label="Admitting doctor" mandatory="true" max_length="32" name="admitting_doctor" reference="x_2223823_apollo_0_doctor" reference_qual="javascript: current.hospital ? 'primary_hospital=' + current.hospital + '^status=1' : 'sys_idISEMPTY';" type="reference" use_reference_qualifier="advanced"/>
+        <element label="Room" max_length="32" name="room" reference="x_2223823_apollo_0_rooms" reference_qual="javascript: new x_2223823_apollo_0.HospitalRefQual().getRoomsWithFreeBed(current);" type="reference" use_reference_qualifier="advanced"/>
+        <element label="Hospital" mandatory="true" max_length="32" name="hospital" reference="x_2223823_apollo_0_hospital" reference_qual="javascript:new x_2223823_apollo_0.HospitalRefQual().getQuery(current)" type="reference" use_reference_qualifier="advanced"/>
+        <element label="Final invoice" max_length="32" name="final_invoice" reference="x_2223823_apollo_0_invoice" reference_qual="javascript: current.sys_id ? 'admission=' + current.sys_id : 'sys_idISEMPTY';" type="reference" use_reference_qualifier="advanced"/>
+        <element label="Diagnosed by" max_length="32" name="diagnosed_by" reference="x_2223823_apollo_0_doctor" reference_qual="status=1^EQ" reference_qual_condition="status=1^EQ" type="reference"/>
+        <element label="Bed" max_length="32" name="bed" reference="x_2223823_apollo_0_beds" reference_qual="javascript: current.room ? ('room=' + current.room + '^active=true^status=1') : 'sys_idISEMPTY';" type="reference" use_reference_qualifier="advanced"/>
+    </element>
+</database>

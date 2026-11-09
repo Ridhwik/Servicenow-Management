@@ -1,14 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
     <element attributes="enforce_dot_walk_cross_scope_access=true" db_object_id="d5ce9c3147941310273a565a516d434c" label="Charge Line" max_length="40" name="x_2223823_apollo_0_charge_line" type="collection">
-        <element attributes="edge_encryption_enabled=true,encode_utf8=false" label="Invoice" max_length="32" name="invoice" reference="x_2223823_apollo_0_invoice" type="reference"/>
-        <element attributes="edge_encryption_enabled=true" choice="1" label="Status" mandatory="true" max_length="40" name="status" type="choice">
+        <element label="Description" max_length="255" name="description" type="string"/>
+        <element label="Amount" mandatory="true" max_length="20" name="amount" type="currency"/>
+        <element label="Invoice" max_length="32" name="invoice" reference="x_2223823_apollo_0_invoice" type="reference"/>
+        <element label="Patient" mandatory="true" max_length="32" name="patient" reference="x_2223823_apollo_0_patient" type="reference"/>
+        <element dependent="description" label="Source Table" max_length="32" name="source_table" type="string"/>
+        <element choice="1" label="Status" mandatory="true" max_length="40" name="status" type="choice">
             <choice>
                 <element inactive_on_update="false" label="Cancelled" sequence="3" value="cancelled"/>
                 <element inactive_on_update="false" label="Invoiced" sequence="2" value="invoiced"/>
                 <element inactive_on_update="false" label="Pending" sequence="1" value="pending"/>
             </choice>
         </element>
-        <element attributes="edge_encryption_enabled=true" choice="1" label="Charge type" mandatory="true" max_length="40" name="charge_type" type="choice">
+        <element label="Hospital" mandatory="true" max_length="32" name="hospital" reference="x_2223823_apollo_0_hospital" reference_qual="javascript:new x_2223823_apollo_0.HospitalRefQual().getQuery(current)" type="reference" use_reference_qualifier="advanced"/>
+        <element choice="1" label="Charge type" mandatory="true" max_length="40" name="charge_type" type="choice">
             <choice>
                 <element inactive_on_update="false" label="Registration" sequence="6" value="registration"/>
                 <element inactive_on_update="false" label="Final bill" sequence="9" value="final_bill"/>
@@ -21,12 +26,7 @@
                 <element inactive_on_update="false" label="Lab" sequence="3" value="lab"/>
             </choice>
         </element>
-        <element label="Description" max_length="255" name="description" type="string"/>
-        <element attributes="edge_encryption_enabled=true,encode_utf8=false" label="Patient" mandatory="true" max_length="32" name="patient" reference="x_2223823_apollo_0_patient" type="reference"/>
-        <element attributes="edge_encryption_enabled=true,encode_utf8=false" label="Hospital" mandatory="true" max_length="32" name="hospital" reference="x_2223823_apollo_0_hospital" reference_qual="javascript:new x_2223823_apollo_0.HospitalRefQual().getQuery(current)" type="reference" use_reference_qualifier="advanced"/>
-        <element attributes="edge_encryption_enabled=true" dependent="source_table" dependent_on_field="source_table" label="Source record" mandatory="true" max_length="32" name="source_record" type="document_id" use_dependent_field="true"/>
-        <element attributes="edge_encryption_enabled=true,omit_sys_original=true" label="Amount" mandatory="true" max_length="20" name="amount" type="currency"/>
-        <element dependent="description" label="Source Table" max_length="32" name="source_table" type="string"/>
+        <element dependent="source_table" dependent_on_field="source_table" label="Source record" mandatory="true" max_length="32" name="source_record" type="document_id" use_dependent_field="true"/>
         <index name="index">
             <element name="hospital"/>
         </index>

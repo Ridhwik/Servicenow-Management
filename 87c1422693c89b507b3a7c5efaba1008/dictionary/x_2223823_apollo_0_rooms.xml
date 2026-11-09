@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
     <element attributes="enforce_dot_walk_cross_scope_access=true" db_object_id="469360af934c13107b3a7c5efaba1001" label="Rooms" max_length="40" name="x_2223823_apollo_0_rooms" type="collection">
+        <element label="Active" max_length="255" name="active" type="boolean"/>
+        <element label="Ward" max_length="32" name="ward" reference="x_2223823_apollo_0_wards" reference_qual="javascript: (current.hospital &amp;&amp; current.floor) ? 'hospital=' + current.hospital + '^floor=' + current.floor : (current.hospital ? 'hospital=' + current.hospital : 'sys_idISEMPTY');" type="reference" use_reference_qualifier="advanced"/>
+        <element attributes="tree_picker=true" label="Floor" mandatory="true" max_length="32" name="floor" reference="cmn_location" reference_qual="javascript: new x_2223823_apollo_0.HospitalRefQual().getHospitalFloors(current);" type="reference" use_reference_qualifier="advanced"/>
+        <element display="true" label="Room number" mandatory="true" max_length="40" name="room_number" type="string"/>
         <element choice="1" label="Room Category" mandatory="true" max_length="255" name="room_category" type="choice">
             <choice>
                 <element inactive_on_update="false" label="Labour / Maternity" sequence="6" value="Labour / Maternity"/>
@@ -14,11 +18,7 @@
                 <element inactive_on_update="false" label="NICU" sequence="4" value="NICU"/>
             </choice>
         </element>
-        <element attributes="edge_encryption_enabled=true" label="Active" max_length="255" name="active" type="boolean"/>
-        <element attributes="tree_picker=true" label="Floor" mandatory="true" max_length="32" name="floor" reference="cmn_location" type="reference"/>
-        <element display="true" label="Room number" mandatory="true" max_length="40" name="room_number" type="string"/>
-        <element attributes="edge_encryption_enabled=true,encode_utf8=false" label="Hospital" mandatory="true" max_length="32" name="hospital" reference="x_2223823_apollo_0_hospital" reference_qual="javascript:new x_2223823_apollo_0.HospitalRefQual().getQuery(current)" type="reference" use_reference_qualifier="advanced"/>
-        <element attributes="edge_encryption_enabled=true,encode_utf8=false" label="Ward" max_length="32" name="ward" reference="x_2223823_apollo_0_wards" type="reference"/>
+        <element label="Hospital" mandatory="true" max_length="32" name="hospital" reference="x_2223823_apollo_0_hospital" reference_qual="javascript:new x_2223823_apollo_0.HospitalRefQual().getQuery(current)" type="reference" use_reference_qualifier="advanced"/>
         <index name="index">
             <element name="floor"/>
         </index>

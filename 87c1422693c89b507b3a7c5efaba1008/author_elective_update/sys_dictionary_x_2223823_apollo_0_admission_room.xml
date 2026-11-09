@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_dictionary">
+  <sys_dictionary action="DELETE" apply_defaults="true" element="room" table="x_2223823_apollo_0_admission">
+    <sys_id>77cec1fc4750d310273a565a516d43a7</sys_id>
+    <sys_scope display_value="x_2223823_apollo_0">87c1422693c89b507b3a7c5efaba1008</sys_scope>
+    <sys_update_name>sys_dictionary_x_2223823_apollo_0_admission_room</sys_update_name>
+    <active>true</active>
+    <array>false</array>
+    <attributes/>
+    <audit>false</audit>
+    <calculation/>
+    <choice/>
+    <choice_field/>
+    <choice_table/>
+    <column_label>Room</column_label>
+    <default_value/>
+    <dependent/>
+    <dependent_on_field/>
+    <display>false</display>
+    <dynamic_creation/>
+    <dynamic_creation_script/>
+    <dynamic_ref_qual/>
+    <element>room</element>
+    <element_reference>false</element_reference>
+    <formula/>
+    <function_definition/>
+    <function_field>false</function_field>
+    <internal_type>reference</internal_type>
+    <mandatory>true</mandatory>
+    <max_length>32</max_length>
+    <name>x_2223823_apollo_0_admission</name>
+    <primary>false</primary>
+    <read_only>false</read_only>
+    <read_only_option/>
+    <reference>x_2223823_apollo_0_rooms</reference>
+    <reference_cascade_rule/>
+    <reference_floats/>
+    <reference_key/>
+    <reference_qual/>
+    <spell_check>false</spell_check>
+    <table_reference>false</table_reference>
+    <text_index>false</text_index>
+    <unique>false</unique>
+    <use_dependent_field>false</use_dependent_field>
+    <use_reference_qualifier>simple</use_reference_qualifier>
+    <virtual/>
+    <virtual_type>script</virtual_type>
+    <widget/>
+    <xml_view>false</xml_view>
+  </sys_dictionary>
+<sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</application>
+        <file_path/>
+        <instance_id>5ada7edb93d06e50d9f6ddd548373c9d</instance_id>
+        <instance_name>dev304851</instance_name>
+        <name>sys_dictionary_x_2223823_apollo_0_admission_room</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_dictionary">
+  <sys_dictionary action="INSERT_OR_UPDATE" apply_defaults="true" element="room" table="x_2223823_apollo_0_admission">
+    <sys_id>77cec1fc4750d310273a565a516d43a7</sys_id>
+    <sys_scope display_value="x_2223823_apollo_0">87c1422693c89b507b3a7c5efaba1008</sys_scope>
+    <sys_update_name>sys_dictionary_x_2223823_apollo_0_admission_room</sys_update_name>
+    <active>true</active>
+    <array>false</array>
+    <attributes/>
+    <audit>false</audit>
+    <calculation/>
+    <choice/>
+    <choice_field/>
+    <choice_table/>
+    <column_label>Room</column_label>
+    <default_value/>
+    <dependent/>
+    <dependent_on_field/>
+    <display>false</display>
+    <dynamic_creation/>
+    <dynamic_creation_script/>
+    <dynamic_ref_qual/>
+    <element>room</element>
+    <element_reference>false</element_reference>
+    <formula/>
+    <function_definition/>
+    <function_field>false</function_field>
+    <internal_type>reference</internal_type>
+    <mandatory>true</mandatory>
+    <max_length>32</max_length>
+    <name>x_2223823_apollo_0_admission</name>
+    <primary>false</primary>
+    <read_only>false</read_only>
+    <read_only_option/>
+    <reference>x_2223823_apollo_0_rooms</reference>
+    <reference_cascade_rule/>
+    <reference_floats/>
+    <reference_key/>
+    <reference_qual/>
+    <spell_check>false</spell_check>
+    <table_reference>false</table_reference>
+    <text_index>false</text_index>
+    <unique>false</unique>
+    <use_dependent_field>false</use_dependent_field>
+    <use_reference_qualifier>simple</use_reference_qualifier>
+    <virtual/>
+    <virtual_type>script</virtual_type>
+    <widget/>
+    <xml_view>false</xml_view>
+  </sys_dictionary>
+</record_update>]]></payload>
+        <payload_hash>1196673381</payload_hash>
+        <record_name>Admission.Room</record_name>
+        <reverted_from/>
+        <source>0175a7aa47981b10273a565a516d4307</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>harshvardhan.chhapola</sys_created_by>
+        <sys_created_on>2026-11-05 06:46:47</sys_created_on>
+        <sys_id>c68523ea47981b10273a565a516d43f1</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1a1aa75c6d50000001</sys_recorded_at>
+        <sys_updated_by>harshvardhan.chhapola</sys_updated_by>
+        <sys_updated_on>2026-11-05 06:46:47</sys_updated_on>
+        <type>Dictionary</type>
+        <update_guid>4a8523eacc981b107e7a4c500d0b42ef</update_guid>
+        <update_guid_history>4a8523eacc981b107e7a4c500d0b42ef:742174241,ed733bde00d89710f944a4c59dba784f:149959228,a8598f5277949710f4e342e113eb677a:0,cf85c316e8d097100ce2f99f64bbbd96:643155857,1ee6dad6a95857106bc1458fd6379f73:742174241,3eb52a9e635c57109d7e5a2e86d75720:0,1ee6dad6a95857106bc1458fd6379f73:742174241,b4446a121c5c5710b4b3072b7b8abf6d:0,1ee6dad6a95857106bc1458fd6379f73:742174241,49bf1edae8d857102b6f102aca505455:0,1ee6dad6a95857106bc1458fd6379f73:742174241,b4ee8930bd90d310e2f3268a26578630:0,c5fd45344050d310590d65e412d3086f:1263380526,11af583c1f109310e1322b2ce905478d:0,19af583c861093109adc313fe67bf46c:-1427417019</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>harshvardhan.chhapola</sys_created_by>
+        <sys_created_on>2026-11-06 06:44:41</sys_created_on>
+        <sys_db_object display_value="" name="sys_dictionary">sys_dictionary</sys_db_object>
+        <sys_id>2fa9a6810ed142c58f1d215426404969</sys_id>
+        <sys_metadata>77cec1fc4750d310273a565a516d43a7</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Room</sys_name>
+        <sys_package display_value="Apollo-Hospitals" source="x_2223823_apollo_0">87c1422693c89b507b3a7c5efaba1008</sys_package>
+        <sys_parent display_value="">9aa56867938c13107b3a7c5efaba10c9</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
+        <sys_scope_delete display_value="">1a2f7aa8dfc34e3a86d3f0bede3c2784</sys_scope_delete>
+        <sys_update_name>sys_dictionary_x_2223823_apollo_0_admission_room</sys_update_name>
+        <sys_update_version display_value="sys_dictionary_x_2223823_apollo_0_admission_room">c68523ea47981b10273a565a516d43f1</sys_update_version>
+        <sys_updated_by>harshvardhan.chhapola</sys_updated_by>
+        <sys_updated_on>2026-11-06 06:44:41</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
-    <element attributes="enforce_dot_walk_cross_scope_access=true" db_object_id="55369971479c1310273a565a516d436a" extends="cmdb_ci_hardware" max_length="40" name="x_2223823_apollo_0_cmdb_ci_medical_equipments" type="collection">
-        <element attributes="edge_encryption_enabled=true" choice="1" label="Equipment Type" mandatory="true" max_length="40" name="u_equipment_type" type="choice">
+    <element attributes="enforce_dot_walk_cross_scope_access=true" db_object_id="55369971479c1310273a565a516d436a" extends="cmdb_ci_hardware" label="Medical Equipments" max_length="40" name="x_2223823_apollo_0_cmdb_ci_medical_equipments" type="collection">
+        <element choice="1" label="Equipment Type" mandatory="true" max_length="40" name="u_equipment_type" type="choice">
             <choice>
                 <element inactive_on_update="false" label="X-ray" sequence="2" value="X-ray"/>
                 <element inactive_on_update="false" label="Ultrasound" sequence="3" value="Ultrasound"/>

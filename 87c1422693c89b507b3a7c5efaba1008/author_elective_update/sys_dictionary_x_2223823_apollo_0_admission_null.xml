@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_dictionary">
+  <sys_dictionary action="DELETE" apply_defaults="true" element="" table="x_2223823_apollo_0_admission">
+    <sys_id>aececdbc4750d310273a565a516d437d</sys_id>
+    <sys_scope display_value="x_2223823_apollo_0">87c1422693c89b507b3a7c5efaba1008</sys_scope>
+    <sys_update_name>sys_dictionary_x_2223823_apollo_0_admission_null</sys_update_name>
+    <active>true</active>
+    <attributes>enforce_dot_walk_cross_scope_access=true</attributes>
+    <audit>false</audit>
+    <element/>
+    <internal_type>collection</internal_type>
+    <name>x_2223823_apollo_0_admission</name>
+    <read_only>false</read_only>
+    <sizeclass/>
+    <text_index>false</text_index>
+  </sys_dictionary>
+<sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</application>
+        <file_path/>
+        <instance_id>5ada7edb93d06e50d9f6ddd548373c9d</instance_id>
+        <instance_name>dev304851</instance_name>
+        <name>sys_dictionary_x_2223823_apollo_0_admission_null</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_dictionary">
+  <sys_dictionary action="INSERT_OR_UPDATE" apply_defaults="true" element="" table="x_2223823_apollo_0_admission">
+    <sys_id>aececdbc4750d310273a565a516d437d</sys_id>
+    <sys_scope display_value="x_2223823_apollo_0">87c1422693c89b507b3a7c5efaba1008</sys_scope>
+    <sys_update_name>sys_dictionary_x_2223823_apollo_0_admission_null</sys_update_name>
+    <active>true</active>
+    <attributes>enforce_dot_walk_cross_scope_access=true</attributes>
+    <audit>false</audit>
+    <element/>
+    <internal_type>collection</internal_type>
+    <name>x_2223823_apollo_0_admission</name>
+    <read_only>false</read_only>
+    <sizeclass/>
+    <text_index>false</text_index>
+  </sys_dictionary>
+</record_update>]]></payload>
+        <payload_hash>-198402407</payload_hash>
+        <record_name>Admission</record_name>
+        <reverted_from/>
+        <source>0175a7aa47981b10273a565a516d4307</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>harshvardhan.chhapola</sys_created_by>
+        <sys_created_on>2026-11-05 06:46:46</sys_created_on>
+        <sys_id>f18523ea47981b10273a565a516d4378</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1a1aa75c3470000001</sys_recorded_at>
+        <sys_updated_by>harshvardhan.chhapola</sys_updated_by>
+        <sys_updated_on>2026-11-05 06:46:46</sys_updated_on>
+        <type>Dictionary</type>
+        <update_guid>358523ea91981b105217bb30fae42d77</update_guid>
+        <update_guid_history>358523ea91981b105217bb30fae42d77:1286478893,e973f7de48d897109f3c7d2f8f8c3c96:586090176,9c594f5243949710a8a8aabee90c25fa:0,1a360f5e5dd09710d86b670862c2230e:586090176,aa9eb25e4a509710056e0380b538deae:0,f7e7b61e8810971075a02b63f1e04287:586090176,a4ee49309990d3109224d45b5513d4e2:0,262e4df44d50d3100a4e040aa165d19c:586090176,ddaf583c8d1093100e0dbc0742ebde04:0,d1af183c9a1093109f68021dcea59ff1:-1526146072</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>harshvardhan.chhapola</sys_created_by>
+        <sys_created_on>2026-11-06 06:44:41</sys_created_on>
+        <sys_db_object display_value="" name="sys_dictionary">sys_dictionary</sys_db_object>
+        <sys_id>b547fb0c4c394cb8992edd3843d11240</sys_id>
+        <sys_metadata>aececdbc4750d310273a565a516d437d</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_2223823_apollo_0_admission</sys_name>
+        <sys_package display_value="Apollo-Hospitals" source="x_2223823_apollo_0">87c1422693c89b507b3a7c5efaba1008</sys_package>
+        <sys_parent display_value="">9aa56867938c13107b3a7c5efaba10c9</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
+        <sys_scope_delete display_value="">1a2f7aa8dfc34e3a86d3f0bede3c2784</sys_scope_delete>
+        <sys_update_name>sys_dictionary_x_2223823_apollo_0_admission_null</sys_update_name>
+        <sys_update_version display_value="sys_dictionary_x_2223823_apollo_0_admission_null">f18523ea47981b10273a565a516d4378</sys_update_version>
+        <sys_updated_by>harshvardhan.chhapola</sys_updated_by>
+        <sys_updated_on>2026-11-06 06:44:41</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>
