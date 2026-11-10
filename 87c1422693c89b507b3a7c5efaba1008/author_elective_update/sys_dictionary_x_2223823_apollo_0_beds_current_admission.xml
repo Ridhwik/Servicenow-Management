@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_dictionary">
+  <sys_dictionary action="DELETE" apply_defaults="true" element="current_admission" table="x_2223823_apollo_0_beds">
+    <sys_id>29ce0dbc4750d310273a565a516d4359</sys_id>
+    <sys_scope display_value="x_2223823_apollo_0">87c1422693c89b507b3a7c5efaba1008</sys_scope>
+    <sys_update_name>sys_dictionary_x_2223823_apollo_0_beds_current_admission</sys_update_name>
+    <active>true</active>
+    <array>false</array>
+    <attributes/>
+    <audit>false</audit>
+    <calculation/>
+    <choice/>
+    <choice_field/>
+    <choice_table/>
+    <column_label>Current admission</column_label>
+    <default_value/>
+    <dependent/>
+    <dependent_on_field/>
+    <display>false</display>
+    <dynamic_creation/>
+    <dynamic_creation_script/>
+    <dynamic_ref_qual/>
+    <element>current_admission</element>
+    <element_reference>false</element_reference>
+    <formula/>
+    <function_definition/>
+    <function_field>false</function_field>
+    <internal_type>reference</internal_type>
+    <mandatory>false</mandatory>
+    <max_length>32</max_length>
+    <name>x_2223823_apollo_0_beds</name>
+    <primary>false</primary>
+    <read_only>true</read_only>
+    <read_only_option>instance_configured</read_only_option>
+    <reference>x_2223823_apollo_0_admission</reference>
+    <reference_cascade_rule/>
+    <reference_floats/>
+    <reference_key/>
+    <reference_qual/>
+    <spell_check>false</spell_check>
+    <table_reference>false</table_reference>
+    <text_index>false</text_index>
+    <unique>false</unique>
+    <use_dependent_field>false</use_dependent_field>
+    <use_reference_qualifier>simple</use_reference_qualifier>
+    <virtual/>
+    <virtual_type>script</virtual_type>
+    <widget/>
+    <xml_view>false</xml_view>
+  </sys_dictionary>
+<sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</application>
+        <file_path/>
+        <instance_id>5ada7edb93d06e50d9f6ddd548373c9d</instance_id>
+        <instance_name>dev304851</instance_name>
+        <name>sys_dictionary_x_2223823_apollo_0_beds_current_admission</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_dictionary">
+  <sys_dictionary action="INSERT_OR_UPDATE" apply_defaults="true" element="current_admission" table="x_2223823_apollo_0_beds">
+    <sys_id>29ce0dbc4750d310273a565a516d4359</sys_id>
+    <sys_scope display_value="x_2223823_apollo_0">87c1422693c89b507b3a7c5efaba1008</sys_scope>
+    <sys_update_name>sys_dictionary_x_2223823_apollo_0_beds_current_admission</sys_update_name>
+    <active>true</active>
+    <array>false</array>
+    <attributes/>
+    <audit>false</audit>
+    <calculation/>
+    <choice/>
+    <choice_field/>
+    <choice_table/>
+    <column_label>Current admission</column_label>
+    <default_value/>
+    <dependent/>
+    <dependent_on_field/>
+    <display>false</display>
+    <dynamic_creation/>
+    <dynamic_creation_script/>
+    <dynamic_ref_qual/>
+    <element>current_admission</element>
+    <element_reference>false</element_reference>
+    <formula/>
+    <function_definition/>
+    <function_field>false</function_field>
+    <internal_type>reference</internal_type>
+    <mandatory>false</mandatory>
+    <max_length>32</max_length>
+    <name>x_2223823_apollo_0_beds</name>
+    <primary>false</primary>
+    <read_only>true</read_only>
+    <read_only_option>instance_configured</read_only_option>
+    <reference>x_2223823_apollo_0_admission</reference>
+    <reference_cascade_rule/>
+    <reference_floats/>
+    <reference_key/>
+    <reference_qual/>
+    <spell_check>false</spell_check>
+    <table_reference>false</table_reference>
+    <text_index>false</text_index>
+    <unique>false</unique>
+    <use_dependent_field>false</use_dependent_field>
+    <use_reference_qualifier>simple</use_reference_qualifier>
+    <virtual/>
+    <virtual_type>script</virtual_type>
+    <widget/>
+    <xml_view>false</xml_view>
+  </sys_dictionary>
+</record_update>]]></payload>
+        <payload_hash>-1166646556</payload_hash>
+        <record_name>Beds.Current admission</record_name>
+        <reverted_from/>
+        <source>0175a7aa47981b10273a565a516d4307</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>harshvardhan.chhapola</sys_created_by>
+        <sys_created_on>2026-11-05 06:46:53</sys_created_on>
+        <sys_id>638527ea47981b10273a565a516d431f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1a1aa75ddc30000001</sys_recorded_at>
+        <sys_updated_by>harshvardhan.chhapola</sys_updated_by>
+        <sys_updated_on>2026-11-05 06:46:53</sys_updated_on>
+        <type>Dictionary</type>
+        <update_guid>638527eaed981b10486aaac6b9107e1e</update_guid>
+        <update_guid_history>638527eaed981b10486aaac6b9107e1e:344234106,b9943ca2cf14d7104ecdc3dd93c1e6ac:-1517206107,69943ca2d814d7107fa1597c95b1b697:602090100,0bc3fb12701c97103982d6da92a07810:-597032344,2d594392aa949710451f497c72493afc:0,ed958b16d0d09710f4eb94551532df24:2028645678,edee4d308890d3102d2b00c53ba1664a:0,a7fd8d34d350d310d06cb9d19630a784:2028645678,52af1c3c9d1093107e1c4e758dba1769:0,1aaf1c3c5f109310d3f85dcb31a1b662:-1714429674</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>ridhwik.jangid</sys_created_by>
+        <sys_created_on>2026-11-06 06:44:44</sys_created_on>
+        <sys_db_object display_value="" name="sys_dictionary">sys_dictionary</sys_db_object>
+        <sys_id>02c476a251744b60a322a811761db990</sys_id>
+        <sys_metadata>ed94f8a24714d710273a565a516d43f3</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Current admission</sys_name>
+        <sys_package display_value="Apollo-Hospitals" source="x_2223823_apollo_0">87c1422693c89b507b3a7c5efaba1008</sys_package>
+        <sys_parent display_value="Beds">4e04e4ef934c13107b3a7c5efaba1012</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
+        <sys_scope_delete display_value="">1a2f7aa8dfc34e3a86d3f0bede3c2784</sys_scope_delete>
+        <sys_update_name>sys_dictionary_x_2223823_apollo_0_beds_current_admission</sys_update_name>
+        <sys_update_version display_value="sys_dictionary_x_2223823_apollo_0_beds_current_admission">638527ea47981b10273a565a516d431f</sys_update_version>
+        <sys_updated_by>ridhwik.jangid</sys_updated_by>
+        <sys_updated_on>2026-11-06 06:44:44</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

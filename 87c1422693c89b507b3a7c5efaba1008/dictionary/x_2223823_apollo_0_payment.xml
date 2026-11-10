@@ -2,45 +2,45 @@
     <element attributes="enforce_dot_walk_cross_scope_access=true" db_object_id="5583e495475c9710273a565a516d4390" label="Payment" max_length="40" name="x_2223823_apollo_0_payment" type="collection">
         <element choice="1" label="Patient type" mandatory="true" max_length="40" name="patient_type" type="choice">
             <choice>
-                <element inactive_on_update="false" label="Video" sequence="2" value="video"/>
                 <element inactive_on_update="false" label="OPD" sequence="1" value="opd"/>
                 <element inactive_on_update="false" label="Inpatient" sequence="3" value="inpatient"/>
+                <element inactive_on_update="false" label="Video" sequence="2" value="video"/>
             </choice>
         </element>
-        <element label="Patient" mandatory="true" max_length="32" name="patient" reference="x_2223823_apollo_0_patient" type="reference"/>
-        <element attributes="ignore_filter_on_new=true" default="javascript:global.getNextObjNumberPadded();" label="Number" max_length="40" name="number" read_only="true" read_only_option="strict_read_only" type="string"/>
-        <element label="Stripe transaction reference" max_length="100" name="stripe_reference" type="string"/>
         <element choice="1" label="Mode" mandatory="true" max_length="40" name="mode" type="choice">
             <choice>
-                <element inactive_on_update="false" label="Cash" sequence="1" value="cash"/>
                 <element inactive_on_update="false" label="Online" sequence="2" value="online"/>
+                <element inactive_on_update="false" label="Cash" sequence="1" value="cash"/>
             </choice>
         </element>
+        <element label="Invoice" max_length="32" name="invoice" reference="x_2223823_apollo_0_invoice" reference_qual="javascript:new Payment().getInvoiceRefQual(current);" type="reference" use_reference_qualifier="advanced"/>
+        <element label="Patient" mandatory="true" max_length="32" name="patient" reference="x_2223823_apollo_0_patient" type="reference"/>
         <element choice="1" label="Reconciliation status" max_length="40" name="reconciliation_status" type="choice">
             <choice>
-                <element inactive_on_update="false" label="Unreconciled" sequence="1" value="unreconciled"/>
                 <element inactive_on_update="false" label="Reconciled" sequence="2" value="reconciled"/>
+                <element inactive_on_update="false" label="Unreconciled" sequence="1" value="unreconciled"/>
             </choice>
         </element>
-        <element label="Hospital" mandatory="true" max_length="32" name="hospital" reference="x_2223823_apollo_0_hospital" type="reference"/>
-        <element label="Original payment" max_length="32" name="original_payment" reference="x_2223823_apollo_0_payment" type="reference"/>
-        <element label="Invoice" max_length="32" name="invoice" reference="x_2223823_apollo_0_invoice" type="reference"/>
         <element choice="1" label="Status" mandatory="true" max_length="40" name="status" type="choice">
             <choice>
-                <element inactive_on_update="false" label="Succeeded" sequence="2" value="succeeded"/>
                 <element inactive_on_update="false" label="Pending" sequence="1" value="pending"/>
                 <element inactive_on_update="false" label="Failed" sequence="3" value="failed"/>
+                <element inactive_on_update="false" label="Succeeded" sequence="2" value="succeeded"/>
             </choice>
         </element>
         <element choice="1" label="Kind" mandatory="true" max_length="40" name="kind" type="choice">
             <choice>
-                <element inactive_on_update="false" label="Advance" sequence="2" value="advance"/>
                 <element inactive_on_update="false" label="Payment" sequence="1" value="payment"/>
                 <element inactive_on_update="false" label="Refund" sequence="3" value="refund"/>
+                <element inactive_on_update="false" label="Advance" sequence="2" value="advance"/>
             </choice>
         </element>
+        <element attributes="ignore_filter_on_new=true" default="javascript:global.getNextObjNumberPadded();" label="Number" max_length="40" name="number" read_only="true" read_only_option="strict_read_only" type="string"/>
+        <element label="Hospital" mandatory="true" max_length="32" name="hospital" reference="x_2223823_apollo_0_hospital" reference_qual="javascript:new x_2223823_apollo_0.HospitalRefQual().getQuery(current)" type="reference" use_reference_qualifier="advanced"/>
         <element label="Amount" mandatory="true" max_length="20" name="amount" type="currency"/>
-        <element label="Collected by" max_length="32" name="collected_by" reference="sys_user" type="reference"/>
+        <element label="Original payment" max_length="32" name="original_payment" reference="x_2223823_apollo_0_payment" reference_qual="javascript:new Payment().getOriginalPaymentRefQual(current);" type="reference" use_reference_qualifier="advanced"/>
+        <element label="Collected by" max_length="32" name="collected_by" reference="sys_user" reference_qual="javascript:new Payment().getCollectedByRefQual(current);" type="reference" use_reference_qualifier="advanced"/>
+        <element label="Stripe transaction reference" max_length="100" name="stripe_reference" type="string"/>
         <index name="index">
             <element name="collected_by"/>
         </index>
@@ -55,6 +55,9 @@
         </index>
         <index name="index5">
             <element name="patient"/>
+        </index>
+        <index name="index6">
+            <element name="reconciliation_status"/>
         </index>
     </element>
 </database>

@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_dictionary">
+  <sys_dictionary action="DELETE" apply_defaults="true" element="admission" table="x_2223823_apollo_0_bed_reservations">
+    <sys_id>b6ce01fc4750d310273a565a516d4394</sys_id>
+    <sys_scope display_value="x_2223823_apollo_0">87c1422693c89b507b3a7c5efaba1008</sys_scope>
+    <sys_update_name>sys_dictionary_x_2223823_apollo_0_bed_reservations_admission</sys_update_name>
+    <active>true</active>
+    <array>false</array>
+    <attributes/>
+    <audit>false</audit>
+    <calculation/>
+    <choice/>
+    <choice_field/>
+    <choice_table/>
+    <column_label>Admission</column_label>
+    <default_value/>
+    <dependent/>
+    <dependent_on_field/>
+    <display>false</display>
+    <dynamic_creation/>
+    <dynamic_creation_script/>
+    <dynamic_ref_qual/>
+    <element>admission</element>
+    <element_reference>false</element_reference>
+    <formula/>
+    <function_definition/>
+    <function_field>false</function_field>
+    <internal_type>reference</internal_type>
+    <mandatory>false</mandatory>
+    <max_length>32</max_length>
+    <name>x_2223823_apollo_0_bed_reservations</name>
+    <primary>false</primary>
+    <read_only>false</read_only>
+    <read_only_option/>
+    <reference>x_2223823_apollo_0_admission</reference>
+    <reference_cascade_rule/>
+    <reference_floats/>
+    <reference_key/>
+    <reference_qual/>
+    <spell_check>false</spell_check>
+    <table_reference>false</table_reference>
+    <text_index>false</text_index>
+    <unique>false</unique>
+    <use_dependent_field>false</use_dependent_field>
+    <use_reference_qualifier>simple</use_reference_qualifier>
+    <virtual/>
+    <virtual_type>script</virtual_type>
+    <widget/>
+    <xml_view>false</xml_view>
+  </sys_dictionary>
+<sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</application>
+        <file_path/>
+        <instance_id>5ada7edb93d06e50d9f6ddd548373c9d</instance_id>
+        <instance_name>dev304851</instance_name>
+        <name>sys_dictionary_x_2223823_apollo_0_bed_reservations_admission</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_dictionary">
+  <sys_dictionary action="INSERT_OR_UPDATE" apply_defaults="true" element="admission" table="x_2223823_apollo_0_bed_reservations">
+    <sys_id>b6ce01fc4750d310273a565a516d4394</sys_id>
+    <sys_scope display_value="x_2223823_apollo_0">87c1422693c89b507b3a7c5efaba1008</sys_scope>
+    <sys_update_name>sys_dictionary_x_2223823_apollo_0_bed_reservations_admission</sys_update_name>
+    <active>true</active>
+    <array>false</array>
+    <attributes/>
+    <audit>false</audit>
+    <calculation/>
+    <choice/>
+    <choice_field/>
+    <choice_table/>
+    <column_label>Admission</column_label>
+    <default_value/>
+    <dependent/>
+    <dependent_on_field/>
+    <display>false</display>
+    <dynamic_creation/>
+    <dynamic_creation_script/>
+    <dynamic_ref_qual/>
+    <element>admission</element>
+    <element_reference>false</element_reference>
+    <formula/>
+    <function_definition/>
+    <function_field>false</function_field>
+    <internal_type>reference</internal_type>
+    <mandatory>false</mandatory>
+    <max_length>32</max_length>
+    <name>x_2223823_apollo_0_bed_reservations</name>
+    <primary>false</primary>
+    <read_only>false</read_only>
+    <read_only_option/>
+    <reference>x_2223823_apollo_0_admission</reference>
+    <reference_cascade_rule/>
+    <reference_floats/>
+    <reference_key/>
+    <reference_qual/>
+    <spell_check>false</spell_check>
+    <table_reference>false</table_reference>
+    <text_index>false</text_index>
+    <unique>false</unique>
+    <use_dependent_field>false</use_dependent_field>
+    <use_reference_qualifier>simple</use_reference_qualifier>
+    <virtual/>
+    <virtual_type>script</virtual_type>
+    <widget/>
+    <xml_view>false</xml_view>
+  </sys_dictionary>
+</record_update>]]></payload>
+        <payload_hash>-1379690491</payload_hash>
+        <record_name>Bed Reservations.Admission</record_name>
+        <reverted_from/>
+        <source>0175a7aa47981b10273a565a516d4307</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>harshvardhan.chhapola</sys_created_by>
+        <sys_created_on>2026-11-05 06:46:50</sys_created_on>
+        <sys_id>3285a3ea47981b10273a565a516d43aa</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1a1aa75d3640000001</sys_recorded_at>
+        <sys_updated_by>harshvardhan.chhapola</sys_updated_by>
+        <sys_updated_on>2026-11-05 06:46:50</sys_updated_on>
+        <type>Dictionary</type>
+        <update_guid>3285a3eacc981b1017d4d3bd7c7963a9</update_guid>
+        <update_guid_history>3285a3eacc981b1017d4d3bd7c7963a9:-936596396,6ed84c2e259c971051d179730a600ed6:-2047449568,bac3bb12ff1c971072a11f5b22ff238b:-616970733,c5590392d69497102e5d5a1be4cbc672:0,feb50796c8d09710518fd94b626f9943:-1512528679,07e65ed61c58571061ae783d6bce491c:-936596396,5bb5aa9e185c5710fe6cde3b8cfedf21:0,07e65ed61c58571061ae783d6bce491c:-936596396,9144ea12125c57108c36a9ee263e717c:0,07e65ed61c58571061ae783d6bce491c:-936596396,f9bf9eda11d85710988530e5543e9589:0,07e65ed61c58571061ae783d6bce491c:-936596396,d9ee0d303790d310460237f8c2df2e28:0,3c0ec174da50d3102e12e6e01ac63e8d:-154190593,c6afd83ce8109310b8ebd080a6014a42:0,06afd83c83109310820a3520f4b6203c:1715351472</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>integration.user</sys_created_by>
+        <sys_created_on>2026-11-06 06:44:43</sys_created_on>
+        <sys_db_object display_value="" name="sys_dictionary">sys_dictionary</sys_db_object>
+        <sys_id>16e92803e6f04cc7858d9ae81c8a2b21</sys_id>
+        <sys_metadata>2ad8082e479c9710273a565a516d4376</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Admission</sys_name>
+        <sys_package display_value="Apollo-Hospitals" source="x_2223823_apollo_0">87c1422693c89b507b3a7c5efaba1008</sys_package>
+        <sys_parent display_value="Bed Reservations">5b24ecef934c13107b3a7c5efaba1042</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
+        <sys_scope_delete display_value="">1a2f7aa8dfc34e3a86d3f0bede3c2784</sys_scope_delete>
+        <sys_update_name>sys_dictionary_x_2223823_apollo_0_bed_reservations_admission</sys_update_name>
+        <sys_update_version display_value="sys_dictionary_x_2223823_apollo_0_bed_reservations_admission">3285a3ea47981b10273a565a516d43aa</sys_update_version>
+        <sys_updated_by>integration.user</sys_updated_by>
+        <sys_updated_on>2026-11-06 06:44:43</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

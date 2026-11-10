@@ -8,12 +8,12 @@
             <position>0</position>
             <related_list>cmn_location.parent</related_list>
             <sys_class_name>sys_ui_related_list_entry</sys_class_name>
-            <sys_created_by>ayush.mangal</sys_created_by>
-            <sys_created_on>2026-10-31 19:57:47</sys_created_on>
-            <sys_id>c8aaec15479c9710273a565a516d43fe</sys_id>
+            <sys_created_by>nilesh.chaurasia</sys_created_by>
+            <sys_created_on>2026-11-04 06:26:01</sys_created_on>
+            <sys_id>4837da5a47585710273a565a516d43e3</sys_id>
             <sys_mod_count>0</sys_mod_count>
-            <sys_updated_by>ayush.mangal</sys_updated_by>
-            <sys_updated_on>2026-10-31 19:57:47</sys_updated_on>
+            <sys_updated_by>nilesh.chaurasia</sys_updated_by>
+            <sys_updated_on>2026-11-04 06:26:01</sys_updated_on>
         </sys_ui_related_list_entry>
         <sys_ui_related_list_entry action="INSERT_OR_UPDATE">
             <filter/>
@@ -21,14 +21,14 @@
             <list_id display_value="Hospital - Default view" name="x_2223823_apollo_0_hospital" related_list="NULL" sys_domain="global" view="Default view">8caaec15479c9710273a565a516d43fc</list_id>
             <order_by/>
             <position>1</position>
-            <related_list>x_2223823_apollo_0_department.hospital</related_list>
+            <related_list>x_2223823_apollo_0_doctor_request.hospital</related_list>
             <sys_class_name>sys_ui_related_list_entry</sys_class_name>
-            <sys_created_by>ayush.mangal</sys_created_by>
-            <sys_created_on>2026-10-31 19:57:47</sys_created_on>
-            <sys_id>c8aaec15479c9710273a565a516d43ff</sys_id>
+            <sys_created_by>nilesh.chaurasia</sys_created_by>
+            <sys_created_on>2026-11-04 06:26:01</sys_created_on>
+            <sys_id>cc37da5a47585710273a565a516d43e3</sys_id>
             <sys_mod_count>0</sys_mod_count>
-            <sys_updated_by>ayush.mangal</sys_updated_by>
-            <sys_updated_on>2026-10-31 19:57:47</sys_updated_on>
+            <sys_updated_by>nilesh.chaurasia</sys_updated_by>
+            <sys_updated_on>2026-11-04 06:26:01</sys_updated_on>
         </sys_ui_related_list_entry>
         <sys_ui_related_list_entry action="INSERT_OR_UPDATE">
             <filter/>
@@ -36,14 +36,14 @@
             <list_id display_value="Hospital - Default view" name="x_2223823_apollo_0_hospital" related_list="NULL" sys_domain="global" view="Default view">8caaec15479c9710273a565a516d43fc</list_id>
             <order_by/>
             <position>2</position>
-            <related_list>x_2223823_apollo_0_doctor_request.hospital</related_list>
+            <related_list>x_2223823_apollo_0_department.hospital</related_list>
             <sys_class_name>sys_ui_related_list_entry</sys_class_name>
-            <sys_created_by>ayush.mangal</sys_created_by>
-            <sys_created_on>2026-10-31 19:57:47</sys_created_on>
-            <sys_id>40aa2055479c9710273a565a516d4300</sys_id>
+            <sys_created_by>nilesh.chaurasia</sys_created_by>
+            <sys_created_on>2026-11-04 06:26:01</sys_created_on>
+            <sys_id>4437da5a47585710273a565a516d43e4</sys_id>
             <sys_mod_count>0</sys_mod_count>
-            <sys_updated_by>ayush.mangal</sys_updated_by>
-            <sys_updated_on>2026-10-31 19:57:47</sys_updated_on>
+            <sys_updated_by>nilesh.chaurasia</sys_updated_by>
+            <sys_updated_on>2026-11-04 06:26:01</sys_updated_on>
         </sys_ui_related_list_entry>
         <sys_ui_related_list_entry action="INSERT_OR_UPDATE">
             <filter/>
@@ -51,14 +51,14 @@
             <list_id display_value="Hospital - Default view" name="x_2223823_apollo_0_hospital" related_list="NULL" sys_domain="global" view="Default view">8caaec15479c9710273a565a516d43fc</list_id>
             <order_by/>
             <position>3</position>
-            <related_list>x_2223823_apollo_0_staff.hospital</related_list>
+            <related_list>x_2223823_apollo_0_doctor.primary_hospital</related_list>
             <sys_class_name>sys_ui_related_list_entry</sys_class_name>
-            <sys_created_by>ayush.mangal</sys_created_by>
-            <sys_created_on>2026-10-31 19:57:47</sys_created_on>
-            <sys_id>c4aa2055479c9710273a565a516d4300</sys_id>
+            <sys_created_by>nilesh.chaurasia</sys_created_by>
+            <sys_created_on>2026-11-04 06:26:01</sys_created_on>
+            <sys_id>c837da5a47585710273a565a516d43e4</sys_id>
             <sys_mod_count>0</sys_mod_count>
-            <sys_updated_by>ayush.mangal</sys_updated_by>
-            <sys_updated_on>2026-10-31 19:57:47</sys_updated_on>
+            <sys_updated_by>nilesh.chaurasia</sys_updated_by>
+            <sys_updated_on>2026-11-04 06:26:01</sys_updated_on>
         </sys_ui_related_list_entry>
         <sys_ui_related_list_entry action="INSERT_OR_UPDATE">
             <filter/>
@@ -66,14 +66,14 @@
             <list_id display_value="Hospital - Default view" name="x_2223823_apollo_0_hospital" related_list="NULL" sys_domain="global" view="Default view">8caaec15479c9710273a565a516d43fc</list_id>
             <order_by/>
             <position>4</position>
-            <related_list>x_2223823_apollo_0_wards.hospital</related_list>
+            <related_list>x_2223823_apollo_0_staff.hospital</related_list>
             <sys_class_name>sys_ui_related_list_entry</sys_class_name>
-            <sys_created_by>ayush.mangal</sys_created_by>
-            <sys_created_on>2026-10-31 19:57:47</sys_created_on>
-            <sys_id>4caa2055479c9710273a565a516d4300</sys_id>
+            <sys_created_by>nilesh.chaurasia</sys_created_by>
+            <sys_created_on>2026-11-04 06:26:01</sys_created_on>
+            <sys_id>4037da5a47585710273a565a516d43e5</sys_id>
             <sys_mod_count>0</sys_mod_count>
-            <sys_updated_by>ayush.mangal</sys_updated_by>
-            <sys_updated_on>2026-10-31 19:57:47</sys_updated_on>
+            <sys_updated_by>nilesh.chaurasia</sys_updated_by>
+            <sys_updated_on>2026-11-04 06:26:01</sys_updated_on>
         </sys_ui_related_list_entry>
         <sys_ui_related_list_entry action="INSERT_OR_UPDATE">
             <filter/>
@@ -81,14 +81,14 @@
             <list_id display_value="Hospital - Default view" name="x_2223823_apollo_0_hospital" related_list="NULL" sys_domain="global" view="Default view">8caaec15479c9710273a565a516d43fc</list_id>
             <order_by/>
             <position>5</position>
-            <related_list>x_2223823_apollo_0_rooms.hospital</related_list>
+            <related_list>x_2223823_apollo_0_wards.hospital</related_list>
             <sys_class_name>sys_ui_related_list_entry</sys_class_name>
-            <sys_created_by>ayush.mangal</sys_created_by>
-            <sys_created_on>2026-10-31 19:57:47</sys_created_on>
-            <sys_id>c0aa2055479c9710273a565a516d4301</sys_id>
+            <sys_created_by>nilesh.chaurasia</sys_created_by>
+            <sys_created_on>2026-11-04 06:26:01</sys_created_on>
+            <sys_id>c437da5a47585710273a565a516d43e5</sys_id>
             <sys_mod_count>0</sys_mod_count>
-            <sys_updated_by>ayush.mangal</sys_updated_by>
-            <sys_updated_on>2026-10-31 19:57:47</sys_updated_on>
+            <sys_updated_by>nilesh.chaurasia</sys_updated_by>
+            <sys_updated_on>2026-11-04 06:26:01</sys_updated_on>
         </sys_ui_related_list_entry>
         <sys_ui_related_list_entry action="INSERT_OR_UPDATE">
             <filter/>
@@ -96,14 +96,44 @@
             <list_id display_value="Hospital - Default view" name="x_2223823_apollo_0_hospital" related_list="NULL" sys_domain="global" view="Default view">8caaec15479c9710273a565a516d43fc</list_id>
             <order_by/>
             <position>6</position>
+            <related_list>x_2223823_apollo_0_rooms.hospital</related_list>
+            <sys_class_name>sys_ui_related_list_entry</sys_class_name>
+            <sys_created_by>nilesh.chaurasia</sys_created_by>
+            <sys_created_on>2026-11-04 06:26:01</sys_created_on>
+            <sys_id>4c37da5a47585710273a565a516d43e5</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>nilesh.chaurasia</sys_updated_by>
+            <sys_updated_on>2026-11-04 06:26:01</sys_updated_on>
+        </sys_ui_related_list_entry>
+        <sys_ui_related_list_entry action="INSERT_OR_UPDATE">
+            <filter/>
+            <group_by_field/>
+            <list_id display_value="Hospital - Default view" name="x_2223823_apollo_0_hospital" related_list="NULL" sys_domain="global" view="Default view">8caaec15479c9710273a565a516d43fc</list_id>
+            <order_by/>
+            <position>7</position>
+            <related_list>x_2223823_apollo_0_cmdb_ci_medical_equipments.x_2223823_apollo_0_hospital</related_list>
+            <sys_class_name>sys_ui_related_list_entry</sys_class_name>
+            <sys_created_by>nilesh.chaurasia</sys_created_by>
+            <sys_created_on>2026-11-04 06:26:01</sys_created_on>
+            <sys_id>c037da5a47585710273a565a516d43e6</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>nilesh.chaurasia</sys_updated_by>
+            <sys_updated_on>2026-11-04 06:26:01</sys_updated_on>
+        </sys_ui_related_list_entry>
+        <sys_ui_related_list_entry action="INSERT_OR_UPDATE">
+            <filter/>
+            <group_by_field/>
+            <list_id display_value="Hospital - Default view" name="x_2223823_apollo_0_hospital" related_list="NULL" sys_domain="global" view="Default view">8caaec15479c9710273a565a516d43fc</list_id>
+            <order_by/>
+            <position>8</position>
             <related_list>x_2223823_apollo_0_hospital_service.hospital</related_list>
             <sys_class_name>sys_ui_related_list_entry</sys_class_name>
-            <sys_created_by>ayush.mangal</sys_created_by>
-            <sys_created_on>2026-10-31 19:57:47</sys_created_on>
-            <sys_id>48aa2055479c9710273a565a516d4301</sys_id>
+            <sys_created_by>nilesh.chaurasia</sys_created_by>
+            <sys_created_on>2026-11-04 06:26:01</sys_created_on>
+            <sys_id>4837da5a47585710273a565a516d43e6</sys_id>
             <sys_mod_count>0</sys_mod_count>
-            <sys_updated_by>ayush.mangal</sys_updated_by>
-            <sys_updated_on>2026-10-31 19:57:47</sys_updated_on>
+            <sys_updated_by>nilesh.chaurasia</sys_updated_by>
+            <sys_updated_on>2026-11-04 06:26:01</sys_updated_on>
         </sys_ui_related_list_entry>
         <sys_ui_related_list action="INSERT_OR_UPDATE">
             <calculated_name>Hospital - Default view</calculated_name>
@@ -113,8 +143,8 @@
             <position/>
             <related_list/>
             <sys_class_name>sys_ui_related_list</sys_class_name>
-            <sys_created_by>ayush.mangal</sys_created_by>
-            <sys_created_on>2026-10-31 19:57:47</sys_created_on>
+            <sys_created_by>nilesh.chaurasia</sys_created_by>
+            <sys_created_on>2026-11-04 06:26:01</sys_created_on>
             <sys_domain>global</sys_domain>
             <sys_domain_path>/</sys_domain_path>
             <sys_id>8caaec15479c9710273a565a516d43fc</sys_id>
@@ -124,8 +154,8 @@
             <sys_policy/>
             <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
             <sys_update_name>sys_ui_related_x_2223823_apollo_0_hospital_null</sys_update_name>
-            <sys_updated_by>ayush.mangal</sys_updated_by>
-            <sys_updated_on>2026-10-31 19:57:47</sys_updated_on>
+            <sys_updated_by>nilesh.chaurasia</sys_updated_by>
+            <sys_updated_on>2026-11-04 06:26:01</sys_updated_on>
             <sys_user/>
             <view display_value="Default view" name="NULL">Default view</view>
             <view_name/>

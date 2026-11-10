@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_wizard_answer">
+    <sys_wizard_answer action="DELETE">
+        <active>true</active>
+        <answer>TEST TABLE</answer>
+        <button_label/>
+        <dependent_value/>
+        <element/>
+        <name>TEST TABLE</name>
+        <next_question/>
+        <order>100</order>
+        <payload_name/>
+        <question display_value="Task" name="Task">b6ec6fc5f073031001ffe61a9d6c489d</question>
+        <roles/>
+        <script/>
+        <sys_class_name>sys_wizard_answer</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-11-05 05:23:00</sys_created_on>
+        <sys_id>ae52d32a47d41b10273a565a516d4302</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>TEST TABLE</sys_name>
+        <sys_package display_value="Apollo-Hospitals" source="x_2223823_apollo_0">87c1422693c89b507b3a7c5efaba1008</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
+        <sys_update_name>sys_wizard_answer_ae52d32a47d41b10273a565a516d4302</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-11-05 05:23:00</sys_updated_on>
+        <table/>
+        <target_url>x_2223823_apollo_0_test_table.do</target_url>
+        <type>1</type>
+    </sys_wizard_answer>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</application>
+        <file_path/>
+        <instance_id>5ada7edb93d06e50d9f6ddd548373c9d</instance_id>
+        <instance_name>dev304851</instance_name>
+        <name>sys_wizard_answer_ae52d32a47d41b10273a565a516d4302</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_wizard_answer"><sys_wizard_answer action="INSERT_OR_UPDATE"><active>true</active><answer>TEST TABLE</answer><button_label/><dependent_value/><element/><name>TEST TABLE</name><next_question/><order>100</order><payload_name/><question display_value="Task" name="Task">b6ec6fc5f073031001ffe61a9d6c489d</question><roles/><script/><sys_class_name>sys_wizard_answer</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2026-11-05 05:23:00</sys_created_on><sys_id>ae52d32a47d41b10273a565a516d4302</sys_id><sys_mod_count>0</sys_mod_count><sys_name>TEST TABLE</sys_name><sys_package display_value="Apollo-Hospitals" source="x_2223823_apollo_0">87c1422693c89b507b3a7c5efaba1008</sys_package><sys_policy/><sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope><sys_update_name>sys_wizard_answer_ae52d32a47d41b10273a565a516d4302</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-11-05 05:23:00</sys_updated_on><table/><target_url>x_2223823_apollo_0_test_table.do</target_url><type>1</type></sys_wizard_answer></record_update>]]></payload>
+        <payload_hash>1872160724</payload_hash>
+        <record_name>TEST TABLE</record_name>
+        <reverted_from/>
+        <source/>
+        <source_table>sys_upgrade_history</source_table>
+        <state>previous</state>
+        <sys_created_by>ridhwik.jangid</sys_created_by>
+        <sys_created_on>2026-11-09 05:05:37</sys_created_on>
+        <sys_id>c7b4373b4758d710273a565a516d43de</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1a1beb296050000001</sys_recorded_at>
+        <sys_updated_by>ridhwik.jangid</sys_updated_by>
+        <sys_updated_on>2026-11-09 05:05:37</sys_updated_on>
+        <type>Answer</type>
+        <update_guid>87b4373b1c58d710368afc6a79a5f5de</update_guid>
+        <update_guid_history>87b4373b1c58d710368afc6a79a5f5de:1872160724</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-11-09 05:05:37</sys_created_on>
+        <sys_db_object display_value="" name="sys_wizard_answer">sys_wizard_answer</sys_db_object>
+        <sys_id>14f3fe7e8ccd43e9a780f91233496601</sys_id>
+        <sys_metadata>ae52d32a47d41b10273a565a516d4302</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>TEST TABLE</sys_name>
+        <sys_package display_value="Apollo-Hospitals" source="x_2223823_apollo_0">87c1422693c89b507b3a7c5efaba1008</sys_package>
+        <sys_parent display_value="Task">b6ec6fc5f073031001ffe61a9d6c489d</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
+        <sys_scope_delete display_value="">1a2f7aa8dfc34e3a86d3f0bede3c2784</sys_scope_delete>
+        <sys_update_name>sys_wizard_answer_ae52d32a47d41b10273a565a516d4302</sys_update_name>
+        <sys_update_version display_value="sys_wizard_answer_ae52d32a47d41b10273a565a516d4302">c7b4373b4758d710273a565a516d43de</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-11-09 05:05:37</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

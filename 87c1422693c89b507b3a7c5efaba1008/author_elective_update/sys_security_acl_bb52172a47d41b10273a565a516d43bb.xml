@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl">
+    <sys_security_acl action="DELETE">
+        <active>true</active>
+        <admin_overrides>true</admin_overrides>
+        <advanced>false</advanced>
+        <applies_to/>
+        <condition/>
+        <controlled_by_refs/>
+        <decision_type>allow</decision_type>
+        <description/>
+        <local_or_existing>Existing</local_or_existing>
+        <name>x_2223823_apollo_0_test_table</name>
+        <operation display_value="write">write</operation>
+        <script/>
+        <security_attribute/>
+        <sys_class_name>sys_security_acl</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-11-05 05:23:05</sys_created_on>
+        <sys_id>bb52172a47d41b10273a565a516d43bb</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_2223823_apollo_0_test_table</sys_name>
+        <sys_package display_value="Apollo-Hospitals" source="x_2223823_apollo_0">87c1422693c89b507b3a7c5efaba1008</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
+        <sys_update_name>sys_security_acl_bb52172a47d41b10273a565a516d43bb</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-11-05 05:23:05</sys_updated_on>
+        <type display_value="record">record</type>
+    </sys_security_acl>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</application>
+        <file_path/>
+        <instance_id>5ada7edb93d06e50d9f6ddd548373c9d</instance_id>
+        <instance_name>dev304851</instance_name>
+        <name>sys_security_acl_bb52172a47d41b10273a565a516d43bb</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl"><sys_security_acl action="INSERT_OR_UPDATE"><active>true</active><admin_overrides>true</admin_overrides><advanced>false</advanced><applies_to/><condition/><controlled_by_refs/><decision_type>allow</decision_type><description/><local_or_existing>Existing</local_or_existing><name>x_2223823_apollo_0_test_table</name><operation display_value="write">write</operation><script/><security_attribute/><sys_class_name>sys_security_acl</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2026-11-05 05:23:05</sys_created_on><sys_id>bb52172a47d41b10273a565a516d43bb</sys_id><sys_mod_count>0</sys_mod_count><sys_name>x_2223823_apollo_0_test_table</sys_name><sys_package display_value="Apollo-Hospitals" source="x_2223823_apollo_0">87c1422693c89b507b3a7c5efaba1008</sys_package><sys_policy/><sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope><sys_update_name>sys_security_acl_bb52172a47d41b10273a565a516d43bb</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-11-05 05:23:05</sys_updated_on><type display_value="record">record</type></sys_security_acl></record_update>]]></payload>
+        <payload_hash>101885719</payload_hash>
+        <record_name>x_2223823_apollo_0_test_table</record_name>
+        <reverted_from/>
+        <source>60d1dfa647d41b10273a565a516d43e0</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-11-05 05:23:05</sys_created_on>
+        <sys_id>8c62172a47d41b10273a565a516d43c7</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1a1aa2924d30000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-11-05 05:23:05</sys_updated_on>
+        <type>Access Control</type>
+        <update_guid>4c62172ad2d41b10c9aab82ac8a4acc6</update_guid>
+        <update_guid_history>4c62172ad2d41b10c9aab82ac8a4acc6:101885719</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-11-09 05:05:30</sys_created_on>
+        <sys_db_object display_value="" name="sys_security_acl">sys_security_acl</sys_db_object>
+        <sys_id>23c601cd04734d8e863219001c9882c4</sys_id>
+        <sys_metadata>bb52172a47d41b10273a565a516d43bb</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_2223823_apollo_0_test_table</sys_name>
+        <sys_package display_value="Apollo-Hospitals" source="x_2223823_apollo_0">87c1422693c89b507b3a7c5efaba1008</sys_package>
+        <sys_parent display_value="">ae52d32a47d41b10273a565a516d4304</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
+        <sys_scope_delete display_value="">1a2f7aa8dfc34e3a86d3f0bede3c2784</sys_scope_delete>
+        <sys_update_name>sys_security_acl_bb52172a47d41b10273a565a516d43bb</sys_update_name>
+        <sys_update_version display_value="sys_security_acl_bb52172a47d41b10273a565a516d43bb">8c62172a47d41b10273a565a516d43c7</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-11-09 05:05:30</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

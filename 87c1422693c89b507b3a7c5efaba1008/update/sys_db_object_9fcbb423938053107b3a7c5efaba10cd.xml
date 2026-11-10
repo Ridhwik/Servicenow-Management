@@ -34,7 +34,7 @@
         <sys_updated_by>harshvardhan.chhapola</sys_updated_by>
         <sys_updated_on>2026-10-26 10:46:44</sys_updated_on>
         <update_access>false</update_access>
-        <user_role display_value="x_2223823_apollo_0.ot_booking_user" name="x_2223823_apollo_0.ot_booking_user">9b8c3863938053107b3a7c5efaba10cb</user_role>
+        <user_role/>
         <ws_access>true</ws_access>
     </sys_db_object>
 </record_update>

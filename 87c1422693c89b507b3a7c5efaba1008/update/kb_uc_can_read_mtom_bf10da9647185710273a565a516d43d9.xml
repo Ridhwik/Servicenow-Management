@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="kb_uc_can_read_mtom">
+    <kb_uc_can_read_mtom action="INSERT_OR_UPDATE">
+        <kb_knowledge_base display_value="Apollo Staff Knowledge">1310da9647185710273a565a516d4379</kb_knowledge_base>
+        <sys_class_name>kb_uc_can_read_mtom</sys_class_name>
+        <sys_created_by>fateh.meena</sys_created_by>
+        <sys_created_on>2026-11-04 05:55:09</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>bf10da9647185710273a565a516d43d9</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Apollo Staff Knowledge.Apollo Hospital Staff</sys_name>
+        <sys_package display_value="Apollo-Hospitals" source="x_2223823_apollo_0">87c1422693c89b507b3a7c5efaba1008</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
+        <sys_update_name>kb_uc_can_read_mtom_bf10da9647185710273a565a516d43d9</sys_update_name>
+        <sys_updated_by>fateh.meena</sys_updated_by>
+        <sys_updated_on>2026-11-04 05:55:09</sys_updated_on>
+        <user_criteria display_value="Apollo Hospital Staff">3a10da9647185710273a565a516d4326</user_criteria>
+    </kb_uc_can_read_mtom>
+</record_update>

@@ -29,7 +29,7 @@
         <function_field>false</function_field>
         <internal_type display_value="Reference">reference</internal_type>
         <mandatory>false</mandatory>
-        <max_length/>
+        <max_length>32</max_length>
         <name>x_2223823_apollo_0_wards</name>
         <next_element/>
         <primary>false</primary>
@@ -40,7 +40,7 @@
         <reference_cascade_rule>none</reference_cascade_rule>
         <reference_floats>false</reference_floats>
         <reference_key/>
-        <reference_qual/>
+        <reference_qual>javascript: current.hospital ? 'hospital=' + current.hospital + '^active=true^staff_role=head_nurse_ward_in_charge' : 'sys_idISEMPTY';</reference_qual>
         <reference_qual_condition/>
         <reference_type/>
         <spell_check>false</spell_check>
@@ -53,14 +53,14 @@
         <sys_policy/>
         <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
         <sys_update_name>sys_dictionary_x_2223823_apollo_0_wards_head_nurse</sys_update_name>
-        <sys_updated_by>fatehsingh.meena</sys_updated_by>
-        <sys_updated_on>2026-10-27 06:25:08</sys_updated_on>
+        <sys_updated_by>ridhwik.jangid</sys_updated_by>
+        <sys_updated_on>2026-11-06 12:43:31</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
         <use_dependent_field>false</use_dependent_field>
         <use_dynamic_default>false</use_dynamic_default>
-        <use_reference_qualifier>simple</use_reference_qualifier>
+        <use_reference_qualifier>advanced</use_reference_qualifier>
         <virtual>false</virtual>
         <virtual_type>script</virtual_type>
         <widget/>

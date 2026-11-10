@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="question_choice">
+    <question_choice action="INSERT_OR_UPDATE">
+        <inactive>false</inactive>
+        <misc>0</misc>
+        <order>200</order>
+        <published_ref/>
+        <question display_value="Priority">2815b0b547581310273a565a516d43ef</question>
+        <rec_misc>0</rec_misc>
+        <sys_class_name>question_choice</sys_class_name>
+        <sys_created_by>vikas.singh</sys_created_by>
+        <sys_created_on>2026-11-02 10:17:14</sys_created_on>
+        <sys_id>23e8f8b147981310273a565a516d43c9</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Urgent</sys_name>
+        <sys_package display_value="Apollo-Hospitals" source="x_2223823_apollo_0">87c1422693c89b507b3a7c5efaba1008</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
+        <sys_update_name>question_choice_23e8f8b147981310273a565a516d43c9</sys_update_name>
+        <sys_updated_by>vikas.singh</sys_updated_by>
+        <sys_updated_on>2026-11-02 10:17:14</sys_updated_on>
+        <text>Urgent</text>
+        <value>urgent</value>
+    </question_choice>
+    <fx_price action="delete_multiple" query="id=23e8f8b147981310273a565a516d43c9"/>
+    <fx_price action="INSERT_OR_UPDATE">
+        <amount>0</amount>
+        <currency display_value="USD">USD</currency>
+        <field>misc</field>
+        <id>23e8f8b147981310273a565a516d43c9</id>
+        <parent/>
+        <reference_amount>0</reference_amount>
+        <reference_currency display_value="USD">USD</reference_currency>
+        <sys_created_by>system</sys_created_by>
+        <sys_created_on>2026-11-04 07:32:30</sys_created_on>
+        <sys_id>ca66aa16479c5710273a565a516d436b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>system</sys_updated_by>
+        <sys_updated_on>2026-11-04 07:32:30</sys_updated_on>
+        <table>question_choice</table>
+        <type>calculated</type>
+    </fx_price>
+    <fx_price action="INSERT_OR_UPDATE">
+        <amount>0</amount>
+        <currency display_value="USD">USD</currency>
+        <field>rec_misc</field>
+        <id>23e8f8b147981310273a565a516d43c9</id>
+        <parent/>
+        <reference_amount>0</reference_amount>
+        <reference_currency display_value="USD">USD</reference_currency>
+        <sys_created_by>system</sys_created_by>
+        <sys_created_on>2026-11-04 07:32:30</sys_created_on>
+        <sys_id>8a66aa16479c5710273a565a516d4368</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>system</sys_updated_by>
+        <sys_updated_on>2026-11-04 07:32:30</sys_updated_on>
+        <table>question_choice</table>
+        <type>calculated</type>
+    </fx_price>
+</record_update>

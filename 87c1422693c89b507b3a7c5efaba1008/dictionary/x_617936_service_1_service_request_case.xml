@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element attributes="enforce_dot_walk_cross_scope_access=true" audit="true" db_object_id="b19dd97d47dc1310273a565a516d43d6" extends="sn_customerservice_case" label="Service Request Case" max_length="40" name="x_617936_service_1_service_request_case" type="collection"/>
+</database>

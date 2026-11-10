@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_dictionary action="DELETE" element="x_2223823_apollo_0_needed_at" table="x_617936_service_1_service_request_case">
+        <active>true</active>
+        <array>false</array>
+        <attributes/>
+        <audit>false</audit>
+        <calculation/>
+        <choice>0</choice>
+        <choice_field/>
+        <choice_table/>
+        <column_label>Needed at</column_label>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>x_2223823_apollo_0_needed_at</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <internal_type display_value="">glide_date_time</internal_type>
+        <mandatory>false</mandatory>
+        <max_length>40</max_length>
+        <name>x_617936_service_1_service_request_case</name>
+        <next_element/>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_only_option/>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_dictionary</sys_class_name>
+        <sys_created_by>jenish.jain</sys_created_by>
+        <sys_created_on>2026-11-02 13:28:34</sys_created_on>
+        <sys_name>Needed at</sys_name>
+        <sys_package display_value="Apollo-Hospitals" source="x_2223823_apollo_0">87c1422693c89b507b3a7c5efaba1008</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
+        <sys_update_name>sys_dictionary_x_617936_service_1_service_request_case_x_2223823_apollo_0_needed_at</sys_update_name>
+        <sys_updated_by>jenish.jain</sys_updated_by>
+        <sys_updated_on>2026-11-02 13:28:36</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_dictionary>
+<sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</application>
+        <file_path/>
+        <instance_id>5ada7edb93d06e50d9f6ddd548373c9d</instance_id>
+        <instance_name>dev304851</instance_name>
+        <name>sys_dictionary_x_617936_service_1_service_request_case_x_2223823_apollo_0_needed_at</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_dictionary action="INSERT_OR_UPDATE" element="x_2223823_apollo_0_needed_at" table="x_617936_service_1_service_request_case">
+        <active>true</active>
+        <array>false</array>
+        <attributes/>
+        <audit>false</audit>
+        <calculation/>
+        <choice>0</choice>
+        <choice_field/>
+        <choice_table/>
+        <column_label>Needed at</column_label>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>x_2223823_apollo_0_needed_at</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <internal_type display_value="">glide_date_time</internal_type>
+        <mandatory>false</mandatory>
+        <max_length>40</max_length>
+        <name>x_617936_service_1_service_request_case</name>
+        <next_element/>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_only_option/>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_dictionary</sys_class_name>
+        <sys_created_by>jenish.jain</sys_created_by>
+        <sys_created_on>2026-11-02 13:28:34</sys_created_on>
+        <sys_name>Needed at</sys_name>
+        <sys_package display_value="Apollo-Hospitals" source="x_2223823_apollo_0">87c1422693c89b507b3a7c5efaba1008</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
+        <sys_update_name>sys_dictionary_x_617936_service_1_service_request_case_x_2223823_apollo_0_needed_at</sys_update_name>
+        <sys_updated_by>jenish.jain</sys_updated_by>
+        <sys_updated_on>2026-11-02 13:28:36</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_dictionary>
+</record_update>]]></payload>
+        <payload_hash>-731813006</payload_hash>
+        <record_name>Service Request Case.Needed at</record_name>
+        <reverted_from/>
+        <source>cef7071247549710273a565a516d432e</source>
+        <source_table>sys_upgrade_history</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-11-04 10:05:27</sys_created_on>
+        <sys_id>d669c3d247949710273a565a516d4334</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1a1a6054bc20000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-11-04 10:05:27</sys_updated_on>
+        <type>Dictionary</type>
+        <update_guid>1269c3d2ec949710d5beec4a68fc6d34</update_guid>
+        <update_guid_history>1269c3d2ec949710d5beec4a68fc6d34:0,6a478fda8a149710517f718ebb3acc2b:629343574,76b4e9bdb2105310630e0af37ed1dc14:-2067599710,7ae56252da9c5710626a67c92977efce:629343574,76b4e9bdb2105310630e0af37ed1dc14:-2067599710,7c74e2d2b65c5710cca3481fcf5a5471:629343574,76b4e9bdb2105310630e0af37ed1dc14:-2067599710,41ef929e91d85710d4b8c8bf7fb1748e:629343574,76b4e9bdb2105310630e0af37ed1dc14:-2067599710,96b469bdd2105310ea39c6362602c6ed:-667310971</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>jenish.jain</sys_created_by>
+        <sys_created_on>2026-11-05 08:36:25</sys_created_on>
+        <sys_db_object display_value="" name="sys_dictionary">sys_dictionary</sys_db_object>
+        <sys_id>01e0bafd12cc4d3b8006e7f67ef2c641</sys_id>
+        <sys_metadata>33380fd247549710273a565a516d434c</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Needed at</sys_name>
+        <sys_package display_value="Apollo-Hospitals" source="x_2223823_apollo_0">87c1422693c89b507b3a7c5efaba1008</sys_package>
+        <sys_parent display_value="Service Request Case">b19dd97d47dc1310273a565a516d43d6</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
+        <sys_scope_delete display_value="">1a2f7aa8dfc34e3a86d3f0bede3c2784</sys_scope_delete>
+        <sys_update_name>sys_dictionary_x_617936_service_1_service_request_case_x_2223823_apollo_0_needed_at</sys_update_name>
+        <sys_update_version display_value="sys_dictionary_x_617936_service_1_service_request_case_x_2223823_apollo_0_needed_at">d669c3d247949710273a565a516d4334</sys_update_version>
+        <sys_updated_by>jenish.jain</sys_updated_by>
+        <sys_updated_on>2026-11-05 08:36:25</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

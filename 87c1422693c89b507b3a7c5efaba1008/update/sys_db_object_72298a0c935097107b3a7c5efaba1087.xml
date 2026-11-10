@@ -34,7 +34,7 @@
         <sys_updated_by>nilesh.chaurasia</sys_updated_by>
         <sys_updated_on>2026-10-28 05:39:53</sys_updated_on>
         <update_access>false</update_access>
-        <user_role display_value="x_2223823_apollo_0.doctor_request_user" name="x_2223823_apollo_0.doctor_request_user">7b790e0c935097107b3a7c5efaba10b4</user_role>
+        <user_role/>
         <ws_access>true</ws_access>
     </sys_db_object>
 </record_update>

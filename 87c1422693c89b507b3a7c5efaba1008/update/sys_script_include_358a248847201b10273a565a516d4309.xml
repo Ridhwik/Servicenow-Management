@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>x_2223823_apollo_0.ChargeLine</api_name>
+        <caller_access/>
+        <client_callable>true</client_callable>
+        <description/>
+        <mobile_callable>false</mobile_callable>
+        <name>ChargeLine</name>
+        <sandbox_callable>false</sandbox_callable>
+        <script><![CDATA[var ChargeLine = Class.create();
+ChargeLine.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
+	/**
+     * Reference Qualifier for 'invoice' field on Charge Line table.
+     * Condition: 
+     * - Matches current charge line's patient (`invoice.patient = current.patient`).
+     * - Matches current charge line's hospital (`invoice.hospital = current.hospital`).
+     * - Only open invoices (status = draft OR status = partially_paid).
+     */
+    getInvoiceRefQual: function(current) {
+        if (!current) return '';
+
+        var currentPatient = current.getValue('patient');
+        var currentHospital = current.getValue('hospital');
+
+        // Agar patient ya hospital select nahi hai, toh koi invoice show mat karo
+        if (!currentPatient || !currentHospital) {
+            return 'sys_id=00000000000000000000000000000000';
+        }
+
+        var invoiceSysids = [];
+        var invoiceGr = new GlideRecord('x_2223823_apollo_0_invoice'); 
+        invoiceGr.addQuery('patient', currentPatient);
+        invoiceGr.addQuery('hospital', currentHospital);
+        
+        // Open invoices condition (draft OR partially_paid)
+        var statusQC = invoiceGr.addQuery('status', 'draft');
+        statusQC.addOrCondition('status', 'partially_paid');
+		statusQC.addOrCondition('status', 'issued');
+        
+        invoiceGr.query();
+
+        while (invoiceGr.next()) {
+            invoiceSysids.push(invoiceGr.getUniqueValue());
+        }
+
+        // Final Encoded Query return karo
+        if (invoiceSysids.length > 0) {
+            return 'sys_idIN' + invoiceSysids.join(',');
+        } else {
+            // Agar koi matching open invoice nahi mili
+            return 'sys_id=00000000000000000000000000000000';
+        }
+    },
+
+    type: 'ChargeLine'
+});]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>nilesh.chaurasia</sys_created_by>
+        <sys_created_on>2026-11-09 09:06:27</sys_created_on>
+        <sys_id>358a248847201b10273a565a516d4309</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>ChargeLine</sys_name>
+        <sys_package display_value="Apollo-Hospitals" source="x_2223823_apollo_0">87c1422693c89b507b3a7c5efaba1008</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
+        <sys_update_name>sys_script_include_358a248847201b10273a565a516d4309</sys_update_name>
+        <sys_updated_by>nilesh.chaurasia</sys_updated_by>
+        <sys_updated_on>2026-11-09 09:09:39</sys_updated_on>
+    </sys_script_include>
+</record_update>

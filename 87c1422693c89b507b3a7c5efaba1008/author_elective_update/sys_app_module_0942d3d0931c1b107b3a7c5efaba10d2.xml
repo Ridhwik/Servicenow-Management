@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_app_module">
+    <sys_app_module action="DELETE">
+        <active>true</active>
+        <application display_value="Apollo Hospital ">fa536c2f934c13107b3a7c5efaba10a2</application>
+        <assessment/>
+        <device_type/>
+        <filter/>
+        <hint/>
+        <homepage/>
+        <image/>
+        <karuna_route/>
+        <link_type>LIST</link_type>
+        <map_page/>
+        <mobile_title>Admissions</mobile_title>
+        <mobile_view_name>Mobile</mobile_view_name>
+        <name>x_2223823_apollo_0_ot_booking</name>
+        <order>100</order>
+        <override_menu_roles>false</override_menu_roles>
+        <query/>
+        <report/>
+        <require_confirmation>true</require_confirmation>
+        <roles/>
+        <route/>
+        <screen/>
+        <sys_class_name>sys_app_module</sys_class_name>
+        <sys_created_by>harshvardhan.chhapola</sys_created_by>
+        <sys_created_on>2026-10-29 05:36:17</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>0942d3d0931c1b107b3a7c5efaba10d2</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>OT Booking</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Apollo-Hospitals" source="x_2223823_apollo_0">87c1422693c89b507b3a7c5efaba1008</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
+        <sys_update_name>sys_app_module_0942d3d0931c1b107b3a7c5efaba10d2</sys_update_name>
+        <sys_updated_by>harshvardhan.chhapola</sys_updated_by>
+        <sys_updated_on>2026-10-29 05:36:17</sys_updated_on>
+        <timeline_page/>
+        <title>OT Booking</title>
+        <uncancelable>false</uncancelable>
+        <ux_list/>
+        <view_name/>
+        <window_name/>
+    </sys_app_module>
+<sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</application>
+        <file_path/>
+        <instance_id>5ada7edb93d06e50d9f6ddd548373c9d</instance_id>
+        <instance_name>dev304851</instance_name>
+        <name>sys_app_module_0942d3d0931c1b107b3a7c5efaba10d2</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_app_module">
+    <sys_app_module action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <application display_value="Apollo Hospital ">fa536c2f934c13107b3a7c5efaba10a2</application>
+        <assessment/>
+        <device_type/>
+        <filter/>
+        <hint/>
+        <homepage/>
+        <image/>
+        <karuna_route/>
+        <link_type>LIST</link_type>
+        <map_page/>
+        <mobile_title>Admissions</mobile_title>
+        <mobile_view_name>Mobile</mobile_view_name>
+        <name>x_2223823_apollo_0_ot_booking</name>
+        <order>100</order>
+        <override_menu_roles>false</override_menu_roles>
+        <query/>
+        <report/>
+        <require_confirmation>true</require_confirmation>
+        <roles/>
+        <route/>
+        <screen/>
+        <sys_class_name>sys_app_module</sys_class_name>
+        <sys_created_by>harshvardhan.chhapola</sys_created_by>
+        <sys_created_on>2026-10-29 05:36:17</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>0942d3d0931c1b107b3a7c5efaba10d2</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>OT Booking</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Apollo-Hospitals" source="x_2223823_apollo_0">87c1422693c89b507b3a7c5efaba1008</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
+        <sys_update_name>sys_app_module_0942d3d0931c1b107b3a7c5efaba10d2</sys_update_name>
+        <sys_updated_by>harshvardhan.chhapola</sys_updated_by>
+        <sys_updated_on>2026-10-29 05:36:17</sys_updated_on>
+        <timeline_page/>
+        <title>OT Booking</title>
+        <uncancelable>false</uncancelable>
+        <ux_list/>
+        <view_name/>
+        <window_name/>
+    </sys_app_module>
+</record_update>]]></payload>
+        <payload_hash>351768729</payload_hash>
+        <record_name>OT Booking</record_name>
+        <reverted_from/>
+        <source>cef7071247549710273a565a516d432e</source>
+        <source_table>sys_upgrade_history</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-11-04 10:05:38</sys_created_on>
+        <sys_id>01794fd247949710273a565a516d437a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1a1a60576980000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-11-04 10:05:38</sys_updated_on>
+        <type>Module</type>
+        <update_guid>49794fd2dd9497108c91f685b092b579</update_guid>
+        <update_guid_history>49794fd2dd9497108c91f685b092b579:0,3946879e60d097107839dbf60ce12a97:-93472597,36cf9e1eb2d8571012e3647d9df899d2:0,c52fc9f05490d3108be73b37526c3ce6:508131821,a0fec5705090d310e2b209aad7016884:0,3ad920f0e9909310dc8320495e57e2cd:508131821,61bf587cb9109310ae5c02ebbe657e73:351768729</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="OT Booking">95ae288047601b10273a565a516d433c</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>harshvardhan.chhapola</sys_created_by>
+        <sys_created_on>2026-11-09 09:18:39</sys_created_on>
+        <sys_db_object display_value="" name="sys_app_module">sys_app_module</sys_db_object>
+        <sys_id>4f671c3662824b5ca0c80f56cb8e1510</sys_id>
+        <sys_metadata>0942d3d0931c1b107b3a7c5efaba10d2</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>OT Booking</sys_name>
+        <sys_package display_value="Apollo-Hospitals" source="x_2223823_apollo_0">87c1422693c89b507b3a7c5efaba1008</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
+        <sys_scope_delete display_value="">1a2f7aa8dfc34e3a86d3f0bede3c2784</sys_scope_delete>
+        <sys_update_name>sys_app_module_0942d3d0931c1b107b3a7c5efaba10d2</sys_update_name>
+        <sys_update_version display_value="sys_app_module_0942d3d0931c1b107b3a7c5efaba10d2">01794fd247949710273a565a516d437a</sys_update_version>
+        <sys_updated_by>harshvardhan.chhapola</sys_updated_by>
+        <sys_updated_on>2026-11-09 09:18:39</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

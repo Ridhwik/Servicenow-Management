@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_dictionary">
+  <sys_dictionary action="DELETE" apply_defaults="true" element="expected_discharge_date" table="x_2223823_apollo_0_admission">
+    <sys_id>70dec5fc4750d310273a565a516d43d9</sys_id>
+    <sys_scope display_value="x_2223823_apollo_0">87c1422693c89b507b3a7c5efaba1008</sys_scope>
+    <sys_update_name>sys_dictionary_x_2223823_apollo_0_admission_expected_discharge_date</sys_update_name>
+    <active>true</active>
+    <array>false</array>
+    <attributes/>
+    <audit>false</audit>
+    <calculation/>
+    <choice/>
+    <choice_field/>
+    <choice_table/>
+    <column_label>Expected Discharge Date</column_label>
+    <default_value/>
+    <dependent/>
+    <dependent_on_field/>
+    <display>false</display>
+    <dynamic_creation/>
+    <dynamic_creation_script/>
+    <dynamic_ref_qual/>
+    <element>expected_discharge_date</element>
+    <element_reference>false</element_reference>
+    <formula/>
+    <function_definition/>
+    <function_field>false</function_field>
+    <internal_type>glide_date</internal_type>
+    <mandatory>false</mandatory>
+    <max_length>40</max_length>
+    <name>x_2223823_apollo_0_admission</name>
+    <primary>false</primary>
+    <read_only>false</read_only>
+    <read_only_option/>
+    <reference/>
+    <reference_cascade_rule/>
+    <reference_floats/>
+    <reference_key/>
+    <reference_qual/>
+    <spell_check>false</spell_check>
+    <table_reference>false</table_reference>
+    <text_index>false</text_index>
+    <unique>false</unique>
+    <use_dependent_field>false</use_dependent_field>
+    <use_reference_qualifier>simple</use_reference_qualifier>
+    <virtual/>
+    <virtual_type>script</virtual_type>
+    <widget/>
+    <xml_view>false</xml_view>
+  </sys_dictionary>
+<sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</application>
+        <file_path/>
+        <instance_id>5ada7edb93d06e50d9f6ddd548373c9d</instance_id>
+        <instance_name>dev304851</instance_name>
+        <name>sys_dictionary_x_2223823_apollo_0_admission_expected_discharge_date</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_dictionary">
+  <sys_dictionary action="INSERT_OR_UPDATE" apply_defaults="true" element="expected_discharge_date" table="x_2223823_apollo_0_admission">
+    <sys_id>70dec5fc4750d310273a565a516d43d9</sys_id>
+    <sys_scope display_value="x_2223823_apollo_0">87c1422693c89b507b3a7c5efaba1008</sys_scope>
+    <sys_update_name>sys_dictionary_x_2223823_apollo_0_admission_expected_discharge_date</sys_update_name>
+    <active>true</active>
+    <array>false</array>
+    <attributes/>
+    <audit>false</audit>
+    <calculation/>
+    <choice/>
+    <choice_field/>
+    <choice_table/>
+    <column_label>Expected Discharge Date</column_label>
+    <default_value/>
+    <dependent/>
+    <dependent_on_field/>
+    <display>false</display>
+    <dynamic_creation/>
+    <dynamic_creation_script/>
+    <dynamic_ref_qual/>
+    <element>expected_discharge_date</element>
+    <element_reference>false</element_reference>
+    <formula/>
+    <function_definition/>
+    <function_field>false</function_field>
+    <internal_type>glide_date</internal_type>
+    <mandatory>false</mandatory>
+    <max_length>40</max_length>
+    <name>x_2223823_apollo_0_admission</name>
+    <primary>false</primary>
+    <read_only>false</read_only>
+    <read_only_option/>
+    <reference/>
+    <reference_cascade_rule/>
+    <reference_floats/>
+    <reference_key/>
+    <reference_qual/>
+    <spell_check>false</spell_check>
+    <table_reference>false</table_reference>
+    <text_index>false</text_index>
+    <unique>false</unique>
+    <use_dependent_field>false</use_dependent_field>
+    <use_reference_qualifier>simple</use_reference_qualifier>
+    <virtual/>
+    <virtual_type>script</virtual_type>
+    <widget/>
+    <xml_view>false</xml_view>
+  </sys_dictionary>
+</record_update>]]></payload>
+        <payload_hash>-2115486633</payload_hash>
+        <record_name>Admission.Expected Discharge Date</record_name>
+        <reverted_from/>
+        <source>0175a7aa47981b10273a565a516d4307</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>harshvardhan.chhapola</sys_created_by>
+        <sys_created_on>2026-11-05 06:46:45</sys_created_on>
+        <sys_id>a985efaa47981b10273a565a516d43c2</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1a1aa75bd010000001</sys_recorded_at>
+        <sys_updated_by>harshvardhan.chhapola</sys_updated_by>
+        <sys_updated_on>2026-11-05 06:46:45</sys_updated_on>
+        <type>Dictionary</type>
+        <update_guid>2985efaa9a981b10439a2f8b69bb8ec1</update_guid>
+        <update_guid_history>2985efaa9a981b10439a2f8b69bb8ec1:729642427,f5733bdec7d89710d07c92b1222ad575:-652111505,14594f52ba949710d9a29ce653c75995:0,8636cb5e39d09710d84b09363909d126:-652111505,c6e69ad6ed5857106752e74461e33cbf:729642427,2eb5e69e925c5710184da605bdcc9347:0,c6e69ad6ed5857106752e74461e33cbf:729642427,a8442a128c5c57108c378f8f09678d87:0,c6e69ad6ed5857106752e74461e33cbf:729642427,45bfdadac7d857108eaf2939a7e96ac6:0,c6e69ad6ed5857106752e74461e33cbf:729642427,e0ee49308590d310c26ca02d2f665070:0,3a2e8df41c50d31073ea3a81a0170373:960180187,5daf183ca9109310207b614628bdc2ae:0,1daf183ca81093106eb140b70220419a:437203123</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>harshvardhan.chhapola</sys_created_by>
+        <sys_created_on>2026-11-06 06:44:40</sys_created_on>
+        <sys_db_object display_value="" name="sys_dictionary">sys_dictionary</sys_db_object>
+        <sys_id>98aedd2395e041b492d8acd22525e090</sys_id>
+        <sys_metadata>70dec5fc4750d310273a565a516d43d9</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Expected Discharge Date</sys_name>
+        <sys_package display_value="Apollo-Hospitals" source="x_2223823_apollo_0">87c1422693c89b507b3a7c5efaba1008</sys_package>
+        <sys_parent display_value="">9aa56867938c13107b3a7c5efaba10c9</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
+        <sys_scope_delete display_value="">1a2f7aa8dfc34e3a86d3f0bede3c2784</sys_scope_delete>
+        <sys_update_name>sys_dictionary_x_2223823_apollo_0_admission_expected_discharge_date</sys_update_name>
+        <sys_update_version display_value="sys_dictionary_x_2223823_apollo_0_admission_expected_discharge_date">a985efaa47981b10273a565a516d43c2</sys_update_version>
+        <sys_updated_by>harshvardhan.chhapola</sys_updated_by>
+        <sys_updated_on>2026-11-06 06:44:40</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

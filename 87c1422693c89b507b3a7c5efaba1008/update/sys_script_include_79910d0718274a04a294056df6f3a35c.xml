@@ -1,0 +1,580 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>x_2223823_apollo_0.HospitalRefQual</api_name>
+        <caller_access/>
+        <client_callable>false</client_callable>
+        <description/>
+        <mobile_callable>false</mobile_callable>
+        <name>HospitalRefQual</name>
+        <sandbox_callable>true</sandbox_callable>
+        <script><![CDATA[var HospitalRefQual = Class.create();
+HospitalRefQual.prototype = {
+    initialize: function () {},
+
+    // Full name of the role that is allowed to see every hospital.
+    CORPORATE_EXECUTIVE_ROLE: 'x_2223823_apollo_0.corporate_executive',
+
+    /**
+     * Reference qualifier for the "hospital" reference field.
+     *
+     * - Always limits the list to active hospitals (active=true).
+     * - Corporate Executives (and admins) may choose any active hospital.
+     * - Every other user is limited to the hospital(s) they belong to,
+     *   derived from their active staff record(s) (see myHospitals()).
+     *
+     * @param {GlideRecord} current - the record whose field is being filtered
+     * @returns {string} an encoded query
+     */
+    getQuery: function (current) {
+        var qualifier = 'active=true';
+
+        // Corporate Executives (and platform admins) are not restricted to
+        // their own hospital.
+        if (gs.hasRole(this.CORPORATE_EXECUTIVE_ROLE) || gs.hasRole('admin')) {
+            return qualifier;
+        }
+
+        var hospitals = this.myHospitals();
+        // Restrict to the user's own hospital(s). When the user has no hospital
+        // assignment, "sys_idIN" (empty) resolves to no records, which is the
+        // intended restriction.
+        return qualifier + '^sys_idIN' + hospitals.join(',');
+    },
+
+    /**
+     * Returns the sys_ids of the hospital(s) the current user belongs to,
+     * based on their active staff record(s).
+     *
+     * @returns {string[]} list of hospital sys_ids (may be empty)
+     */
+    myHospitals: function () {
+        var ids = [];
+        var staff = new GlideRecord('x_2223823_apollo_0_staff');
+        staff.addQuery('user', gs.getUserID());
+        staff.addQuery('active', true);
+        staff.addNotNullQuery('hospital');
+        staff.query();
+        while (staff.next()) {
+            var hospitalId = staff.getValue('hospital');
+            if (ids.indexOf(hospitalId) === -1) {
+                ids.push(hospitalId);
+            }
+        }
+        return ids;
+    },
+
+    /**
+     * Reference qualifier for the hospital "Root Location" (parent) field.
+     *
+     * Limits the picker to root cmn_location records (no parent), excluding
+     * roots already claimed by another hospital. The current hospital's own
+     * root stays selectable so an existing record can be re-saved.
+     *
+     * @param {GlideRecord} current - the hospital record being edited
+     * @returns {string} an encoded query against cmn_location
+     */
+    freeRootLocations: function (current) {
+        var usedRoots = [];
+        var currentId = current && current.getUniqueValue ? current.getUniqueValue() : '';
+
+        var hosp = new GlideRecord('x_2223823_apollo_0_hospital');
+        hosp.addNotNullQuery('parent');
+        if (currentId) {
+            hosp.addQuery('sys_id', '!=', currentId);
+        }
+        hosp.query();
+        while (hosp.next()) {
+            var rootId = hosp.getValue('parent');
+            if (rootId && usedRoots.indexOf(rootId) === -1) {
+                usedRoots.push(rootId);
+            }
+        }
+
+        // Root locations only (top-level cmn_location records).
+        var qualifier = 'parentISEMPTY';
+        if (usedRoots.length) {
+            qualifier += '^sys_idNIN' + usedRoots.join(',');
+        }
+        return qualifier;
+    },
+
+	unlinkedUsers: function (type, current) {
+        var isDoctor = (type === 'doctor');
+        var targetTable = isDoctor ? 'x_2223823_apollo_0_doctor' : 'x_2223823_apollo_0_staff';
+        // 1. Collect all users already linked in the target table
+        var linkedUserIds = [];
+        var gr = new GlideRecord(targetTable);
+        gr.addNotNullQuery('user');
+        if (current && current.sys_id) {
+            // Exclude current record so its existing user remains selectable
+            gr.addQuery('sys_id', '!=', current.sys_id);
+        }
+        gr.query();
+        while (gr.next()) {
+            linkedUserIds.push(gr.getValue('user'));
+        }
+        // 2. Doctor: Must be active and have the doctor role
+        if (isDoctor) {
+            var doctorRoles = ['x_2223823_apollo_0.doctor', 'x_2223823_apollo_0.doctor_user'];
+            var roleGr = new GlideRecord('sys_user_role');
+            roleGr.addQuery('name', 'IN', doctorRoles.join(','));
+            roleGr.query();
+            var roleIds = [];
+            while (roleGr.next()) {
+                roleIds.push(roleGr.getUniqueValue());
+            }
+            var candidateUsers = [];
+            if (roleIds.length > 0) {
+                var urGr = new GlideRecord('sys_user_has_role');
+                urGr.addQuery('role', 'IN', roleIds.join(','));
+                urGr.addQuery('user.active', true);
+                urGr.query();
+                while (urGr.next()) {
+                    var uId = urGr.getValue('user');
+                    if (linkedUserIds.indexOf(uId) === -1 && candidateUsers.indexOf(uId) === -1) {
+                        candidateUsers.push(uId);
+                    }
+                }
+            }
+            if (candidateUsers.length === 0) {
+                return 'sys_idISEMPTY';
+            }
+            return 'active=true^sys_idIN' + candidateUsers.join(',');
+        }
+        // 3. Staff: Active users not already linked to a Staff record
+        var qualifier = 'active=true';
+        if (linkedUserIds.length > 0) {
+            qualifier += '^sys_idNOT IN' + linkedUserIds.join(',');
+        }
+        return qualifier;
+    },
+    /**
+     * Reference qualifier for Schedules (cmn_schedule) on Doctor and Equipment.
+     * Shows only schedules whose name starts with the hospital's Code (e.g. HOS0001041).
+     *
+     * @param {GlideRecord} current - Current Doctor or Equipment record
+     * @returns {string} Encoded query for cmn_schedule table
+     */
+    getHospitalSchedules: function (current) {
+        if (!current) return 'sys_idISEMPTY';
+        // Doctor uses 'primary_hospital', Equipment uses 'x_2223823_apollo_0_hospital' or 'hospital'
+        var hospId = current.primary_hospital || current.hospital || current.x_2223823_apollo_0_hospital;
+        if (!hospId) {
+            return 'sys_idISEMPTY';
+        }
+        var hospGr = new GlideRecord('x_2223823_apollo_0_hospital');
+        if (hospGr.get(hospId.toString())) {
+            var hospCode = hospGr.getValue('number'); // Hospital Code field
+            if (hospCode) {
+                return 'nameSTARTSWITH' + hospCode;
+            }
+        }
+        return 'sys_idISEMPTY';
+    },
+
+
+	    /**
+     * Reference qualifier for the Ward field on Staff table.
+     * - Restricts wards to current staff's hospital.
+     * - Restricts to ward's department when department is set on staff record.
+     *
+     * @param {GlideRecord} current - Current Staff record
+     * @returns {string} Encoded query for x_2223823_apollo_0_wards
+     */
+    getWardRefQual: function (current) {
+        if (!current || !current.hospital) return 'sys_idISEMPTY';
+
+        var q = 'hospital=' + current.hospital;
+
+        // If wards table has an active column, enforce active=true
+        var grWard = new GlideRecord('x_2223823_apollo_0_wards');
+        if (grWard.isValidField('active')) {
+            q += '^active=true';
+        }
+
+        // Filter by department when department is chosen
+        if (current.department) {
+            q += '^department=' + current.department;
+        }
+
+        return q;
+    },
+
+    /**
+     * Reference qualifier for Reports To field on Staff table.
+     * - Restricts to active staff in the same hospital.
+     * - Prevents self-reporting (sys_id!=current.sys_id).
+     *
+     * @param {GlideRecord} current - Current Staff record
+     * @returns {string} Encoded query for x_2223823_apollo_0_staff
+     */
+    getStaffReportsToQual: function (current) {
+        if (!current || !current.hospital) return 'sys_idISEMPTY';
+
+        var q = 'hospital=' + current.hospital + '^active=true';
+        if (current.sys_id) {
+            q += '^sys_id!=' + current.sys_id;
+        }
+        return q;
+    },
+
+    /**
+     * Reference qualifier for Guardian field on Patient table.
+     * - Guardian must be an active patient (active=true).
+     * - Patient cannot be their own guardian (sys_id!=current.sys_id).
+     * - Age must be 18 or over (under_18=false or date_of_birth <= 18 years ago).
+     *
+     * @param {GlideRecord} current - Current Patient record
+     * @returns {string} Encoded query for x_2223823_apollo_0_patient
+     */
+    getGuardianRefQual: function (current) {
+        var q = 'active=true^under_18=false^ORdate_of_birth<=javascript:gs.yearsAgo(18)';
+        if (current && current.sys_id) {
+            q += '^sys_id!=' + current.sys_id;
+        }
+        return q;
+    },
+
+
+	    /**
+     * Unified doctor reference qualifier for:
+     *  - Medical Record (doctor / author)
+     *  - Appointment (doctor)
+     *  - Admission (admitting_doctor)
+     *
+     * Rules enforced:
+     *  1. Doctor must have Active status (status = 1).
+     *  2. Must work at current.hospital (primary hospital OR approved cover on that date).
+     *  3. For Appointments: consultation mode enabled (opd_enabled for In-Person, video_enabled for Video).
+     *  4. For Appointments: excludes doctors on approved leave on that date.
+     *  5. Restricts to current.department when department is set.
+     *
+     * @param {GlideRecord} current - Current Appointment, Admission, or Medical Record
+     * @returns {string} Encoded query for x_2223823_apollo_0_doctor
+     */
+    doctorsFor: function (current) {
+        if (!current) return 'status=1';
+
+        var targetHospital = current.hospital ? current.hospital.toString() : '';
+
+        // Determine relevant date (appointment start_time, admission_date, or today)
+        var dateStr = '';
+        if (current.start_time) {
+            dateStr = current.start_time.toString().split(' ')[0];
+        } else if (current.admission_date) {
+            dateStr = current.admission_date.toString().split(' ')[0];
+        } else {
+            dateStr = new GlideDate().getValue();
+        }
+
+        // 1. Identify doctors on Approved Cover at this hospital on this date
+        var coverDoctorIds = [];
+        if (targetHospital) {
+            var coverGr = new GlideRecord('x_2223823_apollo_0_doctor_request');
+            coverGr.addQuery('request_type', 'cover');
+            coverGr.addQuery('status', 'approved');
+            coverGr.addQuery('hospital', targetHospital);
+            if (dateStr) {
+                coverGr.addQuery('start_date', '<=', dateStr);
+                coverGr.addQuery('end_date', '>=', dateStr);
+            }
+            coverGr.query();
+            while (coverGr.next()) {
+                var cDocId = coverGr.getValue('doctor');
+                if (cDocId && coverDoctorIds.indexOf(cDocId) === -1) {
+                    coverDoctorIds.push(cDocId);
+                }
+            }
+        }
+
+        // 2. Identify doctors on Approved Leave on this date (excluded for appointments)
+        var leaveDoctorIds = [];
+        var tableName = current.getTableName ? current.getTableName() : '';
+        if (tableName === 'x_2223823_apollo_0_appointment' && dateStr) {
+            var leaveGr = new GlideRecord('x_2223823_apollo_0_doctor_request');
+            leaveGr.addQuery('request_type', 'leave');
+            leaveGr.addQuery('status', 'approved');
+            leaveGr.addQuery('start_date', '<=', dateStr);
+            leaveGr.addQuery('end_date', '>=', dateStr);
+            leaveGr.query();
+            while (leaveGr.next()) {
+                var lDocId = leaveGr.getValue('doctor');
+                if (lDocId && leaveDoctorIds.indexOf(lDocId) === -1) {
+                    leaveDoctorIds.push(lDocId);
+                }
+            }
+        }
+
+        // 3. Build query on doctor table
+        var docGr = new GlideRecord('x_2223823_apollo_0_doctor');
+        docGr.addQuery('status', 1); // Active status
+
+        // Hospital filter: Primary hospital OR Approved Cover
+        if (targetHospital) {
+            if (coverDoctorIds.length > 0) {
+                var qc = docGr.addQuery('primary_hospital', targetHospital);
+                qc.addOrCondition('sys_id', 'IN', coverDoctorIds.join(','));
+            } else {
+                docGr.addQuery('primary_hospital', targetHospital);
+            }
+        }
+
+        // Department filter (when set on the record)
+        if (current.department) {
+            docGr.addQuery('department', current.department);
+        }
+
+        // Consultation Mode filter (for Appointments: 1 = In-Person, 2 = Video)
+        if (tableName === 'x_2223823_apollo_0_appointment' && current.mode) {
+            var modeVal = current.mode.toString();
+            if (modeVal === '1' || modeVal.toLowerCase() === 'in-person') {
+                docGr.addQuery('opd_enabled', true);
+            } else if (modeVal === '2' || modeVal.toLowerCase() === 'video') {
+                docGr.addQuery('video_enabled', true);
+            }
+        }
+
+        // Exclude doctors on leave
+        if (leaveDoctorIds.length > 0) {
+            docGr.addQuery('sys_id', 'NOT IN', leaveDoctorIds.join(','));
+        }
+
+        docGr.query();
+        var matchingDocIds = [];
+        while (docGr.next()) {
+            matchingDocIds.push(docGr.getUniqueValue());
+        }
+
+        if (matchingDocIds.length === 0) {
+            return 'sys_idISEMPTY';
+        }
+
+        return 'sys_idIN' + matchingDocIds.join(',');
+    },
+
+    /**
+     * Default Value helper for Medical Record author.
+     * Returns the sys_id of the Doctor record linked to the logged-in user.
+     *
+     * @returns {string} sys_id of Doctor record, or empty string
+     */
+    getMyDoctorId: function () {
+        var gr = new GlideRecord('x_2223823_apollo_0_doctor');
+        gr.addQuery('user', gs.getUserID());
+        gr.query();
+        if (gr.next()) {
+            return gr.getUniqueValue();
+        }
+        return '';
+    },
+
+	    /**
+     * Admission -> room:
+     * Offers only rooms at current.hospital that currently have at least one Available bed (status=1),
+     * or holds a bed reserved for this admission/patient.
+     *
+     * @param {GlideRecord} current - Current Admission record
+     * @returns {string} Encoded query for x_2223823_apollo_0_rooms
+     */
+    getRoomsWithFreeBed: function (current) {
+        if (!current || !current.hospital) return 'sys_idISEMPTY';
+
+        var freeRoomIds = [];
+
+        // 1. Find all Available beds (status=1) in this hospital
+        var bedGr = new GlideRecord('x_2223823_apollo_0_beds');
+        bedGr.addQuery('hospital', current.hospital);
+        bedGr.addQuery('active', true);
+        bedGr.addQuery('status', 1); // 1 = Available
+        bedGr.addNotNullQuery('room');
+        bedGr.query();
+        while (bedGr.next()) {
+            var roomId = bedGr.getValue('room');
+            if (roomId && freeRoomIds.indexOf(roomId) === -1) {
+                freeRoomIds.push(roomId);
+            }
+        }
+
+        // 2. Also include the room of any bed held by an Active Bed Reservation for this admission/patient
+        if (current.patient || current.sys_id) {
+            var resGr = new GlideRecord('x_2223823_apollo_0_bed_reservations');
+            resGr.addQuery('status', 1); // 1 = Active reservation
+            if (current.sys_id && resGr.isValidField('admission')) {
+                resGr.addQuery('admission', current.sys_id);
+            } else if (current.patient) {
+                resGr.addQuery('patient', current.patient);
+            }
+            resGr.query();
+            while (resGr.next()) {
+                if (resGr.bed && resGr.bed.room) {
+                    var rId = resGr.bed.room.toString();
+                    if (rId && freeRoomIds.indexOf(rId) === -1) {
+                        freeRoomIds.push(rId);
+                    }
+                }
+            }
+        }
+
+        // If the record already has a room selected, keep it selectable
+        if (current.room && freeRoomIds.indexOf(current.room.toString()) === -1) {
+            freeRoomIds.push(current.room.toString());
+        }
+
+        if (freeRoomIds.length === 0) {
+            return 'sys_idISEMPTY';
+        }
+
+        return 'hospital=' + current.hospital + '^active=true^sys_idIN' + freeRoomIds.join(',');
+    },
+
+    /**
+     * Admission -> bed:
+     * Restricts beds to current.room with status Available (1),
+     * plus any bed held by an Active Bed Reservation for this admission.
+     *
+     * @param {GlideRecord} current - Current Admission record
+     * @returns {string} Encoded query for x_2223823_apollo_0_beds
+     */
+    getAdmissionBeds: function (current) {
+        if (!current || !current.room) return 'sys_idISEMPTY';
+
+        var heldBedIds = [];
+
+        // Bed held by active reservation for this admission/patient
+        var resGr = new GlideRecord('x_2223823_apollo_0_bed_reservations');
+        resGr.addQuery('status', 1); // 1 = Active
+        if (current.sys_id && resGr.isValidField('admission')) {
+            resGr.addQuery('admission', current.sys_id);
+        } else if (current.patient) {
+            resGr.addQuery('patient', current.patient);
+        }
+        resGr.query();
+        while (resGr.next()) {
+            var bId = resGr.getValue('bed');
+            if (bId && heldBedIds.indexOf(bId) === -1) {
+                heldBedIds.push(bId);
+            }
+        }
+
+        // Keep currently saved bed selectable on existing admission records
+        if (current.bed && heldBedIds.indexOf(current.bed.toString()) === -1) {
+            heldBedIds.push(current.bed.toString());
+        }
+
+        if (heldBedIds.length > 0) {
+            return 'room=' + current.room + '^active=true^status=1^ORsys_idIN' + heldBedIds.join(',');
+        }
+
+        return 'room=' + current.room + '^active=true^status=1';
+    },
+
+    /**
+     * Ward & Room -> floor:
+     * Returns floors two levels below the hospital's root location (parent.parent = root location).
+     *
+     * @param {GlideRecord} current - Current Ward or Room record
+     * @returns {string} Encoded query for cmn_location
+     */
+    getHospitalFloors: function (current) {
+        if (!current || !current.hospital) return 'sys_idISEMPTY';
+
+        var hospGr = new GlideRecord('x_2223823_apollo_0_hospital');
+        if (hospGr.get(current.hospital.toString())) {
+            // Root location is stored in Hospital's 'parent' location field
+            var rootLocationId = hospGr.getValue('parent') || hospGr.getUniqueValue();
+            if (rootLocationId) {
+                return 'parent.parent=' + rootLocationId;
+            }
+        }
+        return 'sys_idISEMPTY';
+    },
+
+	    /**
+     * Bed Reservation -> reserved_by:
+     * Returns active users who have the role bed_manager or receptionist
+     * and belong to current.hospital via active staff records.
+     *
+     * @param {string} roles - Comma-separated roles (e.g. 'bed_manager,receptionist')
+     * @param {GlideRecord} current - Current Bed Reservation record
+     * @returns {string} Encoded query for sys_user table
+     */
+    usersWithRole: function (roles, current) {
+        if (!current || !current.hospital) return 'sys_idISEMPTY';
+
+        // 1. Resolve role sys_ids
+        var roleNames = [
+            'x_2223823_apollo_0.bed_manager',
+            'x_2223823_apollo_0.receptionist'
+        ];
+
+        var roleIds = [];
+        var rGr = new GlideRecord('sys_user_role');
+        rGr.addQuery('name', 'IN', roleNames.join(','));
+        rGr.query();
+        while (rGr.next()) {
+            roleIds.push(rGr.getUniqueValue());
+        }
+
+        var userIdsWithRole = [];
+        if (roleIds.length > 0) {
+            var urGr = new GlideRecord('sys_user_has_role');
+            urGr.addQuery('role', 'IN', roleIds.join(','));
+            urGr.addQuery('user.active', true);
+            urGr.query();
+            while (urGr.next()) {
+                var u = urGr.getValue('user');
+                if (u && userIdsWithRole.indexOf(u) === -1) {
+                    userIdsWithRole.push(u);
+                }
+            }
+        }
+
+        // 2. Filter to users who work at current.hospital via active Staff records
+        var hospitalStaffUsers = [];
+        var staffGr = new GlideRecord('x_2223823_apollo_0_staff');
+        staffGr.addQuery('hospital', current.hospital);
+        staffGr.addQuery('active', true);
+        staffGr.addNotNullQuery('user');
+        staffGr.query();
+        while (staffGr.next()) {
+            var staffUser = staffGr.getValue('user');
+            var sRole = staffGr.getValue('staff_role');
+            // Matches if user has the platform role OR staff_role choice is bed_manager / receptionist
+            if (userIdsWithRole.indexOf(staffUser) !== -1 || sRole === 'bed_manager' || sRole === 'receptionist_cashier') {
+                if (hospitalStaffUsers.indexOf(staffUser) === -1) {
+                    hospitalStaffUsers.push(staffUser);
+                }
+            }
+        }
+
+        // Keep existing reserved_by user selectable when reviewing saved records
+        if (current.reserved_by && hospitalStaffUsers.indexOf(current.reserved_by.toString()) === -1) {
+            hospitalStaffUsers.push(current.reserved_by.toString());
+        }
+
+        if (hospitalStaffUsers.length === 0) {
+            return 'sys_idISEMPTY';
+        }
+
+        return 'active=true^sys_idIN' + hospitalStaffUsers.join(',');
+    },
+	
+    type: 'HospitalRefQual',
+};
+]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>harshvardhan.chhapola</sys_created_by>
+        <sys_created_on>2026-11-04 06:25:19</sys_created_on>
+        <sys_id>79910d0718274a04a294056df6f3a35c</sys_id>
+        <sys_mod_count>6</sys_mod_count>
+        <sys_name>HospitalRefQual</sys_name>
+        <sys_package display_value="Apollo-Hospitals" source="x_2223823_apollo_0">87c1422693c89b507b3a7c5efaba1008</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
+        <sys_update_name>sys_script_include_79910d0718274a04a294056df6f3a35c</sys_update_name>
+        <sys_updated_by>ridhwik.jangid</sys_updated_by>
+        <sys_updated_on>2026-11-09 06:56:15</sys_updated_on>
+    </sys_script_include>
+</record_update>

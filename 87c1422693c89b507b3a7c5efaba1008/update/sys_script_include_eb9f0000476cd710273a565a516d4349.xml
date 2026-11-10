@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>x_2223823_apollo_0.Payment</api_name>
+        <caller_access/>
+        <client_callable>true</client_callable>
+        <description/>
+        <mobile_callable>false</mobile_callable>
+        <name>Payment</name>
+        <sandbox_callable>false</sandbox_callable>
+        <script><![CDATA[var Payment = Class.create();
+Payment.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
+
+    /**
+     * Reference Qualifier for 'collected_by' field on Payment table.
+     * Condition: Active users belonging to the current Payment form's hospital 
+     * AND having either 'x_2223823_apollo_0.cashier' or 'x_2223823_apollo_0.receptionist' role.
+     */
+    getCollectedByRefQual: function(current) {
+        if (!current) return '';
+
+        var currentHospital = current.getValue('hospital');
+        var userSysids = [];
+
+        // 1. Agar payment record par hospital select nahi hai, toh koi filter mat lagao (sab dikhao ya blank)
+        if (!currentHospital) {
+            return ''; 
+        }
+
+        // 2. Staff table (x_2223823_apollo_0_staff) se un users ki list nikalo jo is hospital se belong karte hain
+        var validUserIds = [];
+        var staffGr = new GlideRecord('x_2223823_apollo_0_staff');
+        staffGr.addQuery('hospital', currentHospital);
+        staffGr.query();
+        
+        while (staffGr.next()) {
+            var usr = staffGr.getValue('user'); 
+            if (usr && validUserIds.indexOf(usr) === -1) {
+                validUserIds.push(usr);
+            }
+        }
+
+        // Agar is hospital me koi staff mapped nahi hai, toh empty result return karo
+        if (validUserIds.length === 0) {
+            return 'sys_id=00000000000000000000000000000000'; 
+        }
+
+        // 3. Ab un valid users me se unko filter karo jinke paas cashier ya receptionist role ho
+        var roleGr = new GlideRecord('sys_user_has_role');
+        
+        // Strict IN condition for users
+        roleGr.addQuery('user', 'IN', validUserIds.join(','));
+        
+        roleGr.addEncodedQuery('role.nameSTARTSWITHx_2223823_apollo_0.cashier^ORrole.nameSTARTSWITHx_2223823_apollo_0.receptionist');
+        
+        // Optional state check (agar sys_user_has_role me state field active/inactive ke liye hai)
+        if (roleGr.isValidField('state')) {
+            roleGr.addQuery('state', 'active');
+        }
+        
+        roleGr.query();
+
+        while (roleGr.next()) {
+            var finalUserId = roleGr.getValue('user');
+            if (finalUserId && userSysids.indexOf(finalUserId) === -1) {
+                userSysids.push(finalUserId);
+            }
+        }
+
+        // 4. Final Encoded Query return karo
+        if (userSysids.length > 0) {
+            return 'sys_idIN' + userSysids.join(',');
+        } else {
+            return 'sys_id=00000000000000000000000000000000';
+        }
+    },
+
+
+	/**
+     * Reference Qualifier for 'original_payment' field on Payment table.
+     * Condition: 
+     * - Invoice matches current form's invoice (`invoice = current.invoice`).
+     * - Only payment records, excluding refunds (`kind = payment`).
+     * - Excludes the current record itself.
+     */
+    getOriginalPaymentRefQual: function(current) {
+        if (!current) return '';
+
+        var currentInvoice = current.getValue('invoice');
+        var currentSysId = current.getUniqueValue();
+
+        // Agar invoice hi select nahi hai, toh koi record show mat karo
+        if (!currentInvoice) {
+            return 'sys_id=00000000000000000000000000000000';
+        }
+
+        var paymentSysids = [];
+        var paymentGr = new GlideRecord('x_2223823_apollo_0_payment'); // Apne Payment table ka exact name yahan confirm kar lena
+        
+        paymentGr.addQuery('invoice', currentInvoice);
+        paymentGr.addQuery('kind', 'payment'); // Sirf payments, refunds nahi
+        
+        // Agar record pehle se saved hai, toh khud ko list se exclude karo
+        if (currentSysId) {
+            paymentGr.addQuery('sys_id', '!=', currentSysId);
+        }
+        
+        paymentGr.query();
+
+        while (paymentGr.next()) {
+            paymentSysids.push(paymentGr.getUniqueValue());
+        }
+
+        // Final Encoded Query return karo
+        if (paymentSysids.length > 0) {
+            return 'sys_idIN' + paymentSysids.join(',');
+        } else {
+            // Agar koi matching original payment nahi mila
+            return 'sys_id=00000000000000000000000000000000';
+        }
+    },
+
+	getInvoiceRefQual: function(current) {
+        if (!current) return '';
+
+        var currentPatient = current.getValue('patient');
+        var currentHospital = current.getValue('hospital');
+
+        if (!currentPatient || !currentHospital) {
+            return 'sys_id=00000000000000000000000000000000';
+        }
+
+        var invoiceSysids = [];
+        var invoiceGr = new GlideRecord('x_2223823_apollo_0_invoice'); 
+        invoiceGr.addQuery('patient', currentPatient);
+        invoiceGr.addQuery('hospital', currentHospital);
+        
+        // FIXED: Using proper OR condition for status (draft OR partially_paid)
+        var statusQC = invoiceGr.addQuery('status', 'draft');
+        statusQC.addOrCondition('status', 'partially_paid');
+        
+        invoiceGr.query();
+
+        while (invoiceGr.next()) {
+            invoiceSysids.push(invoiceGr.getUniqueValue());
+        }
+
+        if (invoiceSysids.length > 0) {
+            return 'sys_idIN' + invoiceSysids.join(',');
+        } else {
+            return 'sys_id=00000000000000000000000000000000';
+        }
+    },
+
+    type: 'Payment'
+});]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>nilesh.chaurasia</sys_created_by>
+        <sys_created_on>2026-11-09 07:14:48</sys_created_on>
+        <sys_id>eb9f0000476cd710273a565a516d4349</sys_id>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_name>Payment</sys_name>
+        <sys_package display_value="Apollo-Hospitals" source="x_2223823_apollo_0">87c1422693c89b507b3a7c5efaba1008</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
+        <sys_update_name>sys_script_include_eb9f0000476cd710273a565a516d4349</sys_update_name>
+        <sys_updated_by>nilesh.chaurasia</sys_updated_by>
+        <sys_updated_on>2026-11-09 08:38:22</sys_updated_on>
+    </sys_script_include>
+</record_update>

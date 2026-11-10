@@ -1,42 +1,44 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
     <element attributes="enforce_dot_walk_cross_scope_access=true" db_object_id="316cc8b947d01310273a565a516d4381" label="Invoice" max_length="40" name="x_2223823_apollo_0_invoice" type="collection">
-        <element label="External reference" max_length="60" name="external_reference" type="string"/>
-        <element label="Appointment" max_length="32" name="appointment" reference="x_2223823_apollo_0_appointment" type="reference"/>
+        <element label="Appointment" max_length="32" name="appointment" reference="x_2223823_apollo_0_appointment" reference_qual="javascript:new Invoice().getAppointmentRefQual(current);" type="reference" use_reference_qualifier="advanced"/>
+        <element label="Patient" mandatory="true" max_length="32" name="patient" reference="x_2223823_apollo_0_patient" type="reference"/>
         <element choice="1" label="Status" mandatory="true" max_length="40" name="status" type="choice">
             <choice>
                 <element inactive_on_update="false" label="Draft" sequence="1" value="draft"/>
                 <element inactive_on_update="false" label="Paid" sequence="4" value="paid"/>
-                <element inactive_on_update="false" label="Issued" sequence="2" value="issued"/>
-                <element inactive_on_update="false" label="Refunded" sequence="6" value="refunded"/>
-                <element inactive_on_update="false" label="Cancelled" sequence="5" value="cancelled"/>
                 <element inactive_on_update="false" label="Partially paid" sequence="3" value="partially_paid"/>
+                <element inactive_on_update="false" label="Refunded" sequence="6" value="refunded"/>
+                <element inactive_on_update="false" label="Issued" sequence="2" value="issued"/>
+                <element inactive_on_update="false" label="Cancelled" sequence="5" value="cancelled"/>
             </choice>
         </element>
-        <element label="Total amount" mandatory="true" max_length="20" name="total_amount" type="currency"/>
-        <element attributes="ignore_filter_on_new=true" default="javascript:global.getNextObjNumberPadded();" label="Number" max_length="40" name="number" read_only="true" read_only_option="strict_read_only" type="string"/>
-        <element label="Admission" max_length="32" name="admission" reference="x_2223823_apollo_0_admission" type="reference"/>
+        <element label="Hospital" mandatory="true" max_length="32" name="hospital" reference="x_2223823_apollo_0_hospital" reference_qual="javascript:new x_2223823_apollo_0.HospitalRefQual().getQuery(current)" type="reference" use_reference_qualifier="advanced"/>
         <element label="Paid amount" max_length="20" name="paid_amount" type="currency"/>
-        <element label="Hospital" mandatory="true" max_length="32" name="hospital" reference="x_2223823_apollo_0_hospital" type="reference"/>
+        <element label="Total amount" mandatory="true" max_length="20" name="total_amount" type="currency"/>
         <element choice="1" label="Patient type" mandatory="true" max_length="40" name="patient_type" type="choice">
             <choice>
-                <element inactive_on_update="false" label="OPD" sequence="1" value="opd"/>
                 <element inactive_on_update="false" label="Inpatient" sequence="3" value="inpatient"/>
                 <element inactive_on_update="false" label="Video" sequence="2" value="video"/>
+                <element inactive_on_update="false" label="OPD" sequence="1" value="opd"/>
             </choice>
         </element>
+        <element label="External reference" max_length="60" name="external_reference" type="string"/>
+        <element attributes="ignore_filter_on_new=true" default="javascript:global.getNextObjNumberPadded();" label="Number" max_length="40" name="number" read_only="true" read_only_option="strict_read_only" type="string"/>
         <element label="Final invoice" max_length="40" name="is_final" type="boolean"/>
-        <element label="Patient" mandatory="true" max_length="32" name="patient" reference="x_2223823_apollo_0_patient" type="reference"/>
         <index name="index">
-            <element name="admission"/>
-        </index>
-        <index name="index2">
             <element name="appointment"/>
         </index>
-        <index name="index3">
+        <index name="index2">
             <element name="hospital"/>
+        </index>
+        <index name="index3">
+            <element name="is_final"/>
         </index>
         <index name="index4">
             <element name="patient"/>
+        </index>
+        <index name="index5">
+            <element name="status"/>
         </index>
     </element>
 </database>

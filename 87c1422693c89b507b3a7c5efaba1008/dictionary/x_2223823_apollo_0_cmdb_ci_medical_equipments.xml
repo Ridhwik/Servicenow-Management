@@ -2,13 +2,13 @@
     <element attributes="enforce_dot_walk_cross_scope_access=true" db_object_id="55369971479c1310273a565a516d436a" extends="cmdb_ci_hardware" label="Medical Equipments" max_length="40" name="x_2223823_apollo_0_cmdb_ci_medical_equipments" type="collection">
         <element choice="1" label="Equipment Type" mandatory="true" max_length="40" name="u_equipment_type" type="choice">
             <choice>
+                <element inactive_on_update="false" label="X-ray" sequence="2" value="X-ray"/>
                 <element inactive_on_update="false" label="Ultrasound" sequence="3" value="Ultrasound"/>
+                <element inactive_on_update="false" label="Patient Monitor" sequence="6" value="Patient Monitor"/>
+                <element inactive_on_update="false" label="Vantilator" sequence="5" value="Vantilator"/>
                 <element inactive_on_update="false" label="ECG" sequence="4" value="ECG"/>
                 <element inactive_on_update="false" label="MRI" sequence="0" value="MRI"/>
                 <element inactive_on_update="false" label="CT" sequence="1" value="CT"/>
-                <element inactive_on_update="false" label="Vantilator" sequence="5" value="Vantilator"/>
-                <element inactive_on_update="false" label="X-ray" sequence="2" value="X-ray"/>
-                <element inactive_on_update="false" label="Patient Monitor" sequence="6" value="Patient Monitor"/>
             </choice>
         </element>
     </element>

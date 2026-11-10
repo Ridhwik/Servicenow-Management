@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>x_2223823_apollo_0.DoctorRequest</api_name>
+        <caller_access/>
+        <client_callable>true</client_callable>
+        <description/>
+        <mobile_callable>false</mobile_callable>
+        <name>DoctorRequest</name>
+        <sandbox_callable>false</sandbox_callable>
+        <script><![CDATA[var DoctorRequest = Class.create();
+DoctorRequest.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
+
+    /**
+     * 1. Doctor Field Reference Qualifier
+     * Purpose: Filters doctor records based on the selected request type.
+     * - Leave: Shows doctors whose primary hospital matches the current request's hospital.
+     * - Cover: Shows doctors whose primary hospital does NOT match (or is empty).
+     */
+    getDoctorRefQual: function(current) {
+        if (!current || !current.request_type) {
+            //gs.info("DoctorRefQual: Current or request_type is missing");
+            return '';
+        }
+
+        var currentHospital = current.getValue('hospital');
+        var reqType = current.request_type.toString().toLowerCase();
+
+        //gs.info("DoctorRefQual Debug -> Request Type: " + reqType + ", Hospital: " + currentHospital);
+
+        if (!currentHospital) {
+            return '';
+        }
+
+        var doctorSysids = [];
+        var doctorGr = new GlideRecord('x_2223823_apollo_0_doctor');
+
+        // Apply filters based on Request Type
+        if (reqType === 'leave') {
+            doctorGr.addQuery('primary_hospital', currentHospital);
+        } else if (reqType === 'cover') {
+            doctorGr.addEncodedQuery('primary_hospital!=' + currentHospital + '^ORprimary_hospitalISEMPTY');
+        }
+
+        doctorGr.query();
+        while (doctorGr.next()) {
+            doctorSysids.push(doctorGr.getUniqueValue());
+        }
+
+        //gs.info("DoctorRefQual Debug -> Matching Doctor IDs Found: " + doctorSysids.length);
+
+        // Return query string or empty condition if no doctors found
+        if (doctorSysids.length > 0) {
+            return 'sys_idIN' + doctorSysids.join(',');
+        } else {
+            return 'sys_id=00000000000000000000000000000000';
+        }
+    },
+
+
+    /**
+     * 2. Approval Group Field Reference Qualifier
+     * Purpose: For 'Cover' requests, filters approval groups whose name contains the selected doctor's cover hospital code.
+     * Note: If no doctor is selected yet, it returns blank to show all groups.
+     */
+    getApprovalGroupRefQual: function(current) {
+        if (!current || !current.request_type) return '';
+
+        var reqType = current.request_type.toString().toLowerCase();
+
+        // This logic runs only for 'cover' requests
+        if (reqType === 'cover') {
+            var hospitalCode = '';
+            var doctorId = current.getValue('doctor');
+
+            // If doctor is not selected yet, show all groups (do not apply filter)
+            if (!doctorId) {
+                return '';
+            }
+
+            // Fetch doctor record and extract hospital code via dot-walking
+            var doctorGr = new GlideRecord('x_2223823_apollo_0_doctor');
+            if (doctorGr.get(doctorId)) {
+                hospitalCode = doctorGr.getDisplayValue('primary_hospital.number') || doctorGr.getValue('primary_hospital.number');
+
+                // Fallback check if getValue doesn't return string directly
+                if (!hospitalCode && doctorGr.primary_hospital) {
+                    hospitalCode = doctorGr.primary_hospital.number.toString();
+                }
+            }
+
+            // Query sys_user_group table using the hospital code
+            if (hospitalCode) {
+                var groupSysids = [];
+                var groupGr = new GlideRecord('sys_user_group');
+                groupGr.addQuery('name', 'CONTAINS', hospitalCode);
+                groupGr.query();
+
+                while (groupGr.next()) {
+                    groupSysids.push(groupGr.getUniqueValue());
+                }
+
+                if (groupSysids.length > 0) {
+                    return 'sys_idIN' + groupSysids.join(',');
+                } else {
+                    // Return dummy condition if no matching group is found
+                    return 'sys_id=00000000000000000000000000000000';
+                }
+            }
+        }
+
+        return '';
+    },
+
+
+    /**
+     * 3. Approver Field Reference Qualifier
+     * Purpose: Filters approvers depending on the request type:
+     * - Cover: Returns active members of the selected approval_group.
+     * - Leave: Returns Auto HOD (via dot-walking) + Manager (reports-to backup) based on the doctor's profile.
+     */
+    getApproverRefQual: function(current) {
+        if (!current || !current.request_type) return '';
+
+        var reqType = current.request_type.toString().toLowerCase();
+        var approverSysids = [];
+
+        // --- SCENARIO 1: COVER REQUEST TYPE ---
+        if (reqType === 'cover') {
+            var groupId = current.getValue('approval_group');
+            if (!groupId) {
+                return ''; // If approval group is not selected, don't filter
+            }
+
+            // Fetch members from sys_user_grmember table
+            var memberGr = new GlideRecord('sys_user_grmember');
+            memberGr.addQuery('group', groupId);
+            memberGr.query();
+
+            while (memberGr.next()) {
+                var userId = memberGr.getValue('user');
+                if (userId) {
+                    approverSysids.push(userId);
+                }
+            }
+        }
+        // --- SCENARIO 2: LEAVE REQUEST TYPE ---
+        else if (reqType === 'leave') {
+            var doctorId = current.getValue('doctor');
+            if (!doctorId) {
+                return ''; // If doctor is not selected, don't filter
+            }
+
+            // Fetch doctor profile record
+            var doctorGr = new GlideRecord('x_2223823_apollo_0_doctor');
+            if (doctorGr.get(doctorId)) {
+
+                // A. Primary Approver: Department HOD (via Dot-Walking)
+                var hodId = doctorGr.department.hod.user.getDisplayValue() || doctorGr.department.hod.user.getValue();
+
+                if (!hodId && doctorGr.department) {
+                    hodId = doctorGr.department.hod.user.toString();
+                }
+
+                if (hodId) {
+                    approverSysids.push(hodId);
+                }
+
+                // B. Backup Approver: Manager / Reports-To
+                var managerId = doctorGr.user.manager.getValue();
+                if (managerId) {
+                    // Prevent duplicate entry if HOD and Manager are the same person
+                    if (approverSysids.indexOf(managerId) === -1) {
+                        approverSysids.push(managerId);
+                    }
+                }
+            }
+        }
+
+        // Return final sys_idIN query string
+        if (approverSysids.length > 0) {
+            return 'sys_idIN' + approverSysids.join(',');
+        } else {
+            // Return dummy condition if no approver is resolved
+            return 'sys_id=00000000000000000000000000000000';
+        }
+    },
+
+    type: 'DoctorRequest'
+});]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>nilesh.chaurasia</sys_created_by>
+        <sys_created_on>2026-11-09 05:44:21</sys_created_on>
+        <sys_id>fe6cbb774758d710273a565a516d4382</sys_id>
+        <sys_mod_count>9</sys_mod_count>
+        <sys_name>DoctorRequest</sys_name>
+        <sys_package display_value="Apollo-Hospitals" source="x_2223823_apollo_0">87c1422693c89b507b3a7c5efaba1008</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
+        <sys_update_name>sys_script_include_fe6cbb774758d710273a565a516d4382</sys_update_name>
+        <sys_updated_by>nilesh.chaurasia</sys_updated_by>
+        <sys_updated_on>2026-11-09 06:34:38</sys_updated_on>
+    </sys_script_include>
+</record_update>

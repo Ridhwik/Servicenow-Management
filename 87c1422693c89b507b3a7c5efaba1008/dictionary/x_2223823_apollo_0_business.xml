@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element attributes="enforce_dot_walk_cross_scope_access=true" db_object_id="6cba4e9a47d45710273a565a516d4361" label="Business" max_length="40" name="x_2223823_apollo_0_business" type="collection">
+        <element label="Business Name" mandatory="true" max_length="100" name="business_name" type="string"/>
+        <element attributes="edge_encryption_enabled=true,encode_utf8=false" label="Business Owner" mandatory="true" max_length="32" name="business_owner" reference="sys_user" type="reference"/>
+        <index name="index">
+            <element name="business_owner"/>
+        </index>
+    </element>
+</database>
