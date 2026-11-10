@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element attributes="enforce_dot_walk_cross_scope_access=true" db_object_id="c3779d1447a49b10273a565a516d4361" label="Reschedule Offer" max_length="40" name="x_2223823_apollo_0_reschedule_offer" type="collection">
+        <element attributes="edge_encryption_enabled=true" default="javascript:global.getNextObjNumberPadded();" label="Number" max_length="40" name="number" type="string"/>
+        <element label="Responded On" max_length="40" name="responded_on" type="glide_date_time"/>
+        <element choice="1" label="Trigger" mandatory="true" max_length="40" name="trigger" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Equipment conflict" sequence="2" value="3"/>
+                <element inactive_on_update="false" label="Doctor leave" sequence="0" value="1"/>
+                <element inactive_on_update="false" label="Doctor emergency" sequence="1" value="2"/>
+            </choice>
+        </element>
+        <element choice="1" label="Status" mandatory="true" max_length="40" name="status" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Cancelled with refund" sequence="4" value="5"/>
+                <element inactive_on_update="false" label="Own slot proposed" sequence="2" value="3"/>
+                <element inactive_on_update="false" label="Accepted" sequence="1" value="2"/>
+                <element inactive_on_update="false" label="Offered" sequence="0" value="1"/>
+                <element inactive_on_update="false" label="Expired" sequence="5" value="6"/>
+                <element inactive_on_update="false" label="Auto-assigned" sequence="3" value="4"/>
+            </choice>
+        </element>
+        <element label="Offered On" max_length="40" name="offered_on" type="glide_date_time"/>
+        <element label="Patient's own date and time" max_length="40" name="patient_proposed_start" type="glide_date_time"/>
+        <element label="Selected start" max_length="40" name="selected_start" type="glide_date_time"/>
+        <element label="Patient" mandatory="true" max_length="32" name="patient" reference="x_2223823_apollo_0_patient" type="reference"/>
+        <element label="Appointment" mandatory="true" max_length="32" name="appointment" reference="x_2223823_apollo_0_appointment" type="reference"/>
+        <element label="Option 1 start" max_length="40" name="option_1_start" type="glide_date_time"/>
+        <element label="Option 3 start" max_length="40" name="option_3_start" type="glide_date_time"/>
+        <element label="Option 2 start" max_length="40" name="option_2_start" type="glide_date_time"/>
+        <element label="Hospital" mandatory="true" max_length="32" name="hospital" reference="x_2223823_apollo_0_hospital" type="reference"/>
+        <index name="index">
+            <element name="appointment"/>
+        </index>
+        <index name="index2">
+            <element name="hospital"/>
+        </index>
+        <index name="index3">
+            <element name="patient"/>
+        </index>
+    </element>
+</database>

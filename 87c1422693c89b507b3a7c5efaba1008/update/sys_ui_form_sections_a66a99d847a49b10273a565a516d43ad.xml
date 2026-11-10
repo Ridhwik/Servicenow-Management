@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_ui_form_sections form_id="a66a99d847a49b10273a565a516d43ad" sys_domain="global" table="x_2223823_apollo_0_reschedule_offer" version="3">
+        <sys_ui_form_section action="INSERT_OR_UPDATE">
+            <position>0</position>
+            <sys_created_by>ridhwik.jangid</sys_created_by>
+            <sys_created_on>2026-11-10 07:08:20</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>6a6a99d847a49b10273a565a516d43f1</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_overrides/>
+            <sys_ui_form display_value="x_2223823_apollo_0_reschedule_offer" name="x_2223823_apollo_0_reschedule_offer" sys_domain="global" view="Default view">a66a99d847a49b10273a565a516d43ad</sys_ui_form>
+            <sys_ui_section caption="NULL" display_value="" name="x_2223823_apollo_0_reschedule_offer" sys_domain="global" view="Default view">b77755d447649b10273a565a516d431d</sys_ui_section>
+            <sys_updated_by>ridhwik.jangid</sys_updated_by>
+            <sys_updated_on>2026-11-10 07:08:20</sys_updated_on>
+        </sys_ui_form_section>
+        <sys_ui_form_section action="INSERT_OR_UPDATE">
+            <position>1</position>
+            <sys_created_by>ridhwik.jangid</sys_created_by>
+            <sys_created_on>2026-11-10 07:08:20</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>226a99d847a49b10273a565a516d43f3</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_overrides/>
+            <sys_ui_form display_value="x_2223823_apollo_0_reschedule_offer" name="x_2223823_apollo_0_reschedule_offer" sys_domain="global" view="Default view">a66a99d847a49b10273a565a516d43ad</sys_ui_form>
+            <sys_ui_section caption="Options" display_value="Options" name="x_2223823_apollo_0_reschedule_offer" sys_domain="global" view="Default view">6e6a99d847a49b10273a565a516d43ab</sys_ui_section>
+            <sys_updated_by>ridhwik.jangid</sys_updated_by>
+            <sys_updated_on>2026-11-10 07:08:20</sys_updated_on>
+        </sys_ui_form_section>
+        <sys_ui_form action="INSERT_OR_UPDATE">
+            <name>x_2223823_apollo_0_reschedule_offer</name>
+            <roles/>
+            <sys_class_name>sys_ui_form</sys_class_name>
+            <sys_created_by>ridhwik.jangid</sys_created_by>
+            <sys_created_on>2026-11-10 07:08:20</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>a66a99d847a49b10273a565a516d43ad</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>x_2223823_apollo_0_reschedule_offer</sys_name>
+            <sys_overrides/>
+            <sys_package display_value="Apollo-Hospitals" source="x_2223823_apollo_0">87c1422693c89b507b3a7c5efaba1008</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
+            <sys_update_name>sys_ui_form_sections_a66a99d847a49b10273a565a516d43ad</sys_update_name>
+            <sys_updated_by>ridhwik.jangid</sys_updated_by>
+            <sys_updated_on>2026-11-10 07:08:20</sys_updated_on>
+            <sys_user/>
+            <view display_value="Default view" name="NULL">Default view</view>
+            <view_name/>
+        </sys_ui_form>
+    </sys_ui_form_sections>
+</record_update>
