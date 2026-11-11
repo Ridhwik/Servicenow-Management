@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element attributes="email_client=true,hasWorkflow=true,live_feed=true,all_tables.query_hints=true" audit="true" db_object_id="5deeaf09f077031001ffe61a9d6c4868" extends="task" label="Incident" max_length="40" name="incident" text_index="true" type="collection">
+        <element label="Hospital" max_length="32" name="x_2223823_apollo_0_hospital" reference="x_2223823_apollo_0_hospital" type="reference"/>
+    </element>
+</database>
