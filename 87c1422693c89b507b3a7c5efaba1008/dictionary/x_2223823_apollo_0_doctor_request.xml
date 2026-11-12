@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
     <element attributes="enforce_dot_walk_cross_scope_access=true" db_object_id="72298a0c935097107b3a7c5efaba1087" label="Doctor Request" max_length="40" name="x_2223823_apollo_0_doctor_request" type="collection">
         <element label="Approver group" max_length="32" name="approval_group" reference="sys_user_group" reference_qual="javascript:new DoctorRequest().getApprovalGroupRefQual(current);" type="reference" use_reference_qualifier="advanced"/>
-        <element label="Hospital" max_length="32" name="hospital" reference="x_2223823_apollo_0_hospital" reference_qual="javascript:new x_2223823_apollo_0.HospitalRefQual().getQuery(current)" type="reference" use_reference_qualifier="advanced"/>
+        <element label="Hospital" mandatory="true" max_length="32" name="hospital" reference="x_2223823_apollo_0_hospital" reference_qual="javascript:new x_2223823_apollo_0.HospitalRefQual().getQuery(current)" type="reference" use_reference_qualifier="advanced"/>
         <element label="Approver" max_length="32" name="approver" reference="sys_user" reference_qual="javascript:new DoctorRequest().getApproverRefQual(current);" type="reference" use_reference_qualifier="advanced"/>
-        <element label="Doctor" max_length="32" name="doctor" reference="x_2223823_apollo_0_doctor" reference_qual="javascript:new DoctorRequest().getDoctorRefQual(current);" type="reference" use_reference_qualifier="advanced"/>
-        <element choice="1" label="Type" max_length="40" name="request_type" type="choice">
+        <element label="Doctor" mandatory="true" max_length="32" name="doctor" reference="x_2223823_apollo_0_doctor" reference_qual="javascript:new DoctorRequest().getDoctorRefQual(current);" type="reference" use_reference_qualifier="advanced"/>
+        <element choice="1" label="Type" mandatory="true" max_length="40" name="request_type" type="choice">
             <choice>
                 <element inactive_on_update="false" label="Leave" sequence="0" value="leave"/>
                 <element inactive_on_update="false" label="Cover" sequence="1" value="cover"/>
             </choice>
         </element>
         <element label="Reason" max_length="255" name="reason" type="string"/>
-        <element choice="1" label="Status" max_length="40" name="status" type="choice">
+        <element choice="1" label="Status" mandatory="true" max_length="40" name="status" read_only="true" read_only_option="display_read_only" type="choice">
             <choice>
                 <element inactive_on_update="false" label="Approved" sequence="1" value="approved"/>
                 <element inactive_on_update="false" label="Expired" sequence="4" value="expired"/>
@@ -21,9 +21,9 @@
             </choice>
         </element>
         <element label="Affected appointments" max_length="40" name="affected_count" type="integer"/>
-        <element label="To" max_length="40" name="end_date" type="glide_date"/>
+        <element label="To" mandatory="true" max_length="40" name="end_date" type="glide_date"/>
         <element label="Approved on" max_length="40" name="approved_on" read_only="true" read_only_option="display_read_only" type="glide_date_time"/>
-        <element label="From" max_length="40" name="start_date" type="glide_date"/>
+        <element label="From" mandatory="true" max_length="40" name="start_date" type="glide_date"/>
         <element label="Rejection reason" max_length="255" name="rejection_reason" type="string"/>
         <index name="index">
             <element name="approval_group"/>
