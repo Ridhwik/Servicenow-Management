@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="contract_sla">
+    <contract_sla action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <adv_condition_type>none</adv_condition_type>
+        <cancel_condition table="incident">priority!=3^ORstate=8<item display_value="3 - Moderate" endquery="false" field="priority" goto="false" newquery="false" operator="!=" or="false" value="3"/>
+            <item display_value="Canceled" endquery="false" field="state" goto="false" newquery="false" operator="=" or="true" value="8"/>
+        </cancel_condition>
+        <collection>incident</collection>
+        <condition_class/>
+        <duration>1970-01-03 00:00:00</duration>
+        <duration_type/>
+        <enable_logging>false</enable_logging>
+        <flow display_value="Default SLA flow">828f267973333300e289235f04f6a7a3</flow>
+        <name>IT - Computer/Printer/Application - Norm</name>
+        <pause_condition table="incident">state=3<item display_value="On Hold" endquery="false" field="state" goto="false" newquery="false" operator="=" or="false" value="3"/>
+        </pause_condition>
+        <relative_duration_works_on>Task record</relative_duration_works_on>
+        <reset_action>cancel</reset_action>
+        <reset_condition table="incident">reopen_countVALCHANGES<item endquery="false" field="reopen_count" goto="false" newquery="false" operator="VALCHANGES" or="false" value=""/>
+        </reset_condition>
+        <resume_condition/>
+        <retroactive>true</retroactive>
+        <retroactive_pause>true</retroactive_pause>
+        <schedule display_value="8-5 weekdays">08fcd0830a0a0b2600079f56b1adb9ae</schedule>
+        <schedule_source>sla_definition</schedule_source>
+        <schedule_source_field/>
+        <set_start_to>opened_at</set_start_to>
+        <start_condition table="incident">categoryINhardware,software^priority=3^active=true<item display_value="hardware,software" endquery="false" field="category" goto="false" newquery="false" operator="IN" or="false" value="hardware,software"/>
+            <item display_value="3 - Moderate" endquery="false" field="priority" goto="false" newquery="false" operator="=" or="false" value="3"/>
+            <item endquery="false" field="active" goto="false" newquery="false" operator="=" or="false" value="true"/>
+        </start_condition>
+        <stop_condition table="incident">stateIN6,7<item display_value="6,7" endquery="false" field="state" goto="false" newquery="false" operator="IN" or="false" value="6,7"/>
+        </stop_condition>
+        <sys_class_name>contract_sla</sys_class_name>
+        <sys_created_by>fateh.meena</sys_created_by>
+        <sys_created_on>2026-11-11 05:36:54</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>e01fc6a8472c1f10273a565a516d43cb</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>IT - Computer/Printer/Application - Norm</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Apollo-Hospitals" source="x_2223823_apollo_0">87c1422693c89b507b3a7c5efaba1008</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
+        <sys_update_name>contract_sla_e01fc6a8472c1f10273a565a516d43cb</sys_update_name>
+        <sys_updated_by>fateh.meena</sys_updated_by>
+        <sys_updated_on>2026-11-11 05:36:54</sys_updated_on>
+        <target>resolution</target>
+        <timezone/>
+        <timezone_source>task.caller_id.time_zone</timezone_source>
+        <type>SLA</type>
+        <vendor/>
+        <when_to_cancel>on_condition</when_to_cancel>
+        <when_to_resume>on_condition</when_to_resume>
+        <workflow/>
+    </contract_sla>
+    <sys_translated_text action="delete_multiple" query="documentkey=e01fc6a8472c1f10273a565a516d43cb"/>
+</record_update>
