@@ -2,12 +2,13 @@
     <contract_sla action="INSERT_OR_UPDATE">
         <active>true</active>
         <adv_condition_type>none</adv_condition_type>
-        <cancel_condition table="incident">priority!=1^ORstate=8<item display_value="1 - Critical" endquery="false" field="priority" goto="false" newquery="false" operator="!=" or="false" value="1"/>
+        <cancel_condition table="incident">priority!=1^ORstate=8^EQ<item display_value="1 - Critical" endquery="false" field="priority" goto="false" newquery="false" operator="!=" or="false" value="1"/>
             <item display_value="Canceled" endquery="false" field="state" goto="false" newquery="false" operator="=" or="true" value="8"/>
+            <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
         </cancel_condition>
         <collection>incident</collection>
         <condition_class/>
-        <duration>1970-01-01 00:15:00</duration>
+        <duration>1970-01-01 00:02:00</duration>
         <duration_type/>
         <enable_logging>false</enable_logging>
         <flow display_value="Default SLA flow">828f267973333300e289235f04f6a7a3</flow>
@@ -20,14 +21,17 @@
         <retroactive>true</retroactive>
         <retroactive_pause>true</retroactive_pause>
         <schedule/>
-        <schedule_source>sla_definition</schedule_source>
+        <schedule_source>no_schedule</schedule_source>
         <schedule_source_field/>
         <set_start_to>opened_at</set_start_to>
-        <start_condition table="incident">categoryINhardware,software^priority=1^active=true<item display_value="hardware,software" endquery="false" field="category" goto="false" newquery="false" operator="IN" or="false" value="hardware,software"/>
+        <start_condition table="incident">category=it^priority=1^active=true^subcategoryINapplication,computer,printer^EQ<item display_value="IT" endquery="false" field="category" goto="false" newquery="false" operator="=" or="false" value="it"/>
             <item display_value="1 - Critical" endquery="false" field="priority" goto="false" newquery="false" operator="=" or="false" value="1"/>
             <item endquery="false" field="active" goto="false" newquery="false" operator="=" or="false" value="true"/>
+            <item display_value="application,computer,printer" endquery="false" field="subcategory" goto="false" newquery="false" operator="IN" or="false" value="application,computer,printer"/>
+            <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
         </start_condition>
-        <stop_condition table="incident">stateIN2,6,7<item display_value="2,6,7" endquery="false" field="state" goto="false" newquery="false" operator="IN" or="false" value="2,6,7"/>
+        <stop_condition table="incident">stateIN2,6,7^EQ<item display_value="2,6,7" endquery="false" field="state" goto="false" newquery="false" operator="IN" or="false" value="2,6,7"/>
+            <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
         </stop_condition>
         <sys_class_name>contract_sla</sys_class_name>
         <sys_created_by>fateh.meena</sys_created_by>
@@ -35,7 +39,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>860f46a8472c1f10273a565a516d43dc</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>1</sys_mod_count>
         <sys_name>IT - Computer/Printer/Application - Crit</sys_name>
         <sys_overrides/>
         <sys_package display_value="Apollo-Hospitals" source="x_2223823_apollo_0">87c1422693c89b507b3a7c5efaba1008</sys_package>
@@ -43,7 +47,7 @@
         <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
         <sys_update_name>contract_sla_860f46a8472c1f10273a565a516d43dc</sys_update_name>
         <sys_updated_by>fateh.meena</sys_updated_by>
-        <sys_updated_on>2026-11-11 05:36:43</sys_updated_on>
+        <sys_updated_on>2026-11-12 12:06:59</sys_updated_on>
         <target>response</target>
         <timezone/>
         <timezone_source>task.caller_id.time_zone</timezone_source>

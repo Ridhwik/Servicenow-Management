@@ -2,9 +2,10 @@
     <contract_sla action="INSERT_OR_UPDATE">
         <active>true</active>
         <adv_condition_type>none</adv_condition_type>
-        <cancel_condition table="incident">category!=network^ORpriority!=4^ORstate=8<item display_value="Network" endquery="false" field="category" goto="false" newquery="false" operator="!=" or="false" value="network"/>
+        <cancel_condition table="incident">category!=it^ORpriority!=4^ORstate=8^EQ<item display_value="IT" endquery="false" field="category" goto="false" newquery="false" operator="!=" or="false" value="it"/>
             <item display_value="4 - Low" endquery="false" field="priority" goto="false" newquery="false" operator="!=" or="true" value="4"/>
             <item display_value="Canceled" endquery="false" field="state" goto="false" newquery="false" operator="=" or="true" value="8"/>
+            <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
         </cancel_condition>
         <collection>incident</collection>
         <condition_class/>
@@ -13,7 +14,8 @@
         <enable_logging>false</enable_logging>
         <flow display_value="Default SLA flow">828f267973333300e289235f04f6a7a3</flow>
         <name>IT - Network - Low - Response</name>
-        <pause_condition table="incident">state=3<item display_value="On Hold" endquery="false" field="state" goto="false" newquery="false" operator="=" or="false" value="3"/>
+        <pause_condition table="incident">state=3^EQ<item display_value="On Hold" endquery="false" field="state" goto="false" newquery="false" operator="=" or="false" value="3"/>
+            <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
         </pause_condition>
         <relative_duration_works_on>Task record</relative_duration_works_on>
         <reset_action>cancel</reset_action>
@@ -21,15 +23,19 @@
         <resume_condition/>
         <retroactive>true</retroactive>
         <retroactive_pause>true</retroactive_pause>
-        <schedule/>
+        <schedule display_value="8-20 all days">dd560bf6d713120058c92cf65e6103de</schedule>
         <schedule_source>sla_definition</schedule_source>
         <schedule_source_field/>
         <set_start_to>opened_at</set_start_to>
-        <start_condition table="incident">category=network^priority=4^active=true<item display_value="Network" endquery="false" field="category" goto="false" newquery="false" operator="=" or="false" value="network"/>
+        <start_condition table="incident">category=it^priority=4^active=true^subcategory=network^ORsubcategory=wi-fi^EQ<item display_value="IT" endquery="false" field="category" goto="false" newquery="false" operator="=" or="false" value="it"/>
             <item display_value="4 - Low" endquery="false" field="priority" goto="false" newquery="false" operator="=" or="false" value="4"/>
             <item endquery="false" field="active" goto="false" newquery="false" operator="=" or="false" value="true"/>
+            <item display_value="Network" endquery="false" field="subcategory" goto="false" newquery="false" operator="=" or="false" value="network"/>
+            <item display_value="Wi-Fi" endquery="false" field="subcategory" goto="false" newquery="false" operator="=" or="true" value="wi-fi"/>
+            <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
         </start_condition>
-        <stop_condition table="incident">stateIN2,6,7<item display_value="2,6,7" endquery="false" field="state" goto="false" newquery="false" operator="IN" or="false" value="2,6,7"/>
+        <stop_condition table="incident">stateIN2,6,7^EQ<item display_value="2,6,7" endquery="false" field="state" goto="false" newquery="false" operator="IN" or="false" value="2,6,7"/>
+            <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
         </stop_condition>
         <sys_class_name>contract_sla</sys_class_name>
         <sys_created_by>fateh.meena</sys_created_by>
@@ -37,7 +43,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>eb82b766471c1b10273a565a516d43ae</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>2</sys_mod_count>
         <sys_name>IT - Network - Low - Response</sys_name>
         <sys_overrides/>
         <sys_package display_value="Apollo-Hospitals" source="x_2223823_apollo_0">87c1422693c89b507b3a7c5efaba1008</sys_package>
@@ -45,7 +51,7 @@
         <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
         <sys_update_name>contract_sla_eb82b766471c1b10273a565a516d43ae</sys_update_name>
         <sys_updated_by>fateh.meena</sys_updated_by>
-        <sys_updated_on>2026-11-05 07:43:42</sys_updated_on>
+        <sys_updated_on>2026-11-12 06:45:15</sys_updated_on>
         <target>response</target>
         <timezone/>
         <timezone_source>task.caller_id.time_zone</timezone_source>

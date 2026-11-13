@@ -68,21 +68,21 @@
         <sys_created_by>nilesh.chaurasia</sys_created_by>
         <sys_created_on>2026-11-02 05:26:44</sys_created_on>
         <sys_id>bb36bf2547101310273a565a516d4376</sys_id>
-        <sys_mod_count>43</sys_mod_count>
+        <sys_mod_count>47</sys_mod_count>
         <sys_name>Housekeeping</sys_name>
         <sys_package display_value="Apollo-Hospitals" source="x_2223823_apollo_0">87c1422693c89b507b3a7c5efaba1008</sys_package>
         <sys_policy/>
         <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
         <sys_update_name>sc_cat_item_bb36bf2547101310273a565a516d4376</sys_update_name>
         <sys_updated_by>system</sys_updated_by>
-        <sys_updated_on>2026-11-02 06:00:36</sys_updated_on>
+        <sys_updated_on>2026-11-12 09:38:28</sys_updated_on>
         <taxonomy_topic/>
         <template/>
         <template_manager_roles/>
         <type>item</type>
         <use_sc_layout>true</use_sc_layout>
         <vendor/>
-        <version>43</version>
+        <version>47</version>
         <visible_bundle>true</visible_bundle>
         <visible_guide>true</visible_guide>
         <visible_standalone>true</visible_standalone>
