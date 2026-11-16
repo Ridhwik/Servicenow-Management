@@ -9,7 +9,7 @@
         <duration_type/>
         <enable_logging>false</enable_logging>
         <flow display_value="Default SLA flow">828f267973333300e289235f04f6a7a3</flow>
-        <name>Electrical-Plumbing Low - Resolution</name>
+        <name>Facility Issue Low Resolution</name>
         <pause_condition table="incident">state=3^hold_reason=1^EQ<item display_value="On Hold" endquery="false" field="state" goto="false" newquery="false" operator="=" or="false" value="3"/>
             <item display_value="Awaiting Caller" endquery="false" field="hold_reason" goto="false" newquery="false" operator="=" or="false" value="1"/>
             <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
@@ -41,15 +41,15 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>f1be48cd472cdf10273a565a516d430f</sys_id>
-        <sys_mod_count>2</sys_mod_count>
-        <sys_name>Electrical-Plumbing Low - Resolution</sys_name>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name>Facility Issue Low Resolution</sys_name>
         <sys_overrides/>
         <sys_package display_value="Apollo-Hospitals" source="x_2223823_apollo_0">87c1422693c89b507b3a7c5efaba1008</sys_package>
         <sys_policy/>
         <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
         <sys_update_name>contract_sla_f1be48cd472cdf10273a565a516d430f</sys_update_name>
         <sys_updated_by>vikas.singh</sys_updated_by>
-        <sys_updated_on>2026-11-12 10:04:11</sys_updated_on>
+        <sys_updated_on>2026-11-13 08:40:37</sys_updated_on>
         <target>resolution</target>
         <timezone/>
         <timezone_source>task.caller_id.time_zone</timezone_source>
