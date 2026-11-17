@@ -43,6 +43,16 @@
     ledger.query();
 
     if (ledger.next()) {
+        ledger.setValue('hospital', current.getValue('hospital'));
+        ledger.setValue('revenue_type', 'bed_or_room');
+        ledger.setValue('amount', current.getValue('amount'));
+
+        var gd = new GlideDate();
+        ledger.setValue('posting_date', gd.getValue());
+
+        ledger.setValue('payment', current.getUniqueValue());
+        ledger.setValue('invoice', current.getValue('invoice'));
+		ledger.update();
         return;
     }
 
@@ -69,7 +79,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>76b4bd1547e89350273a565a516d4309</sys_id>
-        <sys_mod_count>2</sys_mod_count>
+        <sys_mod_count>3</sys_mod_count>
         <sys_name>Create Revenue Ledger Entry</sys_name>
         <sys_overrides/>
         <sys_package display_value="Apollo-Hospitals" source="x_2223823_apollo_0">87c1422693c89b507b3a7c5efaba1008</sys_package>
@@ -77,7 +87,7 @@
         <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
         <sys_update_name>sys_script_76b4bd1547e89350273a565a516d4309</sys_update_name>
         <sys_updated_by>ayush.mangal</sys_updated_by>
-        <sys_updated_on>2026-11-13 12:35:35</sys_updated_on>
+        <sys_updated_on>2026-11-16 05:18:49</sys_updated_on>
         <template/>
         <when>after</when>
     </sys_script>

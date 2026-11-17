@@ -20,7 +20,7 @@
         <group/>
         <hide_sp>false</hide_sp>
         <icon/>
-        <ignore_price>true</ignore_price>
+        <ignore_price>false</ignore_price>
         <image/>
         <location/>
         <make_item_non_conversational>false</make_item_non_conversational>
@@ -49,7 +49,7 @@
         <owner display_value="Nilesh  Chaurasia">207168b047509310273a565a516d437e</owner>
         <picture>0ddeddb04754d310273a565a516d435d</picture>
         <preview>JavaScript: popupOpenStandard("com.glideapp.servicecatalog_cat_item_view.do?v=1&amp;sysparm_id=1c371d7847d0d310273a565a516d43ea&amp;sysparm_preview=true", "summary");</preview>
-        <price>0</price>
+        <price>300</price>
         <published_ref/>
         <recurring_frequency/>
         <recurring_price>0</recurring_price>
@@ -68,21 +68,21 @@
         <sys_created_by>nilesh.chaurasia</sys_created_by>
         <sys_created_on>2026-10-30 09:56:28</sys_created_on>
         <sys_id>1c371d7847d0d310273a565a516d43ea</sys_id>
-        <sys_mod_count>92</sys_mod_count>
+        <sys_mod_count>94</sys_mod_count>
         <sys_name>Ambulance</sys_name>
         <sys_package display_value="Apollo-Hospitals" source="x_2223823_apollo_0">87c1422693c89b507b3a7c5efaba1008</sys_package>
         <sys_policy/>
         <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
         <sys_update_name>sc_cat_item_1c371d7847d0d310273a565a516d43ea</sys_update_name>
-        <sys_updated_by>system</sys_updated_by>
-        <sys_updated_on>2026-11-02 06:49:36</sys_updated_on>
+        <sys_updated_by>ayush.mangal</sys_updated_by>
+        <sys_updated_on>2026-11-16 09:29:25</sys_updated_on>
         <taxonomy_topic/>
         <template/>
         <template_manager_roles/>
         <type>item</type>
         <use_sc_layout>true</use_sc_layout>
         <vendor/>
-        <version>92</version>
+        <version>94</version>
         <visible_bundle>true</visible_bundle>
         <visible_guide>true</visible_guide>
         <visible_standalone>true</visible_standalone>
@@ -91,19 +91,19 @@
     <sys_translated_text action="delete_multiple" query="documentkey=1c371d7847d0d310273a565a516d43ea"/>
     <fx_price action="delete_multiple" query="id=1c371d7847d0d310273a565a516d43ea"/>
     <fx_price action="INSERT_OR_UPDATE">
-        <amount>0</amount>
-        <currency display_value="USD">USD</currency>
+        <amount>300</amount>
+        <currency display_value="INR">INR</currency>
         <field>price</field>
         <id>1c371d7847d0d310273a565a516d43ea</id>
         <parent/>
-        <reference_amount>0</reference_amount>
+        <reference_amount>3.1833</reference_amount>
         <reference_currency display_value="USD">USD</reference_currency>
         <sys_created_by>nilesh.chaurasia</sys_created_by>
         <sys_created_on>2026-10-30 09:56:28</sys_created_on>
         <sys_id>8e6715b847d0d310273a565a516d434f</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>nilesh.chaurasia</sys_updated_by>
-        <sys_updated_on>2026-10-30 09:56:28</sys_updated_on>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_updated_by>ayush.mangal</sys_updated_by>
+        <sys_updated_on>2026-11-16 09:29:25</sys_updated_on>
         <table>sc_cat_item</table>
         <type>calculated</type>
     </fx_price>

@@ -25,7 +25,7 @@
         </element>
         <element label="Total Balance" max_length="20" name="total_balance" type="currency"/>
         <element label="External reference" max_length="60" name="external_reference" type="string"/>
-        <element attributes="ignore_filter_on_new=true" default="javascript:global.getNextObjNumberPadded();" label="Number" max_length="40" name="number" read_only="true" read_only_option="strict_read_only" type="string"/>
+        <element attributes="ignore_filter_on_new=true" default="javascript:global.getNextObjNumberPadded();" label="Number" mandatory="true" max_length="40" name="number" read_only="true" read_only_option="strict_read_only" type="string"/>
         <element label="Final invoice" max_length="40" name="is_final" type="boolean"/>
         <index name="index">
             <element name="admission"/>

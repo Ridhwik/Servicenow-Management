@@ -6,9 +6,10 @@
                 <element inactive_on_update="false" label="In-Person" sequence="0" value="1"/>
             </choice>
         </element>
+        <element default="true" function_definition="true" label="Active" max_length="255" name="active" type="boolean"/>
         <element label="Reason For Visit" max_length="40" name="reason" type="string"/>
         <element label="Start" mandatory="true" max_length="255" name="start_time" type="glide_date_time"/>
-        <element attributes="edge_encryption_enabled=true" choice="1" label="Status" mandatory="true" max_length="255" name="status" read_only="true" read_only_option="display_read_only" type="choice">
+        <element attributes="edge_encryption_enabled=true" choice="1" label="Status" mandatory="true" max_length="255" name="status" type="choice">
             <choice>
                 <element inactive_on_update="false" label="Rescheduled" sequence="8" value="9"/>
                 <element inactive_on_update="false" label="In Consultation" sequence="4" value="5"/>
@@ -39,6 +40,7 @@
                 <element inactive_on_update="false" label="Follow-up" sequence="1" value="2"/>
             </choice>
         </element>
+        <element label="Invoice" max_length="32" name="invoice" reference="x_2223823_apollo_0_invoice" type="reference"/>
         <element label="Patient" mandatory="true" max_length="32" name="patient" reference="x_2223823_apollo_0_patient" type="reference"/>
         <element default="0" label="Reschedule Count" max_length="255" name="reschedule_count" type="integer"/>
         <element label="Meeting Link" max_length="1024" name="meeting_link" read_only="true" read_only_option="display_read_only" type="url"/>
@@ -63,6 +65,9 @@
         </index>
         <index name="index3">
             <element name="hospital"/>
+        </index>
+        <index name="index4">
+            <element name="invoice"/>
         </index>
         <index name="index4">
             <element name="patient"/>
