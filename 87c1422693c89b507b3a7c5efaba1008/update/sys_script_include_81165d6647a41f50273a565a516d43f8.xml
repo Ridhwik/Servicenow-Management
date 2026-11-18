@@ -1,0 +1,356 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <active>true</active>
+        <api_name>x_2223823_apollo_0.ApolloDoctorAvailability</api_name>
+        <caller_access/>
+        <client_callable>false</client_callable>
+        <description>Apollo Hospitals: Pure Doctor Availability Engine (Leave, Cover, Working Schedule &amp; Dynamic Slot Calculation).</description>
+        <mobile_callable>false</mobile_callable>
+        <name>ApolloDoctorAvailability</name>
+        <sandbox_callable>false</sandbox_callable>
+        <script><![CDATA[var ApolloDoctorAvailability = Class.create();
+ApolloDoctorAvailability.prototype = {
+    initialize: function() {
+        this.SCOPE = 'x_2223823_apollo_0';
+        this.TABLE_DOCTOR = 'x_2223823_apollo_0_doctor';
+        this.TABLE_DOCTOR_REQUEST = 'x_2223823_apollo_0_doctor_request';
+        this.TABLE_APPOINTMENT = 'x_2223823_apollo_0_appointment';
+        this.TABLE_HOSPITAL = 'x_2223823_apollo_0_hospital';
+        this.INACTIVE_STATUSES = ['6', '7', '8', '9', 'completed', 'cancelled', 'rescheduled', 'no_show', 'no show'];
+    },
+
+    /**
+     * Main validation method called on Appointment Before Insert/Update.
+     * Evaluates Doctor Status, Hospital/Cover, Leave, and Working Schedule.
+     * 
+     * @param {GlideRecord} current - The appointment record being inserted or updated
+     * @returns {Object} { valid: Boolean, message: String, availableSlotsMsg: String }
+     */
+    validateDoctor: function(current) {
+        var status = current.getValue('status');
+        if (status && this.INACTIVE_STATUSES.indexOf(String(status).toLowerCase()) !== -1) {
+            return { valid: true }; // Inactive transitions release slots, allow immediately
+        }
+
+        var doctorId = current.getValue('doctor');
+        var hospitalId = current.getValue('hospital');
+        var startTimeStr = current.getValue('start_time');
+        var endTimeStr = current.getValue('end_time');
+
+        if (!doctorId || !startTimeStr || !endTimeStr) {
+            return { valid: true }; // Mandatory field checks handle missing inputs
+        }
+
+        var startGdt = new GlideDateTime(startTimeStr);
+        var endGdt = new GlideDateTime(endTimeStr);
+        var dateStr = startTimeStr.split(' ')[0]; // YYYY-MM-DD
+        var timeOnlyStart = startTimeStr.split(' ')[1] || '00:00:00';
+        var timeOnlyEnd = endTimeStr.split(' ')[1] || '00:00:00';
+
+        // Load Doctor Record
+        var docGr = new GlideRecord(this.TABLE_DOCTOR);
+        if (!docGr.get(doctorId)) {
+            return { valid: false, message: 'Selected doctor record was not found.' };
+        }
+        var doctorName = docGr.getDisplayValue('user') || docGr.getValue('number') || 'Doctor';
+
+        // ---------------------------------------------------------------------
+        // CHECK 1: Doctor Active & OPD Enabled
+        // ---------------------------------------------------------------------
+        var docStatus = String(docGr.getValue('status') || '1');
+        var opdEnabled = docGr.getValue('opd_enabled');
+        if (docStatus !== '1' || (opdEnabled !== true && opdEnabled !== '1' && opdEnabled !== 'true')) {
+            return {
+                valid: false,
+                message: 'Doctor ' + doctorName + ' is currently not available for OPD consultations (Doctor is inactive or OPD is disabled).'
+            };
+        }
+
+        // ---------------------------------------------------------------------
+        // CHECK 2: Hospital & Approved Temporary Cover
+        // ---------------------------------------------------------------------
+        var primaryHospital = docGr.getValue('primary_hospital');
+        var isAtHospital = false;
+        var hospitalName = current.getDisplayValue('hospital') || 'this hospital';
+
+        if (primaryHospital && primaryHospital === hospitalId) {
+            isAtHospital = true;
+        } else {
+            // Check if doctor has an APPROVED Cover request for this hospital on this date
+            var coverGr = new GlideRecord(this.TABLE_DOCTOR_REQUEST);
+            coverGr.addQuery('doctor', doctorId);
+            coverGr.addQuery('request_type', 'cover');
+            coverGr.addQuery('status', 'approved');
+            coverGr.addQuery('hospital', hospitalId);
+            coverGr.addQuery('start_date', '<=', dateStr);
+            coverGr.addQuery('end_date', '>=', dateStr);
+            coverGr.setLimit(1);
+            coverGr.query();
+            if (coverGr.next()) {
+                isAtHospital = true;
+            }
+        }
+
+        if (!isAtHospital) {
+            var primaryHospName = docGr.getDisplayValue('primary_hospital') || 'another location';
+            return {
+                valid: false,
+                message: 'Doctor ' + doctorName + ' is not scheduled at ' + hospitalName + ' on ' + dateStr + 
+                         '. Doctor\'s primary hospital is ' + primaryHospName + ' (no approved cover request found for ' + hospitalName + ').'
+            };
+        }
+
+        // ---------------------------------------------------------------------
+        // CHECK 3: Approved Leave Check
+        // ---------------------------------------------------------------------
+        var leaveGr = new GlideRecord(this.TABLE_DOCTOR_REQUEST);
+        leaveGr.addQuery('doctor', doctorId);
+        leaveGr.addQuery('request_type', 'leave');
+        leaveGr.addQuery('status', 'approved');
+        leaveGr.addQuery('start_date', '<=', dateStr);
+        leaveGr.addQuery('end_date', '>=', dateStr);
+        leaveGr.setLimit(1);
+        leaveGr.query();
+
+        if (leaveGr.next()) {
+            var lStart = leaveGr.getValue('start_date');
+            var lEnd = leaveGr.getValue('end_date');
+            return {
+                valid: false,
+                message: 'Appointment cannot be booked: Doctor ' + doctorName + ' is on approved leave on ' + dateStr + 
+                         ' (Leave Period: ' + lStart + ' to ' + lEnd + ').'
+            };
+        }
+
+        // ---------------------------------------------------------------------
+        // CHECK 4: Working Hours / OPD Schedule Check
+        // ---------------------------------------------------------------------
+        var scheduleId = docGr.getValue('opd_schedule');
+        if (!scheduleId) {
+            return {
+                valid: false,
+                message: 'Doctor ' + doctorName + ' does not have an OPD schedule configured. Please contact the hospital administrator.'
+            };
+        }
+
+        var scheduleWindows = this._getDoctorDayWindows(scheduleId, dateStr);
+        if (!scheduleWindows || scheduleWindows.length === 0) {
+            return {
+                valid: false,
+                message: 'Doctor ' + doctorName + ' is not scheduled to work on this day of the week (' + dateStr + ').'
+            };
+        }
+
+        // Verify if requested appointment start and end fall completely within working windows
+        var isWithinHours = false;
+        var scheduleHoursText = [];
+        for (var i = 0; i < scheduleWindows.length; i++) {
+            var win = scheduleWindows[i];
+            scheduleHoursText.push(win.start.substring(0, 5) + ' - ' + win.end.substring(0, 5));
+            if (timeOnlyStart >= win.start && timeOnlyEnd <= win.end) {
+                isWithinHours = true;
+                break;
+            }
+        }
+
+        if (!isWithinHours) {
+            // Generate available slots for today to help the user/receptionist pick a valid slot!
+            var slotsList = this.getAvailableSlots(doctorId, hospitalId, dateStr);
+            var slotsStr = slotsList.length > 0 
+                ? slotsList.map(function(s) { return s.start_time.split(' ')[1].substring(0, 5); }).join(', ')
+                : 'No remaining free slots for today.';
+
+            return {
+                valid: false,
+                message: 'Selected time (' + timeOnlyStart.substring(0, 5) + ' - ' + timeOnlyEnd.substring(0, 5) + 
+                         ') is outside Doctor ' + doctorName + '\'s OPD working hours on ' + dateStr + ' (' + scheduleHoursText.join(', ') + ').',
+                availableSlotsMsg: 'Available slots for ' + doctorName + ' on ' + dateStr + ': ' + slotsStr
+            };
+        }
+
+        // All doctor availability checks passed!
+        return { valid: true };
+    },
+
+    /**
+     * Calculates all available OPD slots for a doctor on a given date:
+     * 1. Slices schedule windows using doctor.opd_duration (e.g. 15 min or 30 min).
+     * 2. Subtracts any existing active appointments.
+     * 
+     * @param {String} doctorId - Sys ID of Doctor
+     * @param {String} hospitalId - Sys ID of Hospital
+     * @param {String} dateStr - Date string (YYYY-MM-DD)
+     * @returns {Array} List of available slot objects
+     */
+    getAvailableSlots: function(doctorId, hospitalId, dateStr) {
+        var docGr = new GlideRecord(this.TABLE_DOCTOR);
+        if (!docGr.get(doctorId)) return [];
+
+        // Read dynamic OPD duration (15 min default, or 30 min if configured)
+        var duration = parseInt(docGr.getValue('opd_duration'), 10);
+        if (isNaN(duration) || duration <= 0) {
+            duration = 15;
+        }
+
+        var scheduleId = docGr.getValue('opd_schedule');
+        if (!scheduleId) return [];
+
+        var windows = this._getDoctorDayWindows(scheduleId, dateStr);
+        if (!windows || windows.length === 0) return [];
+
+        // Step A: Generate all raw slots from the working windows
+        var rawSlots = [];
+        for (var w = 0; w < windows.length; w++) {
+            var win = windows[w];
+            var startMin = this._timeToMinutes(win.start);
+            var endMin = this._timeToMinutes(win.end);
+
+            var currMin = startMin;
+            while (currMin + duration <= endMin) {
+                var slotStart = this._minutesToTime(currMin);
+                var slotEnd = this._minutesToTime(currMin + duration);
+
+                rawSlots.push({
+                    start_time: dateStr + ' ' + slotStart,
+                    end_time: dateStr + ' ' + slotEnd,
+                    duration_minutes: duration
+                });
+                currMin += duration;
+            }
+        }
+
+        // Step B: Fetch active booked appointments for this doctor on this date
+        var bookedAppointments = [];
+        var aptGr = new GlideRecord(this.TABLE_APPOINTMENT);
+        aptGr.addQuery('doctor', doctorId);
+        aptGr.addQuery('status', 'NOT IN', this.INACTIVE_STATUSES.join(','));
+        aptGr.addQuery('start_time', '>=', dateStr + ' 00:00:00');
+        aptGr.addQuery('start_time', '<=', dateStr + ' 23:59:59');
+        aptGr.query();
+
+        while (aptGr.next()) {
+            bookedAppointments.push({
+                start: aptGr.getValue('start_time'),
+                end: aptGr.getValue('end_time')
+            });
+        }
+
+        // Step C: Filter out any slot that overlaps with an active appointment
+        var availableSlots = [];
+        for (var s = 0; s < rawSlots.length; s++) {
+            var slot = rawSlots[s];
+            var isConflict = false;
+
+            for (var b = 0; b < bookedAppointments.length; b++) {
+                var booked = bookedAppointments[b];
+                // Overlap formula: existing.start < slot.end && existing.end > slot.start
+                if (booked.start < slot.end_time && booked.end > slot.start_time) {
+                    isConflict = true;
+                    break;
+                }
+            }
+
+            if (!isConflict) {
+                availableSlots.push(slot);
+            }
+        }
+
+        return availableSlots;
+    },
+
+    /**
+     * Resolves working hours (start/end) for the requested day of the week
+     * from cmn_schedule and cmn_schedule_span.
+     */
+    _getDoctorDayWindows: function(scheduleId, dateStr) {
+        var gdt = new GlideDateTime(dateStr + ' 12:00:00');
+        var dayOfWeek = gdt.getDayOfWeekLocalTime(); // 1=Mon, 2=Tue, 3=Wed, 4=Thu, 5=Fri, 6=Sat, 7=Sun
+
+        var windows = [];
+        var spanGr = new GlideRecord('cmn_schedule_span');
+        spanGr.addQuery('schedule', scheduleId);
+        spanGr.addQuery('type', '!=', 'exclude');
+        spanGr.query();
+
+        while (spanGr.next()) {
+            var days = String(spanGr.getValue('days_of_week') || '');
+            var isApplicableDay = false;
+
+            if (!days || days === 'all' || days.indexOf(String(dayOfWeek)) !== -1) {
+                isApplicableDay = true;
+            }
+
+            if (isApplicableDay) {
+                var sTime = spanGr.getValue('start_date_time'); // e.g. 20200101T080000
+                var eTime = spanGr.getValue('end_date_time');   // e.g. 20200101T170000
+
+                var parsedStart = this._parseSpanTime(sTime, '08:00:00');
+                var parsedEnd = this._parseSpanTime(eTime, '17:00:00');
+
+                windows.push({ start: parsedStart, end: parsedEnd });
+            }
+        }
+
+        // Fallback: If no spans found directly, inspect schedule name
+        if (windows.length === 0) {
+            var schedGr = new GlideRecord('cmn_schedule');
+            if (schedGr.get(scheduleId)) {
+                var schedName = (schedGr.getValue('name') || '').toLowerCase();
+                if (schedName.indexOf('8-20') !== -1) {
+                    windows.push({ start: '08:00:00', end: '20:00:00' });
+                } else if (schedName.indexOf('8-5') !== -1) {
+                    if (dayOfWeek <= 5) { // Mon-Fri
+                        windows.push({ start: '08:00:00', end: '17:00:00' });
+                    }
+                } else {
+                    windows.push({ start: '08:00:00', end: '17:00:00' }); // Standard 8 to 5 default
+                }
+            }
+        }
+
+        return windows;
+    },
+
+    _parseSpanTime: function(isoDateTimeStr, defaultTime) {
+        if (!isoDateTimeStr) return defaultTime;
+        var parts = isoDateTimeStr.split('T');
+        if (parts.length > 1) {
+            var t = parts[1];
+            if (t.length >= 6) {
+                return t.substring(0, 2) + ':' + t.substring(2, 4) + ':' + t.substring(4, 6);
+            }
+        }
+        return defaultTime;
+    },
+
+    _timeToMinutes: function(timeStr) {
+        var p = timeStr.split(':');
+        return (parseInt(p[0], 10) * 60) + parseInt(p[1], 10);
+    },
+
+    _minutesToTime: function(totalMinutes) {
+        var h = Math.floor(totalMinutes / 60);
+        var m = totalMinutes % 60;
+        var hh = (h < 10 ? '0' : '') + h;
+        var mm = (m < 10 ? '0' : '') + m;
+        return hh + ':' + mm + ':00';
+    },
+
+    type: 'ApolloDoctorAvailability'
+};
+]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>fateh.meena</sys_created_by>
+        <sys_created_on>2026-11-17 06:35:44</sys_created_on>
+        <sys_id>81165d6647a41f50273a565a516d43f8</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>ApolloDoctorAvailability</sys_name>
+        <sys_package display_value="Apollo-Hospitals" source="x_2223823_apollo_0">87c1422693c89b507b3a7c5efaba1008</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
+        <sys_update_name>sys_script_include_81165d6647a41f50273a565a516d43f8</sys_update_name>
+        <sys_updated_by>fateh.meena</sys_updated_by>
+        <sys_updated_on>2026-11-17 06:35:44</sys_updated_on>
+    </sys_script_include>
+</record_update>

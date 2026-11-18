@@ -11,7 +11,7 @@
             </choice>
         </element>
         <element label="Reason" max_length="255" name="reason" type="string"/>
-        <element choice="1" label="Status" mandatory="true" max_length="40" name="status" read_only="true" read_only_option="display_read_only" type="choice">
+        <element choice="1" label="Status" mandatory="true" max_length="40" name="status" type="choice">
             <choice>
                 <element inactive_on_update="false" label="Approved" sequence="1" value="approved"/>
                 <element inactive_on_update="false" label="Expired" sequence="4" value="expired"/>
