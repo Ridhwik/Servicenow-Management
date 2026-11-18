@@ -21,7 +21,7 @@
         <element default="true" label="OPD enabled" max_length="40" name="opd_enabled" type="boolean"/>
         <element label="Video fee" max_length="40" name="video_fee" type="currency"/>
         <element label="OPD timings" max_length="32" name="opd_schedule" reference="cmn_schedule" type="reference"/>
-        <element label="Temporarily assigned" max_length="40" name="on_cover" type="boolean"/>
+        <element label="Temporarily assigned" max_length="40" name="on_cover" read_only="true" read_only_option="display_read_only" type="boolean"/>
         <element label="IPD visit schedule" max_length="32" name="ipd_visit_schedule" reference="cmn_schedule" type="reference"/>
         <element default="15" label="OPD duration (minutes)" max_length="255" name="opd_duration" type="integer"/>
         <element label="Video timings" max_length="32" name="video_schedule" reference="cmn_schedule" type="reference"/>
