@@ -51,6 +51,8 @@
 
     if (invoiceId) {
         current.setValue('final_invoice', invoiceId);
+		current.update();
+		
     }
 
 })(current, previous);]]></script>
@@ -60,7 +62,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>f7e2d99147a49350273a565a516d43ad</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_mod_count>4</sys_mod_count>
         <sys_name>invoice creation when admission create</sys_name>
         <sys_overrides/>
         <sys_package display_value="Apollo-Hospitals" source="x_2223823_apollo_0">87c1422693c89b507b3a7c5efaba1008</sys_package>
@@ -68,9 +70,9 @@
         <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
         <sys_update_name>sys_script_f7e2d99147a49350273a565a516d43ad</sys_update_name>
         <sys_updated_by>ayush.mangal</sys_updated_by>
-        <sys_updated_on>2026-11-13 10:40:26</sys_updated_on>
+        <sys_updated_on>2026-11-18 10:35:06</sys_updated_on>
         <template/>
-        <when>before</when>
+        <when>after</when>
     </sys_script>
     <sys_translated_text action="delete_multiple" query="documentkey=f7e2d99147a49350273a565a516d43ad"/>
 </record_update>

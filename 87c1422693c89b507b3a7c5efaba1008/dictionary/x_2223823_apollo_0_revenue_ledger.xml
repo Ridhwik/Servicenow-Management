@@ -13,10 +13,6 @@
             </choice>
         </element>
         <element label="Hospital" mandatory="true" max_length="32" name="hospital" reference="x_2223823_apollo_0_hospital" reference_qual="javascript:new x_2223823_apollo_0.HospitalRefQual().getQuery(current)" type="reference" use_reference_qualifier="advanced"/>
-        <element label="Charge Line" max_length="32" name="charge_line" reference="x_2223823_apollo_0_charge_line" type="reference"/>
-        <index name="index">
-            <element name="charge_line"/>
-        </index>
         <index name="index2">
             <element name="hospital"/>
         </index>

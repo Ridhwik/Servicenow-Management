@@ -26,5 +26,6 @@ If you find yourself unable to import your repository due to the presence of fil
    Currently listed dependencies:
    * Configuration Management (CMDB)
    * Customer Service Base Entities
+   * Asset Management
    * System (apps/system_user)
    * Task table schema

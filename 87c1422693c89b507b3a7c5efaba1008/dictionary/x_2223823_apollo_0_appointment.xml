@@ -53,7 +53,6 @@
                 <element inactive_on_update="false" label="Patient" sequence="0" value="1"/>
             </choice>
         </element>
-        <element attributes="edge_encryption_enabled=true,omit_sys_original=true" label="Fee" max_length="20" name="fee" type="currency"/>
         <element label="Cancellation Reason" max_length="40" name="cancellation_reason" type="string"/>
         <element attributes="edge_encryption_enabled=true,encode_utf8=false" label="Doctor" mandatory="true" max_length="32" name="doctor" reference="x_2223823_apollo_0_doctor" reference_qual="javascript:current.hospital ? 'primary_hospital=' + current.hospital + '^status=1' : 'sys_id=-1'" type="reference" use_reference_qualifier="advanced"/>
         <element attributes="ignore_filter_on_new=true" default="javascript:global.getNextObjNumberPadded();" label="Number" max_length="40" name="number" read_only="true" read_only_option="display_read_only" type="string"/>
