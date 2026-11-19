@@ -32,21 +32,24 @@
 
     var LAB_TEST_REQUEST_SYS_ID = 'e0c8c87147d01310273a565a516d434b';
 
+    // Check Catalog Item
     if (current.getValue('cat_item') != LAB_TEST_REQUEST_SYS_ID) {
         return;
     }
 
-    // Get catalog variables
+    // Get Catalog Variables
     var patientId = current.variables.patient.toString();
     var labTestId = current.variables.lab_test.toString();
     var hospitalId = current.variables.hospital.toString();
+    var type = current.variables.type.toString();
 
-    if (!labTestId || !patientId || !hospitalId) {
+    if (!patientId || !labTestId || !hospitalId || !type) {
         return;
     }
 
-    // Prevent duplicate Charge Line
+    // Prevent Duplicate Charge Line
     var charge = new GlideRecord('x_2223823_apollo_0_charge_line');
+
     charge.addQuery('source_table', 'sc_req_item');
     charge.addQuery('source_record', current.getUniqueValue());
     charge.query();
@@ -55,7 +58,7 @@
         return;
     }
 
-    // Get Lab Test Cost
+    // Get Lab Test
     var labTest = new GlideRecord('x_2223823_apollo_0_lab_test');
 
     if (!labTest.get(labTestId)) {
@@ -64,35 +67,73 @@
 
     var amount = labTest.getValue('cost');
 
-    // Find patient's latest Active Appointment
-    var appointment = new GlideRecord('x_2223823_apollo_0_appointment');
-    appointment.addQuery('patient', patientId);
-    appointment.addQuery('active', true);
-    appointment.orderByDesc('start_time');
-    appointment.setLimit(1);
-    appointment.query();
+    var invoiceId = '';
 
-    if (!appointment.next()) {
+    // STEP 1: Fetch Invoice Based on Type
+
+    if (type == 'appointment') {
+
+        var appointmentId = current.variables.appointment.toString();
+
+        if (!appointmentId) {
+            return;
+        }
+
+        var appointment = new GlideRecord(
+            'x_2223823_apollo_0_appointment'
+        );
+
+        if (!appointment.get(appointmentId)) {
+            return;
+        }
+
+        invoiceId = appointment.getValue('invoice');
+
+    } else if (type == 'admission') {
+
+        var admissionId = current.variables.admission.toString();
+
+        if (!admissionId) {
+            return;
+        }
+
+        var admission = new GlideRecord(
+            'x_2223823_apollo_0_admissions'
+        );
+
+        if (!admission.get(admissionId)) {
+            return;
+        }
+
+        invoiceId = admission.getValue('final_invoice');
+
+    } else {
         return;
     }
 
-    // Get Invoice from Active Appointment
-    var invoiceId = appointment.getValue('invoice');
+    // STEP 2: Validate Invoice
 
     if (!invoiceId) {
+        gs.info('Lab Test Request: No Invoice found for ' + type);
         return;
     }
 
-    // Create Charge Line
+    // STEP 3: Create Charge Line
+
     charge.initialize();
+
     charge.setValue('patient', patientId);
     charge.setValue('hospital', hospitalId);
     charge.setValue('invoice', invoiceId);
+
     charge.setValue('amount', amount);
     charge.setValue('charge_type', 'lab');
-    charge.setValue('status', 'pending');
+    charge.setValue('status', 'invoiced');
 
-    charge.setValue('description', 'Lab Test Charge - ' + labTest.getValue('name'));
+    charge.setValue(
+        'description',
+        'Lab Test Charge - ' + labTest.getValue('name')
+    );
 
     charge.setValue('source_table', 'sc_req_item');
     charge.setValue('source_record', current.getUniqueValue());
@@ -107,7 +148,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>52be20de47209b50273a565a516d43ee</sys_id>
-        <sys_mod_count>4</sys_mod_count>
+        <sys_mod_count>5</sys_mod_count>
         <sys_name>Create Charge Line for Lab Test</sys_name>
         <sys_overrides/>
         <sys_package display_value="Apollo-Hospitals" source="x_2223823_apollo_0">87c1422693c89b507b3a7c5efaba1008</sys_package>
@@ -115,7 +156,7 @@
         <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
         <sys_update_name>sys_script_52be20de47209b50273a565a516d43ee</sys_update_name>
         <sys_updated_by>ayush.mangal</sys_updated_by>
-        <sys_updated_on>2026-11-16 10:08:47</sys_updated_on>
+        <sys_updated_on>2026-11-19 06:52:12</sys_updated_on>
         <template/>
         <when>after</when>
     </sys_script>

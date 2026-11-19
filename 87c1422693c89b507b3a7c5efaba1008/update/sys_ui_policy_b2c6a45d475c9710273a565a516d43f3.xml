@@ -28,7 +28,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>b2c6a45d475c9710273a565a516d43f3</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>2</sys_mod_count>
         <sys_name>Mode is Online Show Stripe transaction reference as mandatory and hide Collected by</sys_name>
         <sys_overrides/>
         <sys_package display_value="Apollo-Hospitals" source="x_2223823_apollo_0">87c1422693c89b507b3a7c5efaba1008</sys_package>
@@ -36,7 +36,7 @@
         <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
         <sys_update_name>sys_ui_policy_b2c6a45d475c9710273a565a516d43f3</sys_update_name>
         <sys_updated_by>ayush.mangal</sys_updated_by>
-        <sys_updated_on>2026-10-31 19:41:29</sys_updated_on>
+        <sys_updated_on>2026-11-19 06:35:29</sys_updated_on>
         <table>x_2223823_apollo_0_payment</table>
         <ui_type>0</ui_type>
         <view/>
