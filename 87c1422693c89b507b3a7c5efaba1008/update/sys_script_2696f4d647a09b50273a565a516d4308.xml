@@ -27,8 +27,7 @@
         <rest_service_text/>
         <rest_variables/>
         <role_conditions/>
-        <script><![CDATA[
-(function executeRule(current, previous) {
+        <script><![CDATA[(function executeRule(current, previous) {
 
     // Catalog Item Sys IDs
     var AMBULANCE_ITEM_ID = '1c371d7847d0d310273a565a516d43ea';
@@ -48,57 +47,51 @@
     // Get RITM variables
     var patientId = current.variables.requested_for.toString();
     var hospitalId = current.variables.hospital.toString();
+    var admissionId = current.variables.related_admission.toString();
 
-    if (!patientId || !hospitalId) {
+    
+    if (!patientId || !hospitalId || !admissionId) {
         return;
     }
-
     // Get RITM price
     var amount = current.getValue('price');
-
     if (!amount || parseFloat(amount) <= 0) {
         return;
     }
-
     // Prevent duplicate Charge Line
-    var charge = new GlideRecord('x_2223823_apollo_0_charge_line');
+    var charge = new GlideRecord(
+        'x_2223823_apollo_0_charge_line'
+    );
+
     charge.addQuery('source_table', 'sc_req_item');
     charge.addQuery('source_record', current.getUniqueValue());
     charge.query();
-
     if (charge.next()) {
         return;
     }
-
-    // Find patient's latest active appointment
-    var appointment = new GlideRecord(
-        'x_2223823_apollo_0_appointment'
+    // Find Admission record
+    var admission = new GlideRecord(
+        'x_2223823_apollo_0_admissions'
     );
-
-    appointment.addQuery('patient', patientId);
-    appointment.addQuery('active', true);
-    appointment.orderByDesc('start_time');
-    appointment.setLimit(1);
-    appointment.query();
-
-    if (!appointment.next()) {
+ 
+    if (!admission.get(admissionId)) {
         return;
     }
-
-    var invoiceId = appointment.getValue('invoice');
-
+    // Get Invoice from Admission
+    var invoiceId = admission.getValue('final_invoice');
     if (!invoiceId) {
         return;
     }
 
     // Create Charge Line
     charge.initialize();
+
     charge.setValue('patient', patientId);
     charge.setValue('hospital', hospitalId);
     charge.setValue('invoice', invoiceId);
     charge.setValue('amount', amount);
     charge.setValue('charge_type', 'service');
-    charge.setValue('status', 'pending');
+    charge.setValue('status', 'invoiced');
 
     charge.setValue(
         'description',
@@ -110,17 +103,16 @@
     charge.setValue('source_table', 'sc_req_item');
     charge.setValue('source_record', current.getUniqueValue());
 
-    charge.insert();
+    var sys_ids = charge.insert();
 
-})(current, previous);
-]]></script>
+})(current, previous);]]></script>
         <sys_class_name>sys_script</sys_class_name>
         <sys_created_by>ayush.mangal</sys_created_by>
         <sys_created_on>2026-11-16 09:42:59</sys_created_on>
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>2696f4d647a09b50273a565a516d4308</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_mod_count>12</sys_mod_count>
         <sys_name>Create Charge Line for Hospital Services</sys_name>
         <sys_overrides/>
         <sys_package display_value="Apollo-Hospitals" source="x_2223823_apollo_0">87c1422693c89b507b3a7c5efaba1008</sys_package>
@@ -128,7 +120,7 @@
         <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
         <sys_update_name>sys_script_2696f4d647a09b50273a565a516d4308</sys_update_name>
         <sys_updated_by>ayush.mangal</sys_updated_by>
-        <sys_updated_on>2026-11-16 09:51:32</sys_updated_on>
+        <sys_updated_on>2026-11-18 13:11:04</sys_updated_on>
         <template/>
         <when>after</when>
     </sys_script>

@@ -28,4 +28,5 @@ If you find yourself unable to import your repository due to the presence of fil
    * Customer Service Base Entities
    * Asset Management
    * System (apps/system_user)
+   * Grievances Case Management
    * Task table schema
