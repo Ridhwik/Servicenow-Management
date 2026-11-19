@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="io_set_item">
+    <io_set_item action="DELETE">
+        <order>700</order>
+        <sc_cat_item display_value="Housekeeping">bb36bf2547101310273a565a516d4376</sc_cat_item>
+        <sys_class_name>io_set_item</sys_class_name>
+        <sys_created_by>nilesh.chaurasia</sys_created_by>
+        <sys_created_on>2026-11-02 05:42:02</sys_created_on>
+        <sys_id>5cf9b36d47101310273a565a516d433d</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>apollo_service_common.Housekeeping</sys_name>
+        <sys_package display_value="Apollo-Hospitals" source="x_2223823_apollo_0">87c1422693c89b507b3a7c5efaba1008</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
+        <sys_update_name>io_set_item_5cf9b36d47101310273a565a516d433d</sys_update_name>
+        <sys_updated_by>nilesh.chaurasia</sys_updated_by>
+        <sys_updated_on>2026-11-02 05:42:16</sys_updated_on>
+        <variable_set display_value="apollo_service_common">6f7d9dbc4714d310273a565a516d43a5</variable_set>
+    </io_set_item>
+<sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</application>
+        <file_path/>
+        <instance_id>5ada7edb93d06e50d9f6ddd548373c9d</instance_id>
+        <instance_name>dev304851</instance_name>
+        <name>io_set_item_5cf9b36d47101310273a565a516d433d</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="io_set_item">
+    <io_set_item action="INSERT_OR_UPDATE">
+        <order>700</order>
+        <sc_cat_item display_value="Housekeeping">bb36bf2547101310273a565a516d4376</sc_cat_item>
+        <sys_class_name>io_set_item</sys_class_name>
+        <sys_created_by>nilesh.chaurasia</sys_created_by>
+        <sys_created_on>2026-11-02 05:42:02</sys_created_on>
+        <sys_id>5cf9b36d47101310273a565a516d433d</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>apollo_service_common.Housekeeping</sys_name>
+        <sys_package display_value="Apollo-Hospitals" source="x_2223823_apollo_0">87c1422693c89b507b3a7c5efaba1008</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
+        <sys_update_name>io_set_item_5cf9b36d47101310273a565a516d433d</sys_update_name>
+        <sys_updated_by>nilesh.chaurasia</sys_updated_by>
+        <sys_updated_on>2026-11-02 05:42:16</sys_updated_on>
+        <variable_set display_value="apollo_service_common">6f7d9dbc4714d310273a565a516d43a5</variable_set>
+    </io_set_item>
+</record_update>]]></payload>
+        <payload_hash>-976779843</payload_hash>
+        <record_name>apollo_service_common.Housekeeping</record_name>
+        <reverted_from/>
+        <source>cef7071247549710273a565a516d432e</source>
+        <source_table>sys_upgrade_history</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-11-04 10:05:29</sys_created_on>
+        <sys_id>7a6907d247949710273a565a516d439f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1a1a60553960000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-11-04 10:05:29</sys_updated_on>
+        <type>Catalog Variable Set</type>
+        <update_guid>b26907d2729497103bdb58a0a343319f</update_guid>
+        <update_guid_history>b26907d2729497103bdb58a0a343319f:0,0a178b5a0014971019aec069730e9398:665292986,2ff9b76d47101310beb0e14f3ceccb19:-643523553,64f9b36df41013107c5bba10fd95c68c:1825768421</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="apollo_service_common.Housekeeping">4ba2245347649390273a565a516d43bd</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>nilesh.chaurasia</sys_created_by>
+        <sys_created_on>2026-11-19 10:46:35</sys_created_on>
+        <sys_db_object display_value="" name="io_set_item">io_set_item</sys_db_object>
+        <sys_id>0d443b659c6349708903d249c2a21900</sys_id>
+        <sys_metadata>5cf9b36d47101310273a565a516d433d</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>apollo_service_common.Housekeeping</sys_name>
+        <sys_package display_value="Apollo-Hospitals" source="x_2223823_apollo_0">87c1422693c89b507b3a7c5efaba1008</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
+        <sys_scope_delete display_value="">1a2f7aa8dfc34e3a86d3f0bede3c2784</sys_scope_delete>
+        <sys_update_name>io_set_item_5cf9b36d47101310273a565a516d433d</sys_update_name>
+        <sys_update_version display_value="io_set_item_5cf9b36d47101310273a565a516d433d">7a6907d247949710273a565a516d439f</sys_update_version>
+        <sys_updated_by>nilesh.chaurasia</sys_updated_by>
+        <sys_updated_on>2026-11-19 10:46:35</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

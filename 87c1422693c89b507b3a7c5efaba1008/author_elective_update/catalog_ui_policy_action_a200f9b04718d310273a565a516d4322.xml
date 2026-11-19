@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="catalog_ui_policy_action">
+    <catalog_ui_policy_action action="DELETE">
+        <catalog_item display_value="Wheelchair and assistance">6e08693c4794d310273a565a516d432e</catalog_item>
+        <catalog_variable>IO:f44c25f447d4d310273a565a516d4375</catalog_variable>
+        <cleared>false</cleared>
+        <disabled>ignore</disabled>
+        <field/>
+        <field_message/>
+        <field_message_type>none</field_message_type>
+        <mandatory>true</mandatory>
+        <order>100</order>
+        <sys_class_name>catalog_ui_policy_action</sys_class_name>
+        <sys_created_by>nilesh.chaurasia</sys_created_by>
+        <sys_created_on>2026-10-30 11:44:21</sys_created_on>
+        <sys_id>a200f9b04718d310273a565a516d4322</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>needed_datetime</sys_name>
+        <sys_package display_value="Apollo-Hospitals" source="x_2223823_apollo_0">87c1422693c89b507b3a7c5efaba1008</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
+        <sys_update_name>catalog_ui_policy_action_a200f9b04718d310273a565a516d4322</sys_update_name>
+        <sys_updated_by>nilesh.chaurasia</sys_updated_by>
+        <sys_updated_on>2026-10-30 11:44:21</sys_updated_on>
+        <table/>
+        <ui_policy display_value="needed_when = Scheduled  -&gt;  needed_datetime Visible and mandatory">04df65fc47d4d310273a565a516d434d</ui_policy>
+        <value/>
+        <value_action>ignore</value_action>
+        <variable>needed_datetime</variable>
+        <variable_set/>
+        <visible>true</visible>
+    </catalog_ui_policy_action>
+    <sys_translated_text action="DELETE" query="documentkey=a200f9b04718d310273a565a516d4322"/>
+<sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</application>
+        <file_path/>
+        <instance_id>5ada7edb93d06e50d9f6ddd548373c9d</instance_id>
+        <instance_name>dev304851</instance_name>
+        <name>catalog_ui_policy_action_a200f9b04718d310273a565a516d4322</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="catalog_ui_policy_action">
+    <catalog_ui_policy_action action="INSERT_OR_UPDATE">
+        <catalog_item display_value="Wheelchair and assistance">6e08693c4794d310273a565a516d432e</catalog_item>
+        <catalog_variable>IO:f44c25f447d4d310273a565a516d4375</catalog_variable>
+        <cleared>false</cleared>
+        <disabled>ignore</disabled>
+        <field/>
+        <field_message/>
+        <field_message_type>none</field_message_type>
+        <mandatory>true</mandatory>
+        <order>100</order>
+        <sys_class_name>catalog_ui_policy_action</sys_class_name>
+        <sys_created_by>nilesh.chaurasia</sys_created_by>
+        <sys_created_on>2026-10-30 11:44:21</sys_created_on>
+        <sys_id>a200f9b04718d310273a565a516d4322</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>needed_datetime</sys_name>
+        <sys_package display_value="Apollo-Hospitals" source="x_2223823_apollo_0">87c1422693c89b507b3a7c5efaba1008</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
+        <sys_update_name>catalog_ui_policy_action_a200f9b04718d310273a565a516d4322</sys_update_name>
+        <sys_updated_by>nilesh.chaurasia</sys_updated_by>
+        <sys_updated_on>2026-10-30 11:44:21</sys_updated_on>
+        <table/>
+        <ui_policy display_value="needed_when = Scheduled  -&gt;  needed_datetime Visible and mandatory">04df65fc47d4d310273a565a516d434d</ui_policy>
+        <value/>
+        <value_action>ignore</value_action>
+        <variable>needed_datetime</variable>
+        <variable_set/>
+        <visible>true</visible>
+    </catalog_ui_policy_action>
+    <sys_translated_text action="delete_multiple" query="documentkey=a200f9b04718d310273a565a516d4322"/>
+</record_update>]]></payload>
+        <payload_hash>1678944969</payload_hash>
+        <record_name>needed_datetime</record_name>
+        <reverted_from/>
+        <source>cef7071247549710273a565a516d432e</source>
+        <source_table>sys_upgrade_history</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-11-04 10:05:28</sys_created_on>
+        <sys_id>be6907d247949710273a565a516d4366</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1a1a60552120000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-11-04 10:05:28</sys_updated_on>
+        <type>Catalog UI Policy Action</type>
+        <update_guid>f66907d23a949710861cb9d6491e4566</update_guid>
+        <update_guid_history>f66907d23a949710861cb9d6491e4566:0,9886cf12dc1497102ec2982d12f682a4:1023871750,a6103db03b18d31040f12eed9b5243e3:1767364713</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="needed_datetime">f55c11df472c9390273a565a516d4308</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>nilesh.chaurasia</sys_created_by>
+        <sys_created_on>2026-11-19 14:58:32</sys_created_on>
+        <sys_db_object display_value="" name="catalog_ui_policy_action">catalog_ui_policy_action</sys_db_object>
+        <sys_id>33605d0723c5433e9c9acb93bbe9f9e4</sys_id>
+        <sys_metadata>a200f9b04718d310273a565a516d4322</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>needed_datetime</sys_name>
+        <sys_package display_value="Apollo-Hospitals" source="x_2223823_apollo_0">87c1422693c89b507b3a7c5efaba1008</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
+        <sys_scope_delete display_value="">1a2f7aa8dfc34e3a86d3f0bede3c2784</sys_scope_delete>
+        <sys_update_name>catalog_ui_policy_action_a200f9b04718d310273a565a516d4322</sys_update_name>
+        <sys_update_version display_value="catalog_ui_policy_action_a200f9b04718d310273a565a516d4322">be6907d247949710273a565a516d4366</sys_update_version>
+        <sys_updated_by>nilesh.chaurasia</sys_updated_by>
+        <sys_updated_on>2026-11-19 14:58:32</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>
