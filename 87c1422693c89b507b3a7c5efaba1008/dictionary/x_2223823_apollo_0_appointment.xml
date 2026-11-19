@@ -23,6 +23,7 @@
                 <element inactive_on_update="false" label="Scheduled" sequence="1" value="2"/>
             </choice>
         </element>
+        <element label="Pharmacy Suggested" max_length="1024" name="pharmacy_suggested" reference="x_2223823_apollo_0_pharmacy" type="glide_list"/>
         <element label="Hold expires at" max_length="255" name="hold_expires_at" type="glide_date_time"/>
         <element choice="1" label="Refund Status" max_length="255" name="refund_status" type="choice">
             <choice>

@@ -4,7 +4,7 @@
         <element attributes="tree_picker=true" label="Floor" mandatory="true" max_length="32" name="floor" reference="cmn_location" reference_cascade_rule="restrict" reference_qual="javascript: new x_2223823_apollo_0.HospitalRefQual().getHospitalFloors(current);" type="reference" use_reference_qualifier="advanced"/>
         <element label="Head nurse / in-charge" max_length="32" name="head_nurse" reference="x_2223823_apollo_0_staff" reference_cascade_rule="none" reference_qual="javascript: current.hospital ? 'hospital=' + current.hospital + '^active=true^staff_role=head_nurse_ward_in_charge' : 'sys_idISEMPTY';" type="reference" use_reference_qualifier="advanced"/>
         <element display="true" label="Name" mandatory="true" max_length="100" name="name" type="string"/>
-        <element label="Gender" max_length="40" name="gender" type="choice">
+        <element choice="1" label="Gender" max_length="40" name="gender" type="choice">
             <choice>
                 <element inactive_on_update="false" label="Male" sequence="1" value="1"/>
                 <element inactive_on_update="false" label="Any" sequence="3" value="3"/>

@@ -3,168 +3,182 @@
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>hospital</element>
             <position>0</position>
-            <sys_created_by>vikas.singh</sys_created_by>
-            <sys_created_on>2026-10-27 10:41:30</sys_created_on>
-            <sys_id>50f4823b934017107b3a7c5efaba103a</sys_id>
+            <sys_created_by>ridhwik.jangid</sys_created_by>
+            <sys_created_on>2026-11-19 09:18:00</sys_created_on>
+            <sys_id>656e449347a09390273a565a516d4327</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="Booking" display_value="Booking" name="x_2223823_apollo_0_appointment" sys_domain="global" view="Default view">14f4423b934017107b3a7c5efaba10a0</sys_ui_section>
-            <sys_updated_by>vikas.singh</sys_updated_by>
-            <sys_updated_on>2026-10-27 10:41:30</sys_updated_on>
+            <sys_updated_by>ridhwik.jangid</sys_updated_by>
+            <sys_updated_on>2026-11-19 09:18:00</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>patient</element>
             <position>1</position>
-            <sys_created_by>vikas.singh</sys_created_by>
-            <sys_created_on>2026-10-27 10:41:30</sys_created_on>
-            <sys_id>dcf4823b934017107b3a7c5efaba103a</sys_id>
+            <sys_created_by>ridhwik.jangid</sys_created_by>
+            <sys_created_on>2026-11-19 09:18:00</sys_created_on>
+            <sys_id>e16e449347a09390273a565a516d4328</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="Booking" display_value="Booking" name="x_2223823_apollo_0_appointment" sys_domain="global" view="Default view">14f4423b934017107b3a7c5efaba10a0</sys_ui_section>
-            <sys_updated_by>vikas.singh</sys_updated_by>
-            <sys_updated_on>2026-10-27 10:41:30</sys_updated_on>
+            <sys_updated_by>ridhwik.jangid</sys_updated_by>
+            <sys_updated_on>2026-11-19 09:18:00</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>doctor</element>
             <position>2</position>
-            <sys_created_by>vikas.singh</sys_created_by>
-            <sys_created_on>2026-10-27 10:41:30</sys_created_on>
-            <sys_id>5cf4823b934017107b3a7c5efaba103b</sys_id>
+            <sys_created_by>ridhwik.jangid</sys_created_by>
+            <sys_created_on>2026-11-19 09:18:00</sys_created_on>
+            <sys_id>616e449347a09390273a565a516d4329</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="Booking" display_value="Booking" name="x_2223823_apollo_0_appointment" sys_domain="global" view="Default view">14f4423b934017107b3a7c5efaba10a0</sys_ui_section>
-            <sys_updated_by>vikas.singh</sys_updated_by>
-            <sys_updated_on>2026-10-27 10:41:30</sys_updated_on>
+            <sys_updated_by>ridhwik.jangid</sys_updated_by>
+            <sys_updated_on>2026-11-19 09:18:00</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>appointment_type</element>
             <position>3</position>
-            <sys_created_by>vikas.singh</sys_created_by>
-            <sys_created_on>2026-10-27 10:41:30</sys_created_on>
-            <sys_id>d8f4823b934017107b3a7c5efaba103c</sys_id>
+            <sys_created_by>ridhwik.jangid</sys_created_by>
+            <sys_created_on>2026-11-19 09:18:00</sys_created_on>
+            <sys_id>ed6e449347a09390273a565a516d4329</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="Booking" display_value="Booking" name="x_2223823_apollo_0_appointment" sys_domain="global" view="Default view">14f4423b934017107b3a7c5efaba10a0</sys_ui_section>
-            <sys_updated_by>vikas.singh</sys_updated_by>
-            <sys_updated_on>2026-10-27 10:41:30</sys_updated_on>
+            <sys_updated_by>ridhwik.jangid</sys_updated_by>
+            <sys_updated_on>2026-11-19 09:18:00</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>mode</element>
             <position>4</position>
-            <sys_created_by>vikas.singh</sys_created_by>
-            <sys_created_on>2026-10-27 10:41:30</sys_created_on>
-            <sys_id>58f4823b934017107b3a7c5efaba103d</sys_id>
+            <sys_created_by>ridhwik.jangid</sys_created_by>
+            <sys_created_on>2026-11-19 09:18:00</sys_created_on>
+            <sys_id>6d6e449347a09390273a565a516d432a</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="Booking" display_value="Booking" name="x_2223823_apollo_0_appointment" sys_domain="global" view="Default view">14f4423b934017107b3a7c5efaba10a0</sys_ui_section>
-            <sys_updated_by>vikas.singh</sys_updated_by>
-            <sys_updated_on>2026-10-27 10:41:30</sys_updated_on>
+            <sys_updated_by>ridhwik.jangid</sys_updated_by>
+            <sys_updated_on>2026-11-19 09:18:00</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>.split</element>
             <position>5</position>
-            <sys_created_by>vikas.singh</sys_created_by>
-            <sys_created_on>2026-10-27 10:41:30</sys_created_on>
-            <sys_id>d4f4823b934017107b3a7c5efaba103e</sys_id>
+            <sys_created_by>ridhwik.jangid</sys_created_by>
+            <sys_created_on>2026-11-19 09:18:00</sys_created_on>
+            <sys_id>e96e449347a09390273a565a516d432b</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="Booking" display_value="Booking" name="x_2223823_apollo_0_appointment" sys_domain="global" view="Default view">14f4423b934017107b3a7c5efaba10a0</sys_ui_section>
-            <sys_updated_by>vikas.singh</sys_updated_by>
-            <sys_updated_on>2026-10-27 10:41:30</sys_updated_on>
+            <sys_updated_by>ridhwik.jangid</sys_updated_by>
+            <sys_updated_on>2026-11-19 09:18:00</sys_updated_on>
             <sys_user/>
             <type>.split</type>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>start_time</element>
             <position>6</position>
-            <sys_created_by>vikas.singh</sys_created_by>
-            <sys_created_on>2026-10-27 10:41:30</sys_created_on>
-            <sys_id>54f4823b934017107b3a7c5efaba103f</sys_id>
+            <sys_created_by>ridhwik.jangid</sys_created_by>
+            <sys_created_on>2026-11-19 09:18:00</sys_created_on>
+            <sys_id>696e449347a09390273a565a516d432c</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="Booking" display_value="Booking" name="x_2223823_apollo_0_appointment" sys_domain="global" view="Default view">14f4423b934017107b3a7c5efaba10a0</sys_ui_section>
-            <sys_updated_by>vikas.singh</sys_updated_by>
-            <sys_updated_on>2026-10-27 10:41:30</sys_updated_on>
+            <sys_updated_by>ridhwik.jangid</sys_updated_by>
+            <sys_updated_on>2026-11-19 09:18:00</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>end_time</element>
             <position>7</position>
-            <sys_created_by>vikas.singh</sys_created_by>
-            <sys_created_on>2026-10-27 10:41:30</sys_created_on>
-            <sys_id>d0f4823b934017107b3a7c5efaba1040</sys_id>
+            <sys_created_by>ridhwik.jangid</sys_created_by>
+            <sys_created_on>2026-11-19 09:18:00</sys_created_on>
+            <sys_id>e56e449347a09390273a565a516d432d</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="Booking" display_value="Booking" name="x_2223823_apollo_0_appointment" sys_domain="global" view="Default view">14f4423b934017107b3a7c5efaba10a0</sys_ui_section>
-            <sys_updated_by>vikas.singh</sys_updated_by>
-            <sys_updated_on>2026-10-27 10:41:30</sys_updated_on>
+            <sys_updated_by>ridhwik.jangid</sys_updated_by>
+            <sys_updated_on>2026-11-19 09:18:00</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>duration_minutes</element>
             <position>8</position>
-            <sys_created_by>vikas.singh</sys_created_by>
-            <sys_created_on>2026-10-27 10:41:30</sys_created_on>
-            <sys_id>50f4823b934017107b3a7c5efaba1041</sys_id>
+            <sys_created_by>ridhwik.jangid</sys_created_by>
+            <sys_created_on>2026-11-19 09:18:00</sys_created_on>
+            <sys_id>656e449347a09390273a565a516d432e</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="Booking" display_value="Booking" name="x_2223823_apollo_0_appointment" sys_domain="global" view="Default view">14f4423b934017107b3a7c5efaba10a0</sys_ui_section>
-            <sys_updated_by>vikas.singh</sys_updated_by>
-            <sys_updated_on>2026-10-27 10:41:30</sys_updated_on>
+            <sys_updated_by>ridhwik.jangid</sys_updated_by>
+            <sys_updated_on>2026-11-19 09:18:00</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>reschedule_count</element>
             <position>9</position>
-            <sys_created_by>vikas.singh</sys_created_by>
-            <sys_created_on>2026-10-27 10:41:30</sys_created_on>
-            <sys_id>dcf4823b934017107b3a7c5efaba1041</sys_id>
+            <sys_created_by>ridhwik.jangid</sys_created_by>
+            <sys_created_on>2026-11-19 09:18:00</sys_created_on>
+            <sys_id>e16e449347a09390273a565a516d432f</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="Booking" display_value="Booking" name="x_2223823_apollo_0_appointment" sys_domain="global" view="Default view">14f4423b934017107b3a7c5efaba10a0</sys_ui_section>
-            <sys_updated_by>vikas.singh</sys_updated_by>
-            <sys_updated_on>2026-10-27 10:41:30</sys_updated_on>
+            <sys_updated_by>ridhwik.jangid</sys_updated_by>
+            <sys_updated_on>2026-11-19 09:18:00</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>pharmacy_suggested</element>
+            <position>10</position>
+            <sys_created_by>ridhwik.jangid</sys_created_by>
+            <sys_created_on>2026-11-19 09:18:00</sys_created_on>
+            <sys_id>616e449347a09390273a565a516d4330</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Booking" display_value="Booking" name="x_2223823_apollo_0_appointment" sys_domain="global" view="Default view">14f4423b934017107b3a7c5efaba10a0</sys_ui_section>
+            <sys_updated_by>ridhwik.jangid</sys_updated_by>
+            <sys_updated_on>2026-11-19 09:18:00</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>.end_split</element>
-            <position>10</position>
-            <sys_created_by>vikas.singh</sys_created_by>
-            <sys_created_on>2026-10-27 10:41:30</sys_created_on>
-            <sys_id>5cf4823b934017107b3a7c5efaba1042</sys_id>
+            <position>11</position>
+            <sys_created_by>ridhwik.jangid</sys_created_by>
+            <sys_created_on>2026-11-19 09:18:01</sys_created_on>
+            <sys_id>ed6e449347a09390273a565a516d4330</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="Booking" display_value="Booking" name="x_2223823_apollo_0_appointment" sys_domain="global" view="Default view">14f4423b934017107b3a7c5efaba10a0</sys_ui_section>
-            <sys_updated_by>vikas.singh</sys_updated_by>
-            <sys_updated_on>2026-10-27 10:41:30</sys_updated_on>
+            <sys_updated_by>ridhwik.jangid</sys_updated_by>
+            <sys_updated_on>2026-11-19 09:18:01</sys_updated_on>
             <sys_user/>
             <type>.end_split</type>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>reason</element>
-            <position>11</position>
-            <sys_created_by>vikas.singh</sys_created_by>
-            <sys_created_on>2026-10-27 10:41:30</sys_created_on>
-            <sys_id>d8f4823b934017107b3a7c5efaba1043</sys_id>
+            <position>12</position>
+            <sys_created_by>ridhwik.jangid</sys_created_by>
+            <sys_created_on>2026-11-19 09:18:01</sys_created_on>
+            <sys_id>e96e449347a09390273a565a516d434a</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="Booking" display_value="Booking" name="x_2223823_apollo_0_appointment" sys_domain="global" view="Default view">14f4423b934017107b3a7c5efaba10a0</sys_ui_section>
-            <sys_updated_by>vikas.singh</sys_updated_by>
-            <sys_updated_on>2026-10-27 10:41:30</sys_updated_on>
+            <sys_updated_by>ridhwik.jangid</sys_updated_by>
+            <sys_updated_on>2026-11-19 09:18:01</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>

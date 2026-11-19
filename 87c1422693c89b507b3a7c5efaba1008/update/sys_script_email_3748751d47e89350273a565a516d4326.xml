@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_email">
+    <sys_script_email action="INSERT_OR_UPDATE">
+        <name>apollo_footer_links</name>
+        <new_lines_to_html>false</new_lines_to_html>
+        <script><![CDATA[(function runMailScript(current, template, email, email_action, event) {
+    var baseUrl = gs.getProperty('glide.servlet.uri', '');
+    if (baseUrl.endsWith('/')) {
+        baseUrl = baseUrl.slice(0, -1);
+    }
+
+    var bookPath = gs.getProperty('x_2223823_apollo_0.url.book_appointment', '/esc?id=book_appointment');
+    var doctorPath = gs.getProperty('x_2223823_apollo_0.url.find_doctor', '/esc?id=find_doctor');
+    var servicesPath = gs.getProperty('x_2223823_apollo_0.url.our_services', '/esc?id=apollo_portal');
+
+    var bookUrl = bookPath.indexOf('http') === 0 ? bookPath : baseUrl + bookPath;
+    var doctorUrl = doctorPath.indexOf('http') === 0 ? doctorPath : baseUrl + doctorPath;
+    var servicesUrl = servicesPath.indexOf('http') === 0 ? servicesPath : baseUrl + servicesPath;
+
+    var linkStyle = 'color: #ffffff; text-decoration: none; font-weight: 500; padding: 0 8px;';
+
+    template.print('<a style="' + linkStyle + '" href="' + bookUrl + '">Book Appointment</a>');
+    template.print('<span style="color: rgba(255,255,255,0.4);">|</span>');
+    template.print('<a style="' + linkStyle + '" href="' + doctorUrl + '">Find a Doctor</a>');
+    template.print('<span style="color: rgba(255,255,255,0.4);">|</span>');
+    template.print('<a style="' + linkStyle + '" href="' + servicesUrl + '">Our Services</a>');
+})(current, template, email, email_action, event);]]></script>
+        <sys_class_name>sys_script_email</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-11-13 11:53:00</sys_created_on>
+        <sys_id>3748751d47e89350273a565a516d4326</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>apollo_footer_links</sys_name>
+        <sys_package display_value="Apollo-Hospitals" source="x_2223823_apollo_0">87c1422693c89b507b3a7c5efaba1008</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
+        <sys_update_name>sys_script_email_3748751d47e89350273a565a516d4326</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-11-13 11:53:00</sys_updated_on>
+    </sys_script_email>
+</record_update>

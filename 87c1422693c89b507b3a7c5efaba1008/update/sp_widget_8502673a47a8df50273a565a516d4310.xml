@@ -1,0 +1,599 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_widget">
+    <sp_widget action="INSERT_OR_UPDATE">
+        <category>custom</category>
+        <client_script><![CDATA[function($scope, spUtil) {
+  var c = this;
+  c.mode = 'existing';
+  c.selectedHospital = null;
+  c.newHosp = {
+    name: '',
+    city: '',
+    phone: '',
+    address: '',
+    hold_emergency: 4,
+    hold_planned: 24
+  };
+
+  c.blocks = [
+    { name: 'Main Surgical Tower', floorCount: 6, includeGround: true, includeBasement: true },
+    { name: 'OPD & Diagnostics Wing', floorCount: 3, includeGround: true, includeBasement: false },
+    { name: 'Trauma & Emergency Care', floorCount: 2, includeGround: true, includeBasement: false }
+  ];
+
+  c.isSubmitting = false;
+  c.creationSuccess = false;
+
+  c.setMode = function(m) {
+    c.mode = m;
+    c.creationSuccess = false;
+  };
+
+  c.onHospitalChange = function() {
+    c.creationSuccess = false;
+  };
+
+  c.addBlock = function() {
+    c.blocks.push({
+      name: 'Building ' + String.fromCharCode(65 + c.blocks.length),
+      floorCount: 3,
+      includeGround: true,
+      includeBasement: false
+    });
+  };
+
+  c.removeBlock = function(idx) {
+    if (c.blocks.length > 1) {
+      c.blocks.splice(idx, 1);
+    }
+  };
+
+  c.getPreviewFloors = function(block) {
+    var floors = [];
+    if (block.includeBasement) floors.push('Basement (B1)');
+    if (block.includeGround) floors.push('Ground Floor');
+    var count = parseInt(block.floorCount, 10) || 1;
+    for (var i = 1; i <= count; i++) {
+      floors.push('Floor ' + i);
+    }
+    return floors;
+  };
+
+  c.getTotalFloors = function() {
+    var total = 0;
+    for (var i = 0; i < c.blocks.length; i++) {
+      total += c.getPreviewFloors(c.blocks[i]).length;
+    }
+    return total;
+  };
+
+  c.generateHierarchy = function() {
+    var targetHospName = '';
+    var hospSysId = '';
+
+    if (c.mode === 'existing') {
+      if (!c.selectedHospital) {
+        alert('Please select an existing hospital.');
+        return;
+      }
+      targetHospName = c.selectedHospital.name;
+      hospSysId = c.selectedHospital.sys_id;
+    } else {
+      if (!c.newHosp.name || !c.newHosp.name.trim()) {
+        alert('Please enter a Hospital Name.');
+        return;
+      }
+      if (!c.newHosp.city || !c.newHosp.city.trim()) {
+        alert('Please enter a City.');
+        return;
+      }
+      targetHospName = c.newHosp.name.trim();
+    }
+
+    for (var i = 0; i < c.blocks.length; i++) {
+      if (!c.blocks[i].name || !c.blocks[i].name.trim()) {
+        alert('Please provide a name for Block ' + (i + 1));
+        return;
+      }
+    }
+
+    c.isSubmitting = true;
+
+    c.server.get({
+      action: 'generate_hierarchy',
+      mode: c.mode,
+      hospital_sys_id: hospSysId,
+      hospital_name: targetHospName,
+      new_hospital: c.newHosp,
+      blocks: c.blocks
+    }).then(function(res) {
+      c.isSubmitting = false;
+      if (res && res.data && res.data.result && res.data.result.success) {
+        c.creationSuccess = true;
+        c.createdSummary = res.data.result;
+        c.createdSummary.hospitalName = targetHospName;
+      } else {
+        var err = (res.data && res.data.result && res.data.result.error) || 'Failed to create hierarchy.';
+        alert(err);
+      }
+    }, function() {
+      c.isSubmitting = false;
+      alert('Network or server error while provisioning hierarchy.');
+    });
+  };
+
+  c.resetForm = function() {
+    c.creationSuccess = false;
+    c.selectedHospital = null;
+    c.newHosp = { name: '', city: '', phone: '', address: '', hold_emergency: 4, hold_planned: 24 };
+    c.blocks = [
+      { name: 'Main Surgical Tower', floorCount: 6, includeGround: true, includeBasement: true },
+      { name: 'OPD & Diagnostics Wing', floorCount: 3, includeGround: true, includeBasement: false }
+    ];
+  };
+}]]></client_script>
+        <controller_as>c</controller_as>
+        <css>.hospital-hierarchy-container {
+  max-width: 1200px;
+  margin: 20px auto;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+.main-card {
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  border: 1px solid #dce4ec;
+}
+.apollo-header {
+  background: linear-gradient(135deg, #0A2540 0%, #0052cc 100%);
+  color: #ffffff;
+  padding: 16px 20px;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+.apollo-header .panel-title {
+  color: #ffffff;
+  font-size: 20px;
+}
+.bg-light-blue {
+  background-color: #f0f7ff;
+  border: 1px solid #cce3ff;
+  border-radius: 6px;
+  padding: 15px;
+}
+.block-card {
+  border-left: 4px solid #0052cc;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  border-radius: 4px;
+}
+.preview-tree-panel {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+}
+.preview-scroll {
+  max-height: 480px;
+  overflow-y: auto;
+  background: #ffffff;
+  margin: 10px;
+  border-radius: 4px;
+  padding: 12px;
+  border: 1px solid #edf2f7;
+}
+.tree-branch {
+  margin-left: 20px;
+  margin-top: 10px;
+  border-left: 2px dashed #cbd5e1;
+  padding-left: 12px;
+}
+.tree-block-node {
+  font-size: 14px;
+  margin-bottom: 4px;
+}
+.tree-floors-list {
+  margin-left: 14px;
+}
+.tree-floor-node {
+  font-size: 12px;
+  color: #64748b;
+  padding: 2px 0;
+}
+.text-xs { font-size: 11px; }
+</css>
+        <data_table>sp_instance</data_table>
+        <demo_data/>
+        <description/>
+        <docs/>
+        <field_list/>
+        <has_preview>false</has_preview>
+        <id>hospital-campus-hierarchy-builder</id>
+        <internal>false</internal>
+        <link><![CDATA[function link(scope, element, attrs, controller) {  }]]></link>
+        <name>Hospital Campus Hierarchy Builder</name>
+        <option_schema/>
+        <public>false</public>
+        <roles/>
+        <script><![CDATA[(function() {
+  if (!input) {
+    data.hospitals = [];
+    var grHosp = new GlideRecord('x_2223823_apollo_0_hospital');
+    grHosp.addActiveQuery();
+    grHosp.orderBy('name');
+    grHosp.query();
+    while (grHosp.next()) {
+      data.hospitals.push({
+        sys_id: grHosp.getUniqueValue(),
+        name: grHosp.getValue('name') || grHosp.getDisplayValue(),
+        number: grHosp.getValue('number') || '',
+        city: grHosp.getValue('city') || '',
+        hold_hours_emergency: grHosp.getValue('hold_hours_emergency') || 4,
+        hold_hours_planned: grHosp.getValue('hold_hours_planned') || 24
+      });
+    }
+    return;
+  }
+
+  if (input && input.action === 'generate_hierarchy') {
+    var mode = input.mode;
+    var hospName = (input.hospital_name || '').trim();
+    var hospSysId = input.hospital_sys_id;
+    var blocks = input.blocks || [];
+    var newHosp = input.new_hospital || {};
+
+    if (!hospName || !blocks.length) {
+      data.result = { success: false, error: 'Hospital Name and Blocks are required.' };
+      return;
+    }
+
+    try {
+      var rootLocId = '';
+
+      // 1. Resolve or Create Root Location
+      var rootGr = new GlideRecord('cmn_location');
+      rootGr.addQuery('name', hospName);
+      rootGr.setLimit(1);
+      rootGr.query();
+      if (rootGr.next()) {
+        rootLocId = rootGr.getUniqueValue();
+      } else {
+        rootGr.initialize();
+        rootGr.setValue('name', hospName);
+        if (mode === 'new') {
+          rootGr.setValue('city', newHosp.city || '');
+          rootGr.setValue('phone', newHosp.phone || '');
+          rootGr.setValue('street', newHosp.address || '');
+        }
+        rootLocId = rootGr.insert();
+      }
+
+      if (!rootLocId) {
+        data.result = { success: false, error: 'Failed to create root location: ' + rootGr.getLastErrorMessage() };
+        return;
+      }
+
+      // If mode is 'new', create the Hospital record in x_2223823_apollo_0_hospital
+      if (mode === 'new') {
+        var hRec = new GlideRecord('x_2223823_apollo_0_hospital');
+        hRec.initialize();
+        hRec.setValue('name', hospName);
+        hRec.setValue('city', newHosp.city || '');
+        hRec.setValue('phone', newHosp.phone || '');
+        hRec.setValue('address', newHosp.address || '');
+        hRec.setValue('hold_hours_emergency', parseInt(newHosp.hold_emergency, 10) || 4);
+        hRec.setValue('hold_hours_planned', parseInt(newHosp.hold_planned, 10) || 24);
+        hRec.setValue('active', true);
+        hRec.setValue('parent', rootLocId);
+        hospSysId = hRec.insert();
+      } else if (hospSysId) {
+        // Ensure existing hospital points to root location
+        var exHosp = new GlideRecord('x_2223823_apollo_0_hospital');
+        if (exHosp.get(hospSysId)) {
+          if (exHosp.parent.nil()) {
+            exHosp.setValue('parent', rootLocId);
+            exHosp.update();
+          }
+        }
+      }
+
+      // 2. Loop through blocks
+      var blocksCount = 0;
+      var floorsCount = 0;
+
+      for (var b = 0; b < blocks.length; b++) {
+        var blk = blocks[b];
+        var blkName = (blk.name || ('Block ' + (b + 1))).trim();
+
+        // Create Block under Root Location
+        var blkGr = new GlideRecord('cmn_location');
+        blkGr.initialize();
+        blkGr.setValue('name', hospName + ' - ' + blkName);
+        blkGr.setValue('parent', rootLocId);
+        var blkLocId = blkGr.insert();
+
+        if (blkLocId) {
+          blocksCount++;
+
+          // Build floors list
+          var floorList = [];
+          if (blk.includeBasement) floorList.push(blkName + ' - Basement (B1)');
+          if (blk.includeGround) floorList.push(blkName + ' - Ground Floor');
+          var totalF = parseInt(blk.floorCount, 10) || 1;
+          for (var f = 1; f <= totalF; f++) {
+            floorList.push(blkName + ' - Floor ' + f);
+          }
+
+          // Insert floors under Block
+          for (var fl = 0; fl < floorList.length; fl++) {
+            var flGr = new GlideRecord('cmn_location');
+            flGr.initialize();
+            flGr.setValue('name', floorList[fl]);
+            flGr.setValue('parent', blkLocId);
+            flGr.insert();
+            floorsCount++;
+          }
+        }
+      }
+
+      data.result = {
+        success: true,
+        rootSysId: rootLocId,
+        hospitalSysId: hospSysId,
+        blocksCreated: blocksCount,
+        floorsCreated: floorsCount
+      };
+
+    } catch (err) {
+      data.result = { success: false, error: 'Server exception: ' + err.message };
+    }
+  }
+})();]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_widget</sys_class_name>
+        <sys_created_by>integration.user</sys_created_by>
+        <sys_created_on>2026-11-18 11:25:36</sys_created_on>
+        <sys_id>8502673a47a8df50273a565a516d4310</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Hospital Campus Hierarchy Builder</sys_name>
+        <sys_package display_value="Apollo-Hospitals" source="x_2223823_apollo_0">87c1422693c89b507b3a7c5efaba1008</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
+        <sys_update_name>sp_widget_8502673a47a8df50273a565a516d4310</sys_update_name>
+        <sys_updated_by>integration.user</sys_updated_by>
+        <sys_updated_on>2026-11-18 11:25:36</sys_updated_on>
+        <template><![CDATA[<div class="hospital-hierarchy-container">
+  <div class="panel panel-default shadow-sm main-card">
+    <div class="panel-heading apollo-header">
+      <div class="row align-items-center">
+        <div class="col-xs-8">
+          <h3 class="panel-title font-bold">
+            <i class="fa fa-hospital-o m-r-sm"></i> Hospital Campus Hierarchy Builder
+          </h3>
+          <p class="text-muted m-b-none text-sm">Design and provision asymmetrical hospital buildings and floor structures dynamically.</p>
+        </div>
+        <div class="col-xs-4 text-right">
+          <span class="label label-info">Apollo Operations</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="panel-body p-lg">
+      
+      <!-- MODE SELECTION TABS -->
+      <ul class="nav nav-pills m-b-lg">
+        <li ng-class="{'active': c.mode === 'existing'}">
+          <a href="javascript:void(0)" ng-click="c.setMode('existing')">
+            <i class="fa fa-list-alt m-r-xs"></i> Configure Existing Hospital
+          </a>
+        </li>
+        <li ng-class="{'active': c.mode === 'new'}">
+          <a href="javascript:void(0)" ng-click="c.setMode('new')">
+            <i class="fa fa-plus-circle m-r-xs"></i> Provision New Hospital Campus
+          </a>
+        </li>
+      </ul>
+
+      <!-- MODE 1: EXISTING HOSPITAL SELECTOR -->
+      <div class="well well-sm bg-light-blue" ng-if="c.mode === 'existing' && !c.creationSuccess">
+        <div class="row">
+          <div class="col-md-8">
+            <label class="control-label font-bold text-uppercase"><i class="fa fa-building"></i> Select Target Hospital</label>
+            <select class="form-control input-lg" ng-model="c.selectedHospital" ng-options="h as (h.name + ' [' + h.number + ']') for h in c.data.hospitals" ng-change="c.onHospitalChange()">
+              <option value="">-- Choose Hospital to Configure --</option>
+            </select>
+          </div>
+          <div class="col-md-4" ng-if="c.selectedHospital">
+            <div class="m-t-md">
+              <span class="text-muted">City:</span> <strong>{{c.selectedHospital.city || 'N/A'}}</strong><br/>
+              <span class="text-muted">Emergency Hold:</span> <strong>{{c.selectedHospital.hold_hours_emergency || 4}} hrs</strong><br/>
+              <span class="text-muted">Planned Hold:</span> <strong>{{c.selectedHospital.hold_hours_planned || 24}} hrs</strong>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- MODE 2: NEW HOSPITAL FORM -->
+      <div class="panel panel-default border-info" ng-if="c.mode === 'new' && !c.creationSuccess">
+        <div class="panel-heading bg-info text-white font-bold">
+          <i class="fa fa-plus"></i> New Hospital Details
+        </div>
+        <div class="panel-body">
+          <div class="row">
+            <div class="col-sm-6">
+              <div class="form-group">
+                <label>Hospital Name <span class="text-danger">*</span></label>
+                <input type="text" class="form-control" ng-model="c.newHosp.name" placeholder="e.g. Apollo Super Speciality Mumbai" />
+              </div>
+            </div>
+            <div class="col-sm-3">
+              <div class="form-group">
+                <label>City <span class="text-danger">*</span></label>
+                <input type="text" class="form-control" ng-model="c.newHosp.city" placeholder="e.g. Mumbai" />
+              </div>
+            </div>
+            <div class="col-sm-3">
+              <div class="form-group">
+                <label>Phone</label>
+                <input type="text" class="form-control" ng-model="c.newHosp.phone" placeholder="e.g. +91 22 12345678" />
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-6">
+              <div class="form-group">
+                <label>Address</label>
+                <input type="text" class="form-control" ng-model="c.newHosp.address" placeholder="e.g. Sector 12, Navi Mumbai" />
+              </div>
+            </div>
+            <div class="col-sm-3">
+              <div class="form-group">
+                <label>Hold Hours (Emergency)</label>
+                <input type="number" class="form-control" ng-model="c.newHosp.hold_emergency" />
+              </div>
+            </div>
+            <div class="col-sm-3">
+              <div class="form-group">
+                <label>Hold Hours (Planned)</label>
+                <input type="number" class="form-control" ng-model="c.newHosp.hold_planned" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- DYNAMIC BLOCKS & PREVIEW SECTION -->
+      <div class="row m-t-md" ng-if="(c.selectedHospital || (c.mode === 'new' && c.newHosp.name)) && !c.creationSuccess">
+        
+        <!-- Left: Blocks Repeater -->
+        <div class="col-md-7">
+          <div class="clearfix m-b-sm">
+            <h4 class="font-bold pull-left m-none"><i class="fa fa-cubes text-primary"></i> Campus Blocks / Buildings</h4>
+            <button class="btn btn-sm btn-success pull-right" ng-click="c.addBlock()">
+              <i class="fa fa-plus"></i> Add Another Block
+            </button>
+          </div>
+          <p class="text-muted text-sm m-b-md">Specify each building name and its unique number of floors.</p>
+
+          <div class="block-cards-list">
+            <div class="panel panel-default block-card m-b-sm" ng-repeat="block in c.blocks track by $index">
+              <div class="panel-heading clearfix p-sm bg-light">
+                <strong class="text-primary"><i class="fa fa-cube"></i> Block {{$index + 1}}: {{block.name || 'Untitled'}}</strong>
+                <button class="btn btn-xs btn-default pull-right text-danger" ng-if="c.blocks.length > 1" ng-click="c.removeBlock($index)" title="Delete Block">
+                  <i class="fa fa-trash"></i> Remove
+                </button>
+              </div>
+              <div class="panel-body p-sm">
+                <div class="row">
+                  <div class="col-sm-7">
+                    <div class="form-group m-b-xs">
+                      <label class="text-xs text-muted">Building Name <span class="text-danger">*</span></label>
+                      <input type="text" class="form-control input-sm" ng-model="block.name" placeholder="e.g. Surgical Tower, OPD Wing" />
+                    </div>
+                  </div>
+                  <div class="col-sm-5">
+                    <div class="form-group m-b-xs">
+                      <label class="text-xs text-muted">Floors Above Ground <span class="text-danger">*</span></label>
+                      <input type="number" class="form-control input-sm" min="1" max="50" ng-model="block.floorCount" />
+                    </div>
+                  </div>
+                </div>
+
+                <div class="row m-t-xs">
+                  <div class="col-sm-6">
+                    <label class="checkbox-inline text-sm">
+                      <input type="checkbox" ng-model="block.includeGround" /> Include Ground Floor (G)
+                    </label>
+                  </div>
+                  <div class="col-sm-6">
+                    <label class="checkbox-inline text-sm">
+                      <input type="checkbox" ng-model="block.includeBasement" /> Include Basement (B1)
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <button class="btn btn-primary btn-block btn-lg m-t-lg" ng-click="c.generateHierarchy()" ng-disabled="c.isSubmitting">
+            <span ng-if="!c.isSubmitting"><i class="fa fa-sitemap"></i> Provision Campus Hierarchy</span>
+            <span ng-if="c.isSubmitting"><i class="fa fa-spinner fa-spin"></i> Creating Locations & Hierarchy...</span>
+          </button>
+        </div>
+
+        <!-- Right: Live Visual Tree Preview -->
+        <div class="col-md-5">
+          <div class="clearfix m-b-sm">
+            <h4 class="font-bold pull-left m-none"><i class="fa fa-eye text-info"></i> Hierarchy Preview</h4>
+            <div class="pull-right">
+              <span class="badge badge-primary">{{c.blocks.length}} Blocks</span>
+              <span class="badge badge-info">{{c.getTotalFloors()}} Total Floors</span>
+            </div>
+          </div>
+          <p class="text-muted text-sm m-b-md">Live preview of locations to be generated.</p>
+
+          <div class="panel panel-default preview-tree-panel">
+            <div class="panel-body preview-scroll">
+              <div class="tree-item">
+                <i class="fa fa-hospital-o text-danger font-bold"></i> 
+                <strong>{{c.mode === 'new' ? (c.newHosp.name || 'New Hospital') : c.selectedHospital.name}}</strong>
+                
+                <div class="tree-branch" ng-repeat="block in c.blocks track by $index">
+                  <div class="tree-block-node">
+                    <i class="fa fa-building-o text-primary"></i> 
+                    <strong>{{block.name || ('Block ' + ($index + 1))}}</strong>
+                    <span class="label label-default">{{c.getPreviewFloors(block).length}} floors</span>
+                  </div>
+                  
+                  <div class="tree-floors-list">
+                    <div class="tree-floor-node" ng-repeat="floor in c.getPreviewFloors(block)">
+                      <i class="fa fa-level-down"></i> <i class="fa fa-square-o text-muted"></i> {{floor}}
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- SUCCESS SCREEN -->
+      <div class="success-screen p-lg text-center" ng-if="c.creationSuccess">
+        <div class="alert alert-success">
+          <h2 class="m-t-none"><i class="fa fa-check-circle"></i> Campus Hierarchy Successfully Provisioned!</h2>
+          <p class="lead m-b-none">Successfully created hierarchy for <strong>{{c.createdSummary.hospitalName}}</strong> in ServiceNow Locations.</p>
+        </div>
+
+        <div class="row m-t-lg m-b-lg">
+          <div class="col-sm-4">
+            <div class="well">
+              <h1 class="text-primary font-bold m-none">1</h1>
+              <p class="text-muted m-b-none">Hospital Root Location</p>
+            </div>
+          </div>
+          <div class="col-sm-4">
+            <div class="well">
+              <h1 class="text-success font-bold m-none">{{c.createdSummary.blocksCreated}}</h1>
+              <p class="text-muted m-b-none">Building Blocks Created</p>
+            </div>
+          </div>
+          <div class="col-sm-4">
+            <div class="well">
+              <h1 class="text-info font-bold m-none">{{c.createdSummary.floorsCreated}}</h1>
+              <p class="text-muted m-b-none">Floors Provisioned</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="actions m-t-md">
+          <a href="cmn_location_list.do?sysparm_query=parent={{c.createdSummary.rootSysId}}" target="_blank" class="btn btn-default m-r-sm">
+            <i class="fa fa-external-link"></i> Open Hierarchy in Location Table
+          </a>
+          <button class="btn btn-primary" ng-click="c.resetForm()">
+            <i class="fa fa-refresh"></i> Configure Another Hospital
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>]]></template>
+    </sp_widget>
+</record_update>
