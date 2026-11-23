@@ -42,6 +42,7 @@
     // 2. Assignment / Reservation:
     // Bed can be Reserved ('2') from Available ('1')
     // Bed can be Occupied ('3') from Available ('1') or Reserved ('2')
+	// Bed state can only move to Under Cleaning('4) from Occupied('3)
     if (current.status.changes()) {
         var newStatus = current.getValue('status');
         var prevStatus = previous ? previous.getValue('status') : '';
@@ -59,6 +60,20 @@
                 return;
             }
         }
+		else if (prevStatus == '3') {
+            if (newStatus && newStatus !='4') {
+                gs.addErrorMessage('A bed can only move to Under Cleaning from Occupied Status.');
+                current.setAbortAction(true);
+                return;
+            }
+        }
+		else if (prevStatus == '6' || prevStatus == '7') {
+            if ((newStatus && newStatus != '4' ) && (newStatus && newStatus !='5')) {
+                gs.addErrorMessage('A bed can only move to Under Cleaning or Under Maintenance from Out of Service or Blocked Status.');
+                current.setAbortAction(true);
+                return;
+            }
+        }
     }
 
 })(current, previous);]]></script>
@@ -68,7 +83,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>e4ecaddd47689350273a565a516d4313</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_mod_count>10</sys_mod_count>
         <sys_name>Bed Room Category &amp; Available Status Assignment</sys_name>
         <sys_overrides/>
         <sys_package display_value="Apollo-Hospitals" source="x_2223823_apollo_0">87c1422693c89b507b3a7c5efaba1008</sys_package>
@@ -76,7 +91,7 @@
         <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
         <sys_update_name>sys_script_e4ecaddd47689350273a565a516d4313</sys_update_name>
         <sys_updated_by>jenish.jain</sys_updated_by>
-        <sys_updated_on>2026-11-16 11:42:28</sys_updated_on>
+        <sys_updated_on>2026-11-19 06:43:29</sys_updated_on>
         <template/>
         <when>before</when>
     </sys_script>

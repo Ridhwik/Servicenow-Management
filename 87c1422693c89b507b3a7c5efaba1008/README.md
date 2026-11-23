@@ -29,4 +29,5 @@ If you find yourself unable to import your repository due to the presence of fil
    * Asset Management
    * System (apps/system_user)
    * Grievances Case Management
+   * Change Request
    * Task table schema
