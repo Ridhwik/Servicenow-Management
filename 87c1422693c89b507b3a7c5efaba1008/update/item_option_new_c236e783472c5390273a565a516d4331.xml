@@ -10,7 +10,7 @@
         <conversational_label/>
         <create_roles/>
         <default_html_value/>
-        <default_value/>
+        <default_value>appointment</default_value>
         <delete_roles/>
         <delivery_plan/>
         <description/>
@@ -32,7 +32,7 @@
         <include_none>false</include_none>
         <instructions/>
         <layout>normal</layout>
-        <list_table>alm_asset</list_table>
+        <list_table/>
         <lookup_dependent_question/>
         <lookup_label/>
         <lookup_price/>
@@ -43,19 +43,19 @@
         <lux_widget/>
         <macro/>
         <macroponent/>
-        <mandatory>false</mandatory>
+        <mandatory>true</mandatory>
         <map_to_field>false</map_to_field>
         <mask_use_confirmation>false</mask_use_confirmation>
         <mask_use_encryption>true</mask_use_encryption>
-        <name>required_equipment</name>
+        <name>type</name>
         <no_auto_populate_also_request_for>false</no_auto_populate_also_request_for>
         <not_available_conversation>false</not_available_conversation>
-        <order>800</order>
+        <order>400</order>
         <post_insert_script/>
         <price_if_checked>0</price_if_checked>
         <pricing_implications>false</pricing_implications>
         <published_ref/>
-        <question_text>Required Equipment</question_text>
+        <question_text>Type</question_text>
         <read_only>false</read_only>
         <read_roles/>
         <read_script/>
@@ -63,7 +63,7 @@
         <rec_price_if_checked>0</rec_price_if_checked>
         <record/>
         <record_producer_table/>
-        <reference>alm_asset</reference>
+        <reference/>
         <reference_qual/>
         <reference_qual_condition/>
         <rich_text/>
@@ -83,20 +83,20 @@
         <summary_macro/>
         <sys_class_name>item_option_new</sys_class_name>
         <sys_created_by>vikas.singh</sys_created_by>
-        <sys_created_on>2026-11-02 10:12:31</sys_created_on>
-        <sys_id>9cd57cb947581310273a565a516d4361</sys_id>
-        <sys_mod_count>3</sys_mod_count>
-        <sys_name>Required Equipment</sys_name>
-        <sys_package display_value="Apollo-Hospitals" source="x_2223823_apollo_0">87c1422693c89b507b3a7c5efaba1008</sys_package>
+        <sys_created_on>2026-11-19 06:23:50</sys_created_on>
+        <sys_id>c236e783472c5390273a565a516d4331</sys_id>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_name>Type</sys_name>
+        <sys_package/>
         <sys_policy/>
         <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
-        <sys_update_name>item_option_new_9cd57cb947581310273a565a516d4361</sys_update_name>
+        <sys_update_name>item_option_new_c236e783472c5390273a565a516d4331</sys_update_name>
         <sys_updated_by>vikas.singh</sys_updated_by>
-        <sys_updated_on>2026-11-02 13:03:50</sys_updated_on>
+        <sys_updated_on>2026-11-19 06:40:10</sys_updated_on>
         <table/>
         <tooltip/>
         <topic_block/>
-        <type>8</type>
+        <type>5</type>
         <ui_page/>
         <unique>false</unique>
         <use_dynamic_default>false</use_dynamic_default>
@@ -112,22 +112,22 @@
         <visible_summary>true</visible_summary>
         <write_roles/>
     </item_option_new>
-    <sys_translated_text action="delete_multiple" query="documentkey=9cd57cb947581310273a565a516d4361"/>
-    <fx_price action="delete_multiple" query="id=9cd57cb947581310273a565a516d4361"/>
+    <sys_translated_text action="delete_multiple" query="documentkey=c236e783472c5390273a565a516d4331"/>
+    <fx_price action="delete_multiple" query="id=c236e783472c5390273a565a516d4331"/>
     <fx_price action="INSERT_OR_UPDATE">
         <amount>0</amount>
         <currency display_value="INR">INR</currency>
         <field>price_if_checked</field>
-        <id>9cd57cb947581310273a565a516d4361</id>
+        <id>c236e783472c5390273a565a516d4331</id>
         <parent/>
         <reference_amount>0</reference_amount>
         <reference_currency display_value="USD">USD</reference_currency>
         <sys_created_by>vikas.singh</sys_created_by>
-        <sys_created_on>2026-11-02 10:12:31</sys_created_on>
-        <sys_id>eed7b83147981310273a565a516d434f</sys_id>
+        <sys_created_on>2026-11-19 06:23:50</sys_created_on>
+        <sys_id>568667c3472c5390273a565a516d4366</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_updated_by>vikas.singh</sys_updated_by>
-        <sys_updated_on>2026-11-02 10:12:31</sys_updated_on>
+        <sys_updated_on>2026-11-19 06:23:50</sys_updated_on>
         <table>item_option_new</table>
         <type>calculated</type>
     </fx_price>
@@ -135,16 +135,16 @@
         <amount>0</amount>
         <currency display_value="INR">INR</currency>
         <field>rec_price_if_checked</field>
-        <id>9cd57cb947581310273a565a516d4361</id>
+        <id>c236e783472c5390273a565a516d4331</id>
         <parent/>
         <reference_amount>0</reference_amount>
         <reference_currency display_value="USD">USD</reference_currency>
         <sys_created_by>vikas.singh</sys_created_by>
-        <sys_created_on>2026-11-02 10:12:31</sys_created_on>
-        <sys_id>eed7b83147981310273a565a516d434e</sys_id>
+        <sys_created_on>2026-11-19 06:23:50</sys_created_on>
+        <sys_id>1a8667c3472c5390273a565a516d4364</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_updated_by>vikas.singh</sys_updated_by>
-        <sys_updated_on>2026-11-02 10:12:31</sys_updated_on>
+        <sys_updated_on>2026-11-19 06:23:50</sys_updated_on>
         <table>item_option_new</table>
         <type>calculated</type>
     </fx_price>

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sc_cat_item_user_criteria_no_mtom">
+    <sc_cat_item_user_criteria_no_mtom action="DELETE">
+        <sc_cat_item display_value="Lab Test Request">e0c8c87147d01310273a565a516d434b</sc_cat_item>
+        <sys_class_name>sc_cat_item_user_criteria_no_mtom</sys_class_name>
+        <sys_created_by>vikas.singh</sys_created_by>
+        <sys_created_on>2026-11-02 10:26:17</sys_created_on>
+        <sys_id>400b70f547981310273a565a516d436c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Lab Test Request.SNC External</sys_name>
+        <sys_package display_value="Apollo-Hospitals" source="x_2223823_apollo_0">87c1422693c89b507b3a7c5efaba1008</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
+        <sys_update_name>sc_cat_item_user_criteria_no_mtom_400b70f547981310273a565a516d436c</sys_update_name>
+        <sys_updated_by>vikas.singh</sys_updated_by>
+        <sys_updated_on>2026-11-02 10:26:17</sys_updated_on>
+        <user_criteria display_value="SNC External">66c1b50e730333009508738234f6a7c9</user_criteria>
+    </sc_cat_item_user_criteria_no_mtom>
+<sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</application>
+        <file_path/>
+        <instance_id>5ada7edb93d06e50d9f6ddd548373c9d</instance_id>
+        <instance_name>dev304851</instance_name>
+        <name>sc_cat_item_user_criteria_no_mtom_400b70f547981310273a565a516d436c</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sc_cat_item_user_criteria_no_mtom">
+    <sc_cat_item_user_criteria_no_mtom action="INSERT_OR_UPDATE">
+        <sc_cat_item display_value="Lab Test Request">e0c8c87147d01310273a565a516d434b</sc_cat_item>
+        <sys_class_name>sc_cat_item_user_criteria_no_mtom</sys_class_name>
+        <sys_created_by>vikas.singh</sys_created_by>
+        <sys_created_on>2026-11-02 10:26:17</sys_created_on>
+        <sys_id>400b70f547981310273a565a516d436c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Lab Test Request.SNC External</sys_name>
+        <sys_package display_value="Apollo-Hospitals" source="x_2223823_apollo_0">87c1422693c89b507b3a7c5efaba1008</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
+        <sys_update_name>sc_cat_item_user_criteria_no_mtom_400b70f547981310273a565a516d436c</sys_update_name>
+        <sys_updated_by>vikas.singh</sys_updated_by>
+        <sys_updated_on>2026-11-02 10:26:17</sys_updated_on>
+        <user_criteria display_value="SNC External">66c1b50e730333009508738234f6a7c9</user_criteria>
+    </sc_cat_item_user_criteria_no_mtom>
+</record_update>]]></payload>
+        <payload_hash>-1741695264</payload_hash>
+        <record_name>Lab Test Request.SNC External</record_name>
+        <reverted_from/>
+        <source>cef7071247549710273a565a516d432e</source>
+        <source_table>sys_upgrade_history</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-11-04 10:05:37</sys_created_on>
+        <sys_id>45790fd247949710273a565a516d43e6</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1a1a60575010000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-11-04 10:05:37</sys_updated_on>
+        <type>Catalog Item Not Available for</type>
+        <update_guid>8d790fd2049497102e1e3487262ff4e5</update_guid>
+        <update_guid_history>8d790fd2049497102e1e3487262ff4e5:0,d2c68b167d149710db721cea66a8522d:-366599530,17771a9ab4585710839df28aff71e8cb:1751504757,f555ea1a755c5710f6259aae700ba60d:-461515952,17771a9ab4585710839df28aff71e8cb:1751504757,bce36e9a9f1c57108d6d70bd1fbc6e9d:-461515952,17771a9ab4585710839df28aff71e8cb:1751504757,c34fda5685d85710e507582ff47b97e9:-1962628759,a40bb0f5919813107410d474014d761a:1751504757,200bb0f5bc98131006751da919f0e316:-1255634279</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="Lab Test Request.SNC External">75c17a0b47645390273a565a516d4311</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>vikas.singh</sys_created_by>
+        <sys_created_on>2026-11-19 02:33:20</sys_created_on>
+        <sys_db_object display_value="" name="sc_cat_item_user_criteria_no_mtom">sc_cat_item_user_criteria_no_mtom</sys_db_object>
+        <sys_id>a9dab22eec564113a3d27e0b9f0a0d49</sys_id>
+        <sys_metadata>400b70f547981310273a565a516d436c</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Lab Test Request.SNC External</sys_name>
+        <sys_package display_value="Apollo-Hospitals" source="x_2223823_apollo_0">87c1422693c89b507b3a7c5efaba1008</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
+        <sys_scope_delete display_value="">1a2f7aa8dfc34e3a86d3f0bede3c2784</sys_scope_delete>
+        <sys_update_name>sc_cat_item_user_criteria_no_mtom_400b70f547981310273a565a516d436c</sys_update_name>
+        <sys_update_version display_value="sc_cat_item_user_criteria_no_mtom_400b70f547981310273a565a516d436c">45790fd247949710273a565a516d43e6</sys_update_version>
+        <sys_updated_by>vikas.singh</sys_updated_by>
+        <sys_updated_on>2026-11-19 02:33:20</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>
