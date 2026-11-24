@@ -19,30 +19,93 @@
         <order/>
         <published_ref/>
         <script><![CDATA[function onChange(control, oldValue, newValue, isLoading) {
+    // OnLoad par newValue '1' fix hai: saved values mat udao, sirf drop_address state set karo
     if (isLoading) {
+        if (newValue == '1') {
+            g_form.setMandatory('drop_address', false);
+            g_form.setReadOnly('drop_address', true);
+        }
         return;
     }
 
-    // Jab bhi newValue 2 ya 3 nahi hai (jaise 1, 4, ya empty ''), pickup_address clear karo
-    if (newValue != '2' && newValue != '3') {
+    if (newValue == '1') {
+        // Admission , patient ko mandatory hatayo
+        g_form.setMandatory('related_admission', false);
+        g_form.setMandatory('requested_for', false);
+
+        // contact_name, contact_phone, hospital ko wapas editable karo
+        g_form.setReadOnly('contact_name', false);
+        g_form.setReadOnly('contact_phone', false);
+        g_form.setReadOnly('hospital', false);
+
+        // drop_address ko read-only aur non-mandatory karo; pickup_address khali karo
+        g_form.setMandatory('drop_address', false);
+        g_form.setReadOnly('drop_address', true);
         g_form.setValue('pickup_address', '');
-        g_form.addInfoMessage(`Transfer Type  is not "Hospital to home (after discharge)" or "Hospital to another hospital or centre" -> pickup_address cleared`);
-        return;
-    }
 
-    var hos = g_form.getValue('hospital');
-    if (hos) {
-        g_form.getReference('hospital', function(hosRec) {
-            if (hosRec && hosRec.name) {
-                g_form.setValue('pickup_address', hosRec.name);
-            } else {
-                g_form.setValue('pickup_address', '');
-                g_form.addInfoMessage('hospital name not found');
-            }
-        });
+        // Switch hone par purani values clear karo
+        g_form.setValue('related_admission', '');
+        g_form.setValue('requested_for', '');
+        g_form.setValue('hospital', '');
+        g_form.setValue('contact_name', '');
+        g_form.setValue('contact_phone', '');
+        g_form.setValue('drop_address', '');
+
+    } else if (newValue == '2' || newValue == '3') {
+        // related_admission mandatory karo
+        g_form.setMandatory('related_admission', true);
+
+        // Patient, contact_name, contact_phone, hospital ko read-only karo
+        g_form.setMandatory('requested_for', false);
+        g_form.setReadOnly('requested_for', true);
+
+        g_form.setMandatory('contact_name', false);
+        g_form.setReadOnly('contact_name', true);
+
+        g_form.setMandatory('contact_phone', false);
+        g_form.setReadOnly('contact_phone', true);
+
+        g_form.setMandatory('hospital', false);
+        g_form.setReadOnly('hospital', true);
+
+        // drop_address editable karo
+        g_form.setReadOnly('drop_address', false);
+
+        
+        if (oldValue && oldValue != '2' && oldValue != '3') {
+			g_form.setValue('related_admission','');
+			g_form.setValue('requested_for','');
+            g_form.setValue('hospital', '');
+            g_form.setValue('contact_phone', '');
+            g_form.setValue('contact_name', '');
+            g_form.setValue('drop_address', '');
+        }
+
+        // Hospital se pickup_address populate karo
+        var hos = g_form.getValue('hospital');
+        if (hos) {
+            g_form.getReference('hospital', function(hosRec) {
+                if (hosRec && hosRec.name) {
+                    g_form.setValue('pickup_address', hosRec.name);
+                } else {
+                    g_form.setValue('pickup_address', '');
+                }
+            });
+        } else {
+            g_form.setValue('pickup_address', '');
+        }
+
     } else {
+        // Baaki kisi value ya empty hone par normal state reset karo
+        g_form.setMandatory('related_admission', false);
+        g_form.setReadOnly('requested_for', false);
+        g_form.setReadOnly('contact_name', false);
+        g_form.setReadOnly('contact_phone', false);
+        g_form.setReadOnly('hospital', false);
+        g_form.setReadOnly('drop_address', false);
+
         g_form.setValue('pickup_address', '');
-        g_form.addInfoMessage('hospital name not found');
+        g_form.setValue('drop_address', '');
     }
 }]]></script>
         <sys_class_name>catalog_script_client</sys_class_name>
@@ -51,7 +114,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>1fa0819347689390273a565a516d43db</sys_id>
-        <sys_mod_count>20</sys_mod_count>
+        <sys_mod_count>46</sys_mod_count>
         <sys_name>when transfer type is "from Hospital to anywhere"</sys_name>
         <sys_overrides/>
         <sys_package display_value="Apollo-Hospitals" source="x_2223823_apollo_0">87c1422693c89b507b3a7c5efaba1008</sys_package>
@@ -59,7 +122,7 @@
         <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
         <sys_update_name>catalog_script_client_1fa0819347689390273a565a516d43db</sys_update_name>
         <sys_updated_by>nilesh.chaurasia</sys_updated_by>
-        <sys_updated_on>2026-11-19 14:55:02</sys_updated_on>
+        <sys_updated_on>2026-11-24 05:40:29</sys_updated_on>
         <table/>
         <type>onChange</type>
         <ui_type>10</ui_type>

@@ -33,13 +33,13 @@
         <name>Ambulance</name>
         <no_attachment_v2>false</no_attachment_v2>
         <no_cart>false</no_cart>
-        <no_cart_v2>false</no_cart_v2>
-        <no_delivery_time_v2>false</no_delivery_time_v2>
+        <no_cart_v2>true</no_cart_v2>
+        <no_delivery_time_v2>true</no_delivery_time_v2>
         <no_order>false</no_order>
         <no_order_now>false</no_order_now>
         <no_proceed_checkout>false</no_proceed_checkout>
         <no_quantity>false</no_quantity>
-        <no_quantity_v2>false</no_quantity_v2>
+        <no_quantity_v2>true</no_quantity_v2>
         <no_save_as_draft>false</no_save_as_draft>
         <no_search>false</no_search>
         <no_wishlist_v2>false</no_wishlist_v2>
@@ -53,7 +53,7 @@
         <published_ref/>
         <recurring_frequency/>
         <recurring_price>0</recurring_price>
-        <request_method/>
+        <request_method>request</request_method>
         <roles/>
         <sc_catalogs>0f910a2ac3112200b12d9f2974d3ae3c</sc_catalogs>
         <sc_ic_item_staging/>
@@ -68,21 +68,21 @@
         <sys_created_by>nilesh.chaurasia</sys_created_by>
         <sys_created_on>2026-10-30 09:56:28</sys_created_on>
         <sys_id>1c371d7847d0d310273a565a516d43ea</sys_id>
-        <sys_mod_count>137</sys_mod_count>
+        <sys_mod_count>167</sys_mod_count>
         <sys_name>Ambulance</sys_name>
         <sys_package display_value="Apollo-Hospitals" source="x_2223823_apollo_0">87c1422693c89b507b3a7c5efaba1008</sys_package>
         <sys_policy/>
         <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
         <sys_update_name>sc_cat_item_1c371d7847d0d310273a565a516d43ea</sys_update_name>
-        <sys_updated_by>system</sys_updated_by>
-        <sys_updated_on>2026-11-19 14:55:02</sys_updated_on>
+        <sys_updated_by>nilesh.chaurasia</sys_updated_by>
+        <sys_updated_on>2026-11-24 06:06:38</sys_updated_on>
         <taxonomy_topic/>
         <template/>
         <template_manager_roles/>
         <type>item</type>
         <use_sc_layout>true</use_sc_layout>
         <vendor/>
-        <version>137</version>
+        <version>167</version>
         <visible_bundle>true</visible_bundle>
         <visible_guide>true</visible_guide>
         <visible_standalone>true</visible_standalone>

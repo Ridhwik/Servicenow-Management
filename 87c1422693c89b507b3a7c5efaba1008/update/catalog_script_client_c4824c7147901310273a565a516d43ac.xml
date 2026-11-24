@@ -8,7 +8,7 @@
         <applies_target_record>false</applies_target_record>
         <applies_to>item</applies_to>
         <cat_item display_value="Wheelchair and assistance">6e08693c4794d310273a565a516d432e</cat_item>
-        <cat_variable/>
+        <cat_variable>IO:f44c25f447d4d310273a565a516d4375</cat_variable>
         <condition/>
         <description/>
         <field/>
@@ -18,33 +18,32 @@
         <name>needed_datetime Must be in the future</name>
         <order/>
         <published_ref/>
-        <script><![CDATA[function onSubmit() {
-    //fetching date value from field 
-    var dateValue = g_form.getValue('needed_datetime');
-    
-	//allowing submission if field is empty 
-    if (!dateValue) {
-        return true;
+        <script><![CDATA[function onChange(control, oldValue, newValue, isLoading) {
+    if (isLoading) {
+        return;
     }
 
-    //replacing space with 'T' so browser can convert it properly
-    var formattedDate = dateValue.replace(' ', 'T');
-    
-    //converting it into date only
-    var selectedDateTime = new Date(formattedDate);
+    g_form.hideFieldMsg('needed_datetime', true);
 
-    //calculating today's date 
-    var today = new Date();
+    var dateValue = newValue || g_form.getValue('needed_datetime');
+    if (!dateValue) {
+        return;
+    }
+
+    var formattedDate = String(dateValue).replace(' ', 'T');
+    var selectedDateTime = new Date(formattedDate);
+    var now = new Date();
 
     if (isNaN(selectedDateTime.getTime())) {
-        g_form.addErrorMessage('Please enter a valid date and time.');
-        return false;
+        g_form.setValue('needed_datetime', '');
+        g_form.showFieldMsg('needed_datetime', 'Please enter a valid date and time.', 'error');
+        return;
     }
 
-    //noe comparing field date to today's date if it is not in future do not let submitt the form 
-    if (selectedDateTime <= today) {
-        g_form.addErrorMessage('The preferred date and time must be in the future.');
-        return false;
+    if (selectedDateTime <= now) {
+        g_form.setValue('needed_datetime', '');
+        g_form.showFieldMsg('needed_datetime', 'The preferred date and time must be in the future.', 'error');
+        return;
     }
 }]]></script>
         <sys_class_name>catalog_script_client</sys_class_name>
@@ -53,7 +52,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>c4824c7147901310273a565a516d43ac</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>5</sys_mod_count>
         <sys_name>needed_datetime Must be in the future</sys_name>
         <sys_overrides/>
         <sys_package display_value="Apollo-Hospitals" source="x_2223823_apollo_0">87c1422693c89b507b3a7c5efaba1008</sys_package>
@@ -61,9 +60,9 @@
         <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
         <sys_update_name>catalog_script_client_c4824c7147901310273a565a516d43ac</sys_update_name>
         <sys_updated_by>nilesh.chaurasia</sys_updated_by>
-        <sys_updated_on>2026-11-02 06:20:43</sys_updated_on>
+        <sys_updated_on>2026-11-24 06:04:42</sys_updated_on>
         <table/>
-        <type>onSubmit</type>
+        <type>onChange</type>
         <ui_type>10</ui_type>
         <va_supported>true</va_supported>
         <variable_set/>
