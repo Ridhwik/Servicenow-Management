@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element attributes="enforce_dot_walk_cross_scope_access=true" db_object_id="1e3d0c9f47609390273a565a516d430f" label="Pharmacy" max_length="40" name="x_2223823_apollo_0_pharmacy" type="collection">
+        <element label="Available Stock" mandatory="true" max_length="40" name="available_stock" type="integer"/>
+        <element display="true" label="Name" mandatory="true" max_length="40" name="name" type="string"/>
+        <element label="Rate per Strip" mandatory="true" max_length="40" name="rate_per_strip" type="integer"/>
+    </element>
+</database>

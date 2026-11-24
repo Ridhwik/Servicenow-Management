@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ui_policy_action">
+    <sys_ui_policy_action action="DELETE">
+        <cleared>false</cleared>
+        <disabled>ignore</disabled>
+        <field>advance_amount</field>
+        <field_message/>
+        <field_message_type>none</field_message_type>
+        <mandatory>false</mandatory>
+        <sys_class_name>sys_ui_policy_action</sys_class_name>
+        <sys_created_by>integration.user</sys_created_by>
+        <sys_created_on>2026-11-04 18:03:26</sys_created_on>
+        <sys_id>00d6bce64714d710273a565a516d43d4</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>advance_amount</sys_name>
+        <sys_package display_value="Apollo-Hospitals" source="x_2223823_apollo_0">87c1422693c89b507b3a7c5efaba1008</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
+        <sys_update_name>sys_ui_policy_action_00d6bce64714d710273a565a516d43d4</sys_update_name>
+        <sys_updated_by>integration.user</sys_updated_by>
+        <sys_updated_on>2026-11-04 18:03:26</sys_updated_on>
+        <table>x_2223823_apollo_0_admissions</table>
+        <ui_policy/>
+        <value/>
+        <value_action>ignore</value_action>
+        <visible>ignore</visible>
+    </sys_ui_policy_action>
+    <sys_translated_text action="DELETE" query="documentkey=00d6bce64714d710273a565a516d43d4"/>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</application>
+        <file_path/>
+        <instance_id>5ada7edb93d06e50d9f6ddd548373c9d</instance_id>
+        <instance_name>dev304851</instance_name>
+        <name>sys_ui_policy_action_00d6bce64714d710273a565a516d43d4</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ui_policy_action"><sys_ui_policy_action action="INSERT_OR_UPDATE"><cleared>false</cleared><disabled>ignore</disabled><field>advance_amount</field><field_message/><field_message_type>none</field_message_type><mandatory>false</mandatory><sys_class_name>sys_ui_policy_action</sys_class_name><sys_created_by>integration.user</sys_created_by><sys_created_on>2026-11-04 18:03:26</sys_created_on><sys_id>00d6bce64714d710273a565a516d43d4</sys_id><sys_mod_count>0</sys_mod_count><sys_name>advance_amount</sys_name><sys_package display_value="Apollo-Hospitals" source="x_2223823_apollo_0">87c1422693c89b507b3a7c5efaba1008</sys_package><sys_policy/><sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope><sys_update_name>sys_ui_policy_action_00d6bce64714d710273a565a516d43d4</sys_update_name><sys_updated_by>integration.user</sys_updated_by><sys_updated_on>2026-11-04 18:03:26</sys_updated_on><table>x_2223823_apollo_0_admissions</table><ui_policy/><value/><value_action>ignore</value_action><visible>ignore</visible></sys_ui_policy_action><sys_translated_text action="delete_multiple" query="documentkey=00d6bce64714d710273a565a516d43d4"/></record_update>]]></payload>
+        <payload_hash>749631704</payload_hash>
+        <record_name>advance_amount</record_name>
+        <reverted_from/>
+        <source>4f51406e475c9710273a565a516d4360</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>integration.user</sys_created_by>
+        <sys_created_on>2026-11-04 18:03:26</sys_created_on>
+        <sys_id>8cd6fce64714d710273a565a516d43c4</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1a1a7bae6060000001</sys_recorded_at>
+        <sys_updated_by>integration.user</sys_updated_by>
+        <sys_updated_on>2026-11-04 18:03:26</sys_updated_on>
+        <type>UI Policy Action</type>
+        <update_guid>4cd6fce6cf14d710865dea14424a85c3</update_guid>
+        <update_guid_history>4cd6fce6cf14d710865dea14424a85c3:749631704</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>integration.user</sys_created_by>
+        <sys_created_on>2026-11-18 11:05:21</sys_created_on>
+        <sys_db_object display_value="" name="sys_ui_policy_action">sys_ui_policy_action</sys_db_object>
+        <sys_id>8ad409fe05274c0084f1e904d4e880a4</sys_id>
+        <sys_metadata>00d6bce64714d710273a565a516d43d4</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>advance_amount</sys_name>
+        <sys_package display_value="Apollo-Hospitals" source="x_2223823_apollo_0">87c1422693c89b507b3a7c5efaba1008</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
+        <sys_scope_delete display_value="">1a2f7aa8dfc34e3a86d3f0bede3c2784</sys_scope_delete>
+        <sys_update_name>sys_ui_policy_action_00d6bce64714d710273a565a516d43d4</sys_update_name>
+        <sys_update_version display_value="sys_ui_policy_action_00d6bce64714d710273a565a516d43d4">8cd6fce64714d710273a565a516d43c4</sys_update_version>
+        <sys_updated_by>integration.user</sys_updated_by>
+        <sys_updated_on>2026-11-18 11:05:21</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

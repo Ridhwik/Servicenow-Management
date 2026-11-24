@@ -1,0 +1,716 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_widget">
+    <sp_widget action="INSERT_OR_UPDATE">
+        <category>custom</category>
+        <client_script><![CDATA[function($scope, spUtil) {
+  var c = this;
+  c.mode = 'existing';
+  c.selectedHospital = null;
+  c.newHosp = {
+    name: '',
+    city: '',
+    phone: '',
+    address: '',
+    hold_emergency: 4,
+    hold_planned: 24
+  };
+
+  c.blocks = [
+    { name: 'Main Surgical Tower', floorCount: 6, includeGround: true, includeBasement: true },
+    { name: 'OPD & Diagnostics Wing', floorCount: 3, includeGround: true, includeBasement: false },
+    { name: 'Trauma & Emergency Care', floorCount: 2, includeGround: true, includeBasement: false }
+  ];
+
+  c.isSubmitting = false;
+  c.creationSuccess = false;
+
+  c.setMode = function(m) {
+    c.mode = m;
+    c.creationSuccess = false;
+  };
+
+  c.onHospitalChange = function() {
+    c.creationSuccess = false;
+  };
+
+  c.addBlock = function() {
+    c.blocks.push({
+      name: 'Building ' + String.fromCharCode(65 + c.blocks.length),
+      floorCount: 3,
+      includeGround: true,
+      includeBasement: false
+    });
+  };
+
+  c.removeBlock = function(idx) {
+    if (c.blocks.length > 1) {
+      c.blocks.splice(idx, 1);
+    }
+  };
+
+  c.getPreviewFloors = function(block) {
+    var floors = [];
+    if (block.includeBasement) floors.push('Basement (B1)');
+    if (block.includeGround) floors.push('Ground Floor');
+    var count = parseInt(block.floorCount, 10) || 1;
+    for (var i = 1; i <= count; i++) {
+      floors.push('Floor ' + i);
+    }
+    return floors;
+  };
+
+  c.getTotalFloors = function() {
+    var total = 0;
+    for (var i = 0; i < c.blocks.length; i++) {
+      total += c.getPreviewFloors(c.blocks[i]).length;
+    }
+    return total;
+  };
+
+  c.generateHierarchy = function() {
+    var targetHospName = '';
+    var hospSysId = '';
+
+    if (c.mode === 'existing') {
+      if (!c.selectedHospital) {
+        alert('Please select an existing hospital.');
+        return;
+      }
+      targetHospName = c.selectedHospital.name;
+      hospSysId = c.selectedHospital.sys_id;
+    } else {
+      if (!c.newHosp.name || !c.newHosp.name.trim()) {
+        alert('Please enter a Hospital Name.');
+        return;
+      }
+      if (!c.newHosp.city || !c.newHosp.city.trim()) {
+        alert('Please enter a City.');
+        return;
+      }
+      targetHospName = c.newHosp.name.trim();
+    }
+
+    for (var i = 0; i < c.blocks.length; i++) {
+      if (!c.blocks[i].name || !c.blocks[i].name.trim()) {
+        alert('Please provide a name for Block ' + (i + 1));
+        return;
+      }
+    }
+
+    c.isSubmitting = true;
+
+    c.server.get({
+      action: 'generate_hierarchy',
+      mode: c.mode,
+      hospital_sys_id: hospSysId,
+      hospital_name: targetHospName,
+      new_hospital: c.newHosp,
+      blocks: c.blocks
+    }).then(function(res) {
+      c.isSubmitting = false;
+      if (res && res.data && res.data.result && res.data.result.success) {
+        c.creationSuccess = true;
+        c.createdSummary = res.data.result;
+        c.createdSummary.hospitalName = targetHospName;
+      } else {
+        var err = (res.data && res.data.result && res.data.result.error) || 'Failed to create hierarchy.';
+        alert(err);
+      }
+    }, function() {
+      c.isSubmitting = false;
+      alert('Network or server error while provisioning hierarchy.');
+    });
+  };
+
+  c.resetForm = function() {
+    c.creationSuccess = false;
+    c.selectedHospital = null;
+    c.newHosp = { name: '', city: '', phone: '', address: '', hold_emergency: 4, hold_planned: 24 };
+    c.blocks = [
+      { name: 'Main Surgical Tower', floorCount: 6, includeGround: true, includeBasement: true },
+      { name: 'OPD & Diagnostics Wing', floorCount: 3, includeGround: true, includeBasement: false }
+    ];
+  };
+}]]></client_script>
+        <controller_as>c</controller_as>
+        <css>.ah {
+  --ah-ink: #0f172a;
+  --ah-body: #334155;
+  --ah-muted: #64748b;
+  --ah-line: #e5e9f0;
+  --ah-bg: #f6f8fb;
+  --ah-surface: #ffffff;
+  --ah-brand: #0b3d91;
+  --ah-brand-soft: #eaf1fc;
+  --ah-accent: #e5484d;
+  --ah-radius: 12px;
+
+  max-width: 1160px;
+  margin: 24px auto;
+  padding: 0 16px;
+  color: var(--ah-body);
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+}
+.ah *, .ah *::before, .ah *::after { box-sizing: border-box; }
+
+/* Header */
+.ah-header {
+  display: flex; align-items: center; justify-content: space-between;
+  gap: 16px; margin-bottom: 24px;
+}
+.ah-brand { display: flex; align-items: center; gap: 14px; }
+.ah-logo {
+  width: 40px; height: 40px; border-radius: 10px;
+  background: var(--ah-brand); color: #fff;
+  display: inline-flex; align-items: center; justify-content: center;
+  font-size: 16px; flex-shrink: 0;
+}
+.ah-title { margin: 0; font-size: 20px; font-weight: 600; color: var(--ah-ink); letter-spacing: -0.01em; }
+.ah-subtitle { margin: 2px 0 0; color: var(--ah-muted); font-size: 13px; }
+.ah-tag {
+  font-size: 12px; font-weight: 500; color: var(--ah-brand);
+  background: var(--ah-brand-soft); padding: 5px 12px; border-radius: 999px; white-space: nowrap;
+}
+
+/* Segmented control */
+.ah-segment {
+  display: inline-flex; padding: 4px; margin-bottom: 20px;
+  background: #eceff4; border-radius: 10px;
+}
+.ah-segment-btn {
+  border: 0; background: transparent; cursor: pointer;
+  padding: 8px 18px; border-radius: 7px;
+  font-size: 13px; font-weight: 500; color: var(--ah-muted);
+  transition: all .15s ease;
+}
+.ah-segment-btn:hover { color: var(--ah-ink); }
+.ah-segment-btn.is-active {
+  background: var(--ah-surface); color: var(--ah-ink);
+  box-shadow: 0 1px 2px rgba(15,23,42,.08);
+}
+
+/* Cards */
+.ah-card {
+  background: var(--ah-surface);
+  border: 1px solid var(--ah-line);
+  border-radius: var(--ah-radius);
+  padding: 24px;
+  margin-bottom: 20px;
+}
+.ah-card-head { margin-bottom: 20px; }
+.ah-card-head-row { display: flex; align-items: flex-start; justify-content: space-between; gap: 12px; }
+.ah-eyebrow {
+  display: block; font-size: 11px; font-weight: 600; letter-spacing: .08em;
+  text-transform: uppercase; color: var(--ah-brand); margin-bottom: 4px;
+}
+.ah-card-title { margin: 0; font-size: 16px; font-weight: 600; color: var(--ah-ink); }
+.ah-hint { margin: 4px 0 0; font-size: 13px; color: var(--ah-muted); }
+
+/* Grid + fields */
+.ah-grid { display: grid; gap: 16px; }
+.ah-grid-existing { grid-template-columns: 1.4fr 1fr; align-items: end; }
+.ah-grid-new { grid-template-columns: repeat(12, 1fr); }
+.ah-grid-block { grid-template-columns: repeat(12, 1fr); }
+.ah-span-3 { grid-column: span 3; }
+.ah-span-4 { grid-column: span 4; }
+.ah-span-6 { grid-column: span 6; }
+.ah-span-8 { grid-column: span 8; }
+
+.ah-field { min-width: 0; }
+.ah-label { display: block; margin-bottom: 6px; font-size: 12px; font-weight: 500; color: var(--ah-muted); }
+.ah-req { color: var(--ah-accent); }
+.ah-input {
+  width: 100%; height: 40px; padding: 0 12px;
+  background: var(--ah-surface); color: var(--ah-ink);
+  border: 1px solid var(--ah-line); border-radius: 8px;
+  font-size: 14px; outline: none; box-shadow: none;
+  transition: border-color .15s, box-shadow .15s;
+}
+.ah-input::placeholder { color: #a3aebf; }
+.ah-input:hover { border-color: #cdd5e1; }
+.ah-input:focus { border-color: var(--ah-brand); box-shadow: 0 0 0 3px rgba(11,61,145,.12); }
+
+/* Existing hospital meta */
+.ah-meta { display: flex; gap: 24px; margin: 0; padding: 0 0 4px; }
+.ah-meta div { min-width: 0; }
+.ah-meta dt { font-size: 11px; font-weight: 500; color: var(--ah-muted); text-transform: uppercase; letter-spacing: .05em; }
+.ah-meta dd { margin: 2px 0 0; font-size: 14px; font-weight: 600; color: var(--ah-ink); }
+
+/* Workspace */
+.ah-workspace { display: grid; grid-template-columns: 1.35fr 1fr; gap: 20px; align-items: start; }
+.ah-workspace .ah-card { margin-bottom: 0; }
+.ah-preview { position: sticky; top: 16px; }
+
+/* Block cards */
+.ah-block {
+  border: 1px solid var(--ah-line); border-radius: 10px;
+  padding: 16px; margin-bottom: 12px; background: #fcfdfe;
+}
+.ah-block-head { display: flex; align-items: center; gap: 10px; margin-bottom: 14px; }
+.ah-block-index {
+  width: 24px; height: 24px; border-radius: 50%;
+  background: var(--ah-brand-soft); color: var(--ah-brand);
+  font-size: 12px; font-weight: 600;
+  display: inline-flex; align-items: center; justify-content: center; flex-shrink: 0;
+}
+.ah-block-name { flex: 1; font-weight: 600; color: var(--ah-ink); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.ah-icon-btn {
+  border: 0; background: transparent; color: var(--ah-muted); cursor: pointer;
+  width: 30px; height: 30px; border-radius: 6px; transition: all .15s;
+}
+.ah-icon-btn:hover { background: #fdecec; color: var(--ah-accent); }
+
+/* Toggle switches */
+.ah-switches { display: flex; flex-wrap: wrap; gap: 20px; margin-top: 14px; }
+.ah-switch { display: inline-flex; align-items: center; gap: 8px; margin: 0; cursor: pointer; font-weight: 400; }
+.ah-switch input { position: absolute; opacity: 0; pointer-events: none; }
+.ah-switch-track {
+  position: relative; width: 32px; height: 18px; border-radius: 999px;
+  background: #d5dbe5; transition: background .15s; flex-shrink: 0;
+}
+.ah-switch-track::after {
+  content: ""; position: absolute; top: 2px; left: 2px;
+  width: 14px; height: 14px; border-radius: 50%; background: #fff;
+  box-shadow: 0 1px 2px rgba(0,0,0,.2); transition: transform .15s;
+}
+.ah-switch input:checked + .ah-switch-track { background: var(--ah-brand); }
+.ah-switch input:checked + .ah-switch-track::after { transform: translateX(14px); }
+.ah-switch input:focus-visible + .ah-switch-track { box-shadow: 0 0 0 3px rgba(11,61,145,.2); }
+.ah-switch-text { font-size: 13px; color: var(--ah-body); }
+
+/* Buttons */
+.ah-btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+  height: 40px; padding: 0 18px; border-radius: 8px;
+  font-size: 13px; font-weight: 500; cursor: pointer; text-decoration: none;
+  border: 1px solid transparent; transition: all .15s ease;
+}
+.ah-btn-primary { background: var(--ah-brand); color: #fff; }
+.ah-btn-primary:hover { background: #09337a; color: #fff; }
+.ah-btn-primary[disabled] { opacity: .6; cursor: not-allowed; }
+.ah-btn-ghost { background: var(--ah-surface); color: var(--ah-ink); border-color: var(--ah-line); }
+.ah-btn-ghost:hover { border-color: #cdd5e1; background: var(--ah-bg); color: var(--ah-ink); text-decoration: none; }
+.ah-btn-block { width: 100%; margin-top: 8px; height: 44px; }
+
+/* Preview */
+.ah-stats { display: flex; gap: 6px; flex-wrap: wrap; justify-content: flex-end; }
+.ah-chip {
+  font-size: 11px; font-weight: 500; color: var(--ah-muted);
+  background: var(--ah-bg); border: 1px solid var(--ah-line);
+  padding: 3px 10px; border-radius: 999px; white-space: nowrap;
+}
+.ah-tree {
+  max-height: 460px; overflow-y: auto; padding: 4px 4px 4px 0;
+}
+.ah-tree-root {
+  display: flex; align-items: center; gap: 10px;
+  font-weight: 600; color: var(--ah-ink); padding-bottom: 6px;
+}
+.ah-tree-root .fa { color: var(--ah-accent); }
+.ah-tree-branch {
+  margin: 8px 0 0 8px; padding-left: 16px;
+  border-left: 1px solid var(--ah-line);
+}
+.ah-tree-block { display: flex; align-items: center; gap: 8px; font-weight: 500; color: var(--ah-ink); }
+.ah-tree-block .fa { color: var(--ah-brand); }
+.ah-tree-block-name { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.ah-count {
+  margin-left: auto; font-size: 11px; color: var(--ah-brand);
+  background: var(--ah-brand-soft); padding: 1px 8px; border-radius: 999px;
+}
+.ah-tree-floors { list-style: none; margin: 6px 0 0; padding: 0 0 0 22px; }
+.ah-tree-floors li {
+  position: relative; padding: 2px 0 2px 14px;
+  font-size: 12px; color: var(--ah-muted);
+}
+.ah-tree-floors li::before {
+  content: ""; position: absolute; left: 0; top: 50%;
+  width: 6px; height: 6px; margin-top: -3px;
+  border-radius: 50%; background: #cbd5e1;
+}
+
+/* Success */
+.ah-success { text-align: center; padding: 48px 24px; }
+.ah-success-icon {
+  width: 52px; height: 52px; border-radius: 50%;
+  background: #e8f7ee; color: #1a9d55; font-size: 22px;
+  display: inline-flex; align-items: center; justify-content: center; margin-bottom: 16px;
+}
+.ah-success-title { margin: 0; font-size: 20px; font-weight: 600; color: var(--ah-ink); }
+.ah-success-sub { margin: 6px 0 0; color: var(--ah-muted); }
+.ah-summary { display: flex; justify-content: center; gap: 12px; margin: 28px 0; flex-wrap: wrap; }
+.ah-summary-item {
+  min-width: 150px; padding: 16px 20px;
+  border: 1px solid var(--ah-line); border-radius: 10px; background: var(--ah-bg);
+}
+.ah-summary-num { display: block; font-size: 28px; font-weight: 600; color: var(--ah-brand); line-height: 1.1; }
+.ah-summary-label { font-size: 12px; color: var(--ah-muted); }
+.ah-actions { display: flex; justify-content: center; gap: 10px; flex-wrap: wrap; }
+
+/* Responsive */
+@media (max-width: 900px) {
+  .ah-workspace { grid-template-columns: 1fr; }
+  .ah-preview { position: static; }
+  .ah-grid-existing { grid-template-columns: 1fr; }
+}
+@media (max-width: 600px) {
+  .ah-header { flex-direction: column; align-items: flex-start; }
+  .ah-span-3, .ah-span-4, .ah-span-6, .ah-span-8 { grid-column: span 12; }
+  .ah-meta { flex-wrap: wrap; gap: 16px; }
+  .ah-card { padding: 18px; }
+}</css>
+        <data_table>sp_instance</data_table>
+        <demo_data/>
+        <description/>
+        <docs/>
+        <field_list/>
+        <has_preview>false</has_preview>
+        <id>hospital-campus-hierarchy-builder</id>
+        <internal>false</internal>
+        <link><![CDATA[function link(scope, element, attrs, controller) {  }]]></link>
+        <name>Hospital Campus Hierarchy Builder</name>
+        <option_schema/>
+        <public>false</public>
+        <roles/>
+        <script><![CDATA[(function() {
+  if (!input) {
+    data.hospitals = [];
+    var grHosp = new GlideRecord('x_2223823_apollo_0_hospital');
+    grHosp.addActiveQuery();
+    grHosp.orderBy('name');
+    grHosp.query();
+    while (grHosp.next()) {
+      data.hospitals.push({
+        sys_id: grHosp.getUniqueValue(),
+        name: grHosp.getValue('name') || grHosp.getDisplayValue(),
+        number: grHosp.getValue('number') || '',
+        city: grHosp.getValue('city') || '',
+        hold_hours_emergency: grHosp.getValue('hold_hours_emergency') || 4,
+        hold_hours_planned: grHosp.getValue('hold_hours_planned') || 24
+      });
+    }
+    return;
+  }
+
+  if (input && input.action === 'generate_hierarchy') {
+    var mode = input.mode;
+    var hospName = (input.hospital_name || '').trim();
+    var hospSysId = input.hospital_sys_id;
+    var blocks = input.blocks || [];
+    var newHosp = input.new_hospital || {};
+
+    if (!hospName || !blocks.length) {
+      data.result = { success: false, error: 'Hospital Name and Blocks are required.' };
+      return;
+    }
+
+    try {
+      var rootLocId = '';
+
+      // 1. Resolve or Create Root Location
+      var rootGr = new GlideRecord('cmn_location');
+      rootGr.addQuery('name', hospName);
+      rootGr.setLimit(1);
+      rootGr.query();
+      if (rootGr.next()) {
+        rootLocId = rootGr.getUniqueValue();
+      } else {
+        rootGr.initialize();
+        rootGr.setValue('name', hospName);
+        if (mode === 'new') {
+          rootGr.setValue('city', newHosp.city || '');
+          rootGr.setValue('phone', newHosp.phone || '');
+          rootGr.setValue('street', newHosp.address || '');
+        }
+        rootLocId = rootGr.insert();
+      }
+
+      if (!rootLocId) {
+        data.result = { success: false, error: 'Failed to create root location: ' + rootGr.getLastErrorMessage() };
+        return;
+      }
+
+      // If mode is 'new', create the Hospital record in x_2223823_apollo_0_hospital
+      if (mode === 'new') {
+        var hRec = new GlideRecord('x_2223823_apollo_0_hospital');
+        hRec.initialize();
+        hRec.setValue('name', hospName);
+        hRec.setValue('city', newHosp.city || '');
+        hRec.setValue('phone', newHosp.phone || '');
+        hRec.setValue('address', newHosp.address || '');
+        hRec.setValue('hold_hours_emergency', parseInt(newHosp.hold_emergency, 10) || 4);
+        hRec.setValue('hold_hours_planned', parseInt(newHosp.hold_planned, 10) || 24);
+        hRec.setValue('active', true);
+        hRec.setValue('parent', rootLocId);
+        hospSysId = hRec.insert();
+      } else if (hospSysId) {
+        // Ensure existing hospital points to root location
+        var exHosp = new GlideRecord('x_2223823_apollo_0_hospital');
+        if (exHosp.get(hospSysId)) {
+          if (exHosp.parent.nil()) {
+            exHosp.setValue('parent', rootLocId);
+            exHosp.update();
+          }
+        }
+      }
+
+      // 2. Loop through blocks
+      var blocksCount = 0;
+      var floorsCount = 0;
+
+      for (var b = 0; b < blocks.length; b++) {
+        var blk = blocks[b];
+        var blkName = (blk.name || ('Block ' + (b + 1))).trim();
+
+        // Create Block under Root Location
+        var blkGr = new GlideRecord('cmn_location');
+        blkGr.initialize();
+        blkGr.setValue('name', hospName + ' - ' + blkName);
+        blkGr.setValue('parent', rootLocId);
+        var blkLocId = blkGr.insert();
+
+        if (blkLocId) {
+          blocksCount++;
+
+          // Build floors list
+          var floorList = [];
+          if (blk.includeBasement) floorList.push(blkName + ' - Basement (B1)');
+          if (blk.includeGround) floorList.push(blkName + ' - Ground Floor');
+          var totalF = parseInt(blk.floorCount, 10) || 1;
+          for (var f = 1; f <= totalF; f++) {
+            floorList.push(blkName + ' - Floor ' + f);
+          }
+
+          // Insert floors under Block
+          for (var fl = 0; fl < floorList.length; fl++) {
+            var flGr = new GlideRecord('cmn_location');
+            flGr.initialize();
+            flGr.setValue('name', floorList[fl]);
+            flGr.setValue('parent', blkLocId);
+            flGr.insert();
+            floorsCount++;
+          }
+        }
+      }
+
+      data.result = {
+        success: true,
+        rootSysId: rootLocId,
+        hospitalSysId: hospSysId,
+        blocksCreated: blocksCount,
+        floorsCreated: floorsCount
+      };
+
+    } catch (err) {
+      data.result = { success: false, error: 'Server exception: ' + err.message };
+    }
+  }
+})();]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_widget</sys_class_name>
+        <sys_created_by>integration.user</sys_created_by>
+        <sys_created_on>2026-11-18 11:25:36</sys_created_on>
+        <sys_id>8502673a47a8df50273a565a516d4310</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>Hospital Campus Hierarchy Builder</sys_name>
+        <sys_package display_value="Apollo-Hospitals" source="x_2223823_apollo_0">87c1422693c89b507b3a7c5efaba1008</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
+        <sys_update_name>sp_widget_8502673a47a8df50273a565a516d4310</sys_update_name>
+        <sys_updated_by>ridhwik.jangid</sys_updated_by>
+        <sys_updated_on>2026-11-20 09:25:23</sys_updated_on>
+        <template><![CDATA[<div class="ah">
+
+  <!-- HEADER -->
+  <header class="ah-header">
+    <div class="ah-brand">
+      <span class="ah-logo"><i class="fa fa-plus"></i></span>
+      <div>
+        <h1 class="ah-title">Campus Hierarchy Builder</h1>
+        <p class="ah-subtitle">Provision hospital buildings and floors as ServiceNow locations.</p>
+      </div>
+    </div>
+    <span class="ah-tag">Apollo Hospitals</span>
+  </header>
+
+  <!-- MODE SWITCH -->
+  <nav class="ah-segment" ng-if="!c.creationSuccess">
+    <button type="button" class="ah-segment-btn" ng-class="{'is-active': c.mode === 'existing'}" ng-click="c.setMode('existing')">
+      Configure existing
+    </button>
+    <button type="button" class="ah-segment-btn" ng-class="{'is-active': c.mode === 'new'}" ng-click="c.setMode('new')">
+      Provision new campus
+    </button>
+  </nav>
+
+  <!-- MODE 1: EXISTING HOSPITAL -->
+  <section class="ah-card" ng-if="c.mode === 'existing' && !c.creationSuccess">
+    <div class="ah-card-head">
+      <span class="ah-eyebrow">Step 1</span>
+      <h2 class="ah-card-title">Select hospital</h2>
+    </div>
+    <div class="ah-grid ah-grid-existing">
+      <div class="ah-field">
+        <label class="ah-label">Target hospital</label>
+        <select class="ah-input" ng-model="c.selectedHospital" ng-options="h as (h.name + ' [' + h.number + ']') for h in c.data.hospitals" ng-change="c.onHospitalChange()">
+          <option value="">Choose a hospital…</option>
+        </select>
+      </div>
+      <dl class="ah-meta" ng-if="c.selectedHospital">
+        <div><dt>City</dt><dd>{{c.selectedHospital.city || 'N/A'}}</dd></div>
+        <div><dt>Emergency hold</dt><dd>{{c.selectedHospital.hold_hours_emergency || 4}} hrs</dd></div>
+        <div><dt>Planned hold</dt><dd>{{c.selectedHospital.hold_hours_planned || 24}} hrs</dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <!-- MODE 2: NEW HOSPITAL -->
+  <section class="ah-card" ng-if="c.mode === 'new' && !c.creationSuccess">
+    <div class="ah-card-head">
+      <span class="ah-eyebrow">Step 1</span>
+      <h2 class="ah-card-title">Hospital details</h2>
+    </div>
+    <div class="ah-grid ah-grid-new">
+      <div class="ah-field ah-span-6">
+        <label class="ah-label">Hospital name <span class="ah-req">*</span></label>
+        <input type="text" class="ah-input" ng-model="c.newHosp.name" placeholder="Apollo Super Speciality Mumbai" />
+      </div>
+      <div class="ah-field ah-span-3">
+        <label class="ah-label">City <span class="ah-req">*</span></label>
+        <input type="text" class="ah-input" ng-model="c.newHosp.city" placeholder="Mumbai" />
+      </div>
+      <div class="ah-field ah-span-3">
+        <label class="ah-label">Phone</label>
+        <input type="text" class="ah-input" ng-model="c.newHosp.phone" placeholder="+91 22 12345678" />
+      </div>
+      <div class="ah-field ah-span-6">
+        <label class="ah-label">Address</label>
+        <input type="text" class="ah-input" ng-model="c.newHosp.address" placeholder="Sector 12, Navi Mumbai" />
+      </div>
+      <div class="ah-field ah-span-3">
+        <label class="ah-label">Emergency hold (hrs)</label>
+        <input type="number" class="ah-input" ng-model="c.newHosp.hold_emergency" />
+      </div>
+      <div class="ah-field ah-span-3">
+        <label class="ah-label">Planned hold (hrs)</label>
+        <input type="number" class="ah-input" ng-model="c.newHosp.hold_planned" />
+      </div>
+    </div>
+  </section>
+
+  <!-- BLOCKS + PREVIEW -->
+  <div class="ah-workspace" ng-if="(c.selectedHospital || (c.mode === 'new' && c.newHosp.name)) && !c.creationSuccess">
+
+    <!-- Left: blocks -->
+    <section class="ah-card ah-blocks">
+      <div class="ah-card-head ah-card-head-row">
+        <div>
+          <span class="ah-eyebrow">Step 2</span>
+          <h2 class="ah-card-title">Buildings</h2>
+          <p class="ah-hint">Name each building and set its number of floors.</p>
+        </div>
+        <button type="button" class="ah-btn ah-btn-ghost" ng-click="c.addBlock()">
+          <i class="fa fa-plus"></i> Add block
+        </button>
+      </div>
+
+      <div class="ah-block" ng-repeat="block in c.blocks track by $index">
+        <div class="ah-block-head">
+          <span class="ah-block-index">{{$index + 1}}</span>
+          <span class="ah-block-name">{{block.name || 'Untitled block'}}</span>
+          <button type="button" class="ah-icon-btn" ng-if="c.blocks.length > 1" ng-click="c.removeBlock($index)" title="Remove block">
+            <i class="fa fa-trash-o"></i>
+          </button>
+        </div>
+
+        <div class="ah-grid ah-grid-block">
+          <div class="ah-field ah-span-8">
+            <label class="ah-label">Building name <span class="ah-req">*</span></label>
+            <input type="text" class="ah-input" ng-model="block.name" placeholder="Surgical Tower, OPD Wing" />
+          </div>
+          <div class="ah-field ah-span-4">
+            <label class="ah-label">Floors above ground <span class="ah-req">*</span></label>
+            <input type="number" class="ah-input" min="1" max="50" ng-model="block.floorCount" />
+          </div>
+        </div>
+
+        <div class="ah-switches">
+          <label class="ah-switch">
+            <input type="checkbox" ng-model="block.includeGround" />
+            <span class="ah-switch-track"></span>
+            <span class="ah-switch-text">Ground floor (G)</span>
+          </label>
+          <label class="ah-switch">
+            <input type="checkbox" ng-model="block.includeBasement" />
+            <span class="ah-switch-track"></span>
+            <span class="ah-switch-text">Basement (B1)</span>
+          </label>
+        </div>
+      </div>
+
+      <button type="button" class="ah-btn ah-btn-primary ah-btn-block" ng-click="c.generateHierarchy()" ng-disabled="c.isSubmitting">
+        <span ng-if="!c.isSubmitting"><i class="fa fa-sitemap"></i> Provision campus hierarchy</span>
+        <span ng-if="c.isSubmitting"><i class="fa fa-spinner fa-spin"></i> Creating locations…</span>
+      </button>
+    </section>
+
+    <!-- Right: preview -->
+    <aside class="ah-card ah-preview">
+      <div class="ah-card-head ah-card-head-row">
+        <div>
+          <span class="ah-eyebrow">Preview</span>
+          <h2 class="ah-card-title">Hierarchy</h2>
+        </div>
+        <div class="ah-stats">
+          <span class="ah-chip">{{c.blocks.length}} blocks</span>
+          <span class="ah-chip">{{c.getTotalFloors()}} floors</span>
+        </div>
+      </div>
+
+      <div class="ah-tree">
+        <div class="ah-tree-root">
+          <i class="fa fa-hospital-o"></i>
+          <span>{{c.mode === 'new' ? (c.newHosp.name || 'New hospital') : c.selectedHospital.name}}</span>
+        </div>
+
+        <div class="ah-tree-branch" ng-repeat="block in c.blocks track by $index">
+          <div class="ah-tree-block">
+            <i class="fa fa-building-o"></i>
+            <span class="ah-tree-block-name">{{block.name || ('Block ' + ($index + 1))}}</span>
+            <span class="ah-count">{{c.getPreviewFloors(block).length}}</span>
+          </div>
+          <ul class="ah-tree-floors">
+            <li ng-repeat="floor in c.getPreviewFloors(block)">{{floor}}</li>
+          </ul>
+        </div>
+      </div>
+    </aside>
+
+  </div>
+
+  <!-- SUCCESS -->
+  <section class="ah-card ah-success" ng-if="c.creationSuccess">
+    <span class="ah-success-icon"><i class="fa fa-check"></i></span>
+    <h2 class="ah-success-title">Campus hierarchy provisioned</h2>
+    <p class="ah-success-sub">Locations created for <strong>{{c.createdSummary.hospitalName}}</strong>.</p>
+
+    <div class="ah-summary">
+      <div class="ah-summary-item"><span class="ah-summary-num">1</span><span class="ah-summary-label">Root location</span></div>
+      <div class="ah-summary-item"><span class="ah-summary-num">{{c.createdSummary.blocksCreated}}</span><span class="ah-summary-label">Buildings</span></div>
+      <div class="ah-summary-item"><span class="ah-summary-num">{{c.createdSummary.floorsCreated}}</span><span class="ah-summary-label">Floors</span></div>
+    </div>
+
+    <div class="ah-actions">
+      <a href="cmn_location_list.do?sysparm_query=parent={{c.createdSummary.rootSysId}}" target="_blank" class="ah-btn ah-btn-ghost">
+        <i class="fa fa-external-link"></i> Open in Locations
+      </a>
+      <button type="button" class="ah-btn ah-btn-primary" ng-click="c.resetForm()">
+        <i class="fa fa-refresh"></i> Configure another
+      </button>
+    </div>
+  </section>
+
+</div>]]></template>
+    </sp_widget>
+</record_update>

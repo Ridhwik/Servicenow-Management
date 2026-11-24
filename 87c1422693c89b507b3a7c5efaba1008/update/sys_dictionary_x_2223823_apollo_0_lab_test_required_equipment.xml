@@ -8,7 +8,7 @@
         <choice/>
         <choice_field/>
         <choice_table/>
-        <column_label>Required equipment</column_label>
+        <column_label>Required Model</column_label>
         <comments/>
         <create_roles/>
         <default_value/>
@@ -36,7 +36,7 @@
         <read_only>false</read_only>
         <read_only_option/>
         <read_roles/>
-        <reference display_value="" name="alm_asset">alm_asset</reference>
+        <reference display_value="" name="cmdb_model">cmdb_model</reference>
         <reference_cascade_rule/>
         <reference_floats>false</reference_floats>
         <reference_key/>
@@ -48,13 +48,13 @@
         <sys_class_name>sys_dictionary</sys_class_name>
         <sys_created_by>vikas.singh</sys_created_by>
         <sys_created_on>2026-10-30 10:02:21</sys_created_on>
-        <sys_name>Required equipment</sys_name>
+        <sys_name>Required Model</sys_name>
         <sys_package display_value="Apollo-Hospitals" source="x_2223823_apollo_0">87c1422693c89b507b3a7c5efaba1008</sys_package>
         <sys_policy/>
         <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
         <sys_update_name>sys_dictionary_x_2223823_apollo_0_lab_test_required_equipment</sys_update_name>
-        <sys_updated_by>ridhwik.jangid</sys_updated_by>
-        <sys_updated_on>2026-11-09 09:10:46</sys_updated_on>
+        <sys_updated_by>vikas.singh</sys_updated_by>
+        <sys_updated_on>2026-11-20 05:51:19</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sysevent_email_template">
+    <sysevent_email_template action="INSERT_OR_UPDATE">
+        <collection/>
+        <email_layout display_value="Apollo Hospital Master Layout">a478b91d47e89350273a565a516d43a5</email_layout>
+        <message/>
+        <message_html/>
+        <message_list/>
+        <message_text/>
+        <name>apollo.hospital.master.template</name>
+        <sms_alternate/>
+        <subject>Apollo Hospitals Notification</subject>
+        <sys_class_name>sysevent_email_template</sys_class_name>
+        <sys_created_by>fateh.meena</sys_created_by>
+        <sys_created_on>2026-11-13 08:57:55</sys_created_on>
+        <sys_id>f8409dd947649350273a565a516d43e2</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name>apollo.hospital.master.template</sys_name>
+        <sys_package display_value="Apollo-Hospitals" source="x_2223823_apollo_0">87c1422693c89b507b3a7c5efaba1008</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
+        <sys_update_name>sysevent_email_template_f8409dd947649350273a565a516d43e2</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-11-13 11:57:01</sys_updated_on>
+        <sys_version>2</sys_version>
+    </sysevent_email_template>
+</record_update>

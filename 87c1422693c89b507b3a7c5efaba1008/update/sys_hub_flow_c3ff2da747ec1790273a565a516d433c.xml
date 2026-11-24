@@ -1,0 +1,1111 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_hub_flow">
+    <sys_hub_flow action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <acls/>
+        <active>true</active>
+        <allow_high_security_roles>false</allow_high_security_roles>
+        <annotation/>
+        <attributes>browserActivatedIn=chrome,integrationActivatedIn=standalone,labelCacheCleanUpExecuted=true,timeFromCreateToActivate=8981000,viewActivatedIn=diagramming</attributes>
+        <authored_on_release_version>29000</authored_on_release_version>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <copied_from/>
+        <copied_from_name/>
+        <description/>
+        <display_name_after_preview/>
+        <flow_priority>MEDIUM</flow_priority>
+        <generation_source/>
+        <internal_name>fl03__doctor_leave_rescheduling</internal_name>
+        <label_cache>[{"name":"Updated_1.current.doctor.sys_id","label":"Trigger - Record Updated➛Doctor Request Record➛Doctor➛Sys ID","reference":"","reference_display":"Sys ID","type":"GUID","base_type":"GUID","parent_table_name":"x_2223823_apollo_0_doctor","column_name":"sys_id","usedInstances":{"f47a7d52-2e58-47d9-9a29-d93784262349":[null]}},{"name":"Updated_1.current.start_date","label":"Trigger - Record Updated➛Doctor Request Record➛From","reference":"","reference_display":"From","type":"glide_date","base_type":"glide_date","parent_table_name":"x_2223823_apollo_0_doctor_request","column_name":"start_date","usedInstances":{"f47a7d52-2e58-47d9-9a29-d93784262349":[null]}},{"name":"Updated_1.current.end_date","label":"Trigger - Record Updated➛Doctor Request Record➛To","reference":"","reference_display":"To","type":"glide_date","base_type":"glide_date","parent_table_name":"x_2223823_apollo_0_doctor_request","column_name":"end_date","usedInstances":{"f47a7d52-2e58-47d9-9a29-d93784262349":[null]}},{"name":"f47a7d52-2e58-47d9-9a29-d93784262349.Records","label":"1 - Look Up Records➛Appointment Records","reference":"x_2223823_apollo_0_appointment","reference_display":"Appointment","type":"records","base_type":"records","usedInstances":{"0091d2e4-3926-4fb9-b713-d5363aca3822":["items"]},"attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"0091d2e4-3926-4fb9-b713-d5363aca3822.item","label":"2 - For Each➛Appointment Record","reference":"x_2223823_apollo_0_appointment","reference_display":"Appointment","type":"reference","base_type":"reference","usedInstances":{"84b85cb2-d3dd-4513-a95b-bd7d0335b053":["record"]},"attributes":{"pills_draggable_inside_block":"true","pills_draggable_outside_block":"false"}},{"name":"84b85cb2-d3dd-4513-a95b-bd7d0335b053.record","label":"3 - Update Record➛Appointment Record","reference":"x_2223823_apollo_0_appointment","reference_display":"Appointment","type":"reference","base_type":"reference","usedInstances":{"f335a61f-51a4-4fae-a290-2e91f310b456":["appointment"]},"attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"84b85cb2-d3dd-4513-a95b-bd7d0335b053.record.patient","label":"3 - Update Record➛Appointment Record➛Patient","reference":"x_2223823_apollo_0_patient","reference_display":"Patient","type":"reference","base_type":"reference","parent_table_name":"x_2223823_apollo_0_appointment","column_name":"patient","usedInstances":{"f335a61f-51a4-4fae-a290-2e91f310b456":["patient"]}},{"name":"84b85cb2-d3dd-4513-a95b-bd7d0335b053.record.hospital","label":"3 - Update Record➛Appointment Record➛Hospital","reference":"x_2223823_apollo_0_hospital","reference_display":"Hospital","type":"reference","base_type":"reference","parent_table_name":"x_2223823_apollo_0_appointment","column_name":"hospital","usedInstances":{"f335a61f-51a4-4fae-a290-2e91f310b456":["hospital"]}}]</label_cache>
+        <master_snapshot>77325e6347245790273a565a516d435f</master_snapshot>
+        <master_snapshot_digest/>
+        <name>FL-03 - Doctor Leave Rescheduling</name>
+        <natlang/>
+        <outputs/>
+        <pre_compiled>false</pre_compiled>
+        <remote_trigger_id>84425e6347245790273a565a516d43e1</remote_trigger_id>
+        <run_as>user</run_as>
+        <run_with_roles/>
+        <sc_callable>false</sc_callable>
+        <show_draft_actions>false</show_draft_actions>
+        <show_triggered_flows>false</show_triggered_flows>
+        <status>published</status>
+        <substatus/>
+        <sys_class_name>sys_hub_flow</sys_class_name>
+        <sys_created_by>vikas.singh</sys_created_by>
+        <sys_created_on>2026-11-20 11:02:50</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>c3ff2da747ec1790273a565a516d433c</sys_id>
+        <sys_mod_count>20</sys_mod_count>
+        <sys_name>FL-03 - Doctor Leave Rescheduling</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Apollo-Hospitals" source="x_2223823_apollo_0">87c1422693c89b507b3a7c5efaba1008</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
+        <sys_update_name>sys_hub_flow_c3ff2da747ec1790273a565a516d433c</sys_update_name>
+        <sys_updated_by>vikas.singh</sys_updated_by>
+        <sys_updated_on>2026-11-20 13:32:33</sys_updated_on>
+        <type>flow</type>
+        <updation_source/>
+        <version>2</version>
+        <version_record>a0429e6347245790273a565a516d4380</version_record>
+    </sys_hub_flow>
+    <sys_translated_text action="delete_multiple" query="documentkey=c3ff2da747ec1790273a565a516d433c"/>
+    <sys_variable_value action="delete_multiple" query="document_key=c3ff2da747ec1790273a565a516d433c"/>
+    <sys_flow_record_trigger action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <condition table="x_2223823_apollo_0_doctor_request">status=approved^request_type=leave<item display_value="Approved" endquery="false" field="status" goto="false" newquery="false" operator="=" or="false" value="approved"/>
+            <item display_value="Leave" endquery="false" field="request_type" goto="false" newquery="false" operator="=" or="false" value="leave"/>
+        </condition>
+        <name/>
+        <on_delete>false</on_delete>
+        <on_insert>false</on_insert>
+        <on_update>true</on_update>
+        <published_version/>
+        <run_flow_in>background</run_flow_in>
+        <run_on_extended>false</run_on_extended>
+        <run_when_setting>both</run_when_setting>
+        <run_when_user_list/>
+        <run_when_user_setting>any</run_when_user_setting>
+        <sys_class_name>sys_flow_record_trigger</sys_class_name>
+        <sys_created_by>vikas.singh</sys_created_by>
+        <sys_created_on>2026-11-20 13:32:33</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>84425e6347245790273a565a516d43e1</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_overrides/>
+        <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
+        <sys_updated_by>vikas.singh</sys_updated_by>
+        <sys_updated_on>2026-11-20 13:32:33</sys_updated_on>
+        <table>x_2223823_apollo_0_doctor_request</table>
+        <trigger_definition/>
+    </sys_flow_record_trigger>
+    <sys_trigger_runner_mapping action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <data>{"run_flow_in":"background","run_when_user_list":[],"run_when_setting":"both","run_when_user_setting":"any","run_on_extended":"false"}</data>
+        <identifier>c3ff2da747ec1790273a565a516d433c</identifier>
+        <identifier_type>flow</identifier_type>
+        <runner>FDTriggerRunner</runner>
+        <sys_created_by>vikas.singh</sys_created_by>
+        <sys_created_on>2026-11-20 13:32:33</sys_created_on>
+        <sys_id>cc425e6347245790273a565a516d43e2</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>vikas.singh</sys_updated_by>
+        <sys_updated_on>2026-11-20 13:32:33</sys_updated_on>
+        <trigger display_value="">84425e6347245790273a565a516d43e1</trigger>
+    </sys_trigger_runner_mapping>
+    <sys_trigger_runner_mapping action="delete_multiple" query="identifier=c3ff2da747ec1790273a565a516d433c^sys_idNOT INcc425e6347245790273a565a516d43e2"/>
+    <sys_hub_flow_stage action="delete_multiple" query="flow=c3ff2da747ec1790273a565a516d433c"/>
+    <sys_flow_cat_variable_model action="delete_multiple" query="id=c3ff2da747ec1790273a565a516d433c^sys_idNOT IN0fff2da747ec1790273a565a516d433d"/>
+    <sys_flow_cat_variable_model action="INSERT_OR_UPDATE">
+        <id>c3ff2da747ec1790273a565a516d433c</id>
+        <name>FL-03 - Doctor Leave Rescheduling</name>
+        <sys_created_by>vikas.singh</sys_created_by>
+        <sys_created_on>2026-11-20 11:02:50</sys_created_on>
+        <sys_id>0fff2da747ec1790273a565a516d433d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>vikas.singh</sys_updated_by>
+        <sys_updated_on>2026-11-20 11:02:50</sys_updated_on>
+    </sys_flow_cat_variable_model>
+    <sys_flow_cat_variable action="delete_multiple" query="flow_catalog_model=0fff2da747ec1790273a565a516d433d"/>
+    <sys_hub_flow_input action="delete_multiple" query="model=c3ff2da747ec1790273a565a516d433c^sys_idNOT IN0a10392f47ec1790273a565a516d43ee,4210392f47ec1790273a565a516d43fa,7d10392f47ec1790273a565a516d4369"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=document_id,uiTypeLabel=Document ID</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent>table_name</dependent>
+        <dependent_on_field>table_name</dependent_on_field>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>current</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">document_id</internal_type>
+        <label>Record</label>
+        <mandatory>true</mandatory>
+        <max_length>200</max_length>
+        <model display_value="FL-03 - Doctor Leave Rescheduling">c3ff2da747ec1790273a565a516d433c</model>
+        <model_id>c3ff2da747ec1790273a565a516d433c</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_input_c3ff2da747ec1790273a565a516d433c</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_only_option/>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>vikas.singh</sys_created_by>
+        <sys_created_on>2026-11-20 11:03:19</sys_created_on>
+        <sys_id>0a10392f47ec1790273a565a516d43ee</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>vikas.singh</sys_updated_by>
+        <sys_updated_on>2026-11-20 13:32:30</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>true</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=0a10392f47ec1790273a565a516d43ee"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>child_label=FDChangeDetails,child_name=FDChangeDetails,child_type=object,child_type_label=Object,co_type_name=FDCollection,element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,pwd2droppable=true,uiType=array.object,uiTypeLabel=Array.Object</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>changed_fields</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label>Changed Fields</label>
+        <mandatory>false</mandatory>
+        <max_length>4000</max_length>
+        <model display_value="FL-03 - Doctor Leave Rescheduling">c3ff2da747ec1790273a565a516d433c</model>
+        <model_id>c3ff2da747ec1790273a565a516d433c</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_input_c3ff2da747ec1790273a565a516d433c</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_only_option/>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>vikas.singh</sys_created_by>
+        <sys_created_on>2026-11-20 11:03:19</sys_created_on>
+        <sys_id>4210392f47ec1790273a565a516d43fa</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>vikas.singh</sys_updated_by>
+        <sys_updated_on>2026-11-20 11:03:19</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=4210392f47ec1790273a565a516d43fa"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,test_input_hidden=true,uiType=table_name,uiTypeLabel=Table Name</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>table_name</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">table_name</internal_type>
+        <label>Table Name</label>
+        <mandatory>false</mandatory>
+        <max_length>200</max_length>
+        <model display_value="FL-03 - Doctor Leave Rescheduling">c3ff2da747ec1790273a565a516d433c</model>
+        <model_id>c3ff2da747ec1790273a565a516d433c</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_input_c3ff2da747ec1790273a565a516d433c</name>
+        <next_element/>
+        <order>101</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_only_option/>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>vikas.singh</sys_created_by>
+        <sys_created_on>2026-11-20 11:03:19</sys_created_on>
+        <sys_id>7d10392f47ec1790273a565a516d4369</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>vikas.singh</sys_updated_by>
+        <sys_updated_on>2026-11-20 13:32:30</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=7d10392f47ec1790273a565a516d4369"/>
+    <sys_hub_flow_output action="delete_multiple" query="model=c3ff2da747ec1790273a565a516d433c"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=c3ff2da747ec1790273a565a516d433c"/>
+    <sys_hub_trigger_instance_v2 action="delete_multiple" query="flow=c3ff2da747ec1790273a565a516d433c^sys_idNOT INed10352b47ec1790273a565a516d43ca"/>
+    <sys_hub_trigger_instance_v2 action="INSERT_OR_UPDATE">
+        <comment/>
+        <display_text/>
+        <flow display_value="FL-03 - Doctor Leave Rescheduling">c3ff2da747ec1790273a565a516d433c</flow>
+        <generation_source/>
+        <name>Updated</name>
+        <published_version/>
+        <remote_sys_id/>
+        <sys_created_by>vikas.singh</sys_created_by>
+        <sys_created_on>2026-11-20 11:03:17</sys_created_on>
+        <sys_id>ed10352b47ec1790273a565a516d43ca</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>vikas.singh</sys_updated_by>
+        <sys_updated_on>2026-11-20 13:32:31</sys_updated_on>
+        <trigger_definition display_value="Updated">bb695e60c31322002841b63b12d3aea5</trigger_definition>
+        <trigger_inputs>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</trigger_inputs>
+        <trigger_outputs/>
+        <trigger_type>record_update</trigger_type>
+        <updation_source/>
+    </sys_hub_trigger_instance_v2>
+    <sys_hub_action_instance_v2 action="delete_multiple" query="flow=c3ff2da747ec1790273a565a516d433c^sys_idNOT IN1885f5a747205790273a565a516d43e9,65ab712747605790273a565a516d439f,ebebb5e747205790273a565a516d4335"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Look Up Records">43400a1587003300663ca1bb36cb0b4b</action_type>
+        <action_type_parent display_value="Look Up Records">d1c56ec50b30030085c083eb37673a50</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot/>
+        <display_text/>
+        <flow display_value="FL-03 - Doctor Leave Rescheduling">c3ff2da747ec1790273a565a516d433c</flow>
+        <generation_source/>
+        <order>1</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>vikas.singh</sys_created_by>
+        <sys_created_on>2026-11-20 11:26:57</sys_created_on>
+        <sys_id>1885f5a747205790273a565a516d43e9</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
+        <sys_updated_by>vikas.singh</sys_updated_by>
+        <sys_updated_on>2026-11-20 13:32:31</sys_updated_on>
+        <ui_id>f47a7d52-2e58-47d9-9a29-d93784262349</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/9VXS0/jMBD+K1XOUZRHKV1uCITEAZCA5cKylhO7rbWunbWdllL1v+84TtI3lFKxcKvH8/hm5puJ+zj1GPFOvG6vHYY4Ouoeh2GShGGnk2Q4StOkk6Vh2k493xN4SEHT4JRTOI4wL+z5GcVxnHTjBOFcci5RCD9yyYQZUmFAkTCdczx5qPRPly6zAeNEUeGdPD75Xo4VBDFUeSfTlSszySniOKUcfNxbDK1rC8jfGf+S8Xo+NkB9RMK5lopYLKHv0WdDBaEQqoe5pr43xIJgI9WkkSiKyY3gc8EA0gSPnlV+1uwF3HdDq9ejkFZG3V1zRFWhnDgbSJbRm9wwKZzEAXWXkhdDce0SsCWmPVxwU5cYJIUGfzS3mC2IClHvbiDHt3XACybK9KpLLjPMmxM2RrG0MFTbXlBObcPQEFrLRB/lSo5YaQxYhkGfwyHocTmGoJr1RYAzCzyAEuHgAuTnpfgBK2azuAI3YAyAGIduI1d0LQtVVmWEMl7o8kJhoZ0vb1bWCv0tLEqXdZUfciUCBZ0plptTMBjRKpWZvxPFj8I5JTIpCLMx9QLPicyg3YGeaMTIrwJ8kOn0Zw4ZUoKiICsUFNUES2qz2W9tsCn05XXsJ/a3MsiwIS3t6XYvTtNKnYtFs2y7GZSjMlqfu2+Hf7/VcLbYu137vtF4ExmqJbEkq5ZEdLAlAXD/05owqvh6W+KtuXcJvzH82fGrJDia91tLIKur3ML0r8/T3gy9YJSTpY/XDuBq4xtLtlY62Ya3ImjPxlj5isXf/iv2QXr2CHJ1YYIzUX7swSGE+cK8DV9fXj9WeFC2f87aUoZ1ts5e3DKy9bL/li37WvN3B5C14R0gat07lBuA1/u1dl9RNzkYdZP4fdQF4jxOG/RN1TYUuH4r2tbV+i9WH6/qA4kWDKLZU0P9s/1iRu+NGduYK7OZvGs4F5nlbs63EOzAL9FPHmLfBhyAaRUPuWFFY0b61Myj11pEmjHmfzbdV+xqZqhM78Ov2vars9eJ5nMGM4AU1dCqxWdtBI+N9fUQ+U6833a4FIb2y+LtCrG2vMLPrdsG40bg1YpgTYyK0+0Dvr8+4/NWF37j9NT1/xZ/4/al8NM/1aotp30QAAA=</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=1885f5a747205790273a565a516d43e9"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Update Record">f9d01dd2c31332002841b63b12d3aea1</action_type>
+        <action_type_parent display_value="Update Record">baf174c8c3c232002841b63b12d3aee4</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot/>
+        <display_text/>
+        <flow display_value="FL-03 - Doctor Leave Rescheduling">c3ff2da747ec1790273a565a516d433c</flow>
+        <generation_source/>
+        <order>3</order>
+        <parent_ui_id>0091d2e4-3926-4fb9-b713-d5363aca3822</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>vikas.singh</sys_created_by>
+        <sys_created_on>2026-11-20 11:53:48</sys_created_on>
+        <sys_id>65ab712747605790273a565a516d439f</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
+        <sys_updated_by>vikas.singh</sys_updated_by>
+        <sys_updated_on>2026-11-20 13:32:31</sys_updated_on>
+        <ui_id>84b85cb2-d3dd-4513-a95b-bd7d0335b053</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+1UUW/aMBD+KyjPIXJiYMBbJYS0h7VSN/WlqyInPsCSY2eOQ2GI/75z4lAoXYcqpGnS8pQ7+777vrtPftwFggfTYACcxJN4lNOY0oSQZDyIsxHN4oRTBhAHYaBYAXjTQK4Nx3jNZO0Sux0hk5gnMOjTSTLqDxbZpJ99immfD+mIspzRcZJEwkKx32MdF1Up2fbBl2MmXwnJDahg+vgUBiUz2MmCCaa7V0d2W0IqWQYSC2c6rwtQtvd5hhiXquiq7zsZr2W5Hhhzj54Kl8QjxycmYQAbC4oDtlswWUEYFExxZrXZBlNrakwYYPxOye3hxkoo2yot2KYSPxF/QNy9BaC03E/hEKZ+Qt1wtMjhrrRCqzZjWSa7yWlZF+q2leBmCwtWS3s027pCPCgdZUeiZbj4utLP912/uVCNOs9W6pzJQ8SsNSKrLVRuHSChGUrBylKoZVoavRZNMVIpoqXEIFpI/Yw9K7FUEcsd7wgHxKI55mdN+oEZ4UR8QRgs3jfi0x+169vK8ITTRnMjOG0WhVer3IjS3iDwGjzNfehtnA3fM0A+edn3EeaLlTdpkiToVpqyUkupU4I/pcb1OdXn3r05OfyYjb85Ir3blsilIk6KfyPKG/kk5308vJqPx3/Jx57RP2bkP9mXJO++X0ebbhxbHVm3sszW1feaEMpjcm7Vs/MPuhUKRLXQa3HDi3l3AHMBkldvCOns6huka9/g8PRezbPxiDTf/xf4ii/w0y+l/XK3SggAAA==</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=65ab712747605790273a565a516d439f"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Create Record">2de05916c31332002841b63b12d3aee1</action_type>
+        <action_type_parent display_value="Create Record">02f0b88cc3c632002841b63b12d3aeff</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot/>
+        <display_text/>
+        <flow display_value="FL-03 - Doctor Leave Rescheduling">c3ff2da747ec1790273a565a516d433c</flow>
+        <generation_source/>
+        <order>4</order>
+        <parent_ui_id>0091d2e4-3926-4fb9-b713-d5363aca3822</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>vikas.singh</sys_created_by>
+        <sys_created_on>2026-11-20 11:55:02</sys_created_on>
+        <sys_id>ebebb5e747205790273a565a516d4335</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
+        <sys_updated_by>vikas.singh</sys_updated_by>
+        <sys_updated_on>2026-11-20 13:32:31</sys_updated_on>
+        <ui_id>f335a61f-51a4-4fae-a290-2e91f310b456</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+VVUU/bMBD+K1aeNtaGpGm7Up6QGNvLVgkQLxQiJ760nhw7s53Srup/39lJCmMwITRpmtaXyue77767+3y53gacBdNgHEM0OorHeRInySCKBpNhnI2TLB6whAIMg14gaQnoaWkmIPWHXrCionbGdToYDJLJIElppYRQaZRqMPkSWI3OqihAozfjphJ0c9UGne89yKz1yJdcMA0ymF7f9IKKakxj8Wa6fXRlNxWkgmYgEOjSUSJfGkovLeen4GfKc1ke25RmjlDUC2BtQTLAfAUVBnpBSSWjVulNMLW6RoMGymZSbPYeSy4tAgbOd234d0SfRM4PyweZQ3O3P6ZtxxpzvlQ8h1lluZKNxRNrL5WoS/mlKcL1GgpaC9v1Gi21QTyoHGVHomVUXCzV3XmX8IxLX117KVROxf5ErdU8qy0YNw8QUCJQWtKq4nKRVlqtuA9GLmW4EHgIC6HuMKnhCxnS3BEPsUM0PEP7qTdfUc1dFZ8RBoN3vvr0W+3yNnW0jNOmaHQwueaVPUG4FbTkdr1Oxwyio2cHH2f3g/bSNQ80jAQUjscVNa+jKGHb7WSYTUZ5NuizhLH+cBQnfXo0yvoZe8+iJBll0SgJNeSoid3utqKWvy44bEMRZKlMxS0Vr0HpYhEGJ7VYgG5Q4ltjqa1Nd/LvERh2tLH8+jT/6168cglBiR20QJoe9l6sxw7gjINg5gmBdluoTZCu2gTtJor/1CaKx5H//Z191PD8x9bRgy/D04upMzqK91Jzp986B4cHc3lwcJLnYAxx9A5PPF/i+JLaYInELoEULPUWlX2F3IbkwgOQsjaWaLC1loQSL5iQOMSZ0wyRdZnhHzcEORmwJNuQdzHhknzQWmnyCeUjXIoLaLrkyawoF/5Lq/zIDWnVQOoKiVX4wfe05kE4Dwgt8Ml09Fw4rCnqF6bIRhOzVNpix3PSvLrOMWzfapjXGhVgQ+/oRubrwqzHDqutbI/ijIdz2Zol3JGPbt6n+FoueQlv3h7j6AxdAdvrb7fb3fwAMRCRK/0IAAA=</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=ebebb5e747205790273a565a516d4335"/>
+    <sys_hub_sub_flow_instance_v2 action="delete_multiple" query="flow=c3ff2da747ec1790273a565a516d433c"/>
+    <sys_hub_flow_logic_instance_v2 action="delete_multiple" query="flow=c3ff2da747ec1790273a565a516d433c^sys_idNOT INae07bdab47205790273a565a516d4362"/>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">a3321e6347245790273a565a516d43f9</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="FL-03 - Doctor Leave Rescheduling">c3ff2da747ec1790273a565a516d433c</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="For Each">098e1dc5c3e232002841b63b12d3ae33</logic_definition>
+        <order>2</order>
+        <outputs_assigned/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>vikas.singh</sys_created_by>
+        <sys_created_on>2026-11-20 11:33:40</sys_created_on>
+        <sys_id>ae07bdab47205790273a565a516d4362</sys_id>
+        <sys_mod_count>7</sys_mod_count>
+        <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
+        <sys_updated_by>vikas.singh</sys_updated_by>
+        <sys_updated_on>2026-11-20 13:32:31</sys_updated_on>
+        <ui_id>0091d2e4-3926-4fb9-b713-d5363aca3822</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/51TwW7bMAz9F50Tw5bdJM6twFCgh61AV/QyFAYt0YkwWfIkOaln+N9HxU469DTsZPGRfHxPlEdm+9D1wb/Ye+/VwbD9j7cVUyZidB6ZkmzPslI2ZZaWIuebnKcp3xVZvcnrjMscUG7YihlokSpVwNZTeALdx3gcm2ILW3nH1xzvdutiK8t1CbxcyzLf7gq+4XlRJs8orJN+mqhVKt9pGF7/n0EclZYOFzMdONIW0LH9+CkVhg4rDTVqGrQwUP+/er52Pi6mP91BZKfQ3XjpE1XwdMXwPaCRSIMa0B5XrAUjIVg3sH1wPQEOQT4ZPdwqjsoEomOx9t2r38SdpWksbJAcCZyTt7BaLnKGxdEqgU9dUNbMSIBaLz3C6r4132b5cQXYQK/DdQWE9J74sIuao4pFUvP9aM/P14EPylz8LUltBehbBCE4VfcBfVwDamyJqGqh65Q5VJ2zJ3VpJi1tctAUJI22Zxoan2UCIgpP6IogeSD8ywV+Baeii69EQ83TxX31q49zZx+L4mo2TQVeONWFe6I74SJueovvdWby88OQKJSngS8Re7z+DTEx0JKV+Bs6W/czSv3Apj/SAA8GVwMAAA==</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_pill_compound action="delete_multiple" query="attached_to=c3ff2da747ec1790273a565a516d433c"/>
+    <sys_hub_flow_variable action="delete_multiple" query="model=c3ff2da747ec1790273a565a516d433c"/>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_variable_c3ff2da747ec1790273a565a516d433c"/>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>table_name</element>
+        <help/>
+        <hint/>
+        <label>Table Name</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_c3ff2da747ec1790273a565a516d433c</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>vikas.singh</sys_created_by>
+        <sys_created_on>2026-11-20 11:03:19</sys_created_on>
+        <sys_id>0a10392f47ec1790273a565a516d43dc</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Apollo-Hospitals" source="x_2223823_apollo_0">87c1422693c89b507b3a7c5efaba1008</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>vikas.singh</sys_updated_by>
+        <sys_updated_on>2026-11-20 11:03:19</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>current</element>
+        <help/>
+        <hint/>
+        <label>Record</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_c3ff2da747ec1790273a565a516d433c</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>vikas.singh</sys_created_by>
+        <sys_created_on>2026-11-20 11:03:19</sys_created_on>
+        <sys_id>4a10392f47ec1790273a565a516d43f5</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Apollo-Hospitals" source="x_2223823_apollo_0">87c1422693c89b507b3a7c5efaba1008</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>vikas.singh</sys_updated_by>
+        <sys_updated_on>2026-11-20 11:03:19</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>changed_fields</element>
+        <help/>
+        <hint/>
+        <label>Changed Fields</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_c3ff2da747ec1790273a565a516d433c</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>vikas.singh</sys_created_by>
+        <sys_created_on>2026-11-20 11:03:20</sys_created_on>
+        <sys_id>8210792f47ec1790273a565a516d4302</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Apollo-Hospitals" source="x_2223823_apollo_0">87c1422693c89b507b3a7c5efaba1008</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>vikas.singh</sys_updated_by>
+        <sys_updated_on>2026-11-20 11:03:20</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_input_c3ff2da747ec1790273a565a516d433c"/>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_output_c3ff2da747ec1790273a565a516d433c"/>
+    <sys_hub_flow_snapshot action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <acls/>
+        <active>true</active>
+        <allow_high_security_roles>false</allow_high_security_roles>
+        <annotation/>
+        <attributes>browserActivatedIn=chrome,integrationActivatedIn=standalone,labelCacheCleanUpExecuted=true,viewActivatedIn=diagramming</attributes>
+        <authored_on_release_version>29000</authored_on_release_version>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <copied_from/>
+        <copied_from_name/>
+        <description/>
+        <flow_priority>MEDIUM</flow_priority>
+        <internal_name>fl03__doctor_leave_rescheduling</internal_name>
+        <label_cache>[{"name":"Updated_1.current.doctor.sys_id","label":"Trigger - Record Updated➛Doctor Request Record➛Doctor➛Sys ID","reference":"","reference_display":"Sys ID","type":"GUID","base_type":"GUID","parent_table_name":"x_2223823_apollo_0_doctor","column_name":"sys_id","usedInstances":{"f47a7d52-2e58-47d9-9a29-d93784262349":[null]}},{"name":"Updated_1.current.start_date","label":"Trigger - Record Updated➛Doctor Request Record➛From","reference":"","reference_display":"From","type":"glide_date","base_type":"glide_date","parent_table_name":"x_2223823_apollo_0_doctor_request","column_name":"start_date","usedInstances":{"f47a7d52-2e58-47d9-9a29-d93784262349":[null]}},{"name":"Updated_1.current.end_date","label":"Trigger - Record Updated➛Doctor Request Record➛To","reference":"","reference_display":"To","type":"glide_date","base_type":"glide_date","parent_table_name":"x_2223823_apollo_0_doctor_request","column_name":"end_date","usedInstances":{"f47a7d52-2e58-47d9-9a29-d93784262349":[null]}},{"name":"f47a7d52-2e58-47d9-9a29-d93784262349.Records","label":"1 - Look Up Records➛Appointment Records","reference":"x_2223823_apollo_0_appointment","reference_display":"Appointment","type":"records","base_type":"records","usedInstances":{"0091d2e4-3926-4fb9-b713-d5363aca3822":["items"]},"attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"0091d2e4-3926-4fb9-b713-d5363aca3822.item","label":"2 - For Each➛Appointment Record","reference":"x_2223823_apollo_0_appointment","reference_display":"Appointment","type":"reference","base_type":"reference","usedInstances":{"84b85cb2-d3dd-4513-a95b-bd7d0335b053":["record"]},"attributes":{"pills_draggable_inside_block":"true","pills_draggable_outside_block":"false"}},{"name":"84b85cb2-d3dd-4513-a95b-bd7d0335b053.record","label":"3 - Update Record➛Appointment Record","reference":"x_2223823_apollo_0_appointment","reference_display":"Appointment","type":"reference","base_type":"reference","usedInstances":{"f335a61f-51a4-4fae-a290-2e91f310b456":["appointment"]},"attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"84b85cb2-d3dd-4513-a95b-bd7d0335b053.record.patient","label":"3 - Update Record➛Appointment Record➛Patient","reference":"x_2223823_apollo_0_patient","reference_display":"Patient","type":"reference","base_type":"reference","parent_table_name":"x_2223823_apollo_0_appointment","column_name":"patient","usedInstances":{"f335a61f-51a4-4fae-a290-2e91f310b456":["patient"]}},{"name":"84b85cb2-d3dd-4513-a95b-bd7d0335b053.record.hospital","label":"3 - Update Record➛Appointment Record➛Hospital","reference":"x_2223823_apollo_0_hospital","reference_display":"Hospital","type":"reference","base_type":"reference","parent_table_name":"x_2223823_apollo_0_appointment","column_name":"hospital","usedInstances":{"f335a61f-51a4-4fae-a290-2e91f310b456":["hospital"]}}]</label_cache>
+        <master>true</master>
+        <name>FL-03 - Doctor Leave Rescheduling</name>
+        <natlang/>
+        <outputs/>
+        <parent_flow display_value="FL-03 - Doctor Leave Rescheduling">c3ff2da747ec1790273a565a516d433c</parent_flow>
+        <remote_trigger_id/>
+        <run_as>user</run_as>
+        <run_with_roles/>
+        <sc_callable>false</sc_callable>
+        <status>published</status>
+        <sys_class_name>sys_hub_flow_snapshot</sys_class_name>
+        <sys_created_by>vikas.singh</sys_created_by>
+        <sys_created_on>2026-11-20 13:32:32</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>77325e6347245790273a565a516d435f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_overrides/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>vikas.singh</sys_updated_by>
+        <sys_updated_on>2026-11-20 13:32:32</sys_updated_on>
+        <type>flow</type>
+        <version>2</version>
+    </sys_hub_flow_snapshot>
+    <sys_translated_text action="delete_multiple" query="documentkey=77325e6347245790273a565a516d435f"/>
+    <sys_variable_value action="delete_multiple" query="document_key=77325e6347245790273a565a516d435f"/>
+    <sys_hub_flow_stage action="delete_multiple" query="flow=77325e6347245790273a565a516d435f"/>
+    <sys_flow_cat_variable_model action="delete_multiple" query="id=77325e6347245790273a565a516d435f^sys_idNOT IN33325e6347245790273a565a516d4361"/>
+    <sys_flow_cat_variable_model action="INSERT_OR_UPDATE">
+        <id>77325e6347245790273a565a516d435f</id>
+        <name>FL-03 - Doctor Leave Rescheduling</name>
+        <sys_created_by>vikas.singh</sys_created_by>
+        <sys_created_on>2026-11-20 13:32:32</sys_created_on>
+        <sys_id>33325e6347245790273a565a516d4361</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>vikas.singh</sys_updated_by>
+        <sys_updated_on>2026-11-20 13:32:32</sys_updated_on>
+    </sys_flow_cat_variable_model>
+    <sys_flow_cat_variable action="delete_multiple" query="flow_catalog_model=33325e6347245790273a565a516d4361"/>
+    <sys_hub_flow_input action="delete_multiple" query="model=77325e6347245790273a565a516d435f^sys_idNOT INb3325e6347245790273a565a516d4363,bb325e6347245790273a565a516d4391,c8425e6347245790273a565a516d439d"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=document_id,uiTypeLabel=Document ID</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent>table_name</dependent>
+        <dependent_on_field>table_name</dependent_on_field>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>current</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">document_id</internal_type>
+        <label>Record</label>
+        <mandatory>true</mandatory>
+        <max_length>200</max_length>
+        <model display_value="FL-03 - Doctor Leave Rescheduling">77325e6347245790273a565a516d435f</model>
+        <model_id>77325e6347245790273a565a516d435f</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_input_77325e6347245790273a565a516d435f</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_only_option/>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>vikas.singh</sys_created_by>
+        <sys_created_on>2026-11-20 13:32:32</sys_created_on>
+        <sys_id>b3325e6347245790273a565a516d4363</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>vikas.singh</sys_updated_by>
+        <sys_updated_on>2026-11-20 13:32:32</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>true</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=b3325e6347245790273a565a516d4363"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>child_label=FDChangeDetails,child_name=FDChangeDetails,child_type=object,child_type_label=Object,element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,pwd2droppable=true,uiType=array.object,uiTypeLabel=Array.Object</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>changed_fields</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label>Changed Fields</label>
+        <mandatory>false</mandatory>
+        <max_length>4000</max_length>
+        <model display_value="FL-03 - Doctor Leave Rescheduling">77325e6347245790273a565a516d435f</model>
+        <model_id>77325e6347245790273a565a516d435f</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_input_77325e6347245790273a565a516d435f</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_only_option/>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>vikas.singh</sys_created_by>
+        <sys_created_on>2026-11-20 13:32:32</sys_created_on>
+        <sys_id>bb325e6347245790273a565a516d4391</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>vikas.singh</sys_updated_by>
+        <sys_updated_on>2026-11-20 13:32:32</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=bb325e6347245790273a565a516d4391"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,test_input_hidden=true,uiType=table_name,uiTypeLabel=Table Name</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>table_name</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">table_name</internal_type>
+        <label>Table Name</label>
+        <mandatory>false</mandatory>
+        <max_length>200</max_length>
+        <model display_value="FL-03 - Doctor Leave Rescheduling">77325e6347245790273a565a516d435f</model>
+        <model_id>77325e6347245790273a565a516d435f</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_input_77325e6347245790273a565a516d435f</name>
+        <next_element/>
+        <order>101</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_only_option/>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>vikas.singh</sys_created_by>
+        <sys_created_on>2026-11-20 13:32:33</sys_created_on>
+        <sys_id>c8425e6347245790273a565a516d439d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>vikas.singh</sys_updated_by>
+        <sys_updated_on>2026-11-20 13:32:33</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=c8425e6347245790273a565a516d439d"/>
+    <sys_hub_flow_output action="delete_multiple" query="model=77325e6347245790273a565a516d435f"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=77325e6347245790273a565a516d435f"/>
+    <sys_hub_trigger_instance_v2 action="delete_multiple" query="flow=77325e6347245790273a565a516d435f^sys_idNOT IN08425e6347245790273a565a516d43b9"/>
+    <sys_hub_trigger_instance_v2 action="INSERT_OR_UPDATE">
+        <comment/>
+        <display_text/>
+        <flow display_value="FL-03 - Doctor Leave Rescheduling">77325e6347245790273a565a516d435f</flow>
+        <generation_source/>
+        <name>Updated</name>
+        <published_version/>
+        <remote_sys_id/>
+        <sys_created_by>vikas.singh</sys_created_by>
+        <sys_created_on>2026-11-20 13:32:33</sys_created_on>
+        <sys_id>08425e6347245790273a565a516d43b9</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>vikas.singh</sys_updated_by>
+        <sys_updated_on>2026-11-20 13:32:33</sys_updated_on>
+        <trigger_definition display_value="Updated">bb695e60c31322002841b63b12d3aea5</trigger_definition>
+        <trigger_inputs>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</trigger_inputs>
+        <trigger_outputs/>
+        <trigger_type>record_update</trigger_type>
+        <updation_source/>
+    </sys_hub_trigger_instance_v2>
+    <sys_hub_action_instance_v2 action="delete_multiple" query="flow=77325e6347245790273a565a516d435f^sys_idNOT IN00425e6347245790273a565a516d43b4,80425e6347245790273a565a516d43b7,8c425e6347245790273a565a516d43b5"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Look Up Records">43400a1587003300663ca1bb36cb0b4b</action_type>
+        <action_type_parent display_value="Look Up Records">d1c56ec50b30030085c083eb37673a50</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>43400a1587003300663ca1bb36cb0b4b</compiled_snapshot>
+        <display_text/>
+        <flow display_value="FL-03 - Doctor Leave Rescheduling">77325e6347245790273a565a516d435f</flow>
+        <generation_source/>
+        <order>1</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>vikas.singh</sys_created_by>
+        <sys_created_on>2026-11-20 13:32:33</sys_created_on>
+        <sys_id>00425e6347245790273a565a516d43b4</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
+        <sys_updated_by>vikas.singh</sys_updated_by>
+        <sys_updated_on>2026-11-20 13:32:33</sys_updated_on>
+        <ui_id>f47a7d52-2e58-47d9-9a29-d93784262349</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+VXTW/iMBD9KyjnCCWEUra3qlWlSv2Q2m4vu13LsQ1Ya+Ks7dBSxH/fceyEFEIXJCq12hsez9hvZt6bmB+LgNPgJBiO+lGE46PhcRQlSRQNBgnBcZomA5JGaT8NwiDDUwaeBqeCwXKGRWHXL6jX6yXDXoJwLoWQKIIfueSZmbLMgCPlOhd4/uj9T99skgkXVLEsOPnxFAY5VnCJYSo4Waxt7YpS4JQJcH3wMNdQm3leL1G552xXzbDOjduQilooURiwF8MyygDDCAvNwmCKM4qNVPPaohimt5lYGSaQJZwYWOcXzV/h3mFk/UYMsiLM7dVL5OvkzKNzbPC9UQUxhfKuZCI5YdrVg7IRLoQ5a9qcw21uuMxciEvbRUtRTLMbV46gPqBqC1gKDSBYbhO1yH0ao/uJfL6rUF7wrKyJ3xSSYFGvsDGKp4WxeBYBE8w2GU2BDjwbo1zJGS+DAcu0Oxaw6I6EfIZLNR9nXUws8C7UFXcvwH5emh+x4jaLazgGggEQF8AQ5FqoZaHKUs4QEYUuNxTOtDsrWIaBnuszgbVeZQ4lR38Ki9vVwWeMXNFsCFE8N6dwxIz55JbhTkI5ilaUIzKj3KLQDbVQSYA1XQCFOP1ZwBl0sfieQ86MorhLCgVlNt03bsvlL22wKfTlTS9M7G9lkOFTVsaz7ac4T2t1RzTDyPYwKIcP2lTvl8N/yAFTdrcaMGfN9ra13I+aDdtV2wF+1MQHGzWQx1caNnD555s1+08PV4J/jBBy/C7JjlZ80hIo72rZmCGbqtyb5ztAqHh+a5nZSefbUHmajzgTtO2LemE31r6ovf/zi/opSQ6AKHLd45ngWfk8AqAfxf7o/RH7bY1nJb1W3C9tWJNNDeCOkZ3XvZWwA5xKCfdwd+fB4WmBWM37kjLrs74yegEkBxNA0juMABZ1mnUhW2pevYhtNyv/V+uP1/2Bgo2AeNkmsL3ujPe9s7fcFHCyl4KbZHM751s4d+Cn8xZFhh85AiYQ6u9DTr/omdMxM6vbKy8qzTMWv9v2PeNQ1agyvQ94hvffle0gXkkUlIIU09C85js8hufR5gyJQ2feb4TsgKUqxzV+6dzVYFoR+jECSmfjsjfNOXJZWz3J+wd8MH7aL2nVrFYNVj37Ev9eDyeEp7/gGteouhEAAA==</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=00425e6347245790273a565a516d43b4"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Create Record">2de05916c31332002841b63b12d3aee1</action_type>
+        <action_type_parent display_value="Create Record">02f0b88cc3c632002841b63b12d3aeff</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>2de05916c31332002841b63b12d3aee1</compiled_snapshot>
+        <display_text/>
+        <flow display_value="FL-03 - Doctor Leave Rescheduling">77325e6347245790273a565a516d435f</flow>
+        <generation_source/>
+        <order>4</order>
+        <parent_ui_id>0091d2e4-3926-4fb9-b713-d5363aca3822</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>vikas.singh</sys_created_by>
+        <sys_created_on>2026-11-20 13:32:33</sys_created_on>
+        <sys_id>80425e6347245790273a565a516d43b7</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
+        <sys_updated_by>vikas.singh</sys_updated_by>
+        <sys_updated_on>2026-11-20 13:32:33</sys_updated_on>
+        <ui_id>f335a61f-51a4-4fae-a290-2e91f310b456</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+VWTXPTMBD9KxqdoKSuHTclDacOUDhAO0OZXprika11IkaWjCSnDZn8d1aynHagfA4XhlwyWu2u3tt9u8nVhgpOZ/Qog3RynB1VeZbn4zQdTw+z8igvszHPGcAhHVHFGkBPx0oJRTiM6IrJzhtvi/F4nE/HecFaLaUu0sKArZbAO3TWdQ0GvbmwrWTryxj0budBzqNHtRSSG1B0dnU9oi0z+IzDm9nmq6tfBS1ZCRJd33vU3yHh1u2Dtjf3Y8lZf6EN93jSEYVbB4oDAqmZtDCiDVOcOW3WdOZMhwYDjJ8rud55LIVymJB631srPuOz09T7IXtQFfR3u2MRC9ab6xfMsQvMXLnORNdqqUUFtq8Jh5p10j2/b+sdzlsntOpDAs0YrWXXqLO+JHSXYOgPWjqLIKD1PD3ySKO+WOqbdwPKU6FCSeKl1BWTuxNzzoiycx7PhoKEBhMVDWtboRZFa/RKhGDE0iQLiYeklvoGH7VioRJWeeAJlpUlp2h/EcyXzAjP4i2mweDtiNq1fS6ZtXdcsIjFp84j6ZlFDkVfBh9SGdG6E3xgBRHudjRMA4f0+LvCyso7IYUBsPcmASFp7LKnOe/SNOebzfSwnE6qcrzPc873DydZvs+OJ+V+yZ/yNM8nZTrJEwMVSmu7/dAyJ/4sOImhmGSpbSsck3+SZYjFNNi7xQJMnyX7YB1znR1OYaqBY0V7y7cD/l/X4jdX2c8VN6yyUwGS2wckOOwxaLAJDopekl/tsnhJLuNl3GfZ39pn2VEaPv/QVuvJ/fNL7d7v18PrbTB60HeC9acfOtODvbna2zupsPyWeMAHJ4EB8QxIZ5E0cUsgNS+CRZcfoXIJuQgJSNNZRwxgexVhJIgyIT7juZceUV1T4pewBDFZcKRckycZEYq8NEYb8hpVKP0TF9DXLYBZMSHDz7IOIrAkiop0LQJr8c9HgDWnyZwSVuPgDfB8ONwyHAOYIRpD7FIbhz2oSD+7g2MSJz6pOoOacElw9E0MvPDVZz5XZLbL4o0HcxXNCm7IK68AlDm8Fw08evwMW2fZCvhOkdvt9voLAug/GYkJAAA=</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=80425e6347245790273a565a516d43b7"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Update Record">f9d01dd2c31332002841b63b12d3aea1</action_type>
+        <action_type_parent display_value="Update Record">baf174c8c3c232002841b63b12d3aee4</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>f9d01dd2c31332002841b63b12d3aea1</compiled_snapshot>
+        <display_text/>
+        <flow display_value="FL-03 - Doctor Leave Rescheduling">77325e6347245790273a565a516d435f</flow>
+        <generation_source/>
+        <order>3</order>
+        <parent_ui_id>0091d2e4-3926-4fb9-b713-d5363aca3822</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>vikas.singh</sys_created_by>
+        <sys_created_on>2026-11-20 13:32:33</sys_created_on>
+        <sys_id>8c425e6347245790273a565a516d43b5</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
+        <sys_updated_by>vikas.singh</sys_updated_by>
+        <sys_updated_on>2026-11-20 13:32:33</sys_updated_on>
+        <ui_id>84b85cb2-d3dd-4513-a95b-bd7d0335b053</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+VVTW/iMBD9K5XPgJyEsoVbVYS0UreV2hWXbhVN4gm15MRZ26GwiP++k8QBWqpuK/WCNifmy37z8h552DAp2IQNUfBgHIzSKIiikPPwYhgkoygJQhEBYsB6rIAcqdNgqo2geAmqqhObDefjQIQ47EfjcNQfZsm4n3wLor44j0YRpBBdhOFAOsy3W5oT0pYK1nM/Tpn0SSphsGCTh8ceK8HQTQ4Nm2xelT4KVUGCilrvOqyvsbt1WcdCp1WOhYtll7z2k1NfOfs+pQoN1XAC3mO4clgIJCAZKIs9lkMhwGmzZhNnKkoYBHFbqPWu40kWrl00h5WVf+jmIa/7MqTNUk/CLow9QW06m4KDezo5dZXZ8aVlirblRGAGlXJXh7m24bZ0UhftiINEddNaVXlx0zLCdgccvI/KEggs6z1r5O1a2f2Tfr7rQM5k0VDiV1Q6BbWLwDkjk8rVcDYMFTYc51CWsljEpdFL2QwTlHywUBQMMqWf6U4rF8UA0hr3gFiFwYzy0yY9ByPrJX7QMTS87TG7tlcKrN2vQhzGv6saSbuYXyFuWGgoiBsl1MOpkaW7pKuW6IFve94Myfl7CkvHe0EdnLk3xCoOw5A0H8VQaqV0zOlHqUkFNQ/HDrh8UfycGT4AtTPDz0YCb0P3fjjKXR/Ont20Be+G8y9zw8UpucGvcfJ2+JcJePju3+yBkhrd2wMDWAeusr8qziMR8GPBH9U/p/kPIOs0P5OohH0Daid4zAmYw7iF/kr0vng298XdZ+DLlB+MePOckP7/m6/B419MiJQXHAkAAA==</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=8c425e6347245790273a565a516d43b5"/>
+    <sys_hub_sub_flow_instance_v2 action="delete_multiple" query="flow=77325e6347245790273a565a516d435f"/>
+    <sys_hub_flow_logic_instance_v2 action="delete_multiple" query="flow=77325e6347245790273a565a516d435f^sys_idNOT IN08425e6347245790273a565a516d43b1"/>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">a3321e6347245790273a565a516d43f9</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="FL-03 - Doctor Leave Rescheduling">77325e6347245790273a565a516d435f</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="For Each">098e1dc5c3e232002841b63b12d3ae33</logic_definition>
+        <order>2</order>
+        <outputs_assigned/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>vikas.singh</sys_created_by>
+        <sys_created_on>2026-11-20 13:32:33</sys_created_on>
+        <sys_id>08425e6347245790273a565a516d43b1</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>vikas.singh</sys_updated_by>
+        <sys_updated_on>2026-11-20 13:32:33</sys_updated_on>
+        <ui_id>0091d2e4-3926-4fb9-b713-d5363aca3822</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/51Ty27bMBD8F55lQa/Ylm9BggAB2gZwglyKwFiRK5soRaokZUcV/O9dWrIS5FT0JO3sa2a0GpjpfNt592JunZN7zTY/3yImdcDofWBSsA1LS1GXaVLyPFvmWZJk6yKtlnmVZiIHFEsWMQ0NUqX02DgKj6C6EA9DXaxgJW6yRYY360WxEuWihKxciDJfrYtsmeVFGW+RGyvc+UytQrpWQf/6/xP4QSphcRLTgiVuHi3bDF9S/ypOQYWKSh8ndV/E+r4NoR0pTMC3qWc7o/QIJLIkYvjuUQuk9TUohxFrQAvwxvZs421HgEUQT1r1c8VBak/jWKh9d/IPbUyTJBTWSII4jsk53E0+jnB9Dx6eaTT3nZ1K+cFIjm60QmANnfJ3n7Gx4Kn10uixxUOlrt1GdY3+MTrB5gHXz0ZI54gEtkFooD7pqJ8P5rS9snyQ+mLKlFSGg5oj8N7KqvOBz8BQYUODdg20rdT7XWvNUV6aiUsT7xUFca3MiZaGU46BB+Ix+QrxA+H3F/gVrAwqvtMYaj5HzPXuToFzH1rIxN3vLjAZlU0adqMNoYVb2fpbWnDEie75LVz9OHv2lEtHFF4C9nj9p0KipwuS/DN0MvZXIP+Bnf8CLn8Ow50DAAA=</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_pill_compound action="delete_multiple" query="attached_to=77325e6347245790273a565a516d435f"/>
+    <sys_hub_flow_variable action="delete_multiple" query="model=77325e6347245790273a565a516d435f"/>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_variable_77325e6347245790273a565a516d435f"/>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>changed_fields</element>
+        <help/>
+        <hint/>
+        <label>Changed Fields</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_77325e6347245790273a565a516d435f</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>vikas.singh</sys_created_by>
+        <sys_created_on>2026-11-20 13:32:33</sys_created_on>
+        <sys_id>77325e6347245790273a565a516d4399</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Apollo-Hospitals" source="x_2223823_apollo_0">87c1422693c89b507b3a7c5efaba1008</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>vikas.singh</sys_updated_by>
+        <sys_updated_on>2026-11-20 13:32:33</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>current</element>
+        <help/>
+        <hint/>
+        <label>Record</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_77325e6347245790273a565a516d435f</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>vikas.singh</sys_created_by>
+        <sys_created_on>2026-11-20 13:32:32</sys_created_on>
+        <sys_id>b3325e6347245790273a565a516d438d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Apollo-Hospitals" source="x_2223823_apollo_0">87c1422693c89b507b3a7c5efaba1008</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>vikas.singh</sys_updated_by>
+        <sys_updated_on>2026-11-20 13:32:32</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>table_name</element>
+        <help/>
+        <hint/>
+        <label>Table Name</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_77325e6347245790273a565a516d435f</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>vikas.singh</sys_created_by>
+        <sys_created_on>2026-11-20 13:32:33</sys_created_on>
+        <sys_id>cc425e6347245790273a565a516d43a4</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Apollo-Hospitals" source="x_2223823_apollo_0">87c1422693c89b507b3a7c5efaba1008</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>vikas.singh</sys_updated_by>
+        <sys_updated_on>2026-11-20 13:32:33</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_input_77325e6347245790273a565a516d435f"/>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_output_77325e6347245790273a565a516d435f"/>
+    <sys_hub_flow action="UPDATE">
+        <sys_id>c3ff2da747ec1790273a565a516d433c</sys_id>
+        <latest_snapshot>77325e6347245790273a565a516d435f</latest_snapshot>
+        <compiler_build/>
+        <version_record/>
+    </sys_hub_flow>
+    <sys_flow_trigger_plan action="delete_multiple" query="plan_id=c3ff2da747ec1790273a565a516d433c^sys_idNOT IN40425e6347245790273a565a516d43e4"/>
+    <sys_flow_trigger_plan action="INSERT_OR_UPDATE">
+        <binding_strategy>com.snc.process_flow.engine.binding.OncePerRecord</binding_strategy>
+        <plan/>
+        <plan_id>c3ff2da747ec1790273a565a516d433c</plan_id>
+        <snapshot>77325e6347245790273a565a516d435f</snapshot>
+        <sys_created_by>vikas.singh</sys_created_by>
+        <sys_created_on>2026-11-20 13:32:33</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>40425e6347245790273a565a516d43e4</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_overrides/>
+        <sys_scope/>
+        <sys_updated_by>vikas.singh</sys_updated_by>
+        <sys_updated_on>2026-11-20 13:32:33</sys_updated_on>
+        <trigger display_value="">84425e6347245790273a565a516d43e1</trigger>
+    </sys_flow_trigger_plan>
+    <sys_flow_subflow_plan action="delete_multiple" query="plan_id=c3ff2da747ec1790273a565a516d433c"/>
+</record_update>

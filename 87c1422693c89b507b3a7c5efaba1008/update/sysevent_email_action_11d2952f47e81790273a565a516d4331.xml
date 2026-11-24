@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sysevent_email_action">
+    <sysevent_email_action action="INSERT_OR_UPDATE">
+        <action_insert>false</action_insert>
+        <action_update>false</action_update>
+        <active>true</active>
+        <advanced_condition/>
+        <affected_field_on_event/>
+        <category display_value="Uncategorized" name="Uncategorized">c97d83137f4432005f58108c3ffa917a</category>
+        <collection>x_2223823_apollo_0_payment</collection>
+        <condition/>
+        <content_type>text/html</content_type>
+        <default_digest>false</default_digest>
+        <default_interval/>
+        <description/>
+        <digest_from/>
+        <digest_html/>
+        <digest_reply_to/>
+        <digest_separator_html><![CDATA[<p>&nbsp;</p>
+<hr>
+<p>&nbsp;</p>]]></digest_separator_html>
+        <digest_separator_text><![CDATA[\n--------------------------------------------------------------------------------\n]]></digest_separator_text>
+        <digest_subject/>
+        <digest_template/>
+        <digest_text/>
+        <digest_type>single</digest_type>
+        <digestable>false</digestable>
+        <enable_dynamic_translation>false</enable_dynamic_translation>
+        <event_name>x_2223823_apollo_0.refund</event_name>
+        <event_parm_1>true</event_parm_1>
+        <event_parm_2>false</event_parm_2>
+        <exclude_delegates>false</exclude_delegates>
+        <force_delivery>false</force_delivery>
+        <from/>
+        <generation_type>event</generation_type>
+        <importance/>
+        <include_attachments>false</include_attachments>
+        <item>event.parm1</item>
+        <item_table/>
+        <mandatory>false</mandatory>
+        <message/>
+        <message_html><![CDATA[<div style="font-family: Arial, sans-serif; max-width: 600px; margin: auto; padding: 20px;">
+<div style="background-color: #17a2b8; color: #ffffff; padding: 15px; border-radius: 6px; text-align: center;">
+<h2 style="margin: 0;">Apollo Hospitals</h2>
+<p style="margin: 5px 0 0 0; font-size: 14px;">Refund Confirmation</p>
+</div>
+<div style="padding: 20px 0;">
+<p>Dear <strong>${patient.name}</strong>,</p>
+<p>A refund has been successfully issued for your transaction. Below are the details:</p>
+<table style="width: 100%; border-collapse: collapse; margin: 15px 0;">
+<tbody>
+<tr style="border-bottom: 1px solid #f0f0f0;">
+<td style="padding: 8px 0; color: #666;">Refund Reference:</td>
+<td style="padding: 8px 0; font-weight: bold;">${number}</td>
+</tr>
+<tr style="border-bottom: 1px solid #f0f0f0;">
+<td style="padding: 8px 0; color: #666;">Original Payment:</td>
+<td style="padding: 8px 0;">${original_payment.number}</td>
+</tr>
+<tr style="border-bottom: 1px solid #f0f0f0;">
+<td style="padding: 8px 0; color: #666;">Refunded Amount:</td>
+<td style="padding: 8px 0; font-weight: bold; color: #17a2b8;">${amount}</td>
+</tr>
+<tr style="border-bottom: 1px solid #f0f0f0;">
+<td style="padding: 8px 0; color: #666;">Stripe Reference:</td>
+<td style="padding: 8px 0;">${stripe_reference}</td>
+</tr>
+<tr style="border-bottom: 1px solid #f0f0f0;">
+<td style="padding: 8px 0; color: #666;">Status:</td>
+<td style="padding: 8px 0; font-weight: bold; color: #28a745;">Succeeded</td>
+</tr>
+</tbody>
+</table>
+<p style="color: #666; font-size: 13px;">Depending on your bank or credit card issuer, the refunded amount should reflect in your account within 5-7 business days.</p>
+</div>
+</div>]]></message_html>
+        <message_list/>
+        <message_text/>
+        <name>Patient - Refund Confirmation</name>
+        <omit_watermark>false</omit_watermark>
+        <order>100</order>
+        <push_message_only>false</push_message_only>
+        <recipient_fields>patient.user</recipient_fields>
+        <recipient_groups/>
+        <recipient_users/>
+        <reply_to/>
+        <send_self>true</send_self>
+        <sms_alternate/>
+        <style/>
+        <subject>Refund Processed: ${number} - Apollo Hospitals</subject>
+        <subscribable>false</subscribable>
+        <sys_class_name>sysevent_email_action</sys_class_name>
+        <sys_created_by>integration.user</sys_created_by>
+        <sys_created_on>2026-11-20 08:55:29</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>11d2952f47e81790273a565a516d4331</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>Patient - Refund Confirmation</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Apollo-Hospitals" source="x_2223823_apollo_0">87c1422693c89b507b3a7c5efaba1008</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
+        <sys_update_name>sysevent_email_action_11d2952f47e81790273a565a516d4331</sys_update_name>
+        <sys_updated_by>ridhwik.jangid</sys_updated_by>
+        <sys_updated_on>2026-11-23 11:42:31</sys_updated_on>
+        <sys_version>2</sys_version>
+        <template display_value="apollo.hospital.master.template">f8409dd947649350273a565a516d43e2</template>
+        <type>email</type>
+        <weight>0</weight>
+    </sysevent_email_action>
+    <sys_es_latest_script action="INSERT_OR_UPDATE">
+        <id>11d2952f47e81790273a565a516d4331</id>
+        <sys_created_by>ridhwik.jangid</sys_created_by>
+        <sys_created_on>2026-11-23 11:42:30</sys_created_on>
+        <sys_id>51d55968473c5310273a565a516d43bd</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>ridhwik.jangid</sys_updated_by>
+        <sys_updated_on>2026-11-23 11:42:30</sys_updated_on>
+        <table>sysevent_email_action</table>
+        <use_es_latest>true</use_es_latest>
+    </sys_es_latest_script>
+</record_update>

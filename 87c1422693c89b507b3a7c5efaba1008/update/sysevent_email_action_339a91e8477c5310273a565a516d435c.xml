@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sysevent_email_action">
+    <sysevent_email_action action="INSERT_OR_UPDATE">
+        <action_insert>false</action_insert>
+        <action_update>false</action_update>
+        <active>true</active>
+        <advanced_condition/>
+        <affected_field_on_event/>
+        <category display_value="Uncategorized" name="Uncategorized">c97d83137f4432005f58108c3ffa917a</category>
+        <collection>x_2223823_apollo_0_lab_test_result</collection>
+        <condition/>
+        <content_type>text/html</content_type>
+        <default_digest>false</default_digest>
+        <default_interval/>
+        <description/>
+        <digest_from/>
+        <digest_html/>
+        <digest_reply_to/>
+        <digest_separator_html><![CDATA[<br><hr><br>]]></digest_separator_html>
+        <digest_separator_text><![CDATA[\n--------------------------------------------------------------------------------\n]]></digest_separator_text>
+        <digest_subject/>
+        <digest_template/>
+        <digest_text/>
+        <digest_type>single</digest_type>
+        <digestable>false</digestable>
+        <enable_dynamic_translation>false</enable_dynamic_translation>
+        <event_name>x_2223823_apollo_0.lab_equipment_unavailable</event_name>
+        <event_parm_1>true</event_parm_1>
+        <event_parm_2>false</event_parm_2>
+        <exclude_delegates>false</exclude_delegates>
+        <force_delivery>false</force_delivery>
+        <from/>
+        <generation_type>event</generation_type>
+        <importance/>
+        <include_attachments>false</include_attachments>
+        <item>event.parm1</item>
+        <item_table/>
+        <mandatory>false</mandatory>
+        <message/>
+        <message_html><![CDATA[<div style="font-family: Arial, sans-serif; max-width: 620px; margin: auto; padding: 20px; border: 1px solid #e0e0e0; border-radius: 8px;">
+  <div style="background-color: #c0392b; color: #ffffff; padding: 15px; border-radius: 6px;">
+    <h3 style="margin: 0;">]]>🚨<![CDATA[ Equipment Disruption Alert</h3>
+    <p style="margin: 5px 0 0 0; font-size: 14px;">Diagnostic Device Under Maintenance or Unavailable</p>
+  </div>
+  <div style="padding: 20px 0;">
+    <p>Dear <strong>Lab Operations & Biomedical Engineering Team</strong>,</p>
+    <p>A diagnostic equipment asset required for processing patient lab tests has been placed in an unavailable state (maintenance schedule, Change Request, or operational outage).</p>
+    <table style="width: 100%; border-collapse: collapse; margin: 15px 0;">
+      <tr style="border-bottom: 1px solid #f0f0f0;"><td style="padding: 8px 0; color: #666;">Affected Order:</td><td style="padding: 8px 0; font-weight: bold; color: #c0392b;">${report_number}</td></tr>
+      <tr style="border-bottom: 1px solid #f0f0f0;"><td style="padding: 8px 0; color: #666;">Test Investigation:</td><td style="padding: 8px 0; font-weight: bold;">${lab_test.name}</td></tr>
+      <tr style="border-bottom: 1px solid #f0f0f0;"><td style="padding: 8px 0; color: #666;">Assigned Equipment:</td><td style="padding: 8px 0; font-weight: bold; color: #c0392b;">${equipment.name}</td></tr>
+      <tr style="border-bottom: 1px solid #f0f0f0;"><td style="padding: 8px 0; color: #666;">Hospital Facility:</td><td style="padding: 8px 0;">${hospital.name}</td></tr>
+      <tr style="border-bottom: 1px solid #f0f0f0;"><td style="padding: 8px 0; color: #666;">Scheduled Window:</td><td style="padding: 8px 0;">${scheduled_start} - ${scheduled_end}</td></tr>
+      <tr style="border-bottom: 1px solid #f0f0f0;"><td style="padding: 8px 0; color: #666;">Current Test Status:</td><td style="padding: 8px 0;">${status}</td></tr>
+    </table>
+    <div style="background-color: #fdedec; border-left: 4px solid #c0392b; padding: 12px; margin: 15px 0;">
+      <p style="margin: 0; font-size: 14px;"><strong>Recommended Actions:</strong></p>
+      <ul style="margin: 5px 0 0 0; padding-left: 20px; font-size: 13px;">
+        <li>Re-assign the test to an alternate operational equipment asset at this hospital.</li>
+        <li>Reschedule the test slot or initiate the Patient Reschedule Offer (FL-03).</li>
+      </ul>
+    </div>
+  </div>
+  <div style="border-top: 1px solid #eee; padding-top: 10px; font-size: 12px; color: #999; text-align: center;">
+    Apollo Hospitals Laboratory Information System (LIS).
+  </div>
+</div>
+${mail_script:apollo_lab_team_recipient}]]></message_html>
+        <message_list/>
+        <message_text/>
+        <name>Lab Team - Equipment Unavailable</name>
+        <omit_watermark>false</omit_watermark>
+        <order>100</order>
+        <push_message_only>false</push_message_only>
+        <recipient_fields/>
+        <recipient_groups name="Lab Team">6a13b54647d0d310273a565a516d43b2</recipient_groups>
+        <recipient_users/>
+        <reply_to/>
+        <send_self>true</send_self>
+        <sms_alternate/>
+        <style/>
+        <subject>ALERT: Equipment Out of Service / Conflict for ${lab_test.name} [${report_number}]</subject>
+        <subscribable>false</subscribable>
+        <sys_class_name>sysevent_email_action</sys_class_name>
+        <sys_created_by>integration.user</sys_created_by>
+        <sys_created_on>2026-11-23 12:03:25</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>339a91e8477c5310273a565a516d435c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Lab Team - Equipment Unavailable</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Apollo-Hospitals" source="x_2223823_apollo_0">87c1422693c89b507b3a7c5efaba1008</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
+        <sys_update_name>sysevent_email_action_339a91e8477c5310273a565a516d435c</sys_update_name>
+        <sys_updated_by>integration.user</sys_updated_by>
+        <sys_updated_on>2026-11-23 12:03:25</sys_updated_on>
+        <sys_version>2</sys_version>
+        <template/>
+        <type>email</type>
+        <weight>0</weight>
+    </sysevent_email_action>
+</record_update>

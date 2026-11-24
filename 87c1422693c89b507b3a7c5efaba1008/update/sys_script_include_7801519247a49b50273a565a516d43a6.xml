@@ -1,0 +1,418 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <active>true</active>
+        <api_name>x_2223823_apollo_0.BedAllocationService</api_name>
+        <caller_access/>
+        <client_callable>false</client_callable>
+        <description>BedAllocationService decides whether a bed may be given to an admission and executes guard rules BR-04.</description>
+        <mobile_callable>false</mobile_callable>
+        <name>BedAllocationService</name>
+        <sandbox_callable>false</sandbox_callable>
+        <script><![CDATA[var BedAllocationService = Class.create();
+BedAllocationService.prototype = {
+    initialize: function() {
+        this.bedStateMachine = new BedStateMachine();
+    },
+
+    /**
+     * Attempts to assign or reserve a bed for an admission.
+     * @param {GlideRecord|String} admission - Admission record or sys_id
+     * @param {GlideRecord|String} bed - Bed record or sys_id
+     * @param {Boolean} checkInNow - true for immediate check-in (Occupied), false for planned hold (Reserved)
+     * @param {Boolean} [isBeforeRule] - true if invoked from a before business rule (prevents current.update() loop)
+     * @returns {Object} { success: Boolean, message: String }
+     */
+    assign: function(admission, bed, checkInNow, isBeforeRule) {
+        checkInNow = (checkInNow === true || checkInNow === 'true');
+        isBeforeRule = (isBeforeRule === true || isBeforeRule === 'true');
+
+        // Resolve Admission GlideRecord
+        var admissionGr;
+        if (typeof admission === 'string') {
+            admissionGr = new GlideRecord('x_2223823_apollo_0_admissions');
+            if (!admissionGr.get(admission)) {
+                return { success: false, message: 'Admission record not found.' };
+            }
+        } else {
+            admissionGr = admission;
+        }
+
+        // Resolve Bed sys_id
+        var bedId = (typeof bed === 'string') ? bed : (bed ? bed.getUniqueValue() : '');
+        if (!bedId) {
+            return { success: false, message: 'No bed specified.' };
+        }
+
+        // Mutex lock on bed's sys_id to prevent concurrent allocations
+        var mutex = null;
+        try {
+            if (typeof GlideScriptMutex !== 'undefined') {
+                mutex = new GlideScriptMutex('bed_lock_' + bedId);
+                mutex.set(10000); // 10 second timeout
+            }
+        } catch (lockEx) {
+            // Scoped environment fallback
+        }
+
+        try {
+            // Read the bed record AGAIN inside the lock
+            var bedGr = new GlideRecord('x_2223823_apollo_0_beds');
+            if (!bedGr.get(bedId)) {
+                return { success: false, message: 'Bed record not found.' };
+            }
+
+            // Execute the 7 Guard checks
+            var guardResult = this._runGuards(admissionGr, bedGr);
+            if (!guardResult.passed) {
+                return { success: false, message: guardResult.message };
+            }
+
+            // Guards passed! Perform allocation based on checkInNow
+            return this._executeAllocation(admissionGr, bedGr, checkInNow, isBeforeRule);
+
+        } finally {
+            if (mutex) {
+                try {
+                    mutex.release();
+                } catch (relEx) {}
+            }
+        }
+    },
+
+    /**
+     * Executes the 7 guard rules in strict order.
+     */
+    _runGuards: function(admissionGr, bedGr) {
+        var bedActive = bedGr.getValue('active');
+        var isBedActive = (bedActive === true || bedActive === 'true' || bedActive === '1' || bedActive === 1);
+        var bedHospital = bedGr.getValue('hospital');
+        var admissionHospital = admissionGr.getValue('hospital');
+        var bedStatus = bedGr.getValue('status');
+        var patientId = admissionGr.getValue('patient');
+        var admissionId = admissionGr.getUniqueValue();
+
+        // Guard 1: Bed is active and its hospital equals the admission's hospital
+        // On failure: Reject: bed not valid for this hospital
+        if (!isBedActive || bedHospital !== admissionHospital) {
+            return {
+                passed: false,
+                message: 'Reject: bed not valid for this hospital'
+            };
+        }
+
+        // Guard 2: Bed status is Available, or Reserved by an Active reservation for this same patient or admission
+        // On failure: Reject, naming the status: Occupied, Under Cleaning, Under Maintenance, Blocked or Out of Service cannot be assigned
+        var isAvailable = (bedStatus === BedStateMachine.STATUS.AVAILABLE); // '1'
+        var isReservedForThisPatient = false;
+        var isAlreadyAssignedToThisAdmission = false;
+
+        // Check if bed is already assigned / occupied by this specific admission
+        if (bedStatus === BedStateMachine.STATUS.OCCUPIED) {
+            if (bedGr.getValue('current_admission') === admissionId || admissionGr.getValue('bed') === bedGr.getUniqueValue()) {
+                isAlreadyAssignedToThisAdmission = true;
+            }
+        }
+
+        if (bedStatus === BedStateMachine.STATUS.RESERVED) { // '2'
+            var myResGr = new GlideRecord('x_2223823_apollo_0_bed_reservations');
+            myResGr.addQuery('bed', bedGr.getUniqueValue());
+            myResGr.addQuery('patient', patientId);
+            myResGr.addQuery('status', '1'); // '1' = Active
+            myResGr.setLimit(1);
+            myResGr.query();
+            if (myResGr.next()) {
+                isReservedForThisPatient = true;
+            } else if (admissionGr.getValue('bed') === bedGr.getUniqueValue()) {
+                isReservedForThisPatient = true;
+            }
+        }
+
+        if (!isAvailable && !isReservedForThisPatient && !isAlreadyAssignedToThisAdmission) {
+            var statusLabel = this.bedStateMachine.getStatusLabel(bedStatus);
+            return {
+                passed: false,
+                message: 'Reject: ' + statusLabel + ' cannot be assigned'
+            };
+        }
+
+        // Guard 3: No other Active reservation exists on the bed (VR-13)
+        // On failure: Reject: bed already reserved for another patient
+        var otherResGr = new GlideRecord('x_2223823_apollo_0_bed_reservations');
+        otherResGr.addQuery('bed', bedGr.getUniqueValue());
+        otherResGr.addQuery('status', '1'); // Active
+        otherResGr.addQuery('patient', '!=', patientId);
+        otherResGr.setLimit(1);
+        otherResGr.query();
+        if (otherResGr.next()) {
+            return {
+                passed: false,
+                message: 'Reject: bed already reserved for another patient'
+            };
+        }
+
+        // Fetch Room record
+        var roomGr = bedGr.room.getRefRecord();
+        var roomCategory = roomGr.isValidRecord() ? roomGr.getValue('room_category') : '';
+        var admissionRequestedCategory = admissionGr.getValue('room_category');
+
+        // Guard 4: The room's category matches the admission's requested category
+        // On failure: Reject: wrong room category
+        if (roomCategory !== admissionRequestedCategory) {
+            return {
+                passed: false,
+                message: 'Reject: wrong room category'
+            };
+        }
+
+        // Guard 5: A restricted category needs approval_state Approved before a bed is assigned.
+        // Emergency admissions to a General Ward bed skip approval.
+        // On failure: Reject: approval pending or rejected
+        var admissionType = admissionGr.getValue('admission_type'); // '2' = Emergency
+        var approvalState = admissionGr.getValue('approval_state'); // '3' = Approved
+
+        var restrictedCategories = [
+            'ICU',
+            'HDU',
+            'NICU',
+            'Isolation',
+            'Labour / Maternity',
+            'Operation Theatre',
+            'Private / Deluxe / Suite'
+        ];
+
+        var isRestricted = (restrictedCategories.indexOf(admissionRequestedCategory) !== -1);
+        var isEmergencyGeneralWard = (admissionType === '2' && admissionRequestedCategory === 'General Ward');
+
+        if (isRestricted && !isEmergencyGeneralWard) {
+            if (approvalState !== '3') { // '3' = Approved
+                return {
+                    passed: false,
+                    message: 'Reject: approval pending or rejected'
+                };
+            }
+        }
+
+        // Guard 6: General Ward beds follow the ward's gender setting, and children go to the paediatric ward
+        // On failure: Reject with the rule named
+        var patientGr = admissionGr.patient.getRefRecord();
+        var patientAge = this._calculateAge(patientGr);
+        var isUnder18 = (patientGr.isValidRecord() && (patientGr.getValue('under_18') === true || patientGr.getValue('under_18') === 'true')) || (patientAge !== null && patientAge < 18);
+
+        var wardGr = roomGr.isValidRecord() ? roomGr.ward.getRefRecord() : null;
+        var wardName = (wardGr && wardGr.isValidRecord()) ? (wardGr.getValue('name') || '') : '';
+        var isPaediatricWard = /paediatric|pediatric|child/i.test(wardName);
+
+        if (isUnder18) {
+            if (!isPaediatricWard) {
+                return {
+                    passed: false,
+                    message: 'Reject: children go to the paediatric ward'
+                };
+            }
+        } else {
+            if (isPaediatricWard) {
+                return {
+                    passed: false,
+                    message: 'Reject: adult cannot be admitted to paediatric ward'
+                };
+            }
+
+            if (roomCategory === 'General Ward') {
+                var patientGender = this._normalizeGender(patientGr.getValue('gender'));
+
+                if (wardGr && wardGr.isValidRecord()) {
+                    var wardGender = wardGr.getValue('gender');
+                    if (wardGender === '1' && patientGender !== '1') {
+                        return {
+                            passed: false,
+                            message: 'Reject: General Ward beds follow the ward\'s gender setting'
+                        };
+                    } else if (wardGender === '2' && patientGender !== '2') {
+                        return {
+                            passed: false,
+                            message: 'Reject: General Ward beds follow the ward\'s gender setting'
+                        };
+                    }
+                }
+
+                var bedGender = bedGr.getValue('gender');
+                if (bedGender === '1' && patientGender !== '1') {
+                    return {
+                        passed: false,
+                        message: 'Reject: General Ward beds follow the ward\'s gender setting'
+                    };
+                } else if (bedGender === '2' && patientGender !== '2') {
+                    return {
+                        passed: false,
+                        message: 'Reject: General Ward beds follow the ward\'s gender setting'
+                    };
+                }
+            }
+        }
+
+        // Guard 7: The room's category has beds (Operation Theatre does not; it is booked by slot)
+        // On failure: Reject: no beds in this category
+        if (roomCategory === 'Operation Theatre') {
+            return {
+                passed: false,
+                message: 'Reject: no beds in this category'
+            };
+        }
+
+        return { passed: true };
+    },
+
+    /**
+     * Executes the successful assignment / check-in actions.
+     */
+    _executeAllocation: function(admissionGr, bedGr, checkInNow, isBeforeRule) {
+        var admissionId = admissionGr.getUniqueValue();
+        var bedId = bedGr.getUniqueValue();
+        var patientId = admissionGr.getValue('patient');
+        var hospitalId = admissionGr.getValue('hospital');
+        var admissionNumber = admissionGr.getDisplayValue('number') || admissionId;
+        var admissionType = admissionGr.getValue('admission_type');
+
+        if (checkInNow) {
+            var transRes = this.bedStateMachine.transition(
+                bedGr,
+                BedStateMachine.STATUS.OCCUPIED,
+                'Bed assigned and checked in for admission ' + admissionNumber,
+                admissionGr
+            );
+            if (!transRes.success) {
+                return transRes;
+            }
+
+            admissionGr.setValue('bed', bedId);
+            if (bedGr.room) {
+                admissionGr.setValue('room', bedGr.getValue('room'));
+            }
+            admissionGr.setValue('status', '4'); // '4' = Admitted
+            if (!isBeforeRule) {
+                admissionGr.update();
+            }
+
+            var resGr = new GlideRecord('x_2223823_apollo_0_bed_reservations');
+            resGr.addQuery('bed', bedId);
+            resGr.addQuery('patient', patientId);
+            resGr.addQuery('status', '1'); // '1' = Active
+            resGr.query();
+            while (resGr.next()) {
+                resGr.setValue('status', '2'); // '2' = Converted to occupied
+                resGr.update();
+            }
+
+            return {
+                success: true,
+                message: 'Bed ' + bedGr.getDisplayValue('bed_number') + ' successfully assigned and patient checked in.'
+            };
+
+        } else {
+            var holdHours = 4;
+            if (admissionType === '2' || admissionType === '3') {
+                holdHours = 1;
+            }
+
+            if (hospitalId) {
+                var hospGr = new GlideRecord('x_2223823_apollo_0_hospital');
+                if (hospGr.get(hospitalId)) {
+                    if (admissionType === '2' || admissionType === '3') {
+                        var emgHold = hospGr.getValue('hold_hours_emergency');
+                        if (emgHold) holdHours = parseInt(emgHold, 10);
+                    } else {
+                        var planHold = hospGr.getValue('hold_hours_planned');
+                        if (planHold) holdHours = parseInt(planHold, 10);
+                    }
+                }
+            }
+
+            var expiresAt = new GlideDateTime();
+            expiresAt.addSeconds(holdHours * 3600);
+
+            var resType = 'Planned';
+            if (admissionType === '2') resType = 'Emergency';
+            else if (admissionType === '3') resType = 'Transfer';
+
+            var newResGr = new GlideRecord('x_2223823_apollo_0_bed_reservations');
+            newResGr.initialize();
+            newResGr.setValue('bed', bedId);
+            newResGr.setValue('patient', patientId);
+            newResGr.setValue('hospital', hospitalId);
+            newResGr.setValue('reserved_by', gs.getUserID());
+            newResGr.setValue('reserved_at', new GlideDateTime());
+            newResGr.setValue('expires_at', expiresAt);
+            newResGr.setValue('type', resType);
+            newResGr.setValue('status', '1'); // '1' = Active
+            newResGr.insert();
+
+            var resTransition = this.bedStateMachine.transition(
+                bedGr,
+                BedStateMachine.STATUS.RESERVED,
+                'Bed reserved for admission ' + admissionNumber + ' with hold duration ' + holdHours + 'h',
+                admissionGr
+            );
+            if (!resTransition.success) {
+                return resTransition;
+            }
+
+            admissionGr.setValue('bed', bedId);
+            if (bedGr.room) {
+                admissionGr.setValue('room', bedGr.getValue('room'));
+            }
+            admissionGr.setValue('status', '3'); // '3' = Bed reserved
+            if (!isBeforeRule) {
+                admissionGr.update();
+            }
+
+            return {
+                success: true,
+                message: 'Bed ' + bedGr.getDisplayValue('bed_number') + ' successfully reserved until ' + expiresAt.getDisplayValue() + '.'
+            };
+        }
+    },
+
+    _calculateAge: function(patientGr) {
+        if (!patientGr || !patientGr.isValidRecord()) return null;
+        var dobStr = patientGr.getValue('date_of_birth');
+        if (!dobStr) return null;
+
+        var dob = new GlideDate();
+        dob.setValue(dobStr);
+        var today = new GlideDate();
+
+        var years = today.getYearNoTZ() - dob.getYearNoTZ();
+        var months = today.getMonthNoTZ() - dob.getMonthNoTZ();
+        var days = today.getDayOfMonthNoTZ() - dob.getDayOfMonthNoTZ();
+
+        if (months < 0 || (months === 0 && days < 0)) {
+            years--;
+        }
+        return years;
+    },
+
+    _normalizeGender: function(genderVal) {
+        if (!genderVal) return '';
+        var g = String(genderVal).toLowerCase();
+        if (g === '1' || g === 'male' || g === 'm') return '1';
+        if (g === '2' || g === 'female' || g === 'f') return '2';
+        return '3';
+    },
+
+    type: 'BedAllocationService'
+};]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>jenish.jain</sys_created_by>
+        <sys_created_on>2026-11-16 11:35:07</sys_created_on>
+        <sys_id>7801519247a49b50273a565a516d43a6</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>BedAllocationService</sys_name>
+        <sys_package display_value="Apollo-Hospitals" source="x_2223823_apollo_0">87c1422693c89b507b3a7c5efaba1008</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
+        <sys_update_name>sys_script_include_7801519247a49b50273a565a516d43a6</sys_update_name>
+        <sys_updated_by>jenish.jain</sys_updated_by>
+        <sys_updated_on>2026-11-18 06:36:21</sys_updated_on>
+    </sys_script_include>
+</record_update>

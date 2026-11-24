@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script">
+    <sys_script action="INSERT_OR_UPDATE">
+        <abort_action>false</abort_action>
+        <access>package_private</access>
+        <action_delete>false</action_delete>
+        <action_insert>true</action_insert>
+        <action_query>false</action_query>
+        <action_update>false</action_update>
+        <active>true</active>
+        <add_message>false</add_message>
+        <advanced>true</advanced>
+        <change_fields>false</change_fields>
+        <client_callable>false</client_callable>
+        <collection>sc_req_item</collection>
+        <condition/>
+        <description/>
+        <execute_function>false</execute_function>
+        <filter_condition/>
+        <is_rest>false</is_rest>
+        <message/>
+        <name>Create Charge Line for Hospital Services</name>
+        <order>100</order>
+        <priority>100</priority>
+        <rest_method/>
+        <rest_method_text/>
+        <rest_service/>
+        <rest_service_text/>
+        <rest_variables/>
+        <role_conditions/>
+        <script><![CDATA[(function executeRule(current, previous) {
+
+    // Catalog Item Sys IDs
+    var AMBULANCE_ITEM_ID = '1c371d7847d0d310273a565a516d43ea';
+    var WHEELCHAIR_ITEM_ID = '6e08693c4794d310273a565a516d432e';
+
+    var catalogItemId = current.getValue('cat_item');
+    var chargeType = '';
+
+    if (catalogItemId == AMBULANCE_ITEM_ID) {
+        chargeType = 'ambulance';
+    } else if (catalogItemId == WHEELCHAIR_ITEM_ID) {
+        chargeType = 'wheelchair_assistance';
+    } else {
+        return;
+    }
+
+    // Get RITM variables
+    var patientId = current.variables.requested_for.toString();
+    var hospitalId = current.variables.hospital.toString();
+    var admissionId = current.variables.related_admission.toString();
+
+    
+    if (!patientId || !hospitalId || !admissionId) {
+        return;
+    }
+    // Get RITM price
+    var amount = current.getValue('price');
+    if (!amount || parseFloat(amount) <= 0) {
+        return;
+    }
+    // Prevent duplicate Charge Line
+    var charge = new GlideRecord(
+        'x_2223823_apollo_0_charge_line'
+    );
+
+    charge.addQuery('source_table', 'sc_req_item');
+    charge.addQuery('source_record', current.getUniqueValue());
+    charge.query();
+    if (charge.next()) {
+        return;
+    }
+    // Find Admission record
+    var admission = new GlideRecord(
+        'x_2223823_apollo_0_admissions'
+    );
+ 
+    if (!admission.get(admissionId)) {
+        return;
+    }
+    // Get Invoice from Admission
+    var invoiceId = admission.getValue('final_invoice');
+    if (!invoiceId) {
+        return;
+    }
+
+    // Create Charge Line
+    charge.initialize();
+
+    charge.setValue('patient', patientId);
+    charge.setValue('hospital', hospitalId);
+    charge.setValue('invoice', invoiceId);
+    charge.setValue('amount', amount);
+    charge.setValue('charge_type', 'service');
+    charge.setValue('status', 'invoiced');
+
+    charge.setValue(
+        'description',
+        chargeType == 'ambulance' ?
+        'Ambulance Service Charge' :
+        'Wheelchair Assistance Charge'
+    );
+
+    charge.setValue('source_table', 'sc_req_item');
+    charge.setValue('source_record', current.getUniqueValue());
+
+    var sys_ids = charge.insert();
+
+})(current, previous);]]></script>
+        <sys_class_name>sys_script</sys_class_name>
+        <sys_created_by>ayush.mangal</sys_created_by>
+        <sys_created_on>2026-11-16 09:42:59</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>2696f4d647a09b50273a565a516d4308</sys_id>
+        <sys_mod_count>12</sys_mod_count>
+        <sys_name>Create Charge Line for Hospital Services</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Apollo-Hospitals" source="x_2223823_apollo_0">87c1422693c89b507b3a7c5efaba1008</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
+        <sys_update_name>sys_script_2696f4d647a09b50273a565a516d4308</sys_update_name>
+        <sys_updated_by>ayush.mangal</sys_updated_by>
+        <sys_updated_on>2026-11-18 13:11:04</sys_updated_on>
+        <template/>
+        <when>after</when>
+    </sys_script>
+    <sys_translated_text action="delete_multiple" query="documentkey=2696f4d647a09b50273a565a516d4308"/>
+</record_update>

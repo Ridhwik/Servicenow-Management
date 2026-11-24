@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sysevent_email_action">
+    <sysevent_email_action action="DELETE">
+        <action_insert>false</action_insert>
+        <action_update>false</action_update>
+        <active>true</active>
+        <advanced_condition/>
+        <affected_field_on_event/>
+        <category display_value="Uncategorized" name="Uncategorized">c97d83137f4432005f58108c3ffa917a</category>
+        <collection>x_617936_grievan_0_grievance_case</collection>
+        <condition/>
+        <content_type>text/html</content_type>
+        <default_digest>false</default_digest>
+        <default_interval/>
+        <description/>
+        <digest_from/>
+        <digest_html/>
+        <digest_reply_to/>
+        <digest_separator_html><![CDATA[<br><hr><br>]]></digest_separator_html>
+        <digest_separator_text><![CDATA[\n--------------------------------------------------------------------------------\n]]></digest_separator_text>
+        <digest_subject/>
+        <digest_template/>
+        <digest_text/>
+        <digest_type>single</digest_type>
+        <digestable>false</digestable>
+        <enable_dynamic_translation>false</enable_dynamic_translation>
+        <event_name>x_2223823_apollo_0.case_received</event_name>
+        <event_parm_1>true</event_parm_1>
+        <event_parm_2>false</event_parm_2>
+        <exclude_delegates>false</exclude_delegates>
+        <force_delivery>false</force_delivery>
+        <from/>
+        <generation_type>event</generation_type>
+        <importance/>
+        <include_attachments>false</include_attachments>
+        <item>event.parm1</item>
+        <item_table/>
+        <mandatory>false</mandatory>
+        <message/>
+        <message_html><![CDATA[<div style="font-family: Arial, sans-serif; max-width: 600px; margin: auto; padding: 20px; border: 1px solid #e0e0e0; border-radius: 8px;">
+  <div style="background-color: #0A2540; color: #ffffff; padding: 15px; border-radius: 6px; text-align: center;">
+    <h2 style="margin: 0;">Apollo Patient Care</h2>
+    <p style="margin: 5px 0 0 0; font-size: 14px;">Grievance Receipt & Auto-Routing Confirmation</p>
+  </div>
+  <div style="padding: 20px 0;">
+    <p>Dear <strong>${consumer.name}</strong>,</p>
+    <p>Thank you for bringing your feedback to our attention. Your grievance has been recorded and auto-routed to our dedicated Patient Experience team.</p>
+    <table style="width: 100%; border-collapse: collapse; margin: 15px 0;">
+      <tr style="border-bottom: 1px solid #f0f0f0;"><td style="padding: 8px 0; color: #666;">Case Number:</td><td style="padding: 8px 0; font-weight: bold;">${number}</td></tr>
+      <tr style="border-bottom: 1px solid #f0f0f0;"><td style="padding: 8px 0; color: #666;">Category:</td><td style="padding: 8px 0;">${category}</td></tr>
+      <tr style="border-bottom: 1px solid #f0f0f0;"><td style="padding: 8px 0; color: #666;">Subject:</td><td style="padding: 8px 0; font-weight: bold;">${short_description}</td></tr>
+      <tr style="border-bottom: 1px solid #f0f0f0;"><td style="padding: 8px 0; color: #666;">Status:</td><td style="padding: 8px 0; color: #0066cc; font-weight: bold;">${state}</td></tr>
+    </table>
+    <p style="font-size: 14px;">We adhere to strict Service Level Commitments and our team is actively reviewing your matter. You will receive updates as progress is made.</p>
+  </div>
+  <div style="border-top: 1px solid #eee; padding-top: 10px; font-size: 12px; color: #999; text-align: center;">
+    Apollo Hospitals Healthcare System. All rights reserved.
+  </div>
+</div>
+${mail_script:apollo_patient_recipient}]]></message_html>
+        <message_list/>
+        <message_text/>
+        <name>Patient - Grievance Case Received</name>
+        <omit_watermark>false</omit_watermark>
+        <order>100</order>
+        <push_message_only>false</push_message_only>
+        <recipient_fields/>
+        <recipient_groups/>
+        <recipient_users/>
+        <reply_to/>
+        <send_self>true</send_self>
+        <sms_alternate/>
+        <style/>
+        <subject>Grievance Acknowledged - Case ${number} | Apollo Hospitals</subject>
+        <subscribable>false</subscribable>
+        <sys_class_name>sysevent_email_action</sys_class_name>
+        <sys_created_by>integration.user</sys_created_by>
+        <sys_created_on>2026-11-20 11:53:52</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>e2ab352747605790273a565a516d43da</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Patient - Grievance Case Received</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Apollo-Hospitals" source="x_2223823_apollo_0">87c1422693c89b507b3a7c5efaba1008</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
+        <sys_update_name>sysevent_email_action_e2ab352747605790273a565a516d43da</sys_update_name>
+        <sys_updated_by>integration.user</sys_updated_by>
+        <sys_updated_on>2026-11-20 11:53:52</sys_updated_on>
+        <sys_version>2</sys_version>
+        <template/>
+        <type>email</type>
+        <weight>0</weight>
+    </sysevent_email_action>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</application>
+        <file_path/>
+        <instance_id>5ada7edb93d06e50d9f6ddd548373c9d</instance_id>
+        <instance_name>dev304851</instance_name>
+        <name>sysevent_email_action_e2ab352747605790273a565a516d43da</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update sys_domain="global" table="sysevent_email_action"&gt;&lt;sysevent_email_action action="INSERT_OR_UPDATE"&gt;&lt;action_insert&gt;false&lt;/action_insert&gt;&lt;action_update&gt;false&lt;/action_update&gt;&lt;active&gt;true&lt;/active&gt;&lt;advanced_condition/&gt;&lt;affected_field_on_event/&gt;&lt;category display_value="Uncategorized" name="Uncategorized"&gt;c97d83137f4432005f58108c3ffa917a&lt;/category&gt;&lt;collection&gt;x_617936_grievan_0_grievance_case&lt;/collection&gt;&lt;condition/&gt;&lt;content_type&gt;text/html&lt;/content_type&gt;&lt;default_digest&gt;false&lt;/default_digest&gt;&lt;default_interval/&gt;&lt;description/&gt;&lt;digest_from/&gt;&lt;digest_html/&gt;&lt;digest_reply_to/&gt;&lt;digest_separator_html&gt;&lt;![CDATA[&lt;br&gt;&lt;hr&gt;&lt;br&gt;]]&gt;&lt;/digest_separator_html&gt;&lt;digest_separator_text&gt;&lt;![CDATA[\n--------------------------------------------------------------------------------\n]]&gt;&lt;/digest_separator_text&gt;&lt;digest_subject/&gt;&lt;digest_template/&gt;&lt;digest_text/&gt;&lt;digest_type&gt;single&lt;/digest_type&gt;&lt;digestable&gt;false&lt;/digestable&gt;&lt;enable_dynamic_translation&gt;false&lt;/enable_dynamic_translation&gt;&lt;event_name&gt;x_2223823_apollo_0.case_received&lt;/event_name&gt;&lt;event_parm_1&gt;true&lt;/event_parm_1&gt;&lt;event_parm_2&gt;false&lt;/event_parm_2&gt;&lt;exclude_delegates&gt;false&lt;/exclude_delegates&gt;&lt;force_delivery&gt;false&lt;/force_delivery&gt;&lt;from/&gt;&lt;generation_type&gt;event&lt;/generation_type&gt;&lt;importance/&gt;&lt;include_attachments&gt;false&lt;/include_attachments&gt;&lt;item&gt;event.parm1&lt;/item&gt;&lt;item_table/&gt;&lt;mandatory&gt;false&lt;/mandatory&gt;&lt;message/&gt;&lt;message_html&gt;&lt;![CDATA[&lt;div style="font-family: Arial, sans-serif; max-width: 600px; margin: auto; padding: 20px; border: 1px solid #e0e0e0; border-radius: 8px;"&gt;
+  &lt;div style="background-color: #0A2540; color: #ffffff; padding: 15px; border-radius: 6px; text-align: center;"&gt;
+    &lt;h2 style="margin: 0;"&gt;Apollo Patient Care&lt;/h2&gt;
+    &lt;p style="margin: 5px 0 0 0; font-size: 14px;"&gt;Grievance Receipt &amp; Auto-Routing Confirmation&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;div style="padding: 20px 0;"&gt;
+    &lt;p&gt;Dear &lt;strong&gt;${consumer.name}&lt;/strong&gt;,&lt;/p&gt;
+    &lt;p&gt;Thank you for bringing your feedback to our attention. Your grievance has been recorded and auto-routed to our dedicated Patient Experience team.&lt;/p&gt;
+    &lt;table style="width: 100%; border-collapse: collapse; margin: 15px 0;"&gt;
+      &lt;tr style="border-bottom: 1px solid #f0f0f0;"&gt;&lt;td style="padding: 8px 0; color: #666;"&gt;Case Number:&lt;/td&gt;&lt;td style="padding: 8px 0; font-weight: bold;"&gt;${number}&lt;/td&gt;&lt;/tr&gt;
+      &lt;tr style="border-bottom: 1px solid #f0f0f0;"&gt;&lt;td style="padding: 8px 0; color: #666;"&gt;Category:&lt;/td&gt;&lt;td style="padding: 8px 0;"&gt;${category}&lt;/td&gt;&lt;/tr&gt;
+      &lt;tr style="border-bottom: 1px solid #f0f0f0;"&gt;&lt;td style="padding: 8px 0; color: #666;"&gt;Subject:&lt;/td&gt;&lt;td style="padding: 8px 0; font-weight: bold;"&gt;${short_description}&lt;/td&gt;&lt;/tr&gt;
+      &lt;tr style="border-bottom: 1px solid #f0f0f0;"&gt;&lt;td style="padding: 8px 0; color: #666;"&gt;Status:&lt;/td&gt;&lt;td style="padding: 8px 0; color: #0066cc; font-weight: bold;"&gt;${state}&lt;/td&gt;&lt;/tr&gt;
+    &lt;/table&gt;
+    &lt;p style="font-size: 14px;"&gt;We adhere to strict Service Level Commitments and our team is actively reviewing your matter. You will receive updates as progress is made.&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;div style="border-top: 1px solid #eee; padding-top: 10px; font-size: 12px; color: #999; text-align: center;"&gt;
+    Apollo Hospitals Healthcare System. All rights reserved.
+  &lt;/div&gt;
+&lt;/div&gt;
+${mail_script:apollo_patient_recipient}]]&gt;&lt;/message_html&gt;&lt;message_list/&gt;&lt;message_text/&gt;&lt;name&gt;Patient - Grievance Case Received&lt;/name&gt;&lt;omit_watermark&gt;false&lt;/omit_watermark&gt;&lt;order&gt;100&lt;/order&gt;&lt;push_message_only&gt;false&lt;/push_message_only&gt;&lt;recipient_fields/&gt;&lt;recipient_groups/&gt;&lt;recipient_users/&gt;&lt;reply_to/&gt;&lt;send_self&gt;true&lt;/send_self&gt;&lt;sms_alternate/&gt;&lt;style/&gt;&lt;subject&gt;Grievance Acknowledged - Case ${number} | Apollo Hospitals&lt;/subject&gt;&lt;subscribable&gt;false&lt;/subscribable&gt;&lt;sys_class_name&gt;sysevent_email_action&lt;/sys_class_name&gt;&lt;sys_created_by&gt;integration.user&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2026-11-20 11:53:52&lt;/sys_created_on&gt;&lt;sys_domain&gt;global&lt;/sys_domain&gt;&lt;sys_domain_path&gt;/&lt;/sys_domain_path&gt;&lt;sys_id&gt;e2ab352747605790273a565a516d43da&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_name&gt;Patient - Grievance Case Received&lt;/sys_name&gt;&lt;sys_overrides/&gt;&lt;sys_package display_value="Apollo-Hospitals" source="x_2223823_apollo_0"&gt;87c1422693c89b507b3a7c5efaba1008&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Apollo-Hospitals"&gt;87c1422693c89b507b3a7c5efaba1008&lt;/sys_scope&gt;&lt;sys_update_name&gt;sysevent_email_action_e2ab352747605790273a565a516d43da&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;integration.user&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2026-11-20 11:53:52&lt;/sys_updated_on&gt;&lt;sys_version&gt;2&lt;/sys_version&gt;&lt;template/&gt;&lt;type&gt;email&lt;/type&gt;&lt;weight&gt;0&lt;/weight&gt;&lt;/sysevent_email_action&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>-2047263039</payload_hash>
+        <record_name>Patient - Grievance Case Received</record_name>
+        <reverted_from/>
+        <source>4f51406e475c9710273a565a516d4360</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>integration.user</sys_created_by>
+        <sys_created_on>2026-11-20 11:53:52</sys_created_on>
+        <sys_id>62ab352747605790273a565a516d43de</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1a1f8ce4e8c0000001</sys_recorded_at>
+        <sys_updated_by>integration.user</sys_updated_by>
+        <sys_updated_on>2026-11-20 11:53:52</sys_updated_on>
+        <type>Notification</type>
+        <update_guid>22ab3527fd605790b258f6dc0c9389dd</update_guid>
+        <update_guid_history>22ab3527fd605790b258f6dc0c9389dd:-2047263039</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>integration.user</sys_created_by>
+        <sys_created_on>2026-11-20 12:13:56</sys_created_on>
+        <sys_db_object display_value="" name="sysevent_email_action">sysevent_email_action</sys_db_object>
+        <sys_id>058f406ec50245b0802572fb0995a790</sys_id>
+        <sys_metadata>e2ab352747605790273a565a516d43da</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Patient - Grievance Case Received</sys_name>
+        <sys_package display_value="Apollo-Hospitals" source="x_2223823_apollo_0">87c1422693c89b507b3a7c5efaba1008</sys_package>
+        <sys_parent display_value="Grievance Case">81057c7947581310273a565a516d4397</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
+        <sys_scope_delete display_value="">1a2f7aa8dfc34e3a86d3f0bede3c2784</sys_scope_delete>
+        <sys_update_name>sysevent_email_action_e2ab352747605790273a565a516d43da</sys_update_name>
+        <sys_update_version display_value="sysevent_email_action_e2ab352747605790273a565a516d43da">62ab352747605790273a565a516d43de</sys_update_version>
+        <sys_updated_by>integration.user</sys_updated_by>
+        <sys_updated_on>2026-11-20 12:13:56</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

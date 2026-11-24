@@ -10,5 +10,11 @@
             </choice>
         </element>
         <element label="Estimated Value" max_length="20" name="x_2223823_apollo_0_estimated_value" type="currency"/>
+        <element attributes="edge_encryption_enabled=true" choice="1" label="Stock Status" max_length="40" name="x_2223823_apollo_0_stock_status" type="string">
+            <choice>
+                <element inactive_on_update="false" label="In Stock" sequence="0" value="In Stock"/>
+                <element inactive_on_update="false" label="Needs Purchase" sequence="1" value="Needs Purchase"/>
+            </choice>
+        </element>
     </element>
 </database>

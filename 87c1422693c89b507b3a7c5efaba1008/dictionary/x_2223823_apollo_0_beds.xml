@@ -7,7 +7,7 @@
                 <element inactive_on_update="false" label="Male" value="1"/>
             </choice>
         </element>
-        <element label="Room" mandatory="true" max_length="32" name="room" reference="x_2223823_apollo_0_rooms" reference_qual="javascript: current.hospital ? 'hospital=' + current.hospital + '^active=true^room_category!=Operation Theatre' : 'active=true^room_category!=Operation Theatre';" type="reference" use_reference_qualifier="advanced"/>
+        <element label="Room" mandatory="true" max_length="32" name="room" reference="x_2223823_apollo_0_rooms" reference_qual="javascript: current.hospital ? 'hospital=' + current.hospital + '^active=true^room_category!=Operation Theatre' : 'sys_id=-1';" type="reference" use_reference_qualifier="advanced"/>
         <element default="true" label="Active" max_length="40" name="active" type="boolean"/>
         <element label="Expected release date" max_length="40" name="blocked_until" type="glide_date"/>
         <element label="Counts toward capacity" max_length="40" name="counts_in_capacity" type="boolean"/>

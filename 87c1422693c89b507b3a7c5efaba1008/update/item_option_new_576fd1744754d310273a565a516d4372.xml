@@ -19,8 +19,8 @@
         <do_not_select_first>false</do_not_select_first>
         <dynamic_default_value/>
         <dynamic_ref_qual/>
-        <dynamic_value_dot_walk_path/>
-        <dynamic_value_field/>
+        <dynamic_value_dot_walk_path>hospital</dynamic_value_dot_walk_path>
+        <dynamic_value_field display_value="Related admission">5632601347649390273a565a516d43a0</dynamic_value_field>
         <enable_also_request_for>false</enable_also_request_for>
         <example_text/>
         <field/>
@@ -43,7 +43,7 @@
         <lux_widget/>
         <macro/>
         <macroponent/>
-        <mandatory>true</mandatory>
+        <mandatory>false</mandatory>
         <map_to_field>false</map_to_field>
         <mask_use_confirmation>false</mask_use_confirmation>
         <mask_use_encryption>false</mask_use_encryption>
@@ -85,14 +85,14 @@
         <sys_created_by>nilesh.chaurasia</sys_created_by>
         <sys_created_on>2026-10-30 10:32:26</sys_created_on>
         <sys_id>576fd1744754d310273a565a516d4372</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>4</sys_mod_count>
         <sys_name>Hospital</sys_name>
         <sys_package display_value="Apollo-Hospitals" source="x_2223823_apollo_0">87c1422693c89b507b3a7c5efaba1008</sys_package>
         <sys_policy/>
         <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
         <sys_update_name>item_option_new_576fd1744754d310273a565a516d4372</sys_update_name>
         <sys_updated_by>nilesh.chaurasia</sys_updated_by>
-        <sys_updated_on>2026-10-30 10:32:26</sys_updated_on>
+        <sys_updated_on>2026-11-20 05:16:44</sys_updated_on>
         <table/>
         <tooltip/>
         <topic_block/>

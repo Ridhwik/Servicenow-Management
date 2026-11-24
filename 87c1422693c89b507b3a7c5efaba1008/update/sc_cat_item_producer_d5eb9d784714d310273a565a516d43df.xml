@@ -77,7 +77,7 @@
         <sc_template display_value="">2ba8c10b9320221014d63b9534891887</sc_template>
         <script><![CDATA[(function () {
 
-    // ---- Read producer variables ----
+    // 1. Read producer variables
     var hospital = ('' + producer.hospital_name).trim();
     var city = producer.city;
     var address = producer.address;
@@ -89,76 +89,62 @@
     var blocks = parseInt(producer.block_count, 10) || 0;
     var floors = parseInt(producer.floor_count_per_block, 10) || 0;
 
-    // Temporary debug line - remove once everything works
-    gs.info('PRODUCER DEBUG: hospital=[' + hospital + '] blocks=' + blocks + ' floors=' + floors);
-
     if (!hospital || hospital === 'undefined') {
-        gs.error('Hospital producer: hospital_name variable is empty or the variable name is wrong.');
+        gs.error('Hospital producer: hospital_name variable is empty.');
+        current.setAbortAction(true);
         return;
     }
 
-    // ---- Top-level location (the hospital) ----
-    var gr = new GlideRecord('cmn_location');
-    gr.initialize();
-    gr.name = hospital;
-    gr.city = city;
-    gr.phone = phone;
-    var loc_id = gr.insert();
+    // 2. Create the Top-Level Location in cmn_location
+    var grLoc = new GlideRecord('cmn_location');
+    grLoc.initialize();
+    grLoc.name = hospital;
+    grLoc.city = city;
+    grLoc.phone = phone;
+    var loc_id = grLoc.insert();
 
     if (!loc_id) {
-        gs.error('Hospital producer: location insert failed: ' + gr.getLastErrorMessage());
+        gs.error('Hospital producer: root location insert failed: ' + grLoc.getLastErrorMessage());
+        current.setAbortAction(true);
         return;
     }
 
-    // ---- Blocks and floors ----
+    // 3. Create Blocks and Floors under the root location (loc_id)
     for (var i = 1; i <= blocks; i++) {
-
-        var gr2 = new GlideRecord('cmn_location');
-        gr2.initialize();
-        gr2.name = 'Block ' + i;
-        gr2.city = city;
-        gr2.phone = phone;
-        gr2.parent = loc_id;
-        var block_id = gr2.insert();
+        var grBlock = new GlideRecord('cmn_location');
+        grBlock.initialize();
+        grBlock.name = 'Block ' + i;
+        grBlock.city = city;
+        grBlock.phone = phone;
+        grBlock.parent = loc_id;
+        var block_id = grBlock.insert();
 
         if (!block_id) {
-            gs.error('Hospital producer: Block ' + i + ' insert failed: ' + gr2.getLastErrorMessage());
+            gs.error('Hospital producer: Block ' + i + ' insert failed: ' + grBlock.getLastErrorMessage());
             continue;
         }
 
         for (var j = 1; j <= floors; j++) {
-
-            var gr3 = new GlideRecord('cmn_location');
-            gr3.initialize();
-            gr3.name = 'Block ' + i + ' Floor ' + j;
-            gr3.city = city;
-            gr3.phone = phone;
-            gr3.parent = block_id;
-            var floor_id = gr3.insert();   // this insert was missing
-
-            if (!floor_id) {
-                gs.error('Hospital producer: Block ' + i + ' Floor ' + j + ' insert failed: ' + gr3.getLastErrorMessage());
-            }
+            var grFloor = new GlideRecord('cmn_location');
+            grFloor.initialize();
+            grFloor.name = 'Block ' + i + ' Floor ' + j;
+            grFloor.city = city;
+            grFloor.phone = phone;
+            grFloor.parent = block_id;
+            grFloor.insert();
         }
     }
 
-    // ---- Hospital record on the custom table ----
-    var hos_record = new GlideRecord('x_2223823_apollo_0_hospital');
-    hos_record.initialize();
-    hos_record.setValue('name', hospital);   // confirm 'name' is the real column name in the dictionary
-    hos_record.city = city;
-    hos_record.address = address;
-    hos_record.hold_hours_planned = hold_hours;
-    hos_record.hold_hours_emergency = emergency_hours;
-    hos_record.hospital_administrator = admin;
-    hos_record.phone = phone;
-    hos_record.email = email;
-    hos_record.parent = loc_id;
-    var hos_id = hos_record.insert();
-
-    if (!hos_id) {
-        gs.error('Hospital producer: hospital record insert failed: ' + hos_record.getLastErrorMessage());
-    }
+    // 4. Populate 'current' (ServiceNow automatically inserts this SINGLE record)
+    current.name = hospital;
+    current.city = city;
+    current.address = address;
+    current.phone = phone;
+    current.email = email;
+    current.hospital_administrator = admin;
+    current.hold_hours_planned = hold_hours;
+    current.hold_hours_emergency = emergency_hours;
+    current.parent = loc_id; // <--- Populates 'Root Location'
 
 })();]]></script>
         <secondary_owners/>
@@ -170,14 +156,14 @@
         <sys_created_by>ridhwik.jangid</sys_created_by>
         <sys_created_on>2026-10-30 10:18:44</sys_created_on>
         <sys_id>d5eb9d784714d310273a565a516d43df</sys_id>
-        <sys_mod_count>12</sys_mod_count>
+        <sys_mod_count>14</sys_mod_count>
         <sys_name>Create Hospital Location Hierarchy</sys_name>
-        <sys_package/>
+        <sys_package display_value="Apollo-Hospitals" source="x_2223823_apollo_0">87c1422693c89b507b3a7c5efaba1008</sys_package>
         <sys_policy/>
         <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
         <sys_update_name>sc_cat_item_producer_d5eb9d784714d310273a565a516d43df</sys_update_name>
         <sys_updated_by>ridhwik.jangid</sys_updated_by>
-        <sys_updated_on>2026-10-30 11:18:11</sys_updated_on>
+        <sys_updated_on>2026-11-13 09:48:04</sys_updated_on>
         <table_name>x_2223823_apollo_0_hospital</table_name>
         <taxonomy_topic/>
         <template/>
@@ -185,7 +171,7 @@
         <type>item</type>
         <use_sc_layout>true</use_sc_layout>
         <vendor/>
-        <version>8</version>
+        <version>10</version>
         <view/>
         <visible_bundle>true</visible_bundle>
         <visible_guide>true</visible_guide>

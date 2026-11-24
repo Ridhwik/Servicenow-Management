@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script">
+    <sys_script action="INSERT_OR_UPDATE">
+        <abort_action>false</abort_action>
+        <access>package_private</access>
+        <action_delete>false</action_delete>
+        <action_insert>true</action_insert>
+        <action_query>false</action_query>
+        <action_update>true</action_update>
+        <active>true</active>
+        <add_message>false</add_message>
+        <advanced>true</advanced>
+        <change_fields>false</change_fields>
+        <client_callable>false</client_callable>
+        <collection>x_2223823_apollo_0_appointment</collection>
+        <condition/>
+        <description/>
+        <execute_function>false</execute_function>
+        <filter_condition table="x_2223823_apollo_0_appointment">status!=7^EQ<item display_value="Cancelled" endquery="false" field="status" goto="false" newquery="false" operator="!=" or="false" value="7"/>
+            <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
+        </filter_condition>
+        <is_rest>false</is_rest>
+        <message/>
+        <name>Prevent Doctor Appointment Double Bookin</name>
+        <order>100</order>
+        <priority>100</priority>
+        <rest_method/>
+        <rest_method_text/>
+        <rest_service/>
+        <rest_service_text/>
+        <rest_variables/>
+        <role_conditions/>
+        <script><![CDATA[(function executeRule(current, previous /*null when async*/) {
+
+    if (current.doctor.nil() || current.start_time.nil()) return;
+
+    var newStart = new GlideDateTime(current.start_time);
+    var newEnd;
+
+    // Use end_time if provided; otherwise calculate from duration_minutes (default 15 mins)
+    if (!current.end_time.nil()) {
+        newEnd = new GlideDateTime(current.end_time);
+    } else {
+        var durationMinutes = parseInt(current.duration_minutes, 10) || 15;
+        newEnd = new GlideDateTime(current.start_time);
+        newEnd.addSeconds(durationMinutes * 60);
+        current.end_time = newEnd.getValue();
+    }
+
+    // Two intervals [S1, E1] and [S2, E2] overlap when (S1 < E2) AND (E1 > S2)
+    var gr = new GlideRecord('x_2223823_apollo_0_appointment');
+    gr.addQuery('doctor', current.doctor);
+    gr.addQuery('sys_id', '!=', current.sys_id);
+    gr.addQuery('status', 'NOT IN', '6,7'); // Exclude Completed (6) and Cancelled (7)
+    gr.addQuery('start_time', '<', newEnd.getValue());
+    gr.addQuery('end_time', '>', newStart.getValue());
+    gr.setLimit(1);
+    gr.query();
+
+    if (gr.next()) {
+        current.setAbortAction(true);
+        gs.addErrorMessage('The selected doctor already has an active appointment (' + (gr.number || gr.sys_id) + 
+            ') overlapping this slot (' + gr.start_time + ' to ' + gr.end_time + '). Double booking is not allowed.');
+    }
+
+})(current, previous);]]></script>
+        <sys_class_name>sys_script</sys_class_name>
+        <sys_created_by>ridhwik.jangid</sys_created_by>
+        <sys_created_on>2026-11-13 10:30:34</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>eee4e11d47289350273a565a516d4355</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>Prevent Doctor Appointment Double Bookin</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Apollo-Hospitals" source="x_2223823_apollo_0">87c1422693c89b507b3a7c5efaba1008</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
+        <sys_update_name>sys_script_eee4e11d47289350273a565a516d4355</sys_update_name>
+        <sys_updated_by>ridhwik.jangid</sys_updated_by>
+        <sys_updated_on>2026-11-13 10:31:51</sys_updated_on>
+        <template/>
+        <when>before</when>
+    </sys_script>
+    <sys_translated_text action="delete_multiple" query="documentkey=eee4e11d47289350273a565a516d4355"/>
+</record_update>

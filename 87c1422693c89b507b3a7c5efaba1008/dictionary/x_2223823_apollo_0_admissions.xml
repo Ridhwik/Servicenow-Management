@@ -6,5 +6,6 @@
         <element label="Final invoice" max_length="32" name="final_invoice" reference="x_2223823_apollo_0_invoice" reference_qual="javascript: current.sys_id ? 'admission=' + current.sys_id : 'sys_idISEMPTY';" type="reference" use_reference_qualifier="advanced"/>
         <element label="Diagnosed by" max_length="32" name="diagnosed_by" reference="x_2223823_apollo_0_doctor" reference_qual="status=1^EQ" reference_qual_condition="status=1^EQ" type="reference"/>
         <element label="Bed" max_length="32" name="bed" reference="x_2223823_apollo_0_beds" reference_qual="javascript: current.room ? ('room=' + current.room + '^active=true^status=1') : 'sys_idISEMPTY';" type="reference" use_reference_qualifier="advanced"/>
+        <element label="Pharmacy Suggested" max_length="1024" name="pharmacy_suggested" reference="x_2223823_apollo_0_pharmacy" type="glide_list"/>
     </element>
 </database>

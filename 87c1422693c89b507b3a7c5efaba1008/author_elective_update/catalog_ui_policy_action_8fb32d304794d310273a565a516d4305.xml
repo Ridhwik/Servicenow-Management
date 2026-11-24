@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="catalog_ui_policy_action">
+    <catalog_ui_policy_action action="DELETE">
+        <catalog_item display_value="Ambulance">1c371d7847d0d310273a565a516d43ea</catalog_item>
+        <catalog_variable>IO:53f815704714d310273a565a516d435e</catalog_variable>
+        <cleared>false</cleared>
+        <disabled>ignore</disabled>
+        <field/>
+        <field_message/>
+        <field_message_type>none</field_message_type>
+        <mandatory>false</mandatory>
+        <order>100</order>
+        <sys_class_name>catalog_ui_policy_action</sys_class_name>
+        <sys_created_by>nilesh.chaurasia</sys_created_by>
+        <sys_created_on>2026-10-30 10:50:49</sys_created_on>
+        <sys_id>8fb32d304794d310273a565a516d4305</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>pickup_landmark</sys_name>
+        <sys_package display_value="Apollo-Hospitals" source="x_2223823_apollo_0">87c1422693c89b507b3a7c5efaba1008</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
+        <sys_update_name>catalog_ui_policy_action_8fb32d304794d310273a565a516d4305</sys_update_name>
+        <sys_updated_by>nilesh.chaurasia</sys_updated_by>
+        <sys_updated_on>2026-10-30 10:58:45</sys_updated_on>
+        <table/>
+        <ui_policy display_value="When emergency = Yes-&gt; Visibility No for (Type of transfer , Pickup address ,Pickup landmark ,Drop address ,Pickup date and time , Patient mobility ,Oxygen required ,during transfer? ,Medical escort required?, Accompanying persons , Return trip needed?)">2f72e57c4754d310273a565a516d4355</ui_policy>
+        <value/>
+        <value_action>ignore</value_action>
+        <variable>pickup_landmark</variable>
+        <variable_set/>
+        <visible>false</visible>
+    </catalog_ui_policy_action>
+    <sys_translated_text action="DELETE" query="documentkey=8fb32d304794d310273a565a516d4305"/>
+<sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</application>
+        <file_path/>
+        <instance_id>5ada7edb93d06e50d9f6ddd548373c9d</instance_id>
+        <instance_name>dev304851</instance_name>
+        <name>catalog_ui_policy_action_8fb32d304794d310273a565a516d4305</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="catalog_ui_policy_action">
+    <catalog_ui_policy_action action="INSERT_OR_UPDATE">
+        <catalog_item display_value="Ambulance">1c371d7847d0d310273a565a516d43ea</catalog_item>
+        <catalog_variable>IO:53f815704714d310273a565a516d435e</catalog_variable>
+        <cleared>false</cleared>
+        <disabled>ignore</disabled>
+        <field/>
+        <field_message/>
+        <field_message_type>none</field_message_type>
+        <mandatory>false</mandatory>
+        <order>100</order>
+        <sys_class_name>catalog_ui_policy_action</sys_class_name>
+        <sys_created_by>nilesh.chaurasia</sys_created_by>
+        <sys_created_on>2026-10-30 10:50:49</sys_created_on>
+        <sys_id>8fb32d304794d310273a565a516d4305</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>pickup_landmark</sys_name>
+        <sys_package display_value="Apollo-Hospitals" source="x_2223823_apollo_0">87c1422693c89b507b3a7c5efaba1008</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
+        <sys_update_name>catalog_ui_policy_action_8fb32d304794d310273a565a516d4305</sys_update_name>
+        <sys_updated_by>nilesh.chaurasia</sys_updated_by>
+        <sys_updated_on>2026-10-30 10:58:45</sys_updated_on>
+        <table/>
+        <ui_policy display_value="When emergency = Yes-&gt; Visibility No for (Type of transfer , Pickup address ,Pickup landmark ,Drop address ,Pickup date and time , Patient mobility ,Oxygen required ,during transfer? ,Medical escort required?, Accompanying persons , Return trip needed?)">2f72e57c4754d310273a565a516d4355</ui_policy>
+        <value/>
+        <value_action>ignore</value_action>
+        <variable>pickup_landmark</variable>
+        <variable_set/>
+        <visible>false</visible>
+    </catalog_ui_policy_action>
+    <sys_translated_text action="delete_multiple" query="documentkey=8fb32d304794d310273a565a516d4305"/>
+</record_update>]]></payload>
+        <payload_hash>656307059</payload_hash>
+        <record_name>pickup_landmark</record_name>
+        <reverted_from/>
+        <source>cef7071247549710273a565a516d432e</source>
+        <source_table>sys_upgrade_history</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-11-04 10:05:28</sys_created_on>
+        <sys_id>326907d247949710273a565a516d435d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1a1a60551ac0000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-11-04 10:05:28</sys_updated_on>
+        <type>Catalog UI Policy Action</type>
+        <update_guid>7a6907d219949710f6911a516200185c</update_guid>
+        <update_guid_history>7a6907d219949710f6911a516200185c:0,1db68bd28414971057628f2308ad91ef:1227286064,0e960792bd149710179db83494431d09:0,2aa56d744b94d310f70502dabef24200:-1383820349,8f95e5749a94d31038518b9de25a58c8:929024078,02d3ed308194d310311da69bd4b5ae44:185234377</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="pickup_landmark">851228df47249390273a565a516d43ff</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>nilesh.chaurasia</sys_created_by>
+        <sys_created_on>2026-11-19 10:43:59</sys_created_on>
+        <sys_db_object display_value="" name="catalog_ui_policy_action">catalog_ui_policy_action</sys_db_object>
+        <sys_id>2fc355b9983247fbb753e911faa026c1</sys_id>
+        <sys_metadata>8fb32d304794d310273a565a516d4305</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>pickup_landmark</sys_name>
+        <sys_package display_value="Apollo-Hospitals" source="x_2223823_apollo_0">87c1422693c89b507b3a7c5efaba1008</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
+        <sys_scope_delete display_value="">1a2f7aa8dfc34e3a86d3f0bede3c2784</sys_scope_delete>
+        <sys_update_name>catalog_ui_policy_action_8fb32d304794d310273a565a516d4305</sys_update_name>
+        <sys_update_version display_value="catalog_ui_policy_action_8fb32d304794d310273a565a516d4305">326907d247949710273a565a516d435d</sys_update_version>
+        <sys_updated_by>nilesh.chaurasia</sys_updated_by>
+        <sys_updated_on>2026-11-19 10:43:59</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

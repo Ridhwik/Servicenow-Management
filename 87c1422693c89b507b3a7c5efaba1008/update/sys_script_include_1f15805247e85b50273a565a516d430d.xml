@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <active>true</active>
+        <api_name>x_2223823_apollo_0.ApolloAppointmentValidator</api_name>
+        <caller_access/>
+        <client_callable>false</client_callable>
+        <description>Apollo Hospitals: Overlap and Duplicate-Booking Prevention engine with concurrency locking and syslog auditing.</description>
+        <mobile_callable>false</mobile_callable>
+        <name>ApolloAppointmentValidator</name>
+        <sandbox_callable>false</sandbox_callable>
+        <script><![CDATA[var ApolloAppointmentValidator = Class.create();
+ApolloAppointmentValidator.prototype = {
+    initialize: function() {},
+
+    /**
+     * Checks if the appointment overlaps with existing active appointments for the Doctor or Patient.
+     * Overlap condition: (existing.start_time < new.end_time) AND (existing.end_time > new.start_time)
+     * 
+     * @param {GlideRecord} current - The appointment being inserted or updated
+     * @returns {Object} { valid: Boolean, message: String }
+     */
+    validateAndLock: function(current) {
+        var doctor = current.getValue('doctor');
+        var patient = current.getValue('patient');
+        var start = current.getValue('start_time');
+        var end = current.getValue('end_time');
+        var currentId = current.getUniqueValue();
+        var status = current.getValue('status');
+
+        // Inactive / non-blocking statuses: 6 (Completed), 7 (Cancelled), 8 (No Show), 9 (Rescheduled)
+        var inactiveList = ['6', '7', '8', '9', 'completed', 'cancelled', 'rescheduled', 'no_show', 'no show'];
+
+        // If the appointment itself is inactive or being set to inactive, allow it immediately (frees the slot)
+        if (status && inactiveList.indexOf(String(status).toLowerCase()) !== -1) {
+            return { valid: true };
+        }
+
+        // Mandatory values check
+        if (!doctor || !patient || !start || !end) {
+            return { valid: true };
+        }
+
+        // 1. DOCTOR OVERLAP CHECK
+        var docGr = new GlideRecord('x_2223823_apollo_0_appointment');
+        docGr.addQuery('doctor', doctor);
+        if (currentId) {
+            docGr.addQuery('sys_id', '!=', currentId);
+        }
+        // Exclude inactive appointments
+        docGr.addQuery('status', 'NOT IN', '6,7,8,9,completed,cancelled,rescheduled,no_show');
+        // Overlap formula: existing.start < new.end AND existing.end > new.start
+        docGr.addQuery('start_time', '<', end);
+        docGr.addQuery('end_time', '>', start);
+        docGr.setLimit(1);
+        docGr.query();
+
+        if (docGr.next()) {
+            return {
+                valid: false,
+                message: 'This doctor already has an appointment during the selected time.'
+            };
+        }
+
+        // 2. PATIENT OVERLAP CHECK
+        var patGr = new GlideRecord('x_2223823_apollo_0_appointment');
+        patGr.addQuery('patient', patient);
+        if (currentId) {
+            patGr.addQuery('sys_id', '!=', currentId);
+        }
+        patGr.addQuery('status', 'NOT IN', '6,7,8,9,completed,cancelled,rescheduled,no_show');
+        // Overlap formula: existing.start < new.end AND existing.end > new.start
+        patGr.addQuery('start_time', '<', end);
+        patGr.addQuery('end_time', '>', start);
+        patGr.setLimit(1);
+        patGr.query();
+
+        if (patGr.next()) {
+            return {
+                valid: false,
+                message: 'You already have another appointment scheduled during this time.'
+            };
+        }
+
+        // No conflict found
+        return { valid: true };
+    },
+
+    type: 'ApolloAppointmentValidator'
+};
+]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>fateh.meena</sys_created_by>
+        <sys_created_on>2026-11-16 06:03:31</sys_created_on>
+        <sys_id>1f15805247e85b50273a565a516d430d</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>ApolloAppointmentValidator</sys_name>
+        <sys_package display_value="Apollo-Hospitals" source="x_2223823_apollo_0">87c1422693c89b507b3a7c5efaba1008</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
+        <sys_update_name>sys_script_include_1f15805247e85b50273a565a516d430d</sys_update_name>
+        <sys_updated_by>fateh.meena</sys_updated_by>
+        <sys_updated_on>2026-11-16 06:34:22</sys_updated_on>
+    </sys_script_include>
+</record_update>

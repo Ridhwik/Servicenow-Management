@@ -1,0 +1,1910 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_hub_flow">
+    <sys_hub_flow action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <acls/>
+        <active>true</active>
+        <allow_high_security_roles>false</allow_high_security_roles>
+        <annotation/>
+        <attributes>browserActivatedIn=chrome,integrationActivatedIn=standalone,labelCacheCleanUpExecuted=true,timeFromCreateToActivate=94194000,viewActivatedIn=naturalLanguage</attributes>
+        <authored_on_release_version>29000</authored_on_release_version>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <copied_from/>
+        <copied_from_name/>
+        <description/>
+        <display_name_after_preview/>
+        <flow_priority>MEDIUM</flow_priority>
+        <generation_source/>
+        <internal_name>bed_lifecycle_flow_discharge_gt_cleaning_task_gt_available</internal_name>
+        <label_cache>[{"name":"Updated_1.current.hospital.name","label":"Trigger - Record Updated➛Admissions Record➛Hospital➛Name","reference":"","reference_display":"Name","type":"string","base_type":"string","parent_table_name":"x_2223823_apollo_0_hospital","column_name":"name","usedInstances":{"46f679c4-8f98-41b5-ac95-9fe6fc6a38ce":[null]}},{"name":"7e044a57-d00e-4261-8779-d556840342ae.requested_item.due_date","label":"6 - Submit Catalog Item Request➛Requested Item➛Due date","reference":"","reference_display":"Due date","type":"glide_date_time","base_type":"glide_date_time","parent_table_name":"sc_req_item","column_name":"due_date","usedInstances":{"46f679c4-8f98-41b5-ac95-9fe6fc6a38ce":[null]}},{"name":"Updated_1.current.room.room_number","label":"Trigger - Record Updated➛Admissions Record➛Room➛Room number","reference":"","reference_display":"Room number","type":"string","base_type":"string","parent_table_name":"x_2223823_apollo_0_rooms","column_name":"room_number","usedInstances":{"46f679c4-8f98-41b5-ac95-9fe6fc6a38ce":[null]}},{"name":"Updated_1.current.bed.bed_number","label":"Trigger - Record Updated➛Admissions Record➛Bed➛Bed number","reference":"","reference_display":"Bed number","type":"string","base_type":"string","parent_table_name":"x_2223823_apollo_0_beds","column_name":"bed_number","usedInstances":{"46f679c4-8f98-41b5-ac95-9fe6fc6a38ce":[null]}},{"name":"7e044a57-d00e-4261-8779-d556840342ae.requested_item.sys_id","label":"6 - Submit Catalog Item Request➛Requested Item➛Sys ID","reference":"","reference_display":"Sys ID","type":"GUID","base_type":"GUID","parent_table_name":"sc_req_item","column_name":"sys_id","usedInstances":{"46f679c4-8f98-41b5-ac95-9fe6fc6a38ce":[null]}},{"name":"7e044a57-d00e-4261-8779-d556840342ae.requested_item.expected_start","label":"6 - Submit Catalog Item Request➛Requested Item➛Expected start","reference":"","reference_display":"Expected start","type":"glide_date_time","base_type":"glide_date_time","parent_table_name":"sc_req_item","column_name":"expected_start","usedInstances":{"46f679c4-8f98-41b5-ac95-9fe6fc6a38ce":[null]}},{"name":"7e044a57-d00e-4261-8779-d556840342ae.requested_item.priority","label":"6 - Submit Catalog Item Request➛Requested Item➛Priority","reference":"","reference_display":"Priority","type":"choice","base_type":"choice","parent_table_name":"sc_req_item","column_name":"priority","choices":[{"label":"-- None --","sequence":-1.0,"selected":false,"used":false,"rawLabel":"-- None --","missing":false,"reference":false,"image":"","value":""},{"parameters":{"name":"task","dependent_values":[""],"dependent_values_map":{"":"1 - Critical"}},"sequence":1.0,"selected":false,"label":"1 - Critical","used":false,"rawLabel":"1 - Critical","missing":false,"reference":false,"image":"","value":"1"},{"parameters":{"name":"task","dependent_values":[""],"dependent_values_map":{"":"2 - High"}},"sequence":2.0,"selected":false,"label":"2 - High","used":false,"rawLabel":"2 - High","missing":false,"reference":false,"image":"","value":"2"},{"parameters":{"name":"task","dependent_values":[""],"dependent_values_map":{"":"3 - Moderate"}},"sequence":3.0,"selected":false,"label":"3 - Moderate","used":false,"rawLabel":"3 - Moderate","missing":false,"reference":false,"image":"","value":"3"},{"parameters":{"name":"task","dependent_values":[""],"dependent_values_map":{"":"4 - Low"}},"sequence":4.0,"selected":false,"label":"4 - Low","used":false,"rawLabel":"4 - Low","missing":false,"reference":false,"image":"","value":"4"},{"parameters":{"name":"task","dependent_values":[""],"dependent_values_map":{"":"5 - Planning"}},"sequence":5.0,"selected":false,"label":"5 - Planning","used":false,"rawLabel":"5 - Planning","missing":false,"reference":false,"image":"","value":"5"}],"usedInstances":{"46f679c4-8f98-41b5-ac95-9fe6fc6a38ce":[null]}},{"name":"Updated_1.current.bed.room","label":"Trigger - Record Updated➛Admissions Record➛Bed➛Room","reference":"x_2223823_apollo_0_rooms","reference_display":"Rooms","type":"reference","base_type":"reference","parent_table_name":"x_2223823_apollo_0_beds","column_name":"room","usedInstances":{"46f679c4-8f98-41b5-ac95-9fe6fc6a38ce":[null]}},{"name":"7e044a57-d00e-4261-8779-d556840342ae.requested_item.number","label":"6 - Submit Catalog Item Request➛Requested Item➛Number","reference":"","reference_display":"Number","type":"string","base_type":"string","parent_table_name":"sc_req_item","column_name":"number","usedInstances":{"46f679c4-8f98-41b5-ac95-9fe6fc6a38ce":[null]}},{"name":"74d925a4-4b9b-4e66-929d-dcd7c5df6a80.state","label":"9 - Wait For Condition➛State","reference_display":"State","type":"choice","base_type":"choice","choices":[{"label":"Complete","value":"0","order":0.0},{"label":"Timeout","value":"1","order":1.0}],"usedInstances":{"11280477-429a-416e-8f52-1247b94d0a9a":["condition"]},"attributes":{"uiType":"choice","uiTypeLabel":"Choice","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"2e334039-7a20-4ead-9148-909988f1a7e4"}},{"name":"7e044a57-d00e-4261-8779-d556840342ae.requested_item","label":"6 - Submit Catalog Item Request➛Requested Item","reference":"sc_req_item","reference_display":"Requested Item","type":"document_id","base_type":"document_id","usedInstances":{"070e546d-9569-45ef-920f-145eb722899e":["record"],"74d925a4-4b9b-4e66-929d-dcd7c5df6a80":["record"],"46f679c4-8f98-41b5-ac95-9fe6fc6a38ce":["record"]},"attributes":{"uiType":"document_id","uiTypeLabel":"Document ID","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"aad3452b-309c-469c-9797-4df9ef6f86be"}},{"name":"Updated_1.current.hospital","label":"Trigger - Record Updated➛Admissions Record➛Hospital","reference":"x_2223823_apollo_0_hospital","reference_display":"Hospital","type":"reference","base_type":"reference","parent_table_name":"x_2223823_apollo_0_admissions","column_name":"hospital","usedInstances":{"12837a32-b5c3-4218-ad81-b9ab5fd685c6":["hospital"],"4122bcaa-6056-4ca8-84b5-86ff1f28168a":[null],"7e044a57-d00e-4261-8779-d556840342ae":["hospital"],"c444c49c-2f8e-4c93-87ff-85813811d8f7":["hospital"],"46f679c4-8f98-41b5-ac95-9fe6fc6a38ce":[null]}},{"name":"Updated_1.current.bed","label":"Trigger - Record Updated➛Admissions Record➛Bed","reference":"x_2223823_apollo_0_beds","reference_display":"Beds","type":"reference","base_type":"reference","parent_table_name":"x_2223823_apollo_0_admissions","column_name":"bed","usedInstances":{"f3314e9d-a31e-4a65-9765-3acf16864df1":["record"],"12837a32-b5c3-4218-ad81-b9ab5fd685c6":["bed"],"7e044a57-d00e-4261-8779-d556840342ae":["room_bed"],"bde340ef-d69b-44dd-877a-f0ee1e5f93e9":["record"],"c444c49c-2f8e-4c93-87ff-85813811d8f7":["bed"],"46f679c4-8f98-41b5-ac95-9fe6fc6a38ce":["ah_subject",null]}},{"name":"Updated_1.current","label":"Trigger - Record Updated➛Admissions Record","reference":"x_2223823_apollo_0_admissions","reference_display":"Admissions","type":"reference","base_type":"reference","usedInstances":{"4122bcaa-6056-4ca8-84b5-86ff1f28168a":[null]},"attributes":{}},{"name":"Updated_1.current.patient","label":"Trigger - Record Updated➛Admissions Record➛Patient","reference":"x_2223823_apollo_0_patient","reference_display":"Patient","type":"reference","base_type":"reference","parent_table_name":"x_2223823_apollo_0_admissions","column_name":"patient","usedInstances":{"4122bcaa-6056-4ca8-84b5-86ff1f28168a":[null],"7e044a57-d00e-4261-8779-d556840342ae":["requested_for"]}},{"name":"4122bcaa-6056-4ca8-84b5-86ff1f28168a.Record","label":"3 - Look Up Record➛Invoice Record","reference":"x_2223823_apollo_0_invoice","reference_display":"Invoice","type":"reference","base_type":"reference","usedInstances":{"d55b09bf-f6a6-47a1-a05a-107d0047b5fc":["record"]},"attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"d55b09bf-f6a6-47a1-a05a-107d0047b5fc.state","label":"4 - Wait For Condition➛State","reference_display":"State","type":"choice","base_type":"choice","choices":[{"label":"Complete","value":"0","order":0.0},{"label":"Timeout","value":"1","order":1.0}],"usedInstances":{"28126b6d-ade8-4fdc-bca1-23e86ed4faf7":["condition"]},"attributes":{"uiType":"choice","uiTypeLabel":"Choice","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"2e334039-7a20-4ead-9148-909988f1a7e4"}},{"name":"Updated_1.current.final_invoice.sys_id","label":"Trigger - Record Updated➛Admissions Record➛Final invoice➛Sys ID","reference":"","reference_display":"Sys ID","type":"GUID","base_type":"GUID","parent_table_name":"x_2223823_apollo_0_invoice","column_name":"sys_id","usedInstances":{"4122bcaa-6056-4ca8-84b5-86ff1f28168a":[null]}},{"name":"7e044a57-d00e-4261-8779-d556840342ae.requested_item.x_2223823_apollo_0_hospital","label":"6 - Submit Catalog Item Request➛Requested Item➛Hospital","reference":"x_2223823_apollo_0_hospital","reference_display":"Hospital","type":"reference","base_type":"reference","parent_table_name":"sc_req_item","column_name":"x_2223823_apollo_0_hospital","usedInstances":{"46231f49-a005-484e-94f9-4c82ddaecc82":[null],"46f679c4-8f98-41b5-ac95-9fe6fc6a38ce":[null]}},{"name":"7e044a57-d00e-4261-8779-d556840342ae.requested_item.cat_item","label":"6 - Submit Catalog Item Request➛Requested Item➛Item","reference":"sc_cat_item","reference_display":"Catalog Item","type":"reference","base_type":"reference","parent_table_name":"sc_req_item","column_name":"cat_item","usedInstances":{"46231f49-a005-484e-94f9-4c82ddaecc82":[null]}},{"name":"7e044a57-d00e-4261-8779-d556840342ae.requested_item.x_2223823_apollo_0_hospital.name","label":"6 - Submit Catalog Item Request➛Requested Item➛Hospital➛Name","reference":"","reference_display":"Name","type":"string","base_type":"string","parent_table_name":"x_2223823_apollo_0_hospital","column_name":"name","usedInstances":{"46231f49-a005-484e-94f9-4c82ddaecc82":[null]}},{"name":"7e044a57-d00e-4261-8779-d556840342ae.requested_item.cat_item.sys_name","label":"6 - Submit Catalog Item Request➛Requested Item➛Item➛Display name","reference":"","reference_display":"Display name","type":"string","base_type":"string","parent_table_name":"sc_cat_item","column_name":"sys_name","usedInstances":{"46231f49-a005-484e-94f9-4c82ddaecc82":[null]}},{"name":"46231f49-a005-484e-94f9-4c82ddaecc82.Record.email","label":"7➛Group Record➛Group email","reference":"","reference_display":"Group email","type":"email","base_type":"email","parent_table_name":"sys_user_group","column_name":"email","usedInstances":{"46f679c4-8f98-41b5-ac95-9fe6fc6a38ce":["ah_to"]}}]</label_cache>
+        <master_snapshot>7869f16a47e81f50273a565a516d43b6</master_snapshot>
+        <master_snapshot_digest/>
+        <name>Bed lifecycle flow (Discharge -&gt; Cleaning Task -&gt; Available)</name>
+        <natlang/>
+        <outputs/>
+        <pre_compiled>false</pre_compiled>
+        <remote_trigger_id>b7ef9bf247a8df50273a565a516d43ec</remote_trigger_id>
+        <run_as>user</run_as>
+        <run_with_roles/>
+        <sc_callable>false</sc_callable>
+        <show_draft_actions>false</show_draft_actions>
+        <show_triggered_flows>false</show_triggered_flows>
+        <status>published</status>
+        <substatus/>
+        <sys_class_name>sys_hub_flow</sys_class_name>
+        <sys_created_by>nilesh.chaurasia</sys_created_by>
+        <sys_created_on>2026-11-17 09:06:33</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>9a98b1e647e81f50273a565a516d4375</sys_id>
+        <sys_mod_count>92</sys_mod_count>
+        <sys_name>Bed lifecycle flow (Discharge -&gt; Cleaning Task -&gt; Available)</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Apollo-Hospitals" source="x_2223823_apollo_0">87c1422693c89b507b3a7c5efaba1008</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
+        <sys_update_name>sys_hub_flow_9a98b1e647e81f50273a565a516d4375</sys_update_name>
+        <sys_updated_by>nilesh.chaurasia</sys_updated_by>
+        <sys_updated_on>2026-11-18 11:16:31</sys_updated_on>
+        <type>flow</type>
+        <updation_source/>
+        <version>2</version>
+        <version_record>dcffdbf247a8df50273a565a516d43e2</version_record>
+    </sys_hub_flow>
+    <sys_translated_text action="delete_multiple" query="documentkey=9a98b1e647e81f50273a565a516d4375"/>
+    <sys_variable_value action="delete_multiple" query="document_key=9a98b1e647e81f50273a565a516d4375"/>
+    <sys_flow_record_trigger action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <condition table="x_2223823_apollo_0_admissions">status=5^expected_discharge_dateISNOTEMPTY^bed.status=3<item display_value="Discharged" endquery="false" field="status" goto="false" newquery="false" operator="=" or="false" value="5"/>
+            <item endquery="false" field="expected_discharge_date" goto="false" newquery="false" operator="ISNOTEMPTY" or="false" value=""/>
+            <item endquery="false" field="bed.status" goto="false" newquery="false" operator="=" or="false" value="3"/>
+        </condition>
+        <name/>
+        <on_delete>false</on_delete>
+        <on_insert>false</on_insert>
+        <on_update>true</on_update>
+        <published_version/>
+        <run_flow_in>background</run_flow_in>
+        <run_on_extended>false</run_on_extended>
+        <run_when_setting>both</run_when_setting>
+        <run_when_user_list/>
+        <run_when_user_setting>any</run_when_user_setting>
+        <sys_class_name>sys_flow_record_trigger</sys_class_name>
+        <sys_created_by>nilesh.chaurasia</sys_created_by>
+        <sys_created_on>2026-11-18 11:16:31</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>b7ef9bf247a8df50273a565a516d43ec</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_overrides/>
+        <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
+        <sys_updated_by>nilesh.chaurasia</sys_updated_by>
+        <sys_updated_on>2026-11-18 11:16:31</sys_updated_on>
+        <table>x_2223823_apollo_0_admissions</table>
+        <trigger_definition/>
+    </sys_flow_record_trigger>
+    <sys_trigger_runner_mapping action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <data>{"run_flow_in":"background","run_when_user_list":[],"run_when_setting":"both","run_when_user_setting":"any","run_on_extended":"false"}</data>
+        <identifier>9a98b1e647e81f50273a565a516d4375</identifier>
+        <identifier_type>flow</identifier_type>
+        <runner>FDTriggerRunner</runner>
+        <sys_created_by>nilesh.chaurasia</sys_created_by>
+        <sys_created_on>2026-11-18 11:16:31</sys_created_on>
+        <sys_id>b3ef9bf247a8df50273a565a516d43ed</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>nilesh.chaurasia</sys_updated_by>
+        <sys_updated_on>2026-11-18 11:16:31</sys_updated_on>
+        <trigger display_value="">b7ef9bf247a8df50273a565a516d43ec</trigger>
+    </sys_trigger_runner_mapping>
+    <sys_trigger_runner_mapping action="delete_multiple" query="identifier=9a98b1e647e81f50273a565a516d4375^sys_idNOT INb3ef9bf247a8df50273a565a516d43ed"/>
+    <sys_hub_flow_stage action="delete_multiple" query="flow=9a98b1e647e81f50273a565a516d4375"/>
+    <sys_flow_cat_variable_model action="delete_multiple" query="id=9a98b1e647e81f50273a565a516d4375^sys_idNOT INde98b1e647e81f50273a565a516d4376"/>
+    <sys_flow_cat_variable_model action="INSERT_OR_UPDATE">
+        <id>9a98b1e647e81f50273a565a516d4375</id>
+        <name>Bed lifecycle flow (Discharge -&gt; Cleaning Task -&gt; Available)</name>
+        <sys_created_by>nilesh.chaurasia</sys_created_by>
+        <sys_created_on>2026-11-17 09:06:33</sys_created_on>
+        <sys_id>de98b1e647e81f50273a565a516d4376</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>nilesh.chaurasia</sys_updated_by>
+        <sys_updated_on>2026-11-17 09:06:33</sys_updated_on>
+    </sys_flow_cat_variable_model>
+    <sys_flow_cat_variable action="delete_multiple" query="flow_catalog_model=de98b1e647e81f50273a565a516d4376"/>
+    <sys_hub_flow_input action="delete_multiple" query="model=9a98b1e647e81f50273a565a516d4375^sys_idNOT IN3dd8312a47e81f50273a565a516d4344,75d8312a47e81f50273a565a516d439e,bdd8312a47e81f50273a565a516d43a9"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,test_input_hidden=true,uiType=table_name,uiTypeLabel=Table Name</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>table_name</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">table_name</internal_type>
+        <label>Table Name</label>
+        <mandatory>false</mandatory>
+        <max_length>200</max_length>
+        <model display_value="Bed lifecycle flow (Discharge -&gt; Cleaning Task -&gt; Available)">9a98b1e647e81f50273a565a516d4375</model>
+        <model_id>9a98b1e647e81f50273a565a516d4375</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_input_9a98b1e647e81f50273a565a516d4375</name>
+        <next_element/>
+        <order>101</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_only_option/>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>nilesh.chaurasia</sys_created_by>
+        <sys_created_on>2026-11-17 09:07:36</sys_created_on>
+        <sys_id>3dd8312a47e81f50273a565a516d4344</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>nilesh.chaurasia</sys_updated_by>
+        <sys_updated_on>2026-11-17 09:09:59</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=3dd8312a47e81f50273a565a516d4344"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=document_id,uiTypeLabel=Document ID</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent>table_name</dependent>
+        <dependent_on_field>table_name</dependent_on_field>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>current</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">document_id</internal_type>
+        <label>Record</label>
+        <mandatory>true</mandatory>
+        <max_length>200</max_length>
+        <model display_value="Bed lifecycle flow (Discharge -&gt; Cleaning Task -&gt; Available)">9a98b1e647e81f50273a565a516d4375</model>
+        <model_id>9a98b1e647e81f50273a565a516d4375</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_input_9a98b1e647e81f50273a565a516d4375</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_only_option/>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>nilesh.chaurasia</sys_created_by>
+        <sys_created_on>2026-11-17 09:07:37</sys_created_on>
+        <sys_id>75d8312a47e81f50273a565a516d439e</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>nilesh.chaurasia</sys_updated_by>
+        <sys_updated_on>2026-11-17 09:09:59</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>true</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=75d8312a47e81f50273a565a516d439e"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>child_label=FDChangeDetails,child_name=FDChangeDetails,child_type=object,child_type_label=Object,co_type_name=FDCollection,element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,pwd2droppable=true,uiType=array.object,uiTypeLabel=Array.Object</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>changed_fields</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label>Changed Fields</label>
+        <mandatory>false</mandatory>
+        <max_length>4000</max_length>
+        <model display_value="Bed lifecycle flow (Discharge -&gt; Cleaning Task -&gt; Available)">9a98b1e647e81f50273a565a516d4375</model>
+        <model_id>9a98b1e647e81f50273a565a516d4375</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_input_9a98b1e647e81f50273a565a516d4375</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_only_option/>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>nilesh.chaurasia</sys_created_by>
+        <sys_created_on>2026-11-17 09:07:37</sys_created_on>
+        <sys_id>bdd8312a47e81f50273a565a516d43a9</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>nilesh.chaurasia</sys_updated_by>
+        <sys_updated_on>2026-11-17 09:07:37</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=bdd8312a47e81f50273a565a516d43a9"/>
+    <sys_hub_flow_output action="delete_multiple" query="model=9a98b1e647e81f50273a565a516d4375"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=9a98b1e647e81f50273a565a516d4375"/>
+    <sys_hub_trigger_instance_v2 action="delete_multiple" query="flow=9a98b1e647e81f50273a565a516d4375^sys_idNOT IN29d8312a47e81f50273a565a516d433b"/>
+    <sys_hub_trigger_instance_v2 action="INSERT_OR_UPDATE">
+        <comment/>
+        <display_text/>
+        <flow display_value="Bed lifecycle flow (Discharge -&gt; Cleaning Task -&gt; Available)">9a98b1e647e81f50273a565a516d4375</flow>
+        <generation_source/>
+        <name>Updated</name>
+        <published_version/>
+        <remote_sys_id/>
+        <sys_created_by>nilesh.chaurasia</sys_created_by>
+        <sys_created_on>2026-11-17 09:07:35</sys_created_on>
+        <sys_id>29d8312a47e81f50273a565a516d433b</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>nilesh.chaurasia</sys_updated_by>
+        <sys_updated_on>2026-11-17 11:36:25</sys_updated_on>
+        <trigger_definition display_value="Updated">bb695e60c31322002841b63b12d3aea5</trigger_definition>
+        <trigger_inputs>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</trigger_inputs>
+        <trigger_outputs/>
+        <trigger_type>record_update</trigger_type>
+        <updation_source/>
+    </sys_hub_trigger_instance_v2>
+    <sys_hub_action_instance_v2 action="delete_multiple" query="flow=9a98b1e647e81f50273a565a516d4375^sys_idNOT IN03eb5eee47ec1f50273a565a516d43bd,13c7f27a4724df50273a565a516d43d6,1b09323e47e0df50273a565a516d43e0,934e926647205f50273a565a516d43c3,95acae6647a05f50273a565a516d43a1,aa6d66a647a05f50273a565a516d43f8,cdad526247205f50273a565a516d4380,da1c6a2647a05f50273a565a516d4312,f85fd6e647205f50273a565a516d438f,ff293d2a47e81f50273a565a516d43d4"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Create Record">2de05916c31332002841b63b12d3aee1</action_type>
+        <action_type_parent display_value="Create Record">02f0b88cc3c632002841b63b12d3aeff</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>2de05916c31332002841b63b12d3aee1</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Bed lifecycle flow (Discharge -&gt; Cleaning Task -&gt; Available)">9a98b1e647e81f50273a565a516d4375</flow>
+        <generation_source/>
+        <order>2</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>nilesh.chaurasia</sys_created_by>
+        <sys_created_on>2026-11-17 11:40:53</sys_created_on>
+        <sys_id>03eb5eee47ec1f50273a565a516d43bd</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
+        <sys_updated_by>vikas.singh</sys_updated_by>
+        <sys_updated_on>2026-11-18 11:23:20</sys_updated_on>
+        <ui_id>12837a32-b5c3-4218-ad81-b9ab5fd685c6</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+1W32/bNhD+Vwg+rZmrSJbrOe5T1izbQ9cUdZeXqhEo8WRzoEiNpJx4hv/3HknJSX9k64ABQ4H5xeDdd8fvjt+d/W5PBadLOs8gfXaWzes8y/Npmk4Xs6ya51U25TkDmNEJVawFRDpWSSjDYUK3TPbeeFdOp9N8Mc1L1mkpdZmWFfDSOuZ6W0q9RiwXtpNsdz2E/AicrIKfvAz+eiMkN6Do8t37Ce2YwSscGLrcf+L6WsKSVSAR+tYzfqQAt+u+aHv5MJa8ig5tuOeTTijcOVAckEjDpIUJbZnizGmzo0tnejQYYPxKyd0RsRHKYULqsXdW/InXLlKPawArqyH6jsdyaFc0NxfMsRVmrl1vBmi90aIGG3vCoWG9dC8e2iLgqnNCqxgSyhyitexb9Sq2hB4TjK+Dlt4iCeh8nZ75UEaz2ujbNyPLS6FCSwan1DWTxxNzzoiqd57PnoKEFhOVLes6odZlZ/RWhGDk0iZriYekkfoWL7VirRJWe+IJtpUll2i/COZrZoSv4ldMg8GHCbU7+0Iya+9rwSaWf/SeSaxsqKGMbfAhtRGdO8cLtjDQPUzGSeCQnj0qrKy6F1IQv30wBSj5ok/TnO/3v3XIGycgS+reYKtcgs7D4aYxuh3GIkLzG6c/MsxuNtp2wjH5eK4RgQnrDVNrdFa7AV6Mg1bQZUFXO+ugJee8FUpYZ7xGCzopIucAmS+yefPDWV2nbJFm81ma1c9YnleQziqYzbIAD8oJcGx3idKIWfxB8K9Mc0+WuUi24U/jUwC/wYGxWkX7a+YE1kkuhMUQswaC7J3wXSBahWqsRXEQAzUO5efL5f+X+M9e4h+u8b+ftnGNXwqQ3H5h/MYdDi0220EZx/GTPT44yfXgHHZ59m/t8myehs83tNFjcd/8Qn/w2/3Zao8lRltU4Ch7f/orLD09KdTJyXmNzbfE0z09D/yJ5096iyUTtwHS8DJYdPU71C4hq5CAtL11OBT4uIowEiSZEJ/xyguPqL6t8EtYopvGgiPVjnyf4XCRn4zRhvyCGpT+ihXErgUyWyZk+EOigwQsGSRF+g6JdQap+piCJgUlrMGxG+n5cLhjOASwRDaG2I02Dl+gJnHQR2CCT7xegzluuAD0Txjqwluf+1xDZccs3nhaKJ/ZaY6MhqwKbsnPXgkod3grWvjuCUKH6IB8ji9q2Rb4UaiHw+H9B+MhvJ+YCgAA</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=03eb5eee47ec1f50273a565a516d43bd"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Send Email">c1806bf4a70323008299b39f087901cb</action_type>
+        <action_type_parent display_value="Send Email">98c181d20b100300d97d8bf637673ab5</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>c1806bf4a70323008299b39f087901cb</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Bed lifecycle flow (Discharge -&gt; Cleaning Task -&gt; Available)">9a98b1e647e81f50273a565a516d4375</flow>
+        <generation_source/>
+        <order>8</order>
+        <parent_ui_id>28126b6d-ade8-4fdc-bca1-23e86ed4faf7</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>nilesh.chaurasia</sys_created_by>
+        <sys_created_on>2026-11-18 08:21:10</sys_created_on>
+        <sys_id>13c7f27a4724df50273a565a516d43d6</sys_id>
+        <sys_mod_count>9</sys_mod_count>
+        <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
+        <sys_updated_by>vikas.singh</sys_updated_by>
+        <sys_updated_on>2026-11-18 11:23:21</sys_updated_on>
+        <ui_id>46f679c4-8f98-41b5-ac95-9fe6fc6a38ce</ui_id>
+        <updation_source/>
+        <values>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</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=13c7f27a4724df50273a565a516d43d6"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Look Up Record">9d09f99587003300663ca1bb36cb0ba3</action_type>
+        <action_type_parent display_value="Look Up Record">b93f42810b30030085c083eb37673a63</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>9d09f99587003300663ca1bb36cb0ba3</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Bed lifecycle flow (Discharge -&gt; Cleaning Task -&gt; Available)">9a98b1e647e81f50273a565a516d4375</flow>
+        <generation_source/>
+        <order>7</order>
+        <parent_ui_id>28126b6d-ade8-4fdc-bca1-23e86ed4faf7</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>nilesh.chaurasia</sys_created_by>
+        <sys_created_on>2026-11-18 08:26:38</sys_created_on>
+        <sys_id>1b09323e47e0df50273a565a516d43e0</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
+        <sys_updated_by>vikas.singh</sys_updated_by>
+        <sys_updated_on>2026-11-18 11:23:20</sys_updated_on>
+        <ui_id>46231f49-a005-484e-94f9-4c82ddaecc82</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+VYXW/qOBD9K1GegXU+INC3Vbusqu3eSrfd+3L3ruXETrHWxKnj9Avx33ccO4CAFqJLpVb7hsdj+8zMmROb7wufU//MpxM0ySeT4ThBKIoQGo2ijARpGo2yFKUk9nt+QeYMPDVJBYPhAxG1GVfPFa4rpvCdknUJE5RXpSDP39z8786czbigihX+2fcfPb8kCrbTTPlni62pY/EIkjIBrrcO0BY+/VyuhriZs7arzWXeFzshFTVQUM9nT5oVlAGGnIiK9fw5KSjRUj2vLIoRel2ItWHGCw07+sb5qeIvcO4YGb+cQVQZs3OrIXYZsub8gmhyo1Wd6Vo512wmecYqmw/KclILfb5psw7XpeaysEts2Ha1FPW8+GLT4a82aAsCFqgXpqw0gRrkLoz8ZiYfv7Yop7xocuImhcyIWI2I1oqntTZ4Fj4TbA4b4TkpS17c4VLJB94sBizzwZ2AwSAX8hEOrfhdMSCZAT6AvJLBFOwXjfkbUdxE8SdsA4sBEBfAEGxLWMlaNal8wJmoq2ZCkaKye/nLnmHiuSBVtY4cUo7va4Pb5sFFjG3SzJJM8VL/Cls8MBfcste2xPBNCk7WlMtkQblBUW30hZm7uvzjt8UiYSiOyTDpU4RYPw5HQX+cJJM+HQ5H4xhFcUjYQLH7mkFUFHPN5oMnHIZhNA4jTEophMQIz2RVck3EwOy8XP7zcwdkRNsfpn/tjru9+ylj6Cg0h6vcCs35Zpn3ld5Jzo7tat8GTnKCk0lOjNBnEh04/ONpTncVsSk4ICUBfZNkdM2nSiqNbS43tGS3Mzvz/AgILc+vDTO99Pk1VI7mOWeC7vuyTs3E1pc1/H9+WT8kyQEQxbZ6vBC8aK5JAPS92D98k3ppsMWzhl4b90tjI1W22wPE09J76dwJR8BpO+EGzvZuLZ49EFu9byizrfWt0TVAdLIGiMLTNMBiFeYqkXty3t6MTTVb/xfjT7b9gYIbC4LlvgbrdGbQ9cxwudvAUacO3iSbnbl4hXMnvkK/0pG995SAGSx152Hbv/iR0zum16e3XlTqRyL+3TfvGIfbQjXhvcN1PHjzRZhuXMd5judQOV7Cq0GxDMhRYaIYzmVdUOzeC2simUrmXFXaOe8KzVcG/VN4EhrT0zPmNd7eyrvjh/hwHG0qL3OvDcSdVnkQiNcE4q0C6RZ2F9GKT3g5PbVoTQkXTTXgPVBulJMpJdUrwnWgkG8w4khVOxJUcFJQPy97+1pgr/wdwPop/lc4vTRljKTwPh0lURAgFCCaIHi7BuNRmo9IEufrHsW4KjJQU9g5B6rA9rilRltntKs/VlK7Cs0RqFoKXsji7xqhMNGegQX19VpYh4E7QUmlFIwUW4pyC9+JX6YOv+Pr8MOpyqf4l63mt9uZtqa9uX6ve0PN/yr4fc0uDcXGDIXjgGb9cRIk/Tino/6EkmGfTNJhElGWxfkprwI//gNQuZWyrhYAAA==</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=1b09323e47e0df50273a565a516d43e0"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Wait For Condition">89ce8a4187120010663ca1bb36cb0be3</action_type>
+        <action_type_parent display_value="Wait For Condition">8bb9a8160b10030085c083eb37673aec</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>89ce8a4187120010663ca1bb36cb0be3</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Bed lifecycle flow (Discharge -&gt; Cleaning Task -&gt; Available)">9a98b1e647e81f50273a565a516d4375</flow>
+        <generation_source/>
+        <order>4</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>nilesh.chaurasia</sys_created_by>
+        <sys_created_on>2026-11-17 11:51:17</sys_created_on>
+        <sys_id>934e926647205f50273a565a516d43c3</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
+        <sys_updated_by>vikas.singh</sys_updated_by>
+        <sys_updated_on>2026-11-18 11:23:20</sys_updated_on>
+        <ui_id>d55b09bf-f6a6-47a1-a05a-107d0047b5fc</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+2XXW+jOBSG/8qI6zhrgyGmd6Ok1VbqTqW0O3sxO0IHYzeWHGD46Ey26n9fA04gH820O2mlSnvJ8QfveX0eDv7y4KjEOXNoyAUDStiEuBgTHAQeBxLHXsBjHAvqjJwUlsLMLATPisQ834Oum8DDAyWuG3MAFGA/QJQDQ4zGPmKBlES6jAQMxvN23eOjWZmoMtew+mw3MBG+UDopROqcffk6cnIozLsqUThnDztDzxWrIRbaTJ2v1e6qr1Z585xkvF6KtIrUOnhlV87syIfLmRkxixo5ZOSIH5VIE2F0SNClGDlLSBOosmLlnFVFbQKFgOQ61avNjIVKqy7PJfwo1T/mxZ7bzJPCJMatB5vHyPrTheUMKrgxO/OqLjZ2ZYqLsrMkERJqXU2HsW7CdV6pLO2WVBDr9epM18v0U2eIs9lgcBx1aUSIvMmzUd6lJW8W2ff5WuSFSltHbIo646A3T1BVhYrrqpHz4NTq9pDZXfiw3VJpc/xRKzoqs7poTZqfT6/ns+ivj7fT38/n0fz85nZ+Ob09b1YILdqtl5DnKr2L8iK7V61Ck+9yfKfNw1jq7LtJrFR36Rh4Y87YHB2ML0x81oY/Q6Gal/5htjGLG5V/pupbLS7bwjP17JEgQIRgD1ESByhkwkdY+EB9lwZ+4DqPI6dclVMNZdl7bA43+lY3FnWOW2+j9ni6NNsKbRbzQuXVRyPvXlhHH0drTP2jlQ99oQ/27FH9Ebmu6zHXiyDPtM4iHKn0vimVfSovNwMvhPPnEtdw3rY1eViy5XMvdjVc++FTN2DpdI/TaSM9nl1dH6CT4XdEp03r1/Hc8nqbzi23VRl1NWpFt7u+FYIuYaFpLh7yYuojGkqJGGYUUQGY+24yoYT/BwR/Ct7xliP7KuZZmqgmr3IAXllBVZd/1xh7SQ7t528HtwMzTtoU5YC76VDiIdkWvr3Y1aENLHzeqVojxfg94Xeq5rhl9jZ9W3a/CWUiYUHsY4aEZAxRb8JQaH7yUBBAQgjlicSv2+hwcqya5eB/tFJLkdVVJDXcDYjD+4itv1Mv4+oZStZcnaftZ9IqelKipSvOMi0g3e1rppx+u7BKLVr0hX3tGFvviKyTNbbe6Z2uNvT6Tbji5m5k2hSg0OMC0SDmiEkukSdiX3p+zOIJfoXuxY/XcLhfqkldQHuKPVEnuLg9Q8eapVkv4GlplqT2bHbjV/sbWZz8/3H6JZz27N65yfUDr8XUwqybwapsqsIwvE+ZIDDx4+ZyBoi6IUEQUheFgZgIKlngQfgKlDFytLrlfimXfCGSWovTUvYMHWvKbnoBT0uzlPWFvg3YfBC3hAUnI4zt/QzyZToUd4i3QVbvkjt5I6DgiwsldHOe9kb2BI3DY9kGcXgwb9PdXJd4ieCIJObXkbqBi5hHJ2gSshhTU3qxJ07I3dd/AQPTpW69FAAA</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=934e926647205f50273a565a516d43c3"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Update Record">f9d01dd2c31332002841b63b12d3aea1</action_type>
+        <action_type_parent display_value="Update Record">baf174c8c3c232002841b63b12d3aee4</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>f9d01dd2c31332002841b63b12d3aea1</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Bed lifecycle flow (Discharge -&gt; Cleaning Task -&gt; Available)">9a98b1e647e81f50273a565a516d4375</flow>
+        <generation_source/>
+        <order>11</order>
+        <parent_ui_id>11280477-429a-416e-8f52-1247b94d0a9a</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>nilesh.chaurasia</sys_created_by>
+        <sys_created_on>2026-11-17 12:53:57</sys_created_on>
+        <sys_id>95acae6647a05f50273a565a516d43a1</sys_id>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
+        <sys_updated_by>vikas.singh</sys_updated_by>
+        <sys_updated_on>2026-11-18 11:23:21</sys_updated_on>
+        <ui_id>bde340ef-d69b-44dd-877a-f0ee1e5f93e9</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+VWXU/bMBT9K5YfWReSFhCUJwZDm8RAgo0XiiInvmk9OXFmOx1d6X/fteOEqmwMJF7Q2ofW98vn3Htu2pslFZyO6Q7wODlI9vJRMhoN43i4v5Nke6MsGfIRA0jogFasBIzUkCvN8TxnsnGG5fJbzZkFniZR3mgNlY0y4KsVxnBhaskW1yEULflMSI4xdHxzO6A101jVgqbj5YbrubAky0Bi6GWHaxOnXdTuzFXelIgtFZ3xLGSeBA/5fIIeTHJwknhA4c5CxQGBFEwaGNCSVchU6QUdW92gQQPjF5Vc9BEzUdmWaMnujPiFN+/ELq4AZJaHJvTHNDSoNRcnzLIrrJzbRvf9UiIH0/aEQ8EaaY/XbW3ARW2FqtoUyzLZZSvZlNV52xHaF1ibR2MQBNSOp0Pe0iquZurnZQfyVFS+JYGiVDmT/YlZq0XWWAdnSUGC73HJ6lpU07TWai58MkIpo6nEQ1RI9RPvNGJaRSx3uCPsKotO0X7izddMC0fiC5bB5NWAmoU5lsyYByrYw/RH45C0xAKF1HfBtyD1SnDJuRa1PcKr5hCArwZB+NnuUwrLDx4EtVbzQfx36XA4HO0PRymrlZQqjVPUvnks/Q/AX6z+Z2Dr1P/Vz/zPWMMCPLKdreeS89YR5L/7avLff0vyDzTevP7/pfp4+ORzdU1JXuhmTfHGMtuYSRPHI17w9+0tXtwbiv974Mu24BlYuy04FSD98m2C71YASkRoIW3JbKxBcJLr4Ox/CV5tF5K92L/e0Eb8Bz8ILcXW5jC3wvXfnoij21uTamvrKMfGG+Kgbh957MRhJ41BusTOgBQ89RaVfYfcRuTKFyBlYyzRgIOtCCNekBFxFS+c7EjVlBl+CENUURiwJFuQdwkRFfmotdLkE+pPuiuuoO2YBzNnQvqnufLjNyTIiTQ1Aqs1QnU5ExpNKGEFLl0Hz6XDHcMVgDGi0cTMlLbY/Zy0K9wFRjje6RR0/1/PB7rxeV5466GrFZj1VZxxe1K5d3Al5P4ekSQTeojzMmwOvJfharW6/Q240JNcmwoAAA==</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=95acae6647a05f50273a565a516d43a1"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Create Record">2de05916c31332002841b63b12d3aee1</action_type>
+        <action_type_parent display_value="Create Record">02f0b88cc3c632002841b63b12d3aeff</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>2de05916c31332002841b63b12d3aee1</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Bed lifecycle flow (Discharge -&gt; Cleaning Task -&gt; Available)">9a98b1e647e81f50273a565a516d4375</flow>
+        <generation_source/>
+        <order>12</order>
+        <parent_ui_id>11280477-429a-416e-8f52-1247b94d0a9a</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>nilesh.chaurasia</sys_created_by>
+        <sys_created_on>2026-11-17 12:57:18</sys_created_on>
+        <sys_id>aa6d66a647a05f50273a565a516d43f8</sys_id>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
+        <sys_updated_by>vikas.singh</sys_updated_by>
+        <sys_updated_on>2026-11-18 11:23:21</sys_updated_on>
+        <ui_id>c444c49c-2f8e-4c93-87ff-85813811d8f7</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+1WUW/bNhD+KwSftsxTJMv1HPcpTZftoW2AustL1QiUeLJZUKRGUk5cw/99R1Jys7bZWqAoUKB+MXj33fG743dnv95TwemSzjNIH51l8zrP8nyaptPFLKvmeZVNec4AZnRCFWsBkY5VEspwmNAtk7033pXT6TRfTPOSdVpKXaZlBby0jrnellKvEcuF7STbXQ8hT4CTVfCTZ8Ffb4TkBhRdvn4zoR0zeIUDQ5f7D1yfS1iyCiRCX3nGDxTgdt0nbc/ux5IX0aEN93zSCYU7B4oDEmmYtDChLVOcOW12dOlMjwYDjF8puTsiNkI5TEg99s6Kd3jtIvW4BrCyGqLveCyHdkVz85Q5tsLMtevNAK03WtRgY084NKyX7uK+LQKuOie0iiGhzCFay75VL2JL6DHB+Dpo6S2SgM7X6ZkPZTSrjb59ObK8FCq0ZHBKXTN5PDHnjKh65/nsKUhoMVHZsq4Tal12Rm9FCEYubbKWeEgaqW/xUivWKmG1J55gW1lyifanwXzNjPBVPMc0GHyYULuzF5JZ+74WbGL5d++ZxMqGGsrYBh9SG9G5c7xgCwPdw2ScBA7p2YPCyqr3Qgrit/emACVf9Gma8/3+rw554wRkSd0bbJVL0Hk43Gy07YRj8mHciEBwY3Q7zFDEz26c/pchu6k3TK0xQbUbUhbjoBV0WdDVzjpoyTlvhRLWGa/Rgk6KyDlA5ots3vx2VtcpW6TZfJZm9SOW5xWkswpmsyzAg3ICHNtdojRiFn8Q/DPTHI5kmYtkG/5rfArgNzgwVqtov5DAFIqEbMGIRuCmwPEi2EFiUEbM4uB9tE9+NP9bNv8Ll/X/z9S4rC8FSG4/MWTjpoYW++ugjEP3wbYenOR6cA4bO/taGzubp+HzHe3tWNx3v7bv/UJ/tMBjidEWFTgq3Z/+C0tPTwp1cnJeY/Mt8XRPzwN/4vmT3vo5cBsgDS+DRVdvoXYJWYUEpO2tw7HAx1WEkSDJhPiMV154RPVthV/CEt00FhypduSXjAhFfjdGG/InalD6K1YQuxbIbJmQ4W+HDhKwZJAU6Tsk1hmk6mMKmhSUsAbHbqTnw+GO4RDAEtkYYjfaOHyBmsTZHoEJPvF6Dea4+ALQP2GoC2997HMNlR2zeONpoQrlczvNkdOQV8Et+cNrAQUPr0QLP/2M4CE+IB/jm1q2BX6U6uFwePMP8fH9XYAKAAA=</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=aa6d66a647a05f50273a565a516d43f8"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Look Up Record">9d09f99587003300663ca1bb36cb0ba3</action_type>
+        <action_type_parent display_value="Look Up Record">b93f42810b30030085c083eb37673a63</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>9d09f99587003300663ca1bb36cb0ba3</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Bed lifecycle flow (Discharge -&gt; Cleaning Task -&gt; Available)">9a98b1e647e81f50273a565a516d4375</flow>
+        <generation_source/>
+        <order>3</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>nilesh.chaurasia</sys_created_by>
+        <sys_created_on>2026-11-17 11:48:23</sys_created_on>
+        <sys_id>cdad526247205f50273a565a516d4380</sys_id>
+        <sys_mod_count>6</sys_mod_count>
+        <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
+        <sys_updated_by>vikas.singh</sys_updated_by>
+        <sys_updated_on>2026-11-18 11:23:20</sys_updated_on>
+        <ui_id>4122bcaa-6056-4ca8-84b5-86ff1f28168a</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+VYXW/iOBT9K1GeKZsPINC3USukSrNTadqZl9mR5cROsdbYGcehH4j/vtexA1mgQGap1GoffX1tn3vvOddOfix9RvxLn0yCST6ZDMdJEMRxEIxGcYbDNI1HWRqkeOD3fIHnFDw1TjmF4QLzyoyfUBRF8TiKES4k5xIFiImFZJlxIqwsOH7+7nxv1hPZjHGiqPAvf/zs+QVWsLmmyr9cbk2dio7jlHJwvXfwttDq52I9RPWctX1uL/O+2AmpiIES9Hz6pKkgFDDkmJe058+xIFhL9by2KIrJreAbw4wJDTv6xvmpZC9w7jgwfjmFqDJq59ZD5HJkzfk11vhOqyrTlXKu2cwkrbT5IDTHFddXbZt1uC00k8IusWHb1ZJXc/HFpsNfb9CUBCxVCSBoYQI1yF0Y+d1MPn5tUE6ZqHPiJrnMMF+PsNaKpZU2eJY+5XQOG6E5LgomHlCh5ILViwHLvP/AYdDPuXyEQ0v2IPo4M8D7kFfcn4L9ujZ/x4qZKP6EbWAxAGIcGIJsCUtZqTqVC5TxqqwnFBal3ctf9fzyubziuCw3kUPK0a/K4LZ5cBEjmzSzJFOs0J9giwV1wa16jUCGByk42VAuk4Iwg6JsqQTQIEb+qmAxWS6/FRAsJSjsZ5WC/Op+zgTmjXD61nu12lXQb+/TUXDHo20Ed9UOd18KnPR2bJ/3beCkF55NeoMg+Ejig8Pfn/a6q8mm4IikQnKQZGTDp1IqjWwuW5raVUdnnp8AoeH5rWGmlz6/hsrRPGeUk303zNRMbN0w0f/zhnmXJAdABNnqMcGZqJ8LAPSt2D88SL003OJZTa/WfWJsuMx2NYA9Lb2Xzko4AU6jhDs427u3ePZAbPr9zD31/tXrG6MTQHw2AcTReQSwXIe5TuSenDcvRFPNxv/F+ONtf6Bga0G42iewTmeGXc+MVrsCjjspuE02O3P9CufO/JR8RZG9t2wBM1jqzkNWv+iRkQeqN6c3XkTqR8z/3jfvGIeaQtXhvcGzNDz4ZZS2nqUsR3OoHCvg9axoBuQoEVYU5bISBLl384ZIppI5U6V2zruN5isF/QhPgjA9PaNe7e2tvTtexMfjaFJ5k3tNIO600oNAvDoQbx1It7C7NK3BGR+n525aU8x4XQ34JCpa5aRKSfVK4zpSyAOMOLGrnQgqPCuo/9729klgb/s7gvVDfF+fvzVlFKeDCI+SOAyDIAxIEoyTJByP0nyEk0G+0ShCpcigm8LOOVAFtkcNNZo6B7v9x7bUro3mBFQNBa+lMB/aUaI9Awvq6zWwjgN3DSWVklMstjrKPdwTf0wdfsfX4bvrKh/ib1PF7rczbU17c/1W74aKfRPsV0VvDMXGNIjGIckuxkmYXAxyMrqYEDy8wJN0mMSEZoP8nE+Bn/8AdqywN8QVAAA=</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=cdad526247205f50273a565a516d4380"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Wait For Condition">89ce8a4187120010663ca1bb36cb0be3</action_type>
+        <action_type_parent display_value="Wait For Condition">8bb9a8160b10030085c083eb37673aec</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>89ce8a4187120010663ca1bb36cb0be3</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Bed lifecycle flow (Discharge -&gt; Cleaning Task -&gt; Available)">9a98b1e647e81f50273a565a516d4375</flow>
+        <generation_source/>
+        <order>9</order>
+        <parent_ui_id>28126b6d-ade8-4fdc-bca1-23e86ed4faf7</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>nilesh.chaurasia</sys_created_by>
+        <sys_created_on>2026-11-17 12:51:33</sys_created_on>
+        <sys_id>da1c6a2647a05f50273a565a516d4312</sys_id>
+        <sys_mod_count>6</sys_mod_count>
+        <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
+        <sys_updated_by>vikas.singh</sys_updated_by>
+        <sys_updated_on>2026-11-18 11:23:21</sys_updated_on>
+        <ui_id>74d925a4-4b9b-4e66-929d-dcd7c5df6a80</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+2XXW+jOBSG/0rFdZw1YMD0bpS02krdqZR2Zy9mR8jYx40lAhk+OpOt+t/XgCkkpJl2Jq1UaS45/uA9r8/DwZ/vLSWsU4uEHCgjNg1sB2Mb+77LmR3Hrs9jHAOxJlbKVqBn5sCzXOjnO5ZUdeD+PgBMCPMCJDAGRBzfRjQIQiQ8z6cEu8RhMM3hawVFCSJSJaweHvQOQhXrhG0+mY10hC9VInJIrdPPXybWmuX6nSXk1un9ztBzRScshkRPXXSqd7MoN+v6WWS8WkFaRqoLXpqVczNycjHXI3pRLceeWPC9hFSA1iFZUsDEWrFUsDLLN9ZpmVc6kAMTV2myeZyxVGnZ5rli3wv1n36x69TzJOjEuPHg8TEy/rRhOWclu9Y787LKH+3KFIeitUSAZFVSzoaxdsLVulRZ2i4pWZx0q7OkWqUfW0Osxw0Gx1EVWgSs6zxr5W1a8nqZfVt0Is9V2jhiUkwyzpLHJ1aWuYqrspZzb1XqZp/ZbXi/3VIl+vijRnRUZFXemLQ4m10t5tE/H25mf54tosXZ9c3iYnZzVq+ABJqtV2y9VulttM6zO9Uo1PmupreJfpjKJPumEyvUbTplvDZnqo+OTc91fN6EP7Fc1S/9S2+jF9cq/06VruCLpvCktF3b95FtYxcRO/ZRSMFDGDxGPIf4nu9YDxOr2BSzhBVF77E+3OhrVVvUOm68jZrjadNsKrRezHO1Lj9oeXdgHH2YdLh6Byuf9YU+2LNHtuCRxrEBcYzhogP15KIdfyGUP5bWQXnT1OJ+qYbLUexyuPbkYztgqHQOU2kiPZZtPe+hkuJ3RKVJ69ex3PJ6m8ott1URtbVpRDe7vhV6jk1DSmIXuTHxEAmlRBRTgggwzD1HBMTmP4HeD4E73GpkX8U8S4Wq8yqGwJWshH8rjF3hjonbGT1qE5QD3mZDafvkGuhGsct9Gxjo3GO1QoLxe8LuWM1wy+xt6rbsfhO6QFA/9jBFIClFxA0oCm3HQb7PhG0TLiR+3caGxaFqloP/0FKtIKvKSCbsdkAaHuPVfZ9extUzlHRcnaXN59EoelKioSvOsgRYutvPdDn9cW6UGrTIC/vZIbbeEVlHa2i90zvdbOj1m3DFOaO6PTEUulzfkPyYIyq5RC7EnnS9mMYBfoWuxQ/XcDguVVHlrDnFnqgjXNSeoaNjad4LeFqaIak5m9345Xgjg5P3G6dfwmlk987NrR94LaaWet2cbYq6KjTDY8rAZoEX15cxhogT2oiFxEGhDwEQSX2Xha9AGbUPVrccl3LBlyCqBI5L2TN0dJRd9wKelmYo6wt9G7DFIG4I849GGB39DPJVOhS3j7dBVu+SO3kNLOfLcwVJfZ7mJvYEjcNj2QZxeDBv090cx3YFcGQL/etIHN9B1CUBCkIaY6JLL3bhiNx9+R/ZMtJPtRQAAA==</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=da1c6a2647a05f50273a565a516d4312"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Submit Catalog Item Request">c7a04c607312001098e194596bf6a72a</action_type>
+        <action_type_parent display_value="Submit Catalog Item Request">bfb5ea807312001098e194596bf6a707</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>c7a04c607312001098e194596bf6a72a</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Bed lifecycle flow (Discharge -&gt; Cleaning Task -&gt; Available)">9a98b1e647e81f50273a565a516d4375</flow>
+        <generation_source/>
+        <order>6</order>
+        <parent_ui_id>28126b6d-ade8-4fdc-bca1-23e86ed4faf7</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>nilesh.chaurasia</sys_created_by>
+        <sys_created_on>2026-11-17 11:55:45</sys_created_on>
+        <sys_id>f85fd6e647205f50273a565a516d438f</sys_id>
+        <sys_mod_count>6</sys_mod_count>
+        <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
+        <sys_updated_by>vikas.singh</sys_updated_by>
+        <sys_updated_on>2026-11-18 11:23:20</sys_updated_on>
+        <ui_id>7e044a57-d00e-4261-8779-d556840342ae</ui_id>
+        <updation_source/>
+        <values>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</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=f85fd6e647205f50273a565a516d438f"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Update Record">f9d01dd2c31332002841b63b12d3aea1</action_type>
+        <action_type_parent display_value="Update Record">baf174c8c3c232002841b63b12d3aee4</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>f9d01dd2c31332002841b63b12d3aea1</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Bed lifecycle flow (Discharge -&gt; Cleaning Task -&gt; Available)">9a98b1e647e81f50273a565a516d4375</flow>
+        <generation_source/>
+        <order>1</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>nilesh.chaurasia</sys_created_by>
+        <sys_created_on>2026-11-17 09:09:06</sys_created_on>
+        <sys_id>ff293d2a47e81f50273a565a516d43d4</sys_id>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
+        <sys_updated_by>vikas.singh</sys_updated_by>
+        <sys_updated_on>2026-11-18 11:23:20</sys_updated_on>
+        <ui_id>f3314e9d-a31e-4a65-9765-3acf16864df1</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+VWUU/bMBD+K5YfWReSFhCUJwZDm8RAohsvFEVOfGk9OXFmOx1d1f++s+OEqmwMJF7Q+tL6fHf+vs/fJb1dUcHpmO4Bj5Oj5CAfJaPRMI6Hh3tJdjDKkiEfMYCEDmjFSsBMDbnSHNcLJhsXWK2+1ZxZ4GkS5Y3WUNkoA75eYw4XppZseRNSMZLPheSYQ8e3dwNaM41dLWg6Xm1tPReWZBlITL3ucG3jtMvarbnKmxKxpaILXoTKs7BDPp/hDhY5OEk8oHBvoeKAQAomDQxoySpkqvSSjq1uMKCB8atKLvuMuahsS7Rk90b8wpP3YpdXADLLgwj9Mg0CteHijFk2wc65bXSvlxI5mFYTDgVrpD3djLUJV7UVqmpLLMtkV61kU1aXrSK0b7BxH41BEFA7ng55S6uYzNXP6w7kuai8JIGiVDmT/YpZq0XWWAdnRUGC17hkdS2qWVprtRC+GKGU0UziIiqk+olnGjGrIpY73BGqyqJzjJ/58A3TwpH4gm2weD2gZmlOJTPmgQpqmP5oHJKWWKCQehW8BKl3givOtajtCR61gAB8PQjGz/afclh+9GCojZ4P5r9Ph8Ph6HA4SlmtpFRpnKL3zWPrfwD+Yvc/A1vn/q/+zv+MNQzAo9jFZi25bDeC/fdfzf6Hb8n+gcab9/+/XB8Pn3yubjjJG91sON5YZhszbeJ4xAv+vj3Fm3vL8X9PfNkUPANrNwXnAqQfvm3w3QhAiQgtpC2ZrTEIm+QmbPZvglebheQg9p83NBH/wQuhpdjGHObWuP7XE3l0d2da7eyc5Ci8IQ7q7onHThx20hikS+wcSMFTH1HZd8htRCa+ASkbY4kGvNiKMOINGRHX8crZjlRNmeGXMEQVhQFLsiV5lxBRkY9aK00+of+kO2ICrWIezIIJ6Z/myl+/IcFOpKkRWK0RqquZ0mhKCStw6Dp4rhzuGY4AjBGNJmautEX1c9KOcJcY4fXOZqD7/3o+0V2f54WnHrtegVnfxQV3p1UI7x3jFRm2AN47b71e3/0GVVpxyo4KAAA=</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=ff293d2a47e81f50273a565a516d43d4"/>
+    <sys_hub_sub_flow_instance_v2 action="delete_multiple" query="flow=9a98b1e647e81f50273a565a516d4375"/>
+    <sys_hub_flow_logic_instance_v2 action="delete_multiple" query="flow=9a98b1e647e81f50273a565a516d4375^sys_idNOT IN013cae2647a05f50273a565a516d43a5,997e122647205f50273a565a516d4366"/>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">196eeaea47a05f50273a565a516d4340</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="Bed lifecycle flow (Discharge -&gt; Cleaning Task -&gt; Available)">9a98b1e647e81f50273a565a516d4375</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="If">af4e1945c3e232002841b63b12d3ae3e</logic_definition>
+        <order>10</order>
+        <outputs_assigned/>
+        <parent_ui_id>28126b6d-ade8-4fdc-bca1-23e86ed4faf7</parent_ui_id>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>nilesh.chaurasia</sys_created_by>
+        <sys_created_on>2026-11-17 12:52:01</sys_created_on>
+        <sys_id>013cae2647a05f50273a565a516d43a5</sys_id>
+        <sys_mod_count>30</sys_mod_count>
+        <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
+        <sys_updated_by>nilesh.chaurasia</sys_updated_by>
+        <sys_updated_on>2026-11-18 11:16:27</sys_updated_on>
+        <ui_id>11280477-429a-416e-8f52-1247b94d0a9a</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+1Uy27bMBD8lUJnWaCeiXwLWgQo0DZAE+TSBsKKpGyiFKmSlBPX8L93qYdtJA5aBD32Js5yd2eGA+0C3buud/ZOX1krVipYfnsIA6E8ht+7QEHLg2VAtWLCCa2qAQiDDcjeF/CTCdtJ2N4fEboWkhk+TevAYI/jJljunpXctuOVhJpLbLx1RqgVtguGp4ZAE5c0pmlSpAkhyWUW10VaxwlLgUOK9+bG9zO5d58GJHyVtd+HuJ03acM8rZiEAX9yXDGOqxuQlodBC4qB02Z7QAwHdqPkEVgL5UbFLTxZ8QtnJ3nuLzYcNdLJjsOxmqyaXdKC8pvOExwRB7WcLdSyb9WXUYc3mTfQS3dicm9xHu88ac9iotTcrvXj13nhtVCDwKkoNQV5OIFDG+recesfhkve4qCqha5Dc6rO6I0YmpFLG60kHqJG6kdc6pMSAfXEI/QIomvEPwzwPRjhVXzGMdg80qzBCloNqcJxzqCE/WBL9bP3hEaBk5RqdAMvWGpE565wz4ZPrPfhy0iepHG3u8hYmeSQLbK6rBcZL4pFmZRswSi7oDlrCrgkkXXg+H7/vSckZeRlhN865l/kvoS8yWOSn899VpzL/ZnEvx725A9h98/zl1knhPwP+2nYha3G0E7ahuVvzvqDD/a4wY65YZwKi0TuPPZx/kv7whYDIOgp9KjNDy/hiO1/A8mO4xjvBQAA</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">76c0a2ea47205f50273a565a516d43e6</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="Bed lifecycle flow (Discharge -&gt; Cleaning Task -&gt; Available)">9a98b1e647e81f50273a565a516d4375</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="If">af4e1945c3e232002841b63b12d3ae3e</logic_definition>
+        <order>5</order>
+        <outputs_assigned/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>nilesh.chaurasia</sys_created_by>
+        <sys_created_on>2026-11-17 11:51:57</sys_created_on>
+        <sys_id>997e122647205f50273a565a516d4366</sys_id>
+        <sys_mod_count>33</sys_mod_count>
+        <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
+        <sys_updated_by>nilesh.chaurasia</sys_updated_by>
+        <sys_updated_on>2026-11-18 11:16:27</sys_updated_on>
+        <ui_id>28126b6d-ade8-4fdc-bca1-23e86ed4faf7</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+1Uy27bMBD8lUJnWaAky659CxoEKNA2QBPk0gbCig+bCEWqJGXHNfzvXephG42DFkGPvYmz3N2Z4UD7yLS+ab27N1fOyZWOlt8e40jqgOH3PtJQ82gZUaOZ9NLosgPiaAOqDQX8ZNI1CnYPJ4SupWKWD9MasNjjuY2W+99KftfwUkHFFTbeeSv1Ctslw5MgINIFTWmezfKMkOz9NK1meZVmLAcOOd4bGz+M5N596pD4VdZhH+Ju3GQsC7RSEkf82XPNOK4WoByPoxo0A2/s7ohYDuxWqxOwltr3imt4dvInzs6KIlwUHDXSwY7jsRysGl0ykvLbJhDsEQ+VGi00qq31l15HMJkLaJU/M7l1OI83gXRgMVASd2uz/TouvJG6EzgUlaGgjifwaEPVeu7Cw3DFaxxU1tA0aE7ZWLORXTNyqZOVwkMilNni0pCUBGggnqBHkNwgft3BD2BlUPEZx2BzT7MCJ2nZpQrHeYsSDp0t5Y82EOoFDlLK3g284KiVjb/CPRs+sD7ELyN5lsb9nhVFRRaVmIgZzCbTOaQTIAVMUjJnhEznVSFo4jx4fjh8bwnJGXkZ4beO+Re5X0AhipQUl3M/nV3K/YXEvx727A9hD8/zl1knhPwP+3nYpSv70A7auuVvzvpjCHa/wfW5YZxKh0TuA/Zx/EuHwg4DIOk5tDX2KUg4YYdfkzEtw+8FAAA=</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_pill_compound action="delete_multiple" query="attached_to=9a98b1e647e81f50273a565a516d4375^sys_idNOT IN218d073a47e4df50273a565a516d4321,2d8d073a47e4df50273a565a516d431f,324f9b7247a8df50273a565a516d432c,364f9b7247a8df50273a565a516d432a,618d073a47e4df50273a565a516d4320,724f9b7247a8df50273a565a516d432b,a58d073a47e4df50273a565a516d431e,a58d073a47e4df50273a565a516d4320,b64f9b7247a8df50273a565a516d432b,e58d073a47e4df50273a565a516d431f,e98d073a47e4df50273a565a516d4320,fa4f9b7247a8df50273a565a516d432b"/>
+    <sys_hub_pill_compound action="INSERT_OR_UPDATE">
+        <attached_to>9a98b1e647e81f50273a565a516d4375</attached_to>
+        <extra_info/>
+        <order>0</order>
+        <prescription>{{Updated_1.current.bed.room}}</prescription>
+        <source_ui_id/>
+        <sys_created_by>nilesh.chaurasia</sys_created_by>
+        <sys_created_on>2026-11-18 09:56:05</sys_created_on>
+        <sys_id>218d073a47e4df50273a565a516d4321</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
+        <sys_updated_by>nilesh.chaurasia</sys_updated_by>
+        <sys_updated_on>2026-11-18 09:56:05</sys_updated_on>
+        <transform_compositions>[]</transform_compositions>
+        <transform_definition_id/>
+        <ui_id>31b3d912-f63c-4d14-ab74-40972a800856</ui_id>
+    </sys_hub_pill_compound>
+    <sys_hub_pill_compound action="INSERT_OR_UPDATE">
+        <attached_to>9a98b1e647e81f50273a565a516d4375</attached_to>
+        <extra_info/>
+        <order>0</order>
+        <prescription>{{7e044a57-d00e-4261-8779-d556840342ae.requested_item.x_2223823_apollo_0_hospital}}</prescription>
+        <source_ui_id/>
+        <sys_created_by>nilesh.chaurasia</sys_created_by>
+        <sys_created_on>2026-11-18 09:56:05</sys_created_on>
+        <sys_id>2d8d073a47e4df50273a565a516d431f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
+        <sys_updated_by>nilesh.chaurasia</sys_updated_by>
+        <sys_updated_on>2026-11-18 09:56:05</sys_updated_on>
+        <transform_compositions>[]</transform_compositions>
+        <transform_definition_id/>
+        <ui_id>77c3f644-83f1-43f4-8577-ba4c59ab0748</ui_id>
+    </sys_hub_pill_compound>
+    <sys_hub_pill_compound action="INSERT_OR_UPDATE">
+        <attached_to>9a98b1e647e81f50273a565a516d4375</attached_to>
+        <extra_info/>
+        <order>0</order>
+        <prescription>{{Updated_1.current.hospital.name}}</prescription>
+        <source_ui_id/>
+        <sys_created_by>nilesh.chaurasia</sys_created_by>
+        <sys_created_on>2026-11-18 11:13:43</sys_created_on>
+        <sys_id>324f9b7247a8df50273a565a516d432c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
+        <sys_updated_by>nilesh.chaurasia</sys_updated_by>
+        <sys_updated_on>2026-11-18 11:13:43</sys_updated_on>
+        <transform_compositions>[]</transform_compositions>
+        <transform_definition_id/>
+        <ui_id>fbfc9ebe-ed41-4b29-9aab-4d6a2b7cdec4</ui_id>
+    </sys_hub_pill_compound>
+    <sys_hub_pill_compound action="INSERT_OR_UPDATE">
+        <attached_to>9a98b1e647e81f50273a565a516d4375</attached_to>
+        <extra_info/>
+        <order>0</order>
+        <prescription>{{Updated_1.current.hospital}}</prescription>
+        <source_ui_id/>
+        <sys_created_by>nilesh.chaurasia</sys_created_by>
+        <sys_created_on>2026-11-18 11:13:43</sys_created_on>
+        <sys_id>364f9b7247a8df50273a565a516d432a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
+        <sys_updated_by>nilesh.chaurasia</sys_updated_by>
+        <sys_updated_on>2026-11-18 11:13:43</sys_updated_on>
+        <transform_compositions>[]</transform_compositions>
+        <transform_definition_id/>
+        <ui_id>08c8b2a2-9b09-4bfe-8454-e3ef6ecb2c80</ui_id>
+    </sys_hub_pill_compound>
+    <sys_hub_pill_compound action="INSERT_OR_UPDATE">
+        <attached_to>9a98b1e647e81f50273a565a516d4375</attached_to>
+        <extra_info/>
+        <order>0</order>
+        <prescription>{{7e044a57-d00e-4261-8779-d556840342ae.requested_item.number}}</prescription>
+        <source_ui_id/>
+        <sys_created_by>nilesh.chaurasia</sys_created_by>
+        <sys_created_on>2026-11-18 09:56:05</sys_created_on>
+        <sys_id>618d073a47e4df50273a565a516d4320</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
+        <sys_updated_by>nilesh.chaurasia</sys_updated_by>
+        <sys_updated_on>2026-11-18 09:56:05</sys_updated_on>
+        <transform_compositions>[]</transform_compositions>
+        <transform_definition_id/>
+        <ui_id>7d890bc4-08c0-4c7a-9198-64e9d9d88bad</ui_id>
+    </sys_hub_pill_compound>
+    <sys_hub_pill_compound action="INSERT_OR_UPDATE">
+        <attached_to>9a98b1e647e81f50273a565a516d4375</attached_to>
+        <extra_info/>
+        <order>0</order>
+        <prescription>{{Updated_1.current.bed.bed_number}}</prescription>
+        <source_ui_id/>
+        <sys_created_by>nilesh.chaurasia</sys_created_by>
+        <sys_created_on>2026-11-18 11:13:43</sys_created_on>
+        <sys_id>724f9b7247a8df50273a565a516d432b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
+        <sys_updated_by>nilesh.chaurasia</sys_updated_by>
+        <sys_updated_on>2026-11-18 11:13:43</sys_updated_on>
+        <transform_compositions>[]</transform_compositions>
+        <transform_definition_id/>
+        <ui_id>1e0afa46-adcf-40f7-8fb9-68dcec6ee94a</ui_id>
+    </sys_hub_pill_compound>
+    <sys_hub_pill_compound action="INSERT_OR_UPDATE">
+        <attached_to>9a98b1e647e81f50273a565a516d4375</attached_to>
+        <extra_info/>
+        <order>0</order>
+        <prescription>{{Updated_1.current.bed}}</prescription>
+        <source_ui_id/>
+        <sys_created_by>nilesh.chaurasia</sys_created_by>
+        <sys_created_on>2026-11-18 09:56:05</sys_created_on>
+        <sys_id>a58d073a47e4df50273a565a516d431e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
+        <sys_updated_by>nilesh.chaurasia</sys_updated_by>
+        <sys_updated_on>2026-11-18 09:56:05</sys_updated_on>
+        <transform_compositions>[]</transform_compositions>
+        <transform_definition_id/>
+        <ui_id>f7a64e52-a378-4e1b-a54c-ac70c0145acc</ui_id>
+    </sys_hub_pill_compound>
+    <sys_hub_pill_compound action="INSERT_OR_UPDATE">
+        <attached_to>9a98b1e647e81f50273a565a516d4375</attached_to>
+        <extra_info/>
+        <order>0</order>
+        <prescription>{{7e044a57-d00e-4261-8779-d556840342ae.requested_item.sys_id}}</prescription>
+        <source_ui_id/>
+        <sys_created_by>nilesh.chaurasia</sys_created_by>
+        <sys_created_on>2026-11-18 09:56:05</sys_created_on>
+        <sys_id>a58d073a47e4df50273a565a516d4320</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
+        <sys_updated_by>nilesh.chaurasia</sys_updated_by>
+        <sys_updated_on>2026-11-18 09:56:05</sys_updated_on>
+        <transform_compositions>[]</transform_compositions>
+        <transform_definition_id/>
+        <ui_id>75f63313-20ef-45a2-ac13-853011fc4f7b</ui_id>
+    </sys_hub_pill_compound>
+    <sys_hub_pill_compound action="INSERT_OR_UPDATE">
+        <attached_to>9a98b1e647e81f50273a565a516d4375</attached_to>
+        <extra_info/>
+        <order>0</order>
+        <prescription>{{Updated_1.current.room.room_number}}</prescription>
+        <source_ui_id/>
+        <sys_created_by>nilesh.chaurasia</sys_created_by>
+        <sys_created_on>2026-11-18 11:13:43</sys_created_on>
+        <sys_id>b64f9b7247a8df50273a565a516d432b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
+        <sys_updated_by>nilesh.chaurasia</sys_updated_by>
+        <sys_updated_on>2026-11-18 11:13:43</sys_updated_on>
+        <transform_compositions>[]</transform_compositions>
+        <transform_definition_id/>
+        <ui_id>20d4cfb7-32a9-4c3a-965b-bb32f16a0479</ui_id>
+    </sys_hub_pill_compound>
+    <sys_hub_pill_compound action="INSERT_OR_UPDATE">
+        <attached_to>9a98b1e647e81f50273a565a516d4375</attached_to>
+        <extra_info/>
+        <order>0</order>
+        <prescription>{{7e044a57-d00e-4261-8779-d556840342ae.requested_item.expected_start}}</prescription>
+        <source_ui_id/>
+        <sys_created_by>nilesh.chaurasia</sys_created_by>
+        <sys_created_on>2026-11-18 09:56:05</sys_created_on>
+        <sys_id>e58d073a47e4df50273a565a516d431f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
+        <sys_updated_by>nilesh.chaurasia</sys_updated_by>
+        <sys_updated_on>2026-11-18 09:56:05</sys_updated_on>
+        <transform_compositions>[]</transform_compositions>
+        <transform_definition_id/>
+        <ui_id>995d062a-a1f9-4452-baba-6eeabd6c3c81</ui_id>
+    </sys_hub_pill_compound>
+    <sys_hub_pill_compound action="INSERT_OR_UPDATE">
+        <attached_to>9a98b1e647e81f50273a565a516d4375</attached_to>
+        <extra_info/>
+        <order>0</order>
+        <prescription>{{7e044a57-d00e-4261-8779-d556840342ae.requested_item.priority}}</prescription>
+        <source_ui_id/>
+        <sys_created_by>nilesh.chaurasia</sys_created_by>
+        <sys_created_on>2026-11-18 09:56:05</sys_created_on>
+        <sys_id>e98d073a47e4df50273a565a516d4320</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
+        <sys_updated_by>nilesh.chaurasia</sys_updated_by>
+        <sys_updated_on>2026-11-18 09:56:05</sys_updated_on>
+        <transform_compositions>[]</transform_compositions>
+        <transform_definition_id/>
+        <ui_id>fc3e23c8-d9fe-4843-93eb-493a500b39de</ui_id>
+    </sys_hub_pill_compound>
+    <sys_hub_pill_compound action="INSERT_OR_UPDATE">
+        <attached_to>9a98b1e647e81f50273a565a516d4375</attached_to>
+        <extra_info/>
+        <order>0</order>
+        <prescription>{{7e044a57-d00e-4261-8779-d556840342ae.requested_item.due_date}}</prescription>
+        <source_ui_id/>
+        <sys_created_by>nilesh.chaurasia</sys_created_by>
+        <sys_created_on>2026-11-18 11:13:43</sys_created_on>
+        <sys_id>fa4f9b7247a8df50273a565a516d432b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
+        <sys_updated_by>nilesh.chaurasia</sys_updated_by>
+        <sys_updated_on>2026-11-18 11:13:43</sys_updated_on>
+        <transform_compositions>[]</transform_compositions>
+        <transform_definition_id/>
+        <ui_id>75110471-0041-4784-948e-0b4ae03bc01e</ui_id>
+    </sys_hub_pill_compound>
+    <sys_hub_flow_variable action="delete_multiple" query="model=9a98b1e647e81f50273a565a516d4375"/>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_variable_9a98b1e647e81f50273a565a516d4375"/>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>current</element>
+        <help/>
+        <hint/>
+        <label>Record</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_9a98b1e647e81f50273a565a516d4375</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>nilesh.chaurasia</sys_created_by>
+        <sys_created_on>2026-11-17 09:07:37</sys_created_on>
+        <sys_id>b5d8312a47e81f50273a565a516d43a5</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Apollo-Hospitals" source="x_2223823_apollo_0">87c1422693c89b507b3a7c5efaba1008</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>nilesh.chaurasia</sys_updated_by>
+        <sys_updated_on>2026-11-17 09:07:37</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>changed_fields</element>
+        <help/>
+        <hint/>
+        <label>Changed Fields</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_9a98b1e647e81f50273a565a516d4375</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>nilesh.chaurasia</sys_created_by>
+        <sys_created_on>2026-11-17 09:07:37</sys_created_on>
+        <sys_id>bdd8312a47e81f50273a565a516d43b1</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Apollo-Hospitals" source="x_2223823_apollo_0">87c1422693c89b507b3a7c5efaba1008</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>nilesh.chaurasia</sys_updated_by>
+        <sys_updated_on>2026-11-17 09:07:37</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>table_name</element>
+        <help/>
+        <hint/>
+        <label>Table Name</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_9a98b1e647e81f50273a565a516d4375</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>nilesh.chaurasia</sys_created_by>
+        <sys_created_on>2026-11-17 09:07:37</sys_created_on>
+        <sys_id>f5d8312a47e81f50273a565a516d438d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Apollo-Hospitals" source="x_2223823_apollo_0">87c1422693c89b507b3a7c5efaba1008</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>nilesh.chaurasia</sys_updated_by>
+        <sys_updated_on>2026-11-17 09:07:37</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_input_9a98b1e647e81f50273a565a516d4375"/>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_output_9a98b1e647e81f50273a565a516d4375"/>
+    <sys_hub_flow_snapshot action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <acls/>
+        <active>true</active>
+        <allow_high_security_roles>false</allow_high_security_roles>
+        <annotation/>
+        <attributes>browserActivatedIn=chrome,integrationActivatedIn=standalone,labelCacheCleanUpExecuted=true,viewActivatedIn=naturalLanguage</attributes>
+        <authored_on_release_version>29000</authored_on_release_version>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <copied_from/>
+        <copied_from_name/>
+        <description/>
+        <flow_priority>MEDIUM</flow_priority>
+        <internal_name>bed_lifecycle_flow_discharge_gt_cleaning_task_gt_available</internal_name>
+        <label_cache>[{"name":"Updated_1.current.hospital.name","label":"Trigger - Record Updated➛Admissions Record➛Hospital➛Name","reference":"","reference_display":"Name","type":"string","base_type":"string","parent_table_name":"x_2223823_apollo_0_hospital","column_name":"name","usedInstances":{"46f679c4-8f98-41b5-ac95-9fe6fc6a38ce":[null]}},{"name":"7e044a57-d00e-4261-8779-d556840342ae.requested_item.due_date","label":"6 - Submit Catalog Item Request➛Requested Item➛Due date","reference":"","reference_display":"Due date","type":"glide_date_time","base_type":"glide_date_time","parent_table_name":"sc_req_item","column_name":"due_date","usedInstances":{"46f679c4-8f98-41b5-ac95-9fe6fc6a38ce":[null]}},{"name":"Updated_1.current.room.room_number","label":"Trigger - Record Updated➛Admissions Record➛Room➛Room number","reference":"","reference_display":"Room number","type":"string","base_type":"string","parent_table_name":"x_2223823_apollo_0_rooms","column_name":"room_number","usedInstances":{"46f679c4-8f98-41b5-ac95-9fe6fc6a38ce":[null]}},{"name":"Updated_1.current.bed.bed_number","label":"Trigger - Record Updated➛Admissions Record➛Bed➛Bed number","reference":"","reference_display":"Bed number","type":"string","base_type":"string","parent_table_name":"x_2223823_apollo_0_beds","column_name":"bed_number","usedInstances":{"46f679c4-8f98-41b5-ac95-9fe6fc6a38ce":[null]}},{"name":"7e044a57-d00e-4261-8779-d556840342ae.requested_item.sys_id","label":"6 - Submit Catalog Item Request➛Requested Item➛Sys ID","reference":"","reference_display":"Sys ID","type":"GUID","base_type":"GUID","parent_table_name":"sc_req_item","column_name":"sys_id","usedInstances":{"46f679c4-8f98-41b5-ac95-9fe6fc6a38ce":[null]}},{"name":"7e044a57-d00e-4261-8779-d556840342ae.requested_item.expected_start","label":"6 - Submit Catalog Item Request➛Requested Item➛Expected start","reference":"","reference_display":"Expected start","type":"glide_date_time","base_type":"glide_date_time","parent_table_name":"sc_req_item","column_name":"expected_start","usedInstances":{"46f679c4-8f98-41b5-ac95-9fe6fc6a38ce":[null]}},{"name":"7e044a57-d00e-4261-8779-d556840342ae.requested_item.priority","label":"6 - Submit Catalog Item Request➛Requested Item➛Priority","reference":"","reference_display":"Priority","type":"choice","base_type":"choice","parent_table_name":"sc_req_item","column_name":"priority","choices":[{"label":"-- None --","sequence":-1.0,"selected":false,"used":false,"rawLabel":"-- None --","missing":false,"reference":false,"image":"","value":""},{"parameters":{"name":"task","dependent_values":[""],"dependent_values_map":{"":"1 - Critical"}},"sequence":1.0,"selected":false,"label":"1 - Critical","used":false,"rawLabel":"1 - Critical","missing":false,"reference":false,"image":"","value":"1"},{"parameters":{"name":"task","dependent_values":[""],"dependent_values_map":{"":"2 - High"}},"sequence":2.0,"selected":false,"label":"2 - High","used":false,"rawLabel":"2 - High","missing":false,"reference":false,"image":"","value":"2"},{"parameters":{"name":"task","dependent_values":[""],"dependent_values_map":{"":"3 - Moderate"}},"sequence":3.0,"selected":false,"label":"3 - Moderate","used":false,"rawLabel":"3 - Moderate","missing":false,"reference":false,"image":"","value":"3"},{"parameters":{"name":"task","dependent_values":[""],"dependent_values_map":{"":"4 - Low"}},"sequence":4.0,"selected":false,"label":"4 - Low","used":false,"rawLabel":"4 - Low","missing":false,"reference":false,"image":"","value":"4"},{"parameters":{"name":"task","dependent_values":[""],"dependent_values_map":{"":"5 - Planning"}},"sequence":5.0,"selected":false,"label":"5 - Planning","used":false,"rawLabel":"5 - Planning","missing":false,"reference":false,"image":"","value":"5"}],"usedInstances":{"46f679c4-8f98-41b5-ac95-9fe6fc6a38ce":[null]}},{"name":"Updated_1.current.bed.room","label":"Trigger - Record Updated➛Admissions Record➛Bed➛Room","reference":"x_2223823_apollo_0_rooms","reference_display":"Rooms","type":"reference","base_type":"reference","parent_table_name":"x_2223823_apollo_0_beds","column_name":"room","usedInstances":{"46f679c4-8f98-41b5-ac95-9fe6fc6a38ce":[null]}},{"name":"7e044a57-d00e-4261-8779-d556840342ae.requested_item.number","label":"6 - Submit Catalog Item Request➛Requested Item➛Number","reference":"","reference_display":"Number","type":"string","base_type":"string","parent_table_name":"sc_req_item","column_name":"number","usedInstances":{"46f679c4-8f98-41b5-ac95-9fe6fc6a38ce":[null]}},{"name":"74d925a4-4b9b-4e66-929d-dcd7c5df6a80.state","label":"9 - Wait For Condition➛State","reference_display":"State","type":"choice","base_type":"choice","choices":[{"label":"Complete","value":"0","order":0.0},{"label":"Timeout","value":"1","order":1.0}],"usedInstances":{"11280477-429a-416e-8f52-1247b94d0a9a":["condition"]},"attributes":{"uiType":"choice","uiTypeLabel":"Choice","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"2e334039-7a20-4ead-9148-909988f1a7e4"}},{"name":"7e044a57-d00e-4261-8779-d556840342ae.requested_item","label":"6 - Submit Catalog Item Request➛Requested Item","reference":"sc_req_item","reference_display":"Requested Item","type":"document_id","base_type":"document_id","usedInstances":{"070e546d-9569-45ef-920f-145eb722899e":["record"],"74d925a4-4b9b-4e66-929d-dcd7c5df6a80":["record"],"46f679c4-8f98-41b5-ac95-9fe6fc6a38ce":["record"]},"attributes":{"uiType":"document_id","uiTypeLabel":"Document ID","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"aad3452b-309c-469c-9797-4df9ef6f86be"}},{"name":"Updated_1.current.hospital","label":"Trigger - Record Updated➛Admissions Record➛Hospital","reference":"x_2223823_apollo_0_hospital","reference_display":"Hospital","type":"reference","base_type":"reference","parent_table_name":"x_2223823_apollo_0_admissions","column_name":"hospital","usedInstances":{"12837a32-b5c3-4218-ad81-b9ab5fd685c6":["hospital"],"4122bcaa-6056-4ca8-84b5-86ff1f28168a":[null],"7e044a57-d00e-4261-8779-d556840342ae":["hospital"],"c444c49c-2f8e-4c93-87ff-85813811d8f7":["hospital"],"46f679c4-8f98-41b5-ac95-9fe6fc6a38ce":[null]}},{"name":"Updated_1.current.bed","label":"Trigger - Record Updated➛Admissions Record➛Bed","reference":"x_2223823_apollo_0_beds","reference_display":"Beds","type":"reference","base_type":"reference","parent_table_name":"x_2223823_apollo_0_admissions","column_name":"bed","usedInstances":{"f3314e9d-a31e-4a65-9765-3acf16864df1":["record"],"12837a32-b5c3-4218-ad81-b9ab5fd685c6":["bed"],"7e044a57-d00e-4261-8779-d556840342ae":["room_bed"],"bde340ef-d69b-44dd-877a-f0ee1e5f93e9":["record"],"c444c49c-2f8e-4c93-87ff-85813811d8f7":["bed"],"46f679c4-8f98-41b5-ac95-9fe6fc6a38ce":["ah_subject",null]}},{"name":"Updated_1.current","label":"Trigger - Record Updated➛Admissions Record","reference":"x_2223823_apollo_0_admissions","reference_display":"Admissions","type":"reference","base_type":"reference","usedInstances":{"4122bcaa-6056-4ca8-84b5-86ff1f28168a":[null]},"attributes":{}},{"name":"Updated_1.current.patient","label":"Trigger - Record Updated➛Admissions Record➛Patient","reference":"x_2223823_apollo_0_patient","reference_display":"Patient","type":"reference","base_type":"reference","parent_table_name":"x_2223823_apollo_0_admissions","column_name":"patient","usedInstances":{"4122bcaa-6056-4ca8-84b5-86ff1f28168a":[null],"7e044a57-d00e-4261-8779-d556840342ae":["requested_for"]}},{"name":"4122bcaa-6056-4ca8-84b5-86ff1f28168a.Record","label":"3 - Look Up Record➛Invoice Record","reference":"x_2223823_apollo_0_invoice","reference_display":"Invoice","type":"reference","base_type":"reference","usedInstances":{"d55b09bf-f6a6-47a1-a05a-107d0047b5fc":["record"]},"attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"d55b09bf-f6a6-47a1-a05a-107d0047b5fc.state","label":"4 - Wait For Condition➛State","reference_display":"State","type":"choice","base_type":"choice","choices":[{"label":"Complete","value":"0","order":0.0},{"label":"Timeout","value":"1","order":1.0}],"usedInstances":{"28126b6d-ade8-4fdc-bca1-23e86ed4faf7":["condition"]},"attributes":{"uiType":"choice","uiTypeLabel":"Choice","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"2e334039-7a20-4ead-9148-909988f1a7e4"}},{"name":"Updated_1.current.final_invoice.sys_id","label":"Trigger - Record Updated➛Admissions Record➛Final invoice➛Sys ID","reference":"","reference_display":"Sys ID","type":"GUID","base_type":"GUID","parent_table_name":"x_2223823_apollo_0_invoice","column_name":"sys_id","usedInstances":{"4122bcaa-6056-4ca8-84b5-86ff1f28168a":[null]}},{"name":"7e044a57-d00e-4261-8779-d556840342ae.requested_item.x_2223823_apollo_0_hospital","label":"6 - Submit Catalog Item Request➛Requested Item➛Hospital","reference":"x_2223823_apollo_0_hospital","reference_display":"Hospital","type":"reference","base_type":"reference","parent_table_name":"sc_req_item","column_name":"x_2223823_apollo_0_hospital","usedInstances":{"46231f49-a005-484e-94f9-4c82ddaecc82":[null],"46f679c4-8f98-41b5-ac95-9fe6fc6a38ce":[null]}},{"name":"7e044a57-d00e-4261-8779-d556840342ae.requested_item.cat_item","label":"6 - Submit Catalog Item Request➛Requested Item➛Item","reference":"sc_cat_item","reference_display":"Catalog Item","type":"reference","base_type":"reference","parent_table_name":"sc_req_item","column_name":"cat_item","usedInstances":{"46231f49-a005-484e-94f9-4c82ddaecc82":[null]}},{"name":"7e044a57-d00e-4261-8779-d556840342ae.requested_item.x_2223823_apollo_0_hospital.name","label":"6 - Submit Catalog Item Request➛Requested Item➛Hospital➛Name","reference":"","reference_display":"Name","type":"string","base_type":"string","parent_table_name":"x_2223823_apollo_0_hospital","column_name":"name","usedInstances":{"46231f49-a005-484e-94f9-4c82ddaecc82":[null]}},{"name":"7e044a57-d00e-4261-8779-d556840342ae.requested_item.cat_item.sys_name","label":"6 - Submit Catalog Item Request➛Requested Item➛Item➛Display name","reference":"","reference_display":"Display name","type":"string","base_type":"string","parent_table_name":"sc_cat_item","column_name":"sys_name","usedInstances":{"46231f49-a005-484e-94f9-4c82ddaecc82":[null]}},{"name":"46231f49-a005-484e-94f9-4c82ddaecc82.Record.email","label":"7➛Group Record➛Group email","reference":"","reference_display":"Group email","type":"email","base_type":"email","parent_table_name":"sys_user_group","column_name":"email","usedInstances":{"46f679c4-8f98-41b5-ac95-9fe6fc6a38ce":["ah_to"]}}]</label_cache>
+        <master>true</master>
+        <name>Bed lifecycle flow (Discharge -&gt; Cleaning Task -&gt; Available)</name>
+        <natlang/>
+        <outputs/>
+        <parent_flow display_value="Bed lifecycle flow (Discharge -&gt; Cleaning Task -&gt; Available)">9a98b1e647e81f50273a565a516d4375</parent_flow>
+        <remote_trigger_id/>
+        <run_as>user</run_as>
+        <run_with_roles/>
+        <sc_callable>false</sc_callable>
+        <status>published</status>
+        <sys_class_name>sys_hub_flow_snapshot</sys_class_name>
+        <sys_created_by>nilesh.chaurasia</sys_created_by>
+        <sys_created_on>2026-11-17 09:10:00</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>7869f16a47e81f50273a565a516d43b6</sys_id>
+        <sys_mod_count>6</sys_mod_count>
+        <sys_name/>
+        <sys_overrides/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>nilesh.chaurasia</sys_updated_by>
+        <sys_updated_on>2026-11-18 11:16:30</sys_updated_on>
+        <type>flow</type>
+        <version>2</version>
+    </sys_hub_flow_snapshot>
+    <sys_translated_text action="delete_multiple" query="documentkey=7869f16a47e81f50273a565a516d43b6"/>
+    <sys_variable_value action="delete_multiple" query="document_key=7869f16a47e81f50273a565a516d43b6"/>
+    <sys_hub_flow_stage action="delete_multiple" query="flow=7869f16a47e81f50273a565a516d43b6"/>
+    <sys_flow_cat_variable_model action="delete_multiple" query="id=7869f16a47e81f50273a565a516d43b6^sys_idNOT IN3069f16a47e81f50273a565a516d43b8"/>
+    <sys_flow_cat_variable_model action="INSERT_OR_UPDATE">
+        <id>7869f16a47e81f50273a565a516d43b6</id>
+        <name>Bed lifecycle flow (Discharge -&gt; Cleaning Task -&gt; Available)</name>
+        <sys_created_by>nilesh.chaurasia</sys_created_by>
+        <sys_created_on>2026-11-17 09:10:00</sys_created_on>
+        <sys_id>3069f16a47e81f50273a565a516d43b8</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>nilesh.chaurasia</sys_updated_by>
+        <sys_updated_on>2026-11-17 09:10:00</sys_updated_on>
+    </sys_flow_cat_variable_model>
+    <sys_flow_cat_variable action="delete_multiple" query="flow_catalog_model=3069f16a47e81f50273a565a516d43b8"/>
+    <sys_hub_flow_input action="delete_multiple" query="model=7869f16a47e81f50273a565a516d43b6^sys_idNOT IN3869f16a47e81f50273a565a516d43b9,3869f16a47e81f50273a565a516d43e3,b469356a47e81f50273a565a516d433a"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=document_id</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent>table_name</dependent>
+        <dependent_on_field>table_name</dependent_on_field>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>current</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">document_id</internal_type>
+        <label>Record</label>
+        <mandatory>true</mandatory>
+        <max_length>200</max_length>
+        <model display_value="Bed lifecycle flow (Discharge -&gt; Cleaning Task -&gt; Available)">7869f16a47e81f50273a565a516d43b6</model>
+        <model_id>7869f16a47e81f50273a565a516d43b6</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_input_7869f16a47e81f50273a565a516d43b6</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_only_option/>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>nilesh.chaurasia</sys_created_by>
+        <sys_created_on>2026-11-17 09:10:00</sys_created_on>
+        <sys_id>3869f16a47e81f50273a565a516d43b9</sys_id>
+        <sys_mod_count>11</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>nilesh.chaurasia</sys_updated_by>
+        <sys_updated_on>2026-11-18 11:16:29</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>true</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=3869f16a47e81f50273a565a516d43b9"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>child_label=FDChangeDetails,child_name=FDChangeDetails,child_type=object,child_type_label=Object,co_type_name=FDCollection,element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,pwd2droppable=true,uiType=array.object,uiTypeLabel=Array.Object</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>changed_fields</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label>Changed Fields</label>
+        <mandatory>false</mandatory>
+        <max_length>4000</max_length>
+        <model display_value="Bed lifecycle flow (Discharge -&gt; Cleaning Task -&gt; Available)">7869f16a47e81f50273a565a516d43b6</model>
+        <model_id>7869f16a47e81f50273a565a516d43b6</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_input_7869f16a47e81f50273a565a516d43b6</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_only_option/>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>nilesh.chaurasia</sys_created_by>
+        <sys_created_on>2026-11-17 09:10:00</sys_created_on>
+        <sys_id>3869f16a47e81f50273a565a516d43e3</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>nilesh.chaurasia</sys_updated_by>
+        <sys_updated_on>2026-11-18 06:34:18</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=3869f16a47e81f50273a565a516d43e3"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,test_input_hidden=true,uiType=table_name</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>table_name</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">table_name</internal_type>
+        <label>Table Name</label>
+        <mandatory>false</mandatory>
+        <max_length>200</max_length>
+        <model display_value="Bed lifecycle flow (Discharge -&gt; Cleaning Task -&gt; Available)">7869f16a47e81f50273a565a516d43b6</model>
+        <model_id>7869f16a47e81f50273a565a516d43b6</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_input_7869f16a47e81f50273a565a516d43b6</name>
+        <next_element/>
+        <order>101</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_only_option/>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>nilesh.chaurasia</sys_created_by>
+        <sys_created_on>2026-11-17 09:10:00</sys_created_on>
+        <sys_id>b469356a47e81f50273a565a516d433a</sys_id>
+        <sys_mod_count>11</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>nilesh.chaurasia</sys_updated_by>
+        <sys_updated_on>2026-11-18 11:16:29</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=b469356a47e81f50273a565a516d433a"/>
+    <sys_hub_flow_output action="delete_multiple" query="model=7869f16a47e81f50273a565a516d43b6"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=7869f16a47e81f50273a565a516d43b6"/>
+    <sys_hub_trigger_instance_v2 action="delete_multiple" query="flow=7869f16a47e81f50273a565a516d43b6^sys_idNOT INc969356a47e81f50273a565a516d435c"/>
+    <sys_hub_trigger_instance_v2 action="INSERT_OR_UPDATE">
+        <comment/>
+        <display_text/>
+        <flow display_value="Bed lifecycle flow (Discharge -&gt; Cleaning Task -&gt; Available)">7869f16a47e81f50273a565a516d43b6</flow>
+        <generation_source/>
+        <name>Updated</name>
+        <published_version/>
+        <remote_sys_id/>
+        <sys_created_by>nilesh.chaurasia</sys_created_by>
+        <sys_created_on>2026-11-17 09:10:00</sys_created_on>
+        <sys_id>c969356a47e81f50273a565a516d435c</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>nilesh.chaurasia</sys_updated_by>
+        <sys_updated_on>2026-11-18 06:34:17</sys_updated_on>
+        <trigger_definition display_value="Updated">bb695e60c31322002841b63b12d3aea5</trigger_definition>
+        <trigger_inputs>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</trigger_inputs>
+        <trigger_outputs/>
+        <trigger_type>record_update</trigger_type>
+        <updation_source/>
+    </sys_hub_trigger_instance_v2>
+    <sys_hub_action_instance_v2 action="delete_multiple" query="flow=7869f16a47e81f50273a565a516d43b6^sys_idNOT IN315f9af64720df50273a565a516d4326,3d5f9af64720df50273a565a516d432b,3d5f9af64720df50273a565a516d432d,646e0fba47e4df50273a565a516d4368,646e0fba47e4df50273a565a516d436e,715f9af64720df50273a565a516d4329,795f9af64720df50273a565a516d4327,b15f9af64720df50273a565a516d432b,b15f9af64720df50273a565a516d432d,f469356a47e81f50273a565a516d435a"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Create Record">2de05916c31332002841b63b12d3aee1</action_type>
+        <action_type_parent display_value="Create Record">02f0b88cc3c632002841b63b12d3aeff</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>2de05916c31332002841b63b12d3aee1</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Bed lifecycle flow (Discharge -&gt; Cleaning Task -&gt; Available)">7869f16a47e81f50273a565a516d43b6</flow>
+        <generation_source/>
+        <order>2</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>nilesh.chaurasia</sys_created_by>
+        <sys_created_on>2026-11-18 06:34:18</sys_created_on>
+        <sys_id>315f9af64720df50273a565a516d4326</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
+        <sys_updated_by>nilesh.chaurasia</sys_updated_by>
+        <sys_updated_on>2026-11-18 06:34:18</sys_updated_on>
+        <ui_id>12837a32-b5c3-4218-ad81-b9ab5fd685c6</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+1W32/bNhD+Vwg+rZmrSJbrOe5T1izbQ9cUdZeXqhEo8WRzoEiNpJx4hv/3HknJSX9k64ABQ4H5xeDdd8fvjt+d/W5PBadLOs8gfXaWzes8y/Npmk4Xs6ya51U25TkDmNEJVawFRDpWSSjDYUK3TPbeeFdOp9N8Mc1L1mkpdZmWFfDSOuZ6W0q9RiwXtpNsdz2E/AicrIKfvAz+eiMkN6Do8t37Ce2YwSscGLrcf+L6WsKSVSAR+tYzfqQAt+u+aHv5MJa8ig5tuOeTTijcOVAckEjDpIUJbZnizGmzo0tnejQYYPxKyd0RsRHKYULqsXdW/InXLlKPawArqyH6jsdyaFc0NxfMsRVmrl1vBmi90aIGG3vCoWG9dC8e2iLgqnNCqxgSyhyitexb9Sq2hB4TjK+Dlt4iCeh8nZ75UEaz2ujbNyPLS6FCSwan1DWTxxNzzoiqd57PnoKEFhOVLes6odZlZ/RWhGDk0iZriYekkfoWL7VirRJWe+IJtpUll2i/COZrZoSv4ldMg8GHCbU7+0Iya+9rwSaWf/SeSaxsqKGMbfAhtRGdO8cLtjDQPUzGSeCQnj0qrKy6F1IQv30wBSj5ok/TnO/3v3XIGycgS+reYKtcgs7D4aYxuh3GIkLzG6c/MsxuNtp2wjH5eK4RgQnrDVNrdFa7AV6Mg1bQZUFXO+ugJee8FUpYZ7xGCzopIucAmS+yefPDWV2nbJFm81ma1c9YnleQziqYzbIAD8oJcGx3idKIWfxB8K9Mc0+WuUi24U/jUwC/wYGxWkX7a+YE1kkuhMUQswaC7J3wXSBahWqsRXEQAzUO5efL5f+X+M9e4h+u8b+ftnGNXwqQ3H5h/MYdDi0220EZx/GTPT44yfXgHHZ59m/t8myehs83tNFjcd/8Qn/w2/3Zao8lRltU4Ch7f/orLD09KdTJyXmNzbfE0z09D/yJ5096iyUTtwHS8DJYdPU71C4hq5CAtL11OBT4uIowEiSZEJ/xyguPqL6t8EtYopvGgiPVjnyf4XCRn4zRhvyCGpT+ihXErgUyWyZk+EOigwQsGSRF+g6JdQap+piCJgUlrMGxG+n5cLhjOASwRDaG2I02Dl+gJnHQR2CCT7xegzluuAD0Txjqwluf+1xDZccs3nhaKJ/ZaY6MhqwKbsnPXgkod3grWvjuCUKH6IB8ji9q2Rb4UaiHw+H9B+MhvJ+YCgAA</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=315f9af64720df50273a565a516d4326"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Wait For Condition">89ce8a4187120010663ca1bb36cb0be3</action_type>
+        <action_type_parent display_value="Wait For Condition">8bb9a8160b10030085c083eb37673aec</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>89ce8a4187120010663ca1bb36cb0be3</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Bed lifecycle flow (Discharge -&gt; Cleaning Task -&gt; Available)">7869f16a47e81f50273a565a516d43b6</flow>
+        <generation_source/>
+        <order>9</order>
+        <parent_ui_id>28126b6d-ade8-4fdc-bca1-23e86ed4faf7</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>nilesh.chaurasia</sys_created_by>
+        <sys_created_on>2026-11-18 06:34:18</sys_created_on>
+        <sys_id>3d5f9af64720df50273a565a516d432b</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
+        <sys_updated_by>nilesh.chaurasia</sys_updated_by>
+        <sys_updated_on>2026-11-18 09:59:50</sys_updated_on>
+        <ui_id>74d925a4-4b9b-4e66-929d-dcd7c5df6a80</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+2XXW+jOBSG/0rFdZw1YMD0bpS02krdqZR2Zy9mR8jYx40lAhk+OpOt+t/XgCkkpJl2Jq1UaS45/uA9r8/DwZ/vLSWsU4uEHCgjNg1sB2Mb+77LmR3Hrs9jHAOxJlbKVqBn5sCzXOjnO5ZUdeD+PgBMCPMCJDAGRBzfRjQIQiQ8z6cEu8RhMM3hawVFCSJSJaweHvQOQhXrhG0+mY10hC9VInJIrdPPXybWmuX6nSXk1un9ztBzRScshkRPXXSqd7MoN+v6WWS8WkFaRqoLXpqVczNycjHXI3pRLceeWPC9hFSA1iFZUsDEWrFUsDLLN9ZpmVc6kAMTV2myeZyxVGnZ5rli3wv1n36x69TzJOjEuPHg8TEy/rRhOWclu9Y787LKH+3KFIeitUSAZFVSzoaxdsLVulRZ2i4pWZx0q7OkWqUfW0Osxw0Gx1EVWgSs6zxr5W1a8nqZfVt0Is9V2jhiUkwyzpLHJ1aWuYqrspZzb1XqZp/ZbXi/3VIl+vijRnRUZFXemLQ4m10t5tE/H25mf54tosXZ9c3iYnZzVq+ABJqtV2y9VulttM6zO9Uo1PmupreJfpjKJPumEyvUbTplvDZnqo+OTc91fN6EP7Fc1S/9S2+jF9cq/06VruCLpvCktF3b95FtYxcRO/ZRSMFDGDxGPIf4nu9YDxOr2BSzhBVF77E+3OhrVVvUOm68jZrjadNsKrRezHO1Lj9oeXdgHH2YdLh6Byuf9YU+2LNHtuCRxrEBcYzhogP15KIdfyGUP5bWQXnT1OJ+qYbLUexyuPbkYztgqHQOU2kiPZZtPe+hkuJ3RKVJ69ex3PJ6m8ott1URtbVpRDe7vhV6jk1DSmIXuTHxEAmlRBRTgggwzD1HBMTmP4HeD4E73GpkX8U8S4Wq8yqGwJWshH8rjF3hjonbGT1qE5QD3mZDafvkGuhGsct9Gxjo3GO1QoLxe8LuWM1wy+xt6rbsfhO6QFA/9jBFIClFxA0oCm3HQb7PhG0TLiR+3caGxaFqloP/0FKtIKvKSCbsdkAaHuPVfZ9extUzlHRcnaXN59EoelKioSvOsgRYutvPdDn9cW6UGrTIC/vZIbbeEVlHa2i90zvdbOj1m3DFOaO6PTEUulzfkPyYIyq5RC7EnnS9mMYBfoWuxQ/XcDguVVHlrDnFnqgjXNSeoaNjad4LeFqaIak5m9345Xgjg5P3G6dfwmlk987NrR94LaaWet2cbYq6KjTDY8rAZoEX15cxhogT2oiFxEGhDwEQSX2Xha9AGbUPVrccl3LBlyCqBI5L2TN0dJRd9wKelmYo6wt9G7DFIG4I849GGB39DPJVOhS3j7dBVu+SO3kNLOfLcwVJfZ7mJvYEjcNj2QZxeDBv090cx3YFcGQL/etIHN9B1CUBCkIaY6JLL3bhiNx9+R/ZMtJPtRQAAA==</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=3d5f9af64720df50273a565a516d432b"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Create Record">2de05916c31332002841b63b12d3aee1</action_type>
+        <action_type_parent display_value="Create Record">02f0b88cc3c632002841b63b12d3aeff</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>2de05916c31332002841b63b12d3aee1</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Bed lifecycle flow (Discharge -&gt; Cleaning Task -&gt; Available)">7869f16a47e81f50273a565a516d43b6</flow>
+        <generation_source/>
+        <order>12</order>
+        <parent_ui_id>11280477-429a-416e-8f52-1247b94d0a9a</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>nilesh.chaurasia</sys_created_by>
+        <sys_created_on>2026-11-18 06:34:18</sys_created_on>
+        <sys_id>3d5f9af64720df50273a565a516d432d</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
+        <sys_updated_by>nilesh.chaurasia</sys_updated_by>
+        <sys_updated_on>2026-11-18 09:59:50</sys_updated_on>
+        <ui_id>c444c49c-2f8e-4c93-87ff-85813811d8f7</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+1WUW/bNhD+KwSftsxTJMv1HPcpTZftoW2AustL1QiUeLJZUKRGUk5cw/99R1Jys7bZWqAoUKB+MXj33fG743dnv95TwemSzjNIH51l8zrP8nyaptPFLKvmeZVNec4AZnRCFWsBkY5VEspwmNAtk7033pXT6TRfTPOSdVpKXaZlBby0jrnellKvEcuF7STbXQ8hT4CTVfCTZ8Ffb4TkBhRdvn4zoR0zeIUDQ5f7D1yfS1iyCiRCX3nGDxTgdt0nbc/ux5IX0aEN93zSCYU7B4oDEmmYtDChLVOcOW12dOlMjwYDjF8puTsiNkI5TEg99s6Kd3jtIvW4BrCyGqLveCyHdkVz85Q5tsLMtevNAK03WtRgY084NKyX7uK+LQKuOie0iiGhzCFay75VL2JL6DHB+Dpo6S2SgM7X6ZkPZTSrjb59ObK8FCq0ZHBKXTN5PDHnjKh65/nsKUhoMVHZsq4Tal12Rm9FCEYubbKWeEgaqW/xUivWKmG1J55gW1lyifanwXzNjPBVPMc0GHyYULuzF5JZ+74WbGL5d++ZxMqGGsrYBh9SG9G5c7xgCwPdw2ScBA7p2YPCyqr3Qgrit/emACVf9Gma8/3+rw554wRkSd0bbJVL0Hk43Gy07YRj8mHciEBwY3Q7zFDEz26c/pchu6k3TK0xQbUbUhbjoBV0WdDVzjpoyTlvhRLWGa/Rgk6KyDlA5ots3vx2VtcpW6TZfJZm9SOW5xWkswpmsyzAg3ICHNtdojRiFn8Q/DPTHI5kmYtkG/5rfArgNzgwVqtov5DAFIqEbMGIRuCmwPEi2EFiUEbM4uB9tE9+NP9bNv8Ll/X/z9S4rC8FSG4/MWTjpoYW++ugjEP3wbYenOR6cA4bO/taGzubp+HzHe3tWNx3v7bv/UJ/tMBjidEWFTgq3Z/+C0tPTwp1cnJeY/Mt8XRPzwN/4vmT3vo5cBsgDS+DRVdvoXYJWYUEpO2tw7HAx1WEkSDJhPiMV154RPVthV/CEt00FhypduSXjAhFfjdGG/InalD6K1YQuxbIbJmQ4W+HDhKwZJAU6Tsk1hmk6mMKmhSUsAbHbqTnw+GO4RDAEtkYYjfaOHyBmsTZHoEJPvF6Dea4+ALQP2GoC2997HMNlR2zeONpoQrlczvNkdOQV8Et+cNrAQUPr0QLP/2M4CE+IB/jm1q2BX6U6uFwePMP8fH9XYAKAAA=</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=3d5f9af64720df50273a565a516d432d"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Look Up Record">9d09f99587003300663ca1bb36cb0ba3</action_type>
+        <action_type_parent display_value="Look Up Record">b93f42810b30030085c083eb37673a63</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>9d09f99587003300663ca1bb36cb0ba3</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Bed lifecycle flow (Discharge -&gt; Cleaning Task -&gt; Available)">7869f16a47e81f50273a565a516d43b6</flow>
+        <generation_source/>
+        <order>7</order>
+        <parent_ui_id>28126b6d-ade8-4fdc-bca1-23e86ed4faf7</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>nilesh.chaurasia</sys_created_by>
+        <sys_created_on>2026-11-18 09:59:50</sys_created_on>
+        <sys_id>646e0fba47e4df50273a565a516d4368</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
+        <sys_updated_by>nilesh.chaurasia</sys_updated_by>
+        <sys_updated_on>2026-11-18 09:59:50</sys_updated_on>
+        <ui_id>46231f49-a005-484e-94f9-4c82ddaecc82</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+VYXW/qOBD9K1GegXU+INC3Vbusqu3eSrfd+3L3ruXETrHWxKnj9Avx33ccO4CAFqJLpVb7hsdj+8zMmROb7wufU//MpxM0ySeT4ThBKIoQGo2ijARpGo2yFKUk9nt+QeYMPDVJBYPhAxG1GVfPFa4rpvCdknUJE5RXpSDP39z8786czbigihX+2fcfPb8kCrbTTPlni62pY/EIkjIBrrcO0BY+/VyuhriZs7arzWXeFzshFTVQUM9nT5oVlAGGnIiK9fw5KSjRUj2vLIoRel2ItWHGCw07+sb5qeIvcO4YGb+cQVQZs3OrIXYZsub8gmhyo1Wd6Vo512wmecYqmw/KclILfb5psw7XpeaysEts2Ha1FPW8+GLT4a82aAsCFqgXpqw0gRrkLoz8ZiYfv7Yop7xocuImhcyIWI2I1oqntTZ4Fj4TbA4b4TkpS17c4VLJB94sBizzwZ2AwSAX8hEOrfhdMSCZAT6AvJLBFOwXjfkbUdxE8SdsA4sBEBfAEGxLWMlaNal8wJmoq2ZCkaKye/nLnmHiuSBVtY4cUo7va4Pb5sFFjG3SzJJM8VL/Cls8MBfcste2xPBNCk7WlMtkQblBUW30hZm7uvzjt8UiYSiOyTDpU4RYPw5HQX+cJJM+HQ5H4xhFcUjYQLH7mkFUFHPN5oMnHIZhNA4jTEophMQIz2RVck3EwOy8XP7zcwdkRNsfpn/tjru9+ylj6Cg0h6vcCs35Zpn3ld5Jzo7tat8GTnKCk0lOjNBnEh04/ONpTncVsSk4ICUBfZNkdM2nSiqNbS43tGS3Mzvz/AgILc+vDTO99Pk1VI7mOWeC7vuyTs3E1pc1/H9+WT8kyQEQxbZ6vBC8aK5JAPS92D98k3ppsMWzhl4b90tjI1W22wPE09J76dwJR8BpO+EGzvZuLZ49EFu9byizrfWt0TVAdLIGiMLTNMBiFeYqkXty3t6MTTVb/xfjT7b9gYIbC4LlvgbrdGbQ9cxwudvAUacO3iSbnbl4hXMnvkK/0pG995SAGSx152Hbv/iR0zum16e3XlTqRyL+3TfvGIfbQjXhvcN1PHjzRZhuXMd5judQOV7Cq0GxDMhRYaIYzmVdUOzeC2simUrmXFXaOe8KzVcG/VN4EhrT0zPmNd7eyrvjh/hwHG0qL3OvDcSdVnkQiNcE4q0C6RZ2F9GKT3g5PbVoTQkXTTXgPVBulJMpJdUrwnWgkG8w4khVOxJUcFJQPy97+1pgr/wdwPop/lc4vTRljKTwPh0lURAgFCCaIHi7BuNRmo9IEufrHsW4KjJQU9g5B6rA9rilRltntKs/VlK7Cs0RqFoKXsji7xqhMNGegQX19VpYh4E7QUmlFIwUW4pyC9+JX6YOv+Pr8MOpyqf4l63mt9uZtqa9uX6ve0PN/yr4fc0uDcXGDIXjgGb9cRIk/Tino/6EkmGfTNJhElGWxfkprwI//gNQuZWyrhYAAA==</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=646e0fba47e4df50273a565a516d4368"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Send Email">c1806bf4a70323008299b39f087901cb</action_type>
+        <action_type_parent display_value="Send Email">98c181d20b100300d97d8bf637673ab5</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>c1806bf4a70323008299b39f087901cb</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Bed lifecycle flow (Discharge -&gt; Cleaning Task -&gt; Available)">7869f16a47e81f50273a565a516d43b6</flow>
+        <generation_source/>
+        <order>8</order>
+        <parent_ui_id>28126b6d-ade8-4fdc-bca1-23e86ed4faf7</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>nilesh.chaurasia</sys_created_by>
+        <sys_created_on>2026-11-18 09:59:50</sys_created_on>
+        <sys_id>646e0fba47e4df50273a565a516d436e</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
+        <sys_updated_by>nilesh.chaurasia</sys_updated_by>
+        <sys_updated_on>2026-11-18 11:15:37</sys_updated_on>
+        <ui_id>46f679c4-8f98-41b5-ac95-9fe6fc6a38ce</ui_id>
+        <updation_source/>
+        <values>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</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=646e0fba47e4df50273a565a516d436e"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Wait For Condition">89ce8a4187120010663ca1bb36cb0be3</action_type>
+        <action_type_parent display_value="Wait For Condition">8bb9a8160b10030085c083eb37673aec</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>89ce8a4187120010663ca1bb36cb0be3</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Bed lifecycle flow (Discharge -&gt; Cleaning Task -&gt; Available)">7869f16a47e81f50273a565a516d43b6</flow>
+        <generation_source/>
+        <order>4</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>nilesh.chaurasia</sys_created_by>
+        <sys_created_on>2026-11-18 06:34:18</sys_created_on>
+        <sys_id>715f9af64720df50273a565a516d4329</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
+        <sys_updated_by>nilesh.chaurasia</sys_updated_by>
+        <sys_updated_on>2026-11-18 06:34:18</sys_updated_on>
+        <ui_id>d55b09bf-f6a6-47a1-a05a-107d0047b5fc</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+2XXW+jOBSG/8qI6zhrgyGmd6Ok1VbqTqW0O3sxO0IHYzeWHGD46Ey26n9fA04gH820O2mlSnvJ8QfveX0eDv7y4KjEOXNoyAUDStiEuBgTHAQeBxLHXsBjHAvqjJwUlsLMLATPisQ834Oum8DDAyWuG3MAFGA/QJQDQ4zGPmKBlES6jAQMxvN23eOjWZmoMtew+mw3MBG+UDopROqcffk6cnIozLsqUThnDztDzxWrIRbaTJ2v1e6qr1Z585xkvF6KtIrUOnhlV87syIfLmRkxixo5ZOSIH5VIE2F0SNClGDlLSBOosmLlnFVFbQKFgOQ61avNjIVKqy7PJfwo1T/mxZ7bzJPCJMatB5vHyPrTheUMKrgxO/OqLjZ2ZYqLsrMkERJqXU2HsW7CdV6pLO2WVBDr9epM18v0U2eIs9lgcBx1aUSIvMmzUd6lJW8W2ff5WuSFSltHbIo646A3T1BVhYrrqpHz4NTq9pDZXfiw3VJpc/xRKzoqs7poTZqfT6/ns+ivj7fT38/n0fz85nZ+Ob09b1YILdqtl5DnKr2L8iK7V61Ck+9yfKfNw1jq7LtJrFR36Rh4Y87YHB2ML0x81oY/Q6Gal/5htjGLG5V/pupbLS7bwjP17JEgQIRgD1ESByhkwkdY+EB9lwZ+4DqPI6dclVMNZdl7bA43+lY3FnWOW2+j9ni6NNsKbRbzQuXVRyPvXlhHH0drTP2jlQ99oQ/27FH9Ebmu6zHXiyDPtM4iHKn0vimVfSovNwMvhPPnEtdw3rY1eViy5XMvdjVc++FTN2DpdI/TaSM9nl1dH6CT4XdEp03r1/Hc8nqbzi23VRl1NWpFt7u+FYIuYaFpLh7yYuojGkqJGGYUUQGY+24yoYT/BwR/Ct7xliP7KuZZmqgmr3IAXllBVZd/1xh7SQ7t528HtwMzTtoU5YC76VDiIdkWvr3Y1aENLHzeqVojxfg94Xeq5rhl9jZ9W3a/CWUiYUHsY4aEZAxRb8JQaH7yUBBAQgjlicSv2+hwcqya5eB/tFJLkdVVJDXcDYjD+4itv1Mv4+oZStZcnaftZ9IqelKipSvOMi0g3e1rppx+u7BKLVr0hX3tGFvviKyTNbbe6Z2uNvT6Tbji5m5k2hSg0OMC0SDmiEkukSdiX3p+zOIJfoXuxY/XcLhfqkldQHuKPVEnuLg9Q8eapVkv4GlplqT2bHbjV/sbWZz8/3H6JZz27N65yfUDr8XUwqybwapsqsIwvE+ZIDDx4+ZyBoi6IUEQUheFgZgIKlngQfgKlDFytLrlfimXfCGSWovTUvYMHWvKbnoBT0uzlPWFvg3YfBC3hAUnI4zt/QzyZToUd4i3QVbvkjt5I6DgiwsldHOe9kb2BI3DY9kGcXgwb9PdXJd4ieCIJObXkbqBi5hHJ2gSshhTU3qxJ07I3dd/AQPTpW69FAAA</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=715f9af64720df50273a565a516d4329"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Look Up Record">9d09f99587003300663ca1bb36cb0ba3</action_type>
+        <action_type_parent display_value="Look Up Record">b93f42810b30030085c083eb37673a63</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>9d09f99587003300663ca1bb36cb0ba3</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Bed lifecycle flow (Discharge -&gt; Cleaning Task -&gt; Available)">7869f16a47e81f50273a565a516d43b6</flow>
+        <generation_source/>
+        <order>3</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>nilesh.chaurasia</sys_created_by>
+        <sys_created_on>2026-11-18 06:34:18</sys_created_on>
+        <sys_id>795f9af64720df50273a565a516d4327</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
+        <sys_updated_by>nilesh.chaurasia</sys_updated_by>
+        <sys_updated_on>2026-11-18 06:34:18</sys_updated_on>
+        <ui_id>4122bcaa-6056-4ca8-84b5-86ff1f28168a</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+VYXW/iOBT9K1GeKZsPINC3USukSrNTadqZl9mR5cROsdbYGcehH4j/vtexA1mgQGap1GoffX1tn3vvOddOfix9RvxLn0yCST6ZDMdJEMRxEIxGcYbDNI1HWRqkeOD3fIHnFDw1TjmF4QLzyoyfUBRF8TiKES4k5xIFiImFZJlxIqwsOH7+7nxv1hPZjHGiqPAvf/zs+QVWsLmmyr9cbk2dio7jlHJwvXfwttDq52I9RPWctX1uL/O+2AmpiIES9Hz6pKkgFDDkmJe058+xIFhL9by2KIrJreAbw4wJDTv6xvmpZC9w7jgwfjmFqDJq59ZD5HJkzfk11vhOqyrTlXKu2cwkrbT5IDTHFddXbZt1uC00k8IusWHb1ZJXc/HFpsNfb9CUBCxVCSBoYQI1yF0Y+d1MPn5tUE6ZqHPiJrnMMF+PsNaKpZU2eJY+5XQOG6E5LgomHlCh5ILViwHLvP/AYdDPuXyEQ0v2IPo4M8D7kFfcn4L9ujZ/x4qZKP6EbWAxAGIcGIJsCUtZqTqVC5TxqqwnFBal3ctf9fzyubziuCw3kUPK0a/K4LZ5cBEjmzSzJFOs0J9giwV1wa16jUCGByk42VAuk4Iwg6JsqQTQIEb+qmAxWS6/FRAsJSjsZ5WC/Op+zgTmjXD61nu12lXQb+/TUXDHo20Ed9UOd18KnPR2bJ/3beCkF55NeoMg+Ejig8Pfn/a6q8mm4IikQnKQZGTDp1IqjWwuW5raVUdnnp8AoeH5rWGmlz6/hsrRPGeUk303zNRMbN0w0f/zhnmXJAdABNnqMcGZqJ8LAPSt2D88SL003OJZTa/WfWJsuMx2NYA9Lb2Xzko4AU6jhDs427u3ePZAbPr9zD31/tXrG6MTQHw2AcTReQSwXIe5TuSenDcvRFPNxv/F+ONtf6Bga0G42iewTmeGXc+MVrsCjjspuE02O3P9CufO/JR8RZG9t2wBM1jqzkNWv+iRkQeqN6c3XkTqR8z/3jfvGIeaQtXhvcGzNDz4ZZS2nqUsR3OoHCvg9axoBuQoEVYU5bISBLl384ZIppI5U6V2zruN5isF/QhPgjA9PaNe7e2tvTtexMfjaFJ5k3tNIO600oNAvDoQbx1It7C7NK3BGR+n525aU8x4XQ34JCpa5aRKSfVK4zpSyAOMOLGrnQgqPCuo/9729klgb/s7gvVDfF+fvzVlFKeDCI+SOAyDIAxIEoyTJByP0nyEk0G+0ShCpcigm8LOOVAFtkcNNZo6B7v9x7bUro3mBFQNBa+lMB/aUaI9Awvq6zWwjgN3DSWVklMstjrKPdwTf0wdfsfX4bvrKh/ib1PF7rczbU17c/1W74aKfRPsV0VvDMXGNIjGIckuxkmYXAxyMrqYEDy8wJN0mMSEZoP8nE+Bn/8AdqywN8QVAAA=</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=795f9af64720df50273a565a516d4327"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Submit Catalog Item Request">c7a04c607312001098e194596bf6a72a</action_type>
+        <action_type_parent display_value="Submit Catalog Item Request">bfb5ea807312001098e194596bf6a707</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>c7a04c607312001098e194596bf6a72a</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Bed lifecycle flow (Discharge -&gt; Cleaning Task -&gt; Available)">7869f16a47e81f50273a565a516d43b6</flow>
+        <generation_source/>
+        <order>6</order>
+        <parent_ui_id>28126b6d-ade8-4fdc-bca1-23e86ed4faf7</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>nilesh.chaurasia</sys_created_by>
+        <sys_created_on>2026-11-18 06:34:18</sys_created_on>
+        <sys_id>b15f9af64720df50273a565a516d432b</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
+        <sys_updated_by>nilesh.chaurasia</sys_updated_by>
+        <sys_updated_on>2026-11-18 06:50:05</sys_updated_on>
+        <ui_id>7e044a57-d00e-4261-8779-d556840342ae</ui_id>
+        <updation_source/>
+        <values>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</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=b15f9af64720df50273a565a516d432b"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Update Record">f9d01dd2c31332002841b63b12d3aea1</action_type>
+        <action_type_parent display_value="Update Record">baf174c8c3c232002841b63b12d3aee4</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>f9d01dd2c31332002841b63b12d3aea1</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Bed lifecycle flow (Discharge -&gt; Cleaning Task -&gt; Available)">7869f16a47e81f50273a565a516d43b6</flow>
+        <generation_source/>
+        <order>11</order>
+        <parent_ui_id>11280477-429a-416e-8f52-1247b94d0a9a</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>nilesh.chaurasia</sys_created_by>
+        <sys_created_on>2026-11-18 06:34:18</sys_created_on>
+        <sys_id>b15f9af64720df50273a565a516d432d</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
+        <sys_updated_by>nilesh.chaurasia</sys_updated_by>
+        <sys_updated_on>2026-11-18 09:59:50</sys_updated_on>
+        <ui_id>bde340ef-d69b-44dd-877a-f0ee1e5f93e9</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+VWXU/bMBT9K5YfWReSFhCUJwZDm8RAgo0XiiInvmk9OXFmOx1d6X/fteOEqmwMJF7Q2ofW98vn3Htu2pslFZyO6Q7wODlI9vJRMhoN43i4v5Nke6MsGfIRA0jogFasBIzUkCvN8TxnsnGG5fJbzZkFniZR3mgNlY0y4KsVxnBhaskW1yEULflMSI4xdHxzO6A101jVgqbj5YbrubAky0Bi6GWHaxOnXdTuzFXelIgtFZ3xLGSeBA/5fIIeTHJwknhA4c5CxQGBFEwaGNCSVchU6QUdW92gQQPjF5Vc9BEzUdmWaMnujPiFN+/ELq4AZJaHJvTHNDSoNRcnzLIrrJzbRvf9UiIH0/aEQ8EaaY/XbW3ARW2FqtoUyzLZZSvZlNV52xHaF1ibR2MQBNSOp0Pe0iquZurnZQfyVFS+JYGiVDmT/YlZq0XWWAdnSUGC73HJ6lpU07TWai58MkIpo6nEQ1RI9RPvNGJaRSx3uCPsKotO0X7izddMC0fiC5bB5NWAmoU5lsyYByrYw/RH45C0xAKF1HfBtyD1SnDJuRa1PcKr5hCArwZB+NnuUwrLDx4EtVbzQfx36XA4HO0PRymrlZQqjVPUvnks/Q/AX6z+Z2Dr1P/Vz/zPWMMCPLKdreeS89YR5L/7avLff0vyDzTevP7/pfp4+ORzdU1JXuhmTfHGMtuYSRPHI17w9+0tXtwbiv974Mu24BlYuy04FSD98m2C71YASkRoIW3JbKxBcJLr4Ox/CV5tF5K92L/e0Eb8Bz8ILcXW5jC3wvXfnoij21uTamvrKMfGG+Kgbh957MRhJ41BusTOgBQ89RaVfYfcRuTKFyBlYyzRgIOtCCNekBFxFS+c7EjVlBl+CENUURiwJFuQdwkRFfmotdLkE+pPuiuuoO2YBzNnQvqnufLjNyTIiTQ1Aqs1QnU5ExpNKGEFLl0Hz6XDHcMVgDGi0cTMlLbY/Zy0K9wFRjje6RR0/1/PB7rxeV5466GrFZj1VZxxe1K5d3Al5P4ekSQTeojzMmwOvJfharW6/Q240JNcmwoAAA==</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=b15f9af64720df50273a565a516d432d"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Update Record">f9d01dd2c31332002841b63b12d3aea1</action_type>
+        <action_type_parent display_value="Update Record">baf174c8c3c232002841b63b12d3aee4</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>f9d01dd2c31332002841b63b12d3aea1</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Bed lifecycle flow (Discharge -&gt; Cleaning Task -&gt; Available)">7869f16a47e81f50273a565a516d43b6</flow>
+        <generation_source/>
+        <order>1</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>nilesh.chaurasia</sys_created_by>
+        <sys_created_on>2026-11-17 09:10:00</sys_created_on>
+        <sys_id>f469356a47e81f50273a565a516d435a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
+        <sys_updated_by>nilesh.chaurasia</sys_updated_by>
+        <sys_updated_on>2026-11-17 09:10:00</sys_updated_on>
+        <ui_id>f3314e9d-a31e-4a65-9765-3acf16864df1</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+VWUU/bMBD+K5YfWReSFhCUJwZDm8RAohsvFEVOfGk9OXFmOx1d1f++s+OEqmwMJF7Q+tL6fHf+vs/fJb1dUcHpmO4Bj5Oj5CAfJaPRMI6Hh3tJdjDKkiEfMYCEDmjFSsBMDbnSHNcLJhsXWK2+1ZxZ4GkS5Y3WUNkoA75eYw4XppZseRNSMZLPheSYQ8e3dwNaM41dLWg6Xm1tPReWZBlITL3ucG3jtMvarbnKmxKxpaILXoTKs7BDPp/hDhY5OEk8oHBvoeKAQAomDQxoySpkqvSSjq1uMKCB8atKLvuMuahsS7Rk90b8wpP3YpdXADLLgwj9Mg0CteHijFk2wc65bXSvlxI5mFYTDgVrpD3djLUJV7UVqmpLLMtkV61kU1aXrSK0b7BxH41BEFA7ng55S6uYzNXP6w7kuai8JIGiVDmT/YpZq0XWWAdnRUGC17hkdS2qWVprtRC+GKGU0UziIiqk+olnGjGrIpY73BGqyqJzjJ/58A3TwpH4gm2weD2gZmlOJTPmgQpqmP5oHJKWWKCQehW8BKl3givOtajtCR61gAB8PQjGz/afclh+9GCojZ4P5r9Ph8Ph6HA4SlmtpFRpnKL3zWPrfwD+Yvc/A1vn/q/+zv+MNQzAo9jFZi25bDeC/fdfzf6Hb8n+gcab9/+/XB8Pn3yubjjJG91sON5YZhszbeJ4xAv+vj3Fm3vL8X9PfNkUPANrNwXnAqQfvm3w3QhAiQgtpC2ZrTEIm+QmbPZvglebheQg9p83NBH/wQuhpdjGHObWuP7XE3l0d2da7eyc5Ci8IQ7q7onHThx20hikS+wcSMFTH1HZd8htRCa+ASkbY4kGvNiKMOINGRHX8crZjlRNmeGXMEQVhQFLsiV5lxBRkY9aK00+of+kO2ICrWIezIIJ6Z/myl+/IcFOpKkRWK0RqquZ0mhKCStw6Dp4rhzuGY4AjBGNJmautEX1c9KOcJcY4fXOZqD7/3o+0V2f54WnHrtegVnfxQV3p1UI7x3jFRm2AN47b71e3/0GVVpxyo4KAAA=</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=f469356a47e81f50273a565a516d435a"/>
+    <sys_hub_sub_flow_instance_v2 action="delete_multiple" query="flow=7869f16a47e81f50273a565a516d43b6"/>
+    <sys_hub_flow_logic_instance_v2 action="delete_multiple" query="flow=7869f16a47e81f50273a565a516d43b6^sys_idNOT IN715f9af64720df50273a565a516d432f,f55f9af64720df50273a565a516d4331"/>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">76c0a2ea47205f50273a565a516d43e6</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="Bed lifecycle flow (Discharge -&gt; Cleaning Task -&gt; Available)">7869f16a47e81f50273a565a516d43b6</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="If">af4e1945c3e232002841b63b12d3ae3e</logic_definition>
+        <order>5</order>
+        <outputs_assigned/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>nilesh.chaurasia</sys_created_by>
+        <sys_created_on>2026-11-18 06:34:18</sys_created_on>
+        <sys_id>715f9af64720df50273a565a516d432f</sys_id>
+        <sys_mod_count>13</sys_mod_count>
+        <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
+        <sys_updated_by>nilesh.chaurasia</sys_updated_by>
+        <sys_updated_on>2026-11-18 11:16:30</sys_updated_on>
+        <ui_id>28126b6d-ade8-4fdc-bca1-23e86ed4faf7</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+1VXW/TMBT9K8jPaeQkTUv7NnWahDSYxKa9wBTd+KO1cOIQO+1K1P/OdZKmFSuCAY+8xce+1+cc36O0xDSuapx9MFfWqnVJlp+eAqJKj+F3S0ooBFkSZkqunDJl1gEB2YJu/AZ+cmUrDfvHE8I2SvNaDN0qqLHGiZos2x+2FMcCSUFGCxaxJJ4lMaXx22mUz5I8inkCAhJsqCEXGo+ujjTe3HZI8FN+bl953LpalethfTt0uT+CpuaeVUQDIp6dKLlAPhK0FQEpoOTgTL0fkVoAvyv1Cdio0vWCC3i26hteGKepPygFSmSDG+MyG5zqYXkNDpBKw1xTj8YZxYTtzeFCQqPd6hzrD9xVXmpf4iDXx2qjm6L80DtCxgZnD9NYJCEqr9RTH3TI+43ZfTyyvFFl58qwqQ0DPa7AoXd54zyflggtCmyUFVBV6GhW1WarumLkUoRrjYtQarPDS/10hcA88RCNhfAG8esOfoRaeRXvsQ0W9zRzsIpl3SRiO7RJkENA7N6uNFh7EonuZl8bT7GXPIjLen98CatV5a7w5q0YdByCl4N9NtNty9M0p4tcTuQMZpPpHKIJ0BQmEZ1zSqfzPJUstA6cOBw+N5QmnL4Mwp+2eV16FpDKNKLp5fRMZ5fScyE3r4xM/IvI+Pf6zcRQSv9H5q8jo2zWD/qgrbv8Hybmycejv3P0mimL1B489u74x/Abexwuxc6hnam/eFEn7PAdXoR/SHsGAAA=</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">196eeaea47a05f50273a565a516d4340</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="Bed lifecycle flow (Discharge -&gt; Cleaning Task -&gt; Available)">7869f16a47e81f50273a565a516d43b6</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="If">af4e1945c3e232002841b63b12d3ae3e</logic_definition>
+        <order>10</order>
+        <outputs_assigned/>
+        <parent_ui_id>28126b6d-ade8-4fdc-bca1-23e86ed4faf7</parent_ui_id>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>nilesh.chaurasia</sys_created_by>
+        <sys_created_on>2026-11-18 06:34:18</sys_created_on>
+        <sys_id>f55f9af64720df50273a565a516d4331</sys_id>
+        <sys_mod_count>14</sys_mod_count>
+        <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
+        <sys_updated_by>nilesh.chaurasia</sys_updated_by>
+        <sys_updated_on>2026-11-18 11:16:30</sys_updated_on>
+        <ui_id>11280477-429a-416e-8f52-1247b94d0a9a</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+1Vy27bMBD8lYJnWdA7sW+BgwAF0gZoglzaQFiRlE2UElWSsuMK/vcuJVk2Ehdt2h57E4fc5cxwB+qIam3TWvOgrowRq5osPj95RNQOw++O1FBxsiBU1UxYoeq8BzyyAdm6DfxkwjQSdo9HhK6FZJqP3RrQWGO5JovuxZZgWFAGUIZzGtI4yuIoCKLLJCyyuAgjFgOHGBtKKLjEo8sDjXe3PeL9lJ/dNQ43Vot6Na5vxy73B1Bp5liFgUf4s+U148inBGm4RyqoGVildxOiObC7Wh6BtajtILiCZyO+44VRmrqDJUeJdHRjWuajUwNcXoMFpNJS2+rJOCUoN4M5jJfQSrs8xYYDd42TOpRYKOShWsm2qj8OjpCpwcnDtAZJ8MYpddRHHeX9Wm0/HVjeiLp3ZdyUioKcVmDRu6K1jk9HuOQVNsoraBp0NG+02oi+GLlU/kriwi+l2uKlbrp8oI64j8aCf4P4dQ8/ghZOxQdsg8UDzQKMoHk/idgObeJk7xGzM0sJxhxForv5t9ZRHCSP4vLBH1dCtWjsFd684aOOvfd6sE9muusuEjaPUkhmSTEvZgnPstk8mrMZo+yCpqzM4DLwjQXL9/svbRDELHgdhD9t87b0zCEt0zBIz6cnyc6l50xu3hiZ6BeRce/1m4kJguB/ZP46MsLkw6CP2vrL/2Finlw8hjsnr6kwSO3BYe8Pfwy3scPhEvQU2ir91Yk6Yvsf+SpCqXsGAAA=</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_pill_compound action="delete_multiple" query="attached_to=7869f16a47e81f50273a565a516d43b6^sys_idNOT IN206e0fba47e4df50273a565a516d43c6,22bf13f247a8df50273a565a516d4300,26bfdfb247a8df50273a565a516d43ff,2c6e0fba47e4df50273a565a516d43c4,606e0fba47e4df50273a565a516d43c5,646e0fba47e4df50273a565a516d43c6,6abfdfb247a8df50273a565a516d43ff,a46e0fba47e4df50273a565a516d43c5,a6bfdfb247a8df50273a565a516d43fe,e86e0fba47e4df50273a565a516d43c5,eabfdfb247a8df50273a565a516d43fe,ec6e0fba47e4df50273a565a516d43c3"/>
+    <sys_hub_pill_compound action="INSERT_OR_UPDATE">
+        <attached_to>7869f16a47e81f50273a565a516d43b6</attached_to>
+        <extra_info/>
+        <order>0</order>
+        <prescription>{{7e044a57-d00e-4261-8779-d556840342ae.requested_item.priority}}</prescription>
+        <source_ui_id/>
+        <sys_created_by>nilesh.chaurasia</sys_created_by>
+        <sys_created_on>2026-11-18 09:59:50</sys_created_on>
+        <sys_id>206e0fba47e4df50273a565a516d43c6</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
+        <sys_updated_by>nilesh.chaurasia</sys_updated_by>
+        <sys_updated_on>2026-11-18 09:59:50</sys_updated_on>
+        <transform_compositions>[]</transform_compositions>
+        <transform_definition_id/>
+        <ui_id>fc3e23c8-d9fe-4843-93eb-493a500b39de</ui_id>
+    </sys_hub_pill_compound>
+    <sys_hub_pill_compound action="INSERT_OR_UPDATE">
+        <attached_to>7869f16a47e81f50273a565a516d43b6</attached_to>
+        <extra_info/>
+        <order>0</order>
+        <prescription>{{7e044a57-d00e-4261-8779-d556840342ae.requested_item.due_date}}</prescription>
+        <source_ui_id/>
+        <sys_created_by>nilesh.chaurasia</sys_created_by>
+        <sys_created_on>2026-11-18 11:15:37</sys_created_on>
+        <sys_id>22bf13f247a8df50273a565a516d4300</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
+        <sys_updated_by>nilesh.chaurasia</sys_updated_by>
+        <sys_updated_on>2026-11-18 11:15:37</sys_updated_on>
+        <transform_compositions>[]</transform_compositions>
+        <transform_definition_id/>
+        <ui_id>75110471-0041-4784-948e-0b4ae03bc01e</ui_id>
+    </sys_hub_pill_compound>
+    <sys_hub_pill_compound action="INSERT_OR_UPDATE">
+        <attached_to>7869f16a47e81f50273a565a516d43b6</attached_to>
+        <extra_info/>
+        <order>0</order>
+        <prescription>{{Updated_1.current.hospital}}</prescription>
+        <source_ui_id/>
+        <sys_created_by>nilesh.chaurasia</sys_created_by>
+        <sys_created_on>2026-11-18 11:15:37</sys_created_on>
+        <sys_id>26bfdfb247a8df50273a565a516d43ff</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
+        <sys_updated_by>nilesh.chaurasia</sys_updated_by>
+        <sys_updated_on>2026-11-18 11:15:37</sys_updated_on>
+        <transform_compositions>[]</transform_compositions>
+        <transform_definition_id/>
+        <ui_id>08c8b2a2-9b09-4bfe-8454-e3ef6ecb2c80</ui_id>
+    </sys_hub_pill_compound>
+    <sys_hub_pill_compound action="INSERT_OR_UPDATE">
+        <attached_to>7869f16a47e81f50273a565a516d43b6</attached_to>
+        <extra_info/>
+        <order>0</order>
+        <prescription>{{7e044a57-d00e-4261-8779-d556840342ae.requested_item.x_2223823_apollo_0_hospital}}</prescription>
+        <source_ui_id/>
+        <sys_created_by>nilesh.chaurasia</sys_created_by>
+        <sys_created_on>2026-11-18 09:59:50</sys_created_on>
+        <sys_id>2c6e0fba47e4df50273a565a516d43c4</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
+        <sys_updated_by>nilesh.chaurasia</sys_updated_by>
+        <sys_updated_on>2026-11-18 09:59:50</sys_updated_on>
+        <transform_compositions>[]</transform_compositions>
+        <transform_definition_id/>
+        <ui_id>77c3f644-83f1-43f4-8577-ba4c59ab0748</ui_id>
+    </sys_hub_pill_compound>
+    <sys_hub_pill_compound action="INSERT_OR_UPDATE">
+        <attached_to>7869f16a47e81f50273a565a516d43b6</attached_to>
+        <extra_info/>
+        <order>0</order>
+        <prescription>{{7e044a57-d00e-4261-8779-d556840342ae.requested_item.expected_start}}</prescription>
+        <source_ui_id/>
+        <sys_created_by>nilesh.chaurasia</sys_created_by>
+        <sys_created_on>2026-11-18 09:59:50</sys_created_on>
+        <sys_id>606e0fba47e4df50273a565a516d43c5</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
+        <sys_updated_by>nilesh.chaurasia</sys_updated_by>
+        <sys_updated_on>2026-11-18 09:59:50</sys_updated_on>
+        <transform_compositions>[]</transform_compositions>
+        <transform_definition_id/>
+        <ui_id>995d062a-a1f9-4452-baba-6eeabd6c3c81</ui_id>
+    </sys_hub_pill_compound>
+    <sys_hub_pill_compound action="INSERT_OR_UPDATE">
+        <attached_to>7869f16a47e81f50273a565a516d43b6</attached_to>
+        <extra_info/>
+        <order>0</order>
+        <prescription>{{Updated_1.current.bed.room}}</prescription>
+        <source_ui_id/>
+        <sys_created_by>nilesh.chaurasia</sys_created_by>
+        <sys_created_on>2026-11-18 09:59:50</sys_created_on>
+        <sys_id>646e0fba47e4df50273a565a516d43c6</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
+        <sys_updated_by>nilesh.chaurasia</sys_updated_by>
+        <sys_updated_on>2026-11-18 09:59:50</sys_updated_on>
+        <transform_compositions>[]</transform_compositions>
+        <transform_definition_id/>
+        <ui_id>31b3d912-f63c-4d14-ab74-40972a800856</ui_id>
+    </sys_hub_pill_compound>
+    <sys_hub_pill_compound action="INSERT_OR_UPDATE">
+        <attached_to>7869f16a47e81f50273a565a516d43b6</attached_to>
+        <extra_info/>
+        <order>0</order>
+        <prescription>{{Updated_1.current.hospital.name}}</prescription>
+        <source_ui_id/>
+        <sys_created_by>nilesh.chaurasia</sys_created_by>
+        <sys_created_on>2026-11-18 11:15:37</sys_created_on>
+        <sys_id>6abfdfb247a8df50273a565a516d43ff</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
+        <sys_updated_by>nilesh.chaurasia</sys_updated_by>
+        <sys_updated_on>2026-11-18 11:15:37</sys_updated_on>
+        <transform_compositions>[]</transform_compositions>
+        <transform_definition_id/>
+        <ui_id>fbfc9ebe-ed41-4b29-9aab-4d6a2b7cdec4</ui_id>
+    </sys_hub_pill_compound>
+    <sys_hub_pill_compound action="INSERT_OR_UPDATE">
+        <attached_to>7869f16a47e81f50273a565a516d43b6</attached_to>
+        <extra_info/>
+        <order>0</order>
+        <prescription>{{7e044a57-d00e-4261-8779-d556840342ae.requested_item.number}}</prescription>
+        <source_ui_id/>
+        <sys_created_by>nilesh.chaurasia</sys_created_by>
+        <sys_created_on>2026-11-18 09:59:50</sys_created_on>
+        <sys_id>a46e0fba47e4df50273a565a516d43c5</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
+        <sys_updated_by>nilesh.chaurasia</sys_updated_by>
+        <sys_updated_on>2026-11-18 09:59:50</sys_updated_on>
+        <transform_compositions>[]</transform_compositions>
+        <transform_definition_id/>
+        <ui_id>7d890bc4-08c0-4c7a-9198-64e9d9d88bad</ui_id>
+    </sys_hub_pill_compound>
+    <sys_hub_pill_compound action="INSERT_OR_UPDATE">
+        <attached_to>7869f16a47e81f50273a565a516d43b6</attached_to>
+        <extra_info/>
+        <order>0</order>
+        <prescription>{{Updated_1.current.bed.bed_number}}</prescription>
+        <source_ui_id/>
+        <sys_created_by>nilesh.chaurasia</sys_created_by>
+        <sys_created_on>2026-11-18 11:15:37</sys_created_on>
+        <sys_id>a6bfdfb247a8df50273a565a516d43fe</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
+        <sys_updated_by>nilesh.chaurasia</sys_updated_by>
+        <sys_updated_on>2026-11-18 11:15:37</sys_updated_on>
+        <transform_compositions>[]</transform_compositions>
+        <transform_definition_id/>
+        <ui_id>1e0afa46-adcf-40f7-8fb9-68dcec6ee94a</ui_id>
+    </sys_hub_pill_compound>
+    <sys_hub_pill_compound action="INSERT_OR_UPDATE">
+        <attached_to>7869f16a47e81f50273a565a516d43b6</attached_to>
+        <extra_info/>
+        <order>0</order>
+        <prescription>{{7e044a57-d00e-4261-8779-d556840342ae.requested_item.sys_id}}</prescription>
+        <source_ui_id/>
+        <sys_created_by>nilesh.chaurasia</sys_created_by>
+        <sys_created_on>2026-11-18 09:59:50</sys_created_on>
+        <sys_id>e86e0fba47e4df50273a565a516d43c5</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
+        <sys_updated_by>nilesh.chaurasia</sys_updated_by>
+        <sys_updated_on>2026-11-18 09:59:50</sys_updated_on>
+        <transform_compositions>[]</transform_compositions>
+        <transform_definition_id/>
+        <ui_id>75f63313-20ef-45a2-ac13-853011fc4f7b</ui_id>
+    </sys_hub_pill_compound>
+    <sys_hub_pill_compound action="INSERT_OR_UPDATE">
+        <attached_to>7869f16a47e81f50273a565a516d43b6</attached_to>
+        <extra_info/>
+        <order>0</order>
+        <prescription>{{Updated_1.current.room.room_number}}</prescription>
+        <source_ui_id/>
+        <sys_created_by>nilesh.chaurasia</sys_created_by>
+        <sys_created_on>2026-11-18 11:15:37</sys_created_on>
+        <sys_id>eabfdfb247a8df50273a565a516d43fe</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
+        <sys_updated_by>nilesh.chaurasia</sys_updated_by>
+        <sys_updated_on>2026-11-18 11:15:37</sys_updated_on>
+        <transform_compositions>[]</transform_compositions>
+        <transform_definition_id/>
+        <ui_id>20d4cfb7-32a9-4c3a-965b-bb32f16a0479</ui_id>
+    </sys_hub_pill_compound>
+    <sys_hub_pill_compound action="INSERT_OR_UPDATE">
+        <attached_to>7869f16a47e81f50273a565a516d43b6</attached_to>
+        <extra_info/>
+        <order>0</order>
+        <prescription>{{Updated_1.current.bed}}</prescription>
+        <source_ui_id/>
+        <sys_created_by>nilesh.chaurasia</sys_created_by>
+        <sys_created_on>2026-11-18 09:59:50</sys_created_on>
+        <sys_id>ec6e0fba47e4df50273a565a516d43c3</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
+        <sys_updated_by>nilesh.chaurasia</sys_updated_by>
+        <sys_updated_on>2026-11-18 09:59:50</sys_updated_on>
+        <transform_compositions>[]</transform_compositions>
+        <transform_definition_id/>
+        <ui_id>f7a64e52-a378-4e1b-a54c-ac70c0145acc</ui_id>
+    </sys_hub_pill_compound>
+    <sys_hub_flow_variable action="delete_multiple" query="model=7869f16a47e81f50273a565a516d43b6"/>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_variable_7869f16a47e81f50273a565a516d43b6"/>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>current</element>
+        <help/>
+        <hint/>
+        <label>Record</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_7869f16a47e81f50273a565a516d43b6</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>nilesh.chaurasia</sys_created_by>
+        <sys_created_on>2026-11-17 09:10:00</sys_created_on>
+        <sys_id>3069f16a47e81f50273a565a516d43df</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Apollo-Hospitals" source="x_2223823_apollo_0">87c1422693c89b507b3a7c5efaba1008</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>nilesh.chaurasia</sys_updated_by>
+        <sys_updated_on>2026-11-17 09:10:00</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>changed_fields</element>
+        <help/>
+        <hint/>
+        <label>Changed Fields</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_7869f16a47e81f50273a565a516d43b6</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>nilesh.chaurasia</sys_created_by>
+        <sys_created_on>2026-11-17 09:10:00</sys_created_on>
+        <sys_id>bc69356a47e81f50273a565a516d4335</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Apollo-Hospitals" source="x_2223823_apollo_0">87c1422693c89b507b3a7c5efaba1008</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>nilesh.chaurasia</sys_updated_by>
+        <sys_updated_on>2026-11-17 09:10:00</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>table_name</element>
+        <help/>
+        <hint/>
+        <label>Table Name</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_7869f16a47e81f50273a565a516d43b6</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>nilesh.chaurasia</sys_created_by>
+        <sys_created_on>2026-11-17 09:10:00</sys_created_on>
+        <sys_id>f069356a47e81f50273a565a516d434e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Apollo-Hospitals" source="x_2223823_apollo_0">87c1422693c89b507b3a7c5efaba1008</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>nilesh.chaurasia</sys_updated_by>
+        <sys_updated_on>2026-11-17 09:10:00</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_input_7869f16a47e81f50273a565a516d43b6"/>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_output_7869f16a47e81f50273a565a516d43b6"/>
+    <sys_hub_flow action="UPDATE">
+        <sys_id>9a98b1e647e81f50273a565a516d4375</sys_id>
+        <latest_snapshot>7869f16a47e81f50273a565a516d43b6</latest_snapshot>
+        <compiler_build>glide-australia-02-11-2026__patch7-09-17-2026_10-06-2026_0905.zip</compiler_build>
+        <version_record/>
+    </sys_hub_flow>
+    <sys_flow_trigger_plan action="delete_multiple" query="plan_id=9a98b1e647e81f50273a565a516d4375^sys_idNOT IN4569356a47e81f50273a565a516d436a"/>
+    <sys_flow_trigger_plan action="INSERT_OR_UPDATE">
+        <binding_strategy>com.snc.process_flow.engine.binding.OncePerRecord</binding_strategy>
+        <plan>{"@class":"com.snc.process_flow.engine.serialization.plan_data.ChunkingPlanData","chunk_data":{"table":"sys_flow_trigger_plan","id":"4569356a47e81f50273a565a516d436a","name":"plan","plan_signature":null},"plan_data":"CHUNKING_PLAN"}</plan>
+        <plan_id>9a98b1e647e81f50273a565a516d4375</plan_id>
+        <snapshot>737163f647a8df50273a565a516d4317</snapshot>
+        <sys_created_by>nilesh.chaurasia</sys_created_by>
+        <sys_created_on>2026-11-17 09:10:01</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>4569356a47e81f50273a565a516d436a</sys_id>
+        <sys_mod_count>6</sys_mod_count>
+        <sys_overrides/>
+        <sys_scope/>
+        <sys_updated_by>nilesh.chaurasia</sys_updated_by>
+        <sys_updated_on>2026-11-18 11:16:31</sys_updated_on>
+        <trigger display_value="">b7ef9bf247a8df50273a565a516d43ec</trigger>
+    </sys_flow_trigger_plan>
+    <sys_flow_subflow_plan action="delete_multiple" query="plan_id=9a98b1e647e81f50273a565a516d4375"/>
+</record_update>

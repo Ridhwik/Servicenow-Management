@@ -1,0 +1,1455 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_hub_flow">
+    <sys_hub_flow action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <acls/>
+        <active>true</active>
+        <allow_high_security_roles>false</allow_high_security_roles>
+        <annotation/>
+        <attributes>browserActivatedIn=chrome,integrationActivatedIn=standalone,timeFromCreateToActivate=595000,viewActivatedIn=diagramming</attributes>
+        <authored_on_release_version>29000</authored_on_release_version>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <copied_from>828f267973333300e289235f04f6a7a3</copied_from>
+        <copied_from_name>Default SLA flow</copied_from_name>
+        <description/>
+        <display_name_after_preview/>
+        <flow_priority/>
+        <generation_source/>
+        <internal_name>housekeeping</internal_name>
+        <label_cache>[{"name":"8dcd36f8-6e66-4e71-8c03-1253a41291dc.Table","label":"2.1➛Task SLA Table","reference":"task_sla","reference_display":"Task SLA","type":"table_name","base_type":"table_name"},{"name":"d5627992-c177-483f-9192-efc15d3d928f.state","label":"10 - Wait For Condition➛State","reference_display":"State","type":"choice","base_type":"choice","choices":[{"label":"Complete","value":"0","order":0.0},{"label":"Timeout","value":"1","order":1.0}],"attributes":{"uiType":"choice","uiTypeLabel":"Choice","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"2e334039-7a20-4ead-9148-909988f1a7e4"}},{"name":"c9d13231-0089-4f10-91ea-2600908e0d7e.Record","label":"7 - Look Up Record➛Task SLA Record","reference":"task_sla","reference_display":"Task SLA","type":"reference","base_type":"reference","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"f86c36ba-ff4d-4b25-a093-4cefb827f99e.status","label":"3 - Look Up Record➛Status","reference_display":"Status","type":"choice","base_type":"choice","choices":[{"label":"Error","value":"1","order":0.0},{"label":"Success","value":"0","order":1.0}],"attributes":{"uiType":"choice","uiTypeLabel":"Choice","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"5e478657-3a84-4a60-a92b-d3e80005ad34"}},{"name":"b469b3be-e287-41ed-8ca5-4b4e417b229e.record","label":"4 - Create Record➛Event Record","reference":"sysevent","reference_display":"Event","type":"reference","base_type":"reference","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"9da255d3-8572-499b-b4c7-6353e0707fd3.total_duration","label":"1 - SLA Percentage Timer➛Total Duration","reference_display":"Total Duration","type":"glide_duration","base_type":"glide_duration","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"glide_duration","uiTypeLabel":"Duration"}},{"name":"e333b600-57da-4443-9ad7-51adc406f043.Record.task.assigned_to","label":"11 - Look Up Record➛Task SLA Record➛Task➛Assigned to","reference":"sys_user","reference_display":"User","type":"reference","base_type":"reference","parent_table_name":"task","column_name":"assigned_to"},{"name":"c9d13231-0089-4f10-91ea-2600908e0d7e.error_message","label":"7 - Look Up Record➛Error Message","reference_display":"Error Message","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiUniqueId":"87687532-9e3d-4497-a88e-90f45bfb9adb"}},{"name":"c9d13231-0089-4f10-91ea-2600908e0d7e.Table","label":"7 - Look Up Record➛Task SLA Table","reference":"task_sla","reference_display":"Task SLA","type":"table_name","base_type":"table_name","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","filter_table_source":"v_cluster_transaction"}},{"name":"f86c36ba-ff4d-4b25-a093-4cefb827f99e.Record.task.assigned_to","label":"3 - Look Up Record➛Task SLA Record➛Task➛Assigned to","reference":"sys_user","reference_display":"User","type":"reference","base_type":"reference","parent_table_name":"task","column_name":"assigned_to"},{"name":"3132448d-a5d7-48a3-acc7-34e5341f88eb.table_name","label":"2.3➛Event Table","reference":"sysevent","reference_display":"Event","type":"table_name","base_type":"table_name"},{"name":"e333b600-57da-4443-9ad7-51adc406f043.Record","label":"11 - Look Up Record➛Task SLA Record","reference":"task_sla","reference_display":"Task SLA","type":"reference","base_type":"reference","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"SLA Task_1.sla_flow_inputs","label":"Trigger➛sla_flow_inputs","type":"object","base_type":"object"},{"name":"a5b4e75b-fb57-4bd0-81f5-92b721393ebd.table_name","label":"4.3➛Event Table","reference":"sysevent","reference_display":"Event","type":"table_name","base_type":"table_name"},{"name":"e333b600-57da-4443-9ad7-51adc406f043.Record.task","label":"11 - Look Up Record➛Task SLA Record➛Task","reference":"task","reference_display":"Task","type":"reference","base_type":"reference","parent_table_name":"task_sla","column_name":"task"},{"name":"SLA Task_1.task_sla_record.task.assigned_to","label":"Trigger➛Task SLA Record➛Task➛Assigned to","reference":"sys_user","reference_display":"User","type":"reference","base_type":"reference","parent_table_name":"task","column_name":"assigned_to"},{"name":"e333b600-57da-4443-9ad7-51adc406f043.Record.task.assigned_to.manager","label":"11 - Look Up Record➛Task SLA Record➛Task➛Assigned to➛Manager","reference":"sys_user","reference_display":"User","type":"reference","base_type":"reference","parent_table_name":"sys_user","column_name":"manager"},{"name":"e333b600-57da-4443-9ad7-51adc406f043.Record.task.assigned_to.manager.sys_id","label":"11 - Look Up Record➛Task SLA Record➛Task➛Assigned to➛Manager➛Sys ID","reference":"","reference_display":"Sys ID","type":"GUID","base_type":"GUID","parent_table_name":"sys_user","column_name":"sys_id"},{"name":"c9d13231-0089-4f10-91ea-2600908e0d7e.Record.business_percentage","label":"7 - Look Up Record➛Task SLA Record➛Business elapsed percentage","reference":"","reference_display":"Business elapsed percentage","type":"percent_complete","base_type":"percent_complete","parent_table_name":"task_sla","column_name":"business_percentage"},{"name":"SLA Task_1.task_sla_record.sys_id","label":"Trigger➛Task SLA Record➛Sys ID","reference":"","reference_display":"Sys ID","type":"GUID","base_type":"GUID","parent_table_name":"task_sla","column_name":"sys_id"},{"name":"3132448d-a5d7-48a3-acc7-34e5341f88eb.record","label":"2.3➛Event Record","reference":"sysevent","reference_display":"Event","type":"reference","base_type":"reference"},{"name":"7cd8edaa-54d3-4ca1-9428-bb6c3a2f0816.table_name","label":"15 - Create Record➛Event Table","reference":"sysevent","reference_display":"Event","type":"table_name","base_type":"table_name","usedInstances":{},"attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"f86c36ba-ff4d-4b25-a093-4cefb827f99e.Table","label":"3 - Look Up Record➛Task SLA Table","reference":"task_sla","reference_display":"Task SLA","type":"table_name","base_type":"table_name","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","filter_table_source":"v_cluster_transaction"}},{"name":"d558c410-d874-4f7c-b9da-a59cc3d9442c.total_duration","label":"5 - SLA Percentage Timer➛Total Duration","reference_display":"Total Duration","type":"glide_duration","base_type":"glide_duration","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"glide_duration","uiTypeLabel":"Duration"}},{"name":"cc2dbae9-e4a5-41d5-b098-27d370caf7cb.record","label":"13 - Create Record➛Event Record","reference":"sysevent","reference_display":"Event","type":"reference","base_type":"reference","usedInstances":{},"attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"8dcd36f8-6e66-4e71-8c03-1253a41291dc.Record","label":"2.1➛Task SLA Record","reference":"task_sla","reference_display":"Task SLA","type":"reference","base_type":"reference"},{"name":"SLA Task_1.task_sla_record","label":"Trigger - SLA Task➛Task SLA Record","reference":"task_sla","reference_display":"Task SLA","type":"reference","base_type":"reference","usedInstances":{"199e40e0-0429-4535-b722-eb6c84cde588":["record"],"0ad10712-9685-41ad-8f21-92dddfd61be6":["record"],"9c1f5467-c8a2-4cbe-91b8-2d335b45c36c":["record"]},"attributes":{}},{"name":"c9d13231-0089-4f10-91ea-2600908e0d7e.Record.task.assigned_to","label":"7 - Look Up Record➛Task SLA Record➛Task➛Assigned to","reference":"sys_user","reference_display":"User","type":"reference","base_type":"reference","parent_table_name":"task","column_name":"assigned_to"},{"name":"a5b4e75b-fb57-4bd0-81f5-92b721393ebd.record","label":"4.3➛Event Record","reference":"sysevent","reference_display":"Event","type":"reference","base_type":"reference"},{"name":"SLA Task_1.task_sla_record.business_percentage","label":"Trigger➛Task SLA Record➛Business elapsed percentage","reference":"","reference_display":"Business elapsed percentage","type":"percent_complete","base_type":"percent_complete","parent_table_name":"task_sla","column_name":"business_percentage"},{"name":"8dcd36f8-6e66-4e71-8c03-1253a41291dc.Record.business_percentage","label":"2.1➛Task SLA Record➛Business elapsed percentage","reference":"","reference_display":"Business elapsed percentage","type":"percent_complete","base_type":"percent_complete","parent_table_name":"task_sla","column_name":"business_percentage"},{"name":"f86c36ba-ff4d-4b25-a093-4cefb827f99e.error_message","label":"3 - Look Up Record➛Error Message","reference_display":"Error Message","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiUniqueId":"87687532-9e3d-4497-a88e-90f45bfb9adb"}},{"name":"d558c410-d874-4f7c-b9da-a59cc3d9442c.status","label":"5 - SLA Percentage Timer➛Status","reference_display":"Status","type":"choice","base_type":"choice","choices":[{"label":"Paused","value":"paused","order":0.0},{"label":"Completed","value":"completed","order":1.0},{"label":"Repair","value":"repair","order":2.0},{"label":"Skipped","value":"skipped","order":3.0},{"label":"Cancelled","value":"cancelled","order":4.0}],"attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"choice","uiTypeLabel":"Choice"}},{"name":"e333b600-57da-4443-9ad7-51adc406f043.error_message","label":"11 - Look Up Record➛Error Message","reference_display":"Error Message","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiUniqueId":"87687532-9e3d-4497-a88e-90f45bfb9adb"}},{"name":"333e94ce-7745-4c6d-9575-a2b961101c07.table_name","label":"9 - Create Record➛Event Table","reference":"sysevent","reference_display":"Event","type":"table_name","base_type":"table_name","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"c9d13231-0089-4f10-91ea-2600908e0d7e.status","label":"7 - Look Up Record➛Status","reference_display":"Status","type":"choice","base_type":"choice","choices":[{"label":"Error","value":"1","order":0.0},{"label":"Success","value":"0","order":1.0}],"attributes":{"uiType":"choice","uiTypeLabel":"Choice","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"5e478657-3a84-4a60-a92b-d3e80005ad34"}},{"name":"f86c36ba-ff4d-4b25-a093-4cefb827f99e.Record","label":"3 - Look Up Record➛Task SLA Record","reference":"task_sla","reference_display":"Task SLA","type":"reference","base_type":"reference","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"d558c410-d874-4f7c-b9da-a59cc3d9442c.scheduled_end_date_time","label":"5 - SLA Percentage Timer➛Scheduled End Date/Time","reference_display":"Scheduled End Date/Time","type":"glide_date_time","base_type":"glide_date_time","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"glide_date_time","uiTypeLabel":"Date/Time"}},{"name":"333e94ce-7745-4c6d-9575-a2b961101c07.record","label":"9 - Create Record➛Event Record","reference":"sysevent","reference_display":"Event","type":"reference","base_type":"reference","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"e333b600-57da-4443-9ad7-51adc406f043.Table","label":"11 - Look Up Record➛Task SLA Table","reference":"task_sla","reference_display":"Task SLA","type":"table_name","base_type":"table_name","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","filter_table_source":"v_cluster_transaction"}},{"name":"e333b600-57da-4443-9ad7-51adc406f043.status","label":"11 - Look Up Record➛Status","reference_display":"Status","type":"choice","base_type":"choice","choices":[{"label":"Error","value":"1","order":0.0},{"label":"Success","value":"0","order":1.0}],"attributes":{"uiType":"choice","uiTypeLabel":"Choice","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"5e478657-3a84-4a60-a92b-d3e80005ad34"}},{"name":"9da255d3-8572-499b-b4c7-6353e0707fd3.scheduled_end_date_time","label":"1 - SLA Percentage Timer➛Scheduled End Date/Time","reference_display":"Scheduled End Date/Time","type":"glide_date_time","base_type":"glide_date_time","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"glide_date_time","uiTypeLabel":"Date/Time"}},{"name":"b469b3be-e287-41ed-8ca5-4b4e417b229e.table_name","label":"4 - Create Record➛Event Table","reference":"sysevent","reference_display":"Event","type":"table_name","base_type":"table_name","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"7cd8edaa-54d3-4ca1-9428-bb6c3a2f0816.record","label":"15 - Create Record➛Event Record","reference":"sysevent","reference_display":"Event","type":"reference","base_type":"reference","usedInstances":{},"attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"9da255d3-8572-499b-b4c7-6353e0707fd3.status","label":"1 - SLA Percentage Timer➛Status","reference_display":"Status","type":"choice","base_type":"choice","choices":[{"label":"Paused","value":"paused","order":0.0},{"label":"Completed","value":"completed","order":1.0},{"label":"Repair","value":"repair","order":2.0},{"label":"Skipped","value":"skipped","order":3.0},{"label":"Cancelled","value":"cancelled","order":4.0}],"attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"choice","uiTypeLabel":"Choice"}},{"name":"e333b600-57da-4443-9ad7-51adc406f043.Record.task.assigned_to.sys_id","label":"11 - Look Up Record➛Task SLA Record➛Task➛Assigned to➛Sys ID","reference":"","reference_display":"Sys ID","type":"GUID","base_type":"GUID","parent_table_name":"sys_user","column_name":"sys_id"},{"name":"cc2dbae9-e4a5-41d5-b098-27d370caf7cb.table_name","label":"13 - Create Record➛Event Table","reference":"sysevent","reference_display":"Event","type":"table_name","base_type":"table_name","usedInstances":{},"attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}}]</label_cache>
+        <master_snapshot>be78c5d547249350273a565a516d43fe</master_snapshot>
+        <master_snapshot_digest/>
+        <name>housekeeping</name>
+        <natlang/>
+        <outputs/>
+        <pre_compiled>false</pre_compiled>
+        <remote_trigger_id>c77809d547249350273a565a516d438f</remote_trigger_id>
+        <run_as>system</run_as>
+        <run_with_roles/>
+        <sc_callable>false</sc_callable>
+        <show_draft_actions>false</show_draft_actions>
+        <show_triggered_flows>false</show_triggered_flows>
+        <status>published</status>
+        <substatus/>
+        <sys_class_name>sys_hub_flow</sys_class_name>
+        <sys_created_by>fateh.meena</sys_created_by>
+        <sys_created_on>2026-11-13 08:13:59</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>5136c59147249350273a565a516d4302</sys_id>
+        <sys_mod_count>6</sys_mod_count>
+        <sys_name>housekeeping</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Apollo-Hospitals" source="x_2223823_apollo_0">87c1422693c89b507b3a7c5efaba1008</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
+        <sys_update_name>sys_hub_flow_5136c59147249350273a565a516d4302</sys_update_name>
+        <sys_updated_by>fateh.meena</sys_updated_by>
+        <sys_updated_on>2026-11-13 08:23:58</sys_updated_on>
+        <type>flow</type>
+        <updation_source/>
+        <version>2</version>
+        <version_record>e77849d547249350273a565a516d433d</version_record>
+    </sys_hub_flow>
+    <sys_translated_text action="delete_multiple" query="documentkey=5136c59147249350273a565a516d4302"/>
+    <sys_variable_value action="delete_multiple" query="document_key=5136c59147249350273a565a516d4302"/>
+    <sys_flow_trigger action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <name>sla_task</name>
+        <published_version/>
+        <sys_class_name>sys_flow_trigger</sys_class_name>
+        <sys_created_by>fateh.meena</sys_created_by>
+        <sys_created_on>2026-11-13 08:23:56</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>c77809d547249350273a565a516d438f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_overrides/>
+        <sys_scope/>
+        <sys_updated_by>fateh.meena</sys_updated_by>
+        <sys_updated_on>2026-11-13 08:23:56</sys_updated_on>
+        <trigger_definition/>
+    </sys_flow_trigger>
+    <sys_trigger_runner_mapping action="delete_multiple" query="identifier=5136c59147249350273a565a516d4302"/>
+    <sys_hub_flow_stage action="delete_multiple" query="flow=5136c59147249350273a565a516d4302"/>
+    <sys_flow_cat_variable_model action="delete_multiple" query="id=5136c59147249350273a565a516d4302^sys_idNOT IN1936c59147249350273a565a516d4303"/>
+    <sys_flow_cat_variable_model action="INSERT_OR_UPDATE">
+        <id>5136c59147249350273a565a516d4302</id>
+        <name>housekeeping</name>
+        <sys_created_by>fateh.meena</sys_created_by>
+        <sys_created_on>2026-11-13 08:13:59</sys_created_on>
+        <sys_id>1936c59147249350273a565a516d4303</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>fateh.meena</sys_updated_by>
+        <sys_updated_on>2026-11-13 08:13:59</sys_updated_on>
+    </sys_flow_cat_variable_model>
+    <sys_flow_cat_variable action="delete_multiple" query="flow_catalog_model=1936c59147249350273a565a516d4303"/>
+    <sys_hub_flow_input action="delete_multiple" query="model=5136c59147249350273a565a516d4302^sys_idNOT IN1536c59147249350273a565a516d4312,ad36c59147249350273a565a516d431a"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=reference,uiTypeLabel=Reference</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>task_sla_record</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="Reference">reference</internal_type>
+        <label>task_sla_record</label>
+        <mandatory>true</mandatory>
+        <max_length>32</max_length>
+        <model display_value="housekeeping">5136c59147249350273a565a516d4302</model>
+        <model_id>5136c59147249350273a565a516d4302</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_input_5136c59147249350273a565a516d4302</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_only_option/>
+        <read_roles/>
+        <reference display_value="" name="task_sla">task_sla</reference>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>fateh.meena</sys_created_by>
+        <sys_created_on>2026-11-13 08:14:00</sys_created_on>
+        <sys_id>1536c59147249350273a565a516d4312</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>fateh.meena</sys_updated_by>
+        <sys_updated_on>2026-11-13 08:23:53</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=1536c59147249350273a565a516d4312"/>
+    <sys_complex_object action="INSERT_OR_UPDATE">
+        <label/>
+        <name>FD9678c5d5792493509d375ad21c95a331</name>
+        <namespace>FlowDesigner</namespace>
+        <scope_name>87c1422693c89b507b3a7c5efaba1008</scope_name>
+        <serialized_content>{"FlowDesigner:FD9678c5d5792493509d375ad21c95a331":{"duration":"String","duration.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"String\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"string\",\"choiceOption\":\"\",\"default_value\":\"\",\"label\":\"duration\",\"mandatory\":\"false\",\"order\":\"2\",\"max_length\":\"32\"}"},"relative_duration_works_on":"String","relative_duration_works_on.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"String\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"string\",\"choiceOption\":\"\",\"default_value\":\"\",\"label\":\"relative_duration_works_on\",\"mandatory\":\"false\",\"order\":\"4\",\"max_length\":\"32\"}"},"is_repair":"Boolean","is_repair.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"True/False\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"boolean\",\"choiceOption\":\"\",\"default_value\":\"false\",\"label\":\"is_repair\",\"mandatory\":\"false\",\"order\":\"5\",\"max_length\":\"32\"}"},"duration_type":"String","duration_type.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"String\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"string\",\"choiceOption\":\"\",\"default_value\":\"\",\"label\":\"duration_type\",\"mandatory\":\"false\",\"order\":\"3\",\"max_length\":\"32\"}"},"name":"String","name.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"String\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"string\",\"choiceOption\":\"\",\"default_value\":\"\",\"label\":\"name\",\"mandatory\":\"false\",\"order\":\"1\",\"max_length\":\"32\"}"}},"FlowDesigner:FD9678c5d5792493509d375ad21c95a331.$type_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"Object\",\"co_type_name\":\"FD9678c5d5792493509d375ad21c95a331\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"object\",\"choiceOption\":\"\",\"default_value\":\"\",\"label\":\"sla_flow_inputs\",\"mandatory\":\"false\",\"order\":\"100\",\"max_length\":\"4096\"}"}}</serialized_content>
+        <sys_class_name>sys_complex_object</sys_class_name>
+        <sys_created_by>fateh.meena</sys_created_by>
+        <sys_created_on>2026-11-13 08:23:53</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>9a78c5d547249350273a565a516d4331</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_overrides/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>fateh.meena</sys_updated_by>
+        <sys_updated_on>2026-11-13 08:23:53</sys_updated_on>
+        <type>complex_object_schema</type>
+    </sys_complex_object>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>co_type_name=FD9678c5d5792493509d375ad21c95a331,element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=object,uiTypeLabel=Object</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>sla_flow_inputs</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label>sla_flow_inputs</label>
+        <mandatory>false</mandatory>
+        <max_length>4096</max_length>
+        <model display_value="housekeeping">5136c59147249350273a565a516d4302</model>
+        <model_id>5136c59147249350273a565a516d4302</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_input_5136c59147249350273a565a516d4302</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_only_option/>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>fateh.meena</sys_created_by>
+        <sys_created_on>2026-11-13 08:14:00</sys_created_on>
+        <sys_id>ad36c59147249350273a565a516d431a</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>fateh.meena</sys_updated_by>
+        <sys_updated_on>2026-11-13 08:23:53</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=ad36c59147249350273a565a516d431a"/>
+    <sys_hub_flow_output action="delete_multiple" query="model=5136c59147249350273a565a516d4302"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=5136c59147249350273a565a516d4302"/>
+    <sys_hub_trigger_instance_v2 action="delete_multiple" query="flow=5136c59147249350273a565a516d4302^sys_idNOT INe136c59147249350273a565a516d4391"/>
+    <sys_hub_trigger_instance_v2 action="INSERT_OR_UPDATE">
+        <comment/>
+        <display_text/>
+        <flow display_value="housekeeping">5136c59147249350273a565a516d4302</flow>
+        <generation_source/>
+        <name>SLA Task</name>
+        <published_version/>
+        <remote_sys_id/>
+        <sys_created_by>fateh.meena</sys_created_by>
+        <sys_created_on>2026-11-13 08:14:00</sys_created_on>
+        <sys_id>e136c59147249350273a565a516d4391</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>fateh.meena</sys_updated_by>
+        <sys_updated_on>2026-11-13 08:14:00</sys_updated_on>
+        <trigger_definition display_value="SLA Task">f5ce00a873723300d70877186bf6a759</trigger_definition>
+        <trigger_inputs>H4sIAAAAAAAA/4uOBQApu0wNAgAAAA==</trigger_inputs>
+        <trigger_outputs/>
+        <trigger_type>sla_task</trigger_type>
+        <updation_source/>
+    </sys_hub_trigger_instance_v2>
+    <sys_hub_action_instance_v2 action="delete_multiple" query="flow=5136c59147249350273a565a516d4302^sys_idNOT IN2536c59147249350273a565a516d4378,2536c59147249350273a565a516d437f,6136c59147249350273a565a516d437d,6536c59147249350273a565a516d437a,6536c59147249350273a565a516d438f,6936c59147249350273a565a516d437b,6936c59147249350273a565a516d4390,6d36c59147249350273a565a516d438d,a936c59147249350273a565a516d437e,e136c59147249350273a565a516d438d,e536c59147249350273a565a516d437c,ed36c59147249350273a565a516d438f"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="SLA Percentage Timer">a1a50c4573873300d70877186bf6a762</action_type>
+        <action_type_parent display_value="SLA Percentage Timer">6f0ebf3c73833300d70877186bf6a729</action_type_parent>
+        <attributes/>
+        <comment>Completes when the SLA reaches 50%</comment>
+        <compiled_snapshot>a1a50c4573873300d70877186bf6a762</compiled_snapshot>
+        <display_text/>
+        <flow display_value="housekeeping">5136c59147249350273a565a516d4302</flow>
+        <generation_source/>
+        <order>1</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>fateh.meena</sys_created_by>
+        <sys_created_on>2026-11-13 08:14:00</sys_created_on>
+        <sys_id>2536c59147249350273a565a516d4378</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
+        <sys_updated_by>system</sys_updated_by>
+        <sys_updated_on>2026-11-13 08:29:57</sys_updated_on>
+        <ui_id>9da255d3-8572-499b-b4c7-6353e0707fd3</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+1aXU/jOhD9KyjPVTek6RdvaKtKSL3LiqJ9WaFo6jitL66TtZ2yvRX//Y7zRZqm3SLY3QLhBWUytmfOnDMONt83FhDNQnEllAZB6HStrnzrwnJ7g8Dp9Yf9jvmxbeoMhk6nG9hu0IM+GVgtixk/Zwhdm7jdfmfQN35+3x70++eD3sz49Vz0E7Ck6BlRSajQMKdoWwGPjbFr44PPVMRh/a1sIwvGfUmFdfH9rmVFIHESTaV1sam8OjYKDjPK0fVrOYy60PQ6MjYmNJ3jgqlhko2+Kqyh9E045y2L/tRU+BTjCIAr2rKWIHzQoVxbF1rGaJAU/GvB14XHAmfH2Szj+1Ox/3BB1zZ+AcXECE3fFY9ehlBqDkagYYozEx3LzJUsQkaoSiHxaQAx15/LttThOjK1TodomPF8dMjjpfiSgmEVE+QFQUusMAgamTxN5FkawXQRPtzkUY6ZSCDJXvKQAC+eQGvJZrE28WysmN1WUV4y4eWsMARIXXZxp5wuMQZvCVHExNyLZLhiybqYxrI95/jQDnj4gPEqNhftlN9trAi0x2gfJeZvIJkB4B+cBgc/tiy1Vp85KPUEA+Lv/YhNEikoWfpeiqAZQiSL9CUusKJZpo+tlyoK/INcHj7RVoO69xQHT1KCdCzJarOZTi7Pbs3783bF7fFxV3LPFtwRQeaCM1GcmXBu8ij3hp9J70kG2+K7Kdkz+TmH5ZdZjtFfx9nWXx7dHh3mWb1VPQZTCpIsxoxyU8800T0iLddjxRTDOD1Ua2AGJtPtyLVcqUCGSy8RJBNRrFVt5d+9qp3DgiltRgaXMlx7VF1xq1P1L/1Lwt7ky/uxhISUlSYQGKaMgVCN4KZdocrgbQ6gIrCSBtDVE293+04N2rkRV8HRZouQAviEifu6VhWzUTppxlaVrpu2Do9vR5NVo9SeSvnuIqBrppxUZ/ztregFnwIvbDOZZbRTtdf9HnhVnWZVlJSDeePl5fQeQnmvvI/D7IMIHIPSc9jvNuw/JfYzhXtrBEy+mOy3+BfMp3Gyy/9xws/CkFMQVcaXQtplfTnzGjB03cw1uRbE7r43YudfbG+Y3UWzSqr5Qdp5Nek9WDynaXfeG7ffNq2TXx+EzVmu25k/h7u/OHhruPsnuHvgpKihbkPdE6Hu+6Vic3jRUPJEKdl8pjbkPDlyNkdiDW2bwy2rOdz6izy9O/5GsOhnk8szc8l5dpVfCe69K8woEM7+pURXGHCdG199X+11bftD/v9KgfNx9+JFBUiYfAh5WR3How74w4E/HLqu4w47XbsXkB7turPhzBm44AdW7UX6bv1P/SL97n8JxmnociYAAA==</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=2536c59147249350273a565a516d4378"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Create Record">2de05916c31332002841b63b12d3aee1</action_type>
+        <action_type_parent display_value="Create Record">02f0b88cc3c632002841b63b12d3aeff</action_type_parent>
+        <attributes/>
+        <comment>"sla.warning.parm" Event with Parm1 set to Assigned To from the Task</comment>
+        <compiled_snapshot>2de05916c31332002841b63b12d3aee1</compiled_snapshot>
+        <display_text/>
+        <flow display_value="housekeeping">5136c59147249350273a565a516d4302</flow>
+        <generation_source/>
+        <order>9</order>
+        <parent_ui_id>f08e1f89-5a6d-492a-afee-5c564fdb90e9</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>fateh.meena</sys_created_by>
+        <sys_created_on>2026-11-13 08:14:00</sys_created_on>
+        <sys_id>2536c59147249350273a565a516d437f</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
+        <sys_updated_by>system</sys_updated_by>
+        <sys_updated_on>2026-11-13 08:29:57</sys_updated_on>
+        <ui_id>333e94ce-7745-4c6d-9575-a2b961101c07</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/9VVXU/bMBT9K8jPaeQkpW36NsGQkDaQYOJlg+g2vqHWHCeLnUJX9b/vOnZLxUD7fCEPlXw/zzm+vv28YVBa2ehzbSzoEq/X5lywOcvTWZVOpvk0cx/nmM7yNDuu+LiawFRULGLSxU0S5Md5MimzJMtSztPZOFlMskWSigwQxxSnoUaKtLBQWAyHiK1A9c5o1gZXqC2ZhDStgvVN8LwP5nIplehQs/nn24i10FEBix2bb565fheOggUqCv3k8LwCz67bF20fDnOPLryj6YTDwyOGjxa1QAJSgTIYsRq0ANt0aza3XU+GDkFcarXeRywlsZwz5mIfjfxObWfcxVVIzEr0vv2xCCp5c3UKFq6pcmn7LoSWy0aWaLwmAivolT05tPmAy9bduk8ZaIbsRvW1vvCSsH2B3aWQpTcEAlvH0yEPNKrrZfNwtUN5JvUgSXCqpgS1P4G1nVz01uHZMFRYU6GihraV+r5ou2Ylh2TCUsf3ig5xpZoHamrkvY79uMYkK8RnZD8dzDfQScfiI5Wh5G3kJutEgTFPXEjE4lvvkHhmgUPhZXApZSdb+44arDDA3Ub//EAE8vzViUwWTxM4vAlz8DhkaPml5zwTm02ZiyRLs2TE+SwfjauEj/IEYZROOM/5DLmYYnyFJQ3kdnvnqvpMoyB+gE6TvjE9oPrO/SR/UTW2YL7GJCopjqKwDbUZhsfXct6Cmv38mN8wkz/cP7++7d3+OZOohHnh+nfLB2uS0GLhx+HZAgrOo5vgDEso+V9LKCHN3PeGVpEn9+Y30cGfzis76fYHKZFbz7YHAAA=</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=2536c59147249350273a565a516d437f"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Look Up Record">9d09f99587003300663ca1bb36cb0ba3</action_type>
+        <action_type_parent display_value="Look Up Record">b93f42810b30030085c083eb37673a63</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>9d09f99587003300663ca1bb36cb0ba3</compiled_snapshot>
+        <display_text/>
+        <flow display_value="housekeeping">5136c59147249350273a565a516d4302</flow>
+        <generation_source/>
+        <order>7</order>
+        <parent_ui_id>f08e1f89-5a6d-492a-afee-5c564fdb90e9</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>fateh.meena</sys_created_by>
+        <sys_created_on>2026-11-13 08:14:00</sys_created_on>
+        <sys_id>6136c59147249350273a565a516d437d</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
+        <sys_updated_by>system</sys_updated_by>
+        <sys_updated_on>2026-11-13 08:29:57</sys_updated_on>
+        <ui_id>c9d13231-0089-4f10-91ea-2600908e0d7e</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+VYXW/iOhD9K1GeKTfhK9C3VSukSr1baendl92V5cROsdbYWdtplyL++x3HCUSQArlLJarLm2fG9pnxOWOHbysfJ4ZJcSe0wSKhs6W+I/61H+Jx2htFk6hvf0FAe+NJrz9Mg0E6whGJ/Y7PbByZBJN0MhmOoyCwcaNRP8FhHPdHSRzEeABxAi8oRBoccwrDZ8xzN9Y/keYYTITpjOPl19LzCB5vdv8JPMmccaKo8K+//ej4GVawlqHKv17tuE4Fw3FMebGHQ7MDziyzzRAVPme7r0/zPjuHVMRCCTo+/W2oIBQwpJhr2vEXWBBspFpuLIpi8iD41jBnwsCKvg3+rdkr7DsObFxKIauEOt9miMoiOXN6iw2eGZUnJldlaDKXLKHa1YPQFOfc3NRtLuAhs+ftpri03WzJ84X47MrhbxaozgQsuQYQNLOJWuRlGulsLl++VCinTBQ1KZ1cJphvRtgYxeLcWDwrn3K6gIXQAmcZE08oU/KZFZMBy6L7xGHQTbl8gU01exJdR9Qu1BV3p2C/LcxfsWI2i79hGZgMgBgHhiB3hFrmqijlM0p4rguHwkK7tfx1x9dLfcOx1tvMoeToV25xuzqUGSNXNDslUSwzn2CJZ1omt+78sZCGB7k72XI1kYIwu5WuqQnSQIx8z2EyWa1APJ5VEQq7lcyQogkQtusC1+t92f2XJVrq83iOlT5v6kk2JV4qdc9237RAqdTwbEodBMFH0ipsfnlSbS8+V4L3UmBIDrKTbImopTLIHUJNgvuKai2QEyBUAnmwlPbi5VuoSn2kjHLSdJNNrWPnJuv9P2+yi1QHACLInR4TnIniWQJAL042w4OcjcMdgha8rN1b1oZ1si8e7BnpvbaW0AlwKgnNYG/v0eFpgFjdMAXXdm+Xylgqp3825fR751HOapPmppANNa+esJYGVfyrjce78cDd2oRw3aTMVnuGbffsrfeV328l/TrZnOf2Dc6d+a37hpQ779k75jC13A854aMXRp6o2e5eRRFpXjD/2eQvGYeqgyrSu6R3c3jwmy+uvZtZihZw5CyD7wL3ktUIK4pSmQuCyi+CLQMtBVKmtCmD9zvUFwrCE54ERXtmTr0i2ttEt7z6j+dRncFd6lWJlLtpDxLxikS8TSLt0m7T7QZnfEefu9tNMePFacDHXlY7TqqUVG90vCMHeYARJ7bDE0GFZwX15/2ySQKNffMI1g/xz8EF9bSE4njQw6OoH4ZBEAYkCsZRFI5HsY0bpFtxI6RFAv0bIKXAMcCFKk5VBAn2G5dr4m071AmoKu7eSmH/R+hFxrOwgBheBes48LITxVJyisVOK3qEm+mvaYm/JPrw4trRh/gDLmePu5V2psZav9dLJWf/CPYrp4VAxjTojUOSXI2jMLoapGR0NSF4eIUn8TDqE5oM0nM+Pn78C7IOzHr/FgAA</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=6136c59147249350273a565a516d437d"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Look Up Record">9d09f99587003300663ca1bb36cb0ba3</action_type>
+        <action_type_parent display_value="Look Up Record">b93f42810b30030085c083eb37673a63</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>9d09f99587003300663ca1bb36cb0ba3</compiled_snapshot>
+        <display_text/>
+        <flow display_value="housekeeping">5136c59147249350273a565a516d4302</flow>
+        <generation_source/>
+        <order>3</order>
+        <parent_ui_id>1f55dcda-131d-48c8-9924-8f6d7cbf95b8</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>fateh.meena</sys_created_by>
+        <sys_created_on>2026-11-13 08:14:00</sys_created_on>
+        <sys_id>6536c59147249350273a565a516d437a</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
+        <sys_updated_by>system</sys_updated_by>
+        <sys_updated_on>2026-11-13 08:29:57</sys_updated_on>
+        <ui_id>f86c36ba-ff4d-4b25-a093-4cefb827f99e</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+VYXW/iOhD9K1GeKTfhK9C3VSukSr1baendl92V5dhOsdY4WdtplyL++x3HCUSQArlLJarLm2fG9pnxOWOHbysfE8NTeSe1wZKw2VLfUf/aH+Bx0htFk6hvf0HAeuNJrz9MgkEywhEhfsfnNo5OgkkymQzHURDYuNGoT3AYx/0RiYMYDyBO4gWDSINjwWD4jEXuxvon0gKDiXKdCbz8WnoewePN7j+Bh8y5oIpJ//rbj46fYQVrGab869WO61QwAsdMFHs4NDvgzDLbDFHhc7b7+jTvs3OkilooQcdnvw2TlAGGBAvNOv4CS4pNqpYbi2KYPkixNcy5NLCib4N/a/4K+44DG5cwyIow59sMUVkkZ05uscEzo3JiclWGknnKCdOuHpQlOBfmpm5zAQ+ZPW83xaXtZqciX8jPrhz+ZoHqTMCSawDBMpuoRV6mkczm6cuXCuWUy6ImpVOkBIvNCBujeJwbi2flM8EWsBBa4Czj8gllKn3mxWTAsug+CRh0E5G+wKaaP8muI2oX6oq7U7DfFuavWHGbxd+wDEwGQFwAQ5A7Qp3mqijlMyIi14VDYandWv664+ulvhFY623mUHL0K7e4XR3KjJErmp1CFM/MJ1jimZXJrTt/LKThQe5OtlwlqaTcbqVraoI0EKffc5hMVysQj2dVhMJuJTOkGAHCdl3ger0vu/+yREt9Hs+x0udNPcmmxEul7tnumxYolRqeTamDIPhIWoXNL0+q7cXnSvBeCgzpQXbSLRF1qgxyh1CT4L6iWgvkBAiVQB4spb14+RaqUh8JZ4I23WRT69i5yXr/z5vsItUBgChyp8el4LJ4lgDQi5PN8CBn43CHoAUva/eWtWFN9sWDPZN6r60ldAKcSkIz2Nt7dHgaIFY3TMG13dulMpbK6Z9NOf3eeZSz2qS5KWRDzasnrKVBFf9q4/FuPHC3NiFcNymz1Z5h2z17633l91tJv04257l9g3Nnfuu+IeXOe/aOOUwt90NO+OiF0ydmtrtXUTQ1L1j8bPKXjEPVQRXpXdK7OTz4zRfX3s08QQs4cp7Bd4F7yWqEFUNJmkuKyi+CLQMtBRKutCmD9zvUFwbCk14KivbMnHlFtLeJbnn1H8+jOoO7xKsSKXfTHiTiFYl4m0Tapd2m2w3O+I4+d7ebYi6K04CPvax2nEypVL3R8Y4c5AFGnNgOTwQVnhXUn/fLJgk09s0jWD/EPwcX1NMIw/Ggh0dRPwyDIAxoFIyjKByPYhs3SLbiRkhLAv0bICXAMcCFKk5VBAn2G5dr4m071AmoKu7eptL+j9CLjGdhATG8CtZx4GUnitNUMCx3WtEj3Ex/TUv8JdGHF9eOPsQfcDl/3K20MzXW+r1eKjn/R/JfOSsEMmZBbxxScjWOwuhqkNDR1YTi4RWexMOoTxkZJOd8fPz4F5RC/Jb/FgAA</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=6536c59147249350273a565a516d437a"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Fire Event">80a30edeff30311077a95dac793bf19b</action_type>
+        <action_type_parent display_value="Fire Event">15e10e5eff30311077a95dac793bf11e</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>80a30edeff30311077a95dac793bf19b</compiled_snapshot>
+        <display_text/>
+        <flow display_value="housekeeping">5136c59147249350273a565a516d4302</flow>
+        <generation_source/>
+        <order>12</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>fateh.meena</sys_created_by>
+        <sys_created_on>2026-11-13 08:14:00</sys_created_on>
+        <sys_id>6536c59147249350273a565a516d438f</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
+        <sys_updated_by>system</sys_updated_by>
+        <sys_updated_on>2026-11-13 08:29:57</sys_updated_on>
+        <ui_id>9c1f5467-c8a2-4cbe-91b8-2d335b45c36c</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+2X227bOBCGX0XQtWVIFHXyXVBvFgWy7aLO9qYoBIocxdzSkktRbrxG3r2kDrZsr524cAMsujcJNBxSP/+ZDyN/2tic2RM7psR3gUGe+67veW4UkSRghEaJn+VeAvbILsgCdCasoFBp8zCyV0TUJhgELKIBYzgCN/EDF0U+CcKABF7IsI8Tncp4tRRk/bHb8ZgihPwY+SlZlkKUqTuel3UFXwCWvHjwXFfvoXMumITCnnz6PLKXROq3KpD2ZHOw9NI7CJKB0Km/mUucuJNaL01MQg76fNqH7rqtHwbxUjKjxhvZ8KigYKBl5ERUMLIXpGBElXJtT5SsdUACYe8Lsd5mzLmWMLGnUHEJzJqtKwULq1FmqTlRVqUNEczKwMpNhm0Ofaz4P1qdj0YDgRO7WlftHSQ88MpYNFhPO+v7e1sfmiRJFC8LnZhPiSIzrZKqWprTGudLTqFq3dWWklqoN8NYm/B+2ZzRbFEkE6e00FLUi+Jd67a9PbFvBh3RpU8ZLI2JxpbOo3w2L79tHb/lReN3tyhKSsQgFYik81sOgh2WlCgleVYrI35j1/z+uMRt8N+KDAIW5qwFWZrOTJeyXPFGh77WYvwg9MM4F+U3rb/iD8WYUGPKWJefjG91fNqEPxLJjUN/6GMaT2r+V8G/1vC2kQuuDyzKnYhg7GAcZE6WYd+hbpAkxEUo95D9NDLmvhGkqnZW6kukX2tjRGtsZ2HalsVsoZIv1Y0WtYLOradRhz11zyFD8A4RCVR3+wD5zWZ2d2Pdk+pL6o2V+VcJkrZpT0/HwF+M8wu0iW25OnGHYjuWWUnrpoacHdA87Vast9Mdz+gaPP9u+qIVZpXZ30CVlctyodEGC1rIG2DOUH0C4usj+yOEti5cAOgJCPdrs4/hfnVeBcTco3pqId9BfkQdnNDYiTHoPxpHhJOYIhr+AIit08/ReHaAkWjX4H3r9DD2/B1jZwC1NKmX4/e8mB6/+07NgbgOvuZxOFzvhtusd+1Ch55/Hr0usmOv7cItQbH7HyLo8hl3AqE9h/cJ2vP4VQBKEMZ5GMdOhghzcBxiPcnc2Ik87CLdT8gP/J8wyVh8tl2zXXvqxl94A3auMKpe8PKelT/7oyzvWFJHjP420+U5oGXWBztS8IWk7E+pm2JtNQa0n5oSqlKsoLJUaRFr+/4BV+4vSdbWiX2qtrV4FaLCwE1cF+UOC2NwsJcjh3hJ7OjfT5nHQopRmPwMovDZps732xddmajnX35MFDqWdAlRwf9E/SJE5TjEPo0iB+se0x95sZ5REQSOH7A8wiyiYexdkajP3wFd2nv7ZhEAAA==</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=6536c59147249350273a565a516d438f"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Create Record">2de05916c31332002841b63b12d3aee1</action_type>
+        <action_type_parent display_value="Create Record">02f0b88cc3c632002841b63b12d3aeff</action_type_parent>
+        <attributes/>
+        <comment>"sla.warning.parm" Event with Parm1 set to Assigned To from the Task</comment>
+        <compiled_snapshot>2de05916c31332002841b63b12d3aee1</compiled_snapshot>
+        <display_text/>
+        <flow display_value="housekeeping">5136c59147249350273a565a516d4302</flow>
+        <generation_source/>
+        <order>4</order>
+        <parent_ui_id>1f55dcda-131d-48c8-9924-8f6d7cbf95b8</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>fateh.meena</sys_created_by>
+        <sys_created_on>2026-11-13 08:14:00</sys_created_on>
+        <sys_id>6936c59147249350273a565a516d437b</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
+        <sys_updated_by>system</sys_updated_by>
+        <sys_updated_on>2026-11-13 08:29:57</sys_updated_on>
+        <ui_id>b469b3be-e287-41ed-8ca5-4b4e417b229e</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/9VVW0/bMBT+K8jPaZRLSZu+TTAkpA0kmHjZIDqJj6k1x8lip9BV/e87jtNSMdCuL+Shks/1+z4fn37eMKisbPS5NhZ0hddrc87ZglXJXCTZLJ+l7osiTOZ5kh6LaCoymPGIBUy6uCzG6DiPsyqN0zSJomQ+jcssLeOEp4A4pTgNNVKkhVJhMRwCtgLVO6NZG1yhtmTi0rQK1jej5/1orpZS8Q41W3y+DVgLHRWw2LHF5pnrd+EoKFFR6CeH5xV4dt2+aPtwmHt04R1Nxx2eKGD4aFFzJCAClMGA1aA52KZbs4XtejJ0CPxSq/U+YimJ5YIxF/to5HdqO49cnEBiVqH37Y/FqJI3i1OwcE2VK9t3Y2i1bGSFxmvCUUCv7MmhzQdctu7WfcpAc8xuVF/rCy8J2xfYXQpZekMgsHU8HfKRhrheNg9XO5RnUg+SjE7VVKD2J7C2k2VvHZ4NQ4U1FSpqaFup74u2a1ZySCYsdXiv6BAK1TxQUyPvdejHNSRZITwj++lgvoFOOhYfqQwlbwM3WScKjHniQiIW33qHxDMbORReBpdSdbK176jBCke42+CfHwjHKH91IuPyaQKHN2EOHoccW37poyjlm42YU5WshIkQUz6ZlsnxBKI8nUwrFOU8mYk8x/AKKxrI7fbOVfWZRkH4AJ0mfUN6QPWd+4n/ompowXwNSVRSHHlhG2ozDI+v5bwFNfv5Mb9hJn+4f35927v9cyZRcfPC9e+WD9YkocXCj8OzBTQ6j25G57iE4v+1hOIsGr43tIo8uTe/iQ7+dF7ZSbc/AO/8e7u2BwAA</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=6936c59147249350273a565a516d437b"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Create Record">2de05916c31332002841b63b12d3aee1</action_type>
+        <action_type_parent display_value="Create Record">02f0b88cc3c632002841b63b12d3aeff</action_type_parent>
+        <attributes/>
+        <comment>"sla.warning.breach.parm" Event with Parm1 set to Manager of Assigned To from the Task</comment>
+        <compiled_snapshot>2de05916c31332002841b63b12d3aee1</compiled_snapshot>
+        <display_text/>
+        <flow display_value="housekeeping">5136c59147249350273a565a516d4302</flow>
+        <generation_source/>
+        <order>15</order>
+        <parent_ui_id>f06d035d-c651-4c1f-9522-ac3c15641c8d</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>fateh.meena</sys_created_by>
+        <sys_created_on>2026-11-13 08:14:00</sys_created_on>
+        <sys_id>6936c59147249350273a565a516d4390</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
+        <sys_updated_by>system</sys_updated_by>
+        <sys_updated_on>2026-11-13 08:29:57</sys_updated_on>
+        <ui_id>7cd8edaa-54d3-4ca1-9428-bb6c3a2f0816</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/91V227TQBD9lbBPICWWHefeJ9RSqRK0EkV9aVpr7B0nK9Zrs7tOG6L8O7O+pFFJgRZeih+i7OxczhyfGV9vGCRW5OpMGQsqwcu1OeNsxqYwSfuj8XQcusf3sT+Z9sNh6g/SEYxTn3WZcH6jAP3hNBglYRCGfd/vTwZBPArjoM9DQByQn4IMydNCLDGqDl22Alk6o1kbXKGyZOLCFBLWV83Nh8acLIXkGhWbXd90WQGaEljUbLZ5dPWncCTEKMn1i8PzBDy7Lg7aPu7Hds7ri1xzh8fvMry3qDgSkBSkwS7LQHGwuV6zmdUlGTQCv1ByvfNYCupyxpjzvTfiO5Wd+M4vReoswfpud4walmpzegIWLilzYkvduCbLXCRoak44plBKe7xvqx0uCvfW65CqzSY6l2WmzmtK2C5B+1LIUhoCgYXr0yFv2kgvl/nd5xblqVAVJc2lzBOQuxNYq0VcWodnw1BiRomiDIpCqEVU6HwlqmDCknkLSQcvlfkdFTViobxarh7RCt4p2U8q8xVo4br4RGkoeNt1yjqWYMxDL0Ri9K10SOrOmh6imgYXkmhR2PdUYIUN3G33rweEoz99UpFB/KDAaibM3nCIpuS89P2QbzZIheKR7/eGYw69wWAQ9qbAx71hADwZ+COqHXqfMSFBbre3LmsdaSR4d6AV8evFpMBk6dEcZbfuJ3hBcs+C+eoRt0Q88sjmHukcFqipaqWlOqfziqj2z7P9/zT2zO30ey202+lUoOTmgDja1YQZMWoxqsXyaD01l52r5rJZUcG/WlEB8emeV7So6uZe/Z7a+yQd3lit0YGu5sD9+aUfE2nnbcqjCir1vCDBe63GI314Mjpv6lnoPDewHal3c9WhRyMpQr04y9FczVWTY87m7IgYM7BCvhPCdru9+QGCSyEE5ggAAA==</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=6936c59147249350273a565a516d4390"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Look Up Record">9d09f99587003300663ca1bb36cb0ba3</action_type>
+        <action_type_parent display_value="Look Up Record">b93f42810b30030085c083eb37673a63</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>9d09f99587003300663ca1bb36cb0ba3</compiled_snapshot>
+        <display_text/>
+        <flow display_value="housekeeping">5136c59147249350273a565a516d4302</flow>
+        <generation_source/>
+        <order>11</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>fateh.meena</sys_created_by>
+        <sys_created_on>2026-11-13 08:14:00</sys_created_on>
+        <sys_id>6d36c59147249350273a565a516d438d</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
+        <sys_updated_by>system</sys_updated_by>
+        <sys_updated_on>2026-11-13 08:29:57</sys_updated_on>
+        <ui_id>e333b600-57da-4443-9ad7-51adc406f043</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+VYXW/iOhD9K1GeKTfhK6Rvq1ZIlXq30tK7L7sry4mdYq2xs7bTLkX89zuOE0CQArlLJarLm2fG9pnxOWOHb0sfp4ZJcSe0wSKl04W+I/61H9Jx1htFcdS3vyCgvXHc6w+zYJCNcERjv+MzG0fiIM7ieDiOgsDGjUb9FIdJ0h+lSZDgAcQJPKcQaXDCKQyfMS/cWP9EmmMwEaZzjhdfK88jeLzp/SfwpDPGiaLCv/72o+PnWMFahir/ernjOhUMxwnl5R4OzQ44s8jXQ1T6nO1+e5r32TmkIhZK0PHpb0MFoYAhw1zTjj/HgmAj1WJtURSTB8E3hhkTBlb0bfBvzV5h33Fg4zIKWaXU+dZDVBXJmbNbbPDUqCI1hapC05lkKdWuHoRmuODmZtvmAh5ye95uikvbzZa8mIvPrhz+eoH6TMBSaABBc5uoRV6lkU1n8uVLjXLCRFmTysllivl6hI1RLCmMxbP0KadzWAjNcZ4z8YRyJZ9ZORmwzLtPHAbdjMsX2FSzJ9F1RO1CXXF3Avbb0vwVK2az+BuWgckAiHFgCHJHqGWhylI+o5QXunQoLLRby191fL3QNxxrvckcSo5+FRa3q0OVMXJFs1NSxXLzCZZ4plVyq84fC2l4kLvxhqupFITZrfSWmiANxMj3AiaT5RLE41kVobBbywwpmgJhuy5wtdqX3X9ZoqU+j+dY6/NmO8mmxCul7tnumxaolBqeTamDIPhIWoXNL0+q7cXnSvBeCgzJQXaSDRG1VAa5Q9iS4L6iWgvkBAi1QB4spb1k8RaqSh8Zo5w03WQT69i5yXr/z5vsItUBgAhyp8cEZ6J8lgDQi5PN8CBnk3CHoCUvt+4ta8M63RcP9oz0XltL6AQ4tYSmsLf36PA0QKxvmJJru7dLbayU0z+bcvq98yhnuU5zXciGmtdPWEuDOv7VxuPdeODu1oRw1aTMVnuGbffsrfaV328l/W2yOc/tG5w781v3DSl33rN3zGBqtR9ywkcvjDxRs9m9jiLSvGD+s8lfMQ7VB1Wmd0nv5vDgN1+y9W5mGZrDkbMcvgvcS1YjrCjKZCEIqr4INgy0FMiY0qYK3u9QXygIT3gSFO2ZGfXKaG8d3fLqP55HfQZ3mVcnUu2mPUjEKxPx1om0S7tNtxuc8R197m43wYyXpwEfe/nWcVKlpHqj4x05yAOMOLEdnggqPCuoP++XTRJo7JtHsH6Ifw4uqKelFCeDHh5F/TAMgjAgUTCOonA8SmzcINuIGyEtUujfACkDjgEuVHOqJkiw37hcE2/boU5AVXP3Vgr7P0IvMp6FBcTwaljHgVedKJGSUyx2WtEj3Ex/TSr8FdGHF9eOPsQfcAV73K20MzXW+r1eKgX7R7BfBS0FMqZBbxyS9GochdHVICOjq5jg4RWOk2HUJzQdZOd8fPz4F1HgzPT/FgAA</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=6d36c59147249350273a565a516d438d"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Fire Event">80a30edeff30311077a95dac793bf19b</action_type>
+        <action_type_parent display_value="Fire Event">15e10e5eff30311077a95dac793bf11e</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>80a30edeff30311077a95dac793bf19b</compiled_snapshot>
+        <display_text/>
+        <flow display_value="housekeeping">5136c59147249350273a565a516d4302</flow>
+        <generation_source/>
+        <order>8</order>
+        <parent_ui_id>f08e1f89-5a6d-492a-afee-5c564fdb90e9</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>fateh.meena</sys_created_by>
+        <sys_created_on>2026-11-13 08:14:00</sys_created_on>
+        <sys_id>a936c59147249350273a565a516d437e</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
+        <sys_updated_by>system</sys_updated_by>
+        <sys_updated_on>2026-11-13 08:29:57</sys_updated_on>
+        <ui_id>199e40e0-0429-4535-b722-eb6c84cde588</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+2X227bOBCGX0XQtWVIFHXyXVBvFgWy7aLO9qYoBIocxdzSkktRbrxG3r2kDrZsr524cAMsujcJNBxSP/+ZDyN/2tic2RM7psR3gUGe+67veW4UkSRghEaJn+VeAvbILsgCdCasoFBp8zCyV0TUJugCimjgBThCOPEDF0U+CcKABF7IsJ9EOpXxainI+mO34zFFCPkx8lOyLIUoU3c8L+sKvgAsefEQBXoLnXPBJBT25NPnkb0kUr9UgbQnm4Oll15BkAyETv3N3OHEldR6aWISctDn0z501239MIiXkhk13siGRwUFAy0jJ6KCkb0gBSOqlGt7omStAxIIe1+I9TZjzrWEiT2Fiktg1mxdKVhYjTJLzYmyKu2HYFYGVm4ybHPoY8X/0ep8NBoInNjVumrvIOGBV8aiwXraOd/f2/rQJEmieFnoxHxKFJlplVTV0pzWOF9yClXrrraU1EK9GcbahPfL5oxmiyKZOKWFlqJeFO9at+3tiX0v6IiufMpgaUw0tnQe5bN5+W3r+C0vGr+7RVFSIgapQCSd33IQ7LCkRCnJs1oZ8Ru75vfHJW6D/1ZkELAwZy3I0jRmupTlijc69LUW4wehH8a5KL9p/RV/KMaEGlPGuvxkfKvj0yb8kUhuHPpDH9N4UvO/Cv61hreNXHB9YFHuRARjB+Mgc7IM+w51gyQhLkK5h+ynkTH3jSBVtbNSXyL9WhsjWmM7C9O2LGYLlXypbrSoFXRuPY066ql7DhmCd4hIoLrbB8RvNrO7G+ueVF9Sb6zMv0qQtE17ejrm/WKcX6BNbMvViTsU27HMSlo3NeTsgOZpt2K9ne54Rtfg+XfTF60wq8z+BqqsXJYLjTZY0ELeAHOG6hMQXx/ZHyG0deECQE9AuF+bfQz3q/MqIOYe1UML+Q7yI+rghMZOjEH/0Tjq0RZTRMMfALF1+jkazw4wEu0avG+dHsaev2PsDKCWJvVy/J4X0+N336k5ENfB1zwOh+vdcJv1rl3o0PPPo9dFduy1XbglKHb/QwRdPuNOILTn8D5Bex6/CkAJwjgP49jJEGEOjkOsJ5kbO5GHXaT7CfmB/xMmGYvPtmu2a0/d+AtvwM4VRtULXt6z8md/lOUdS+qI0d9mujwHtMz6YEcKvpCU/Sl1U6ytxoD2U1NCVYoVVJYqLWJt3z/gyv0lydo6sU/VthavQlQYuInrotxhYQwO9nLkEC+JHf3zKfNYSDEKk59BFD7b1Pl++6IrE/X8y4+JQseSLiEq+J+oX4SoHIfYp1HkYN1j+iMv1jMqgsDxA5ZHmEU0jL0rEvX5O1XIrNhlEQAA</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=a936c59147249350273a565a516d437e"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Wait For Condition">89ce8a4187120010663ca1bb36cb0be3</action_type>
+        <action_type_parent display_value="Wait For Condition">8bb9a8160b10030085c083eb37673aec</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>89ce8a4187120010663ca1bb36cb0be3</compiled_snapshot>
+        <display_text/>
+        <flow display_value="housekeeping">5136c59147249350273a565a516d4302</flow>
+        <generation_source/>
+        <order>10</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>fateh.meena</sys_created_by>
+        <sys_created_on>2026-11-13 08:14:00</sys_created_on>
+        <sys_id>e136c59147249350273a565a516d438d</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
+        <sys_updated_by>system</sys_updated_by>
+        <sys_updated_on>2026-11-13 08:29:57</sys_updated_on>
+        <ui_id>d5627992-c177-483f-9192-efc15d3d928f</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+2X227jNhCGXyXQtelSEiVRuQvsBA2QbgDb3V5sFwLFQ0yUlrw6ZNc18u4lJTqSD3GTxhskQHMTaDSk/vk5n0f6snYIrWSeXWdlRTLKp6vymjnnDgux8MIojnzzByH3cOz5gYBIhCTigTNwpMlDMeWYIBdHrgehC8PQp8RNUz+kKUw50nkZWXCdWXCaF0xf3xNVm8B6Pb25OJuR8q/EHVbmX6lI0qY9POhEJsulIqvPNl9H6FwqVvDMOf/ydeAsSaG3rnjhnK93bj1XmyIpVzp1shG3K7ZaLc01y2m94FmVyE3wxq4c2ztn12N9Ry8yctyBw39UPGNc6xBElXzgLEjGSJUXK+e8KmodKDhht5laPWbMZVa1dS7Ij1L+rR/seyZPcF0YtR48XibWnzYsxqQiU70zreri0a5cUl62ljAuSK2qUT/WJtwuTQe0SyqSqs3qXNWL7FNriPO4Qe846lKL4EtTp1HeliWm8/z7ZCPySmaNI7ZElVOiHq9IVRUyrSsjZ+3UcnbI7DZ82G4hlT7+pBGdlHldNCZNLke3k3Hyx8Vs9OvlJJlcTmeT69Hs0qzgijdbL8hyKbO7ZFnk97JRqOtdDO+UvhgKlX/XhZXyLhu2eAz10ZHhlY6Pm/BnUkjz0N/0NnqxUfl7Jr/VvIEHCeH6bhgC14U+QG4aghjzAEAeEBR4KAxCz3kYOOWqHClSlp3H+nCTb7WxqHXceps0x9OW2XSoWUwLuawutLx7bh19GLwa5+AoMqQjpCemQ3pD8T68BvMzzfvLIf53RRuIZ03vHlZoOd6L3fTXnn1qb1iKveMU20iHcdv/ByjG8ANRbMt6PcZbXm9TvOW2LJO2l63oZte3QtVzcYxR6gM/RQFAsRAAQ4wA4gTSwGMRcul/QPXnAXp8pomu/WmeMWkeVfYAnZMySXXH0jlnf9YQ+sw07T6uT+addAKLHryjvtxDJViC92I3hzawBPunmsMIwo/E8Kkm8ZbZ2whv2f0mqHKGwzSAGHCBMUB+hEHseh4IQ8JcF1Em4DudqpAdw0D0XpIrueB5XSVCkbsetnCf0M2v5MuAfIaSDZCXWfMjbRU9KdFimea54iTbnaq6D3+5skotk+iFU/UYlB8IyZON1c7pnZna9/pNgKSUYD0kCYh9ygEKUwqwoAL4PA2EH6Q4jeB7mp30ePPH+z3O6oI0x9+heILv0mfo2EA47gQ8Lc0i2BzqbvxmfyPLYfA/h6/icM/unQ/V7sbPgnGu143JqjRd0b6d7eDJXRIFqfn2JAB5sQtIjDwQhzziSODQJ/F7whO7R7EQ+wyU5vW0Vvy0eD5DxwbPaSfgaWkWz46QbTInvbhFMzwZmnjvvZUusr64Q6D2qvqQwIopJwWdX0muzHnaL9AnMO4fyzbB/YN5m3nqea7POAUu02+5yAs9gH0UgSjGKUS69VKfnxDYr/8AtfSCNv0VAAA=</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=e136c59147249350273a565a516d438d"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="SLA Percentage Timer">a1a50c4573873300d70877186bf6a762</action_type>
+        <action_type_parent display_value="SLA Percentage Timer">6f0ebf3c73833300d70877186bf6a729</action_type_parent>
+        <attributes/>
+        <comment>Completes when the SLA reached 75%</comment>
+        <compiled_snapshot>a1a50c4573873300d70877186bf6a762</compiled_snapshot>
+        <display_text/>
+        <flow display_value="housekeeping">5136c59147249350273a565a516d4302</flow>
+        <generation_source/>
+        <order>5</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>fateh.meena</sys_created_by>
+        <sys_created_on>2026-11-13 08:14:00</sys_created_on>
+        <sys_id>e536c59147249350273a565a516d437c</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
+        <sys_updated_by>system</sys_updated_by>
+        <sys_updated_on>2026-11-13 08:29:57</sys_updated_on>
+        <ui_id>d558c410-d874-4f7c-b9da-a59cc3d9442c</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+1aXU/jOhD9KyjPVTekadPwhraqhNS7rCjalxWKponT+uI6Wdsp21vx3+84X6Rp2i2C3S0QXlAmY3vmzDnjYPN9Y4CvaMSvuFTAfTJdy6vAuDCGg2FoDRzX6ekf0yTW0LV6/dC0wwE4gWN0DKr9LBf6pm/3nd7Q0X6BYw4d53w4mGm/gY1+HJYEPWMifMIVzAnaVsASbXT6+BBQGTNYf6va/AVlgSDcuPh+1zFiEDiJIsK42NReHRsFgxlh6Pq1GkZTaGodaxvlisxxwcwwyUdfldZIBDqc845BfirCA4JxhMAk6RhL4AGoSKyNCyUSNAgCwTVn69JjgbPjbIb2/Snpf7igbWq/kGBiPsnelY9ejlBmDkegYIoz+yoRuau/iKhPZAZJQEJImPpctWUO17GudTZEwYwVoyOWLPmXDAyjnKAoCFoSiUGQWOepI8/TCKeL6OGmiHJMeQpJ/pJFPrDyCZQSdJYoHc/GSOhtHeUl5V7BClOvmLrs4k4YWWIM3hLimPK5F4toRdN1MY1ld87woRuy6AHjlXTOuxm/u1gR6I7RPkrN30BQDcA/OA0OfuwYci0/M5DyCQbE3/uR6CQyUPL0vQxBPcQXNFaXuMCK5Jk+dl6qKAgOctl9oq0Cee9JBp4gPtKxIqvNZjq5PLvV78+7NbfHx13JPVtwRwRZCE5HcabDuSmi3Bt+Lr0nGWyL76Ziz+VnHZZfbjlGfz1rW39FdHt0WGT1VvUYTgkIfzGmhOl6ZonuEWm1HisqKcbpoVpDPTCdbkeu1UqFIlp6qSApjxMlGyv/7lVtHRZMZTPSuFTh2qPqmluTqn/pXxH2plg+SASkpKw1gVAzZQw+UQhu1hXqDN7mACoCK6kBXT3xdrfvNKBdGHEVHK23CMGBTSi/b2pVCR1lk+Zsldm6Wevw2HY0eTUq7amS7y4CqmHKSX3G396KXvAp8MI2k1tGO1V73e+BV9VpXkVBGOg3XlFO7yES99L7OMw+iMAxKD2H/XbL/lNiP5W4t8ZAxYvJfot/wXwap7v8Hyf8LIoYAV5nfCWkXdZXM28AQzXN3JBrSez+eyN28cX2htldNqu0mh+kndeT3oPFc5p2771x+23TOv31Qdic57qd+XO4+4uDt5a7f4K7B06KWuq21D0R6r5fKraHFy0lT5SS7WdqS86TI2d7JNbStj3cMtrDrb/I07vjbwTLfja5PNOXnGdXxZXg3rvCnALR7F/iqxoDrgvjq++rg75pfsj/XylxPu5evKyAH6UfQl5ex/GoB4E7DFzXti3b7fXNQegPSN+euTNraEMQGo0X6bv1P/WL9Lv/AWQ1ZEByJgAA</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=e536c59147249350273a565a516d437c"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Create Record">2de05916c31332002841b63b12d3aee1</action_type>
+        <action_type_parent display_value="Create Record">02f0b88cc3c632002841b63b12d3aeff</action_type_parent>
+        <attributes/>
+        <comment>"sla.warning.breach.parm" Event with Parm1 set to Assigned To from the Task</comment>
+        <compiled_snapshot>2de05916c31332002841b63b12d3aee1</compiled_snapshot>
+        <display_text/>
+        <flow display_value="housekeeping">5136c59147249350273a565a516d4302</flow>
+        <generation_source/>
+        <order>13</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>fateh.meena</sys_created_by>
+        <sys_created_on>2026-11-13 08:14:00</sys_created_on>
+        <sys_id>ed36c59147249350273a565a516d438f</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
+        <sys_updated_by>system</sys_updated_by>
+        <sys_updated_on>2026-11-13 08:29:57</sys_updated_on>
+        <ui_id>cc2dbae9-e4a5-41d5-b098-27d370caf7cb</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/9VVyW7bMBD9lYBnWaAsWV5uRdIAAdoESIpcsggjcRQTpShVpJy4hv+9Q1F2jDRB10t0MMBZ33scjm82DAora32mjQVd4NXanAm2YPN0Vo7T6Xwau49zHM/m43hS8qRMYYqCBUy6uDRCPplHaRFHcTzmfDxLojyN82gsYkBMKE5DhRRpIVeY9YeArUB1zmjWBleoLZmENI2C9fXg+TiYi6VUokXNFjd3AWugpQIWW7bYvHD9LhwFOSoK/eLwvAHPrptXbZ8Oc4/OvaNuhcPDA4ZPFrUgcRYlKIMBq0ALsHW7ZgvbdmRoEcSFVut9xFISywVjLvbJyO/UdsZdXInErEDv2x+zQSVvLk/AwhVVLmzXDqHFspYFGq+JwBI6ZY8PbT7gonG37lN6mkN2rbpKn3tJ2L7A7lLI0hkCgY3j6ZAPNMqrZf14uUN5KnUvyeBUdQFqfwJrW5l31uHZMFRYUaGsgqaR+iFr2nol+2TCUoUPig5hqepHamrkgw79uIYkK4SnZD/pzdfQSsfiM5Wh5G3gJutYgTHPXEjE7FvnkHhmA4fMy+BSilY29gM1WOEAdxv88wMRyOdvTmSUP09g/ybMweOQQ8vbjvNYbDZIjfKU89FkKmCUJEk8moOYjiYRiCLhKfWOw0ssaCC323tX1WcaBeEjtJr0DXOawGIZ0juq7t1P9BfFQwvma0jakvAoMltTt36GfC3nzajnz2/6/RP6w23067vfbaNTiUqYV4Zht4qwIiUtZn44XqyjwXl0PTiHlRT9r5UUkY7ue0eLyZN793vp4C/ojQ119wOSvLrGxAcAAA==</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=ed36c59147249350273a565a516d438f"/>
+    <sys_hub_sub_flow_instance_v2 action="delete_multiple" query="flow=5136c59147249350273a565a516d4302"/>
+    <sys_hub_flow_logic_instance_v2 action="delete_multiple" query="flow=5136c59147249350273a565a516d4302^sys_idNOT IN2536c59147249350273a565a516d4359,2936c59147249350273a565a516d4376,a136c59147249350273a565a516d4375"/>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">91fd210f47d81310273a565a516d4326</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="housekeeping">5136c59147249350273a565a516d4302</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="If">af4e1945c3e232002841b63b12d3ae3e</logic_definition>
+        <order>2</order>
+        <outputs_assigned/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>fateh.meena</sys_created_by>
+        <sys_created_on>2026-11-13 08:14:00</sys_created_on>
+        <sys_id>2536c59147249350273a565a516d4359</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
+        <sys_updated_by>fateh.meena</sys_updated_by>
+        <sys_updated_on>2026-11-13 08:23:54</sys_updated_on>
+        <ui_id>1f55dcda-131d-48c8-9924-8f6d7cbf95b8</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+1UXW/TMBT9KyjPaeQkTbv2bQJNQgImsWkvMEU3ttNaOLaxnXal6n/nOh9ttXUCAY+8xce+955zfJx9pFtvWu/u9bVzYqWi5ZfHOBIqYPi9jxQ0PFpGVCsmvNCq7IA42oBswwZ+MuGMhN3DCaFrIZnlQzcDFms8t9Fy/2zL7wwvJVRcYuGdt0KtsFwwXNUE6nRBU5pnszwjJLuaptUsr9KM5cAhx3Nj4duR3JsPHRK/yjrMQ9yNk7RlgVZK4og/ea4Yx9E1SMfjqAHFwGu7OyKWA7tV8gSshfK94gaenPiBvbOiCAdrjhrpYMdxWQ5WjS5pQfmtCQR7xEMlRwu1bBv1qdcRTOY1tNKfmdw67MdNIB1YDJTqu7Xefh4H3gjVCRw2paYgjyvwaEPVeu7CxXDJG2xUNmAMmlMaqzeiK0YuTbKSuEhqqbc4NCQlARqIJ+gRJDeIv+vgB7AiqPiIbbC4p1mBE7TsUoXtvEUJh86W8nsbCPUCByll7wYecNQK469xzoYPrA/xy0iepXG/XzDAK2D55KqYZ5PpYlFNqimdT2Z5kXMyJ/Oa5Ynz4Ft3OHxtCckZyjMS88leZvmv+/2Ll7CAoi5SUlx+CdPZpZdw4Q28Hv/sF/EPF/ab6SeE/I//efyFK/sYD9q64X+c/scQ9X6C63PDOBUOidwH7P343w4bOwyAoOfQVttvQcIJO/wEDcd9iwEGAAA=</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">a9fd210f47d81310273a565a516d4348</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="housekeeping">5136c59147249350273a565a516d4302</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="If">af4e1945c3e232002841b63b12d3ae3e</logic_definition>
+        <order>14</order>
+        <outputs_assigned/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>fateh.meena</sys_created_by>
+        <sys_created_on>2026-11-13 08:14:00</sys_created_on>
+        <sys_id>2936c59147249350273a565a516d4376</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
+        <sys_updated_by>fateh.meena</sys_updated_by>
+        <sys_updated_on>2026-11-13 08:23:54</sys_updated_on>
+        <ui_id>f06d035d-c651-4c1f-9522-ac3c15641c8d</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+1VXU/bMBT9K1me08hpkjJ4Q5uQJo0hAeJloOjGdloLx85sh9JV/e+7jhOoRtGmsYc97C0+9+vcj6NsY927rnf2Wp9aK5YqPvl6l8RCeQy/t7GClscnMdWKCSe0qgYgiR9A9t4QwjiLrnUkbMRE03DDlYucjs5BwZKbSDfRnhsGM2E7CZubt+SgKyEZegXGHRjk5biJT7Y/mdym45WEmkssdeWMUEsMFwxfDYEmO6YZzeeLfE7I/H2R1Yu8zuYsBw45+k2BH6YBRJ8HJHl1Mr4e4naqpA3ztDKSxPzRccU4lm5AWp7ELSgGTpvNE2I4sAsln4GVUA7Txd750YrvmHtelt5xGBLlwfj0rMbhBpiutKD8ovMEA+KglmMM1bJv1ZfQh18Lb6CXbloLIr3FfLzzpD2LkVJztdLry6ngmVBDg6NRagry6QUOx1D3jlu/GC55i4mqFroOh1N1Rj+IIRi5tOlS4iNtpF5jUb/rFKgnnuKMID1D/OMA34ARvotzTIPBgWYNVtBquFxM5wy2sBvGUn3rPaHQ4NhKFaaBDpYa0blTrPPAR9a75OXZ7138dsvzPK8XhMzKIwazoijy2TGwo1mZAaMFWTSkyNNLTnHzqQN7n8J4uZXTaRsOOrUbWwm227277QnJ2RuzTtleiutfp/s3dHwMZVNmpDys42JxSMcHFPy6eOe/EK8/t9/ULiHkv3j3xStsFUQ49jYU/2Pt3nmhhgo23A3jVFgkcu2xT9OfzRs2eACC7kNrbe59C8/Y7gdjl7iQIwcAAA==</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">a1fd210f47d81310273a565a516d4331</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="housekeeping">5136c59147249350273a565a516d4302</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="If">af4e1945c3e232002841b63b12d3ae3e</logic_definition>
+        <order>6</order>
+        <outputs_assigned/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>fateh.meena</sys_created_by>
+        <sys_created_on>2026-11-13 08:14:00</sys_created_on>
+        <sys_id>a136c59147249350273a565a516d4375</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
+        <sys_updated_by>fateh.meena</sys_updated_by>
+        <sys_updated_on>2026-11-13 08:23:54</sys_updated_on>
+        <ui_id>f08e1f89-5a6d-492a-afee-5c564fdb90e9</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+1UXW/TMBT9KyjPaeR8dW3fJtAkJGASm/YCU3RjO62FYwfbaVei/neu89FWWycQ8MhbfOx77znHx+kC3bqmdfZeX1sr1ipYfXkMA6E8ht9doKDmwSqgWjHhhFZFD4TBFmTrN/CTCdtI2D+cELoRkhk+dmvAYI3jJlh1z7bcvuGFhJJLLLxzRqg1lguGq4pAFS9pTNNkniaEJIssLudpGScsBQ4pnpsK307k3nzokfBV1n4e4naapA3ztGISBvzJccU4jq5AWh4GNSgGTpv9ETEc2K2SJ2AjlBsU1/BkxQ/sneS5P1hx1EhHO47LYrRqckkLym8bT3BAHJRyslDLtlafBh3eZF5BK92Zya3FfrzxpD2LkVJ1t9G7z9PAG6F6geOm1BTkcQUObShbx62/GC55jY2KGpoGzSkao7eiL0YudbSWuIgqqXc41CclAuqJR+gRRDeIv+vhBzDCq/iIbbB4oFmCFbToU4XtnEEJh96W4nvrCQ0CRynF4AYesNSIxl3jnC0fWR/Cl5E8S2PXsTxf0CwmM7a4ymZZdUVn5ZLBDPIlpSlbZllCI+vAtfZw+NoSkjKU10jMJ3uZ5b/u9y9ewhLyKo9JfvklZPNLL+HCG3g9/skv4u8v7DfTTwj5H//z+AtbDDEetfXD/zj9jz7qwwQ75IZxKiwSuffY++m/7Tf2GABBz6GdNt+8hBN2+AlovjhnAQYAAA==</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_pill_compound action="delete_multiple" query="attached_to=5136c59147249350273a565a516d4302"/>
+    <sys_hub_flow_variable action="delete_multiple" query="model=5136c59147249350273a565a516d4302"/>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_variable_5136c59147249350273a565a516d4302"/>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>task_sla_record</element>
+        <help/>
+        <hint/>
+        <label>task_sla_record</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_5136c59147249350273a565a516d4302</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>fateh.meena</sys_created_by>
+        <sys_created_on>2026-11-13 08:14:00</sys_created_on>
+        <sys_id>ed36c59147249350273a565a516d4317</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Apollo-Hospitals" source="x_2223823_apollo_0">87c1422693c89b507b3a7c5efaba1008</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>fateh.meena</sys_updated_by>
+        <sys_updated_on>2026-11-13 08:14:00</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>sla_flow_inputs</element>
+        <help/>
+        <hint/>
+        <label>sla_flow_inputs</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_5136c59147249350273a565a516d4302</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>fateh.meena</sys_created_by>
+        <sys_created_on>2026-11-13 08:14:00</sys_created_on>
+        <sys_id>ed36c59147249350273a565a516d431e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Apollo-Hospitals" source="x_2223823_apollo_0">87c1422693c89b507b3a7c5efaba1008</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>fateh.meena</sys_updated_by>
+        <sys_updated_on>2026-11-13 08:14:00</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_input_5136c59147249350273a565a516d4302"/>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_output_5136c59147249350273a565a516d4302"/>
+    <sys_hub_flow_snapshot action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <acls/>
+        <active>true</active>
+        <allow_high_security_roles>false</allow_high_security_roles>
+        <annotation/>
+        <attributes>browserActivatedIn=chrome,integrationActivatedIn=standalone,timeFromCreateToActivate=226327181000,viewActivatedIn=diagramming</attributes>
+        <authored_on_release_version>29000</authored_on_release_version>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <copied_from>828f267973333300e289235f04f6a7a3</copied_from>
+        <copied_from_name/>
+        <description/>
+        <flow_priority/>
+        <internal_name>housekeeping</internal_name>
+        <label_cache>[{"name":"8dcd36f8-6e66-4e71-8c03-1253a41291dc.Table","label":"2.1➛Task SLA Table","reference":"task_sla","reference_display":"Task SLA","type":"table_name","base_type":"table_name"},{"name":"d5627992-c177-483f-9192-efc15d3d928f.state","label":"10 - Wait For Condition➛State","reference_display":"State","type":"choice","base_type":"choice","choices":[{"label":"Complete","value":"0","order":0.0},{"label":"Timeout","value":"1","order":1.0}],"attributes":{"uiType":"choice","uiTypeLabel":"Choice","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"2e334039-7a20-4ead-9148-909988f1a7e4"}},{"name":"c9d13231-0089-4f10-91ea-2600908e0d7e.Record","label":"7 - Look Up Record➛Task SLA Record","reference":"task_sla","reference_display":"Task SLA","type":"reference","base_type":"reference","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"f86c36ba-ff4d-4b25-a093-4cefb827f99e.status","label":"3 - Look Up Record➛Status","reference_display":"Status","type":"choice","base_type":"choice","choices":[{"label":"Error","value":"1","order":0.0},{"label":"Success","value":"0","order":1.0}],"attributes":{"uiType":"choice","uiTypeLabel":"Choice","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"5e478657-3a84-4a60-a92b-d3e80005ad34"}},{"name":"b469b3be-e287-41ed-8ca5-4b4e417b229e.record","label":"4 - Create Record➛Event Record","reference":"sysevent","reference_display":"Event","type":"reference","base_type":"reference","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"9da255d3-8572-499b-b4c7-6353e0707fd3.total_duration","label":"1 - SLA Percentage Timer➛Total Duration","reference_display":"Total Duration","type":"glide_duration","base_type":"glide_duration","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"glide_duration","uiTypeLabel":"Duration"}},{"name":"e333b600-57da-4443-9ad7-51adc406f043.Record.task.assigned_to","label":"11 - Look Up Record➛Task SLA Record➛Task➛Assigned to","reference":"sys_user","reference_display":"User","type":"reference","base_type":"reference","parent_table_name":"task","column_name":"assigned_to"},{"name":"c9d13231-0089-4f10-91ea-2600908e0d7e.error_message","label":"7 - Look Up Record➛Error Message","reference_display":"Error Message","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiUniqueId":"87687532-9e3d-4497-a88e-90f45bfb9adb"}},{"name":"c9d13231-0089-4f10-91ea-2600908e0d7e.Table","label":"7 - Look Up Record➛Task SLA Table","reference":"task_sla","reference_display":"Task SLA","type":"table_name","base_type":"table_name","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","filter_table_source":"v_cluster_transaction"}},{"name":"f86c36ba-ff4d-4b25-a093-4cefb827f99e.Record.task.assigned_to","label":"3 - Look Up Record➛Task SLA Record➛Task➛Assigned to","reference":"sys_user","reference_display":"User","type":"reference","base_type":"reference","parent_table_name":"task","column_name":"assigned_to"},{"name":"3132448d-a5d7-48a3-acc7-34e5341f88eb.table_name","label":"2.3➛Event Table","reference":"sysevent","reference_display":"Event","type":"table_name","base_type":"table_name"},{"name":"e333b600-57da-4443-9ad7-51adc406f043.Record","label":"11 - Look Up Record➛Task SLA Record","reference":"task_sla","reference_display":"Task SLA","type":"reference","base_type":"reference","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"SLA Task_1.sla_flow_inputs","label":"Trigger➛sla_flow_inputs","type":"object","base_type":"object"},{"name":"a5b4e75b-fb57-4bd0-81f5-92b721393ebd.table_name","label":"4.3➛Event Table","reference":"sysevent","reference_display":"Event","type":"table_name","base_type":"table_name"},{"name":"e333b600-57da-4443-9ad7-51adc406f043.Record.task","label":"11 - Look Up Record➛Task SLA Record➛Task","reference":"task","reference_display":"Task","type":"reference","base_type":"reference","parent_table_name":"task_sla","column_name":"task"},{"name":"SLA Task_1.task_sla_record.task.assigned_to","label":"Trigger➛Task SLA Record➛Task➛Assigned to","reference":"sys_user","reference_display":"User","type":"reference","base_type":"reference","parent_table_name":"task","column_name":"assigned_to"},{"name":"e333b600-57da-4443-9ad7-51adc406f043.Record.task.assigned_to.manager","label":"11 - Look Up Record➛Task SLA Record➛Task➛Assigned to➛Manager","reference":"sys_user","reference_display":"User","type":"reference","base_type":"reference","parent_table_name":"sys_user","column_name":"manager"},{"name":"e333b600-57da-4443-9ad7-51adc406f043.Record.task.assigned_to.manager.sys_id","label":"11 - Look Up Record➛Task SLA Record➛Task➛Assigned to➛Manager➛Sys ID","reference":"","reference_display":"Sys ID","type":"GUID","base_type":"GUID","parent_table_name":"sys_user","column_name":"sys_id"},{"name":"c9d13231-0089-4f10-91ea-2600908e0d7e.Record.business_percentage","label":"7 - Look Up Record➛Task SLA Record➛Business elapsed percentage","reference":"","reference_display":"Business elapsed percentage","type":"percent_complete","base_type":"percent_complete","parent_table_name":"task_sla","column_name":"business_percentage"},{"name":"SLA Task_1.task_sla_record.sys_id","label":"Trigger➛Task SLA Record➛Sys ID","reference":"","reference_display":"Sys ID","type":"GUID","base_type":"GUID","parent_table_name":"task_sla","column_name":"sys_id"},{"name":"3132448d-a5d7-48a3-acc7-34e5341f88eb.record","label":"2.3➛Event Record","reference":"sysevent","reference_display":"Event","type":"reference","base_type":"reference"},{"name":"7cd8edaa-54d3-4ca1-9428-bb6c3a2f0816.table_name","label":"15 - Create Record➛Event Table","reference":"sysevent","reference_display":"Event","type":"table_name","base_type":"table_name","usedInstances":{},"attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"f86c36ba-ff4d-4b25-a093-4cefb827f99e.Table","label":"3 - Look Up Record➛Task SLA Table","reference":"task_sla","reference_display":"Task SLA","type":"table_name","base_type":"table_name","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","filter_table_source":"v_cluster_transaction"}},{"name":"d558c410-d874-4f7c-b9da-a59cc3d9442c.total_duration","label":"5 - SLA Percentage Timer➛Total Duration","reference_display":"Total Duration","type":"glide_duration","base_type":"glide_duration","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"glide_duration","uiTypeLabel":"Duration"}},{"name":"cc2dbae9-e4a5-41d5-b098-27d370caf7cb.record","label":"13 - Create Record➛Event Record","reference":"sysevent","reference_display":"Event","type":"reference","base_type":"reference","usedInstances":{},"attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"8dcd36f8-6e66-4e71-8c03-1253a41291dc.Record","label":"2.1➛Task SLA Record","reference":"task_sla","reference_display":"Task SLA","type":"reference","base_type":"reference"},{"name":"SLA Task_1.task_sla_record","label":"Trigger - SLA Task➛Task SLA Record","reference":"task_sla","reference_display":"Task SLA","type":"reference","base_type":"reference","usedInstances":{"199e40e0-0429-4535-b722-eb6c84cde588":["record"],"0ad10712-9685-41ad-8f21-92dddfd61be6":["record"],"9c1f5467-c8a2-4cbe-91b8-2d335b45c36c":["record"]},"attributes":{}},{"name":"c9d13231-0089-4f10-91ea-2600908e0d7e.Record.task.assigned_to","label":"7 - Look Up Record➛Task SLA Record➛Task➛Assigned to","reference":"sys_user","reference_display":"User","type":"reference","base_type":"reference","parent_table_name":"task","column_name":"assigned_to"},{"name":"a5b4e75b-fb57-4bd0-81f5-92b721393ebd.record","label":"4.3➛Event Record","reference":"sysevent","reference_display":"Event","type":"reference","base_type":"reference"},{"name":"SLA Task_1.task_sla_record.business_percentage","label":"Trigger➛Task SLA Record➛Business elapsed percentage","reference":"","reference_display":"Business elapsed percentage","type":"percent_complete","base_type":"percent_complete","parent_table_name":"task_sla","column_name":"business_percentage"},{"name":"8dcd36f8-6e66-4e71-8c03-1253a41291dc.Record.business_percentage","label":"2.1➛Task SLA Record➛Business elapsed percentage","reference":"","reference_display":"Business elapsed percentage","type":"percent_complete","base_type":"percent_complete","parent_table_name":"task_sla","column_name":"business_percentage"},{"name":"f86c36ba-ff4d-4b25-a093-4cefb827f99e.error_message","label":"3 - Look Up Record➛Error Message","reference_display":"Error Message","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiUniqueId":"87687532-9e3d-4497-a88e-90f45bfb9adb"}},{"name":"d558c410-d874-4f7c-b9da-a59cc3d9442c.status","label":"5 - SLA Percentage Timer➛Status","reference_display":"Status","type":"choice","base_type":"choice","choices":[{"label":"Paused","value":"paused","order":0.0},{"label":"Completed","value":"completed","order":1.0},{"label":"Repair","value":"repair","order":2.0},{"label":"Skipped","value":"skipped","order":3.0},{"label":"Cancelled","value":"cancelled","order":4.0}],"attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"choice","uiTypeLabel":"Choice"}},{"name":"e333b600-57da-4443-9ad7-51adc406f043.error_message","label":"11 - Look Up Record➛Error Message","reference_display":"Error Message","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiUniqueId":"87687532-9e3d-4497-a88e-90f45bfb9adb"}},{"name":"333e94ce-7745-4c6d-9575-a2b961101c07.table_name","label":"9 - Create Record➛Event Table","reference":"sysevent","reference_display":"Event","type":"table_name","base_type":"table_name","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"c9d13231-0089-4f10-91ea-2600908e0d7e.status","label":"7 - Look Up Record➛Status","reference_display":"Status","type":"choice","base_type":"choice","choices":[{"label":"Error","value":"1","order":0.0},{"label":"Success","value":"0","order":1.0}],"attributes":{"uiType":"choice","uiTypeLabel":"Choice","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"5e478657-3a84-4a60-a92b-d3e80005ad34"}},{"name":"f86c36ba-ff4d-4b25-a093-4cefb827f99e.Record","label":"3 - Look Up Record➛Task SLA Record","reference":"task_sla","reference_display":"Task SLA","type":"reference","base_type":"reference","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"d558c410-d874-4f7c-b9da-a59cc3d9442c.scheduled_end_date_time","label":"5 - SLA Percentage Timer➛Scheduled End Date/Time","reference_display":"Scheduled End Date/Time","type":"glide_date_time","base_type":"glide_date_time","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"glide_date_time","uiTypeLabel":"Date/Time"}},{"name":"333e94ce-7745-4c6d-9575-a2b961101c07.record","label":"9 - Create Record➛Event Record","reference":"sysevent","reference_display":"Event","type":"reference","base_type":"reference","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"e333b600-57da-4443-9ad7-51adc406f043.Table","label":"11 - Look Up Record➛Task SLA Table","reference":"task_sla","reference_display":"Task SLA","type":"table_name","base_type":"table_name","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","filter_table_source":"v_cluster_transaction"}},{"name":"e333b600-57da-4443-9ad7-51adc406f043.status","label":"11 - Look Up Record➛Status","reference_display":"Status","type":"choice","base_type":"choice","choices":[{"label":"Error","value":"1","order":0.0},{"label":"Success","value":"0","order":1.0}],"attributes":{"uiType":"choice","uiTypeLabel":"Choice","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"5e478657-3a84-4a60-a92b-d3e80005ad34"}},{"name":"9da255d3-8572-499b-b4c7-6353e0707fd3.scheduled_end_date_time","label":"1 - SLA Percentage Timer➛Scheduled End Date/Time","reference_display":"Scheduled End Date/Time","type":"glide_date_time","base_type":"glide_date_time","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"glide_date_time","uiTypeLabel":"Date/Time"}},{"name":"b469b3be-e287-41ed-8ca5-4b4e417b229e.table_name","label":"4 - Create Record➛Event Table","reference":"sysevent","reference_display":"Event","type":"table_name","base_type":"table_name","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"7cd8edaa-54d3-4ca1-9428-bb6c3a2f0816.record","label":"15 - Create Record➛Event Record","reference":"sysevent","reference_display":"Event","type":"reference","base_type":"reference","usedInstances":{},"attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"9da255d3-8572-499b-b4c7-6353e0707fd3.status","label":"1 - SLA Percentage Timer➛Status","reference_display":"Status","type":"choice","base_type":"choice","choices":[{"label":"Paused","value":"paused","order":0.0},{"label":"Completed","value":"completed","order":1.0},{"label":"Repair","value":"repair","order":2.0},{"label":"Skipped","value":"skipped","order":3.0},{"label":"Cancelled","value":"cancelled","order":4.0}],"attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"choice","uiTypeLabel":"Choice"}},{"name":"e333b600-57da-4443-9ad7-51adc406f043.Record.task.assigned_to.sys_id","label":"11 - Look Up Record➛Task SLA Record➛Task➛Assigned to➛Sys ID","reference":"","reference_display":"Sys ID","type":"GUID","base_type":"GUID","parent_table_name":"sys_user","column_name":"sys_id"},{"name":"cc2dbae9-e4a5-41d5-b098-27d370caf7cb.table_name","label":"13 - Create Record➛Event Table","reference":"sysevent","reference_display":"Event","type":"table_name","base_type":"table_name","usedInstances":{},"attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}}]</label_cache>
+        <master>true</master>
+        <name>housekeeping</name>
+        <natlang/>
+        <outputs/>
+        <parent_flow display_value="housekeeping">5136c59147249350273a565a516d4302</parent_flow>
+        <remote_trigger_id/>
+        <run_as>system</run_as>
+        <run_with_roles/>
+        <sc_callable>false</sc_callable>
+        <status>published</status>
+        <sys_class_name>sys_hub_flow_snapshot</sys_class_name>
+        <sys_created_by>fateh.meena</sys_created_by>
+        <sys_created_on>2026-11-13 08:23:55</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>be78c5d547249350273a565a516d43fe</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_overrides/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>fateh.meena</sys_updated_by>
+        <sys_updated_on>2026-11-13 08:23:55</sys_updated_on>
+        <type>flow</type>
+        <version>2</version>
+    </sys_hub_flow_snapshot>
+    <sys_translated_text action="delete_multiple" query="documentkey=be78c5d547249350273a565a516d43fe"/>
+    <sys_variable_value action="delete_multiple" query="document_key=be78c5d547249350273a565a516d43fe"/>
+    <sys_hub_flow_stage action="delete_multiple" query="flow=be78c5d547249350273a565a516d43fe"/>
+    <sys_flow_cat_variable_model action="delete_multiple" query="id=be78c5d547249350273a565a516d43fe^sys_idNOT IN7a7809d547249350273a565a516d4300"/>
+    <sys_flow_cat_variable_model action="INSERT_OR_UPDATE">
+        <id>be78c5d547249350273a565a516d43fe</id>
+        <name>housekeeping</name>
+        <sys_created_by>fateh.meena</sys_created_by>
+        <sys_created_on>2026-11-13 08:23:55</sys_created_on>
+        <sys_id>7a7809d547249350273a565a516d4300</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>fateh.meena</sys_updated_by>
+        <sys_updated_on>2026-11-13 08:23:55</sys_updated_on>
+    </sys_flow_cat_variable_model>
+    <sys_flow_cat_variable action="delete_multiple" query="flow_catalog_model=7a7809d547249350273a565a516d4300"/>
+    <sys_hub_flow_input action="delete_multiple" query="model=be78c5d547249350273a565a516d43fe^sys_idNOT IN7e7809d547249350273a565a516d4302,b67809d547249350273a565a516d431a"/>
+    <sys_complex_object action="INSERT_OR_UPDATE">
+        <label/>
+        <name>FDba7809d5202493503a5b63dd54ab6d01</name>
+        <namespace>FlowDesigner</namespace>
+        <scope_name>87c1422693c89b507b3a7c5efaba1008</scope_name>
+        <serialized_content>{"FlowDesigner:FDba7809d5202493503a5b63dd54ab6d01":{"duration":"String","duration.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"String\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"string\",\"choiceOption\":\"\",\"default_value\":\"\",\"label\":\"duration\",\"mandatory\":\"false\",\"order\":\"2\",\"max_length\":\"32\"}"},"relative_duration_works_on":"String","relative_duration_works_on.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"String\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"string\",\"choiceOption\":\"\",\"default_value\":\"\",\"label\":\"relative_duration_works_on\",\"mandatory\":\"false\",\"order\":\"4\",\"max_length\":\"32\"}"},"is_repair":"Boolean","is_repair.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"True/False\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"boolean\",\"choiceOption\":\"\",\"default_value\":\"false\",\"label\":\"is_repair\",\"mandatory\":\"false\",\"order\":\"5\",\"max_length\":\"32\"}"},"duration_type":"String","duration_type.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"String\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"string\",\"choiceOption\":\"\",\"default_value\":\"\",\"label\":\"duration_type\",\"mandatory\":\"false\",\"order\":\"3\",\"max_length\":\"32\"}"},"name":"String","name.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"String\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"string\",\"choiceOption\":\"\",\"default_value\":\"\",\"label\":\"name\",\"mandatory\":\"false\",\"order\":\"1\",\"max_length\":\"32\"}"}},"FlowDesigner:FDba7809d5202493503a5b63dd54ab6d01.$type_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"Object\",\"co_type_name\":\"FDba7809d5202493503a5b63dd54ab6d01\",\"element_mapping_provider\":\"com.glide.flow_design.action.data.FlowDesignVariableMapper\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"object\",\"choiceOption\":\"\",\"default_value\":\"\",\"label\":\"sla_flow_inputs\",\"mandatory\":\"false\",\"order\":\"100\",\"max_length\":\"4096\"}"}}</serialized_content>
+        <sys_class_name>sys_complex_object</sys_class_name>
+        <sys_created_by>fateh.meena</sys_created_by>
+        <sys_created_on>2026-11-13 08:23:55</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>be7809d547249350273a565a516d4301</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_overrides/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>fateh.meena</sys_updated_by>
+        <sys_updated_on>2026-11-13 08:23:55</sys_updated_on>
+        <type>complex_object_schema</type>
+    </sys_complex_object>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>co_type_name=FDba7809d5202493503a5b63dd54ab6d01,element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=object,uiTypeLabel=Object</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>sla_flow_inputs</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label>sla_flow_inputs</label>
+        <mandatory>false</mandatory>
+        <max_length>4096</max_length>
+        <model display_value="housekeeping">be78c5d547249350273a565a516d43fe</model>
+        <model_id>be78c5d547249350273a565a516d43fe</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_input_be78c5d547249350273a565a516d43fe</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_only_option/>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>fateh.meena</sys_created_by>
+        <sys_created_on>2026-11-13 08:23:55</sys_created_on>
+        <sys_id>7e7809d547249350273a565a516d4302</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>fateh.meena</sys_updated_by>
+        <sys_updated_on>2026-11-13 08:23:55</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=7e7809d547249350273a565a516d4302"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=reference,uiTypeLabel=Reference</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>task_sla_record</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="Reference">reference</internal_type>
+        <label>task_sla_record</label>
+        <mandatory>true</mandatory>
+        <max_length>32</max_length>
+        <model display_value="housekeeping">be78c5d547249350273a565a516d43fe</model>
+        <model_id>be78c5d547249350273a565a516d43fe</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_input_be78c5d547249350273a565a516d43fe</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_only_option/>
+        <read_roles/>
+        <reference display_value="" name="task_sla">task_sla</reference>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>fateh.meena</sys_created_by>
+        <sys_created_on>2026-11-13 08:23:55</sys_created_on>
+        <sys_id>b67809d547249350273a565a516d431a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>fateh.meena</sys_updated_by>
+        <sys_updated_on>2026-11-13 08:23:55</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=b67809d547249350273a565a516d431a"/>
+    <sys_hub_flow_output action="delete_multiple" query="model=be78c5d547249350273a565a516d43fe"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=be78c5d547249350273a565a516d43fe"/>
+    <sys_hub_trigger_instance_v2 action="delete_multiple" query="flow=be78c5d547249350273a565a516d43fe^sys_idNOT INfa7809d547249350273a565a516d433e"/>
+    <sys_hub_trigger_instance_v2 action="INSERT_OR_UPDATE">
+        <comment/>
+        <display_text/>
+        <flow display_value="housekeeping">be78c5d547249350273a565a516d43fe</flow>
+        <generation_source/>
+        <name>SLA Task</name>
+        <published_version/>
+        <remote_sys_id/>
+        <sys_created_by>fateh.meena</sys_created_by>
+        <sys_created_on>2026-11-13 08:23:55</sys_created_on>
+        <sys_id>fa7809d547249350273a565a516d433e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>fateh.meena</sys_updated_by>
+        <sys_updated_on>2026-11-13 08:23:55</sys_updated_on>
+        <trigger_definition display_value="SLA Task">f5ce00a873723300d70877186bf6a759</trigger_definition>
+        <trigger_inputs>H4sIAAAAAAAA/4uOBQApu0wNAgAAAA==</trigger_inputs>
+        <trigger_outputs/>
+        <trigger_type>sla_task</trigger_type>
+        <updation_source/>
+    </sys_hub_trigger_instance_v2>
+    <sys_hub_action_instance_v2 action="delete_multiple" query="flow=be78c5d547249350273a565a516d43fe^sys_idNOT IN327809d547249350273a565a516d4335,367809d547249350273a565a516d4336,3e7809d547249350273a565a516d4337,727809d547249350273a565a516d433c,727809d547249350273a565a516d433e,767809d547249350273a565a516d4339,7e7809d547249350273a565a516d433c,b27809d547249350273a565a516d4337,f67809d547249350273a565a516d4333,f67809d547249350273a565a516d433b,f67809d547249350273a565a516d433d,fe7809d547249350273a565a516d4339"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Look Up Record">9d09f99587003300663ca1bb36cb0ba3</action_type>
+        <action_type_parent display_value="Look Up Record">b93f42810b30030085c083eb37673a63</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>9d09f99587003300663ca1bb36cb0ba3</compiled_snapshot>
+        <display_text/>
+        <flow display_value="housekeeping">be78c5d547249350273a565a516d43fe</flow>
+        <generation_source/>
+        <order>3</order>
+        <parent_ui_id>1f55dcda-131d-48c8-9924-8f6d7cbf95b8</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>fateh.meena</sys_created_by>
+        <sys_created_on>2026-11-13 08:23:55</sys_created_on>
+        <sys_id>327809d547249350273a565a516d4335</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
+        <sys_updated_by>fateh.meena</sys_updated_by>
+        <sys_updated_on>2026-11-13 08:23:55</sys_updated_on>
+        <ui_id>f86c36ba-ff4d-4b25-a093-4cefb827f99e</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+VYXW/iOhD9K1GeKTfhK9C3VSukSr1baendl92V5dhOsdY4WdtplyL++x3HCUSQArlLJarLm2fG9pnxOWOHbysfE8NTeSe1wZKw2VLfUf/aH+Bx0htFk6hvf0HAeuNJrz9MgkEywhEhfsfnNo5OgkkymQzHURDYuNGoT3AYx/0RiYMYDyBO4gWDSINjwWD4jEXuxvon0gKDiXKdCbz8WnoewePN7j+Bh8y5oIpJ//rbj46fYQVrGab869WO61QwAsdMFHs4NDvgzDLbDFHhc7b7+jTvs3OkilooQcdnvw2TlAGGBAvNOv4CS4pNqpYbi2KYPkixNcy5NLCib4N/a/4K+44DG5cwyIow59sMUVkkZ05uscEzo3JiclWGknnKCdOuHpQlOBfmpm5zAQ+ZPW83xaXtZqciX8jPrhz+ZoHqTMCSawDBMpuoRV6mkczm6cuXCuWUy6ImpVOkBIvNCBujeJwbi2flM8EWsBBa4Czj8gllKn3mxWTAsug+CRh0E5G+wKaaP8muI2oX6oq7U7DfFuavWHGbxd+wDEwGQFwAQ5A7Qp3mqijlMyIi14VDYandWv664+ulvhFY623mUHL0K7e4XR3KjJErmp1CFM/MJ1jimZXJrTt/LKThQe5OtlwlqaTcbqVraoI0EKffc5hMVysQj2dVhMJuJTOkGAHCdl3ger0vu/+yREt9Hs+x0udNPcmmxEul7tnumxYolRqeTamDIPhIWoXNL0+q7cXnSvBeCgzpQXbSLRF1qgxyh1CT4L6iWgvkBAiVQB4spb14+RaqUh8JZ4I23WRT69i5yXr/z5vsItUBgChyp8el4LJ4lgDQi5PN8CBn43CHoAUva/eWtWFN9sWDPZN6r60ldAKcSkIz2Nt7dHgaIFY3TMG13dulMpbK6Z9NOf3eeZSz2qS5KWRDzasnrKVBFf9q4/FuPHC3NiFcNymz1Z5h2z17633l91tJv04257l9g3Nnfuu+IeXOe/aOOUwt90NO+OiF0ydmtrtXUTQ1L1j8bPKXjEPVQRXpXdK7OTz4zRfX3s08QQs4cp7Bd4F7yWqEFUNJmkuKyi+CLQMtBRKutCmD9zvUFwbCk14KivbMnHlFtLeJbnn1H8+jOoO7xKsSKXfTHiTiFYl4m0Tapd2m2w3O+I4+d7ebYi6K04CPvax2nEypVL3R8Y4c5AFGnNgOTwQVnhXUn/fLJgk09s0jWD/EPwcX1NMIw/Ggh0dRPwyDIAxoFIyjKByPYhs3SLbiRkhLAv0bICXAMcCFKk5VBAn2G5dr4m071AmoKu7eptL+j9CLjGdhATG8CtZx4GUnitNUMCx3WtEj3Ex/TUv8JdGHF9eOPsQfcDl/3K20MzXW+r1eKjn/R/JfOSsEMmZBbxxScjWOwuhqkNDR1YTi4RWexMOoTxkZJOd8fPz4F5RC/Jb/FgAA</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=327809d547249350273a565a516d4335"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Create Record">2de05916c31332002841b63b12d3aee1</action_type>
+        <action_type_parent display_value="Create Record">02f0b88cc3c632002841b63b12d3aeff</action_type_parent>
+        <attributes/>
+        <comment>"sla.warning.parm" Event with Parm1 set to Assigned To from the Task</comment>
+        <compiled_snapshot>2de05916c31332002841b63b12d3aee1</compiled_snapshot>
+        <display_text/>
+        <flow display_value="housekeeping">be78c5d547249350273a565a516d43fe</flow>
+        <generation_source/>
+        <order>4</order>
+        <parent_ui_id>1f55dcda-131d-48c8-9924-8f6d7cbf95b8</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>fateh.meena</sys_created_by>
+        <sys_created_on>2026-11-13 08:23:55</sys_created_on>
+        <sys_id>367809d547249350273a565a516d4336</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
+        <sys_updated_by>fateh.meena</sys_updated_by>
+        <sys_updated_on>2026-11-13 08:23:55</sys_updated_on>
+        <ui_id>b469b3be-e287-41ed-8ca5-4b4e417b229e</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/9VVW0/bMBT+K8jPaZRLSZu+TTAkpA0kmHjZIDqJj6k1x8lip9BV/e87jtNSMdCuL+Shks/1+z4fn37eMKisbPS5NhZ0hddrc87ZglXJXCTZLJ+l7osiTOZ5kh6LaCoymPGIBUy6uCzG6DiPsyqN0zSJomQ+jcssLeOEp4A4pTgNNVKkhVJhMRwCtgLVO6NZG1yhtmTi0rQK1jej5/1orpZS8Q41W3y+DVgLHRWw2LHF5pnrd+EoKFFR6CeH5xV4dt2+aPtwmHt04R1Nxx2eKGD4aFFzJCAClMGA1aA52KZbs4XtejJ0CPxSq/U+YimJ5YIxF/to5HdqO49cnEBiVqH37Y/FqJI3i1OwcE2VK9t3Y2i1bGSFxmvCUUCv7MmhzQdctu7WfcpAc8xuVF/rCy8J2xfYXQpZekMgsHU8HfKRhrheNg9XO5RnUg+SjE7VVKD2J7C2k2VvHZ4NQ4U1FSpqaFup74u2a1ZySCYsdXiv6BAK1TxQUyPvdejHNSRZITwj++lgvoFOOhYfqQwlbwM3WScKjHniQiIW33qHxDMbORReBpdSdbK176jBCke42+CfHwjHKH91IuPyaQKHN2EOHoccW37poyjlm42YU5WshIkQUz6ZlsnxBKI8nUwrFOU8mYk8x/AKKxrI7fbOVfWZRkH4AJ0mfUN6QPWd+4n/ompowXwNSVRSHHlhG2ozDI+v5bwFNfv5Mb9hJn+4f35927v9cyZRcfPC9e+WD9YkocXCj8OzBTQ6j25G57iE4v+1hOIsGr43tIo8uTe/iQ7+dF7ZSbc/AO/8e7u2BwAA</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=367809d547249350273a565a516d4336"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Look Up Record">9d09f99587003300663ca1bb36cb0ba3</action_type>
+        <action_type_parent display_value="Look Up Record">b93f42810b30030085c083eb37673a63</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>9d09f99587003300663ca1bb36cb0ba3</compiled_snapshot>
+        <display_text/>
+        <flow display_value="housekeeping">be78c5d547249350273a565a516d43fe</flow>
+        <generation_source/>
+        <order>7</order>
+        <parent_ui_id>f08e1f89-5a6d-492a-afee-5c564fdb90e9</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>fateh.meena</sys_created_by>
+        <sys_created_on>2026-11-13 08:23:55</sys_created_on>
+        <sys_id>3e7809d547249350273a565a516d4337</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
+        <sys_updated_by>fateh.meena</sys_updated_by>
+        <sys_updated_on>2026-11-13 08:23:55</sys_updated_on>
+        <ui_id>c9d13231-0089-4f10-91ea-2600908e0d7e</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+VYXW/iOhD9K1GeKTfhK9C3VSukSr1baendl92V5cROsdbYWdtplyL++x3HCUSQArlLJarLm2fG9pnxOWOHbysfJ4ZJcSe0wSKhs6W+I/61H+Jx2htFk6hvf0FAe+NJrz9Mg0E6whGJ/Y7PbByZBJN0MhmOoyCwcaNRP8FhHPdHSRzEeABxAi8oRBoccwrDZ8xzN9Y/keYYTITpjOPl19LzCB5vdv8JPMmccaKo8K+//ej4GVawlqHKv17tuE4Fw3FMebGHQ7MDziyzzRAVPme7r0/zPjuHVMRCCTo+/W2oIBQwpJhr2vEXWBBspFpuLIpi8iD41jBnwsCKvg3+rdkr7DsObFxKIauEOt9miMoiOXN6iw2eGZUnJldlaDKXLKHa1YPQFOfc3NRtLuAhs+ftpri03WzJ84X47MrhbxaozgQsuQYQNLOJWuRlGulsLl++VCinTBQ1KZ1cJphvRtgYxeLcWDwrn3K6gIXQAmcZE08oU/KZFZMBy6L7xGHQTbl8gU01exJdR9Qu1BV3p2C/LcxfsWI2i79hGZgMgBgHhiB3hFrmqijlM0p4rguHwkK7tfx1x9dLfcOx1tvMoeToV25xuzqUGSNXNDslUSwzn2CJZ1omt+78sZCGB7k72XI1kYIwu5WuqQnSQIx8z2EyWa1APJ5VEQq7lcyQogkQtusC1+t92f2XJVrq83iOlT5v6kk2JV4qdc9237RAqdTwbEodBMFH0ipsfnlSbS8+V4L3UmBIDrKTbImopTLIHUJNgvuKai2QEyBUAnmwlPbi5VuoSn2kjHLSdJNNrWPnJuv9P2+yi1QHACLInR4TnIniWQJAL042w4OcjcMdgha8rN1b1oZ1si8e7BnpvbaW0AlwKgnNYG/v0eFpgFjdMAXXdm+Xylgqp3825fR751HOapPmppANNa+esJYGVfyrjce78cDd2oRw3aTMVnuGbffsrfeV328l/TrZnOf2Dc6d+a37hpQ779k75jC13A854aMXRp6o2e5eRRFpXjD/2eQvGYeqgyrSu6R3c3jwmy+uvZtZihZw5CyD7wL3ktUIK4pSmQuCyi+CLQMtBVKmtCmD9zvUFwrCE54ERXtmTr0i2ttEt7z6j+dRncFd6lWJlLtpDxLxikS8TSLt0m7T7QZnfEefu9tNMePFacDHXlY7TqqUVG90vCMHeYARJ7bDE0GFZwX15/2ySQKNffMI1g/xz8EF9bSE4njQw6OoH4ZBEAYkCsZRFI5HsY0bpFtxI6RFAv0bIKXAMcCFKk5VBAn2G5dr4m071AmoKu7eSmH/R+hFxrOwgBheBes48LITxVJyisVOK3qEm+mvaYm/JPrw4trRh/gDLmePu5V2psZav9dLJWf/CPYrp4VAxjTojUOSXI2jMLoapGR0NSF4eIUn8TDqE5oM0nM+Pn78C7IOzHr/FgAA</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=3e7809d547249350273a565a516d4337"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Look Up Record">9d09f99587003300663ca1bb36cb0ba3</action_type>
+        <action_type_parent display_value="Look Up Record">b93f42810b30030085c083eb37673a63</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>9d09f99587003300663ca1bb36cb0ba3</compiled_snapshot>
+        <display_text/>
+        <flow display_value="housekeeping">be78c5d547249350273a565a516d43fe</flow>
+        <generation_source/>
+        <order>11</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>fateh.meena</sys_created_by>
+        <sys_created_on>2026-11-13 08:23:55</sys_created_on>
+        <sys_id>727809d547249350273a565a516d433c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
+        <sys_updated_by>fateh.meena</sys_updated_by>
+        <sys_updated_on>2026-11-13 08:23:55</sys_updated_on>
+        <ui_id>e333b600-57da-4443-9ad7-51adc406f043</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+VYXW/iOhD9K1GeKTfhK6Rvq1ZIlXq30tK7L7sry4mdYq2xs7bTLkX89zuOE0CQArlLJarLm2fG9pnxOWOHb0sfp4ZJcSe0wSKl04W+I/61H9Jx1htFcdS3vyCgvXHc6w+zYJCNcERjv+MzG0fiIM7ieDiOgsDGjUb9FIdJ0h+lSZDgAcQJPKcQaXDCKQyfMS/cWP9EmmMwEaZzjhdfK88jeLzp/SfwpDPGiaLCv/72o+PnWMFahir/ernjOhUMxwnl5R4OzQ44s8jXQ1T6nO1+e5r32TmkIhZK0PHpb0MFoYAhw1zTjj/HgmAj1WJtURSTB8E3hhkTBlb0bfBvzV5h33Fg4zIKWaXU+dZDVBXJmbNbbPDUqCI1hapC05lkKdWuHoRmuODmZtvmAh5ye95uikvbzZa8mIvPrhz+eoH6TMBSaABBc5uoRV6lkU1n8uVLjXLCRFmTysllivl6hI1RLCmMxbP0KadzWAjNcZ4z8YRyJZ9ZORmwzLtPHAbdjMsX2FSzJ9F1RO1CXXF3Avbb0vwVK2az+BuWgckAiHFgCHJHqGWhylI+o5QXunQoLLRby191fL3QNxxrvckcSo5+FRa3q0OVMXJFs1NSxXLzCZZ4plVyq84fC2l4kLvxhqupFITZrfSWmiANxMj3AiaT5RLE41kVobBbywwpmgJhuy5wtdqX3X9ZoqU+j+dY6/NmO8mmxCul7tnumxaolBqeTamDIPhIWoXNL0+q7cXnSvBeCgzJQXaSDRG1VAa5Q9iS4L6iWgvkBAi1QB4spb1k8RaqSh8Zo5w03WQT69i5yXr/z5vsItUBgAhyp8cEZ6J8lgDQi5PN8CBnk3CHoCUvt+4ta8M63RcP9oz0XltL6AQ4tYSmsLf36PA0QKxvmJJru7dLbayU0z+bcvq98yhnuU5zXciGmtdPWEuDOv7VxuPdeODu1oRw1aTMVnuGbffsrfaV328l/W2yOc/tG5w781v3DSl33rN3zGBqtR9ywkcvjDxRs9m9jiLSvGD+s8lfMQ7VB1Wmd0nv5vDgN1+y9W5mGZrDkbMcvgvcS1YjrCjKZCEIqr4INgy0FMiY0qYK3u9QXygIT3gSFO2ZGfXKaG8d3fLqP55HfQZ3mVcnUu2mPUjEKxPx1om0S7tNtxuc8R197m43wYyXpwEfe/nWcVKlpHqj4x05yAOMOLEdnggqPCuoP++XTRJo7JtHsH6Ifw4uqKelFCeDHh5F/TAMgjAgUTCOonA8SmzcINuIGyEtUujfACkDjgEuVHOqJkiw37hcE2/boU5AVXP3Vgr7P0IvMp6FBcTwaljHgVedKJGSUyx2WtEj3Ex/TSr8FdGHF9eOPsQfcAV73K20MzXW+r1eKgX7R7BfBS0FMqZBbxyS9GochdHVICOjq5jg4RWOk2HUJzQdZOd8fPz4F1HgzPT/FgAA</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=727809d547249350273a565a516d433c"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Create Record">2de05916c31332002841b63b12d3aee1</action_type>
+        <action_type_parent display_value="Create Record">02f0b88cc3c632002841b63b12d3aeff</action_type_parent>
+        <attributes/>
+        <comment>"sla.warning.breach.parm" Event with Parm1 set to Manager of Assigned To from the Task</comment>
+        <compiled_snapshot>2de05916c31332002841b63b12d3aee1</compiled_snapshot>
+        <display_text/>
+        <flow display_value="housekeeping">be78c5d547249350273a565a516d43fe</flow>
+        <generation_source/>
+        <order>15</order>
+        <parent_ui_id>f06d035d-c651-4c1f-9522-ac3c15641c8d</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>fateh.meena</sys_created_by>
+        <sys_created_on>2026-11-13 08:23:55</sys_created_on>
+        <sys_id>727809d547249350273a565a516d433e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
+        <sys_updated_by>fateh.meena</sys_updated_by>
+        <sys_updated_on>2026-11-13 08:23:55</sys_updated_on>
+        <ui_id>7cd8edaa-54d3-4ca1-9428-bb6c3a2f0816</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/91V227TQBD9lbBPICWWHefeJ9RSqRK0EkV9aVpr7B0nK9Zrs7tOG6L8O7O+pFFJgRZeih+i7OxczhyfGV9vGCRW5OpMGQsqwcu1OeNsxqYwSfuj8XQcusf3sT+Z9sNh6g/SEYxTn3WZcH6jAP3hNBglYRCGfd/vTwZBPArjoM9DQByQn4IMydNCLDGqDl22Alk6o1kbXKGyZOLCFBLWV83Nh8acLIXkGhWbXd90WQGaEljUbLZ5dPWncCTEKMn1i8PzBDy7Lg7aPu7Hds7ri1xzh8fvMry3qDgSkBSkwS7LQHGwuV6zmdUlGTQCv1ByvfNYCupyxpjzvTfiO5Wd+M4vReoswfpud4walmpzegIWLilzYkvduCbLXCRoak44plBKe7xvqx0uCvfW65CqzSY6l2WmzmtK2C5B+1LIUhoCgYXr0yFv2kgvl/nd5xblqVAVJc2lzBOQuxNYq0VcWodnw1BiRomiDIpCqEVU6HwlqmDCknkLSQcvlfkdFTViobxarh7RCt4p2U8q8xVo4br4RGkoeNt1yjqWYMxDL0Ri9K10SOrOmh6imgYXkmhR2PdUYIUN3G33rweEoz99UpFB/KDAaibM3nCIpuS89P2QbzZIheKR7/eGYw69wWAQ9qbAx71hADwZ+COqHXqfMSFBbre3LmsdaSR4d6AV8evFpMBk6dEcZbfuJ3hBcs+C+eoRt0Q88sjmHukcFqipaqWlOqfziqj2z7P9/zT2zO30ey202+lUoOTmgDja1YQZMWoxqsXyaD01l52r5rJZUcG/WlEB8emeV7So6uZe/Z7a+yQd3lit0YGu5sD9+aUfE2nnbcqjCir1vCDBe63GI314Mjpv6lnoPDewHal3c9WhRyMpQr04y9FczVWTY87m7IgYM7BCvhPCdru9+QGCSyEE5ggAAA==</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=727809d547249350273a565a516d433e"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Fire Event">80a30edeff30311077a95dac793bf19b</action_type>
+        <action_type_parent display_value="Fire Event">15e10e5eff30311077a95dac793bf11e</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>80a30edeff30311077a95dac793bf19b</compiled_snapshot>
+        <display_text/>
+        <flow display_value="housekeeping">be78c5d547249350273a565a516d43fe</flow>
+        <generation_source/>
+        <order>8</order>
+        <parent_ui_id>f08e1f89-5a6d-492a-afee-5c564fdb90e9</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>fateh.meena</sys_created_by>
+        <sys_created_on>2026-11-13 08:23:55</sys_created_on>
+        <sys_id>767809d547249350273a565a516d4339</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
+        <sys_updated_by>fateh.meena</sys_updated_by>
+        <sys_updated_on>2026-11-13 08:23:55</sys_updated_on>
+        <ui_id>199e40e0-0429-4535-b722-eb6c84cde588</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+2X227bOBCGX0XQtWVIFHXyXVBvFgWy7aLO9qYoBIocxdzSkktRbrxG3r2kDrZsr524cAMsujcJNBxSP/+ZDyN/2tic2RM7psR3gUGe+67veW4UkSRghEaJn+VeAvbILsgCdCasoFBp8zCyV0TUJugCimjgBThCOPEDF0U+CcKABF7IsJ9EOpXxainI+mO34zFFCPkx8lOyLIUoU3c8L+sKvgAsefEQBXoLnXPBJBT25NPnkb0kUr9UgbQnm4Oll15BkAyETv3N3OHEldR6aWISctDn0z501239MIiXkhk13siGRwUFAy0jJ6KCkb0gBSOqlGt7omStAxIIe1+I9TZjzrWEiT2Fiktg1mxdKVhYjTJLzYmyKu2HYFYGVm4ybHPoY8X/0ep8NBoInNjVumrvIOGBV8aiwXraOd/f2/rQJEmieFnoxHxKFJlplVTV0pzWOF9yClXrrraU1EK9GcbahPfL5oxmiyKZOKWFlqJeFO9at+3tiX0v6IiufMpgaUw0tnQe5bN5+W3r+C0vGr+7RVFSIgapQCSd33IQ7LCkRCnJs1oZ8Ru75vfHJW6D/1ZkELAwZy3I0jRmupTlijc69LUW4wehH8a5KL9p/RV/KMaEGlPGuvxkfKvj0yb8kUhuHPpDH9N4UvO/Cv61hreNXHB9YFHuRARjB+Mgc7IM+w51gyQhLkK5h+ynkTH3jSBVtbNSXyL9WhsjWmM7C9O2LGYLlXypbrSoFXRuPY066ql7DhmCd4hIoLrbB8RvNrO7G+ueVF9Sb6zMv0qQtE17ejrm/WKcX6BNbMvViTsU27HMSlo3NeTsgOZpt2K9ne54Rtfg+XfTF60wq8z+BqqsXJYLjTZY0ELeAHOG6hMQXx/ZHyG0deECQE9AuF+bfQz3q/MqIOYe1UML+Q7yI+rghMZOjEH/0Tjq0RZTRMMfALF1+jkazw4wEu0avG+dHsaev2PsDKCWJvVy/J4X0+N336k5ENfB1zwOh+vdcJv1rl3o0PPPo9dFduy1XbglKHb/QwRdPuNOILTn8D5Bex6/CkAJwjgP49jJEGEOjkOsJ5kbO5GHXaT7CfmB/xMmGYvPtmu2a0/d+AtvwM4VRtULXt6z8md/lOUdS+qI0d9mujwHtMz6YEcKvpCU/Sl1U6ytxoD2U1NCVYoVVJYqLWJt3z/gyv0lydo6sU/VthavQlQYuInrotxhYQwO9nLkEC+JHf3zKfNYSDEKk59BFD7b1Pl++6IrE/X8y4+JQseSLiEq+J+oX4SoHIfYp1HkYN1j+iMv1jMqgsDxA5ZHmEU0jL0rEvX5O1XIrNhlEQAA</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=767809d547249350273a565a516d4339"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Fire Event">80a30edeff30311077a95dac793bf19b</action_type>
+        <action_type_parent display_value="Fire Event">15e10e5eff30311077a95dac793bf11e</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>80a30edeff30311077a95dac793bf19b</compiled_snapshot>
+        <display_text/>
+        <flow display_value="housekeeping">be78c5d547249350273a565a516d43fe</flow>
+        <generation_source/>
+        <order>12</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>fateh.meena</sys_created_by>
+        <sys_created_on>2026-11-13 08:23:55</sys_created_on>
+        <sys_id>7e7809d547249350273a565a516d433c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
+        <sys_updated_by>fateh.meena</sys_updated_by>
+        <sys_updated_on>2026-11-13 08:23:55</sys_updated_on>
+        <ui_id>9c1f5467-c8a2-4cbe-91b8-2d335b45c36c</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+2X227bOBCGX0XQtWVIFHXyXVBvFgWy7aLO9qYoBIocxdzSkktRbrxG3r2kDrZsr524cAMsujcJNBxSP/+ZDyN/2tic2RM7psR3gUGe+67veW4UkSRghEaJn+VeAvbILsgCdCasoFBp8zCyV0TUJhgELKIBYzgCN/EDF0U+CcKABF7IsI8Tncp4tRRk/bHb8ZgihPwY+SlZlkKUqTuel3UFXwCWvHjwXFfvoXMumITCnnz6PLKXROq3KpD2ZHOw9NI7CJKB0Km/mUucuJNaL01MQg76fNqH7rqtHwbxUjKjxhvZ8KigYKBl5ERUMLIXpGBElXJtT5SsdUACYe8Lsd5mzLmWMLGnUHEJzJqtKwULq1FmqTlRVqUNEczKwMpNhm0Ofaz4P1qdj0YDgRO7WlftHSQ88MpYNFhPO+v7e1sfmiRJFC8LnZhPiSIzrZKqWprTGudLTqFq3dWWklqoN8NYm/B+2ZzRbFEkE6e00FLUi+Jd67a9PbFvBh3RpU8ZLI2JxpbOo3w2L79tHb/lReN3tyhKSsQgFYik81sOgh2WlCgleVYrI35j1/z+uMRt8N+KDAIW5qwFWZrOTJeyXPFGh77WYvwg9MM4F+U3rb/iD8WYUGPKWJefjG91fNqEPxLJjUN/6GMaT2r+V8G/1vC2kQuuDyzKnYhg7GAcZE6WYd+hbpAkxEUo95D9NDLmvhGkqnZW6kukX2tjRGtsZ2HalsVsoZIv1Y0WtYLOradRhz11zyFD8A4RCVR3+wD5zWZ2d2Pdk+pL6o2V+VcJkrZpT0/HwF+M8wu0iW25OnGHYjuWWUnrpoacHdA87Vast9Mdz+gaPP9u+qIVZpXZ30CVlctyodEGC1rIG2DOUH0C4usj+yOEti5cAOgJCPdrs4/hfnVeBcTco3pqId9BfkQdnNDYiTHoPxpHhJOYIhr+AIit08/ReHaAkWjX4H3r9DD2/B1jZwC1NKmX4/e8mB6/+07NgbgOvuZxOFzvhtusd+1Ch55/Hr0usmOv7cItQbH7HyLo8hl3AqE9h/cJ2vP4VQBKEMZ5GMdOhghzcBxiPcnc2Ik87CLdT8gP/J8wyVh8tl2zXXvqxl94A3auMKpe8PKelT/7oyzvWFJHjP420+U5oGXWBztS8IWk7E+pm2JtNQa0n5oSqlKsoLJUaRFr+/4BV+4vSdbWiX2qtrV4FaLCwE1cF+UOC2NwsJcjh3hJ7OjfT5nHQopRmPwMovDZps732xddmajnX35MFDqWdAlRwf9E/SJE5TjEPo0iB+se0x95sZ5REQSOH7A8wiyiYexdkajP3wFd2nv7ZhEAAA==</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=7e7809d547249350273a565a516d433c"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="SLA Percentage Timer">a1a50c4573873300d70877186bf6a762</action_type>
+        <action_type_parent display_value="SLA Percentage Timer">6f0ebf3c73833300d70877186bf6a729</action_type_parent>
+        <attributes/>
+        <comment>Completes when the SLA reached 75%</comment>
+        <compiled_snapshot>a1a50c4573873300d70877186bf6a762</compiled_snapshot>
+        <display_text/>
+        <flow display_value="housekeeping">be78c5d547249350273a565a516d43fe</flow>
+        <generation_source/>
+        <order>5</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>fateh.meena</sys_created_by>
+        <sys_created_on>2026-11-13 08:23:55</sys_created_on>
+        <sys_id>b27809d547249350273a565a516d4337</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
+        <sys_updated_by>fateh.meena</sys_updated_by>
+        <sys_updated_on>2026-11-13 08:23:55</sys_updated_on>
+        <ui_id>d558c410-d874-4f7c-b9da-a59cc3d9442c</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+1abW/iOBD+K1U+IzYNL6H9Vi1CqsRtT6XaL6sqmjgO+GqcnO3Q5VD/+43z1hACS9XeHm3DF5TJ2J555nkmwebHxgKiWSSuhdIgCJ2t1XVgXVqj4Sh0hu6F2zMf26bO6MLpDUK7Hw7BDVyrYzHj51zAwCb9gdsbucYvcO2R656Phr7xG/bRT8CSomdMJaFCw5yibQU8MUZ3gBcBUzGH9feqjSwYDyQV1uWP+44Vg8RJNJXW5aZ269goOPiUo+uf1TCaQtPr2NiY0HSOC2aGaT76urRGMjDhnHcs+lNTEVCMIwSuaMdagghAR3JtXWqZoEFSCG4EX5ceC5wdZ7OM70/F/sEF+7bxCykmRmh2r7z0coQyczgGDTOcmehE5q5kETFCVQZJQENIuP5atWUON7GpdTZEg8+L0RFPluJbBoZVTlAUBC2JwiBobPI0kedphLNF9HhbRDlhIoUkv8kjAry8Aq0l8xNt4tlYCburo7xkwitYYZsVU5dd3CmnS4zBW0IcMzH3YhmtWLouprHszjledEMePWK8is1FN+N3FysC3Qnax6n5O0hmAPgDp8HBTx1LrdVXDko9w4D4e38nJokMlDx9L0PQDCGSxfoKF1jRPNOnzmsVBcFBLl8801aDevAUB09SgnSsyGqzmU2vzu7M/fNuze3paVdyLxbcEUEWgjNRnJlwboso94afS+9ZBtviu63Yc/k5h+WXW47RX8/Z1l8R3R4dFlm9Vz2GMwqSLCaMclPPLNE9Iq3WY8UUwzg9VGtoBqbT7ci1WqlQRksvFSQTcaJVY+U/vKqdw4KpPIwMLlW49qi65tak6l/6V4S9KZYPEgkpKWtNIDRMmQChGsHNukKdwdscQEVgJQ2gq2fe7vadBrQLI66Co80jQgrgUyYemlpVwsbZpDlbVbZu1jo8vh1NXo1Ke6rku4uAbphyWp/xP29Fr3gVeGWbyS3jnaq97fvAm+o0r6KkHMwdryin9xjJB+V9HmYfROAYlF7C/n7L/lNiP1P4bI2ByVeT/Q5/wXyZpE/53054P4o4BVFnfCWkXdZXM28AQzfN3JBrSezBRyN28cb2jtldNqu0mp+kndeT3oPFS5p276Nx+33TOv36JGzOc93O/CXc/cXGW8vd38HdAztFLXVb6p4IdT8uFdvNi5aSJ0rJ9jW1JefJkbPdEmtp225uWe3m1v/I0/vjTwTLfja9OjOHnGfXxZHg3rPCnAKR/xclusaAm8L45s/V4cC2P+X/V0qcjzsXLytAovRFyMvrOBmTwA/sgDg+cR3DBhuv/X7Qw+/+aHBuTucbDtJ363/qB+n3/wKrNoMPciYAAA==</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=b27809d547249350273a565a516d4337"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="SLA Percentage Timer">a1a50c4573873300d70877186bf6a762</action_type>
+        <action_type_parent display_value="SLA Percentage Timer">6f0ebf3c73833300d70877186bf6a729</action_type_parent>
+        <attributes/>
+        <comment>Completes when the SLA reaches 50%</comment>
+        <compiled_snapshot>a1a50c4573873300d70877186bf6a762</compiled_snapshot>
+        <display_text/>
+        <flow display_value="housekeeping">be78c5d547249350273a565a516d43fe</flow>
+        <generation_source/>
+        <order>1</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>fateh.meena</sys_created_by>
+        <sys_created_on>2026-11-13 08:23:55</sys_created_on>
+        <sys_id>f67809d547249350273a565a516d4333</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
+        <sys_updated_by>fateh.meena</sys_updated_by>
+        <sys_updated_on>2026-11-13 08:23:55</sys_updated_on>
+        <ui_id>9da255d3-8572-499b-b4c7-6353e0707fd3</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+1abW/iOBD+K1U+IzYNL6H9Vi1CqsRtT6XaL6sqmjgO+GqcnO3Q5VD/+43z1hACS9XeHm3DF5TJ2J555nkmwebHxgKiWSSuhdIgCJ2t1XVgXVr94Sh0hu6F2zMf26bO6MLpDUK7Hw7BJSOrYzHj51zAwCb9gdsbucYvcO2R656Phr7xG/bRT8CSomdMJaFCw5yibQU8McaBjRcBUzGH9feqjSwYDyQV1uWP+44Vg8RJNJXW5aZ269goOPiUo+uf1TCaQtPr2NiY0HSOC2aGaT76urRGMjDhnHcs+lNTEVCMIwSuaMdagghAR3JtXWqZoEFSCG4EX5ceC5wdZ7OM70/F/sEF+7bxCykmRmh2r7z0coQyczgGDTOcmehE5q5kETFCVQZJQENIuP5atWUON7GpdTZEg8+L0RFPluJbBoZVTlAUBC2JwiBobPI0kedphLNF9HhbRDlhIoUkv8kjAry8Aq0l8xNt4tlYCburo7xkwitYYQiQueziTjldYgzeEuKYibkXy2jF0nUxjWV3zvGiG/LoEeNVbC66Gb+7WBHoTtA+Ts3fQTIDwB84DQ5+6lhqrb5yUOoZBsTf+zsxSWSg5Ol7GYJmCJEs1le4wIrmmT51XqsoCA5y+eKZthrUg6c4eJISpGNFVpvNbHp1dmfun3drbk9Pu5J7seCOCLIQnInizIRzW0S5N/xces8y2BbfbcWey885LL/ccoz+es62/oro9uiwyOq96jGcUZBkMWGUm3pmie4RabUeK6YYxumhWkMzMJ1uR67VSoUyWnqpIJmIE60aK//hVe0cFkzlYWRwqcK1R9U1tyZV/9K/IuxNsXyQSEhJWWsCoWHKBAjVCG7WFeoM3uYAKgIraQBdPfN2t+80oF0YcRUcbR4RUgCfMvHQ1KoSNs4mzdmqsnWz1uHx7WjyalTaUyXfXQR0w5TT+oz/eSt6xavAK9tMbhnvVO1t3wfeVKd5FSXlYO54RTm9x0g+KO/zMPsgAseg9BL291v2nxL7mcJnawxMvprsd/gL5sskfcr/dsL7UcQpiDrjKyHtsr6aeQMYumnmhlxLYg8+GrGLN7Z3zO6yWaXV/CTtvJ70Hixe0rR7H43b75vW6dcnYXOe63bmL+HuLzbeWu7+Du4e2ClqqdtS90So+3Gp2G5etJQ8UUq2r6ktOU+OnO2WWEvbdnPLaje3/kee3h9/Ilj2s+nVmTnkPLsujgT3nhXmFIj8vyjRNQbcFMY3f64OB7b9Kf+/UuJ83Ll4WQESpS9CXl7HyZgEfmAHxPGJ6xg22Hjt94MefvdHg3NzOt9wkL5b/1M/SL//F8bFjqdyJgAA</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=f67809d547249350273a565a516d4333"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Wait For Condition">89ce8a4187120010663ca1bb36cb0be3</action_type>
+        <action_type_parent display_value="Wait For Condition">8bb9a8160b10030085c083eb37673aec</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>89ce8a4187120010663ca1bb36cb0be3</compiled_snapshot>
+        <display_text/>
+        <flow display_value="housekeeping">be78c5d547249350273a565a516d43fe</flow>
+        <generation_source/>
+        <order>10</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>fateh.meena</sys_created_by>
+        <sys_created_on>2026-11-13 08:23:55</sys_created_on>
+        <sys_id>f67809d547249350273a565a516d433b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
+        <sys_updated_by>fateh.meena</sys_updated_by>
+        <sys_updated_on>2026-11-13 08:23:55</sys_updated_on>
+        <ui_id>d5627992-c177-483f-9192-efc15d3d928f</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+2X227jNhCGXyXQtelSEiVRuQvsBA2QbgDb3V5sFwLFQ0yUlrw6ZNc18u4lJTqSD3GTxhskQHMTaDSk/vk5n0f6snYIrWSeXWdlRTLKp6vymjnnDgux8MIojnzzByH3cOz5gYBIhCTigTNwpMlDMeWYIBdHrgehC8PQp8RNUz+kKUw50nkZWXCdWXCaF0xf3xNVm8B6Pb25OJuR8q/EHVbmX6lI0qY9POhEJsulIqvPNl9H6FwqVvDMOf/ydeAsSaG3rnjhnK93bj1XmyIpVzp1shG3K7ZaLc01y2m94FmVyE3wxq4c2ztn12N9Ry8yctyBw39UPGNc6xBElXzgLEjGSJUXK+e8KmodKDhht5laPWbMZVa1dS7Ij1L+rR/seyZPcF0YtR48XibWnzYsxqQiU70zreri0a5cUl62ljAuSK2qUT/WJtwuTQe0SyqSqs3qXNWL7FNriPO4Qe846lKL4EtTp1HeliWm8/z7ZCPySmaNI7ZElVOiHq9IVRUyrSsjZ+3UcnbI7DZ82G4hlT7+pBGdlHldNCZNLke3k3Hyx8Vs9OvlJJlcTmeT69Hs0qzgijdbL8hyKbO7ZFnk97JRqOtdDO+UvhgKlX/XhZXyLhu2eAz10ZHhlY6Pm/BnUkjz0N/0NnqxUfl7Jr/VvIEHCeH6bhgC14U+QG4aghjzAEAeEBR4KAxCz3kYOOWqHClSlp3H+nCTb7WxqHXceps0x9OW2XSoWUwLuawutLx7bh19GLwa5+AoMqQjpCemQ3pD8T68BvMzzfvLIf53RRuIZ03vHlZoOd6L3fTXnn1qb1iKveMU20iHcdv/ByjG8ANRbMt6PcZbXm9TvOW2LJO2l63oZte3QtVzcYxR6gM/RQFAsRAAQ4wA4gTSwGMRcul/QPXnAXp8pomu/WmeMWkeVfYAnZMySXXH0jlnf9YQ+sw07T6uT+addAKLHryjvtxDJViC92I3hzawBPunmsMIwo/E8Kkm8ZbZ2whv2f0mqHKGwzSAGHCBMUB+hEHseh4IQ8JcF1Em4DudqpAdw0D0XpIrueB5XSVCkbsetnCf0M2v5MuAfIaSDZCXWfMjbRU9KdFimea54iTbnaq6D3+5skotk+iFU/UYlB8IyZON1c7pnZna9/pNgKSUYD0kCYh9ygEKUwqwoAL4PA2EH6Q4jeB7mp30ePPH+z3O6oI0x9+heILv0mfo2EA47gQ8Lc0i2BzqbvxmfyPLYfA/h6/icM/unQ/V7sbPgnGu143JqjRd0b6d7eDJXRIFqfn2JAB5sQtIjDwQhzziSODQJ/F7whO7R7EQ+wyU5vW0Vvy0eD5DxwbPaSfgaWkWz46QbTInvbhFMzwZmnjvvZUusr64Q6D2qvqQwIopJwWdX0muzHnaL9AnMO4fyzbB/YN5m3nqea7POAUu02+5yAs9gH0UgSjGKUS69VKfnxDYr/8AtfSCNv0VAAA=</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=f67809d547249350273a565a516d433b"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Create Record">2de05916c31332002841b63b12d3aee1</action_type>
+        <action_type_parent display_value="Create Record">02f0b88cc3c632002841b63b12d3aeff</action_type_parent>
+        <attributes/>
+        <comment>"sla.warning.breach.parm" Event with Parm1 set to Assigned To from the Task</comment>
+        <compiled_snapshot>2de05916c31332002841b63b12d3aee1</compiled_snapshot>
+        <display_text/>
+        <flow display_value="housekeeping">be78c5d547249350273a565a516d43fe</flow>
+        <generation_source/>
+        <order>13</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>fateh.meena</sys_created_by>
+        <sys_created_on>2026-11-13 08:23:55</sys_created_on>
+        <sys_id>f67809d547249350273a565a516d433d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
+        <sys_updated_by>fateh.meena</sys_updated_by>
+        <sys_updated_on>2026-11-13 08:23:55</sys_updated_on>
+        <ui_id>cc2dbae9-e4a5-41d5-b098-27d370caf7cb</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/9VVyW7bMBD9lYBnWaAsWV5uRdIAAdoESIpcsggjcRQTpShVpJy4hv+9Q1F2jDRB10t0MMBZ33scjm82DAora32mjQVd4NXanAm2YPN0Vo7T6Xwau49zHM/m43hS8qRMYYqCBUy6uDRCPplHaRFHcTzmfDxLojyN82gsYkBMKE5DhRRpIVeY9YeArUB1zmjWBleoLZmENI2C9fXg+TiYi6VUokXNFjd3AWugpQIWW7bYvHD9LhwFOSoK/eLwvAHPrptXbZ8Oc4/OvaNuhcPDA4ZPFrUgcRYlKIMBq0ALsHW7ZgvbdmRoEcSFVut9xFISywVjLvbJyO/UdsZdXInErEDv2x+zQSVvLk/AwhVVLmzXDqHFspYFGq+JwBI6ZY8PbT7gonG37lN6mkN2rbpKn3tJ2L7A7lLI0hkCgY3j6ZAPNMqrZf14uUN5KnUvyeBUdQFqfwJrW5l31uHZMFRYUaGsgqaR+iFr2nol+2TCUoUPig5hqepHamrkgw79uIYkK4SnZD/pzdfQSsfiM5Wh5G3gJutYgTHPXEjE7FvnkHhmA4fMy+BSilY29gM1WOEAdxv88wMRyOdvTmSUP09g/ybMweOQQ8vbjvNYbDZIjfKU89FkKmCUJEk8moOYjiYRiCLhKfWOw0ssaCC323tX1WcaBeEjtJr0DXOawGIZ0juq7t1P9BfFQwvma0jakvAoMltTt36GfC3nzajnz2/6/RP6w23067vfbaNTiUqYV4Zht4qwIiUtZn44XqyjwXl0PTiHlRT9r5UUkY7ue0eLyZN793vp4C/ojQ119wOSvLrGxAcAAA==</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=f67809d547249350273a565a516d433d"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Create Record">2de05916c31332002841b63b12d3aee1</action_type>
+        <action_type_parent display_value="Create Record">02f0b88cc3c632002841b63b12d3aeff</action_type_parent>
+        <attributes/>
+        <comment>"sla.warning.parm" Event with Parm1 set to Assigned To from the Task</comment>
+        <compiled_snapshot>2de05916c31332002841b63b12d3aee1</compiled_snapshot>
+        <display_text/>
+        <flow display_value="housekeeping">be78c5d547249350273a565a516d43fe</flow>
+        <generation_source/>
+        <order>9</order>
+        <parent_ui_id>f08e1f89-5a6d-492a-afee-5c564fdb90e9</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>fateh.meena</sys_created_by>
+        <sys_created_on>2026-11-13 08:23:55</sys_created_on>
+        <sys_id>fe7809d547249350273a565a516d4339</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
+        <sys_updated_by>fateh.meena</sys_updated_by>
+        <sys_updated_on>2026-11-13 08:23:55</sys_updated_on>
+        <ui_id>333e94ce-7745-4c6d-9575-a2b961101c07</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/9VVXU/bMBT9K8jPaeQkpW36NsGQkDaQYOJlg+g2vqHWHCeLnUJX9b/vOnZLxUD7fCEPlXw/zzm+vv28YVBa2ehzbSzoEq/X5lywOcvTWZVOpvk0cx/nmM7yNDuu+LiawFRULGLSxU0S5Md5MimzJMtSztPZOFlMskWSigwQxxSnoUaKtLBQWAyHiK1A9c5o1gZXqC2ZhDStgvVN8LwP5nIplehQs/nn24i10FEBix2bb565fheOggUqCv3k8LwCz67bF20fDnOPLryj6YTDwyOGjxa1QAJSgTIYsRq0ANt0aza3XU+GDkFcarXeRywlsZwz5mIfjfxObWfcxVVIzEr0vv2xCCp5c3UKFq6pcmn7LoSWy0aWaLwmAivolT05tPmAy9bduk8ZaIbsRvW1vvCSsH2B3aWQpTcEAlvH0yEPNKrrZfNwtUN5JvUgSXCqpgS1P4G1nVz01uHZMFRYU6GihraV+r5ou2Ylh2TCUsf3ig5xpZoHamrkvY79uMYkK8RnZD8dzDfQScfiI5Wh5G3kJutEgTFPXEjE4lvvkHhmgUPhZXApZSdb+44arDDA3Ub//EAE8vzViUwWTxM4vAlz8DhkaPml5zwTm02ZiyRLs2TE+SwfjauEj/IEYZROOM/5DLmYYnyFJQ3kdnvnqvpMoyB+gE6TvjE9oPrO/SR/UTW2YL7GJCopjqKwDbUZhsfXct6Cmv38mN8wkz/cP7++7d3+OZOohHnh+nfLB2uS0GLhx+HZAgrOo5vgDEso+V9LKCHN3PeGVpEn9+Y30cGfzis76fYHKZFbz7YHAAA=</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=fe7809d547249350273a565a516d4339"/>
+    <sys_hub_sub_flow_instance_v2 action="delete_multiple" query="flow=be78c5d547249350273a565a516d43fe"/>
+    <sys_hub_flow_logic_instance_v2 action="delete_multiple" query="flow=be78c5d547249350273a565a516d43fe^sys_idNOT IN727809d547249350273a565a516d432e,767809d547249350273a565a516d4330,fa7809d547249350273a565a516d4331"/>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">91fd210f47d81310273a565a516d4326</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="housekeeping">be78c5d547249350273a565a516d43fe</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="If">af4e1945c3e232002841b63b12d3ae3e</logic_definition>
+        <order>2</order>
+        <outputs_assigned/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>fateh.meena</sys_created_by>
+        <sys_created_on>2026-11-13 08:23:55</sys_created_on>
+        <sys_id>727809d547249350273a565a516d432e</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>fateh.meena</sys_updated_by>
+        <sys_updated_on>2026-11-13 08:23:55</sys_updated_on>
+        <ui_id>1f55dcda-131d-48c8-9924-8f6d7cbf95b8</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+1VXWvbMBT9K0PPjvFHnDR5KymFQbfCWvqyFXMtyY2YLHmWlDQz+e+7sh0ntBlb6R73Zh3pXp1zdA9uiXa2dtbc60tjxJMiy6+PARHKY/jdEgUVJ0tCtWLCCq3yDgjIBqTzG/jJhKkl7B6OCF0LyRo+dKuhwRrLG7JsX2wJhgVlBGW8oDFNk1maRFFyMY2LWVrECUuBQ4oNJRRc4tHVgcaHmw4JfsvP7mqPG9sI9TSsb4YudwdQN8yziqOA8GfLFePIpwRpeEAqUAysbnYj0nBgt0oegbVQthdcwbMRP/HCJMv8wZKjRDq4MS7zwakeLq/AAlJx1LpmNE4Lyk1vDuMlOGlXp1h/4Lb2UvsSC4U8VGvpKvW5d4SMDU4exhkkwWuv1FMfdJR3a739cmB5LVTnyrApNQU5rsCid4Wznk9LuOQVNsorqGt0NK8bvRFdMXKpwieJi7CUeouX+ukKgXriIRoL4TXiVx38AI3wKj5hGyzuaRZgBM27ScR2aBMn+4CYnVlJMOYoEt3NfzhPsZc8iMt7f3wJbURtL/HmDR907IPXg30y0227YIAvydLJRTZPJtPFopgUUzqfzNIs5dE8mpcsDY0F68x+/81FUcpQcC1xytnrRLy739vytICszOIoO5+n6excns4k6Y0hSv4QIv+Cf5mhKIr+h+jdIRIm70d/0NZd/g8z9OgD0985ek2FQWr3Hvt4+If4jR0Ol6Cn0FY3372oI7b/BXB3sf6NBgAA</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">a1fd210f47d81310273a565a516d4331</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="housekeeping">be78c5d547249350273a565a516d43fe</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="If">af4e1945c3e232002841b63b12d3ae3e</logic_definition>
+        <order>6</order>
+        <outputs_assigned/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>fateh.meena</sys_created_by>
+        <sys_created_on>2026-11-13 08:23:55</sys_created_on>
+        <sys_id>767809d547249350273a565a516d4330</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>fateh.meena</sys_updated_by>
+        <sys_updated_on>2026-11-13 08:23:55</sys_updated_on>
+        <ui_id>f08e1f89-5a6d-492a-afee-5c564fdb90e9</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+1VXWvbMBT9K0PPjvFnmuStpBQG3Qpr6ctWzLUkN2Ky5FlS0izkv+/KdpzQZmyle9ybdaR7dc7RPXhHtLONs+ZeXxojnhRZfH0MiFAew+8dUVBzsiBUKyas0KrogICsQTq/gZ9MmEbC9uGI0JWQrOVDtwZarLG8JYvdiy3BsKCKoIrnNKZpMk2TKEpmWVxO0zJOWAocUmwooeQSjy4PND7cdEjwW35223jc2Faop2F9M3S5O4C6ZZ5VHAWEP1uuGEc+FUjDA1KDYmB1ux2RlgO7VfIIrISyveAano34iRcmee4PVhwl0sGNcVkMTvVwdQUWkIqj1rWjcVpQbnpzGK/ASbs8xfoDt42X2pdYKOWhWktXq8+9I2RscPIwziAJ3nilnvqgo7pb6c2XA8troTpXhk2pKchxBRa9K531fHaES15jo6KGpkFHi6bVa9EVI5c6fJK4CCupN3ipn64QqCceorEQXiN+1cEP0Aqv4hO2weKeZglG0KKbRGyHNnGyD4jZmqUEY44i0d3ih/MUe8mDuKL3x5fQVjT2Em9e80HHPng92CczvduxPJ/RLI4mbHaRTbLqgk7KOYMJ5HNKUzbPsoSGxoJ1Zr//5qIoZSi4kTjl7HUi3t3vbXmaQ17lcZSfz1M2PZenM0l6Y4iSP4TIv+BfZiiKov8heneIhCn60R+0dZf/www9+sD0d45eU2GQ2r3HPh7+IX5ji8Ml6Cm00e13L+qI7X8B8rV/qo0GAAA=</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">a9fd210f47d81310273a565a516d4348</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="housekeeping">be78c5d547249350273a565a516d43fe</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="If">af4e1945c3e232002841b63b12d3ae3e</logic_definition>
+        <order>14</order>
+        <outputs_assigned/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>fateh.meena</sys_created_by>
+        <sys_created_on>2026-11-13 08:23:55</sys_created_on>
+        <sys_id>fa7809d547249350273a565a516d4331</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>fateh.meena</sys_updated_by>
+        <sys_updated_on>2026-11-13 08:23:55</sys_updated_on>
+        <ui_id>f06d035d-c651-4c1f-9522-ac3c15641c8d</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+1VTU/cMBD9K6nP2cjZJEvhhkBIlaBIgLi0KJrYzq6FY6exA2xX+987jpNlVahaRA899LZ+8/Xm7cxkQ0zv2t7ZG3NsrVxqcvTlLiZSewx/b4iGRpAjwozm0kmjywGIyQOo3htCmODRjYmkjbisa9EJ7SJnogvQsBRdZOpozw2DubStgvXte3KwlVQcvQLjFjrk5URHjjY/mSTHEjWFOj1kKcvmi2xO6fxjnlaLrErnPAMBGSZUUAmFridTq9H5gMS/1MCtW49b10m9HN/nY5brCTQd96xSGhPx5ITmAvnUoKyISQOagzPdeod0AvilVs/ASmqH6Yh3frLyOxacF4V3HDRiIhh3z3LUNsD1KThAKj1zfTe6spWRTNggDhc19Mqd7GPB4bL1rYYQB5Waoo3qG/05KEJ2Caa/EpHeIgnR+k499bGP+nplHq8mlmdSD6qMRmUYqN0LHGpX9c7z2RChRIOJygbaFhUt2848yCEYuTTJUuEjqZV5xKJ+PhJgnniCwkJyhvjpAN9CJ30XF5gGgwPNCqxk5TDtmA5lEmQbE7u2JwqsfW4S1S2/9Z5iaHlsrgz6+BDWydYdY+UHMfaxjV8uz97ebDYiy7JqQemsOOAwy/M8mx0CP5gVKXCW00VN8yy5EgwHKHFg7xMY5790JmnCWiTItZR8u/3wtac04+/MOmV7uaL/Ot23XYNDKOoipcXr1yBfvHYNXrkDbzwB89+cAD9/f3gBKKX/T8C7T4C0ZVjcsbeh+F+8AHd+3UPNndZMWqR247FP01fWG9Y4XJLtQ4+mu/dNPWPbH3LT+IivBwAA</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_pill_compound action="delete_multiple" query="attached_to=be78c5d547249350273a565a516d43fe"/>
+    <sys_hub_flow_variable action="delete_multiple" query="model=be78c5d547249350273a565a516d43fe"/>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_variable_be78c5d547249350273a565a516d43fe"/>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>task_sla_record</element>
+        <help/>
+        <hint/>
+        <label>task_sla_record</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_be78c5d547249350273a565a516d43fe</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>fateh.meena</sys_created_by>
+        <sys_created_on>2026-11-13 08:23:55</sys_created_on>
+        <sys_id>7a7809d547249350273a565a516d4321</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Apollo-Hospitals" source="x_2223823_apollo_0">87c1422693c89b507b3a7c5efaba1008</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>fateh.meena</sys_updated_by>
+        <sys_updated_on>2026-11-13 08:23:55</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>sla_flow_inputs</element>
+        <help/>
+        <hint/>
+        <label>sla_flow_inputs</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_be78c5d547249350273a565a516d43fe</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>fateh.meena</sys_created_by>
+        <sys_created_on>2026-11-13 08:23:55</sys_created_on>
+        <sys_id>be7809d547249350273a565a516d4315</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Apollo-Hospitals" source="x_2223823_apollo_0">87c1422693c89b507b3a7c5efaba1008</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>fateh.meena</sys_updated_by>
+        <sys_updated_on>2026-11-13 08:23:55</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_input_be78c5d547249350273a565a516d43fe"/>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_output_be78c5d547249350273a565a516d43fe"/>
+    <sys_hub_flow action="UPDATE">
+        <sys_id>5136c59147249350273a565a516d4302</sys_id>
+        <latest_snapshot>be78c5d547249350273a565a516d43fe</latest_snapshot>
+        <compiler_build>glide-australia-02-11-2026__patch7-09-17-2026_10-06-2026_0905.zip</compiler_build>
+        <version_record/>
+    </sys_hub_flow>
+    <sys_flow_trigger_plan action="delete_multiple" query="plan_id=5136c59147249350273a565a516d4302^sys_idNOT IN077809d547249350273a565a516d4390"/>
+    <sys_flow_trigger_plan action="INSERT_OR_UPDATE">
+        <binding_strategy>com.snc.process_flow.engine.binding.RunAlways</binding_strategy>
+        <plan>{"@class":"com.snc.process_flow.engine.serialization.plan_data.ChunkingPlanData","chunk_data":{"table":"sys_flow_trigger_plan","id":"077809d547249350273a565a516d4390","name":"plan","plan_signature":null},"plan_data":"CHUNKING_PLAN"}</plan>
+        <plan_id>5136c59147249350273a565a516d4302</plan_id>
+        <snapshot>c7d98d9947249350273a565a516d43f4</snapshot>
+        <sys_created_by>fateh.meena</sys_created_by>
+        <sys_created_on>2026-11-13 08:23:56</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>077809d547249350273a565a516d4390</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_overrides/>
+        <sys_scope/>
+        <sys_updated_by>fateh.meena</sys_updated_by>
+        <sys_updated_on>2026-11-13 08:23:56</sys_updated_on>
+        <trigger display_value="sla_task">c77809d547249350273a565a516d438f</trigger>
+    </sys_flow_trigger_plan>
+    <sys_flow_subflow_plan action="delete_multiple" query="plan_id=5136c59147249350273a565a516d4302"/>
+</record_update>

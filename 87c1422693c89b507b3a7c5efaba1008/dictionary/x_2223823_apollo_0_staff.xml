@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
     <element attributes="enforce_dot_walk_cross_scope_access=true" db_object_id="0ee73427934053107b3a7c5efaba107b" label="Staff" max_length="40" name="x_2223823_apollo_0_staff" type="collection">
-        <element label="Hospital" max_length="32" name="hospital" reference="x_2223823_apollo_0_hospital" reference_qual="javascript:new x_2223823_apollo_0.HospitalRefQual().getQuery(current)" type="reference" use_reference_qualifier="advanced"/>
-        <element display="true" label="User" max_length="32" name="user" reference="sys_user" reference_qual="javascript: new x_2223823_apollo_0.HospitalRefQual().unlinkedUsers('staff', current);" type="reference" use_reference_qualifier="advanced"/>
+        <element label="Hospital" mandatory="true" max_length="32" name="hospital" reference="x_2223823_apollo_0_hospital" reference_qual="javascript:new x_2223823_apollo_0.HospitalRefQual().getQuery(current)" type="reference" use_reference_qualifier="advanced"/>
+        <element display="true" label="User" mandatory="true" max_length="32" name="user" reference="sys_user" reference_qual="javascript: new x_2223823_apollo_0.HospitalRefQual().unlinkedUsers('staff', current);" type="reference" use_reference_qualifier="advanced"/>
         <element label="Reports to" max_length="32" name="reports_to" reference="x_2223823_apollo_0_staff" reference_qual="javascript: current.hospital ? ('hospital=' + current.hospital + '^active=true' + (current.sys_id ? '^sys_id!=' + current.sys_id : '')) : 'sys_idISEMPTY';" type="reference" use_reference_qualifier="advanced"/>
         <element label="Department" max_length="32" name="department" reference="x_2223823_apollo_0_department" reference_qual="javascript: current.hospital ? 'hospital=' + current.hospital + '^active=true' : 'sys_idISEMPTY';" type="reference" use_reference_qualifier="advanced"/>
-        <element choice="1" label="Staff role" max_length="40" name="staff_role" type="choice">
+        <element choice="1" label="Staff role" mandatory="true" max_length="40" name="staff_role" type="choice">
             <choice>
                 <element inactive_on_update="false" label="Facilities / Biomedical" sequence="16" value="facilities_biomedical"/>
                 <element inactive_on_update="false" label="Lab Technician" sequence="12" value="lab_technician"/>

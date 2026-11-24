@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script">
+    <sys_script action="INSERT_OR_UPDATE">
+        <abort_action>false</abort_action>
+        <access>package_private</access>
+        <action_delete>true</action_delete>
+        <action_insert>true</action_insert>
+        <action_query>false</action_query>
+        <action_update>true</action_update>
+        <active>true</active>
+        <add_message>false</add_message>
+        <advanced>true</advanced>
+        <change_fields>false</change_fields>
+        <client_callable>false</client_callable>
+        <collection>x_2223823_apollo_0_charge_line</collection>
+        <condition/>
+        <description/>
+        <execute_function>false</execute_function>
+        <filter_condition/>
+        <is_rest>false</is_rest>
+        <message/>
+        <name>Recalculate Invoice Total when charge create</name>
+        <order>100</order>
+        <priority>100</priority>
+        <rest_method/>
+        <rest_method_text/>
+        <rest_service/>
+        <rest_service_text/>
+        <rest_variables/>
+        <role_conditions/>
+        <script><![CDATA[(function executeRule(current, previous) {
+
+    var invoiceIds = [];
+
+    // Get current Invoice
+    if (current.getValue('invoice')) {
+        invoiceIds.push(current.getValue('invoice'));
+    }
+
+    // Get previous Invoice if reference changed
+    if (previous && previous.getValue('invoice')) {
+        var oldInvoiceId = previous.getValue('invoice');
+
+        if (invoiceIds.indexOf(oldInvoiceId) === -1) {
+            invoiceIds.push(oldInvoiceId);
+        }
+    }
+
+    // Recalculate each affected Invoice
+    for (var i = 0; i < invoiceIds.length; i++) {
+
+        var total = 0;
+
+        var charge = new GlideRecord('x_2223823_apollo_0_charge_line');
+        charge.addQuery('invoice', invoiceIds[i]);
+        charge.addQuery('status', 'invoiced');
+        charge.query();
+
+        while (charge.next()) {
+            total += parseFloat(charge.getValue('amount')) || 0;
+        }
+
+        var invoice = new GlideRecord('x_2223823_apollo_0_invoice');
+
+        if (invoice.get(invoiceIds[i])) {
+
+            invoice.setValue('total_amount', total);
+
+            var paidAmount = parseFloat(
+                invoice.getValue('paid_amount')
+            ) || 0;
+
+            invoice.setValue('total_balance', total - paidAmount);
+
+            invoice.update();
+        }
+    }
+
+})(current, previous);]]></script>
+        <sys_class_name>sys_script</sys_class_name>
+        <sys_created_by>ayush.mangal</sys_created_by>
+        <sys_created_on>2026-11-13 10:31:48</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>22256d1d47289350273a565a516d4322</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_name>Recalculate Invoice Total when charge create</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Apollo-Hospitals" source="x_2223823_apollo_0">87c1422693c89b507b3a7c5efaba1008</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
+        <sys_update_name>sys_script_22256d1d47289350273a565a516d4322</sys_update_name>
+        <sys_updated_by>ayush.mangal</sys_updated_by>
+        <sys_updated_on>2026-11-17 13:35:38</sys_updated_on>
+        <template/>
+        <when>after</when>
+    </sys_script>
+    <sys_translated_text action="delete_multiple" query="documentkey=22256d1d47289350273a565a516d4322"/>
+</record_update>

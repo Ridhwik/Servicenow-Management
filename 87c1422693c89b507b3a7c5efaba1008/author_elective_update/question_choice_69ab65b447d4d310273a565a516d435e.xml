@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="question_choice">
+    <question_choice action="DELETE">
+        <inactive>false</inactive>
+        <order>100</order>
+        <published_ref/>
+        <question display_value="When is it needed?">277b693447d4d310273a565a516d43cc</question>
+        <sys_class_name>question_choice</sys_class_name>
+        <sys_created_by>nilesh.chaurasia</sys_created_by>
+        <sys_created_on>2026-10-30 11:25:04</sys_created_on>
+        <sys_id>69ab65b447d4d310273a565a516d435e</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>Scheduled</sys_name>
+        <sys_package display_value="Apollo-Hospitals" source="x_2223823_apollo_0">87c1422693c89b507b3a7c5efaba1008</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
+        <sys_update_name>question_choice_69ab65b447d4d310273a565a516d435e</sys_update_name>
+        <sys_updated_by>nilesh.chaurasia</sys_updated_by>
+        <sys_updated_on>2026-10-30 11:25:15</sys_updated_on>
+        <text>Scheduled</text>
+        <value>2</value>
+    </question_choice>
+    <fx_price action="DELETE" query="id=69ab65b447d4d310273a565a516d435e"/>
+<sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</application>
+        <file_path/>
+        <instance_id>5ada7edb93d06e50d9f6ddd548373c9d</instance_id>
+        <instance_name>dev304851</instance_name>
+        <name>question_choice_69ab65b447d4d310273a565a516d435e</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="question_choice">
+    <question_choice action="INSERT_OR_UPDATE">
+        <inactive>false</inactive>
+        <order>100</order>
+        <published_ref/>
+        <question display_value="When is it needed?">277b693447d4d310273a565a516d43cc</question>
+        <sys_class_name>question_choice</sys_class_name>
+        <sys_created_by>nilesh.chaurasia</sys_created_by>
+        <sys_created_on>2026-10-30 11:25:04</sys_created_on>
+        <sys_id>69ab65b447d4d310273a565a516d435e</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>Scheduled</sys_name>
+        <sys_package display_value="Apollo-Hospitals" source="x_2223823_apollo_0">87c1422693c89b507b3a7c5efaba1008</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
+        <sys_update_name>question_choice_69ab65b447d4d310273a565a516d435e</sys_update_name>
+        <sys_updated_by>nilesh.chaurasia</sys_updated_by>
+        <sys_updated_on>2026-10-30 11:25:15</sys_updated_on>
+        <text>Scheduled</text>
+        <value>2</value>
+    </question_choice>
+    <fx_price action="delete_multiple" query="id=69ab65b447d4d310273a565a516d435e"/>
+</record_update>]]></payload>
+        <payload_hash>2052983226</payload_hash>
+        <record_name>Scheduled</record_name>
+        <reverted_from/>
+        <source>cef7071247549710273a565a516d432e</source>
+        <source_table>sys_upgrade_history</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-11-04 10:05:35</sys_created_on>
+        <sys_id>14798bd247949710273a565a516d4370</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1a1a6056b790000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-11-04 10:05:35</sys_updated_on>
+        <type>Question Choice</type>
+        <update_guid>5c798bd2c39497102445bc9e693e216f</update_guid>
+        <update_guid_history>5c798bd2c39497102445bc9e693e216f:0,a1a68f92691497104d62ad75eb6219f0:-1246805278,a6bba9b446d4d3107942835b83a329e8:-1964920216,b7ab29b422d4d310ba301fb959414029:-664572221</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="Scheduled">2dfbd19f472c9390273a565a516d435d</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>nilesh.chaurasia</sys_created_by>
+        <sys_created_on>2026-11-19 14:56:53</sys_created_on>
+        <sys_db_object display_value="" name="question_choice">question_choice</sys_db_object>
+        <sys_id>334c85a6b896492e9184491158fbb249</sys_id>
+        <sys_metadata>69ab65b447d4d310273a565a516d435e</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Scheduled</sys_name>
+        <sys_package display_value="Apollo-Hospitals" source="x_2223823_apollo_0">87c1422693c89b507b3a7c5efaba1008</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
+        <sys_scope_delete display_value="">1a2f7aa8dfc34e3a86d3f0bede3c2784</sys_scope_delete>
+        <sys_update_name>question_choice_69ab65b447d4d310273a565a516d435e</sys_update_name>
+        <sys_update_version display_value="question_choice_69ab65b447d4d310273a565a516d435e">14798bd247949710273a565a516d4370</sys_update_version>
+        <sys_updated_by>nilesh.chaurasia</sys_updated_by>
+        <sys_updated_on>2026-11-19 14:56:53</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

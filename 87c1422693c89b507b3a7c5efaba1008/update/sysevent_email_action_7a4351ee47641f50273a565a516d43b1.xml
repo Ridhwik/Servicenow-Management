@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sysevent_email_action">
+    <sysevent_email_action action="INSERT_OR_UPDATE">
+        <action_insert>false</action_insert>
+        <action_update>false</action_update>
+        <active>true</active>
+        <advanced_condition/>
+        <affected_field_on_event/>
+        <category display_value="Uncategorized" name="Uncategorized">c97d83137f4432005f58108c3ffa917a</category>
+        <collection>task_sla</collection>
+        <condition/>
+        <content_type>text/html</content_type>
+        <default_digest>false</default_digest>
+        <default_interval/>
+        <description/>
+        <digest_from/>
+        <digest_html/>
+        <digest_reply_to/>
+        <digest_separator_html><![CDATA[<p>&nbsp;</p>
+<hr>
+<p>&nbsp;</p>]]></digest_separator_html>
+        <digest_separator_text><![CDATA[\n--------------------------------------------------------------------------------\n]]></digest_separator_text>
+        <digest_subject/>
+        <digest_template/>
+        <digest_text/>
+        <digest_type>single</digest_type>
+        <digestable>false</digestable>
+        <enable_dynamic_translation>false</enable_dynamic_translation>
+        <event_name>x_2223823_apollo_0.medical_equip_100</event_name>
+        <event_parm_1>true</event_parm_1>
+        <event_parm_2>false</event_parm_2>
+        <exclude_delegates>false</exclude_delegates>
+        <force_delivery>false</force_delivery>
+        <from/>
+        <generation_type>event</generation_type>
+        <importance/>
+        <include_attachments>false</include_attachments>
+        <item>event.parm1</item>
+        <item_table/>
+        <mandatory>false</mandatory>
+        <message/>
+        <message_html><![CDATA[<p><strong>Attention Facilities and Operation Manager, and Hospital Administrator&nbsp;</strong></p>
+<p>The following Network incident has reached <strong>75%</strong> of its contractual SLA duration:</p>
+<hr>
+<table style="border-collapse: collapse; width: 100%; font-family: Arial, sans-serif; height: 123.125px;">
+<tbody>
+<tr style="height: 15.3906px;">
+<td style="padding: 4px; font-weight: bold; width: 180px; height: 15.3906px;">Incident Number:</td>
+<td style="padding: 4px; height: 15.3906px;">${task.number}</td>
+</tr>
+<tr style="height: 15.3906px;">
+<td style="padding: 4px; font-weight: bold; height: 15.3906px;">Category:</td>
+<td style="padding: 4px; height: 15.3906px;">${task.category}</td>
+</tr>
+<tr style="height: 15.3906px;">
+<td style="padding: 4px; font-weight: bold; height: 15.3906px;">Priority:</td>
+<td style="padding: 4px; height: 15.3906px;">${task.priority}</td>
+</tr>
+<tr style="height: 15.3906px;">
+<td style="padding: 4px; font-weight: bold; height: 15.3906px;">SLA Definition:</td>
+<td style="padding: 4px; height: 15.3906px;">${sla.name}</td>
+</tr>
+<tr style="height: 15.3906px;">
+<td style="padding: 4px; font-weight: bold; height: 15.3906px;">SLA Type:</td>
+<td style="padding: 4px; height: 15.3906px;">${sla.target}</td>
+</tr>
+<tr style="height: 15.3906px;">
+<td style="padding: 4px; font-weight: bold; height: 15.3906px;">Current State:</td>
+<td style="padding: 4px; height: 15.3906px;">${task.state}</td>
+</tr>
+<tr style="height: 15.3906px;">
+<td style="padding: 4px; font-weight: bold; height: 15.3906px;">Current Assignee:</td>
+<td style="padding: 4px; height: 15.3906px;">${task.assigned_to}</td>
+</tr>
+<tr style="height: 15.3906px;">
+<td style="padding: 4px; font-weight: bold; height: 15.3906px;">Time Remaining:</td>
+<td style="padding: 4px; height: 15.3906px;">${time_left}</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<p style="color: #c97a00;"><strong>Action Required:</strong> Please intervene or coordinate with the assigned engineer immediately to prevent breach.</p>]]></message_html>
+        <message_list/>
+        <message_text/>
+        <name>Apollo Medical Equipment SLA - 100%</name>
+        <omit_watermark>false</omit_watermark>
+        <order>100</order>
+        <push_message_only>false</push_message_only>
+        <recipient_fields/>
+        <recipient_groups>7d484975471c1310273a565a516d438c,2953718647d0d310273a565a516d43ae,44e5290747981310273a565a516d4315</recipient_groups>
+        <recipient_users/>
+        <reply_to/>
+        <send_self>true</send_self>
+        <sms_alternate/>
+        <style/>
+        <subject>[WARNING - 100%] Medical Equiment SLA Approaching Breach: ${task.number}</subject>
+        <subscribable>false</subscribable>
+        <sys_class_name>sysevent_email_action</sys_class_name>
+        <sys_created_by>ridhwik.jangid</sys_created_by>
+        <sys_created_on>2026-11-17 06:23:33</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>7a4351ee47641f50273a565a516d43b1</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name>Apollo Medical Equipment SLA - 100%</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Apollo-Hospitals" source="x_2223823_apollo_0">87c1422693c89b507b3a7c5efaba1008</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
+        <sys_update_name>sysevent_email_action_7a4351ee47641f50273a565a516d43b1</sys_update_name>
+        <sys_updated_by>ridhwik.jangid</sys_updated_by>
+        <sys_updated_on>2026-11-17 06:30:21</sys_updated_on>
+        <sys_version>2</sys_version>
+        <template display_value="apollo.hospital.master.template">f8409dd947649350273a565a516d43e2</template>
+        <type>email</type>
+        <weight>0</weight>
+    </sysevent_email_action>
+    <sys_es_latest_script action="INSERT_OR_UPDATE">
+        <id>7a4351ee47641f50273a565a516d43b1</id>
+        <sys_created_by>ridhwik.jangid</sys_created_by>
+        <sys_created_on>2026-11-17 06:23:34</sys_created_on>
+        <sys_id>f64351ee47641f50273a565a516d43b6</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>ridhwik.jangid</sys_updated_by>
+        <sys_updated_on>2026-11-17 06:23:34</sys_updated_on>
+        <table>sysevent_email_action</table>
+        <use_es_latest>true</use_es_latest>
+    </sys_es_latest_script>
+</record_update>

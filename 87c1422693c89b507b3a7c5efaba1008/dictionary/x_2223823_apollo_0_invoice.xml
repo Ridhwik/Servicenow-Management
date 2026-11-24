@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
     <element attributes="enforce_dot_walk_cross_scope_access=true" db_object_id="316cc8b947d01310273a565a516d4381" label="Invoice" max_length="40" name="x_2223823_apollo_0_invoice" type="collection">
-        <element label="Appointment" max_length="32" name="appointment" reference="x_2223823_apollo_0_appointment" reference_qual="javascript:new Invoice().getAppointmentRefQual(current);" type="reference" use_reference_qualifier="advanced"/>
         <element label="Patient" mandatory="true" max_length="32" name="patient" reference="x_2223823_apollo_0_patient" type="reference"/>
+        <element label="Admission" max_length="32" name="admission" reference="x_2223823_apollo_0_admissions" type="reference"/>
         <element choice="1" label="Status" mandatory="true" max_length="40" name="status" type="choice">
             <choice>
                 <element inactive_on_update="false" label="Draft" sequence="1" value="draft"/>
@@ -22,10 +22,15 @@
                 <element inactive_on_update="false" label="OPD" sequence="1" value="opd"/>
             </choice>
         </element>
+        <element label="Appointment" max_length="32" name="appointment" reference="x_2223823_apollo_0_appointment" type="reference"/>
+        <element label="Remaining Balance" max_length="20" name="total_balance" type="currency"/>
         <element label="External reference" max_length="60" name="external_reference" type="string"/>
-        <element attributes="ignore_filter_on_new=true" default="javascript:global.getNextObjNumberPadded();" label="Number" max_length="40" name="number" read_only="true" read_only_option="strict_read_only" type="string"/>
+        <element attributes="ignore_filter_on_new=true" default="javascript:global.getNextObjNumberPadded();" label="Number" mandatory="true" max_length="40" name="number" read_only="true" read_only_option="strict_read_only" type="string"/>
         <element label="Final invoice" max_length="40" name="is_final" type="boolean"/>
         <index name="index">
+            <element name="admission"/>
+        </index>
+        <index name="index2">
             <element name="appointment"/>
         </index>
         <index name="index2">
