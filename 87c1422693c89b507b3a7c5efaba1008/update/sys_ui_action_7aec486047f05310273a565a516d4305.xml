@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_ui_action">
+    <sys_ui_action action="INSERT_OR_UPDATE">
+        <action_name>apollo_chargeline_create_payment</action_name>
+        <active>true</active>
+        <client>true</client>
+        <client_script_v2/>
+        <comments/>
+        <condition>(parent &amp;&amp; parent.total_balance &gt; 0) || current.total_balance &gt; 0 || current.status != 'paid'</condition>
+        <form_action>false</form_action>
+        <form_button>false</form_button>
+        <form_button_icon/>
+        <form_button_v2>false</form_button_v2>
+        <form_context_menu>false</form_context_menu>
+        <form_link>false</form_link>
+        <form_menu_button_v2>false</form_menu_button_v2>
+        <form_style/>
+        <format_for_configurable_workspace>false</format_for_configurable_workspace>
+        <hint/>
+        <isolate_script>true</isolate_script>
+        <list_action>true</list_action>
+        <list_banner_button>true</list_banner_button>
+        <list_button>false</list_button>
+        <list_button_icon/>
+        <list_choice>true</list_choice>
+        <list_context_menu>true</list_context_menu>
+        <list_link>false</list_link>
+        <list_save_with_form_button>false</list_save_with_form_button>
+        <list_style/>
+        <messages/>
+        <name>Create Payment</name>
+        <onclick>apolloCreatePaymentSelected()</onclick>
+        <order>100</order>
+        <script><![CDATA[/**
+ * UI Action: Create Payment (Selected Charge Lines)
+ * Table: x_2223823_apollo_0_charge_line
+ * Action Name: apollo_chargeline_create_payment
+ * List Banner Button: true
+ * List Bottom Button: true
+ * List Choice: true
+ * Client: true
+ * Onclick: apolloCreatePaymentSelected()
+ * Condition: (parent && parent.total_balance > 0) || current.total_balance > 0 || current.status != 'paid'
+ */
+
+// ==============================================================================
+// CLIENT-SIDE SCRIPT: Runs in browser when cashier clicks "Create Payment"
+// ==============================================================================
+function apolloCreatePaymentSelected() {
+    var checkedLines = g_list.getChecked();
+    if (!checkedLines || checkedLines.length === 0) {
+        alert('Please select at least one unpaid charge line using the checkboxes.');
+        return false;
+    }
+
+    var parentInvoiceId = '';
+    if (typeof g_form !== 'undefined' && g_form.getTableName() === 'x_2223823_apollo_0_invoice') {
+        parentInvoiceId = g_form.getUniqueValue();
+    }
+
+    // Call server-side Script Include to process payment securely
+    var ga = new GlideAjax('x_2223823_apollo_0.ApolloPaymentUtils');
+    ga.addParam('sysparm_name', 'ajaxCreatePaymentForChargeLines');
+    ga.addParam('sysparm_lines', checkedLines);
+    if (parentInvoiceId) {
+        ga.addParam('sysparm_invoice_id', parentInvoiceId);
+    }
+
+    ga.getXMLAnswer(function(answer) {
+        try {
+            var res = JSON.parse(answer);
+            if (res.success) {
+                // Redirect cashier directly to the newly generated Payment record
+                window.location.href = 'x_2223823_apollo_0_payment.do?sys_id=' + res.payment_id;
+            } else {
+                alert(res.message);
+            }
+        } catch (e) {
+            alert('Payment processing response error: ' + answer);
+        }
+    });
+}
+]]></script>
+        <show_form_icon_only>false</show_form_icon_only>
+        <show_insert>true</show_insert>
+        <show_list_icon_only>false</show_list_icon_only>
+        <show_multiple_update>false</show_multiple_update>
+        <show_query>false</show_query>
+        <show_update>true</show_update>
+        <sys_class_name>sys_ui_action</sys_class_name>
+        <sys_created_by>fateh.meena</sys_created_by>
+        <sys_created_on>2026-11-23 06:23:56</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>7aec486047f05310273a565a516d4305</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Create Payment</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Apollo-Hospitals" source="x_2223823_apollo_0">87c1422693c89b507b3a7c5efaba1008</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
+        <sys_update_name>sys_ui_action_7aec486047f05310273a565a516d4305</sys_update_name>
+        <sys_updated_by>fateh.meena</sys_updated_by>
+        <sys_updated_on>2026-11-23 06:23:56</sys_updated_on>
+        <table>x_2223823_apollo_0_charge_line</table>
+        <ui11_compatible>true</ui11_compatible>
+        <ui16_compatible>false</ui16_compatible>
+    </sys_ui_action>
+</record_update>

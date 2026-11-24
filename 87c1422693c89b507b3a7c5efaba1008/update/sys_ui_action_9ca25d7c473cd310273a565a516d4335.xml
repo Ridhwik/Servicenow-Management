@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_ui_action">
+    <sys_ui_action action="INSERT_OR_UPDATE">
+        <action_name>apollo_invoice_download_pdf</action_name>
+        <active>true</active>
+        <client>false</client>
+        <client_script_v2/>
+        <comments>Directly generates and downloads official Apollo Hospitals Invoice PDF with itemized charge lines and receipts.</comments>
+        <condition>current.total_amount &gt; 0</condition>
+        <form_action>true</form_action>
+        <form_button>true</form_button>
+        <form_button_icon/>
+        <form_button_v2>false</form_button_v2>
+        <form_context_menu>true</form_context_menu>
+        <form_link>false</form_link>
+        <form_menu_button_v2>false</form_menu_button_v2>
+        <form_style/>
+        <format_for_configurable_workspace>false</format_for_configurable_workspace>
+        <hint>Generate professional Apollo Hospitals Invoice PDF and download directly</hint>
+        <isolate_script>true</isolate_script>
+        <list_action>false</list_action>
+        <list_banner_button>false</list_banner_button>
+        <list_button>false</list_button>
+        <list_button_icon/>
+        <list_choice>false</list_choice>
+        <list_context_menu>false</list_context_menu>
+        <list_link>false</list_link>
+        <list_save_with_form_button>false</list_save_with_form_button>
+        <list_style/>
+        <messages/>
+        <name>Download Invoice PDF</name>
+        <onclick/>
+        <order>150</order>
+        <script><![CDATA[/**
+ * UI Action: Download Invoice PDF
+ * Table: x_2223823_apollo_0_invoice
+ * Action Name: apollo_invoice_download_pdf
+ * Form Button: true
+ * Form Context Menu: true
+ * Client: false (Runs server-side directly)
+ * Condition: current.total_amount > 0
+ * 
+ * Generates an official Apollo Hospitals Invoice PDF with itemized charges,
+ * status badges (PAID / PENDING), patient & hospital details, and receipts,
+ * then triggers immediate browser file download.
+ */
+(function executeAction(current) {
+    try {
+        var utils = new x_2223823_apollo_0.ApolloPaymentUtils();
+        var res = utils.generateInvoicePDF(current);
+
+        if (res && res.success && res.attachment_id) {
+            // Direct browser download of the generated PDF attachment
+            action.setRedirectURL('/sys_attachment.do?sys_id=' + res.attachment_id);
+        } else {
+            var msg = (res && res.message) ? res.message : 'Failed to generate invoice PDF.';
+            gs.addErrorMessage('Apollo Billing: ' + msg);
+            action.setRedirectURL(current);
+        }
+    } catch (e) {
+        gs.error('[Apollo Download Invoice PDF] ' + e.message);
+        gs.addErrorMessage('Error generating invoice PDF: ' + e.message);
+        action.setRedirectURL(current);
+    }
+})(current);
+]]></script>
+        <show_form_icon_only>false</show_form_icon_only>
+        <show_insert>false</show_insert>
+        <show_list_icon_only>false</show_list_icon_only>
+        <show_multiple_update>false</show_multiple_update>
+        <show_query>false</show_query>
+        <show_update>true</show_update>
+        <sys_class_name>sys_ui_action</sys_class_name>
+        <sys_created_by>fateh.meena</sys_created_by>
+        <sys_created_on>2026-11-24 06:06:59</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>9ca25d7c473cd310273a565a516d4335</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>Download Invoice PDF</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Apollo-Hospitals" source="x_2223823_apollo_0">87c1422693c89b507b3a7c5efaba1008</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
+        <sys_update_name>sys_ui_action_9ca25d7c473cd310273a565a516d4335</sys_update_name>
+        <sys_updated_by>fateh.meena</sys_updated_by>
+        <sys_updated_on>2026-11-24 06:45:47</sys_updated_on>
+        <table>x_2223823_apollo_0_invoice</table>
+        <ui11_compatible>true</ui11_compatible>
+        <ui16_compatible>false</ui16_compatible>
+    </sys_ui_action>
+</record_update>

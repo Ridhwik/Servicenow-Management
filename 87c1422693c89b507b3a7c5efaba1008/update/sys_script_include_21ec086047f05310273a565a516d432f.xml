@@ -1,0 +1,642 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <active>true</active>
+        <api_name>x_2223823_apollo_0.ApolloPaymentUtils</api_name>
+        <caller_access/>
+        <client_callable>true</client_callable>
+        <description>Apollo Hospitals Billing Utility: handles payment creation, status sync, and professional server-side PDF generation.</description>
+        <mobile_callable>false</mobile_callable>
+        <name>ApolloPaymentUtils</name>
+        <sandbox_callable>false</sandbox_callable>
+        <script><![CDATA[var ApolloPaymentUtils = Class.create();
+ApolloPaymentUtils.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
+
+    initialize: function(request, responseXML, gc) {
+        if (request) {
+            global.AbstractAjaxProcessor.prototype.initialize.call(this, request, responseXML, gc);
+        }
+        this.SCOPE = 'x_2223823_apollo_0';
+        this.TABLE_INVOICE = 'x_2223823_apollo_0_invoice';
+        this.TABLE_CHARGE_LINE = 'x_2223823_apollo_0_charge_line';
+        this.TABLE_PAYMENT = 'x_2223823_apollo_0_payment';
+    },
+
+    /**
+     * Generates a professional Apollo Hospital Invoice PDF, attaches it to the record,
+     * and returns the attachment sys_id for direct download.
+     * 
+     * @param {GlideRecord} invGr - Invoice GlideRecord
+     * @returns {Object} { success: Boolean, attachment_id: String, message: String }
+     */
+    generateInvoicePDF: function(invGr) {
+        try {
+            if (!invGr || !invGr.isValidRecord()) {
+                return { success: false, message: 'Invalid invoice record.' };
+            }
+
+            var invoiceSysId = invGr.getUniqueValue();
+            var invoiceNum = invGr.getValue('number') || 'INV0000';
+            var totalAmt = parseFloat(invGr.getValue('total_amount') || 0);
+            var paidAmt = parseFloat(invGr.getValue('paid_amount') || 0);
+            var totalBal = parseFloat(invGr.getValue('total_balance') || (totalAmt - paidAmt));
+            var statusVal = String(invGr.getValue('status') || 'draft');
+            var statusLabel = invGr.getDisplayValue('status') || statusVal;
+            var pType = String(invGr.getValue('patient_type') || 'opd').toUpperCase();
+            var createdDate = invGr.getDisplayValue('sys_created_on') || '';
+
+            var docTitle = (pType === 'INPATIENT') ? 'INPATIENT BILL CUM RECEIPT' : 'OUTPATIENT (OPD) BILL CUM RECEIPT';
+            if (pType === 'VIDEO') docTitle = 'TELEHEALTH / VIDEO CONSULTATION RECEIPT';
+
+            // 1. Patient Details
+            var patientName = 'Walk-in Patient';
+            var patientId = 'N/A';
+            var patientPhone = '';
+            var patRef = invGr.getValue('patient');
+            if (patRef) {
+                var pGr = new GlideRecord('x_2223823_apollo_0_patient');
+                if (pGr.get(patRef)) {
+                    patientName = pGr.getDisplayValue('user') || pGr.getValue('name') || invGr.getDisplayValue('patient') || 'Patient';
+                    patientId = pGr.getValue('number') || pGr.getValue('abha_number') || 'PAT0001';
+                    patientPhone = pGr.getValue('emergency_contact_phone') || '';
+                } else {
+                    patientName = invGr.getDisplayValue('patient');
+                }
+            }
+
+            // 2. Hospital Details
+            var hospName = 'Apollo Hospitals';
+            var hospAddress = 'Greams Lane, Off Greams Road, Chennai - 600006';
+            var hospPhone = '+91-44-28290200';
+            var helpline = gs.getProperty('x_2223823_apollo_0.helpline_number', '1860 500 1066');
+            var hospRef = invGr.getValue('hospital');
+            if (hospRef) {
+                var hGr = new GlideRecord('x_2223823_apollo_0_hospital');
+                if (hGr.get(hospRef)) {
+                    hospName = hGr.getDisplayValue('name') || hGr.getValue('name') || 'Apollo Hospitals';
+                    hospAddress = hGr.getValue('address') || hospAddress;
+                    hospPhone = hGr.getValue('phone') || hGr.getValue('phon0') || hospPhone;
+                }
+            }
+
+            // 3. Charge Lines
+            var clGr = new GlideRecord(this.TABLE_CHARGE_LINE);
+            clGr.addQuery('invoice', invoiceSysId);
+            clGr.addQuery('status', '!=', 'cancelled');
+            clGr.orderBy('sys_created_on');
+            clGr.query();
+
+            var lineRowsHtml = '';
+            var idx = 1;
+            while (clGr.next()) {
+                var lStatus = String(clGr.getValue('status') || 'pending').toLowerCase();
+                var isPaid = (lStatus === 'paid');
+                var desc = clGr.getValue('description') || clGr.getDisplayValue('charge_type') || 'Clinical Service';
+                var cType = clGr.getDisplayValue('charge_type') || clGr.getValue('charge_type') || 'Service';
+                var amt = parseFloat(clGr.getValue('amount') || 0);
+
+                var badgeColor = isPaid ? '#137333' : '#c5221f';
+                var badgeBg = isPaid ? '#e6f4ea' : '#fce8e6';
+                var badgeBorder = isPaid ? '#ceead6' : '#fad2cf';
+                var statusText = isPaid ? 'PAID' : 'PENDING';
+
+                lineRowsHtml += '<tr>' +
+                    '<td style="padding: 8px 10px; border-bottom: 1px solid #e2e8f0; text-align: center; font-size: 11px;">' + idx++ + '</td>' +
+                    '<td style="padding: 8px 10px; border-bottom: 1px solid #e2e8f0; font-size: 11px; font-weight: bold;">' + desc + '</td>' +
+                    '<td style="padding: 8px 10px; border-bottom: 1px solid #e2e8f0; font-size: 11px; color: #4a5568;">' + cType + '</td>' +
+                    '<td style="padding: 8px 10px; border-bottom: 1px solid #e2e8f0; text-align: center;">' +
+                        '<span style="background: ' + badgeBg + '; color: ' + badgeColor + '; border: 1px solid ' + badgeBorder + '; padding: 2px 8px; border-radius: 10px; font-size: 9px; font-weight: bold;">' + statusText + '</span>' +
+                    '</td>' +
+                    '<td style="padding: 8px 10px; border-bottom: 1px solid #e2e8f0; text-align: right; font-weight: bold; font-size: 11px;">Rs. ' + amt.toFixed(2) + '</td>' +
+                '</tr>';
+            }
+
+            if (!lineRowsHtml) {
+                lineRowsHtml = '<tr><td colspan="5" style="padding: 15px; text-align: center; color: #718096; font-size: 11px;">No individual charge lines recorded for this invoice.</td></tr>';
+            }
+
+            // 4. Payment Receipts Summary
+            var payGr = new GlideRecord(this.TABLE_PAYMENT);
+            payGr.addQuery('invoice', invoiceSysId);
+            payGr.orderBy('sys_created_on');
+            payGr.query();
+
+            var paymentListHtml = '';
+            var latestPaymentMode = 'Cash';
+            while (payGr.next()) {
+                var pNum = payGr.getValue('number') || 'PAY0000';
+                var pAmt = parseFloat(payGr.getValue('amount') || 0);
+                var pMode = payGr.getDisplayValue('mode') || payGr.getValue('mode') || 'Cash';
+                latestPaymentMode = pMode;
+                var pStat = payGr.getValue('status') || 'pending';
+                var pColor = (pStat === 'succeeded') ? '#137333' : '#b06000';
+
+                paymentListHtml += '<div style="margin-bottom: 4px; font-size: 10px; color: #2d3748;">' +
+                    'Receipt <strong>#' + pNum + '</strong> (' + pMode + ') - <span style="font-weight:bold; color:' + pColor + ';">Rs. ' + pAmt.toFixed(2) + ' [' + pStat.toUpperCase() + ']</span>' +
+                '</div>';
+            }
+            if (!paymentListHtml) {
+                paymentListHtml = '<span style="font-size: 10px; color: #a0aec0;">No payments received yet.</span>';
+            }
+
+            // Status Badge on Bill
+            var billStatusBadge = '';
+            if (statusVal === 'paid' || totalBal <= 0) {
+                billStatusBadge = '<span style="background: #e6f4ea; color: #137333; border: 1px solid #ceead6; padding: 2px 8px; border-radius: 10px; font-weight: bold;">PAID</span>';
+            } else if (statusVal === 'partially_paid' || paidAmt > 0) {
+                billStatusBadge = '<span style="background: #fef7e0; color: #b06000; border: 1px solid #feefc3; padding: 2px 8px; border-radius: 10px; font-weight: bold;">PARTIALLY PAID</span>';
+            } else {
+                billStatusBadge = '<span style="background: #fce8e6; color: #c5221f; border: 1px solid #fad2cf; padding: 2px 8px; border-radius: 10px; font-weight: bold;">UNPAID</span>';
+            }
+
+            // 5. Build Robust Table-Based HTML (Guaranteed 100% compatible with PDF generators)
+            var html = '<!DOCTYPE html>' +
+            '<html><head><meta charset="utf-8"/><title>Apollo Invoice ' + invoiceNum + '</title></head>' +
+            '<body style="font-family: Arial, sans-serif; color: #2d3748; margin: 0; padding: 15px; font-size: 11px;">' +
+
+                // Header Table
+                '<table style="width: 100%; border-bottom: 2px solid #007791; padding-bottom: 10px; margin-bottom: 12px;">' +
+                    '<tr>' +
+                        '<td style="vertical-align: top; width: 55%;">' +
+                            '<div style="font-size: 26px; font-weight: 900; color: #007791; line-height: 1;">✚ Apollo</div>' +
+                            '<div style="font-size: 11px; font-weight: bold; color: #5a738e; letter-spacing: 2px;">HOSPITALS</div>' +
+                            '<div style="font-size: 9px; color: #718096; margin-top: 2px;">TOUCHING LIVES</div>' +
+                        '</td>' +
+                        '<td style="vertical-align: top; text-align: right; width: 45%; font-size: 10px; line-height: 1.4; color: #4a5568;">' +
+                            '<div style="font-size: 13px; font-weight: bold; color: #1a202c;">' + hospName + '</div>' +
+                            '<div>' + hospAddress + '</div>' +
+                            '<div>Phone: ' + hospPhone + '</div>' +
+                            '<div style="margin-top: 3px;"><strong style="color: #c53030;">]]>🚨<![CDATA[ 24x7 Emergency: ' + helpline + '</strong></div>' +
+                        '</td>' +
+                    '</tr>' +
+                '</table>' +
+
+                // Document Title
+                '<div style="text-align: center; margin-bottom: 15px;">' +
+                    '<span style="font-size: 15px; font-weight: 800; color: #1a202c; text-transform: uppercase; border-bottom: 2px solid #cbd5e0; padding-bottom: 2px;">' + docTitle + '</span>' +
+                '</div>' +
+
+                // Patient Details and Bill Details Box (2 Columns)
+                '<table style="width: 100%; border: 1px solid #cbd5e0; background: #fafbfc; margin-bottom: 15px; border-collapse: collapse;">' +
+                    '<tr>' +
+                        '<td style="width: 50%; padding: 10px; vertical-align: top; border-right: 1px solid #cbd5e0;">' +
+                            '<div style="font-size: 10px; font-weight: bold; color: #007791; text-transform: uppercase; margin-bottom: 6px; border-bottom: 1px solid #e2e8f0; padding-bottom: 2px;">PATIENT DETAILS</div>' +
+                            '<table style="width: 100%; font-size: 10px; line-height: 1.6;">' +
+                                '<tr><td style="color: #718096; width: 90px;">Patient Name:</td><td><strong>' + patientName + '</strong></td></tr>' +
+                                '<tr><td style="color: #718096;">Patient ID:</td><td>' + patientId + '</td></tr>' +
+                                '<tr><td style="color: #718096;">Patient Type:</td><td>' + pType + '</td></tr>' +
+                                '<tr><td style="color: #718096;">Hospital:</td><td>' + hospName + '</td></tr>' +
+                            '</table>' +
+                        '</td>' +
+                        '<td style="width: 50%; padding: 10px; vertical-align: top;">' +
+                            '<div style="font-size: 10px; font-weight: bold; color: #007791; text-transform: uppercase; margin-bottom: 6px; border-bottom: 1px solid #e2e8f0; padding-bottom: 2px;">BILL DETAILS</div>' +
+                            '<table style="width: 100%; font-size: 10px; line-height: 1.6;">' +
+                                '<tr><td style="color: #718096; width: 90px;">Invoice No:</td><td><strong>' + invoiceNum + '</strong></td></tr>' +
+                                '<tr><td style="color: #718096;">Billing Date:</td><td>' + createdDate + '</td></tr>' +
+                                '<tr><td style="color: #718096;">Bill Status:</td><td>' + billStatusBadge + '</td></tr>' +
+                                '<tr><td style="color: #718096;">Payment Mode:</td><td>' + latestPaymentMode + '</td></tr>' +
+                            '</table>' +
+                        '</td>' +
+                    '</tr>' +
+                '</table>' +
+
+                // Line Items Table
+                '<table style="width: 100%; border-collapse: collapse; margin-bottom: 15px;">' +
+                    '<thead>' +
+                        '<tr style="background: #edf2f7; text-transform: uppercase; font-size: 9px; color: #4a5568;">' +
+                            '<th style="padding: 7px 10px; border-top: 1px solid #cbd5e0; border-bottom: 2px solid #cbd5e0; width: 30px; text-align: center;">#</th>' +
+                            '<th style="padding: 7px 10px; border-top: 1px solid #cbd5e0; border-bottom: 2px solid #cbd5e0; text-align: left;">Particulars / Service Description</th>' +
+                            '<th style="padding: 7px 10px; border-top: 1px solid #cbd5e0; border-bottom: 2px solid #cbd5e0; text-align: left; width: 110px;">Charge Type</th>' +
+                            '<th style="padding: 7px 10px; border-top: 1px solid #cbd5e0; border-bottom: 2px solid #cbd5e0; text-align: center; width: 90px;">Status</th>' +
+                            '<th style="padding: 7px 10px; border-top: 1px solid #cbd5e0; border-bottom: 2px solid #cbd5e0; text-align: right; width: 100px;">Amount</th>' +
+                        '</tr>' +
+                    '</thead>' +
+                    '<tbody>' +
+                        lineRowsHtml +
+                    '</tbody>' +
+                '</table>' +
+
+                // Summary and Totals Table
+                '<table style="width: 100%; margin-top: 10px; border-top: 2px solid #cbd5e0; padding-top: 10px;">' +
+                    '<tr>' +
+                        '<td style="vertical-align: top; width: 55%; padding-right: 20px;">' +
+                            '<div style="font-size: 10px; font-weight: bold; color: #718096; text-transform: uppercase; margin-bottom: 5px;">Payment Receipts</div>' +
+                            paymentListHtml +
+                            '<div style="font-size: 9px; color: #718096; margin-top: 8px;">* Certified transaction recorded in Apollo Hospital Ledger.</div>' +
+                        '</td>' +
+                        '<td style="vertical-align: top; width: 45%;">' +
+                            '<table style="width: 100%; font-size: 11px; line-height: 1.8;">' +
+                                '<tr><td style="color: #718096; font-weight: bold;">Total Bill Amount:</td><td style="text-align: right; font-weight: bold;">Rs. ' + totalAmt.toFixed(2) + '</td></tr>' +
+                                '<tr><td style="color: #137333; font-weight: bold;">Amount Collected:</td><td style="text-align: right; font-weight: bold; color: #137333;">Rs. ' + paidAmt.toFixed(2) + '</td></tr>' +
+                                '<tr style="border-top: 2px solid #007791; border-bottom: 2px solid #007791; font-size: 13px; font-weight: bold; color: #007791;">' +
+                                    '<td style="padding: 6px 0;">Balance Due:</td><td style="text-align: right; padding: 6px 0;">Rs. ' + totalBal.toFixed(2) + '</td>' +
+                                '</tr>' +
+                            '</table>' +
+                        '</td>' +
+                    '</tr>' +
+                '</table>' +
+
+                // Footer
+                '<table style="width: 100%; margin-top: 40px; border-top: 1px dashed #cbd5e0; padding-top: 12px; font-size: 9px; color: #718096;">' +
+                    '<tr>' +
+                        '<td style="width: 65%; line-height: 1.4;">' +
+                            '<div><strong>Apollo Hospitals Enterprise Limited</strong></div>' +
+                            '<div>Goods once sold or clinical services rendered cannot be refunded.</div>' +
+                            '<div>Helpline: 1860 500 1066 | support@apollohospitals.com</div>' +
+                        '</td>' +
+                        '<td style="width: 35%; text-align: center; vertical-align: bottom;">' +
+                            '<div style="border-top: 1px solid #718096; width: 140px; margin: 0 auto; padding-top: 3px; font-weight: bold; color: #2d3748;">Authorized Cashier</div>' +
+                        '</td>' +
+                    '</tr>' +
+                '</table>' +
+
+            '</body></html>';
+
+            // 6. Convert HTML to PDF using ServiceNow PDFGenerationAPI
+            var pdfAPI = new sn_pdfgeneratorutils.PDFGenerationAPI();
+            var fileName = 'Apollo_Invoice_' + invoiceNum + '.pdf';
+            var result = pdfAPI.convertToPDF(html, this.TABLE_INVOICE, invoiceSysId, fileName);
+
+            if (result && result.attachment_id) {
+                return {
+                    success: true,
+                    attachment_id: result.attachment_id,
+                    file_name: fileName,
+                    message: 'Invoice PDF generated successfully.'
+                };
+            } else {
+                // Fallback: If convertToPDF returned without attachment_id, check sys_attachment
+                var attGr = new GlideRecord('sys_attachment');
+                attGr.addQuery('table_name', this.TABLE_INVOICE);
+                attGr.addQuery('table_sys_id', invoiceSysId);
+                attGr.addQuery('file_name', fileName);
+                attGr.orderByDesc('sys_created_on');
+                attGr.setLimit(1);
+                attGr.query();
+                if (attGr.next()) {
+                    return {
+                        success: true,
+                        attachment_id: attGr.getUniqueValue(),
+                        file_name: fileName,
+                        message: 'Invoice PDF generated successfully.'
+                    };
+                }
+                return { success: false, message: 'Could not generate PDF attachment: ' + JSON.stringify(result) };
+            }
+
+        } catch (ex) {
+            gs.error('[ApolloPaymentUtils] Error in generateInvoicePDF: ' + ex.message);
+            return { success: false, message: 'PDF Generation Error: ' + ex.message };
+        }
+    },
+
+    /**
+     * Creates a single Payment in 'Pending' state for the entire outstanding balance of an Invoice.
+     * Links unpaid charge lines to this pending payment.
+     * Note: Amount is NOT deducted from Invoice balance until payment becomes 'Succeeded'.
+     * 
+     * @param {String} invoiceSysId - sys_id of the invoice record
+     * @returns {Object} { success: Boolean, payment_id: String, amount: Number, message: String }
+     */
+    createPaymentForInvoice: function(invoiceSysId) {
+        try {
+            if (!invoiceSysId) {
+                return { success: false, message: 'Invalid or missing Invoice ID.' };
+            }
+
+            var invGr = new GlideRecord(this.TABLE_INVOICE);
+            if (!invGr.get(invoiceSysId)) {
+                return { success: false, message: 'Invoice not found (' + invoiceSysId + ').' };
+            }
+
+            var totalBal = parseFloat(invGr.getValue('total_balance') || 0);
+            var totalAmt = parseFloat(invGr.getValue('total_amount') || 0);
+            var paidAmt = parseFloat(invGr.getValue('paid_amount') || 0);
+
+            if (isNaN(totalBal) || totalBal <= 0) {
+                totalBal = totalAmt - paidAmt;
+            }
+
+            if (totalBal <= 0) {
+                return { success: false, message: 'This invoice has no outstanding balance to pay (Balance: ₹0.00).' };
+            }
+
+            var patientId = invGr.getValue('patient');
+            var hospitalId = invGr.getValue('hospital');
+            var patientType = invGr.getValue('patient_type') || 'opd';
+
+            // 1. Create Payment record in PENDING state
+            var payGr = new GlideRecord(this.TABLE_PAYMENT);
+            payGr.initialize();
+            payGr.setValue('invoice', invoiceSysId);
+            if (patientId) payGr.setValue('patient', patientId);
+            if (hospitalId) payGr.setValue('hospital', hospitalId);
+            payGr.setValue('patient_type', patientType);
+            payGr.setValue('amount', totalBal);
+            payGr.setValue('kind', 'payment');
+            payGr.setValue('mode', 'cash'); // Default Cash; cashier can change
+            payGr.setValue('status', 'pending'); // <-- Created in PENDING state
+
+            var paySysId = payGr.insert();
+            if (!paySysId) {
+                return { success: false, message: 'Failed to insert Payment record.' };
+            }
+
+            // 2. Link unpaid charge lines to this pending payment (do NOT mark 'paid' yet)
+            var clGr = new GlideRecord(this.TABLE_CHARGE_LINE);
+            clGr.addQuery('invoice', invoiceSysId);
+            clGr.addQuery('status', '!=', 'paid');
+            clGr.addQuery('status', '!=', 'cancelled');
+            clGr.query();
+
+            var lineCount = 0;
+            while (clGr.next()) {
+                clGr.setValue('payment', paySysId);
+                clGr.update();
+                lineCount++;
+            }
+
+            // 3. Recalculate invoice (Pending payments are NOT deducted yet)
+            this.recalculateInvoice(invoiceSysId);
+
+            return {
+                success: true,
+                payment_id: paySysId,
+                amount: totalBal,
+                lines_count: lineCount,
+                message: 'Pending payment created for ₹' + totalBal.toFixed(2) + '. Amount will be deducted from invoice once payment status is marked Succeeded.'
+            };
+
+        } catch (ex) {
+            gs.error('[ApolloPaymentUtils] Error in createPaymentForInvoice: ' + ex.message);
+            return { success: false, message: 'Payment creation error: ' + ex.message };
+        }
+    },
+
+    /**
+     * Creates a single Payment in 'Pending' state for ONLY the selected Charge Lines.
+     * Links selected lines to this pending payment.
+     * Note: Amount is NOT deducted from Invoice balance until payment becomes 'Succeeded'.
+     * 
+     * @param {Array|String} chargeLineIds - Array or comma-separated sys_ids
+     * @param {String} [invoiceSysId] - Optional invoice sys_id context
+     * @returns {Object} { success: Boolean, payment_id: String, amount: Number, message: String }
+     */
+    createPaymentForChargeLines: function(chargeLineIds, invoiceSysId) {
+        try {
+            var idList = [];
+            if (typeof chargeLineIds === 'string') {
+                idList = chargeLineIds.split(',');
+            } else if (Array.isArray(chargeLineIds)) {
+                idList = chargeLineIds;
+            }
+
+            var cleanIds = [];
+            for (var i = 0; i < idList.length; i++) {
+                var id = String(idList[i]).trim();
+                if (id) cleanIds.push(id);
+            }
+
+            if (cleanIds.length === 0) {
+                return { success: false, message: 'Please select at least one charge line to pay.' };
+            }
+
+            // Verify lines in database
+            var clGr = new GlideRecord(this.TABLE_CHARGE_LINE);
+            clGr.addQuery('sys_id', 'IN', cleanIds.join(','));
+            clGr.query();
+
+            var validLineIds = [];
+            var totalAmount = 0.0;
+            var resolvedInvoiceId = invoiceSysId;
+            var patientId = null;
+            var hospitalId = null;
+            var skippedPaidCount = 0;
+
+            while (clGr.next()) {
+                var lineStatus = String(clGr.getValue('status') || '').toLowerCase();
+                var existingPayment = clGr.getValue('payment');
+
+                // Anti-tamper & Guardrail: Skip already paid or cancelled lines
+                if (lineStatus === 'paid' || existingPayment || lineStatus === 'cancelled') {
+                    skippedPaidCount++;
+                    continue;
+                }
+
+                var lineAmt = parseFloat(clGr.getValue('amount') || 0);
+                if (lineAmt > 0) {
+                    totalAmount += lineAmt;
+                    validLineIds.push(clGr.getUniqueValue());
+                    if (!resolvedInvoiceId) resolvedInvoiceId = clGr.getValue('invoice');
+                    if (!patientId) patientId = clGr.getValue('patient');
+                    if (!hospitalId) hospitalId = clGr.getValue('hospital');
+                }
+            }
+
+            if (validLineIds.length === 0) {
+                var msg = skippedPaidCount > 0 
+                    ? 'All selected charge line(s) are already paid or have a pending payment.'
+                    : 'No valid payable charge lines found in selection.';
+                return { success: false, message: msg };
+            }
+
+            var patientType = 'opd';
+            if (resolvedInvoiceId) {
+                var invGr = new GlideRecord(this.TABLE_INVOICE);
+                if (invGr.get(resolvedInvoiceId)) {
+                    if (!patientId) patientId = invGr.getValue('patient');
+                    if (!hospitalId) hospitalId = invGr.getValue('hospital');
+                    patientType = invGr.getValue('patient_type') || 'opd';
+                }
+            }
+
+            // 1. Create Payment in PENDING state
+            var payGr = new GlideRecord(this.TABLE_PAYMENT);
+            payGr.initialize();
+            if (resolvedInvoiceId) payGr.setValue('invoice', resolvedInvoiceId);
+            if (patientId) payGr.setValue('patient', patientId);
+            if (hospitalId) payGr.setValue('hospital', hospitalId);
+            payGr.setValue('patient_type', patientType);
+            payGr.setValue('amount', totalAmount);
+            payGr.setValue('kind', 'payment');
+            payGr.setValue('mode', 'cash');
+            payGr.setValue('status', 'pending'); // <-- Created in PENDING state
+
+            var paySysId = payGr.insert();
+            if (!paySysId) {
+                return { success: false, message: 'Failed to create Payment record.' };
+            }
+
+            // 2. Link selected charge lines to this pending payment
+            var updCl = new GlideRecord(this.TABLE_CHARGE_LINE);
+            updCl.addQuery('sys_id', 'IN', validLineIds.join(','));
+            updCl.query();
+            while (updCl.next()) {
+                updCl.setValue('payment', paySysId);
+                updCl.update();
+            }
+
+            // 3. Recalculate invoice (Pending payments are NOT deducted yet)
+            if (resolvedInvoiceId) {
+                this.recalculateInvoice(resolvedInvoiceId);
+            }
+
+            var successMsg = 'Pending payment created for ₹' + totalAmount.toFixed(2) + ' across ' + validLineIds.length + ' charge line(s). Amount will be deducted from invoice once marked Succeeded.';
+            if (skippedPaidCount > 0) {
+                successMsg += ' (' + skippedPaidCount + ' line(s) were excluded as already paid or pending).';
+            }
+
+            return {
+                success: true,
+                payment_id: paySysId,
+                amount: totalAmount,
+                lines_count: validLineIds.length,
+                skipped_count: skippedPaidCount,
+                message: successMsg
+            };
+
+        } catch (ex) {
+            gs.error('[ApolloPaymentUtils] Error in createPaymentForChargeLines: ' + ex.message);
+            return { success: false, message: 'Payment creation error: ' + ex.message };
+        }
+    },
+
+    /**
+     * Triggered by Business Rule when Payment status changes.
+     * When 'succeeded': Marks linked charge lines as Paid and deducts from Invoice balance.
+     * When 'failed': Unlinks charge lines so they can be re-attempted.
+     * 
+     * @param {GlideRecord} paymentGr
+     */
+    onPaymentStatusChanged: function(paymentGr) {
+        if (!paymentGr) return;
+        var paySysId = paymentGr.getUniqueValue();
+        var invoiceSysId = paymentGr.getValue('invoice');
+        var status = String(paymentGr.getValue('status') || '').toLowerCase();
+
+        if (status === 'succeeded') {
+            // Mark all linked charge lines as 'Paid'
+            var clGr = new GlideRecord(this.TABLE_CHARGE_LINE);
+            clGr.addQuery('payment', paySysId);
+            clGr.query();
+            while (clGr.next()) {
+                clGr.setValue('status', 'paid');
+                clGr.update();
+            }
+        } else if (status === 'failed') {
+            // Release charge lines if payment failed so cashier can re-try
+            var failCl = new GlideRecord(this.TABLE_CHARGE_LINE);
+            failCl.addQuery('payment', paySysId);
+            failCl.query();
+            while (failCl.next()) {
+                failCl.setValue('payment', '');
+                failCl.update();
+            }
+        }
+
+        // Recalculate Invoice balance and status
+        if (invoiceSysId) {
+            this.recalculateInvoice(invoiceSysId);
+        }
+    },
+
+    /**
+     * Recalculates total_amount, paid_amount, total_balance, and status on an Invoice.
+     * ONLY payments with status == 'succeeded' are counted towards paid_amount.
+     * 
+     * @param {String} invoiceSysId
+     */
+    recalculateInvoice: function(invoiceSysId) {
+        if (!invoiceSysId) return;
+
+        var invGr = new GlideRecord(this.TABLE_INVOICE);
+        if (!invGr.get(invoiceSysId)) return;
+
+        // 1. Total Amount: Sum non-cancelled charge lines
+        var clGr = new GlideRecord(this.TABLE_CHARGE_LINE);
+        clGr.addQuery('invoice', invoiceSysId);
+        clGr.addQuery('status', '!=', 'cancelled');
+        clGr.query();
+
+        var computedTotal = 0.0;
+        var hasLines = false;
+        while (clGr.next()) {
+            hasLines = true;
+            computedTotal += parseFloat(clGr.getValue('amount') || 0);
+        }
+
+        var finalTotal = hasLines ? computedTotal : parseFloat(invGr.getValue('total_amount') || 0);
+
+        // 2. Paid Amount: Sum ONLY 'succeeded' payments! (Pending payments are excluded)
+        var payGr = new GlideRecord(this.TABLE_PAYMENT);
+        payGr.addQuery('invoice', invoiceSysId);
+        payGr.addQuery('status', 'succeeded');
+        payGr.query();
+
+        var computedPaid = 0.0;
+        while (payGr.next()) {
+            computedPaid += parseFloat(payGr.getValue('amount') || 0);
+        }
+
+        var balance = finalTotal - computedPaid;
+        if (balance < 0) balance = 0.0;
+
+        invGr.setValue('total_amount', finalTotal);
+        invGr.setValue('paid_amount', computedPaid);
+        invGr.setValue('total_balance', balance);
+
+        // 3. Invoice Status based on SUCCEEDED payments
+        if (balance <= 0 && computedPaid > 0) {
+            invGr.setValue('status', 'paid');
+        } else if (computedPaid > 0 && balance > 0) {
+            invGr.setValue('status', 'partially_paid');
+        } else if (computedPaid === 0) {
+            var currStatus = invGr.getValue('status');
+            if (currStatus !== 'draft') {
+                invGr.setValue('status', 'issued');
+            }
+        }
+
+        invGr.update();
+    },
+
+    /**
+     * Client-Callable Ajax Endpoint for Generating Invoice PDF.
+     */
+    ajaxGenerateInvoicePDF: function() {
+        var invoiceId = this.getParameter('sysparm_invoice_id');
+        var invGr = new GlideRecord(this.TABLE_INVOICE);
+        if (invGr.get(invoiceId)) {
+            var res = this.generateInvoicePDF(invGr);
+            return JSON.stringify(res);
+        }
+        return JSON.stringify({ success: false, message: 'Invoice not found' });
+    },
+
+    /**
+     * Client-Callable Ajax Endpoint for List UI Actions.
+     */
+    ajaxCreatePaymentForChargeLines: function() {
+        var lines = this.getParameter('sysparm_lines');
+        var invoiceId = this.getParameter('sysparm_invoice_id');
+        var res = this.createPaymentForChargeLines(lines, invoiceId);
+        return JSON.stringify(res);
+    },
+
+    type: 'ApolloPaymentUtils'
+});
+]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>fateh.meena</sys_created_by>
+        <sys_created_on>2026-11-23 06:23:51</sys_created_on>
+        <sys_id>21ec086047f05310273a565a516d432f</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_name>ApolloPaymentUtils</sys_name>
+        <sys_package display_value="Apollo-Hospitals" source="x_2223823_apollo_0">87c1422693c89b507b3a7c5efaba1008</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
+        <sys_update_name>sys_script_include_21ec086047f05310273a565a516d432f</sys_update_name>
+        <sys_updated_by>fateh.meena</sys_updated_by>
+        <sys_updated_on>2026-11-24 06:47:39</sys_updated_on>
+    </sys_script_include>
+</record_update>
