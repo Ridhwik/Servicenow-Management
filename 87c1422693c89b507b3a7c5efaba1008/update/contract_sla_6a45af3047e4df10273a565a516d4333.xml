@@ -17,8 +17,8 @@
         <resume_condition/>
         <retroactive>false</retroactive>
         <retroactive_pause>true</retroactive_pause>
-        <schedule display_value="8-5 weekdays">08fcd0830a0a0b2600079f56b1adb9ae</schedule>
-        <schedule_source>sla_definition</schedule_source>
+        <schedule/>
+        <schedule_source>no_schedule</schedule_source>
         <schedule_source_field/>
         <set_start_to/>
         <start_condition table="sc_req_item">x_2223823_apollo_0_requested_type=2^approval=approved^x_2223823_apollo_0_stock_status=Needs Purchase^EQ<item display_value="Medical Equipment" endquery="false" field="x_2223823_apollo_0_requested_type" goto="false" newquery="false" operator="=" or="false" value="2"/>
@@ -35,7 +35,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>6a45af3047e4df10273a565a516d4333</sys_id>
-        <sys_mod_count>2</sys_mod_count>
+        <sys_mod_count>3</sys_mod_count>
         <sys_name>Equipment Request Item Needs Purch-Resp</sys_name>
         <sys_overrides/>
         <sys_package display_value="Apollo-Hospitals" source="x_2223823_apollo_0">87c1422693c89b507b3a7c5efaba1008</sys_package>
@@ -43,7 +43,7 @@
         <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
         <sys_update_name>contract_sla_6a45af3047e4df10273a565a516d4333</sys_update_name>
         <sys_updated_by>vikas.singh</sys_updated_by>
-        <sys_updated_on>2026-11-12 11:23:08</sys_updated_on>
+        <sys_updated_on>2026-11-18 06:44:54</sys_updated_on>
         <target>response</target>
         <timezone/>
         <timezone_source>task.caller_id.time_zone</timezone_source>

@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>x_2223823_apollo_0.LabResultStateMachine</api_name>
+        <caller_access/>
+        <client_callable>false</client_callable>
+        <description/>
+        <mobile_callable>false</mobile_callable>
+        <name>LabResultStateMachine</name>
+        <sandbox_callable>false</sandbox_callable>
+        <script><![CDATA[var LabResultStateMachine = Class.create();
+LabResultStateMachine.prototype = {
+    initialize: function() {
+        this.SCOPE = 'x_2223823_apollo_0';
+        this.TABLE = this.SCOPE + '_lab_test_result';
+        this.LAB_ROLE = this.SCOPE + '.lab_staff';
+        // from -> { to, who }
+        //   who: 'lab' = any user with the lab staff role, 'technician' = also the technician, 'verifier' = also the verifier
+        this.FLOW = {
+            'Requested': {
+                to: 'Scheduled',
+                who: 'lab'
+            },
+            'Scheduled': {
+                to: 'Sample Collection',
+                who: 'lab'
+            },
+            'Sample Collection': {
+                to: 'Sample Received',
+                who: 'lab'
+            },
+            'Sample Received': {
+                to: 'Testing In Progress',
+                who: 'technician'
+            },
+            'Testing In Progress': {
+                to: 'Result Entered',
+                who: 'technician'
+            },
+            'Result Entered': {
+                to: 'Result Verified',
+                who: 'verifier'
+            },
+            'Result Verified': {
+                to: 'Report Published',
+                who: 'lab'
+            },
+            'Report Published': {
+                to: 'Patient Notified',
+                who: 'lab'
+            }
+        };
+    },
+
+    transition: function(result, toLabel) {
+        var from = result.getDisplayValue('status');
+        var step = this.FLOW[from];
+        if (!step || step.to != toLabel) {
+            return this._fail('The status moves forward in order. From ' + from + ' it can only go to ' + (step ? step.to : 'nothing') + '.');
+        }
+        if (result.getValue('locked') == 'true' && toLabel != 'Patient Notified') {
+            return this._fail('A published result is locked and cannot be edited or republished.');
+        }
+        if (!gs.hasRole(this.LAB_ROLE)) {
+            return this._fail('You need the lab staff role to move a lab test result.');
+        }
+        var staff = this._staff();
+        if (!staff) {
+            return this._fail('Your user has no active Staff record, so your hospital cannot be checked.');
+        }
+        if (staff.hospital != result.getValue('hospital') && staff.role != 'Corporate Executive') {
+            return this._fail('You can only work on lab results of your own hospital.');
+        }
+
+        var now = new GlideDateTime();
+
+        if (toLabel == 'Sample Received') {
+            result.setValue('sample_collected_at', now);
+
+        } else if (toLabel == 'Testing In Progress') {
+            // the technician field must be filled before the move, and the current user must be that technician
+            var tech = result.getValue('technician');
+            if (!tech) {
+                return this._fail('Select the technician before starting the test.');
+            }
+            if (tech != staff.id) {
+                return this._fail('Only the technician selected on this result can start the test.');
+            }
+
+        } else if (toLabel == 'Result Entered') {
+            if (result.getValue('technician') != staff.id) {
+                return this._fail('Only the technician of this test can enter the result.');
+            }
+            var bad = this._checkResultValues(result);
+            if (bad) {
+                return this._fail(bad);
+            }
+
+        } else if (toLabel == 'Result Verified') {
+            // the verifier field must be filled before the move, and the current user must be that verifier
+            var ver = result.getValue('verifier');
+            if (!ver) {
+                return this._fail('Select the verifier before verifying the result.');
+            }
+            if (ver != staff.id) {
+                return this._fail('Only the verifier selected on this result can verify it.');
+            }
+            if (ver == result.getValue('technician')) { // VR-12
+                return this._fail('The verifier must be a different person from the technician.');
+            }
+            result.setValue('verified_at', now);
+
+        } else if (toLabel == 'Report Published') {
+            result.setValue('published_at', now);
+            result.setValue('locked', true);
+
+        } else if (toLabel == 'Patient Notified') {
+            if (!this._patientEmail(result)) {
+                return this._fail('The patient has no email address, so the patient cannot be notified.');
+            }
+        }
+
+        var value = this._statusValue(toLabel);
+        if (!value) {
+            return this._fail('Status "' + toLabel + '" is not in the Lab Test Result status choice list.');
+        }
+        result.setValue('status', value);
+        if (!result.update()) {
+            return this._fail('The result could not be saved.');
+        }
+
+        if (toLabel == 'Patient Notified') {
+            this._notifyPatient(result);
+        }
+        return {
+            ok: true,
+            status: toLabel
+        };
+    },
+
+    _notifyPatient: function(result) {
+        gs.eventQueue(this.SCOPE + '.lab_report_ready', result, this._patientEmail(result), result.patient.getDisplayValue());
+    },
+
+    _patientEmail: function(result) {
+        var p = result.patient.getRefRecord();
+        return p.isValidRecord() ? p.getValue('email') : '';
+    },
+
+    _staff: function() {
+
+        var s = new GlideRecord(this.SCOPE + '_staff');
+
+        s.addQuery('user', gs.getUserID());
+        s.addQuery('active', true);
+        s.addQuery('staff_role', 'lab_technician');
+
+        s.setLimit(1);
+        s.query();
+
+        if (!s.next()) {
+            return null;
+        }
+
+        return {
+            id: s.getUniqueValue(),
+            hospital: s.getValue('hospital')
+        };
+    },
+
+    _statusValue: function(label) {
+        var c = new GlideRecord('sys_choice');
+        c.addQuery('name', this.TABLE);
+        c.addQuery('element', 'status');
+        c.addQuery('label', label);
+        c.addQuery('inactive', false);
+        c.query();
+        return c.next() ? c.getValue('value') : '';
+    },
+
+    _checkResultValues: function(result) {
+        var raw = result.getValue('result_values');
+        if (!raw) {
+            return 'Fill in the result values (parameter, value, unit, reference range).';
+        }
+        try {
+            var parsed = JSON.parse(raw);
+            if (!parsed || (Array.isArray(parsed) && parsed.length === 0)) {
+                return 'The result values are empty.';
+            }
+        } catch (e) {
+            return 'The result values must be valid JSON.';
+        }
+        return '';
+    },
+
+    _fail: function(message) {
+        return {
+            ok: false,
+            message: message
+        };
+    },
+    type: 'LabResultStateMachine'
+};]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>vikas.singh</sys_created_by>
+        <sys_created_on>2026-11-18 11:17:03</sys_created_on>
+        <sys_id>5d3f227647e0df50273a565a516d432c</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_name>LabResultStateMachine</sys_name>
+        <sys_package display_value="Apollo-Hospitals" source="x_2223823_apollo_0">87c1422693c89b507b3a7c5efaba1008</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
+        <sys_update_name>sys_script_include_5d3f227647e0df50273a565a516d432c</sys_update_name>
+        <sys_updated_by>vikas.singh</sys_updated_by>
+        <sys_updated_on>2026-11-20 07:01:01</sys_updated_on>
+    </sys_script_include>
+</record_update>

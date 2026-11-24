@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
     <element attributes="enforce_dot_walk_cross_scope_access=true" db_object_id="f25051384790d310273a565a516d43a9" label="Lab Test" max_length="40" name="x_2223823_apollo_0_lab_test" type="collection">
         <element attributes="ignore_filter_on_new=true" default="javascript:global.getNextObjNumberPadded();" label="Code" mandatory="true" max_length="20" name="number" read_only="true" read_only_option="display_read_only" type="string"/>
-        <element label="Required equipment" max_length="32" name="required_equipment" reference="alm_asset" type="reference"/>
+        <element label="Required Model" max_length="32" name="required_equipment" reference="cmdb_model" type="reference"/>
         <element label="Fasting required" mandatory="true" max_length="40" name="fasting_required" type="boolean"/>
         <element choice="1" label="Category" mandatory="true" max_length="40" name="category" type="choice">
             <choice>
