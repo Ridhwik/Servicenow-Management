@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_email">
+    <sys_script_email action="INSERT_OR_UPDATE">
+        <name>apollo_doctor_recipient</name>
+        <new_lines_to_html>false</new_lines_to_html>
+        <script><![CDATA[(function runMailScript(current, template, email, email_action, event) {
+    // 1. If event parm 1 or 2 contains an email address, send to it
+    if (event && event.parm1 && event.parm1.toString().indexOf('@') !== -1) {
+        email.addAddress('to', event.parm1.toString());
+        return;
+    }
+    if (event && event.parm2 && event.parm2.toString().indexOf('@') !== -1) {
+        email.addAddress('to', event.parm2.toString());
+        return;
+    }
+
+    if (!current) return;
+
+    // 2. Direct Doctor reference on Appointment
+    if (current.doctor && current.doctor.getRefRecord) {
+        var docGr = current.doctor.getRefRecord();
+        if (docGr.isValidRecord()) {
+            var docEmail = docGr.getValue('email') || (docGr.user && docGr.user.email ? docGr.user.email.toString() : '');
+            var docName = (docGr.user && docGr.user.name) ? docGr.user.name.toString() : docGr.getDisplayValue();
+            if (docEmail) {
+                email.addAddress('to', docEmail, docName);
+                return;
+            }
+        }
+    }
+
+    // 3. For Lab Test Result: Resolve Doctor from Patient Admission or Appointment
+    if (current.patient) {
+        var patientId = current.getValue('patient');
+        
+        // Check active admission
+        var admGr = new GlideRecord('x_2223823_apollo_0_admissions');
+        admGr.addQuery('patient', patientId);
+        admGr.addQuery('status', 'IN', '1,2,3,4');
+        admGr.orderByDesc('sys_created_on');
+        admGr.setLimit(1);
+        admGr.query();
+        if (admGr.next() && admGr.admitting_doctor) {
+            var admDoc = admGr.admitting_doctor.getRefRecord();
+            var aEmail = admDoc.getValue('email') || (admDoc.user && admDoc.user.email ? admDoc.user.email.toString() : '');
+            var aName = (admDoc.user && admDoc.user.name) ? admDoc.user.name.toString() : admDoc.getDisplayValue();
+            if (aEmail) {
+                email.addAddress('to', aEmail, aName);
+                return;
+            }
+        }
+
+        // Check recent appointment
+        var apptGr = new GlideRecord('x_2223823_apollo_0_appointment');
+        apptGr.addQuery('patient', patientId);
+        apptGr.orderByDesc('start_time');
+        apptGr.setLimit(1);
+        apptGr.query();
+        if (apptGr.next() && apptGr.doctor) {
+            var apDoc = apptGr.doctor.getRefRecord();
+            var apEmail = apDoc.getValue('email') || (apDoc.user && apDoc.user.email ? apDoc.user.email.toString() : '');
+            var apName = (apDoc.user && apDoc.user.name) ? apDoc.user.name.toString() : apDoc.getDisplayValue();
+            if (apEmail) {
+                email.addAddress('to', apEmail, apName);
+                return;
+            }
+        }
+    }
+})(current, template, email, email_action, event);]]></script>
+        <sys_class_name>sys_script_email</sys_class_name>
+        <sys_created_by>integration.user</sys_created_by>
+        <sys_created_on>2026-11-20 12:23:23</sys_created_on>
+        <sys_id>3a624ea347a05790273a565a516d4396</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>apollo_doctor_recipient</sys_name>
+        <sys_package display_value="Apollo-Hospitals" source="x_2223823_apollo_0">87c1422693c89b507b3a7c5efaba1008</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
+        <sys_update_name>sys_script_email_3a624ea347a05790273a565a516d4396</sys_update_name>
+        <sys_updated_by>integration.user</sys_updated_by>
+        <sys_updated_on>2026-11-20 12:23:23</sys_updated_on>
+    </sys_script_email>
+</record_update>

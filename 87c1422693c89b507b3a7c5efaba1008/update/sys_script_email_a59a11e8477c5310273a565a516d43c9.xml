@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_email">
+    <sys_script_email action="INSERT_OR_UPDATE">
+        <name>apollo_lab_team_recipient</name>
+        <new_lines_to_html>false</new_lines_to_html>
+        <script><![CDATA[(function runMailScript(current, template, email, email_action, event) {
+    // 1. If event parm 1 or 2 contains emails or comma-separated user sys_ids / emails, add them
+    if (event && event.parm1) {
+        var p1 = event.parm1.toString();
+        if (p1.indexOf('@') !== -1) {
+            p1.split(',').forEach(function(addr) {
+                var clean = addr.trim();
+                if (clean) email.addAddress('to', clean);
+            });
+            return;
+        } else if (p1.length >= 32) {
+            p1.split(',').forEach(function(id) {
+                var uGr = new GlideRecord('sys_user');
+                if (uGr.get(id.trim()) && uGr.email) {
+                    email.addAddress('to', uGr.email.toString(), uGr.name.toString());
+                }
+            });
+        }
+    }
+
+    if (!current) return;
+
+    // 2. Resolve hospital lab staff group: "<hospital.name> - Lab staff"
+    var added = false;
+    if (current.hospital) {
+        var hospName = current.hospital.getDisplayValue();
+        var grpGr = new GlideRecord('sys_user_group');
+        grpGr.addQuery('name', 'STARTSWITH', hospName);
+        grpGr.addQuery('name', 'CONTAINS', 'Lab');
+        grpGr.query();
+        while (grpGr.next()) {
+            if (grpGr.email) {
+                email.addAddress('to', grpGr.email.toString(), grpGr.name.toString());
+                added = true;
+            } else {
+                var memGr = new GlideRecord('sys_user_grmember');
+                memGr.addQuery('group', grpGr.getUniqueValue());
+                memGr.query();
+                while (memGr.next()) {
+                    if (memGr.user && memGr.user.email) {
+                        email.addAddress('to', memGr.user.email.toString(), memGr.user.name.toString());
+                        added = true;
+                    }
+                }
+            }
+        }
+    }
+
+    // 3. If technician is assigned directly, include technician
+    if (current.technician) {
+        var tech = current.technician.getRefRecord();
+        var tEmail = tech.getValue('email') || (tech.user && tech.user.email ? tech.user.email.toString() : '');
+        if (tEmail) {
+            email.addAddress('cc', tEmail, tech.getDisplayValue());
+        }
+    }
+
+    // 4. Fallback: Default 'Lab Team' group
+    if (!added) {
+        var defGrp = new GlideRecord('sys_user_group');
+        if (defGrp.get('name', 'Lab Team')) {
+            if (defGrp.email) {
+                email.addAddress('to', defGrp.email.toString(), defGrp.name.toString());
+            } else {
+                var dMem = new GlideRecord('sys_user_grmember');
+                dMem.addQuery('group', defGrp.getUniqueValue());
+                dMem.query();
+                while (dMem.next()) {
+                    if (dMem.user && dMem.user.email) {
+                        email.addAddress('to', dMem.user.email.toString(), dMem.user.name.toString());
+                    }
+                }
+            }
+        }
+    }
+})(current, template, email, email_action, event);]]></script>
+        <sys_class_name>sys_script_email</sys_class_name>
+        <sys_created_by>integration.user</sys_created_by>
+        <sys_created_on>2026-11-23 12:03:17</sys_created_on>
+        <sys_id>a59a11e8477c5310273a565a516d43c9</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>apollo_lab_team_recipient</sys_name>
+        <sys_package display_value="Apollo-Hospitals" source="x_2223823_apollo_0">87c1422693c89b507b3a7c5efaba1008</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
+        <sys_update_name>sys_script_email_a59a11e8477c5310273a565a516d43c9</sys_update_name>
+        <sys_updated_by>integration.user</sys_updated_by>
+        <sys_updated_on>2026-11-23 12:03:17</sys_updated_on>
+    </sys_script_email>
+</record_update>

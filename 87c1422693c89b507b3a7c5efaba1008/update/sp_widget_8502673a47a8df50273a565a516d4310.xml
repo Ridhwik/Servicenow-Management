@@ -132,72 +132,234 @@
   };
 }]]></client_script>
         <controller_as>c</controller_as>
-        <css>.hospital-hierarchy-container {
-  max-width: 1200px;
-  margin: 20px auto;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-}
-.main-card {
-  border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-  border: 1px solid #dce4ec;
-}
-.apollo-header {
-  background: linear-gradient(135deg, #0A2540 0%, #0052cc 100%);
-  color: #ffffff;
-  padding: 16px 20px;
-  border-top-left-radius: 8px;
-  border-top-right-radius: 8px;
-}
-.apollo-header .panel-title {
-  color: #ffffff;
-  font-size: 20px;
-}
-.bg-light-blue {
-  background-color: #f0f7ff;
-  border: 1px solid #cce3ff;
-  border-radius: 6px;
-  padding: 15px;
-}
-.block-card {
-  border-left: 4px solid #0052cc;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
-  border-radius: 4px;
-}
-.preview-tree-panel {
-  background: #f8fafc;
-  border: 1px solid #e2e8f0;
-  border-radius: 6px;
-}
-.preview-scroll {
-  max-height: 480px;
-  overflow-y: auto;
-  background: #ffffff;
-  margin: 10px;
-  border-radius: 4px;
-  padding: 12px;
-  border: 1px solid #edf2f7;
-}
-.tree-branch {
-  margin-left: 20px;
-  margin-top: 10px;
-  border-left: 2px dashed #cbd5e1;
-  padding-left: 12px;
-}
-.tree-block-node {
+        <css>.ah {
+  --ah-ink: #0f172a;
+  --ah-body: #334155;
+  --ah-muted: #64748b;
+  --ah-line: #e5e9f0;
+  --ah-bg: #f6f8fb;
+  --ah-surface: #ffffff;
+  --ah-brand: #0b3d91;
+  --ah-brand-soft: #eaf1fc;
+  --ah-accent: #e5484d;
+  --ah-radius: 12px;
+
+  max-width: 1160px;
+  margin: 24px auto;
+  padding: 0 16px;
+  color: var(--ah-body);
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   font-size: 14px;
-  margin-bottom: 4px;
+  line-height: 1.5;
 }
-.tree-floors-list {
-  margin-left: 14px;
+.ah *, .ah *::before, .ah *::after { box-sizing: border-box; }
+
+/* Header */
+.ah-header {
+  display: flex; align-items: center; justify-content: space-between;
+  gap: 16px; margin-bottom: 24px;
 }
-.tree-floor-node {
-  font-size: 12px;
-  color: #64748b;
-  padding: 2px 0;
+.ah-brand { display: flex; align-items: center; gap: 14px; }
+.ah-logo {
+  width: 40px; height: 40px; border-radius: 10px;
+  background: var(--ah-brand); color: #fff;
+  display: inline-flex; align-items: center; justify-content: center;
+  font-size: 16px; flex-shrink: 0;
 }
-.text-xs { font-size: 11px; }
-</css>
+.ah-title { margin: 0; font-size: 20px; font-weight: 600; color: var(--ah-ink); letter-spacing: -0.01em; }
+.ah-subtitle { margin: 2px 0 0; color: var(--ah-muted); font-size: 13px; }
+.ah-tag {
+  font-size: 12px; font-weight: 500; color: var(--ah-brand);
+  background: var(--ah-brand-soft); padding: 5px 12px; border-radius: 999px; white-space: nowrap;
+}
+
+/* Segmented control */
+.ah-segment {
+  display: inline-flex; padding: 4px; margin-bottom: 20px;
+  background: #eceff4; border-radius: 10px;
+}
+.ah-segment-btn {
+  border: 0; background: transparent; cursor: pointer;
+  padding: 8px 18px; border-radius: 7px;
+  font-size: 13px; font-weight: 500; color: var(--ah-muted);
+  transition: all .15s ease;
+}
+.ah-segment-btn:hover { color: var(--ah-ink); }
+.ah-segment-btn.is-active {
+  background: var(--ah-surface); color: var(--ah-ink);
+  box-shadow: 0 1px 2px rgba(15,23,42,.08);
+}
+
+/* Cards */
+.ah-card {
+  background: var(--ah-surface);
+  border: 1px solid var(--ah-line);
+  border-radius: var(--ah-radius);
+  padding: 24px;
+  margin-bottom: 20px;
+}
+.ah-card-head { margin-bottom: 20px; }
+.ah-card-head-row { display: flex; align-items: flex-start; justify-content: space-between; gap: 12px; }
+.ah-eyebrow {
+  display: block; font-size: 11px; font-weight: 600; letter-spacing: .08em;
+  text-transform: uppercase; color: var(--ah-brand); margin-bottom: 4px;
+}
+.ah-card-title { margin: 0; font-size: 16px; font-weight: 600; color: var(--ah-ink); }
+.ah-hint { margin: 4px 0 0; font-size: 13px; color: var(--ah-muted); }
+
+/* Grid + fields */
+.ah-grid { display: grid; gap: 16px; }
+.ah-grid-existing { grid-template-columns: 1.4fr 1fr; align-items: end; }
+.ah-grid-new { grid-template-columns: repeat(12, 1fr); }
+.ah-grid-block { grid-template-columns: repeat(12, 1fr); }
+.ah-span-3 { grid-column: span 3; }
+.ah-span-4 { grid-column: span 4; }
+.ah-span-6 { grid-column: span 6; }
+.ah-span-8 { grid-column: span 8; }
+
+.ah-field { min-width: 0; }
+.ah-label { display: block; margin-bottom: 6px; font-size: 12px; font-weight: 500; color: var(--ah-muted); }
+.ah-req { color: var(--ah-accent); }
+.ah-input {
+  width: 100%; height: 40px; padding: 0 12px;
+  background: var(--ah-surface); color: var(--ah-ink);
+  border: 1px solid var(--ah-line); border-radius: 8px;
+  font-size: 14px; outline: none; box-shadow: none;
+  transition: border-color .15s, box-shadow .15s;
+}
+.ah-input::placeholder { color: #a3aebf; }
+.ah-input:hover { border-color: #cdd5e1; }
+.ah-input:focus { border-color: var(--ah-brand); box-shadow: 0 0 0 3px rgba(11,61,145,.12); }
+
+/* Existing hospital meta */
+.ah-meta { display: flex; gap: 24px; margin: 0; padding: 0 0 4px; }
+.ah-meta div { min-width: 0; }
+.ah-meta dt { font-size: 11px; font-weight: 500; color: var(--ah-muted); text-transform: uppercase; letter-spacing: .05em; }
+.ah-meta dd { margin: 2px 0 0; font-size: 14px; font-weight: 600; color: var(--ah-ink); }
+
+/* Workspace */
+.ah-workspace { display: grid; grid-template-columns: 1.35fr 1fr; gap: 20px; align-items: start; }
+.ah-workspace .ah-card { margin-bottom: 0; }
+.ah-preview { position: sticky; top: 16px; }
+
+/* Block cards */
+.ah-block {
+  border: 1px solid var(--ah-line); border-radius: 10px;
+  padding: 16px; margin-bottom: 12px; background: #fcfdfe;
+}
+.ah-block-head { display: flex; align-items: center; gap: 10px; margin-bottom: 14px; }
+.ah-block-index {
+  width: 24px; height: 24px; border-radius: 50%;
+  background: var(--ah-brand-soft); color: var(--ah-brand);
+  font-size: 12px; font-weight: 600;
+  display: inline-flex; align-items: center; justify-content: center; flex-shrink: 0;
+}
+.ah-block-name { flex: 1; font-weight: 600; color: var(--ah-ink); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.ah-icon-btn {
+  border: 0; background: transparent; color: var(--ah-muted); cursor: pointer;
+  width: 30px; height: 30px; border-radius: 6px; transition: all .15s;
+}
+.ah-icon-btn:hover { background: #fdecec; color: var(--ah-accent); }
+
+/* Toggle switches */
+.ah-switches { display: flex; flex-wrap: wrap; gap: 20px; margin-top: 14px; }
+.ah-switch { display: inline-flex; align-items: center; gap: 8px; margin: 0; cursor: pointer; font-weight: 400; }
+.ah-switch input { position: absolute; opacity: 0; pointer-events: none; }
+.ah-switch-track {
+  position: relative; width: 32px; height: 18px; border-radius: 999px;
+  background: #d5dbe5; transition: background .15s; flex-shrink: 0;
+}
+.ah-switch-track::after {
+  content: ""; position: absolute; top: 2px; left: 2px;
+  width: 14px; height: 14px; border-radius: 50%; background: #fff;
+  box-shadow: 0 1px 2px rgba(0,0,0,.2); transition: transform .15s;
+}
+.ah-switch input:checked + .ah-switch-track { background: var(--ah-brand); }
+.ah-switch input:checked + .ah-switch-track::after { transform: translateX(14px); }
+.ah-switch input:focus-visible + .ah-switch-track { box-shadow: 0 0 0 3px rgba(11,61,145,.2); }
+.ah-switch-text { font-size: 13px; color: var(--ah-body); }
+
+/* Buttons */
+.ah-btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+  height: 40px; padding: 0 18px; border-radius: 8px;
+  font-size: 13px; font-weight: 500; cursor: pointer; text-decoration: none;
+  border: 1px solid transparent; transition: all .15s ease;
+}
+.ah-btn-primary { background: var(--ah-brand); color: #fff; }
+.ah-btn-primary:hover { background: #09337a; color: #fff; }
+.ah-btn-primary[disabled] { opacity: .6; cursor: not-allowed; }
+.ah-btn-ghost { background: var(--ah-surface); color: var(--ah-ink); border-color: var(--ah-line); }
+.ah-btn-ghost:hover { border-color: #cdd5e1; background: var(--ah-bg); color: var(--ah-ink); text-decoration: none; }
+.ah-btn-block { width: 100%; margin-top: 8px; height: 44px; }
+
+/* Preview */
+.ah-stats { display: flex; gap: 6px; flex-wrap: wrap; justify-content: flex-end; }
+.ah-chip {
+  font-size: 11px; font-weight: 500; color: var(--ah-muted);
+  background: var(--ah-bg); border: 1px solid var(--ah-line);
+  padding: 3px 10px; border-radius: 999px; white-space: nowrap;
+}
+.ah-tree {
+  max-height: 460px; overflow-y: auto; padding: 4px 4px 4px 0;
+}
+.ah-tree-root {
+  display: flex; align-items: center; gap: 10px;
+  font-weight: 600; color: var(--ah-ink); padding-bottom: 6px;
+}
+.ah-tree-root .fa { color: var(--ah-accent); }
+.ah-tree-branch {
+  margin: 8px 0 0 8px; padding-left: 16px;
+  border-left: 1px solid var(--ah-line);
+}
+.ah-tree-block { display: flex; align-items: center; gap: 8px; font-weight: 500; color: var(--ah-ink); }
+.ah-tree-block .fa { color: var(--ah-brand); }
+.ah-tree-block-name { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.ah-count {
+  margin-left: auto; font-size: 11px; color: var(--ah-brand);
+  background: var(--ah-brand-soft); padding: 1px 8px; border-radius: 999px;
+}
+.ah-tree-floors { list-style: none; margin: 6px 0 0; padding: 0 0 0 22px; }
+.ah-tree-floors li {
+  position: relative; padding: 2px 0 2px 14px;
+  font-size: 12px; color: var(--ah-muted);
+}
+.ah-tree-floors li::before {
+  content: ""; position: absolute; left: 0; top: 50%;
+  width: 6px; height: 6px; margin-top: -3px;
+  border-radius: 50%; background: #cbd5e1;
+}
+
+/* Success */
+.ah-success { text-align: center; padding: 48px 24px; }
+.ah-success-icon {
+  width: 52px; height: 52px; border-radius: 50%;
+  background: #e8f7ee; color: #1a9d55; font-size: 22px;
+  display: inline-flex; align-items: center; justify-content: center; margin-bottom: 16px;
+}
+.ah-success-title { margin: 0; font-size: 20px; font-weight: 600; color: var(--ah-ink); }
+.ah-success-sub { margin: 6px 0 0; color: var(--ah-muted); }
+.ah-summary { display: flex; justify-content: center; gap: 12px; margin: 28px 0; flex-wrap: wrap; }
+.ah-summary-item {
+  min-width: 150px; padding: 16px 20px;
+  border: 1px solid var(--ah-line); border-radius: 10px; background: var(--ah-bg);
+}
+.ah-summary-num { display: block; font-size: 28px; font-weight: 600; color: var(--ah-brand); line-height: 1.1; }
+.ah-summary-label { font-size: 12px; color: var(--ah-muted); }
+.ah-actions { display: flex; justify-content: center; gap: 10px; flex-wrap: wrap; }
+
+/* Responsive */
+@media (max-width: 900px) {
+  .ah-workspace { grid-template-columns: 1fr; }
+  .ah-preview { position: static; }
+  .ah-grid-existing { grid-template-columns: 1fr; }
+}
+@media (max-width: 600px) {
+  .ah-header { flex-direction: column; align-items: flex-start; }
+  .ah-span-3, .ah-span-4, .ah-span-6, .ah-span-8 { grid-column: span 12; }
+  .ah-meta { flex-wrap: wrap; gap: 16px; }
+  .ah-card { padding: 18px; }
+}</css>
         <data_table>sp_instance</data_table>
         <demo_data/>
         <description/>
@@ -350,250 +512,205 @@
         <sys_created_by>integration.user</sys_created_by>
         <sys_created_on>2026-11-18 11:25:36</sys_created_on>
         <sys_id>8502673a47a8df50273a565a516d4310</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>1</sys_mod_count>
         <sys_name>Hospital Campus Hierarchy Builder</sys_name>
         <sys_package display_value="Apollo-Hospitals" source="x_2223823_apollo_0">87c1422693c89b507b3a7c5efaba1008</sys_package>
         <sys_policy/>
         <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
         <sys_update_name>sp_widget_8502673a47a8df50273a565a516d4310</sys_update_name>
-        <sys_updated_by>integration.user</sys_updated_by>
-        <sys_updated_on>2026-11-18 11:25:36</sys_updated_on>
-        <template><![CDATA[<div class="hospital-hierarchy-container">
-  <div class="panel panel-default shadow-sm main-card">
-    <div class="panel-heading apollo-header">
-      <div class="row align-items-center">
-        <div class="col-xs-8">
-          <h3 class="panel-title font-bold">
-            <i class="fa fa-hospital-o m-r-sm"></i> Hospital Campus Hierarchy Builder
-          </h3>
-          <p class="text-muted m-b-none text-sm">Design and provision asymmetrical hospital buildings and floor structures dynamically.</p>
-        </div>
-        <div class="col-xs-4 text-right">
-          <span class="label label-info">Apollo Operations</span>
-        </div>
+        <sys_updated_by>ridhwik.jangid</sys_updated_by>
+        <sys_updated_on>2026-11-20 09:25:23</sys_updated_on>
+        <template><![CDATA[<div class="ah">
+
+  <!-- HEADER -->
+  <header class="ah-header">
+    <div class="ah-brand">
+      <span class="ah-logo"><i class="fa fa-plus"></i></span>
+      <div>
+        <h1 class="ah-title">Campus Hierarchy Builder</h1>
+        <p class="ah-subtitle">Provision hospital buildings and floors as ServiceNow locations.</p>
       </div>
     </div>
+    <span class="ah-tag">Apollo Hospitals</span>
+  </header>
 
-    <div class="panel-body p-lg">
-      
-      <!-- MODE SELECTION TABS -->
-      <ul class="nav nav-pills m-b-lg">
-        <li ng-class="{'active': c.mode === 'existing'}">
-          <a href="javascript:void(0)" ng-click="c.setMode('existing')">
-            <i class="fa fa-list-alt m-r-xs"></i> Configure Existing Hospital
-          </a>
-        </li>
-        <li ng-class="{'active': c.mode === 'new'}">
-          <a href="javascript:void(0)" ng-click="c.setMode('new')">
-            <i class="fa fa-plus-circle m-r-xs"></i> Provision New Hospital Campus
-          </a>
-        </li>
-      </ul>
+  <!-- MODE SWITCH -->
+  <nav class="ah-segment" ng-if="!c.creationSuccess">
+    <button type="button" class="ah-segment-btn" ng-class="{'is-active': c.mode === 'existing'}" ng-click="c.setMode('existing')">
+      Configure existing
+    </button>
+    <button type="button" class="ah-segment-btn" ng-class="{'is-active': c.mode === 'new'}" ng-click="c.setMode('new')">
+      Provision new campus
+    </button>
+  </nav>
 
-      <!-- MODE 1: EXISTING HOSPITAL SELECTOR -->
-      <div class="well well-sm bg-light-blue" ng-if="c.mode === 'existing' && !c.creationSuccess">
-        <div class="row">
-          <div class="col-md-8">
-            <label class="control-label font-bold text-uppercase"><i class="fa fa-building"></i> Select Target Hospital</label>
-            <select class="form-control input-lg" ng-model="c.selectedHospital" ng-options="h as (h.name + ' [' + h.number + ']') for h in c.data.hospitals" ng-change="c.onHospitalChange()">
-              <option value="">-- Choose Hospital to Configure --</option>
-            </select>
-          </div>
-          <div class="col-md-4" ng-if="c.selectedHospital">
-            <div class="m-t-md">
-              <span class="text-muted">City:</span> <strong>{{c.selectedHospital.city || 'N/A'}}</strong><br/>
-              <span class="text-muted">Emergency Hold:</span> <strong>{{c.selectedHospital.hold_hours_emergency || 4}} hrs</strong><br/>
-              <span class="text-muted">Planned Hold:</span> <strong>{{c.selectedHospital.hold_hours_planned || 24}} hrs</strong>
-            </div>
-          </div>
+  <!-- MODE 1: EXISTING HOSPITAL -->
+  <section class="ah-card" ng-if="c.mode === 'existing' && !c.creationSuccess">
+    <div class="ah-card-head">
+      <span class="ah-eyebrow">Step 1</span>
+      <h2 class="ah-card-title">Select hospital</h2>
+    </div>
+    <div class="ah-grid ah-grid-existing">
+      <div class="ah-field">
+        <label class="ah-label">Target hospital</label>
+        <select class="ah-input" ng-model="c.selectedHospital" ng-options="h as (h.name + ' [' + h.number + ']') for h in c.data.hospitals" ng-change="c.onHospitalChange()">
+          <option value="">Choose a hospital…</option>
+        </select>
+      </div>
+      <dl class="ah-meta" ng-if="c.selectedHospital">
+        <div><dt>City</dt><dd>{{c.selectedHospital.city || 'N/A'}}</dd></div>
+        <div><dt>Emergency hold</dt><dd>{{c.selectedHospital.hold_hours_emergency || 4}} hrs</dd></div>
+        <div><dt>Planned hold</dt><dd>{{c.selectedHospital.hold_hours_planned || 24}} hrs</dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <!-- MODE 2: NEW HOSPITAL -->
+  <section class="ah-card" ng-if="c.mode === 'new' && !c.creationSuccess">
+    <div class="ah-card-head">
+      <span class="ah-eyebrow">Step 1</span>
+      <h2 class="ah-card-title">Hospital details</h2>
+    </div>
+    <div class="ah-grid ah-grid-new">
+      <div class="ah-field ah-span-6">
+        <label class="ah-label">Hospital name <span class="ah-req">*</span></label>
+        <input type="text" class="ah-input" ng-model="c.newHosp.name" placeholder="Apollo Super Speciality Mumbai" />
+      </div>
+      <div class="ah-field ah-span-3">
+        <label class="ah-label">City <span class="ah-req">*</span></label>
+        <input type="text" class="ah-input" ng-model="c.newHosp.city" placeholder="Mumbai" />
+      </div>
+      <div class="ah-field ah-span-3">
+        <label class="ah-label">Phone</label>
+        <input type="text" class="ah-input" ng-model="c.newHosp.phone" placeholder="+91 22 12345678" />
+      </div>
+      <div class="ah-field ah-span-6">
+        <label class="ah-label">Address</label>
+        <input type="text" class="ah-input" ng-model="c.newHosp.address" placeholder="Sector 12, Navi Mumbai" />
+      </div>
+      <div class="ah-field ah-span-3">
+        <label class="ah-label">Emergency hold (hrs)</label>
+        <input type="number" class="ah-input" ng-model="c.newHosp.hold_emergency" />
+      </div>
+      <div class="ah-field ah-span-3">
+        <label class="ah-label">Planned hold (hrs)</label>
+        <input type="number" class="ah-input" ng-model="c.newHosp.hold_planned" />
+      </div>
+    </div>
+  </section>
+
+  <!-- BLOCKS + PREVIEW -->
+  <div class="ah-workspace" ng-if="(c.selectedHospital || (c.mode === 'new' && c.newHosp.name)) && !c.creationSuccess">
+
+    <!-- Left: blocks -->
+    <section class="ah-card ah-blocks">
+      <div class="ah-card-head ah-card-head-row">
+        <div>
+          <span class="ah-eyebrow">Step 2</span>
+          <h2 class="ah-card-title">Buildings</h2>
+          <p class="ah-hint">Name each building and set its number of floors.</p>
         </div>
+        <button type="button" class="ah-btn ah-btn-ghost" ng-click="c.addBlock()">
+          <i class="fa fa-plus"></i> Add block
+        </button>
       </div>
 
-      <!-- MODE 2: NEW HOSPITAL FORM -->
-      <div class="panel panel-default border-info" ng-if="c.mode === 'new' && !c.creationSuccess">
-        <div class="panel-heading bg-info text-white font-bold">
-          <i class="fa fa-plus"></i> New Hospital Details
-        </div>
-        <div class="panel-body">
-          <div class="row">
-            <div class="col-sm-6">
-              <div class="form-group">
-                <label>Hospital Name <span class="text-danger">*</span></label>
-                <input type="text" class="form-control" ng-model="c.newHosp.name" placeholder="e.g. Apollo Super Speciality Mumbai" />
-              </div>
-            </div>
-            <div class="col-sm-3">
-              <div class="form-group">
-                <label>City <span class="text-danger">*</span></label>
-                <input type="text" class="form-control" ng-model="c.newHosp.city" placeholder="e.g. Mumbai" />
-              </div>
-            </div>
-            <div class="col-sm-3">
-              <div class="form-group">
-                <label>Phone</label>
-                <input type="text" class="form-control" ng-model="c.newHosp.phone" placeholder="e.g. +91 22 12345678" />
-              </div>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-sm-6">
-              <div class="form-group">
-                <label>Address</label>
-                <input type="text" class="form-control" ng-model="c.newHosp.address" placeholder="e.g. Sector 12, Navi Mumbai" />
-              </div>
-            </div>
-            <div class="col-sm-3">
-              <div class="form-group">
-                <label>Hold Hours (Emergency)</label>
-                <input type="number" class="form-control" ng-model="c.newHosp.hold_emergency" />
-              </div>
-            </div>
-            <div class="col-sm-3">
-              <div class="form-group">
-                <label>Hold Hours (Planned)</label>
-                <input type="number" class="form-control" ng-model="c.newHosp.hold_planned" />
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- DYNAMIC BLOCKS & PREVIEW SECTION -->
-      <div class="row m-t-md" ng-if="(c.selectedHospital || (c.mode === 'new' && c.newHosp.name)) && !c.creationSuccess">
-        
-        <!-- Left: Blocks Repeater -->
-        <div class="col-md-7">
-          <div class="clearfix m-b-sm">
-            <h4 class="font-bold pull-left m-none"><i class="fa fa-cubes text-primary"></i> Campus Blocks / Buildings</h4>
-            <button class="btn btn-sm btn-success pull-right" ng-click="c.addBlock()">
-              <i class="fa fa-plus"></i> Add Another Block
-            </button>
-          </div>
-          <p class="text-muted text-sm m-b-md">Specify each building name and its unique number of floors.</p>
-
-          <div class="block-cards-list">
-            <div class="panel panel-default block-card m-b-sm" ng-repeat="block in c.blocks track by $index">
-              <div class="panel-heading clearfix p-sm bg-light">
-                <strong class="text-primary"><i class="fa fa-cube"></i> Block {{$index + 1}}: {{block.name || 'Untitled'}}</strong>
-                <button class="btn btn-xs btn-default pull-right text-danger" ng-if="c.blocks.length > 1" ng-click="c.removeBlock($index)" title="Delete Block">
-                  <i class="fa fa-trash"></i> Remove
-                </button>
-              </div>
-              <div class="panel-body p-sm">
-                <div class="row">
-                  <div class="col-sm-7">
-                    <div class="form-group m-b-xs">
-                      <label class="text-xs text-muted">Building Name <span class="text-danger">*</span></label>
-                      <input type="text" class="form-control input-sm" ng-model="block.name" placeholder="e.g. Surgical Tower, OPD Wing" />
-                    </div>
-                  </div>
-                  <div class="col-sm-5">
-                    <div class="form-group m-b-xs">
-                      <label class="text-xs text-muted">Floors Above Ground <span class="text-danger">*</span></label>
-                      <input type="number" class="form-control input-sm" min="1" max="50" ng-model="block.floorCount" />
-                    </div>
-                  </div>
-                </div>
-
-                <div class="row m-t-xs">
-                  <div class="col-sm-6">
-                    <label class="checkbox-inline text-sm">
-                      <input type="checkbox" ng-model="block.includeGround" /> Include Ground Floor (G)
-                    </label>
-                  </div>
-                  <div class="col-sm-6">
-                    <label class="checkbox-inline text-sm">
-                      <input type="checkbox" ng-model="block.includeBasement" /> Include Basement (B1)
-                    </label>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <button class="btn btn-primary btn-block btn-lg m-t-lg" ng-click="c.generateHierarchy()" ng-disabled="c.isSubmitting">
-            <span ng-if="!c.isSubmitting"><i class="fa fa-sitemap"></i> Provision Campus Hierarchy</span>
-            <span ng-if="c.isSubmitting"><i class="fa fa-spinner fa-spin"></i> Creating Locations & Hierarchy...</span>
+      <div class="ah-block" ng-repeat="block in c.blocks track by $index">
+        <div class="ah-block-head">
+          <span class="ah-block-index">{{$index + 1}}</span>
+          <span class="ah-block-name">{{block.name || 'Untitled block'}}</span>
+          <button type="button" class="ah-icon-btn" ng-if="c.blocks.length > 1" ng-click="c.removeBlock($index)" title="Remove block">
+            <i class="fa fa-trash-o"></i>
           </button>
         </div>
 
-        <!-- Right: Live Visual Tree Preview -->
-        <div class="col-md-5">
-          <div class="clearfix m-b-sm">
-            <h4 class="font-bold pull-left m-none"><i class="fa fa-eye text-info"></i> Hierarchy Preview</h4>
-            <div class="pull-right">
-              <span class="badge badge-primary">{{c.blocks.length}} Blocks</span>
-              <span class="badge badge-info">{{c.getTotalFloors()}} Total Floors</span>
-            </div>
+        <div class="ah-grid ah-grid-block">
+          <div class="ah-field ah-span-8">
+            <label class="ah-label">Building name <span class="ah-req">*</span></label>
+            <input type="text" class="ah-input" ng-model="block.name" placeholder="Surgical Tower, OPD Wing" />
           </div>
-          <p class="text-muted text-sm m-b-md">Live preview of locations to be generated.</p>
-
-          <div class="panel panel-default preview-tree-panel">
-            <div class="panel-body preview-scroll">
-              <div class="tree-item">
-                <i class="fa fa-hospital-o text-danger font-bold"></i> 
-                <strong>{{c.mode === 'new' ? (c.newHosp.name || 'New Hospital') : c.selectedHospital.name}}</strong>
-                
-                <div class="tree-branch" ng-repeat="block in c.blocks track by $index">
-                  <div class="tree-block-node">
-                    <i class="fa fa-building-o text-primary"></i> 
-                    <strong>{{block.name || ('Block ' + ($index + 1))}}</strong>
-                    <span class="label label-default">{{c.getPreviewFloors(block).length}} floors</span>
-                  </div>
-                  
-                  <div class="tree-floors-list">
-                    <div class="tree-floor-node" ng-repeat="floor in c.getPreviewFloors(block)">
-                      <i class="fa fa-level-down"></i> <i class="fa fa-square-o text-muted"></i> {{floor}}
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+          <div class="ah-field ah-span-4">
+            <label class="ah-label">Floors above ground <span class="ah-req">*</span></label>
+            <input type="number" class="ah-input" min="1" max="50" ng-model="block.floorCount" />
           </div>
         </div>
 
-      </div>
-
-      <!-- SUCCESS SCREEN -->
-      <div class="success-screen p-lg text-center" ng-if="c.creationSuccess">
-        <div class="alert alert-success">
-          <h2 class="m-t-none"><i class="fa fa-check-circle"></i> Campus Hierarchy Successfully Provisioned!</h2>
-          <p class="lead m-b-none">Successfully created hierarchy for <strong>{{c.createdSummary.hospitalName}}</strong> in ServiceNow Locations.</p>
-        </div>
-
-        <div class="row m-t-lg m-b-lg">
-          <div class="col-sm-4">
-            <div class="well">
-              <h1 class="text-primary font-bold m-none">1</h1>
-              <p class="text-muted m-b-none">Hospital Root Location</p>
-            </div>
-          </div>
-          <div class="col-sm-4">
-            <div class="well">
-              <h1 class="text-success font-bold m-none">{{c.createdSummary.blocksCreated}}</h1>
-              <p class="text-muted m-b-none">Building Blocks Created</p>
-            </div>
-          </div>
-          <div class="col-sm-4">
-            <div class="well">
-              <h1 class="text-info font-bold m-none">{{c.createdSummary.floorsCreated}}</h1>
-              <p class="text-muted m-b-none">Floors Provisioned</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="actions m-t-md">
-          <a href="cmn_location_list.do?sysparm_query=parent={{c.createdSummary.rootSysId}}" target="_blank" class="btn btn-default m-r-sm">
-            <i class="fa fa-external-link"></i> Open Hierarchy in Location Table
-          </a>
-          <button class="btn btn-primary" ng-click="c.resetForm()">
-            <i class="fa fa-refresh"></i> Configure Another Hospital
-          </button>
+        <div class="ah-switches">
+          <label class="ah-switch">
+            <input type="checkbox" ng-model="block.includeGround" />
+            <span class="ah-switch-track"></span>
+            <span class="ah-switch-text">Ground floor (G)</span>
+          </label>
+          <label class="ah-switch">
+            <input type="checkbox" ng-model="block.includeBasement" />
+            <span class="ah-switch-track"></span>
+            <span class="ah-switch-text">Basement (B1)</span>
+          </label>
         </div>
       </div>
 
-    </div>
+      <button type="button" class="ah-btn ah-btn-primary ah-btn-block" ng-click="c.generateHierarchy()" ng-disabled="c.isSubmitting">
+        <span ng-if="!c.isSubmitting"><i class="fa fa-sitemap"></i> Provision campus hierarchy</span>
+        <span ng-if="c.isSubmitting"><i class="fa fa-spinner fa-spin"></i> Creating locations…</span>
+      </button>
+    </section>
+
+    <!-- Right: preview -->
+    <aside class="ah-card ah-preview">
+      <div class="ah-card-head ah-card-head-row">
+        <div>
+          <span class="ah-eyebrow">Preview</span>
+          <h2 class="ah-card-title">Hierarchy</h2>
+        </div>
+        <div class="ah-stats">
+          <span class="ah-chip">{{c.blocks.length}} blocks</span>
+          <span class="ah-chip">{{c.getTotalFloors()}} floors</span>
+        </div>
+      </div>
+
+      <div class="ah-tree">
+        <div class="ah-tree-root">
+          <i class="fa fa-hospital-o"></i>
+          <span>{{c.mode === 'new' ? (c.newHosp.name || 'New hospital') : c.selectedHospital.name}}</span>
+        </div>
+
+        <div class="ah-tree-branch" ng-repeat="block in c.blocks track by $index">
+          <div class="ah-tree-block">
+            <i class="fa fa-building-o"></i>
+            <span class="ah-tree-block-name">{{block.name || ('Block ' + ($index + 1))}}</span>
+            <span class="ah-count">{{c.getPreviewFloors(block).length}}</span>
+          </div>
+          <ul class="ah-tree-floors">
+            <li ng-repeat="floor in c.getPreviewFloors(block)">{{floor}}</li>
+          </ul>
+        </div>
+      </div>
+    </aside>
+
   </div>
+
+  <!-- SUCCESS -->
+  <section class="ah-card ah-success" ng-if="c.creationSuccess">
+    <span class="ah-success-icon"><i class="fa fa-check"></i></span>
+    <h2 class="ah-success-title">Campus hierarchy provisioned</h2>
+    <p class="ah-success-sub">Locations created for <strong>{{c.createdSummary.hospitalName}}</strong>.</p>
+
+    <div class="ah-summary">
+      <div class="ah-summary-item"><span class="ah-summary-num">1</span><span class="ah-summary-label">Root location</span></div>
+      <div class="ah-summary-item"><span class="ah-summary-num">{{c.createdSummary.blocksCreated}}</span><span class="ah-summary-label">Buildings</span></div>
+      <div class="ah-summary-item"><span class="ah-summary-num">{{c.createdSummary.floorsCreated}}</span><span class="ah-summary-label">Floors</span></div>
+    </div>
+
+    <div class="ah-actions">
+      <a href="cmn_location_list.do?sysparm_query=parent={{c.createdSummary.rootSysId}}" target="_blank" class="ah-btn ah-btn-ghost">
+        <i class="fa fa-external-link"></i> Open in Locations
+      </a>
+      <button type="button" class="ah-btn ah-btn-primary" ng-click="c.resetForm()">
+        <i class="fa fa-refresh"></i> Configure another
+      </button>
+    </div>
+  </section>
+
 </div>]]></template>
     </sp_widget>
 </record_update>

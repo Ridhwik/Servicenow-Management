@@ -10,12 +10,13 @@
         </element>
         <element label="Follow-up date" max_length="40" name="follow_up_date" type="glide_date"/>
         <element label="Notes" max_length="4000" name="notes" type="string"/>
-        <element label="Pharmacy request" max_length="32" name="pharmacy_request" reference="sc_req_item" type="reference"/>
+        <element label="Pharmacy Suggested" max_length="32" name="pharmacy_request" reference="x_2223823_apollo_0_pharmacy" type="reference"/>
         <element label="Recorded on" mandatory="true" max_length="40" name="recorded_on" type="glide_date_time"/>
         <element label="Appointment" max_length="32" name="appointment" reference="x_2223823_apollo_0_appointment" reference_qual="javascript: (current.patient &amp;&amp; current.hospital) ? 'patient=' + current.patient + '^hospital=' + current.hospital : 'sys_idISEMPTY';" type="reference" use_reference_qualifier="advanced"/>
         <element label="Restricted" max_length="40" name="restricted" type="boolean"/>
         <element label="Hospital" mandatory="true" max_length="32" name="hospital" reference="x_2223823_apollo_0_hospital" reference_qual="javascript:new x_2223823_apollo_0.HospitalRefQual().getQuery(current)" type="reference" use_reference_qualifier="advanced"/>
         <element label="Diagnosis" max_length="255" name="diagnosis" type="string"/>
+        <element label="Admission" max_length="32" name="admission" reference="x_2223823_apollo_0_admissions" type="reference"/>
         <element label="Patient" mandatory="true" max_length="32" name="patient" reference="x_2223823_apollo_0_patient" type="reference"/>
         <element choice="1" label="Prescription status" max_length="40" name="prescription_status" type="choice">
             <choice>
@@ -26,6 +27,9 @@
             </choice>
         </element>
         <element label="Medication details" max_length="4000" name="medication_details" type="string"/>
+        <index name="index">
+            <element name="admission"/>
+        </index>
         <index name="index">
             <element name="appointment"/>
         </index>
@@ -38,7 +42,7 @@
         <index name="index4">
             <element name="patient"/>
         </index>
-        <index name="index5">
+        <index name="index6">
             <element name="pharmacy_request"/>
         </index>
     </element>

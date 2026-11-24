@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sysevent_email_action">
+    <sysevent_email_action action="INSERT_OR_UPDATE">
+        <action_insert>false</action_insert>
+        <action_update>false</action_update>
+        <active>true</active>
+        <advanced_condition/>
+        <affected_field_on_event/>
+        <category display_value="Uncategorized" name="Uncategorized">c97d83137f4432005f58108c3ffa917a</category>
+        <collection>x_2223823_apollo_0_lab_test_result</collection>
+        <condition/>
+        <content_type>text/html</content_type>
+        <default_digest>false</default_digest>
+        <default_interval/>
+        <description/>
+        <digest_from/>
+        <digest_html/>
+        <digest_reply_to/>
+        <digest_separator_html><![CDATA[<br><hr><br>]]></digest_separator_html>
+        <digest_separator_text><![CDATA[\n--------------------------------------------------------------------------------\n]]></digest_separator_text>
+        <digest_subject/>
+        <digest_template/>
+        <digest_text/>
+        <digest_type>single</digest_type>
+        <digestable>false</digestable>
+        <enable_dynamic_translation>false</enable_dynamic_translation>
+        <event_name>x_2223823_apollo_0.lab_deadline_approaching</event_name>
+        <event_parm_1>true</event_parm_1>
+        <event_parm_2>false</event_parm_2>
+        <exclude_delegates>false</exclude_delegates>
+        <force_delivery>false</force_delivery>
+        <from/>
+        <generation_type>event</generation_type>
+        <importance/>
+        <include_attachments>false</include_attachments>
+        <item>event.parm1</item>
+        <item_table/>
+        <mandatory>false</mandatory>
+        <message/>
+        <message_html><![CDATA[<div style="font-family: Arial, sans-serif; max-width: 620px; margin: auto; padding: 20px; border: 1px solid #e0e0e0; border-radius: 8px;">
+  <div style="background-color: #f39c12; color: #ffffff; padding: 15px; border-radius: 6px;">
+    <h3 style="margin: 0;">⚠️ Turnaround Time (TAT) Deadline Warning</h3>
+    <p style="margin: 5px 0 0 0; font-size: 14px;">Diagnostic Result SLA Threshold Approaching</p>
+  </div>
+  <div style="padding: 20px 0;">
+    <p>Dear <strong>Lab Operations Team</strong>,</p>
+    <p>A scheduled system audit indicates that the following lab test is close to its expected clinical turnaround deadline. Immediate technician attention is required to prevent an SLA breach.</p>
+    <table style="width: 100%; border-collapse: collapse; margin: 15px 0;">
+      <tr style="border-bottom: 1px solid #f0f0f0;"><td style="padding: 8px 0; color: #666;">Order Number:</td><td style="padding: 8px 0; font-weight: bold; color: #f39c12;">${report_number}</td></tr>
+      <tr style="border-bottom: 1px solid #f0f0f0;"><td style="padding: 8px 0; color: #666;">Test Name:</td><td style="padding: 8px 0; font-weight: bold;">${lab_test.name}</td></tr>
+      <tr style="border-bottom: 1px solid #f0f0f0;"><td style="padding: 8px 0; color: #666;">Patient Name:</td><td style="padding: 8px 0;">${patient.name}</td></tr>
+      <tr style="border-bottom: 1px solid #f0f0f0;"><td style="padding: 8px 0; color: #666;">Current Status:</td><td style="padding: 8px 0; font-weight: bold; color: #c0392b;">${status}</td></tr>
+      <tr style="border-bottom: 1px solid #f0f0f0;"><td style="padding: 8px 0; color: #666;">Assigned Technician:</td><td style="padding: 8px 0;">${technician.name}</td></tr>
+      <tr style="border-bottom: 1px solid #f0f0f0;"><td style="padding: 8px 0; color: #666;">Scheduled End Window:</td><td style="padding: 8px 0; font-weight: bold; color: #c0392b;">${scheduled_end}</td></tr>
+      <tr style="border-bottom: 1px solid #f0f0f0;"><td style="padding: 8px 0; color: #666;">Hospital:</td><td style="padding: 8px 0;">${hospital.name}</td></tr>
+    </table>
+    <div style="background-color: #fef9e7; border-left: 4px solid #f39c12; padding: 12px; margin: 15px 0;">
+      <p style="margin: 0; font-size: 14px;"><strong>Action Required:</strong> Expedite test execution, enter results, and submit for pathologist/verifier authorization.</p>
+    </div>
+  </div>
+  <div style="border-top: 1px solid #eee; padding-top: 10px; font-size: 12px; color: #999; text-align: center;">
+    Apollo Hospitals Laboratory Information System (LIS).
+  </div>
+</div>
+${mail_script:apollo_lab_team_recipient}]]></message_html>
+        <message_list/>
+        <message_text/>
+        <name>Lab Team - Deadline Approaching</name>
+        <omit_watermark>false</omit_watermark>
+        <order>100</order>
+        <push_message_only>false</push_message_only>
+        <recipient_fields/>
+        <recipient_groups name="Lab Team">6a13b54647d0d310273a565a516d43b2</recipient_groups>
+        <recipient_users/>
+        <reply_to/>
+        <send_self>true</send_self>
+        <sms_alternate/>
+        <style/>
+        <subject>⚠️ PRIORITY ALERT: Processing Deadline Approaching for ${lab_test.name} [${report_number}]</subject>
+        <subscribable>false</subscribable>
+        <sys_class_name>sysevent_email_action</sys_class_name>
+        <sys_created_by>integration.user</sys_created_by>
+        <sys_created_on>2026-11-23 12:03:25</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>2f9a91e8477c5310273a565a516d434d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Lab Team - Deadline Approaching</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Apollo-Hospitals" source="x_2223823_apollo_0">87c1422693c89b507b3a7c5efaba1008</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
+        <sys_update_name>sysevent_email_action_2f9a91e8477c5310273a565a516d434d</sys_update_name>
+        <sys_updated_by>integration.user</sys_updated_by>
+        <sys_updated_on>2026-11-23 12:03:25</sys_updated_on>
+        <sys_version>2</sys_version>
+        <template/>
+        <type>email</type>
+        <weight>0</weight>
+    </sysevent_email_action>
+</record_update>
