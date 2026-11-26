@@ -1,11 +1,58 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
-    <element attributes="enforce_dot_walk_cross_scope_access=true" db_object_id="c2964ce6479c9710273a565a516d433f" max_length="40" name="x_2223823_apollo_0_admissions" type="collection">
-        <element label="Admitting doctor" mandatory="true" max_length="32" name="admitting_doctor" reference="x_2223823_apollo_0_doctor" reference_qual="javascript: current.hospital ? 'primary_hospital=' + current.hospital + '^status=1' : 'sys_idISEMPTY';" type="reference" use_reference_qualifier="advanced"/>
-        <element label="Room" max_length="32" name="room" reference="x_2223823_apollo_0_rooms" reference_qual="javascript: new x_2223823_apollo_0.HospitalRefQual().getRoomsWithFreeBed(current);" type="reference" use_reference_qualifier="advanced"/>
-        <element label="Hospital" mandatory="true" max_length="32" name="hospital" reference="x_2223823_apollo_0_hospital" reference_qual="javascript:new x_2223823_apollo_0.HospitalRefQual().getQuery(current)" type="reference" use_reference_qualifier="advanced"/>
-        <element label="Final invoice" max_length="32" name="final_invoice" reference="x_2223823_apollo_0_invoice" reference_qual="javascript: current.sys_id ? 'admission=' + current.sys_id : 'sys_idISEMPTY';" type="reference" use_reference_qualifier="advanced"/>
-        <element label="Diagnosed by" max_length="32" name="diagnosed_by" reference="x_2223823_apollo_0_doctor" reference_qual="status=1^EQ" reference_qual_condition="status=1^EQ" type="reference"/>
-        <element label="Bed" max_length="32" name="bed" reference="x_2223823_apollo_0_beds" reference_qual="javascript: current.room ? ('room=' + current.room + '^active=true^status=1') : 'sys_idISEMPTY';" type="reference" use_reference_qualifier="advanced"/>
-        <element label="Pharmacy Suggested" max_length="1024" name="pharmacy_suggested" reference="x_2223823_apollo_0_pharmacy" type="glide_list"/>
+    <element attributes="enforce_dot_walk_cross_scope_access=true" db_object_id="c2964ce6479c9710273a565a516d433f" extends="task" label="Admissions" max_length="40" name="x_2223823_apollo_0_admissions" type="collection">
+        <element attributes="edge_encryption_enabled=true" choice="1" label="Admission type" mandatory="true" max_length="40" name="admission_type" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Planned" sequence="10" value="1"/>
+                <element inactive_on_update="false" label="Emergency" sequence="20" value="2"/>
+                <element inactive_on_update="false" label="Transfer" sequence="30" value="3"/>
+            </choice>
+        </element>
+        <element attributes="edge_encryption_enabled=true" choice="1" label="Requested room category" mandatory="true" max_length="40" name="room_category" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Private / Deluxe / Suite" sequence="20" value="Private / Deluxe / Suite"/>
+                <element inactive_on_update="false" label="Day Care" sequence="80" value="Day Care"/>
+                <element inactive_on_update="false" label="Emergency" sequence="90" value="Emergency"/>
+                <element inactive_on_update="false" label="General Ward" sequence="10" value="General Ward"/>
+                <element inactive_on_update="false" label="NICU" sequence="50" value="NICU"/>
+                <element inactive_on_update="false" label="HDU" sequence="40" value="HDU"/>
+                <element inactive_on_update="false" label="Isolation" sequence="70" value="Isolation"/>
+                <element inactive_on_update="false" label="Labour / Maternity" sequence="60" value="Labour / Maternity"/>
+                <element inactive_on_update="false" label="Operation Theatre" sequence="100" value="Operation Theatre"/>
+                <element inactive_on_update="false" label="ICU" sequence="30" value="ICU"/>
+            </choice>
+        </element>
+        <element label="Reason for admission" mandatory="true" max_length="255" name="reason" type="string"/>
+        <element label="Expected discharge date" max_length="40" name="expected_discharge_date" type="glide_date"/>
+        <element label="Admission date and time" mandatory="true" max_length="40" name="admission_date" type="glide_date_time"/>
+        <element attributes="edge_encryption_enabled=true,encode_utf8=false" label="Patient" mandatory="true" max_length="32" name="patient" reference="x_2223823_apollo_0_patient" type="reference"/>
+        <element attributes="edge_encryption_enabled=true,encode_utf8=false" label="Bed" max_length="32" name="bed" reference="x_2223823_apollo_0_beds" reference_qual="javascript: current.room ? ('room=' + current.room + '^active=true^status=1') : 'sys_idISEMPTY';" type="reference" use_reference_qualifier="advanced"/>
+        <element attributes="edge_encryption_enabled=true,omit_sys_original=true" label="Advance amount paid" mandatory="true" max_length="20" name="advance_amount" type="currency"/>
+        <element attributes="edge_encryption_enabled=true" choice="1" default="1" label="Approval state" mandatory="true" max_length="40" name="approval_state" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Not required" sequence="10" value="1"/>
+                <element inactive_on_update="false" label="Approved" sequence="30" value="3"/>
+                <element inactive_on_update="false" label="Rejected" sequence="40" value="4"/>
+                <element inactive_on_update="false" label="Pending" sequence="20" value="2"/>
+            </choice>
+        </element>
+        <element attributes="edge_encryption_enabled=true" choice="1" default="1" label="Status" mandatory="true" max_length="40" name="status" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Bed reserved" sequence="30" value="3"/>
+                <element inactive_on_update="false" label="Admitted" sequence="40" value="4"/>
+                <element inactive_on_update="false" label="Discharged" sequence="50" value="5"/>
+                <element inactive_on_update="false" label="Cancelled" sequence="60" value="6"/>
+                <element inactive_on_update="false" label="Awaiting approval" sequence="20" value="2"/>
+                <element inactive_on_update="false" label="Requested" sequence="10" value="1"/>
+            </choice>
+        </element>
+        <element label="Discharge date and time" max_length="40" name="discharge_date" type="glide_date_time"/>
+        <element label="Attendant name" max_length="100" name="attendant_name" type="string"/>
+        <element attributes="edge_encryption_enabled=true,encode_utf8=false" label="Admitting doctor" mandatory="true" max_length="32" name="admitting_doctor" reference="x_2223823_apollo_0_doctor" reference_qual="javascript: current.hospital ? 'primary_hospital=' + current.hospital + '^status=1' : 'sys_idISEMPTY';" type="reference" use_reference_qualifier="advanced"/>
+        <element attributes="edge_encryption_enabled=true,encode_utf8=false" label="Diagnosed by" max_length="32" name="diagnosed_by" reference="x_2223823_apollo_0_doctor" reference_qual="status=1^EQ" reference_qual_condition="status=1^EQ" type="reference"/>
+        <element attributes="edge_encryption_enabled=true,encode_utf8=false" label="Room" max_length="32" name="room" reference="x_2223823_apollo_0_rooms" reference_qual="javascript: new x_2223823_apollo_0.HospitalRefQual().getRoomsWithFreeBed(current);" type="reference" use_reference_qualifier="advanced"/>
+        <element attributes="edge_encryption_enabled=true" label="Attendant phone" max_length="40" name="attendant_phone" type="phone_number_e164"/>
+        <element attributes="edge_encryption_enabled=true,encode_utf8=false" label="Final invoice" max_length="32" name="final_invoice" reference="x_2223823_apollo_0_invoice" reference_qual="javascript: current.sys_id ? 'admission=' + current.sys_id : 'sys_idISEMPTY';" type="reference" use_reference_qualifier="advanced"/>
+        <element attributes="edge_encryption_enabled=true,encode_utf8=false" label="Hospital" mandatory="true" max_length="32" name="hospital" reference="x_2223823_apollo_0_hospital" reference_qual="javascript:new x_2223823_apollo_0.HospitalRefQual().getQuery(current)" type="reference" use_reference_qualifier="advanced"/>
+        <element attributes="edge_encryption_enabled=true,no_sort=true,slushbucket_ref_no_expand=true" label="Pharmacy Suggested" max_length="1024" name="pharmacy_suggested" reference="x_2223823_apollo_0_pharmacy" type="glide_list"/>
     </element>
 </database>

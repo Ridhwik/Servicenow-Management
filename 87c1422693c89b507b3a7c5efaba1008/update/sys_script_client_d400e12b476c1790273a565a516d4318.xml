@@ -8,7 +8,7 @@
         <global>true</global>
         <isolate_script>true</isolate_script>
         <messages/>
-        <name>Set Approval State for Emergency Admission</name>
+        <name>Set Approval State for Emergency Admissi</name>
         <order/>
         <script><![CDATA[function onChange(control, oldValue, newValue, isLoading, isTemplate) {
     if (isTemplate) {

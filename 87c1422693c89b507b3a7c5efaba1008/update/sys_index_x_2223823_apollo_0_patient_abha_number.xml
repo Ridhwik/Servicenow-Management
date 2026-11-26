@@ -2,7 +2,7 @@
     <sys_index action="INSERT_OR_UPDATE">
         <access_method>btree</access_method>
         <col_name_string>abha_number</col_name_string>
-        <index_col_name element="abha_number" name="x_2223823_apollo_0_patient">e3ce81fc4750d310273a565a516d43cb</index_col_name>
+        <index_col_name element="abha_number" name="x_2223823_apollo_0_patient">d641069053285f10ed9b78f0a0490e2e</index_col_name>
         <logical_table_name>x_2223823_apollo_0_patient</logical_table_name>
         <sys_class_name>sys_index</sys_class_name>
         <sys_created_by>system</sys_created_by>

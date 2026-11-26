@@ -3,7 +3,7 @@
         <sys_ui_list_element action="INSERT_OR_UPDATE">
             <average_value>false</average_value>
             <element>sys_id</element>
-            <list_id display_value="x_2223823_apollo_0_staff" element="NULL" name="x_2223823_apollo_0_staff" parent="NULL" relationship="NULL" sys_domain="global" view="544ce341f033031001ffe61a9d6c4819">ba525484476cd710273a565a516d438d</list_id>
+            <list_id display_value="x_2223823_apollo_0_staff" element="NULL" name="x_2223823_apollo_0_staff" parent="NULL" relationship="NULL" sys_domain="global" view="7c10f2738c1103100a22deb6dd2b4e04">ba525484476cd710273a565a516d438d</list_id>
             <max_value>false</max_value>
             <min_value>false</min_value>
             <position>0</position>
@@ -18,7 +18,7 @@
         <sys_ui_list_element action="INSERT_OR_UPDATE">
             <average_value>false</average_value>
             <element>user</element>
-            <list_id display_value="x_2223823_apollo_0_staff" element="NULL" name="x_2223823_apollo_0_staff" parent="NULL" relationship="NULL" sys_domain="global" view="544ce341f033031001ffe61a9d6c4819">ba525484476cd710273a565a516d438d</list_id>
+            <list_id display_value="x_2223823_apollo_0_staff" element="NULL" name="x_2223823_apollo_0_staff" parent="NULL" relationship="NULL" sys_domain="global" view="7c10f2738c1103100a22deb6dd2b4e04">ba525484476cd710273a565a516d438d</list_id>
             <max_value>false</max_value>
             <min_value>false</min_value>
             <position>1</position>
@@ -33,7 +33,7 @@
         <sys_ui_list_element action="INSERT_OR_UPDATE">
             <average_value>false</average_value>
             <element>hospital</element>
-            <list_id display_value="x_2223823_apollo_0_staff" element="NULL" name="x_2223823_apollo_0_staff" parent="NULL" relationship="NULL" sys_domain="global" view="544ce341f033031001ffe61a9d6c4819">ba525484476cd710273a565a516d438d</list_id>
+            <list_id display_value="x_2223823_apollo_0_staff" element="NULL" name="x_2223823_apollo_0_staff" parent="NULL" relationship="NULL" sys_domain="global" view="7c10f2738c1103100a22deb6dd2b4e04">ba525484476cd710273a565a516d438d</list_id>
             <max_value>false</max_value>
             <min_value>false</min_value>
             <position>2</position>
@@ -48,7 +48,7 @@
         <sys_ui_list_element action="INSERT_OR_UPDATE">
             <average_value>false</average_value>
             <element>department</element>
-            <list_id display_value="x_2223823_apollo_0_staff" element="NULL" name="x_2223823_apollo_0_staff" parent="NULL" relationship="NULL" sys_domain="global" view="544ce341f033031001ffe61a9d6c4819">ba525484476cd710273a565a516d438d</list_id>
+            <list_id display_value="x_2223823_apollo_0_staff" element="NULL" name="x_2223823_apollo_0_staff" parent="NULL" relationship="NULL" sys_domain="global" view="7c10f2738c1103100a22deb6dd2b4e04">ba525484476cd710273a565a516d438d</list_id>
             <max_value>false</max_value>
             <min_value>false</min_value>
             <position>3</position>
@@ -63,7 +63,7 @@
         <sys_ui_list_element action="INSERT_OR_UPDATE">
             <average_value>false</average_value>
             <element>reports_to</element>
-            <list_id display_value="x_2223823_apollo_0_staff" element="NULL" name="x_2223823_apollo_0_staff" parent="NULL" relationship="NULL" sys_domain="global" view="544ce341f033031001ffe61a9d6c4819">ba525484476cd710273a565a516d438d</list_id>
+            <list_id display_value="x_2223823_apollo_0_staff" element="NULL" name="x_2223823_apollo_0_staff" parent="NULL" relationship="NULL" sys_domain="global" view="7c10f2738c1103100a22deb6dd2b4e04">ba525484476cd710273a565a516d438d</list_id>
             <max_value>false</max_value>
             <min_value>false</min_value>
             <position>4</position>
@@ -78,7 +78,7 @@
         <sys_ui_list_element action="INSERT_OR_UPDATE">
             <average_value>false</average_value>
             <element>staff_role</element>
-            <list_id display_value="x_2223823_apollo_0_staff" element="NULL" name="x_2223823_apollo_0_staff" parent="NULL" relationship="NULL" sys_domain="global" view="544ce341f033031001ffe61a9d6c4819">ba525484476cd710273a565a516d438d</list_id>
+            <list_id display_value="x_2223823_apollo_0_staff" element="NULL" name="x_2223823_apollo_0_staff" parent="NULL" relationship="NULL" sys_domain="global" view="7c10f2738c1103100a22deb6dd2b4e04">ba525484476cd710273a565a516d438d</list_id>
             <max_value>false</max_value>
             <min_value>false</min_value>
             <position>5</position>
@@ -115,7 +115,7 @@
             <sys_updated_by>ridhwik.jangid</sys_updated_by>
             <sys_updated_on>2026-11-09 07:15:02</sys_updated_on>
             <sys_user/>
-            <view display_value="Reference List" name="sys_ref_list">544ce341f033031001ffe61a9d6c4819</view>
+            <view display_value="Reference List" name="sys_ref_list">7c10f2738c1103100a22deb6dd2b4e04</view>
             <view_name/>
         </sys_ui_list>
     </sys_ui_list>

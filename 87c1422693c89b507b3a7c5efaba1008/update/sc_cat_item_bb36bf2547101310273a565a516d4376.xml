@@ -46,7 +46,7 @@
         <omit_price>false</omit_price>
         <order>0</order>
         <ordered_item_link/>
-        <owner display_value="Nilesh  Chaurasia">207168b047509310273a565a516d437e</owner>
+        <owner display_value="">207168b047509310273a565a516d437e</owner>
         <picture>cb76b76547101310273a565a516d433f</picture>
         <preview>JavaScript: popupOpenStandard("com.glideapp.servicecatalog_cat_item_view.do?v=1&amp;sysparm_id=bb36bf2547101310273a565a516d4376&amp;sysparm_preview=true", "summary");</preview>
         <price>0</price>
@@ -68,21 +68,21 @@
         <sys_created_by>nilesh.chaurasia</sys_created_by>
         <sys_created_on>2026-11-02 05:26:44</sys_created_on>
         <sys_id>bb36bf2547101310273a565a516d4376</sys_id>
-        <sys_mod_count>48</sys_mod_count>
+        <sys_mod_count>43</sys_mod_count>
         <sys_name>Housekeeping</sys_name>
         <sys_package display_value="Apollo-Hospitals" source="x_2223823_apollo_0">87c1422693c89b507b3a7c5efaba1008</sys_package>
         <sys_policy/>
         <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
         <sys_update_name>sc_cat_item_bb36bf2547101310273a565a516d4376</sys_update_name>
         <sys_updated_by>system</sys_updated_by>
-        <sys_updated_on>2026-11-19 10:46:35</sys_updated_on>
+        <sys_updated_on>2026-11-02 06:00:36</sys_updated_on>
         <taxonomy_topic/>
         <template/>
         <template_manager_roles/>
         <type>item</type>
         <use_sc_layout>true</use_sc_layout>
         <vendor/>
-        <version>48</version>
+        <version>43</version>
         <visible_bundle>true</visible_bundle>
         <visible_guide>true</visible_guide>
         <visible_standalone>true</visible_standalone>

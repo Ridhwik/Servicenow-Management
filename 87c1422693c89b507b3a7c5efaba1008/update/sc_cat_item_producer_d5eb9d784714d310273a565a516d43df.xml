@@ -48,7 +48,7 @@
         <omit_price>false</omit_price>
         <order>0</order>
         <ordered_item_link/>
-        <owner display_value="Ridhwik Jangid">93d095784790d310273a565a516d4305</owner>
+        <owner display_value="Ridhwik Jangid">1b06d4a2530c5310ed9b78f0a0490e5d</owner>
         <picture/>
         <post_insert_script><![CDATA[/**
 * This script is executed after the record is generated. 

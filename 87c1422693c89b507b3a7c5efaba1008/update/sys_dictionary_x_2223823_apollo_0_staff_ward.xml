@@ -2,7 +2,7 @@
     <sys_dictionary action="INSERT_OR_UPDATE" element="ward" table="x_2223823_apollo_0_staff">
         <active>true</active>
         <array>false</array>
-        <attributes>ref_qual_elements=hospital;department</attributes>
+        <attributes>edge_encryption_enabled=true,encode_utf8=false,ref_qual_elements=hospital;department</attributes>
         <audit>false</audit>
         <calculation/>
         <choice/>

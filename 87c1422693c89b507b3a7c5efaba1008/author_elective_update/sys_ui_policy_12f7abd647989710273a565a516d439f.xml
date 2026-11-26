@@ -84,7 +84,7 @@
         <sys_parent display_value="Lab Test Result">90bede9247d85710273a565a516d431f</sys_parent>
         <sys_policy/>
         <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
-        <sys_scope_delete display_value="">1a2f7aa8dfc34e3a86d3f0bede3c2784</sys_scope_delete>
+        <sys_scope_delete/>
         <sys_update_name>sys_ui_policy_12f7abd647989710273a565a516d439f</sys_update_name>
         <sys_update_version display_value="sys_ui_policy_12f7abd647989710273a565a516d439f">8638e31a47989710273a565a516d4387</sys_update_version>
         <sys_updated_by>vikas.singh</sys_updated_by>

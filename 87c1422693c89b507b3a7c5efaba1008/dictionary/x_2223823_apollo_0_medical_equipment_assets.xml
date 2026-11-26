@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element attributes="enforce_dot_walk_cross_scope_access=true" db_object_id="809aea7a47a0df50273a565a516d4355" extends="alm_asset" label="Medical Equipment Assets" max_length="40" name="x_2223823_apollo_0_medical_equipment_assets" type="collection">
+        <element attributes="edge_encryption_enabled=true" choice="1" label="Equipment Type" mandatory="true" max_length="40" name="equipment_type" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="CT" sequence="1" value="CT"/>
+                <element inactive_on_update="false" label="Ultrasound" sequence="3" value="Ultrasound"/>
+                <element inactive_on_update="false" label="Vantilator" sequence="5" value="Vantilator"/>
+                <element inactive_on_update="false" label="MRI" sequence="0" value="MRI"/>
+                <element inactive_on_update="false" label="Patient Monitor" sequence="6" value="Patient Monitor"/>
+                <element inactive_on_update="false" label="X-ray" sequence="2" value="X-ray"/>
+                <element inactive_on_update="false" label="ECG" sequence="4" value="ECG"/>
+            </choice>
+        </element>
+        <element attributes="edge_encryption_enabled=true,encode_utf8=false" label="Hospital" mandatory="true" max_length="32" name="hospital" reference="x_2223823_apollo_0_hospital" reference_qual="javascript:new x_2223823_apollo_0.HospitalRefQual().getQuery(current)" type="reference" use_reference_qualifier="advanced"/>
+        <index name="index">
+            <element name="hospital"/>
+        </index>
+    </element>
+</database>

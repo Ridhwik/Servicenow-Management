@@ -57,7 +57,7 @@
         <sys_parent display_value="Mandotary fields in Patient">37cb16bb930417107b3a7c5efaba104f</sys_parent>
         <sys_policy/>
         <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
-        <sys_scope_delete display_value="">1a2f7aa8dfc34e3a86d3f0bede3c2784</sys_scope_delete>
+        <sys_scope_delete/>
         <sys_update_name>sys_data_policy_rule_21ac123f930417107b3a7c5efaba10fe</sys_update_name>
         <sys_update_version display_value="sys_data_policy_rule_21ac123f930417107b3a7c5efaba10fe">c752aaf7934417107b3a7c5efaba1062</sys_update_version>
         <sys_updated_by>jenish.jain</sys_updated_by>

@@ -18,7 +18,7 @@
         <filter_condition/>
         <is_rest>false</is_rest>
         <message/>
-        <name>Validate Active Reservation and Set Expiry</name>
+        <name>Validate Active Reservation and Set Expi</name>
         <order>100</order>
         <priority>100</priority>
         <rest_method/>

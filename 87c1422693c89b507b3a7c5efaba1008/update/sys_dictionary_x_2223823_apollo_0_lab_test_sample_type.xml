@@ -2,7 +2,7 @@
     <sys_dictionary action="INSERT_OR_UPDATE" element="sample_type" table="x_2223823_apollo_0_lab_test">
         <active>true</active>
         <array>false</array>
-        <attributes/>
+        <attributes>edge_encryption_enabled=true</attributes>
         <audit>false</audit>
         <calculation/>
         <choice>1</choice>

@@ -7,6 +7,8 @@
         <order>100</order>
         <primary_field>name</primary_field>
         <secondary_fields/>
+        <show_live_presence>true</show_live_presence>
+        <show_view_switcher>true</show_view_switcher>
         <specificity>40</specificity>
         <subheading/>
         <sys_class_name>sys_aw_form_header</sys_class_name>

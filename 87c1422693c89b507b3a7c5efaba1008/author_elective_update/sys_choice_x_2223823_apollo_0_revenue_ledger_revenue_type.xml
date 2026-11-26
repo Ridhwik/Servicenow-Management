@@ -25,13 +25,13 @@
             <name>x_2223823_apollo_0_revenue_ledger</name>
             <sequence>1</sequence>
             <synonyms/>
-            <sys_created_by>ayush.mangal</sys_created_by>
-            <sys_created_on>2026-11-02 05:53:22</sys_created_on>
+            <sys_created_by>harshvardhan.chhapola</sys_created_by>
+            <sys_created_on>2026-11-05 06:47:15</sys_created_on>
             <sys_domain>global</sys_domain>
             <sys_domain_path>/</sys_domain_path>
             <sys_mod_count>0</sys_mod_count>
-            <sys_updated_by>ayush.mangal</sys_updated_by>
-            <sys_updated_on>2026-11-02 05:53:22</sys_updated_on>
+            <sys_updated_by>harshvardhan.chhapola</sys_updated_by>
+            <sys_updated_on>2026-11-05 06:47:15</sys_updated_on>
             <value>consultation</value>
         </sys_choice>
         <sys_choice action="INSERT_OR_UPDATE">
@@ -44,13 +44,13 @@
             <name>x_2223823_apollo_0_revenue_ledger</name>
             <sequence>2</sequence>
             <synonyms/>
-            <sys_created_by>ayush.mangal</sys_created_by>
-            <sys_created_on>2026-11-02 05:53:25</sys_created_on>
+            <sys_created_by>harshvardhan.chhapola</sys_created_by>
+            <sys_created_on>2026-11-05 06:47:15</sys_created_on>
             <sys_domain>global</sys_domain>
             <sys_domain_path>/</sys_domain_path>
             <sys_mod_count>0</sys_mod_count>
-            <sys_updated_by>ayush.mangal</sys_updated_by>
-            <sys_updated_on>2026-11-02 05:53:25</sys_updated_on>
+            <sys_updated_by>harshvardhan.chhapola</sys_updated_by>
+            <sys_updated_on>2026-11-05 06:47:15</sys_updated_on>
             <value>lab</value>
         </sys_choice>
         <sys_choice action="INSERT_OR_UPDATE">
@@ -63,13 +63,13 @@
             <name>x_2223823_apollo_0_revenue_ledger</name>
             <sequence>3</sequence>
             <synonyms/>
-            <sys_created_by>ayush.mangal</sys_created_by>
-            <sys_created_on>2026-11-02 05:53:27</sys_created_on>
+            <sys_created_by>harshvardhan.chhapola</sys_created_by>
+            <sys_created_on>2026-11-05 06:47:15</sys_created_on>
             <sys_domain>global</sys_domain>
             <sys_domain_path>/</sys_domain_path>
             <sys_mod_count>0</sys_mod_count>
-            <sys_updated_by>ayush.mangal</sys_updated_by>
-            <sys_updated_on>2026-11-02 05:53:27</sys_updated_on>
+            <sys_updated_by>harshvardhan.chhapola</sys_updated_by>
+            <sys_updated_on>2026-11-05 06:47:15</sys_updated_on>
             <value>bed_or_room</value>
         </sys_choice>
         <sys_choice action="INSERT_OR_UPDATE">
@@ -82,13 +82,13 @@
             <name>x_2223823_apollo_0_revenue_ledger</name>
             <sequence>4</sequence>
             <synonyms/>
-            <sys_created_by>ayush.mangal</sys_created_by>
-            <sys_created_on>2026-11-02 05:53:29</sys_created_on>
+            <sys_created_by>harshvardhan.chhapola</sys_created_by>
+            <sys_created_on>2026-11-05 06:47:15</sys_created_on>
             <sys_domain>global</sys_domain>
             <sys_domain_path>/</sys_domain_path>
             <sys_mod_count>0</sys_mod_count>
-            <sys_updated_by>ayush.mangal</sys_updated_by>
-            <sys_updated_on>2026-11-02 05:53:29</sys_updated_on>
+            <sys_updated_by>harshvardhan.chhapola</sys_updated_by>
+            <sys_updated_on>2026-11-05 06:47:15</sys_updated_on>
             <value>surgery</value>
         </sys_choice>
     </sys_choice>

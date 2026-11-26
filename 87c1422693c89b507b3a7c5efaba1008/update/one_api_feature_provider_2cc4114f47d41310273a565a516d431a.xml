@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="one_api_feature_provider">
+    <one_api_feature_provider action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <feature display_value="0bcf07b243d4f1106ccb3fc9dbb8f26f">e8c4114f47d41310273a565a516d4318</feature>
+        <feature_service display_value="OneExtendGenericProvider">5233278353111110c271ddeeff7b129b</feature_service>
+        <feature_service_factory><![CDATA[(function() { return new global.OneExtendGenericProvider(); })()]]></feature_service_factory>
+        <name>Participant Suggestions provider</name>
+        <short_description>Auto Generated </short_description>
+        <sys_class_name>one_api_feature_provider</sys_class_name>
+        <sys_created_by>ayush.mangal</sys_created_by>
+        <sys_created_on>2026-11-06 09:31:14</sys_created_on>
+        <sys_id>2cc4114f47d41310273a565a516d431a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Participant Suggestions provider</sys_name>
+        <sys_package display_value="Apollo-Hospitals" source="x_2223823_apollo_0">87c1422693c89b507b3a7c5efaba1008</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
+        <sys_update_name>one_api_feature_provider_2cc4114f47d41310273a565a516d431a</sys_update_name>
+        <sys_updated_by>ayush.mangal</sys_updated_by>
+        <sys_updated_on>2026-11-06 09:31:14</sys_updated_on>
+        <type>script</type>
+        <type_document display_value="ParticipantSuggestionsPrediction">cea94f19a37482106cdec213d51e61d7</type_document>
+    </one_api_feature_provider>
+</record_update>

@@ -1,0 +1,326 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_ui_section action="DELETE" caption="Admission Form" section_id="41f8a4af938c13107b3a7c5efaba1023" sys_domain="global" table="x_2223823_apollo_0_admission" version="3" view="">
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>number</element>
+            <position>0</position>
+            <sys_created_by>ridhwik.jangid</sys_created_by>
+            <sys_created_on>2026-11-04 08:54:21</sys_created_on>
+            <sys_id>8129bade47109710273a565a516d43c3</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Admission Form" display_value="Admission Form" name="x_2223823_apollo_0_admission" sys_domain="global" view="Default view">41f8a4af938c13107b3a7c5efaba1023</sys_ui_section>
+            <sys_updated_by>ridhwik.jangid</sys_updated_by>
+            <sys_updated_on>2026-11-04 08:54:21</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>status</element>
+            <position>1</position>
+            <sys_created_by>ridhwik.jangid</sys_created_by>
+            <sys_created_on>2026-11-04 08:54:21</sys_created_on>
+            <sys_id>0129bade47109710273a565a516d43c4</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Admission Form" display_value="Admission Form" name="x_2223823_apollo_0_admission" sys_domain="global" view="Default view">41f8a4af938c13107b3a7c5efaba1023</sys_ui_section>
+            <sys_updated_by>ridhwik.jangid</sys_updated_by>
+            <sys_updated_on>2026-11-04 08:54:21</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>attendant_name</element>
+            <position>2</position>
+            <sys_created_by>ridhwik.jangid</sys_created_by>
+            <sys_created_on>2026-11-04 08:54:21</sys_created_on>
+            <sys_id>8d29bade47109710273a565a516d43c4</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Admission Form" display_value="Admission Form" name="x_2223823_apollo_0_admission" sys_domain="global" view="Default view">41f8a4af938c13107b3a7c5efaba1023</sys_ui_section>
+            <sys_updated_by>ridhwik.jangid</sys_updated_by>
+            <sys_updated_on>2026-11-04 08:54:21</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>approval_state</element>
+            <position>3</position>
+            <sys_created_by>ridhwik.jangid</sys_created_by>
+            <sys_created_on>2026-11-04 08:54:21</sys_created_on>
+            <sys_id>0d29bade47109710273a565a516d43c5</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Admission Form" display_value="Admission Form" name="x_2223823_apollo_0_admission" sys_domain="global" view="Default view">41f8a4af938c13107b3a7c5efaba1023</sys_ui_section>
+            <sys_updated_by>ridhwik.jangid</sys_updated_by>
+            <sys_updated_on>2026-11-04 08:54:21</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.split</element>
+            <position>4</position>
+            <sys_created_by>ridhwik.jangid</sys_created_by>
+            <sys_created_on>2026-11-04 08:54:21</sys_created_on>
+            <sys_id>8929bade47109710273a565a516d43c6</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Admission Form" display_value="Admission Form" name="x_2223823_apollo_0_admission" sys_domain="global" view="Default view">41f8a4af938c13107b3a7c5efaba1023</sys_ui_section>
+            <sys_updated_by>ridhwik.jangid</sys_updated_by>
+            <sys_updated_on>2026-11-04 08:54:21</sys_updated_on>
+            <sys_user/>
+            <type>.split</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>patient</element>
+            <position>5</position>
+            <sys_created_by>ridhwik.jangid</sys_created_by>
+            <sys_created_on>2026-11-04 08:54:21</sys_created_on>
+            <sys_id>0929bade47109710273a565a516d43c7</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Admission Form" display_value="Admission Form" name="x_2223823_apollo_0_admission" sys_domain="global" view="Default view">41f8a4af938c13107b3a7c5efaba1023</sys_ui_section>
+            <sys_updated_by>ridhwik.jangid</sys_updated_by>
+            <sys_updated_on>2026-11-04 08:54:21</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>hospital</element>
+            <position>6</position>
+            <sys_created_by>ridhwik.jangid</sys_created_by>
+            <sys_created_on>2026-11-04 08:54:21</sys_created_on>
+            <sys_id>8529bade47109710273a565a516d43c8</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Admission Form" display_value="Admission Form" name="x_2223823_apollo_0_admission" sys_domain="global" view="Default view">41f8a4af938c13107b3a7c5efaba1023</sys_ui_section>
+            <sys_updated_by>ridhwik.jangid</sys_updated_by>
+            <sys_updated_on>2026-11-04 08:54:21</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>attendant_phone</element>
+            <position>7</position>
+            <sys_created_by>ridhwik.jangid</sys_created_by>
+            <sys_created_on>2026-11-04 08:54:21</sys_created_on>
+            <sys_id>0529bade47109710273a565a516d43c9</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Admission Form" display_value="Admission Form" name="x_2223823_apollo_0_admission" sys_domain="global" view="Default view">41f8a4af938c13107b3a7c5efaba1023</sys_ui_section>
+            <sys_updated_by>ridhwik.jangid</sys_updated_by>
+            <sys_updated_on>2026-11-04 08:54:21</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_section action="DELETE">
+            <caption>Admission Form</caption>
+            <header>false</header>
+            <name>x_2223823_apollo_0_admission</name>
+            <roles/>
+            <sys_class_name>sys_ui_section</sys_class_name>
+            <sys_created_by>harshvardhan.chhapola</sys_created_by>
+            <sys_created_on>2026-10-26 09:21:07</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>41f8a4af938c13107b3a7c5efaba1023</sys_id>
+            <sys_mod_count>2</sys_mod_count>
+            <sys_name>x_2223823_apollo_0_admission</sys_name>
+            <sys_overrides/>
+            <sys_package display_value="Apollo-Hospitals" source="x_2223823_apollo_0">87c1422693c89b507b3a7c5efaba1008</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
+            <sys_update_name>sys_ui_section_41f8a4af938c13107b3a7c5efaba1023</sys_update_name>
+            <sys_updated_by>ridhwik.jangid</sys_updated_by>
+            <sys_updated_on>2026-11-04 08:54:21</sys_updated_on>
+            <sys_user/>
+            <title>true</title>
+            <view display_value="Default view" name="NULL">Default view</view>
+            <view_name/>
+        </sys_ui_section>
+    </sys_ui_section>
+<sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</application>
+        <file_path/>
+        <instance_id>548ed3fbebd9c75c3a48f459bad0cd2c</instance_id>
+        <instance_name>dev404645</instance_name>
+        <name>sys_ui_section_41f8a4af938c13107b3a7c5efaba1023</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_ui_section caption="Admission Form" section_id="41f8a4af938c13107b3a7c5efaba1023" sys_domain="global" table="x_2223823_apollo_0_admission" version="3" view="">
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>number</element>
+            <position>0</position>
+            <sys_created_by>ridhwik.jangid</sys_created_by>
+            <sys_created_on>2026-11-04 08:54:21</sys_created_on>
+            <sys_id>8129bade47109710273a565a516d43c3</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Admission Form" display_value="Admission Form" name="x_2223823_apollo_0_admission" sys_domain="global" view="Default view">41f8a4af938c13107b3a7c5efaba1023</sys_ui_section>
+            <sys_updated_by>ridhwik.jangid</sys_updated_by>
+            <sys_updated_on>2026-11-04 08:54:21</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>status</element>
+            <position>1</position>
+            <sys_created_by>ridhwik.jangid</sys_created_by>
+            <sys_created_on>2026-11-04 08:54:21</sys_created_on>
+            <sys_id>0129bade47109710273a565a516d43c4</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Admission Form" display_value="Admission Form" name="x_2223823_apollo_0_admission" sys_domain="global" view="Default view">41f8a4af938c13107b3a7c5efaba1023</sys_ui_section>
+            <sys_updated_by>ridhwik.jangid</sys_updated_by>
+            <sys_updated_on>2026-11-04 08:54:21</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>attendant_name</element>
+            <position>2</position>
+            <sys_created_by>ridhwik.jangid</sys_created_by>
+            <sys_created_on>2026-11-04 08:54:21</sys_created_on>
+            <sys_id>8d29bade47109710273a565a516d43c4</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Admission Form" display_value="Admission Form" name="x_2223823_apollo_0_admission" sys_domain="global" view="Default view">41f8a4af938c13107b3a7c5efaba1023</sys_ui_section>
+            <sys_updated_by>ridhwik.jangid</sys_updated_by>
+            <sys_updated_on>2026-11-04 08:54:21</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>approval_state</element>
+            <position>3</position>
+            <sys_created_by>ridhwik.jangid</sys_created_by>
+            <sys_created_on>2026-11-04 08:54:21</sys_created_on>
+            <sys_id>0d29bade47109710273a565a516d43c5</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Admission Form" display_value="Admission Form" name="x_2223823_apollo_0_admission" sys_domain="global" view="Default view">41f8a4af938c13107b3a7c5efaba1023</sys_ui_section>
+            <sys_updated_by>ridhwik.jangid</sys_updated_by>
+            <sys_updated_on>2026-11-04 08:54:21</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.split</element>
+            <position>4</position>
+            <sys_created_by>ridhwik.jangid</sys_created_by>
+            <sys_created_on>2026-11-04 08:54:21</sys_created_on>
+            <sys_id>8929bade47109710273a565a516d43c6</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Admission Form" display_value="Admission Form" name="x_2223823_apollo_0_admission" sys_domain="global" view="Default view">41f8a4af938c13107b3a7c5efaba1023</sys_ui_section>
+            <sys_updated_by>ridhwik.jangid</sys_updated_by>
+            <sys_updated_on>2026-11-04 08:54:21</sys_updated_on>
+            <sys_user/>
+            <type>.split</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>patient</element>
+            <position>5</position>
+            <sys_created_by>ridhwik.jangid</sys_created_by>
+            <sys_created_on>2026-11-04 08:54:21</sys_created_on>
+            <sys_id>0929bade47109710273a565a516d43c7</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Admission Form" display_value="Admission Form" name="x_2223823_apollo_0_admission" sys_domain="global" view="Default view">41f8a4af938c13107b3a7c5efaba1023</sys_ui_section>
+            <sys_updated_by>ridhwik.jangid</sys_updated_by>
+            <sys_updated_on>2026-11-04 08:54:21</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>hospital</element>
+            <position>6</position>
+            <sys_created_by>ridhwik.jangid</sys_created_by>
+            <sys_created_on>2026-11-04 08:54:21</sys_created_on>
+            <sys_id>8529bade47109710273a565a516d43c8</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Admission Form" display_value="Admission Form" name="x_2223823_apollo_0_admission" sys_domain="global" view="Default view">41f8a4af938c13107b3a7c5efaba1023</sys_ui_section>
+            <sys_updated_by>ridhwik.jangid</sys_updated_by>
+            <sys_updated_on>2026-11-04 08:54:21</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>attendant_phone</element>
+            <position>7</position>
+            <sys_created_by>ridhwik.jangid</sys_created_by>
+            <sys_created_on>2026-11-04 08:54:21</sys_created_on>
+            <sys_id>0529bade47109710273a565a516d43c9</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Admission Form" display_value="Admission Form" name="x_2223823_apollo_0_admission" sys_domain="global" view="Default view">41f8a4af938c13107b3a7c5efaba1023</sys_ui_section>
+            <sys_updated_by>ridhwik.jangid</sys_updated_by>
+            <sys_updated_on>2026-11-04 08:54:21</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_section action="INSERT_OR_UPDATE">
+            <caption>Admission Form</caption>
+            <header>false</header>
+            <name>x_2223823_apollo_0_admission</name>
+            <roles/>
+            <sys_class_name>sys_ui_section</sys_class_name>
+            <sys_created_by>harshvardhan.chhapola</sys_created_by>
+            <sys_created_on>2026-10-26 09:21:07</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>41f8a4af938c13107b3a7c5efaba1023</sys_id>
+            <sys_mod_count>2</sys_mod_count>
+            <sys_name>x_2223823_apollo_0_admission</sys_name>
+            <sys_overrides/>
+            <sys_package display_value="Apollo-Hospitals" source="x_2223823_apollo_0">87c1422693c89b507b3a7c5efaba1008</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
+            <sys_update_name>sys_ui_section_41f8a4af938c13107b3a7c5efaba1023</sys_update_name>
+            <sys_updated_by>ridhwik.jangid</sys_updated_by>
+            <sys_updated_on>2026-11-04 08:54:21</sys_updated_on>
+            <sys_user/>
+            <title>true</title>
+            <view display_value="Default view" name="NULL">Default view</view>
+            <view_name/>
+        </sys_ui_section>
+    </sys_ui_section>
+</record_update>]]></payload>
+        <payload_hash>-216498540</payload_hash>
+        <record_name>x_2223823_apollo_0_admission</record_name>
+        <reverted_from/>
+        <source>16c57d5c53605f10ed9b78f0a0490ecf</source>
+        <source_table>sys_upgrade_history</source_table>
+        <state>previous</state>
+        <sys_created_by>ridhwik.jangid</sys_created_by>
+        <sys_created_on>2026-11-10 09:13:03</sys_created_on>
+        <sys_id>59f63d9053e05f10ed9b78f0a0490ea5</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1a1c4bb7b7e0000001</sys_recorded_at>
+        <sys_updated_by>ridhwik.jangid</sys_updated_by>
+        <sys_updated_on>2026-11-10 09:13:03</sys_updated_on>
+        <type>Form Layout</type>
+        <update_guid>91f63d906de05f10b00f90e10bc6c1a5</update_guid>
+        <update_guid_history>91f63d906de05f10b00f90e10bc6c1a5:0,cb543d18c7205f100ec90819835922a9:1834249174,0c1e4510e2e0db104462005825e81e9b:0,408218fe1a14131004763a3f667a39b9:917419652</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>ridhwik.jangid</sys_created_by>
+        <sys_created_on>2026-11-10 09:24:04</sys_created_on>
+        <sys_db_object display_value="" name="sys_ui_section">sys_ui_section</sys_db_object>
+        <sys_id>5c4f07241b594e32a9d0b0c414aa8b64</sys_id>
+        <sys_metadata>41f8a4af938c13107b3a7c5efaba1023</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_2223823_apollo_0_admission</sys_name>
+        <sys_package display_value="Apollo-Hospitals" source="x_2223823_apollo_0">87c1422693c89b507b3a7c5efaba1008</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
+        <sys_scope_delete/>
+        <sys_update_name>sys_ui_section_41f8a4af938c13107b3a7c5efaba1023</sys_update_name>
+        <sys_update_version display_value="sys_ui_section_41f8a4af938c13107b3a7c5efaba1023">59f63d9053e05f10ed9b78f0a0490ea5</sys_update_version>
+        <sys_updated_by>ridhwik.jangid</sys_updated_by>
+        <sys_updated_on>2026-11-10 09:24:04</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

@@ -21,7 +21,7 @@
         </filter_condition>
         <is_rest>false</is_rest>
         <message/>
-        <name>Validate Department Belongs to the Current Hospital </name>
+        <name>Validate Department Belongs to the Curre</name>
         <order>100</order>
         <priority>100</priority>
         <rest_method/>

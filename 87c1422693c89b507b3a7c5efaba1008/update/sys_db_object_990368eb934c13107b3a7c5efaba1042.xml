@@ -20,7 +20,7 @@
         <provider_class/>
         <read_access>true</read_access>
         <scriptable_table>false</scriptable_table>
-        <super_class display_value="Location" name="cmn_location">313ceb01f033031001ffe61a9d6c4875</super_class>
+        <super_class display_value="Location" name="cmn_location">d900fa338c1103100a22deb6dd2b4e72</super_class>
         <sys_class_name>sys_db_object</sys_class_name>
         <sys_created_by>fatehsingh.meena</sys_created_by>
         <sys_created_on>2026-10-26 08:56:39</sys_created_on>

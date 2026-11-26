@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_dictionary action="DELETE" element="x_2223823_apollo_0_scheduled_for_lab" table="cmdb_ci">
+        <active>true</active>
+        <array>false</array>
+        <attributes/>
+        <audit>false</audit>
+        <calculation/>
+        <choice>0</choice>
+        <choice_field/>
+        <choice_table/>
+        <column_label>Scheduled For Lab</column_label>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>x_2223823_apollo_0_scheduled_for_lab</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <internal_type display_value="">boolean</internal_type>
+        <mandatory>false</mandatory>
+        <max_length>255</max_length>
+        <name>cmdb_ci</name>
+        <next_element/>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_only_option/>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_dictionary</sys_class_name>
+        <sys_created_by>harshvardhan.chhapola</sys_created_by>
+        <sys_created_on>2026-11-02 12:41:41</sys_created_on>
+        <sys_name>Scheduled For Lab</sys_name>
+        <sys_package display_value="Apollo-Hospitals" source="x_2223823_apollo_0">87c1422693c89b507b3a7c5efaba1008</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
+        <sys_update_name>sys_dictionary_cmdb_ci_x_2223823_apollo_0_scheduled_for_lab</sys_update_name>
+        <sys_updated_by>harshvardhan.chhapola</sys_updated_by>
+        <sys_updated_on>2026-11-02 12:41:41</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_dictionary>
+<sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</application>
+        <file_path/>
+        <instance_id>548ed3fbebd9c75c3a48f459bad0cd2c</instance_id>
+        <instance_name>dev404645</instance_name>
+        <name>sys_dictionary_cmdb_ci_x_2223823_apollo_0_scheduled_for_lab</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_dictionary action="INSERT_OR_UPDATE" element="x_2223823_apollo_0_scheduled_for_lab" table="cmdb_ci">
+        <active>true</active>
+        <array>false</array>
+        <attributes/>
+        <audit>false</audit>
+        <calculation/>
+        <choice>0</choice>
+        <choice_field/>
+        <choice_table/>
+        <column_label>Scheduled For Lab</column_label>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>x_2223823_apollo_0_scheduled_for_lab</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <internal_type display_value="">boolean</internal_type>
+        <mandatory>false</mandatory>
+        <max_length>255</max_length>
+        <name>cmdb_ci</name>
+        <next_element/>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_only_option/>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_dictionary</sys_class_name>
+        <sys_created_by>harshvardhan.chhapola</sys_created_by>
+        <sys_created_on>2026-11-02 12:41:41</sys_created_on>
+        <sys_name>Scheduled For Lab</sys_name>
+        <sys_package display_value="Apollo-Hospitals" source="x_2223823_apollo_0">87c1422693c89b507b3a7c5efaba1008</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
+        <sys_update_name>sys_dictionary_cmdb_ci_x_2223823_apollo_0_scheduled_for_lab</sys_update_name>
+        <sys_updated_by>harshvardhan.chhapola</sys_updated_by>
+        <sys_updated_on>2026-11-02 12:41:41</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_dictionary>
+</record_update>]]></payload>
+        <payload_hash>-323880178</payload_hash>
+        <record_name>Configuration Item.Scheduled For Lab</record_name>
+        <reverted_from/>
+        <source>16c57d5c53605f10ed9b78f0a0490ecf</source>
+        <source_table>sys_upgrade_history</source_table>
+        <state>previous</state>
+        <sys_created_by>ridhwik.jangid</sys_created_by>
+        <sys_created_on>2026-11-10 09:12:01</sys_created_on>
+        <sys_id>5eb6f99c53a05f10ed9b78f0a0490eaa</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1a1c4ba8a010000001</sys_recorded_at>
+        <sys_updated_by>ridhwik.jangid</sys_updated_by>
+        <sys_updated_on>2026-11-10 09:12:01</sys_updated_on>
+        <type>Dictionary</type>
+        <update_guid>96b6f99ce1a05f10a777396c3e38b4aa</update_guid>
+        <update_guid_history>96b6f99ce1a05f10a777396c3e38b4aa:0,ccd4395083605f10516450e72aa65e61:-1853063316,d842903ec01413103cf5fab17a943558:0,622258ba8f141310a2c24c9859fd31ef:-1684733024</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>harshvardhan.chhapola</sys_created_by>
+        <sys_created_on>2026-11-10 09:24:31</sys_created_on>
+        <sys_db_object display_value="" name="sys_dictionary">sys_dictionary</sys_db_object>
+        <sys_id>aba74190b30348f8811cca0a4fee4040</sys_id>
+        <sys_metadata>62063d5053a05f10ed9b78f0a0490e21</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Scheduled For Lab</sys_name>
+        <sys_package display_value="Apollo-Hospitals" source="x_2223823_apollo_0">87c1422693c89b507b3a7c5efaba1008</sys_package>
+        <sys_parent display_value="CMDB CI">ee02f67b8c9103100a22deb6dd2b4ef2</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
+        <sys_scope_delete/>
+        <sys_update_name>sys_dictionary_cmdb_ci_x_2223823_apollo_0_scheduled_for_lab</sys_update_name>
+        <sys_update_version display_value="sys_dictionary_cmdb_ci_x_2223823_apollo_0_scheduled_for_lab">5eb6f99c53a05f10ed9b78f0a0490eaa</sys_update_version>
+        <sys_updated_by>harshvardhan.chhapola</sys_updated_by>
+        <sys_updated_on>2026-11-10 09:24:31</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

@@ -4,13 +4,13 @@
             <element>bed_number</element>
             <position>0</position>
             <sys_created_by>ridhwik.jangid</sys_created_by>
-            <sys_created_on>2026-11-02 08:29:53</sys_created_on>
-            <sys_id>0750ac3547941310273a565a516d4345</sys_id>
+            <sys_created_on>2026-11-04 17:53:43</sys_created_on>
+            <sys_id>f5943ca24714d710273a565a516d43d1</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_2223823_apollo_0_beds" sys_domain="global" view="Default view">02ac15e793c853107b3a7c5efaba10a4</sys_ui_section>
             <sys_updated_by>ridhwik.jangid</sys_updated_by>
-            <sys_updated_on>2026-11-02 08:29:53</sys_updated_on>
+            <sys_updated_on>2026-11-04 17:53:43</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
@@ -18,55 +18,55 @@
             <element>hospital</element>
             <position>1</position>
             <sys_created_by>ridhwik.jangid</sys_created_by>
-            <sys_created_on>2026-11-02 08:29:53</sys_created_on>
-            <sys_id>cf50ac3547941310273a565a516d4345</sys_id>
+            <sys_created_on>2026-11-04 17:53:43</sys_created_on>
+            <sys_id>75943ca24714d710273a565a516d43d2</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_2223823_apollo_0_beds" sys_domain="global" view="Default view">02ac15e793c853107b3a7c5efaba10a4</sys_ui_section>
             <sys_updated_by>ridhwik.jangid</sys_updated_by>
-            <sys_updated_on>2026-11-02 08:29:53</sys_updated_on>
-            <sys_user/>
-            <type/>
-        </sys_ui_element>
-        <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>current_admission</element>
-            <position>2</position>
-            <sys_created_by>ridhwik.jangid</sys_created_by>
-            <sys_created_on>2026-11-02 08:29:53</sys_created_on>
-            <sys_id>8b50ac3547941310273a565a516d4346</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_ui_formatter/>
-            <sys_ui_section caption="NULL" display_value="" name="x_2223823_apollo_0_beds" sys_domain="global" view="Default view">02ac15e793c853107b3a7c5efaba10a4</sys_ui_section>
-            <sys_updated_by>ridhwik.jangid</sys_updated_by>
-            <sys_updated_on>2026-11-02 08:29:53</sys_updated_on>
+            <sys_updated_on>2026-11-04 17:53:43</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>blocked_until</element>
-            <position>3</position>
+            <position>2</position>
             <sys_created_by>ridhwik.jangid</sys_created_by>
-            <sys_created_on>2026-11-02 08:29:53</sys_created_on>
-            <sys_id>4750ac3547941310273a565a516d4347</sys_id>
+            <sys_created_on>2026-11-04 17:53:43</sys_created_on>
+            <sys_id>f1943ca24714d710273a565a516d43d3</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_2223823_apollo_0_beds" sys_domain="global" view="Default view">02ac15e793c853107b3a7c5efaba10a4</sys_ui_section>
             <sys_updated_by>ridhwik.jangid</sys_updated_by>
-            <sys_updated_on>2026-11-02 08:29:53</sys_updated_on>
+            <sys_updated_on>2026-11-04 17:53:43</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>counts_in_capacity</element>
-            <position>4</position>
+            <position>3</position>
             <sys_created_by>ridhwik.jangid</sys_created_by>
-            <sys_created_on>2026-11-02 08:29:53</sys_created_on>
-            <sys_id>0350ac3547941310273a565a516d4348</sys_id>
+            <sys_created_on>2026-11-04 17:53:43</sys_created_on>
+            <sys_id>71943ca24714d710273a565a516d43d4</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_2223823_apollo_0_beds" sys_domain="global" view="Default view">02ac15e793c853107b3a7c5efaba10a4</sys_ui_section>
             <sys_updated_by>ridhwik.jangid</sys_updated_by>
-            <sys_updated_on>2026-11-02 08:29:53</sys_updated_on>
+            <sys_updated_on>2026-11-04 17:53:43</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>active</element>
+            <position>4</position>
+            <sys_created_by>ridhwik.jangid</sys_created_by>
+            <sys_created_on>2026-11-04 17:53:43</sys_created_on>
+            <sys_id>fd943ca24714d710273a565a516d43d4</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_2223823_apollo_0_beds" sys_domain="global" view="Default view">02ac15e793c853107b3a7c5efaba10a4</sys_ui_section>
+            <sys_updated_by>ridhwik.jangid</sys_updated_by>
+            <sys_updated_on>2026-11-04 17:53:43</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
@@ -74,13 +74,13 @@
             <element>.split</element>
             <position>5</position>
             <sys_created_by>ridhwik.jangid</sys_created_by>
-            <sys_created_on>2026-11-02 08:29:53</sys_created_on>
-            <sys_id>cb50ac3547941310273a565a516d4348</sys_id>
+            <sys_created_on>2026-11-04 17:53:43</sys_created_on>
+            <sys_id>7d943ca24714d710273a565a516d43d5</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_2223823_apollo_0_beds" sys_domain="global" view="Default view">02ac15e793c853107b3a7c5efaba10a4</sys_ui_section>
             <sys_updated_by>ridhwik.jangid</sys_updated_by>
-            <sys_updated_on>2026-11-02 08:29:53</sys_updated_on>
+            <sys_updated_on>2026-11-04 17:53:43</sys_updated_on>
             <sys_user/>
             <type>.split</type>
         </sys_ui_element>
@@ -88,13 +88,13 @@
             <element>status</element>
             <position>6</position>
             <sys_created_by>ridhwik.jangid</sys_created_by>
-            <sys_created_on>2026-11-02 08:29:53</sys_created_on>
-            <sys_id>8750ac3547941310273a565a516d4349</sys_id>
+            <sys_created_on>2026-11-04 17:53:43</sys_created_on>
+            <sys_id>f9943ca24714d710273a565a516d43d6</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_2223823_apollo_0_beds" sys_domain="global" view="Default view">02ac15e793c853107b3a7c5efaba10a4</sys_ui_section>
             <sys_updated_by>ridhwik.jangid</sys_updated_by>
-            <sys_updated_on>2026-11-02 08:29:53</sys_updated_on>
+            <sys_updated_on>2026-11-04 17:53:43</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
@@ -102,41 +102,55 @@
             <element>room</element>
             <position>7</position>
             <sys_created_by>ridhwik.jangid</sys_created_by>
-            <sys_created_on>2026-11-02 08:29:53</sys_created_on>
-            <sys_id>4350ac3547941310273a565a516d434a</sys_id>
+            <sys_created_on>2026-11-04 17:53:43</sys_created_on>
+            <sys_id>79943ca24714d710273a565a516d43d7</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_2223823_apollo_0_beds" sys_domain="global" view="Default view">02ac15e793c853107b3a7c5efaba10a4</sys_ui_section>
             <sys_updated_by>ridhwik.jangid</sys_updated_by>
-            <sys_updated_on>2026-11-02 08:29:53</sys_updated_on>
+            <sys_updated_on>2026-11-04 17:53:43</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>current_admission</element>
+            <position>8</position>
+            <sys_created_by>ridhwik.jangid</sys_created_by>
+            <sys_created_on>2026-11-04 17:53:43</sys_created_on>
+            <sys_id>f5943ca24714d710273a565a516d43d8</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_2223823_apollo_0_beds" sys_domain="global" view="Default view">02ac15e793c853107b3a7c5efaba10a4</sys_ui_section>
+            <sys_updated_by>ridhwik.jangid</sys_updated_by>
+            <sys_updated_on>2026-11-04 17:53:43</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>gender</element>
-            <position>8</position>
+            <position>9</position>
             <sys_created_by>ridhwik.jangid</sys_created_by>
-            <sys_created_on>2026-11-02 08:29:53</sys_created_on>
-            <sys_id>0f50ac3547941310273a565a516d434a</sys_id>
+            <sys_created_on>2026-11-04 17:53:43</sys_created_on>
+            <sys_id>75943ca24714d710273a565a516d43d9</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_2223823_apollo_0_beds" sys_domain="global" view="Default view">02ac15e793c853107b3a7c5efaba10a4</sys_ui_section>
             <sys_updated_by>ridhwik.jangid</sys_updated_by>
-            <sys_updated_on>2026-11-02 08:29:53</sys_updated_on>
+            <sys_updated_on>2026-11-04 17:53:43</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>blocked_reason</element>
-            <position>9</position>
+            <position>10</position>
             <sys_created_by>ridhwik.jangid</sys_created_by>
-            <sys_created_on>2026-11-02 08:29:53</sys_created_on>
-            <sys_id>c750ac3547941310273a565a516d434b</sys_id>
+            <sys_created_on>2026-11-04 17:53:43</sys_created_on>
+            <sys_id>f1943ca24714d710273a565a516d43da</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_2223823_apollo_0_beds" sys_domain="global" view="Default view">02ac15e793c853107b3a7c5efaba10a4</sys_ui_section>
             <sys_updated_by>ridhwik.jangid</sys_updated_by>
-            <sys_updated_on>2026-11-02 08:29:53</sys_updated_on>
+            <sys_updated_on>2026-11-04 17:53:43</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>

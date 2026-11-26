@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl">
+    <sys_security_acl action="DELETE">
+        <active>true</active>
+        <admin_overrides>true</admin_overrides>
+        <advanced>false</advanced>
+        <applies_to/>
+        <condition/>
+        <controlled_by_refs/>
+        <decision_type>allow</decision_type>
+        <description>Allow read for records in x_2223823_apollo_0_admission, for users with role x_2223823_apollo_0.admission_user.</description>
+        <local_or_existing>Existing</local_or_existing>
+        <name>x_2223823_apollo_0_admission</name>
+        <operation display_value="read">read</operation>
+        <script/>
+        <security_attribute/>
+        <sys_class_name>sys_security_acl</sys_class_name>
+        <sys_created_by>harshvardhan.chhapola</sys_created_by>
+        <sys_created_on>2026-10-26 09:07:53</sys_created_on>
+        <sys_id>d3e524a7938c13107b3a7c5efaba1094</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>x_2223823_apollo_0_admission</sys_name>
+        <sys_package display_value="Apollo-Hospitals" source="x_2223823_apollo_0">87c1422693c89b507b3a7c5efaba1008</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
+        <sys_update_name>sys_security_acl_d3e524a7938c13107b3a7c5efaba1094</sys_update_name>
+        <sys_updated_by>harshvardhan.chhapola</sys_updated_by>
+        <sys_updated_on>2026-10-26 09:07:53</sys_updated_on>
+        <type display_value="record">record</type>
+    </sys_security_acl>
+<sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</application>
+        <file_path/>
+        <instance_id>5ada7edb93d06e50d9f6ddd548373c9d</instance_id>
+        <instance_name>dev304851</instance_name>
+        <name>sys_security_acl_d3e524a7938c13107b3a7c5efaba1094</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl">
+    <sys_security_acl action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <admin_overrides>true</admin_overrides>
+        <advanced>false</advanced>
+        <applies_to/>
+        <condition/>
+        <controlled_by_refs/>
+        <decision_type>allow</decision_type>
+        <description>Allow read for records in x_2223823_apollo_0_admission, for users with role x_2223823_apollo_0.admission_user.</description>
+        <local_or_existing>Existing</local_or_existing>
+        <name>x_2223823_apollo_0_admission</name>
+        <operation display_value="read">read</operation>
+        <script/>
+        <security_attribute/>
+        <sys_class_name>sys_security_acl</sys_class_name>
+        <sys_created_by>harshvardhan.chhapola</sys_created_by>
+        <sys_created_on>2026-10-26 09:07:53</sys_created_on>
+        <sys_id>d3e524a7938c13107b3a7c5efaba1094</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>x_2223823_apollo_0_admission</sys_name>
+        <sys_package display_value="Apollo-Hospitals" source="x_2223823_apollo_0">87c1422693c89b507b3a7c5efaba1008</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
+        <sys_update_name>sys_security_acl_d3e524a7938c13107b3a7c5efaba1094</sys_update_name>
+        <sys_updated_by>harshvardhan.chhapola</sys_updated_by>
+        <sys_updated_on>2026-10-26 09:07:53</sys_updated_on>
+        <type display_value="record">record</type>
+    </sys_security_acl>
+</record_update>]]></payload>
+        <payload_hash>16195360</payload_hash>
+        <record_name>x_2223823_apollo_0_admission</record_name>
+        <reverted_from/>
+        <source>cef7071247549710273a565a516d432e</source>
+        <source_table>sys_upgrade_history</source_table>
+        <state>current</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-11-04 10:05:53</sys_created_on>
+        <sys_id>fc894b1647949710273a565a516d4380</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1a1a605b1650000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-11-04 10:05:53</sys_updated_on>
+        <type>Access Control</type>
+        <update_guid>38894b1689949710582f4b493f74ea80</update_guid>
+        <update_guid_history>38894b1689949710582f4b493f74ea80:0,ff26c35e86d097100ed7cc439df7b169:1066984750,82fecd706690d310c85e534fd188a05e:0,c92e05f46750d3106c3e7bdacf81a5f3:-1149799157,c7bf9c7c10109310e3fd55685f71953e:16195360</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>harshvardhan.chhapola</sys_created_by>
+        <sys_created_on>2026-11-04 13:09:02</sys_created_on>
+        <sys_db_object display_value="" name="sys_security_acl">sys_security_acl</sys_db_object>
+        <sys_id>4b4d9471995445ecbd35cdc327ab6110</sys_id>
+        <sys_metadata>d3e524a7938c13107b3a7c5efaba1094</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_2223823_apollo_0_admission</sys_name>
+        <sys_package display_value="Apollo-Hospitals" source="x_2223823_apollo_0">87c1422693c89b507b3a7c5efaba1008</sys_package>
+        <sys_parent display_value="">0a3847d247549710273a565a516d43be</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
+        <sys_scope_delete display_value="">1a2f7aa8dfc34e3a86d3f0bede3c2784</sys_scope_delete>
+        <sys_update_name>sys_security_acl_d3e524a7938c13107b3a7c5efaba1094</sys_update_name>
+        <sys_update_version display_value="sys_security_acl_d3e524a7938c13107b3a7c5efaba1094">fc894b1647949710273a565a516d4380</sys_update_version>
+        <sys_updated_by>harshvardhan.chhapola</sys_updated_by>
+        <sys_updated_on>2026-11-04 13:09:02</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

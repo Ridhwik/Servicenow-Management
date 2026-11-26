@@ -6,7 +6,7 @@
         <sys_class_name>sys_data_policy_rule</sys_class_name>
         <sys_created_by>nilesh.chaurasia</sys_created_by>
         <sys_created_on>2026-10-28 06:41:09</sys_created_on>
-        <sys_data_policy display_value="">274712cc93d097107b3a7c5efaba1040</sys_data_policy>
+        <sys_data_policy display_value="Status is Rejected  -&gt;  Mandatory: Rejection reason or comments">274712cc93d097107b3a7c5efaba1040</sys_data_policy>
         <sys_id>267796cc93d097107b3a7c5efaba10e3</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_name>rejection_reason</sys_name>

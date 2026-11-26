@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update table="item_option_new">
     <item_option_new action="INSERT_OR_UPDATE">
-        <active>false</active>
+        <active>true</active>
         <attributes/>
         <cat_item display_value="Lab Test Request">e0c8c87147d01310273a565a516d434b</cat_item>
         <category/>
@@ -50,7 +50,7 @@
         <name>status</name>
         <no_auto_populate_also_request_for>false</no_auto_populate_also_request_for>
         <not_available_conversation>false</not_available_conversation>
-        <order>1100</order>
+        <order>900</order>
         <post_insert_script/>
         <price_if_checked>0</price_if_checked>
         <pricing_implications>false</pricing_implications>
@@ -85,14 +85,14 @@
         <sys_created_by>vikas.singh</sys_created_by>
         <sys_created_on>2026-11-02 10:24:55</sys_created_on>
         <sys_id>0909347147981310273a565a516d437f</sys_id>
-        <sys_mod_count>3</sys_mod_count>
+        <sys_mod_count>2</sys_mod_count>
         <sys_name>Status</sys_name>
         <sys_package display_value="Apollo-Hospitals" source="x_2223823_apollo_0">87c1422693c89b507b3a7c5efaba1008</sys_package>
         <sys_policy/>
         <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
         <sys_update_name>item_option_new_0909347147981310273a565a516d437f</sys_update_name>
         <sys_updated_by>vikas.singh</sys_updated_by>
-        <sys_updated_on>2026-11-19 06:34:40</sys_updated_on>
+        <sys_updated_on>2026-11-02 10:26:19</sys_updated_on>
         <table/>
         <tooltip/>
         <topic_block/>

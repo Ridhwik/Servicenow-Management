@@ -18,7 +18,7 @@
         <filter_condition/>
         <is_rest>false</is_rest>
         <message/>
-        <name>Validate OT Room Category and Pre-Approval Checks</name>
+        <name>Validate OT Room Category and Pre-Approv</name>
         <order>100</order>
         <priority>100</priority>
         <rest_method/>

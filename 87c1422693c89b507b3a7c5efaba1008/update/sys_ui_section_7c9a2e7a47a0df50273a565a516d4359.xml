@@ -1,0 +1,393 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_ui_section caption="Asset Details" section_id="7c9a2e7a47a0df50273a565a516d4359" sys_domain="global" table="x_2223823_apollo_0_medical_equipment_assets" version="3" view="itam_workspace">
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>display_name</element>
+            <position>0</position>
+            <sys_created_by>akshat.bari</sys_created_by>
+            <sys_created_on>2026-11-18 07:23:23</sys_created_on>
+            <sys_id>b49a2e7a47a0df50273a565a516d4377</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Asset Details" display_value="Asset Details" name="x_2223823_apollo_0_medical_equipment_assets" sys_domain="global" view="e53c64d153c230108125ddeeff7b12e3">7c9a2e7a47a0df50273a565a516d4359</sys_ui_section>
+            <sys_updated_by>akshat.bari</sys_updated_by>
+            <sys_updated_on>2026-11-18 07:23:23</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.begin_split</element>
+            <position>1</position>
+            <sys_created_by>akshat.bari</sys_created_by>
+            <sys_created_on>2026-11-18 07:23:23</sys_created_on>
+            <sys_id>3c9a2e7a47a0df50273a565a516d4382</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Asset Details" display_value="Asset Details" name="x_2223823_apollo_0_medical_equipment_assets" sys_domain="global" view="e53c64d153c230108125ddeeff7b12e3">7c9a2e7a47a0df50273a565a516d4359</sys_ui_section>
+            <sys_updated_by>akshat.bari</sys_updated_by>
+            <sys_updated_on>2026-11-18 07:23:23</sys_updated_on>
+            <sys_user/>
+            <type>.begin_split</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>model_category</element>
+            <position>2</position>
+            <sys_created_by>akshat.bari</sys_created_by>
+            <sys_created_on>2026-11-18 07:23:23</sys_created_on>
+            <sys_id>bc9a2e7a47a0df50273a565a516d437a</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Asset Details" display_value="Asset Details" name="x_2223823_apollo_0_medical_equipment_assets" sys_domain="global" view="e53c64d153c230108125ddeeff7b12e3">7c9a2e7a47a0df50273a565a516d4359</sys_ui_section>
+            <sys_updated_by>akshat.bari</sys_updated_by>
+            <sys_updated_on>2026-11-18 07:23:23</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>model</element>
+            <position>3</position>
+            <sys_created_by>akshat.bari</sys_created_by>
+            <sys_created_on>2026-11-18 07:23:23</sys_created_on>
+            <sys_id>349a2e7a47a0df50273a565a516d4386</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Asset Details" display_value="Asset Details" name="x_2223823_apollo_0_medical_equipment_assets" sys_domain="global" view="e53c64d153c230108125ddeeff7b12e3">7c9a2e7a47a0df50273a565a516d4359</sys_ui_section>
+            <sys_updated_by>akshat.bari</sys_updated_by>
+            <sys_updated_on>2026-11-18 07:23:23</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>asset_tag</element>
+            <position>4</position>
+            <sys_created_by>akshat.bari</sys_created_by>
+            <sys_created_on>2026-11-18 07:23:23</sys_created_on>
+            <sys_id>389a2e7a47a0df50273a565a516d437d</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Asset Details" display_value="Asset Details" name="x_2223823_apollo_0_medical_equipment_assets" sys_domain="global" view="e53c64d153c230108125ddeeff7b12e3">7c9a2e7a47a0df50273a565a516d4359</sys_ui_section>
+            <sys_updated_by>akshat.bari</sys_updated_by>
+            <sys_updated_on>2026-11-18 07:23:23</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>install_status</element>
+            <position>5</position>
+            <sys_created_by>akshat.bari</sys_created_by>
+            <sys_created_on>2026-11-18 07:23:23</sys_created_on>
+            <sys_id>bc9a2e7a47a0df50273a565a516d4388</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Asset Details" display_value="Asset Details" name="x_2223823_apollo_0_medical_equipment_assets" sys_domain="global" view="e53c64d153c230108125ddeeff7b12e3">7c9a2e7a47a0df50273a565a516d4359</sys_ui_section>
+            <sys_updated_by>akshat.bari</sys_updated_by>
+            <sys_updated_on>2026-11-18 07:23:23</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>assigned_to</element>
+            <position>6</position>
+            <sys_created_by>akshat.bari</sys_created_by>
+            <sys_created_on>2026-11-18 07:23:23</sys_created_on>
+            <sys_id>bc9a2e7a47a0df50273a565a516d435b</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Asset Details" display_value="Asset Details" name="x_2223823_apollo_0_medical_equipment_assets" sys_domain="global" view="e53c64d153c230108125ddeeff7b12e3">7c9a2e7a47a0df50273a565a516d4359</sys_ui_section>
+            <sys_updated_by>akshat.bari</sys_updated_by>
+            <sys_updated_on>2026-11-18 07:23:23</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>stockroom</element>
+            <position>7</position>
+            <sys_created_by>akshat.bari</sys_created_by>
+            <sys_created_on>2026-11-18 07:23:23</sys_created_on>
+            <sys_id>b09a2e7a47a0df50273a565a516d4380</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Asset Details" display_value="Asset Details" name="x_2223823_apollo_0_medical_equipment_assets" sys_domain="global" view="e53c64d153c230108125ddeeff7b12e3">7c9a2e7a47a0df50273a565a516d4359</sys_ui_section>
+            <sys_updated_by>akshat.bari</sys_updated_by>
+            <sys_updated_on>2026-11-18 07:23:23</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>reserved_for</element>
+            <position>8</position>
+            <sys_created_by>akshat.bari</sys_created_by>
+            <sys_created_on>2026-11-18 07:23:23</sys_created_on>
+            <sys_id>349a2e7a47a0df50273a565a516d4378</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Asset Details" display_value="Asset Details" name="x_2223823_apollo_0_medical_equipment_assets" sys_domain="global" view="e53c64d153c230108125ddeeff7b12e3">7c9a2e7a47a0df50273a565a516d4359</sys_ui_section>
+            <sys_updated_by>akshat.bari</sys_updated_by>
+            <sys_updated_on>2026-11-18 07:23:23</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>managed_by</element>
+            <position>9</position>
+            <sys_created_by>akshat.bari</sys_created_by>
+            <sys_created_on>2026-11-18 07:23:23</sys_created_on>
+            <sys_id>b89a2e7a47a0df50273a565a516d4383</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Asset Details" display_value="Asset Details" name="x_2223823_apollo_0_medical_equipment_assets" sys_domain="global" view="e53c64d153c230108125ddeeff7b12e3">7c9a2e7a47a0df50273a565a516d4359</sys_ui_section>
+            <sys_updated_by>akshat.bari</sys_updated_by>
+            <sys_updated_on>2026-11-18 07:23:23</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>owned_by</element>
+            <position>10</position>
+            <sys_created_by>akshat.bari</sys_created_by>
+            <sys_created_on>2026-11-18 07:23:23</sys_created_on>
+            <sys_id>3c9a2e7a47a0df50273a565a516d437b</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Asset Details" display_value="Asset Details" name="x_2223823_apollo_0_medical_equipment_assets" sys_domain="global" view="e53c64d153c230108125ddeeff7b12e3">7c9a2e7a47a0df50273a565a516d4359</sys_ui_section>
+            <sys_updated_by>akshat.bari</sys_updated_by>
+            <sys_updated_on>2026-11-18 07:23:23</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>parent</element>
+            <position>11</position>
+            <sys_created_by>akshat.bari</sys_created_by>
+            <sys_created_on>2026-11-18 07:23:23</sys_created_on>
+            <sys_id>b09a2e7a47a0df50273a565a516d4387</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Asset Details" display_value="Asset Details" name="x_2223823_apollo_0_medical_equipment_assets" sys_domain="global" view="e53c64d153c230108125ddeeff7b12e3">7c9a2e7a47a0df50273a565a516d4359</sys_ui_section>
+            <sys_updated_by>akshat.bari</sys_updated_by>
+            <sys_updated_on>2026-11-18 07:23:23</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>sys_class_name</element>
+            <position>12</position>
+            <sys_created_by>akshat.bari</sys_created_by>
+            <sys_created_on>2026-11-18 07:23:23</sys_created_on>
+            <sys_id>b49a2e7a47a0df50273a565a516d437e</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Asset Details" display_value="Asset Details" name="x_2223823_apollo_0_medical_equipment_assets" sys_domain="global" view="e53c64d153c230108125ddeeff7b12e3">7c9a2e7a47a0df50273a565a516d4359</sys_ui_section>
+            <sys_updated_by>akshat.bari</sys_updated_by>
+            <sys_updated_on>2026-11-18 07:23:23</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>install_date</element>
+            <position>13</position>
+            <sys_created_by>akshat.bari</sys_created_by>
+            <sys_created_on>2026-11-18 07:23:23</sys_created_on>
+            <sys_id>3c9a2e7a47a0df50273a565a516d4389</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Asset Details" display_value="Asset Details" name="x_2223823_apollo_0_medical_equipment_assets" sys_domain="global" view="e53c64d153c230108125ddeeff7b12e3">7c9a2e7a47a0df50273a565a516d4359</sys_ui_section>
+            <sys_updated_by>akshat.bari</sys_updated_by>
+            <sys_updated_on>2026-11-18 07:23:23</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.split</element>
+            <position>14</position>
+            <sys_created_by>akshat.bari</sys_created_by>
+            <sys_created_on>2026-11-18 07:23:23</sys_created_on>
+            <sys_id>b89a2e7a47a0df50273a565a516d4375</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Asset Details" display_value="Asset Details" name="x_2223823_apollo_0_medical_equipment_assets" sys_domain="global" view="e53c64d153c230108125ddeeff7b12e3">7c9a2e7a47a0df50273a565a516d4359</sys_ui_section>
+            <sys_updated_by>akshat.bari</sys_updated_by>
+            <sys_updated_on>2026-11-18 07:23:23</sys_updated_on>
+            <sys_user/>
+            <type>.split</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>ci</element>
+            <position>15</position>
+            <sys_created_by>akshat.bari</sys_created_by>
+            <sys_created_on>2026-11-18 07:23:23</sys_created_on>
+            <sys_id>309a2e7a47a0df50273a565a516d4381</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Asset Details" display_value="Asset Details" name="x_2223823_apollo_0_medical_equipment_assets" sys_domain="global" view="e53c64d153c230108125ddeeff7b12e3">7c9a2e7a47a0df50273a565a516d4359</sys_ui_section>
+            <sys_updated_by>akshat.bari</sys_updated_by>
+            <sys_updated_on>2026-11-18 07:23:23</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>quantity</element>
+            <position>16</position>
+            <sys_created_by>akshat.bari</sys_created_by>
+            <sys_created_on>2026-11-18 07:23:23</sys_created_on>
+            <sys_id>b09a2e7a47a0df50273a565a516d4379</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Asset Details" display_value="Asset Details" name="x_2223823_apollo_0_medical_equipment_assets" sys_domain="global" view="e53c64d153c230108125ddeeff7b12e3">7c9a2e7a47a0df50273a565a516d4359</sys_ui_section>
+            <sys_updated_by>akshat.bari</sys_updated_by>
+            <sys_updated_on>2026-11-18 07:23:23</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>serial_number</element>
+            <position>17</position>
+            <sys_created_by>akshat.bari</sys_created_by>
+            <sys_created_on>2026-11-18 07:23:23</sys_created_on>
+            <sys_id>389a2e7a47a0df50273a565a516d4384</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Asset Details" display_value="Asset Details" name="x_2223823_apollo_0_medical_equipment_assets" sys_domain="global" view="e53c64d153c230108125ddeeff7b12e3">7c9a2e7a47a0df50273a565a516d4359</sys_ui_section>
+            <sys_updated_by>akshat.bari</sys_updated_by>
+            <sys_updated_on>2026-11-18 07:23:23</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>substatus</element>
+            <position>18</position>
+            <sys_created_by>akshat.bari</sys_created_by>
+            <sys_created_on>2026-11-18 07:23:23</sys_created_on>
+            <sys_id>b89a2e7a47a0df50273a565a516d437c</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Asset Details" display_value="Asset Details" name="x_2223823_apollo_0_medical_equipment_assets" sys_domain="global" view="e53c64d153c230108125ddeeff7b12e3">7c9a2e7a47a0df50273a565a516d4359</sys_ui_section>
+            <sys_updated_by>akshat.bari</sys_updated_by>
+            <sys_updated_on>2026-11-18 07:23:23</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>location</element>
+            <position>19</position>
+            <sys_created_by>akshat.bari</sys_created_by>
+            <sys_created_on>2026-11-18 07:23:23</sys_created_on>
+            <sys_id>309a2e7a47a0df50273a565a516d4388</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Asset Details" display_value="Asset Details" name="x_2223823_apollo_0_medical_equipment_assets" sys_domain="global" view="e53c64d153c230108125ddeeff7b12e3">7c9a2e7a47a0df50273a565a516d4359</sys_ui_section>
+            <sys_updated_by>akshat.bari</sys_updated_by>
+            <sys_updated_on>2026-11-18 07:23:23</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>department</element>
+            <position>20</position>
+            <sys_created_by>akshat.bari</sys_created_by>
+            <sys_created_on>2026-11-18 07:23:23</sys_created_on>
+            <sys_id>349a2e7a47a0df50273a565a516d437f</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Asset Details" display_value="Asset Details" name="x_2223823_apollo_0_medical_equipment_assets" sys_domain="global" view="e53c64d153c230108125ddeeff7b12e3">7c9a2e7a47a0df50273a565a516d4359</sys_ui_section>
+            <sys_updated_by>akshat.bari</sys_updated_by>
+            <sys_updated_on>2026-11-18 07:23:23</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>company</element>
+            <position>21</position>
+            <sys_created_by>akshat.bari</sys_created_by>
+            <sys_created_on>2026-11-18 07:23:23</sys_created_on>
+            <sys_id>b89a2e7a47a0df50273a565a516d438a</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Asset Details" display_value="Asset Details" name="x_2223823_apollo_0_medical_equipment_assets" sys_domain="global" view="e53c64d153c230108125ddeeff7b12e3">7c9a2e7a47a0df50273a565a516d4359</sys_ui_section>
+            <sys_updated_by>akshat.bari</sys_updated_by>
+            <sys_updated_on>2026-11-18 07:23:23</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>asset_function</element>
+            <position>22</position>
+            <sys_created_by>akshat.bari</sys_created_by>
+            <sys_created_on>2026-11-18 07:23:23</sys_created_on>
+            <sys_id>389a2e7a47a0df50273a565a516d4376</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Asset Details" display_value="Asset Details" name="x_2223823_apollo_0_medical_equipment_assets" sys_domain="global" view="e53c64d153c230108125ddeeff7b12e3">7c9a2e7a47a0df50273a565a516d4359</sys_ui_section>
+            <sys_updated_by>akshat.bari</sys_updated_by>
+            <sys_updated_on>2026-11-18 07:23:23</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>assigned</element>
+            <position>23</position>
+            <sys_created_by>akshat.bari</sys_created_by>
+            <sys_created_on>2026-11-18 07:23:23</sys_created_on>
+            <sys_id>bc9a2e7a47a0df50273a565a516d4381</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Asset Details" display_value="Asset Details" name="x_2223823_apollo_0_medical_equipment_assets" sys_domain="global" view="e53c64d153c230108125ddeeff7b12e3">7c9a2e7a47a0df50273a565a516d4359</sys_ui_section>
+            <sys_updated_by>akshat.bari</sys_updated_by>
+            <sys_updated_on>2026-11-18 07:23:23</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.end_split</element>
+            <position>24</position>
+            <sys_created_by>akshat.bari</sys_created_by>
+            <sys_created_on>2026-11-18 07:23:23</sys_created_on>
+            <sys_id>309a2e7a47a0df50273a565a516d437a</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Asset Details" display_value="Asset Details" name="x_2223823_apollo_0_medical_equipment_assets" sys_domain="global" view="e53c64d153c230108125ddeeff7b12e3">7c9a2e7a47a0df50273a565a516d4359</sys_ui_section>
+            <sys_updated_by>akshat.bari</sys_updated_by>
+            <sys_updated_on>2026-11-18 07:23:23</sys_updated_on>
+            <sys_user/>
+            <type>.end_split</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>comments</element>
+            <position>25</position>
+            <sys_created_by>akshat.bari</sys_created_by>
+            <sys_created_on>2026-11-18 07:23:23</sys_created_on>
+            <sys_id>b49a2e7a47a0df50273a565a516d4385</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Asset Details" display_value="Asset Details" name="x_2223823_apollo_0_medical_equipment_assets" sys_domain="global" view="e53c64d153c230108125ddeeff7b12e3">7c9a2e7a47a0df50273a565a516d4359</sys_ui_section>
+            <sys_updated_by>akshat.bari</sys_updated_by>
+            <sys_updated_on>2026-11-18 07:23:23</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_section action="INSERT_OR_UPDATE">
+            <caption>Asset Details</caption>
+            <header>false</header>
+            <name>x_2223823_apollo_0_medical_equipment_assets</name>
+            <roles/>
+            <sys_class_name>sys_ui_section</sys_class_name>
+            <sys_created_by>akshat.bari</sys_created_by>
+            <sys_created_on>2026-11-18 07:23:23</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>7c9a2e7a47a0df50273a565a516d4359</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>x_2223823_apollo_0_medical_equipment_assets</sys_name>
+            <sys_overrides/>
+            <sys_package display_value="Apollo-Hospitals" source="x_2223823_apollo_0">87c1422693c89b507b3a7c5efaba1008</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
+            <sys_update_name>sys_ui_section_7c9a2e7a47a0df50273a565a516d4359</sys_update_name>
+            <sys_updated_by>akshat.bari</sys_updated_by>
+            <sys_updated_on>2026-11-18 07:23:23</sys_updated_on>
+            <sys_user/>
+            <title>false</title>
+            <view display_value="ITAM Workspace" name="itam_workspace">e53c64d153c230108125ddeeff7b12e3</view>
+            <view_name/>
+        </sys_ui_section>
+    </sys_ui_section>
+</record_update>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_package_dependency_m2m">
+    <sys_package_dependency_m2m action="INSERT_OR_UPDATE">
+        <dependency display_value="Change Request" source="com.snc.change_request">99e4f63b8c5503100a22deb6dd2b4eaa</dependency>
+        <min_version>1.0.0</min_version>
+        <sys_created_by>ridhwik.jangid</sys_created_by>
+        <sys_created_on>2026-11-10 09:58:49</sys_created_on>
+        <sys_id>bb610ed053285f10ed9b78f0a0490ea3</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_package display_value="Apollo-Hospitals" source="x_2223823_apollo_0">87c1422693c89b507b3a7c5efaba1008</sys_package>
+        <sys_updated_by>ridhwik.jangid</sys_updated_by>
+        <sys_updated_on>2026-11-10 09:58:49</sys_updated_on>
+    </sys_package_dependency_m2m>
+</record_update>

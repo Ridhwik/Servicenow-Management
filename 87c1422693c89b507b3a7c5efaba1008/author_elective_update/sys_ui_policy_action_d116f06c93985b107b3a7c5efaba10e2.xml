@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ui_policy_action">
+    <sys_ui_policy_action action="DELETE">
+        <cleared>false</cleared>
+        <disabled>ignore</disabled>
+        <field>current_admission</field>
+        <field_message/>
+        <field_message_type>none</field_message_type>
+        <mandatory>ignore</mandatory>
+        <sys_class_name>sys_ui_policy_action</sys_class_name>
+        <sys_created_by>vikalp.pareek</sys_created_by>
+        <sys_created_on>2026-10-29 12:52:57</sys_created_on>
+        <sys_id>d116f06c93985b107b3a7c5efaba10e2</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>current_admission</sys_name>
+        <sys_package display_value="Apollo-Hospitals" source="x_2223823_apollo_0">87c1422693c89b507b3a7c5efaba1008</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
+        <sys_update_name>sys_ui_policy_action_d116f06c93985b107b3a7c5efaba10e2</sys_update_name>
+        <sys_updated_by>vikalp.pareek</sys_updated_by>
+        <sys_updated_on>2026-10-29 12:52:57</sys_updated_on>
+        <table>x_2223823_apollo_0_beds</table>
+        <ui_policy display_value="Bed Status is Occupied">c7c5782c93985b107b3a7c5efaba107e</ui_policy>
+        <value/>
+        <value_action>ignore</value_action>
+        <visible>true</visible>
+    </sys_ui_policy_action>
+    <sys_translated_text action="DELETE" query="documentkey=d116f06c93985b107b3a7c5efaba10e2"/>
+<sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</application>
+        <file_path/>
+        <instance_id>5ada7edb93d06e50d9f6ddd548373c9d</instance_id>
+        <instance_name>dev304851</instance_name>
+        <name>sys_ui_policy_action_d116f06c93985b107b3a7c5efaba10e2</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ui_policy_action">
+    <sys_ui_policy_action action="INSERT_OR_UPDATE">
+        <cleared>false</cleared>
+        <disabled>ignore</disabled>
+        <field>current_admission</field>
+        <field_message/>
+        <field_message_type>none</field_message_type>
+        <mandatory>ignore</mandatory>
+        <sys_class_name>sys_ui_policy_action</sys_class_name>
+        <sys_created_by>vikalp.pareek</sys_created_by>
+        <sys_created_on>2026-10-29 12:52:57</sys_created_on>
+        <sys_id>d116f06c93985b107b3a7c5efaba10e2</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>current_admission</sys_name>
+        <sys_package display_value="Apollo-Hospitals" source="x_2223823_apollo_0">87c1422693c89b507b3a7c5efaba1008</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
+        <sys_update_name>sys_ui_policy_action_d116f06c93985b107b3a7c5efaba10e2</sys_update_name>
+        <sys_updated_by>vikalp.pareek</sys_updated_by>
+        <sys_updated_on>2026-10-29 12:52:57</sys_updated_on>
+        <table>x_2223823_apollo_0_beds</table>
+        <ui_policy display_value="Bed Status is Occupied">c7c5782c93985b107b3a7c5efaba107e</ui_policy>
+        <value/>
+        <value_action>ignore</value_action>
+        <visible>true</visible>
+    </sys_ui_policy_action>
+    <sys_translated_text action="delete_multiple" query="documentkey=d116f06c93985b107b3a7c5efaba10e2"/>
+</record_update>]]></payload>
+        <payload_hash>-1119864409</payload_hash>
+        <record_name>current_admission</record_name>
+        <reverted_from/>
+        <source>02d920f047909310273a565a516d4316</source>
+        <source_table>sys_upgrade_history</source_table>
+        <state>current</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-10-30 06:37:37</sys_created_on>
+        <sys_id>49e9a4f047909310273a565a516d43e9</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1a18b8738880000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-10-30 06:37:37</sys_updated_on>
+        <type>UI Policy Action</type>
+        <update_guid>09e9a4f0fc9093101068d7c6102f00e9</update_guid>
+        <update_guid_history>09e9a4f0fc9093101068d7c6102f00e9:-1119864409</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>vikalp.pareek</sys_created_by>
+        <sys_created_on>2026-11-04 13:10:38</sys_created_on>
+        <sys_db_object display_value="" name="sys_ui_policy_action">sys_ui_policy_action</sys_db_object>
+        <sys_id>2e81cc8567c449409d42ea86523fa710</sys_id>
+        <sys_metadata>d116f06c93985b107b3a7c5efaba10e2</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>current_admission</sys_name>
+        <sys_package display_value="Apollo-Hospitals" source="x_2223823_apollo_0">87c1422693c89b507b3a7c5efaba1008</sys_package>
+        <sys_parent display_value="Bed Status is Occupied">c7c5782c93985b107b3a7c5efaba107e</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
+        <sys_scope_delete display_value="">1a2f7aa8dfc34e3a86d3f0bede3c2784</sys_scope_delete>
+        <sys_update_name>sys_ui_policy_action_d116f06c93985b107b3a7c5efaba10e2</sys_update_name>
+        <sys_update_version display_value="sys_ui_policy_action_d116f06c93985b107b3a7c5efaba10e2">49e9a4f047909310273a565a516d43e9</sys_update_version>
+        <sys_updated_by>vikalp.pareek</sys_updated_by>
+        <sys_updated_on>2026-11-04 13:10:38</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

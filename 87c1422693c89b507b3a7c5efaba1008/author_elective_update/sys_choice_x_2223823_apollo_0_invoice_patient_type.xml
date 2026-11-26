@@ -25,13 +25,13 @@
             <name>x_2223823_apollo_0_invoice</name>
             <sequence>1</sequence>
             <synonyms/>
-            <sys_created_by>ayush.mangal</sys_created_by>
-            <sys_created_on>2026-11-02 07:03:00</sys_created_on>
+            <sys_created_by>harshvardhan.chhapola</sys_created_by>
+            <sys_created_on>2026-11-05 06:47:13</sys_created_on>
             <sys_domain>global</sys_domain>
             <sys_domain_path>/</sys_domain_path>
             <sys_mod_count>0</sys_mod_count>
-            <sys_updated_by>ayush.mangal</sys_updated_by>
-            <sys_updated_on>2026-11-02 07:03:00</sys_updated_on>
+            <sys_updated_by>harshvardhan.chhapola</sys_updated_by>
+            <sys_updated_on>2026-11-05 06:47:13</sys_updated_on>
             <value>opd</value>
         </sys_choice>
         <sys_choice action="INSERT_OR_UPDATE">
@@ -44,13 +44,13 @@
             <name>x_2223823_apollo_0_invoice</name>
             <sequence>2</sequence>
             <synonyms/>
-            <sys_created_by>ayush.mangal</sys_created_by>
-            <sys_created_on>2026-11-02 07:03:02</sys_created_on>
+            <sys_created_by>harshvardhan.chhapola</sys_created_by>
+            <sys_created_on>2026-11-05 06:47:13</sys_created_on>
             <sys_domain>global</sys_domain>
             <sys_domain_path>/</sys_domain_path>
             <sys_mod_count>0</sys_mod_count>
-            <sys_updated_by>ayush.mangal</sys_updated_by>
-            <sys_updated_on>2026-11-02 07:03:02</sys_updated_on>
+            <sys_updated_by>harshvardhan.chhapola</sys_updated_by>
+            <sys_updated_on>2026-11-05 06:47:13</sys_updated_on>
             <value>video</value>
         </sys_choice>
         <sys_choice action="INSERT_OR_UPDATE">
@@ -63,13 +63,13 @@
             <name>x_2223823_apollo_0_invoice</name>
             <sequence>3</sequence>
             <synonyms/>
-            <sys_created_by>ayush.mangal</sys_created_by>
-            <sys_created_on>2026-11-02 07:03:05</sys_created_on>
+            <sys_created_by>harshvardhan.chhapola</sys_created_by>
+            <sys_created_on>2026-11-05 06:47:13</sys_created_on>
             <sys_domain>global</sys_domain>
             <sys_domain_path>/</sys_domain_path>
             <sys_mod_count>0</sys_mod_count>
-            <sys_updated_by>ayush.mangal</sys_updated_by>
-            <sys_updated_on>2026-11-02 07:03:05</sys_updated_on>
+            <sys_updated_by>harshvardhan.chhapola</sys_updated_by>
+            <sys_updated_on>2026-11-05 06:47:13</sys_updated_on>
             <value>inpatient</value>
         </sys_choice>
     </sys_choice>

@@ -3,7 +3,7 @@
         <caller_access/>
         <derived_priority>100</derived_priority>
         <description>Equipment CI goes Under Maintenance or Out of Service and booked tests are affected</description>
-        <event_name>x_2223823_apollo_0.lab_equipment_unavailable</event_name>
+        <event_name>x_2223823_apollo_0.lab_equipment_unavail</event_name>
         <fired_by/>
         <priority>100</priority>
         <queue/>

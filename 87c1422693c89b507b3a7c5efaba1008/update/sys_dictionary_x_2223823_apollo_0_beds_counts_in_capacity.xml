@@ -2,7 +2,7 @@
     <sys_dictionary action="INSERT_OR_UPDATE" element="counts_in_capacity" table="x_2223823_apollo_0_beds">
         <active>true</active>
         <array>false</array>
-        <attributes/>
+        <attributes>edge_encryption_enabled=true</attributes>
         <audit>false</audit>
         <calculation/>
         <choice/>
@@ -29,7 +29,7 @@
         <function_field>false</function_field>
         <internal_type display_value="">boolean</internal_type>
         <mandatory>false</mandatory>
-        <max_length/>
+        <max_length>40</max_length>
         <name>x_2223823_apollo_0_beds</name>
         <next_element/>
         <primary>false</primary>

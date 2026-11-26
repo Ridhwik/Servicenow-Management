@@ -22,7 +22,7 @@
         </filter_condition>
         <is_rest>false</is_rest>
         <message/>
-        <name>Hospital, Department and Floor Sync Validation </name>
+        <name>Hospital, Department and Floor Sync Vali</name>
         <order>100</order>
         <priority>100</priority>
         <rest_method/>

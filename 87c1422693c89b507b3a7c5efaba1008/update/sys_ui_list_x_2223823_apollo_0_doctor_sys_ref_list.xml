@@ -3,7 +3,7 @@
         <sys_ui_list_element action="INSERT_OR_UPDATE">
             <average_value>false</average_value>
             <element>number</element>
-            <list_id display_value="x_2223823_apollo_0_doctor" element="NULL" name="x_2223823_apollo_0_doctor" parent="NULL" relationship="NULL" sys_domain="global" view="544ce341f033031001ffe61a9d6c4819">0067a07e47145b10273a565a516d4310</list_id>
+            <list_id display_value="x_2223823_apollo_0_doctor" element="NULL" name="x_2223823_apollo_0_doctor" parent="NULL" relationship="NULL" sys_domain="global" view="7c10f2738c1103100a22deb6dd2b4e04">0067a07e47145b10273a565a516d4310</list_id>
             <max_value>false</max_value>
             <min_value>false</min_value>
             <position>0</position>
@@ -18,7 +18,7 @@
         <sys_ui_list_element action="INSERT_OR_UPDATE">
             <average_value>false</average_value>
             <element>department</element>
-            <list_id display_value="x_2223823_apollo_0_doctor" element="NULL" name="x_2223823_apollo_0_doctor" parent="NULL" relationship="NULL" sys_domain="global" view="544ce341f033031001ffe61a9d6c4819">0067a07e47145b10273a565a516d4310</list_id>
+            <list_id display_value="x_2223823_apollo_0_doctor" element="NULL" name="x_2223823_apollo_0_doctor" parent="NULL" relationship="NULL" sys_domain="global" view="7c10f2738c1103100a22deb6dd2b4e04">0067a07e47145b10273a565a516d4310</list_id>
             <max_value>false</max_value>
             <min_value>false</min_value>
             <position>1</position>
@@ -33,7 +33,7 @@
         <sys_ui_list_element action="INSERT_OR_UPDATE">
             <average_value>false</average_value>
             <element>primary_hospital</element>
-            <list_id display_value="x_2223823_apollo_0_doctor" element="NULL" name="x_2223823_apollo_0_doctor" parent="NULL" relationship="NULL" sys_domain="global" view="544ce341f033031001ffe61a9d6c4819">0067a07e47145b10273a565a516d4310</list_id>
+            <list_id display_value="x_2223823_apollo_0_doctor" element="NULL" name="x_2223823_apollo_0_doctor" parent="NULL" relationship="NULL" sys_domain="global" view="7c10f2738c1103100a22deb6dd2b4e04">0067a07e47145b10273a565a516d4310</list_id>
             <max_value>false</max_value>
             <min_value>false</min_value>
             <position>2</position>
@@ -70,7 +70,7 @@
             <sys_updated_by>nilesh.chaurasia</sys_updated_by>
             <sys_updated_on>2026-11-05 11:34:27</sys_updated_on>
             <sys_user/>
-            <view display_value="Reference List" name="sys_ref_list">544ce341f033031001ffe61a9d6c4819</view>
+            <view display_value="Reference List" name="sys_ref_list">7c10f2738c1103100a22deb6dd2b4e04</view>
             <view_name/>
         </sys_ui_list>
     </sys_ui_list>

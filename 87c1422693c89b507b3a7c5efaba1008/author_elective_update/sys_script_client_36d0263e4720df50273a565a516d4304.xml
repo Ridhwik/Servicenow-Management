@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script_client">
+    <sys_script_client action="DELETE">
+        <active>true</active>
+        <applies_extended>true</applies_extended>
+        <condition/>
+        <description/>
+        <field/>
+        <global>true</global>
+        <isolate_script>true</isolate_script>
+        <messages/>
+        <name>Make Hospital and Equip. type mandatory</name>
+        <order/>
+        <script><![CDATA[function onLoad() {
+   //Type appropriate comment here, and begin script below
+   g_form.setMandatory('x_2223823_apollo_0_hospital', true);
+   g_form.setMandatory('x_2223823_apollo_0_equipment_type', true);   
+}]]></script>
+        <sys_class_name>sys_script_client</sys_class_name>
+        <sys_created_by>akshat.bari</sys_created_by>
+        <sys_created_on>2026-11-18 06:44:21</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>36d0263e4720df50273a565a516d4304</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name>Make Hospital and Equip. type mandatory</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Apollo-Hospitals" source="x_2223823_apollo_0">87c1422693c89b507b3a7c5efaba1008</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
+        <sys_update_name>sys_script_client_36d0263e4720df50273a565a516d4304</sys_update_name>
+        <sys_updated_by>akshat.bari</sys_updated_by>
+        <sys_updated_on>2026-11-18 06:47:07</sys_updated_on>
+        <table>alm_asset</table>
+        <type>onLoad</type>
+        <ui_type>10</ui_type>
+        <view/>
+    </sys_script_client>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</application>
+        <file_path/>
+        <instance_id>5ada7edb93d06e50d9f6ddd548373c9d</instance_id>
+        <instance_name>dev304851</instance_name>
+        <name>sys_script_client_36d0263e4720df50273a565a516d4304</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update sys_domain="global" table="sys_script_client"&gt;&lt;sys_script_client action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;applies_extended&gt;true&lt;/applies_extended&gt;&lt;condition/&gt;&lt;description/&gt;&lt;field/&gt;&lt;global&gt;true&lt;/global&gt;&lt;isolate_script&gt;true&lt;/isolate_script&gt;&lt;messages/&gt;&lt;name&gt;Make Hospital and Equip. type mandatory&lt;/name&gt;&lt;order/&gt;&lt;script&gt;&lt;![CDATA[function onLoad() {
+   //Type appropriate comment here, and begin script below
+   g_form.setMandatory('x_2223823_apollo_0_hospital', true);
+   g_form.setMandatory('x_2223823_apollo_0_equipment_type', true);   
+}]]&gt;&lt;/script&gt;&lt;sys_class_name&gt;sys_script_client&lt;/sys_class_name&gt;&lt;sys_created_by&gt;akshat.bari&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2026-11-18 06:44:21&lt;/sys_created_on&gt;&lt;sys_domain&gt;global&lt;/sys_domain&gt;&lt;sys_domain_path&gt;/&lt;/sys_domain_path&gt;&lt;sys_id&gt;36d0263e4720df50273a565a516d4304&lt;/sys_id&gt;&lt;sys_mod_count&gt;3&lt;/sys_mod_count&gt;&lt;sys_name&gt;Make Hospital and Equip. type mandatory&lt;/sys_name&gt;&lt;sys_overrides/&gt;&lt;sys_package display_value="Apollo-Hospitals" source="x_2223823_apollo_0"&gt;87c1422693c89b507b3a7c5efaba1008&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Apollo-Hospitals"&gt;87c1422693c89b507b3a7c5efaba1008&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_script_client_36d0263e4720df50273a565a516d4304&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;akshat.bari&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2026-11-18 06:47:07&lt;/sys_updated_on&gt;&lt;table&gt;alm_asset&lt;/table&gt;&lt;type&gt;onLoad&lt;/type&gt;&lt;ui_type&gt;10&lt;/ui_type&gt;&lt;view/&gt;&lt;/sys_script_client&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>1419339137</payload_hash>
+        <record_name>Make Hospital and Equip. type mandatory</record_name>
+        <reverted_from/>
+        <source>02cbcdaa47241f50273a565a516d43e5</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>akshat.bari</sys_created_by>
+        <sys_created_on>2026-11-18 06:47:07</sys_created_on>
+        <sys_id>ed426e324760df50273a565a516d434d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1a1ed68c1990000001</sys_recorded_at>
+        <sys_updated_by>akshat.bari</sys_updated_by>
+        <sys_updated_on>2026-11-18 06:47:07</sys_updated_on>
+        <type>Client Script</type>
+        <update_guid>2d426e329d60df501a67619b9c64354c</update_guid>
+        <update_guid_history>2d426e329d60df501a67619b9c64354c:1419339137,1912e2320f60df5020c79182e73a3a87:-270129212,8ff1aefe1c20df50e587098ee36bea0d:586771426,41a1aefae420df50b67ff2138fbcb66c:-270129212</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>akshat.bari</sys_created_by>
+        <sys_created_on>2026-11-18 07:13:24</sys_created_on>
+        <sys_db_object display_value="" name="sys_script_client">sys_script_client</sys_db_object>
+        <sys_id>4aaff3d953f245af813bbb3c35eb3179</sys_id>
+        <sys_metadata>36d0263e4720df50273a565a516d4304</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Make Hospital and Equip. type mandatory</sys_name>
+        <sys_package display_value="Apollo-Hospitals" source="x_2223823_apollo_0">87c1422693c89b507b3a7c5efaba1008</sys_package>
+        <sys_parent display_value="">09deab85f077031001ffe61a9d6c488a</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
+        <sys_scope_delete display_value="">1a2f7aa8dfc34e3a86d3f0bede3c2784</sys_scope_delete>
+        <sys_update_name>sys_script_client_36d0263e4720df50273a565a516d4304</sys_update_name>
+        <sys_update_version display_value="sys_script_client_36d0263e4720df50273a565a516d4304">ed426e324760df50273a565a516d434d</sys_update_version>
+        <sys_updated_by>akshat.bari</sys_updated_by>
+        <sys_updated_on>2026-11-18 07:13:24</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

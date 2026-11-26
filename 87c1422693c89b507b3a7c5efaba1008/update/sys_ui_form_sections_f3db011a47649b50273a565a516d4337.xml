@@ -10,7 +10,7 @@
             <sys_mod_count>0</sys_mod_count>
             <sys_overrides/>
             <sys_ui_form display_value="sn_customerservice_appointment" name="sn_customerservice_appointment" sys_domain="global" view="Default view">f3db011a47649b50273a565a516d4337</sys_ui_form>
-            <sys_ui_section caption="NULL" display_value="" name="sn_customerservice_appointment" sys_domain="global" view="Default view">73db011a47649b50273a565a516d4349</sys_ui_section>
+            <sys_ui_section display_value="">73db011a47649b50273a565a516d4349</sys_ui_section>
             <sys_updated_by>ridhwik.jangid</sys_updated_by>
             <sys_updated_on>2026-11-16 11:12:40</sys_updated_on>
         </sys_ui_form_section>
@@ -24,7 +24,7 @@
             <sys_mod_count>0</sys_mod_count>
             <sys_overrides/>
             <sys_ui_form display_value="sn_customerservice_appointment" name="sn_customerservice_appointment" sys_domain="global" view="Default view">f3db011a47649b50273a565a516d4337</sys_ui_form>
-            <sys_ui_section caption="Configuration" display_value="Configuration" name="sn_customerservice_appointment" sys_domain="global" view="Default view">73db011a47649b50273a565a516d4352</sys_ui_section>
+            <sys_ui_section display_value="">73db011a47649b50273a565a516d4352</sys_ui_section>
             <sys_updated_by>ridhwik.jangid</sys_updated_by>
             <sys_updated_on>2026-11-16 11:12:40</sys_updated_on>
         </sys_ui_form_section>
@@ -38,7 +38,7 @@
             <sys_mod_count>0</sys_mod_count>
             <sys_overrides/>
             <sys_ui_form display_value="sn_customerservice_appointment" name="sn_customerservice_appointment" sys_domain="global" view="Default view">f3db011a47649b50273a565a516d4337</sys_ui_form>
-            <sys_ui_section caption="Content" display_value="Content" name="sn_customerservice_appointment" sys_domain="global" view="Default view">f3db011a47649b50273a565a516d433c</sys_ui_section>
+            <sys_ui_section display_value="">f3db011a47649b50273a565a516d433c</sys_ui_section>
             <sys_updated_by>ridhwik.jangid</sys_updated_by>
             <sys_updated_on>2026-11-16 11:12:39</sys_updated_on>
         </sys_ui_form_section>

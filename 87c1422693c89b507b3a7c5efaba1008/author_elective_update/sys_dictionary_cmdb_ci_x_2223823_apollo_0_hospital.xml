@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_dictionary action="DELETE" element="x_2223823_apollo_0_hospital" table="cmdb_ci">
+        <active>true</active>
+        <array>false</array>
+        <attributes/>
+        <audit>false</audit>
+        <calculation/>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label>Hospital</column_label>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>x_2223823_apollo_0_hospital</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <internal_type display_value="Reference">reference</internal_type>
+        <mandatory>true</mandatory>
+        <max_length>32</max_length>
+        <name>cmdb_ci</name>
+        <next_element/>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_only_option/>
+        <read_roles/>
+        <reference display_value="">x_2223823_apollo_0_hospital</reference>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual>javascript:new x_2223823_apollo_0.HospitalRefQual().getQuery(current)</reference_qual>
+        <reference_qual_condition/>
+        <reference_type/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_dictionary</sys_class_name>
+        <sys_created_by>harshvardhan.chhapola</sys_created_by>
+        <sys_created_on>2026-11-02 12:41:36</sys_created_on>
+        <sys_id/>
+        <sys_name>Hospital</sys_name>
+        <sys_package display_value="">87c1422693c89b507b3a7c5efaba1008</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="">87c1422693c89b507b3a7c5efaba1008</sys_scope>
+        <sys_update_name>sys_dictionary_cmdb_ci_x_2223823_apollo_0_hospital</sys_update_name>
+        <sys_updated_by>harshvardhan.chhapola</sys_updated_by>
+        <sys_updated_on>2026-11-05 05:44:45</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>advanced</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_dictionary>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</application>
+        <file_path/>
+        <instance_id>548ed3fbebd9c75c3a48f459bad0cd2c</instance_id>
+        <instance_name>dev404645</instance_name>
+        <name>sys_dictionary_cmdb_ci_x_2223823_apollo_0_hospital</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update><sys_dictionary action="INSERT_OR_UPDATE" element="x_2223823_apollo_0_hospital" table="cmdb_ci"><active>true</active><array>false</array><attributes/><audit>false</audit><calculation/><choice/><choice_field/><choice_table/><column_label>Hospital</column_label><comments/><create_roles/><default_value/><defaultsort/><delete_roles/><dependent/><dependent_on_field/><display>false</display><dynamic_creation>false</dynamic_creation><dynamic_creation_script/><dynamic_default_value/><dynamic_ref_qual/><element>x_2223823_apollo_0_hospital</element><element_reference>false</element_reference><foreign_database/><formula/><function_definition/><function_field>false</function_field><internal_type display_value="Reference">reference</internal_type><mandatory>true</mandatory><max_length>32</max_length><name>cmdb_ci</name><next_element/><primary>false</primary><read_only>false</read_only><read_only_option/><read_roles/><reference display_value="">x_2223823_apollo_0_hospital</reference><reference_cascade_rule/><reference_floats>false</reference_floats><reference_key/><reference_qual>javascript:new x_2223823_apollo_0.HospitalRefQual().getQuery(current)</reference_qual><reference_qual_condition/><reference_type/><spell_check>false</spell_check><staged>false</staged><sys_class_name>sys_dictionary</sys_class_name><sys_created_by>harshvardhan.chhapola</sys_created_by><sys_created_on>2026-11-02 12:41:36</sys_created_on><sys_id/><sys_name>Hospital</sys_name><sys_package display_value="">87c1422693c89b507b3a7c5efaba1008</sys_package><sys_policy/><sys_scope display_value="">87c1422693c89b507b3a7c5efaba1008</sys_scope><sys_update_name>sys_dictionary_cmdb_ci_x_2223823_apollo_0_hospital</sys_update_name><sys_updated_by>harshvardhan.chhapola</sys_updated_by><sys_updated_on>2026-11-05 05:44:45</sys_updated_on><table_reference>false</table_reference><text_index>false</text_index><unique>false</unique><use_dependent_field>false</use_dependent_field><use_dynamic_default>false</use_dynamic_default><use_reference_qualifier>advanced</use_reference_qualifier><virtual>false</virtual><virtual_type>script</virtual_type><widget/><write_roles/><xml_view>false</xml_view></sys_dictionary></record_update>]]></payload>
+        <payload_hash>1907661204</payload_hash>
+        <record_name>Configuration Item.Hospital</record_name>
+        <reverted_from/>
+        <source>4af0869c53e45f10ed9b78f0a0490e38</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>ridhwik.jangid</sys_created_by>
+        <sys_created_on>2026-11-10 09:57:44</sys_created_on>
+        <sys_id>3b21825053285f10ed9b78f0a0490eac</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1a1c4e4630d0000001</sys_recorded_at>
+        <sys_updated_by>ridhwik.jangid</sys_updated_by>
+        <sys_updated_on>2026-11-10 09:57:44</sys_updated_on>
+        <type>Dictionary</type>
+        <update_guid>f721825037285f10fca5a5b9432e7dac</update_guid>
+        <update_guid_history>40f839181a245f10c8755f076ca2f2de:-2091961090,40f839181a245f10c8755f076ca2f2de:-2091961090,81a6fd1cb8a05f1016b1e4d01fb60c3d:0,ddc3f510eb205f10b5bfee07070636c4:-2091961090,e62258ba73141310850ae010ed620dea:0,ef029c3a5414131057aae898f48a5564:1651152273</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>harshvardhan.chhapola</sys_created_by>
+        <sys_created_on>2026-11-24 09:21:45</sys_created_on>
+        <sys_db_object display_value="" name="sys_dictionary">sys_dictionary</sys_db_object>
+        <sys_id>1378886e896741a28efad7196c871831</sys_id>
+        <sys_metadata>b2214e1053285f10ed9b78f0a0490e93</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Hospital</sys_name>
+        <sys_package display_value="Apollo-Hospitals" source="x_2223823_apollo_0">87c1422693c89b507b3a7c5efaba1008</sys_package>
+        <sys_parent display_value="CMDB CI">ee02f67b8c9103100a22deb6dd2b4ef2</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
+        <sys_scope_delete display_value="">1a2f7aa8dfc34e3a86d3f0bede3c2784</sys_scope_delete>
+        <sys_update_name>sys_dictionary_cmdb_ci_x_2223823_apollo_0_hospital</sys_update_name>
+        <sys_update_version display_value="sys_dictionary_cmdb_ci_x_2223823_apollo_0_hospital">3b21825053285f10ed9b78f0a0490eac</sys_update_version>
+        <sys_updated_by>harshvardhan.chhapola</sys_updated_by>
+        <sys_updated_on>2026-11-24 09:21:45</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

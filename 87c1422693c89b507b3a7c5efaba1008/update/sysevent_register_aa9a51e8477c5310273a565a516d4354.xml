@@ -3,7 +3,7 @@
         <caller_access/>
         <derived_priority>100</derived_priority>
         <description>Scheduled check finds a test close to its expected processing deadline</description>
-        <event_name>x_2223823_apollo_0.lab_deadline_approaching</event_name>
+        <event_name>x_2223823_apollo_0.lab_deadline_approach</event_name>
         <fired_by/>
         <priority>100</priority>
         <queue/>

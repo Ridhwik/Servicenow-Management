@@ -20,7 +20,7 @@
         </filter_condition>
         <is_rest>false</is_rest>
         <message/>
-        <name>Validate Emergency Admission Approval State</name>
+        <name>Validate Emergency Admission Approval St</name>
         <order>100</order>
         <priority>100</priority>
         <rest_method/>

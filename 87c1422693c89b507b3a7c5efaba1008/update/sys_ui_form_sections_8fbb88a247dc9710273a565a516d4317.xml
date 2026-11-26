@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_ui_form_sections form_id="8fbb88a247dc9710273a565a516d4317" sys_domain="global" table="x_2223823_apollo_0_admissions" version="3">
+        <sys_ui_form_section action="INSERT_OR_UPDATE">
+            <position>0</position>
+            <sys_created_by>integration.user</sys_created_by>
+            <sys_created_on>2026-11-04 14:47:38</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>bff9ccae479c9710273a565a516d4304</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_overrides/>
+            <sys_ui_form display_value="x_2223823_apollo_0_admissions" name="x_2223823_apollo_0_admissions" sys_domain="global" view="Default view">8fbb88a247dc9710273a565a516d4317</sys_ui_form>
+            <sys_ui_section caption="Patient and doctor" display_value="Patient and doctor" name="x_2223823_apollo_0_admissions" sys_domain="global" view="Default view">7ae98cae479c9710273a565a516d43b3</sys_ui_section>
+            <sys_updated_by>integration.user</sys_updated_by>
+            <sys_updated_on>2026-11-04 14:47:38</sys_updated_on>
+        </sys_ui_form_section>
+        <sys_ui_form_section action="INSERT_OR_UPDATE">
+            <position>1</position>
+            <sys_created_by>integration.user</sys_created_by>
+            <sys_created_on>2026-11-04 14:47:38</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>400a40ee479c9710273a565a516d4385</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_overrides/>
+            <sys_ui_form display_value="x_2223823_apollo_0_admissions" name="x_2223823_apollo_0_admissions" sys_domain="global" view="Default view">8fbb88a247dc9710273a565a516d4317</sys_ui_form>
+            <sys_ui_section caption="Room and Bed" display_value="Room and Bed" name="x_2223823_apollo_0_admissions" sys_domain="global" view="Default view">72e98cae479c9710273a565a516d43ba</sys_ui_section>
+            <sys_updated_by>integration.user</sys_updated_by>
+            <sys_updated_on>2026-11-04 14:47:38</sys_updated_on>
+        </sys_ui_form_section>
+        <sys_ui_form_section action="INSERT_OR_UPDATE">
+            <position>2</position>
+            <sys_created_by>ridhwik.jangid</sys_created_by>
+            <sys_created_on>2026-11-10 10:02:26</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>3c420a5c53285f10ed9b78f0a0490e47</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_overrides/>
+            <sys_ui_form display_value="x_2223823_apollo_0_admissions" name="x_2223823_apollo_0_admissions" sys_domain="global" view="Default view">8fbb88a247dc9710273a565a516d4317</sys_ui_form>
+            <sys_ui_section caption="Admission Details" display_value="Admission Details" name="x_2223823_apollo_0_admissions" sys_domain="global" view="Default view">4bbb88a247dc9710273a565a516d4316</sys_ui_section>
+            <sys_updated_by>integration.user</sys_updated_by>
+            <sys_updated_on>2026-11-10 10:56:35</sys_updated_on>
+        </sys_ui_form_section>
+        <sys_ui_form_section action="INSERT_OR_UPDATE">
+            <position>3</position>
+            <sys_created_by>integration.user</sys_created_by>
+            <sys_created_on>2026-11-04 14:47:39</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>d40a40ee479c9710273a565a516d438f</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_overrides/>
+            <sys_ui_form display_value="x_2223823_apollo_0_admissions" name="x_2223823_apollo_0_admissions" sys_domain="global" view="Default view">8fbb88a247dc9710273a565a516d4317</sys_ui_form>
+            <sys_ui_section caption="Discharge" display_value="Discharge" name="x_2223823_apollo_0_admissions" sys_domain="global" view="Default view">4fe98cae479c9710273a565a516d43c6</sys_ui_section>
+            <sys_updated_by>integration.user</sys_updated_by>
+            <sys_updated_on>2026-11-04 14:47:39</sys_updated_on>
+        </sys_ui_form_section>
+        <sys_ui_form_section action="INSERT_OR_UPDATE">
+            <position>4</position>
+            <sys_created_by>ridhwik.jangid</sys_created_by>
+            <sys_created_on>2026-11-10 10:02:26</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>a442c65c53285f10ed9b78f0a0490ee3</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_overrides/>
+            <sys_ui_form display_value="x_2223823_apollo_0_admissions" name="x_2223823_apollo_0_admissions" sys_domain="global" view="Default view">8fbb88a247dc9710273a565a516d4317</sys_ui_form>
+            <sys_ui_section caption="Billing" display_value="Billing" name="x_2223823_apollo_0_admissions" sys_domain="global" view="Default view">324fa8e647d0d710273a565a516d43ba</sys_ui_section>
+            <sys_updated_by>integration.user</sys_updated_by>
+            <sys_updated_on>2026-11-10 10:56:47</sys_updated_on>
+        </sys_ui_form_section>
+        <sys_ui_form_section action="INSERT_OR_UPDATE">
+            <position>5</position>
+            <sys_created_by>ridhwik.jangid</sys_created_by>
+            <sys_created_on>2026-11-24 08:51:56</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>a468b57053f41310ed9b78f0a0490e18</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_overrides/>
+            <sys_ui_form display_value="x_2223823_apollo_0_admissions" name="x_2223823_apollo_0_admissions" sys_domain="global" view="Default view">8fbb88a247dc9710273a565a516d4317</sys_ui_form>
+            <sys_ui_section caption="NULL" display_value="" name="x_2223823_apollo_0_admissions" sys_domain="global" view="Default view">22d304a2479c9710273a565a516d435c</sys_ui_section>
+            <sys_updated_by>ridhwik.jangid</sys_updated_by>
+            <sys_updated_on>2026-11-24 08:51:56</sys_updated_on>
+        </sys_ui_form_section>
+        <sys_ui_form action="INSERT_OR_UPDATE">
+            <name>x_2223823_apollo_0_admissions</name>
+            <roles/>
+            <sys_class_name>sys_ui_form</sys_class_name>
+            <sys_created_by>integration.user</sys_created_by>
+            <sys_created_on>2026-11-04 14:46:43</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>8fbb88a247dc9710273a565a516d4317</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_name>x_2223823_apollo_0_admissions</sys_name>
+            <sys_overrides/>
+            <sys_package display_value="Apollo-Hospitals" source="x_2223823_apollo_0">87c1422693c89b507b3a7c5efaba1008</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
+            <sys_update_name>sys_ui_form_sections_8fbb88a247dc9710273a565a516d4317</sys_update_name>
+            <sys_updated_by>integration.user</sys_updated_by>
+            <sys_updated_on>2026-11-10 11:06:23</sys_updated_on>
+            <sys_user/>
+            <view display_value="Default view" name="NULL">Default view</view>
+            <view_name/>
+        </sys_ui_form>
+    </sys_ui_form_sections>
+</record_update>

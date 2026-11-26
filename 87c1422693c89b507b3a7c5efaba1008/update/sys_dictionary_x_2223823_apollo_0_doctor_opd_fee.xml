@@ -2,7 +2,7 @@
     <sys_dictionary action="INSERT_OR_UPDATE" element="opd_fee" table="x_2223823_apollo_0_doctor">
         <active>true</active>
         <array>false</array>
-        <attributes/>
+        <attributes>edge_encryption_enabled=true,omit_sys_original=true</attributes>
         <audit>false</audit>
         <calculation/>
         <choice>0</choice>

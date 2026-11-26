@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_wizard_answer">
+    <sys_wizard_answer action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <answer>Medical Equipment Assets</answer>
+        <button_label/>
+        <dependent_value/>
+        <element/>
+        <name>Medical Equipment Assets</name>
+        <next_question/>
+        <order>100</order>
+        <payload_name/>
+        <question display_value="Asset" name="Asset">a28d237047622100158b949b6c9a710d</question>
+        <roles/>
+        <script/>
+        <sys_class_name>sys_wizard_answer</sys_class_name>
+        <sys_created_by>ridhwik.jangid</sys_created_by>
+        <sys_created_on>2026-11-24 09:21:08</sys_created_on>
+        <sys_id>501fb13853381310ed9b78f0a0490eae</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Medical Equipment Assets</sys_name>
+        <sys_package display_value="Apollo-Hospitals" source="x_2223823_apollo_0">87c1422693c89b507b3a7c5efaba1008</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
+        <sys_update_name>sys_wizard_answer_501fb13853381310ed9b78f0a0490eae</sys_update_name>
+        <sys_updated_by>ridhwik.jangid</sys_updated_by>
+        <sys_updated_on>2026-11-24 09:21:08</sys_updated_on>
+        <table/>
+        <target_url>x_2223823_apollo_0_medical_equipment_assets.do</target_url>
+        <type>1</type>
+    </sys_wizard_answer>
+</record_update>

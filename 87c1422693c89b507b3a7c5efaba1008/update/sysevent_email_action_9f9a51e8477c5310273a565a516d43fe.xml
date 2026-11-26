@@ -88,7 +88,7 @@
         <order>100</order>
         <push_message_only>false</push_message_only>
         <recipient_fields/>
-        <recipient_groups name="Lab Team">6a13b54647d0d310273a565a516d43b2</recipient_groups>
+        <recipient_groups>6a13b54647d0d310273a565a516d43b2</recipient_groups>
         <recipient_users/>
         <reply_to/>
         <send_self>true</send_self>

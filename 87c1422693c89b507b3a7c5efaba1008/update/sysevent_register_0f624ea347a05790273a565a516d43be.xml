@@ -3,7 +3,7 @@
         <caller_access/>
         <derived_priority>100</derived_priority>
         <description>Appointment is Confirmed for the doctor</description>
-        <event_name>x_2223823_apollo_0.doctor_new_appointment</event_name>
+        <event_name>x_2223823_apollo_0.doctor_new_appointmen</event_name>
         <fired_by/>
         <priority>100</priority>
         <queue/>

@@ -66,7 +66,7 @@
         <sys_parent display_value="">ae52d32a47d41b10273a565a516d4304</sys_parent>
         <sys_policy/>
         <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
-        <sys_scope_delete display_value="">1a2f7aa8dfc34e3a86d3f0bede3c2784</sys_scope_delete>
+        <sys_scope_delete/>
         <sys_update_name>sys_security_acl_f752172a47d41b10273a565a516d4382</sys_update_name>
         <sys_update_version display_value="sys_security_acl_f752172a47d41b10273a565a516d4382">fb52172a47d41b10273a565a516d438e</sys_update_version>
         <sys_updated_by>admin</sys_updated_by>

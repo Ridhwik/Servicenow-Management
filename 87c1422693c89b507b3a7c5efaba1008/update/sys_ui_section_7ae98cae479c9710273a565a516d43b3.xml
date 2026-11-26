@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_ui_section caption="Patient and doctor" section_id="7ae98cae479c9710273a565a516d43b3" sys_domain="global" table="x_2223823_apollo_0_admissions" version="3" view="">
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>number</element>
+            <position>0</position>
+            <sys_created_by>ridhwik.jangid</sys_created_by>
+            <sys_created_on>2026-11-19 11:03:21</sys_created_on>
+            <sys_id>ec86645b53a81f50ed9b78f0a0490e3f</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Patient and doctor" display_value="Patient and doctor" name="x_2223823_apollo_0_admissions" sys_domain="global" view="Default view">7ae98cae479c9710273a565a516d43b3</sys_ui_section>
+            <sys_updated_by>ridhwik.jangid</sys_updated_by>
+            <sys_updated_on>2026-11-19 11:03:21</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>patient</element>
+            <position>1</position>
+            <sys_created_by>ridhwik.jangid</sys_created_by>
+            <sys_created_on>2026-11-19 11:03:21</sys_created_on>
+            <sys_id>e086645b53a81f50ed9b78f0a0490e41</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Patient and doctor" display_value="Patient and doctor" name="x_2223823_apollo_0_admissions" sys_domain="global" view="Default view">7ae98cae479c9710273a565a516d43b3</sys_ui_section>
+            <sys_updated_by>ridhwik.jangid</sys_updated_by>
+            <sys_updated_on>2026-11-19 11:03:21</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>admitting_doctor</element>
+            <position>2</position>
+            <sys_created_by>ridhwik.jangid</sys_created_by>
+            <sys_created_on>2026-11-19 11:03:21</sys_created_on>
+            <sys_id>ac86645b53a81f50ed9b78f0a0490e41</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Patient and doctor" display_value="Patient and doctor" name="x_2223823_apollo_0_admissions" sys_domain="global" view="Default view">7ae98cae479c9710273a565a516d43b3</sys_ui_section>
+            <sys_updated_by>ridhwik.jangid</sys_updated_by>
+            <sys_updated_on>2026-11-19 11:03:21</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>attendant_name</element>
+            <position>3</position>
+            <sys_created_by>ridhwik.jangid</sys_created_by>
+            <sys_created_on>2026-11-19 11:03:21</sys_created_on>
+            <sys_id>6886645b53a81f50ed9b78f0a0490e42</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Patient and doctor" display_value="Patient and doctor" name="x_2223823_apollo_0_admissions" sys_domain="global" view="Default view">7ae98cae479c9710273a565a516d43b3</sys_ui_section>
+            <sys_updated_by>ridhwik.jangid</sys_updated_by>
+            <sys_updated_on>2026-11-19 11:03:21</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>pharmacy_suggested</element>
+            <position>4</position>
+            <sys_created_by>ridhwik.jangid</sys_created_by>
+            <sys_created_on>2026-11-19 11:03:21</sys_created_on>
+            <sys_id>2486645b53a81f50ed9b78f0a0490e43</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Patient and doctor" display_value="Patient and doctor" name="x_2223823_apollo_0_admissions" sys_domain="global" view="Default view">7ae98cae479c9710273a565a516d43b3</sys_ui_section>
+            <sys_updated_by>ridhwik.jangid</sys_updated_by>
+            <sys_updated_on>2026-11-19 11:03:21</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.split</element>
+            <position>5</position>
+            <sys_created_by>ridhwik.jangid</sys_created_by>
+            <sys_created_on>2026-11-19 11:03:21</sys_created_on>
+            <sys_id>ec86645b53a81f50ed9b78f0a0490e43</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Patient and doctor" display_value="Patient and doctor" name="x_2223823_apollo_0_admissions" sys_domain="global" view="Default view">7ae98cae479c9710273a565a516d43b3</sys_ui_section>
+            <sys_updated_by>ridhwik.jangid</sys_updated_by>
+            <sys_updated_on>2026-11-19 11:03:21</sys_updated_on>
+            <sys_user/>
+            <type>.split</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>status</element>
+            <position>6</position>
+            <sys_created_by>ridhwik.jangid</sys_created_by>
+            <sys_created_on>2026-11-19 11:03:21</sys_created_on>
+            <sys_id>a886645b53a81f50ed9b78f0a0490e44</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Patient and doctor" display_value="Patient and doctor" name="x_2223823_apollo_0_admissions" sys_domain="global" view="Default view">7ae98cae479c9710273a565a516d43b3</sys_ui_section>
+            <sys_updated_by>ridhwik.jangid</sys_updated_by>
+            <sys_updated_on>2026-11-19 11:03:21</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>hospital</element>
+            <position>7</position>
+            <sys_created_by>ridhwik.jangid</sys_created_by>
+            <sys_created_on>2026-11-19 11:03:21</sys_created_on>
+            <sys_id>6486645b53a81f50ed9b78f0a0490e45</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Patient and doctor" display_value="Patient and doctor" name="x_2223823_apollo_0_admissions" sys_domain="global" view="Default view">7ae98cae479c9710273a565a516d43b3</sys_ui_section>
+            <sys_updated_by>ridhwik.jangid</sys_updated_by>
+            <sys_updated_on>2026-11-19 11:03:21</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>diagnosed_by</element>
+            <position>8</position>
+            <sys_created_by>ridhwik.jangid</sys_created_by>
+            <sys_created_on>2026-11-19 11:03:21</sys_created_on>
+            <sys_id>2086645b53a81f50ed9b78f0a0490e46</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Patient and doctor" display_value="Patient and doctor" name="x_2223823_apollo_0_admissions" sys_domain="global" view="Default view">7ae98cae479c9710273a565a516d43b3</sys_ui_section>
+            <sys_updated_by>ridhwik.jangid</sys_updated_by>
+            <sys_updated_on>2026-11-19 11:03:21</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>attendant_phone</element>
+            <position>9</position>
+            <sys_created_by>ridhwik.jangid</sys_created_by>
+            <sys_created_on>2026-11-19 11:03:21</sys_created_on>
+            <sys_id>e886645b53a81f50ed9b78f0a0490e46</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Patient and doctor" display_value="Patient and doctor" name="x_2223823_apollo_0_admissions" sys_domain="global" view="Default view">7ae98cae479c9710273a565a516d43b3</sys_ui_section>
+            <sys_updated_by>ridhwik.jangid</sys_updated_by>
+            <sys_updated_on>2026-11-19 11:03:21</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_section action="INSERT_OR_UPDATE">
+            <caption>Patient and doctor</caption>
+            <header>false</header>
+            <name>x_2223823_apollo_0_admissions</name>
+            <roles/>
+            <sys_class_name>sys_ui_section</sys_class_name>
+            <sys_created_by>integration.user</sys_created_by>
+            <sys_created_on>2026-11-04 14:47:17</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>7ae98cae479c9710273a565a516d43b3</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_name>x_2223823_apollo_0_admissions</sys_name>
+            <sys_overrides/>
+            <sys_package display_value="Apollo-Hospitals" source="x_2223823_apollo_0">87c1422693c89b507b3a7c5efaba1008</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
+            <sys_update_name>sys_ui_section_7ae98cae479c9710273a565a516d43b3</sys_update_name>
+            <sys_updated_by>ridhwik.jangid</sys_updated_by>
+            <sys_updated_on>2026-11-10 10:02:27</sys_updated_on>
+            <sys_user/>
+            <title>false</title>
+            <view display_value="Default view" name="NULL">Default view</view>
+            <view_name/>
+        </sys_ui_section>
+    </sys_ui_section>
+</record_update>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="kb_uc_can_read_mtom">
     <kb_uc_can_read_mtom action="INSERT_OR_UPDATE">
-        <kb_knowledge_base display_value="Apollo Staff Knowledge">1310da9647185710273a565a516d4379</kb_knowledge_base>
+        <kb_knowledge_base display_value="">1310da9647185710273a565a516d4379</kb_knowledge_base>
         <sys_class_name>kb_uc_can_read_mtom</sys_class_name>
         <sys_created_by>fateh.meena</sys_created_by>
         <sys_created_on>2026-11-04 05:55:09</sys_created_on>

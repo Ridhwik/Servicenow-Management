@@ -43,19 +43,19 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>97b3387547581310273a565a516d438e</sys_id>
-        <sys_mod_count>428</sys_mod_count>
+        <sys_mod_count>0</sys_mod_count>
         <sys_name>Extend requested item (asset &amp; service requests) Approval flow</sys_name>
         <sys_overrides/>
         <sys_package display_value="Apollo-Hospitals" source="x_2223823_apollo_0">87c1422693c89b507b3a7c5efaba1008</sys_package>
         <sys_policy/>
         <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
         <sys_update_name>sys_hub_flow_97b3387547581310273a565a516d438e</sys_update_name>
-        <sys_updated_by>nilesh.chaurasia</sys_updated_by>
-        <sys_updated_on>2026-11-03 11:17:12</sys_updated_on>
+        <sys_updated_by>ridhwik.jangid</sys_updated_by>
+        <sys_updated_on>2026-11-10 10:02:05</sys_updated_on>
         <type>flow</type>
         <updation_source/>
         <version>2</version>
-        <version_record>78401a4e4718d310273a565a516d43c0</version_record>
+        <version_record/>
     </sys_hub_flow>
     <sys_translated_text action="delete_multiple" query="documentkey=97b3387547581310273a565a516d438e"/>
     <sys_variable_value action="delete_multiple" query="document_key=97b3387547581310273a565a516d438e"/>
@@ -2266,11 +2266,11 @@
         <sys_created_on>2026-11-02 10:36:29</sys_created_on>
         <sys_id>d95d743d47981310273a565a516d4308</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_name/>
+        <sys_name>vrequest type</sys_name>
         <sys_package display_value="Apollo-Hospitals" source="x_2223823_apollo_0">87c1422693c89b507b3a7c5efaba1008</sys_package>
         <sys_policy/>
         <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
-        <sys_update_name/>
+        <sys_update_name>sys_documentation_var__m_sys_hub_flow_variable_97b3387547581310273a565a516d438e_vrequest_type_en</sys_update_name>
         <sys_updated_by>nilesh.chaurasia</sys_updated_by>
         <sys_updated_on>2026-11-02 10:36:29</sys_updated_on>
         <url/>
@@ -2290,11 +2290,11 @@
         <sys_created_on>2026-11-02 09:54:49</sys_created_on>
         <sys_id>07c37c7547581310273a565a516d4320</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_name/>
+        <sys_name>Record</sys_name>
         <sys_package display_value="Apollo-Hospitals" source="x_2223823_apollo_0">87c1422693c89b507b3a7c5efaba1008</sys_package>
         <sys_policy/>
         <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
-        <sys_update_name/>
+        <sys_update_name>sys_documentation_var__m_sys_hub_flow_input_97b3387547581310273a565a516d438e_current_en</sys_update_name>
         <sys_updated_by>nilesh.chaurasia</sys_updated_by>
         <sys_updated_on>2026-11-02 09:54:49</sys_updated_on>
         <url/>
@@ -2313,11 +2313,11 @@
         <sys_created_on>2026-11-02 09:54:49</sys_created_on>
         <sys_id>5fc37c7547581310273a565a516d432c</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_name/>
+        <sys_name>Changed Fields</sys_name>
         <sys_package display_value="Apollo-Hospitals" source="x_2223823_apollo_0">87c1422693c89b507b3a7c5efaba1008</sys_package>
         <sys_policy/>
         <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
-        <sys_update_name/>
+        <sys_update_name>sys_documentation_var__m_sys_hub_flow_input_97b3387547581310273a565a516d438e_changed_fields_en</sys_update_name>
         <sys_updated_by>nilesh.chaurasia</sys_updated_by>
         <sys_updated_on>2026-11-02 09:54:49</sys_updated_on>
         <url/>
@@ -2336,11 +2336,11 @@
         <sys_created_on>2026-11-02 09:54:49</sys_created_on>
         <sys_id>8fc37c7547581310273a565a516d4313</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_name/>
+        <sys_name>Table Name</sys_name>
         <sys_package display_value="Apollo-Hospitals" source="x_2223823_apollo_0">87c1422693c89b507b3a7c5efaba1008</sys_package>
         <sys_policy/>
         <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
-        <sys_update_name/>
+        <sys_update_name>sys_documentation_var__m_sys_hub_flow_input_97b3387547581310273a565a516d438e_table_name_en</sys_update_name>
         <sys_updated_by>nilesh.chaurasia</sys_updated_by>
         <sys_updated_on>2026-11-02 09:54:49</sys_updated_on>
         <url/>
@@ -4563,11 +4563,11 @@
         <sys_created_on>2026-11-02 13:01:40</sys_created_on>
         <sys_id>509ed17147105310273a565a516d4302</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_name/>
+        <sys_name>vrequest type</sys_name>
         <sys_package display_value="Apollo-Hospitals" source="x_2223823_apollo_0">87c1422693c89b507b3a7c5efaba1008</sys_package>
         <sys_policy/>
         <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
-        <sys_update_name/>
+        <sys_update_name>sys_documentation_var__m_sys_hub_flow_variable_089e917147105310273a565a516d437a_vrequest_type_en</sys_update_name>
         <sys_updated_by>nilesh.chaurasia</sys_updated_by>
         <sys_updated_on>2026-11-02 13:01:40</sys_updated_on>
         <url/>
@@ -4587,11 +4587,11 @@
         <sys_created_on>2026-11-02 13:01:40</sys_created_on>
         <sys_id>409e917147105310273a565a516d43a0</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_name/>
+        <sys_name>Record</sys_name>
         <sys_package display_value="Apollo-Hospitals" source="x_2223823_apollo_0">87c1422693c89b507b3a7c5efaba1008</sys_package>
         <sys_policy/>
         <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
-        <sys_update_name/>
+        <sys_update_name>sys_documentation_var__m_sys_hub_flow_input_089e917147105310273a565a516d437a_current_en</sys_update_name>
         <sys_updated_by>nilesh.chaurasia</sys_updated_by>
         <sys_updated_on>2026-11-02 13:01:40</sys_updated_on>
         <url/>
@@ -4610,11 +4610,11 @@
         <sys_created_on>2026-11-02 13:01:40</sys_created_on>
         <sys_id>c09e917147105310273a565a516d43b9</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_name/>
+        <sys_name>Changed Fields</sys_name>
         <sys_package display_value="Apollo-Hospitals" source="x_2223823_apollo_0">87c1422693c89b507b3a7c5efaba1008</sys_package>
         <sys_policy/>
         <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
-        <sys_update_name/>
+        <sys_update_name>sys_documentation_var__m_sys_hub_flow_input_089e917147105310273a565a516d437a_changed_fields_en</sys_update_name>
         <sys_updated_by>nilesh.chaurasia</sys_updated_by>
         <sys_updated_on>2026-11-02 13:01:40</sys_updated_on>
         <url/>
@@ -4633,11 +4633,11 @@
         <sys_created_on>2026-11-02 13:01:40</sys_created_on>
         <sys_id>c49e917147105310273a565a516d43c5</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_name/>
+        <sys_name>Table Name</sys_name>
         <sys_package display_value="Apollo-Hospitals" source="x_2223823_apollo_0">87c1422693c89b507b3a7c5efaba1008</sys_package>
         <sys_policy/>
         <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
-        <sys_update_name/>
+        <sys_update_name>sys_documentation_var__m_sys_hub_flow_input_089e917147105310273a565a516d437a_table_name_en</sys_update_name>
         <sys_updated_by>nilesh.chaurasia</sys_updated_by>
         <sys_updated_on>2026-11-02 13:01:40</sys_updated_on>
         <url/>

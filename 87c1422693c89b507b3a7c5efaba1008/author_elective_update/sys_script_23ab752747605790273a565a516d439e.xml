@@ -94,16 +94,16 @@
         <payload_hash>2023328639</payload_hash>
         <record_name>Apollo Service Request Event Trigger</record_name>
         <reverted_from/>
-        <source>552771b047b01710273a565a516d43c8</source>
+        <source>4f51406e475c9710273a565a516d4360</source>
         <source_table>sys_update_set</source_table>
         <state>previous</state>
         <sys_created_by>integration.user</sys_created_by>
         <sys_created_on>2026-11-20 11:53:57</sys_created_on>
         <sys_id>a3ab752747605790273a565a516d43a4</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_mod_count>0</sys_mod_count>
         <sys_recorded_at>1a1f8ce61760000001</sys_recorded_at>
-        <sys_updated_by>ridhwik.jangid</sys_updated_by>
-        <sys_updated_on>2026-11-24 08:46:32</sys_updated_on>
+        <sys_updated_by>integration.user</sys_updated_by>
+        <sys_updated_on>2026-11-20 11:53:57</sys_updated_on>
         <type>Business Rule</type>
         <update_guid>efab7527b96057906b2b3178ff4bd9a2</update_guid>
         <update_guid_history>efab7527b96057906b2b3178ff4bd9a2:2023328639</update_guid_history>

@@ -90,7 +90,7 @@
         <order>100</order>
         <push_message_only>false</push_message_only>
         <recipient_fields/>
-        <recipient_groups name="Facilities &amp; Operations Manager">7d484975471c1310273a565a516d438c</recipient_groups>
+        <recipient_groups>7d484975471c1310273a565a516d438c</recipient_groups>
         <recipient_users/>
         <reply_to/>
         <send_self>true</send_self>

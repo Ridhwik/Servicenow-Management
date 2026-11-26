@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update>
     <sys_dictionary action="INSERT_OR_UPDATE" element="registration_number" table="x_2223823_apollo_0_doctor">
-        <active>false</active>
+        <active>true</active>
         <array>false</array>
         <attributes>edge_encryption_enabled=true</attributes>
         <audit>false</audit>
@@ -44,7 +44,7 @@
         <reference_qual_condition/>
         <reference_type/>
         <spell_check>false</spell_check>
-        <staged>true</staged>
+        <staged>false</staged>
         <sys_class_name>sys_dictionary</sys_class_name>
         <sys_created_by>ridhwik.jangid</sys_created_by>
         <sys_created_on>2026-10-28 05:38:04</sys_created_on>

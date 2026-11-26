@@ -102,7 +102,7 @@ HospitalRoleUtils.prototype = {
         <sys_parent/>
         <sys_policy>read</sys_policy>
         <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
-        <sys_scope_delete display_value="">1a2f7aa8dfc34e3a86d3f0bede3c2784</sys_scope_delete>
+        <sys_scope_delete/>
         <sys_update_name>sys_script_include_ec7858ba47505b10273a565a516d43c0</sys_update_name>
         <sys_update_version display_value="sys_script_include_ec7858ba47505b10273a565a516d43c0">54a89c3a47905b10273a565a516d4374</sys_update_version>
         <sys_updated_by>ridhwik.jangid</sys_updated_by>

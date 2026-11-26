@@ -50,7 +50,7 @@
         <update_guid_history>f15a298efe50d310d6f0ebe2774459f1:229916237</update_guid_history>
     </sys_update_version>
     <sys_metadata_delete action="INSERT_OR_UPDATE">
-        <sys_audit_delete display_value="x_2223823_apollo_0.facilities_ops_manager">c800f9ca4790d310273a565a516d43a7</sys_audit_delete>
+        <sys_audit_delete display_value="">c800f9ca4790d310273a565a516d43a7</sys_audit_delete>
         <sys_class_name>sys_metadata_delete</sys_class_name>
         <sys_created_by>ayush.mangal</sys_created_by>
         <sys_created_on>2026-11-03 08:56:20</sys_created_on>
@@ -63,7 +63,7 @@
         <sys_parent/>
         <sys_policy/>
         <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
-        <sys_scope_delete display_value="">1a2f7aa8dfc34e3a86d3f0bede3c2784</sys_scope_delete>
+        <sys_scope_delete/>
         <sys_update_name>sys_user_role_355a298e4750d310273a565a516d43e9</sys_update_name>
         <sys_update_version display_value="sys_user_role_355a298e4750d310273a565a516d43e9">355a298e4750d310273a565a516d43f2</sys_update_version>
         <sys_updated_by>ayush.mangal</sys_updated_by>

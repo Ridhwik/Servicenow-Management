@@ -19,7 +19,7 @@
         <sys_updated_by>nilesh.chaurasia</sys_updated_by>
         <sys_updated_on>2026-10-26 10:04:58</sys_updated_on>
         <table>x_2223823_apollo_0_doctor</table>
-        <ui_policy display_value="OPD fee Mandatory when OPD enabled&#10;&#10;">9ff230e7930053107b3a7c5efaba1059</ui_policy>
+        <ui_policy display_value="OPD fee , duration , timing Mandatory when OPD enabled&#10;&#10;">9ff230e7930053107b3a7c5efaba1059</ui_policy>
         <value/>
         <value_action>ignore</value_action>
         <visible>ignore</visible>

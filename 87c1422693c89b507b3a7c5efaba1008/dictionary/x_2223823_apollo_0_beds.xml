@@ -1,38 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
     <element attributes="enforce_dot_walk_cross_scope_access=true" db_object_id="4e04e4ef934c13107b3a7c5efaba1012" label="Beds" max_length="40" name="x_2223823_apollo_0_beds" type="collection">
-        <element label="Gender" max_length="40" name="gender" type="choice">
+        <element attributes="edge_encryption_enabled=true,encode_utf8=false" label="Room" mandatory="true" max_length="32" name="room" reference="x_2223823_apollo_0_rooms" reference_qual="javascript: current.hospital ? 'hospital=' + current.hospital + '^active=true^room_category!=Operation Theatre' : 'sys_id=-1';" type="reference" use_reference_qualifier="advanced"/>
+        <element display="true" label="Bed number" mandatory="true" max_length="20" name="bed_number" type="string"/>
+        <element label="Expected release date" max_length="40" name="blocked_until" type="glide_date"/>
+        <element attributes="edge_encryption_enabled=true" default="true" label="Active" max_length="40" name="active" type="boolean"/>
+        <element attributes="edge_encryption_enabled=true" label="Gender" max_length="40" name="gender" type="choice">
             <choice>
-                <element inactive_on_update="false" label="Any" value="3"/>
                 <element inactive_on_update="false" label="Female" value="2"/>
                 <element inactive_on_update="false" label="Male" value="1"/>
+                <element inactive_on_update="false" label="Any" value="3"/>
             </choice>
         </element>
-        <element label="Room" mandatory="true" max_length="32" name="room" reference="x_2223823_apollo_0_rooms" reference_qual="javascript: current.hospital ? 'hospital=' + current.hospital + '^active=true^room_category!=Operation Theatre' : 'sys_id=-1';" type="reference" use_reference_qualifier="advanced"/>
-        <element default="true" label="Active" max_length="40" name="active" type="boolean"/>
-        <element label="Expected release date" max_length="40" name="blocked_until" type="glide_date"/>
-        <element label="Counts toward capacity" max_length="40" name="counts_in_capacity" type="boolean"/>
         <element label="Blocked reason" max_length="255" name="blocked_reason" type="string"/>
-        <element display="true" label="Bed number" mandatory="true" max_length="20" name="bed_number" type="string"/>
-        <element label="Hospital" mandatory="true" max_length="32" name="hospital" reference="x_2223823_apollo_0_hospital" reference_qual="javascript:new x_2223823_apollo_0.HospitalRefQual().getQuery(current)" type="reference" use_reference_qualifier="advanced"/>
-        <element default="1" label="Status" mandatory="true" max_length="40" name="status" type="choice">
+        <element attributes="edge_encryption_enabled=true" label="Counts toward capacity" max_length="40" name="counts_in_capacity" type="boolean"/>
+        <element attributes="edge_encryption_enabled=true" default="1" label="Status" mandatory="true" max_length="40" name="status" type="choice">
             <choice>
+                <element inactive_on_update="false" label="Under Cleaning" value="4"/>
+                <element inactive_on_update="false" label="Out of Service" value="7"/>
                 <element inactive_on_update="false" label="Occupied" value="3"/>
-                <element inactive_on_update="false" label="Reserved" value="2"/>
                 <element inactive_on_update="false" label="Blocked" value="6"/>
+                <element inactive_on_update="false" label="Reserved" value="2"/>
                 <element inactive_on_update="false" label="Under Maintenance" value="5"/>
                 <element inactive_on_update="false" label="Available" value="1"/>
-                <element inactive_on_update="false" label="Out of Service" value="7"/>
-                <element inactive_on_update="false" label="Under Cleaning" value="4"/>
             </choice>
         </element>
+        <element attributes="edge_encryption_enabled=true,encode_utf8=false" label="Hospital" mandatory="true" max_length="32" name="hospital" reference="x_2223823_apollo_0_hospital" reference_qual="javascript:new x_2223823_apollo_0.HospitalRefQual().getQuery(current)" type="reference" use_reference_qualifier="advanced"/>
         <index name="index">
             <element name="hospital"/>
         </index>
         <index name="index2">
             <element name="room"/>
-        </index>
-        <index name="index4">
-            <element name="status"/>
         </index>
     </element>
 </database>

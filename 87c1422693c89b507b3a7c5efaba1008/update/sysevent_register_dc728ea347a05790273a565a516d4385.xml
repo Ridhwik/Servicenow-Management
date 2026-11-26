@@ -3,7 +3,7 @@
         <caller_access/>
         <derived_priority>100</derived_priority>
         <description>Lab report published for doctor patient</description>
-        <event_name>x_2223823_apollo_0.doctor_lab_report_ready</event_name>
+        <event_name>x_2223823_apollo_0.doctor_lab_report_rea</event_name>
         <fired_by/>
         <priority>100</priority>
         <queue/>

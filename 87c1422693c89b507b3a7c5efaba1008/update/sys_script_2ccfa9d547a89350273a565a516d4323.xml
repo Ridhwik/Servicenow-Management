@@ -23,7 +23,7 @@
         </filter_condition>
         <is_rest>false</is_rest>
         <message/>
-        <name>Validate Expected Discharge Date on Discharge</name>
+        <name>Validate Expected Discharge Date on Disc</name>
         <order>100</order>
         <priority>100</priority>
         <rest_method/>

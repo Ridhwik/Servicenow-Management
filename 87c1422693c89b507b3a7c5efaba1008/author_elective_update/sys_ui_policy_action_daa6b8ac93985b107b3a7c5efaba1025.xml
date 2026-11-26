@@ -91,7 +91,7 @@
         <sys_parent/>
         <sys_policy/>
         <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
-        <sys_scope_delete display_value="">1a2f7aa8dfc34e3a86d3f0bede3c2784</sys_scope_delete>
+        <sys_scope_delete/>
         <sys_update_name>sys_ui_policy_action_daa6b8ac93985b107b3a7c5efaba1025</sys_update_name>
         <sys_update_version display_value="sys_ui_policy_action_daa6b8ac93985b107b3a7c5efaba1025">0de9a4f047909310273a565a516d43ed</sys_update_version>
         <sys_updated_by>vikalp.pareek</sys_updated_by>

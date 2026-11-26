@@ -4,7 +4,7 @@
         <active>true</active>
         <availability>on_desktop</availability>
         <billable>false</billable>
-        <category display_value="Laboratory">1c355a1e47185710273a565a516d43de</category>
+        <category/>
         <cc_render_type>system</cc_render_type>
         <checked_out>false</checked_out>
         <cost>0</cost>
@@ -46,7 +46,7 @@
         <omit_price>false</omit_price>
         <order>0</order>
         <ordered_item_link/>
-        <owner display_value="Vikas Singh">a001e47847109310273a565a516d43c3</owner>
+        <owner display_value="">a001e47847109310273a565a516d43c3</owner>
         <picture/>
         <preview>JavaScript: popupOpenStandard("com.glideapp.servicecatalog_cat_item_view.do?v=1&amp;sysparm_id=e0c8c87147d01310273a565a516d434b&amp;sysparm_preview=true", "summary");</preview>
         <price>0</price>
@@ -54,7 +54,7 @@
         <recurring_frequency/>
         <request_method/>
         <roles/>
-        <sc_catalogs>e0d08b13c3330100c8b837659bba8fb4</sc_catalogs>
+        <sc_catalogs/>
         <sc_ic_item_staging/>
         <sc_ic_version/>
         <sc_template display_value="">500781879320221014d63b953489187e</sc_template>
@@ -67,21 +67,21 @@
         <sys_created_by>vikas.singh</sys_created_by>
         <sys_created_on>2026-11-02 06:47:26</sys_created_on>
         <sys_id>e0c8c87147d01310273a565a516d434b</sys_id>
-        <sys_mod_count>15</sys_mod_count>
+        <sys_mod_count>5</sys_mod_count>
         <sys_name>Lab Test Request</sys_name>
         <sys_package display_value="Apollo-Hospitals" source="x_2223823_apollo_0">87c1422693c89b507b3a7c5efaba1008</sys_package>
         <sys_policy/>
         <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
         <sys_update_name>sc_cat_item_e0c8c87147d01310273a565a516d434b</sys_update_name>
-        <sys_updated_by>system</sys_updated_by>
-        <sys_updated_on>2026-11-20 11:43:48</sys_updated_on>
+        <sys_updated_by>vikas.singh</sys_updated_by>
+        <sys_updated_on>2026-11-02 13:03:53</sys_updated_on>
         <taxonomy_topic/>
         <template/>
         <template_manager_roles/>
         <type>item</type>
         <use_sc_layout>true</use_sc_layout>
         <vendor/>
-        <version>11</version>
+        <version>2</version>
         <visible_bundle>true</visible_bundle>
         <visible_guide>true</visible_guide>
         <visible_standalone>true</visible_standalone>
