@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script_client">
+    <sys_script_client action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <applies_extended>false</applies_extended>
+        <condition/>
+        <description/>
+        <field/>
+        <global>true</global>
+        <isolate_script>true</isolate_script>
+        <messages/>
+        <name>Prevent Duplicate Qualification onSubmit</name>
+        <order/>
+        <script><![CDATA[function onSubmit() {
+    var name = (g_form.getValue('name') || '').trim();
+    if (!name) {
+        return true;
+    }
+
+    var normalized = name.toLowerCase();
+
+    // Check if name already exists in scratchpad
+    if (g_scratchpad.existingQualifications && g_scratchpad.existingQualifications.indexOf(normalized) !== -1) {
+        // Clear old messages and show ONLY our clean message
+        g_form.clearMessages();
+        g_form.addErrorMessage('Qualification "' + name + '" already exists. Duplicate names are not allowed.');
+        
+        // STOP form submission completely (prevents the 2 system messages!)
+        return false;
+    }
+
+    return true;
+}]]></script>
+        <sys_class_name>sys_script_client</sys_class_name>
+        <sys_created_by>ritesh.jangid</sys_created_by>
+        <sys_created_on>2026-11-26 07:24:23</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>8f6737d547f45b10273a565a516d4340</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Prevent Duplicate Qualification onSubmit</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Apollo-Hospitals" source="x_2223823_apollo_0">87c1422693c89b507b3a7c5efaba1008</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
+        <sys_update_name>sys_script_client_8f6737d547f45b10273a565a516d4340</sys_update_name>
+        <sys_updated_by>ritesh.jangid</sys_updated_by>
+        <sys_updated_on>2026-11-26 07:24:23</sys_updated_on>
+        <table>x_2223823_apollo_0_qualification</table>
+        <type>onSubmit</type>
+        <ui_type>10</ui_type>
+        <view/>
+    </sys_script_client>
+</record_update>
