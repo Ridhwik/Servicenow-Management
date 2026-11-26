@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl">
+    <sys_security_acl action="DELETE">
+        <active>false</active>
+        <admin_overrides>true</admin_overrides>
+        <advanced>false</advanced>
+        <applies_to/>
+        <condition/>
+        <controlled_by_refs/>
+        <decision_type>allow</decision_type>
+        <description>Allow report_view for records in x_2223823_apollo_0_payment, for users with roles (x_2223823_apollo_0.Hospital Administrator, x_2223823_apollo_0.corporate_executive).</description>
+        <local_or_existing>Existing</local_or_existing>
+        <name>x_2223823_apollo_0_payment</name>
+        <operation display_value="report_view">0997ab83733303005978e4b9cdf6a7b9</operation>
+        <script/>
+        <security_attribute/>
+        <sys_class_name>sys_security_acl</sys_class_name>
+        <sys_created_by>ritesh.jangid</sys_created_by>
+        <sys_created_on>2026-11-24 12:20:08</sys_created_on>
+        <sys_id>1a47ea3447781710273a565a516d4319</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>x_2223823_apollo_0_payment</sys_name>
+        <sys_package display_value="Apollo-Hospitals" source="x_2223823_apollo_0">87c1422693c89b507b3a7c5efaba1008</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
+        <sys_update_name>sys_security_acl_1a47ea3447781710273a565a516d4319</sys_update_name>
+        <sys_updated_by>ritesh.jangid</sys_updated_by>
+        <sys_updated_on>2026-11-24 12:25:31</sys_updated_on>
+        <type display_value="record">record</type>
+    </sys_security_acl>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</application>
+        <file_path/>
+        <instance_id>5ada7edb93d06e50d9f6ddd548373c9d</instance_id>
+        <instance_name>dev304851</instance_name>
+        <name>sys_security_acl_1a47ea3447781710273a565a516d4319</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl"><sys_security_acl action="INSERT_OR_UPDATE"><active>false</active><admin_overrides>true</admin_overrides><advanced>false</advanced><applies_to/><condition/><controlled_by_refs/><decision_type>allow</decision_type><description>Allow report_view for records in x_2223823_apollo_0_payment, for users with roles (x_2223823_apollo_0.Hospital Administrator, x_2223823_apollo_0.corporate_executive).</description><local_or_existing>Existing</local_or_existing><name>x_2223823_apollo_0_payment</name><operation display_value="report_view">0997ab83733303005978e4b9cdf6a7b9</operation><script/><security_attribute/><sys_class_name>sys_security_acl</sys_class_name><sys_created_by>ritesh.jangid</sys_created_by><sys_created_on>2026-11-24 12:20:08</sys_created_on><sys_id>1a47ea3447781710273a565a516d4319</sys_id><sys_mod_count>2</sys_mod_count><sys_name>x_2223823_apollo_0_payment</sys_name><sys_package display_value="Apollo-Hospitals" source="x_2223823_apollo_0">87c1422693c89b507b3a7c5efaba1008</sys_package><sys_policy/><sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope><sys_update_name>sys_security_acl_1a47ea3447781710273a565a516d4319</sys_update_name><sys_updated_by>ritesh.jangid</sys_updated_by><sys_updated_on>2026-11-24 12:25:31</sys_updated_on><type display_value="record">record</type></sys_security_acl></record_update>]]></payload>
+        <payload_hash>1432270831</payload_hash>
+        <record_name>x_2223823_apollo_0_payment</record_name>
+        <reverted_from/>
+        <source>9135e5a047fc5310273a565a516d4398</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>ritesh.jangid</sys_created_by>
+        <sys_created_on>2026-11-24 12:25:32</sys_created_on>
+        <sys_id>99496a7847781710273a565a516d43b5</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1a20d84bac30000001</sys_recorded_at>
+        <sys_updated_by>ritesh.jangid</sys_updated_by>
+        <sys_updated_on>2026-11-24 12:25:32</sys_updated_on>
+        <type>Access Control</type>
+        <update_guid>d5496a78c778171016fc1db7113caab4</update_guid>
+        <update_guid_history>d5496a78c778171016fc1db7113caab4:1432270831,1a08a6b4aa781710e375e4805d4b4bb4:-1795855648</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>ritesh.jangid</sys_created_by>
+        <sys_created_on>2026-11-24 12:27:29</sys_created_on>
+        <sys_db_object display_value="" name="sys_security_acl">sys_security_acl</sys_db_object>
+        <sys_id>77c0cc8e3f6347ba904f25dd494ecd84</sys_id>
+        <sys_metadata>1a47ea3447781710273a565a516d4319</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_2223823_apollo_0_payment</sys_name>
+        <sys_package display_value="Apollo-Hospitals" source="x_2223823_apollo_0">87c1422693c89b507b3a7c5efaba1008</sys_package>
+        <sys_parent display_value="x_2223823_apollo_0_payment">2c188b5247549710273a565a516d4350</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
+        <sys_scope_delete display_value="">1a2f7aa8dfc34e3a86d3f0bede3c2784</sys_scope_delete>
+        <sys_update_name>sys_security_acl_1a47ea3447781710273a565a516d4319</sys_update_name>
+        <sys_update_version display_value="sys_security_acl_1a47ea3447781710273a565a516d4319">99496a7847781710273a565a516d43b5</sys_update_version>
+        <sys_updated_by>ritesh.jangid</sys_updated_by>
+        <sys_updated_on>2026-11-24 12:27:29</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

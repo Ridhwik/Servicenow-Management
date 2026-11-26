@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="par_dashboard_permission">
+    <par_dashboard_permission action="INSERT_OR_UPDATE">
+        <can_read>true</can_read>
+        <can_share>true</can_share>
+        <can_write>true</can_write>
+        <dashboard display_value="Apollo - Corporate Executive Revenue Dashboard">abdb117447bcd310273a565a516d43d2</dashboard>
+        <group/>
+        <owner>true</owner>
+        <role/>
+        <sys_class_name>par_dashboard_permission</sys_class_name>
+        <sys_created_by>ritesh.jangid</sys_created_by>
+        <sys_created_on>2026-11-24 06:47:21</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>2bdb517447bcd310273a565a516d4379</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>abdb117447bcd310273a565a516d43d2</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Apollo-Hospitals" source="x_2223823_apollo_0">87c1422693c89b507b3a7c5efaba1008</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
+        <sys_update_name>par_dashboard_permission_2bdb517447bcd310273a565a516d4379</sys_update_name>
+        <sys_updated_by>ritesh.jangid</sys_updated_by>
+        <sys_updated_on>2026-11-24 06:47:21</sys_updated_on>
+        <user display_value="Ritesh Jangid">7e8088e447705310273a565a516d43f9</user>
+    </par_dashboard_permission>
+</record_update>

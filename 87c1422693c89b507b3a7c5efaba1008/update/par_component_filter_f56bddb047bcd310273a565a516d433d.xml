@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="par_component_filter">
+    <par_component_filter action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <certified>false</certified>
+        <description/>
+        <macroponent display_value="Filter">226449101138d0dff1abe0e1566c8b2a</macroponent>
+        <name>Select Hospital</name>
+        <properties>{"filterId":"1k864m01on61khkes41","filterComponentType":"singleselect","isShowSelectedValueInPill":true,"enableClearFilter":true,"defaultSelectedItems":[],"datasource":{"type":"table","payload":{"table":"x_2223823_apollo_0_hospital","primaryKey":"sys_id"}},"targets":[{"type":"table","payload":{"field":"hospital","table":"x_2223823_apollo_0_revenue_ledger","primaryKey":"sys_id"}},{"type":"table","payload":{"isInHierarchy":true,"field":"hospital","starting_at":"","table":"x_2223823_apollo_0_payment","operator":{"hierarchy_id":"","starting_at":"","type":"hierarchy"},"primaryKey":"sys_id"}}],"filterElementType":"pill","filterName":"Select Hospital"}</properties>
+        <requested_by/>
+        <required_translations>[{"message":"Select Hospital","comment":"","code":"PAR_COMPONENT.f56bddb047bcd310273a565a516d433d"}]</required_translations>
+        <sys_class_name>par_component_filter</sys_class_name>
+        <sys_created_by>ritesh.jangid</sys_created_by>
+        <sys_created_on>2026-11-24 06:45:19</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_id>f56bddb047bcd310273a565a516d433d</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>Select Hospital</sys_name>
+        <sys_package display_value="Apollo-Hospitals" source="x_2223823_apollo_0">87c1422693c89b507b3a7c5efaba1008</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
+        <sys_update_name>par_component_filter_f56bddb047bcd310273a565a516d433d</sys_update_name>
+        <sys_updated_by>ritesh.jangid</sys_updated_by>
+        <sys_updated_on>2026-11-24 06:50:39</sys_updated_on>
+    </par_component_filter>
+</record_update>

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="par_dashboard">
+    <par_dashboard action="DELETE">
+        <active>true</active>
+        <base_dashboard/>
+        <certified>false</certified>
+        <description/>
+        <experience/>
+        <grid>48</grid>
+        <name>Apollo - Hospital Administrator Cash &amp; Revenue Dashboard</name>
+        <ready_to_migrate>Not Applicable</ready_to_migrate>
+        <sys_class_name>par_dashboard</sys_class_name>
+        <sys_created_by>ritesh.jangid</sys_created_by>
+        <sys_created_on>2026-11-24 09:38:17</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>ebf28a3047341710273a565a516d4346</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>Apollo - Hospital Administrator Cash &amp; Revenue Dashboard</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Apollo-Hospitals" source="x_2223823_apollo_0">87c1422693c89b507b3a7c5efaba1008</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
+        <sys_update_name>par_dashboard_ebf28a3047341710273a565a516d4346</sys_update_name>
+        <sys_updated_by>ritesh.jangid</sys_updated_by>
+        <sys_updated_on>2026-11-24 09:38:17</sys_updated_on>
+        <sys_ux_app_config/>
+        <sys_ux_app_route/>
+        <sys_ux_macroponent/>
+        <sys_ux_screen/>
+        <sys_ux_screen_type/>
+    </par_dashboard>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</application>
+        <file_path/>
+        <instance_id>5ada7edb93d06e50d9f6ddd548373c9d</instance_id>
+        <instance_name>dev304851</instance_name>
+        <name>par_dashboard_ebf28a3047341710273a565a516d4346</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="par_dashboard"><par_dashboard action="INSERT_OR_UPDATE"><active>true</active><base_dashboard/><certified>false</certified><description/><experience/><grid>48</grid><name>Apollo - Hospital Administrator Cash &amp; Revenue Dashboard</name><ready_to_migrate>Not Applicable</ready_to_migrate><sys_class_name>par_dashboard</sys_class_name><sys_created_by>ritesh.jangid</sys_created_by><sys_created_on>2026-11-24 09:38:17</sys_created_on><sys_domain>global</sys_domain><sys_domain_path>/</sys_domain_path><sys_id>ebf28a3047341710273a565a516d4346</sys_id><sys_mod_count>1</sys_mod_count><sys_name>Apollo - Hospital Administrator Cash &amp; Revenue Dashboard</sys_name><sys_overrides/><sys_package display_value="Apollo-Hospitals" source="x_2223823_apollo_0">87c1422693c89b507b3a7c5efaba1008</sys_package><sys_policy/><sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope><sys_update_name>par_dashboard_ebf28a3047341710273a565a516d4346</sys_update_name><sys_updated_by>ritesh.jangid</sys_updated_by><sys_updated_on>2026-11-24 09:38:17</sys_updated_on><sys_ux_app_config/><sys_ux_app_route/><sys_ux_macroponent/><sys_ux_screen/><sys_ux_screen_type/></par_dashboard></record_update>]]></payload>
+        <payload_hash>-1761867730</payload_hash>
+        <record_name>Apollo - Hospital Administrator Cash &amp; Revenue Dashboard</record_name>
+        <reverted_from/>
+        <source/>
+        <source_table>sys_upgrade_history</source_table>
+        <state>previous</state>
+        <sys_created_by>ritesh.jangid</sys_created_by>
+        <sys_created_on>2026-11-24 09:39:53</sys_created_on>
+        <sys_id>fa53067047341710273a565a516d4348</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1a20ced14510000001</sys_recorded_at>
+        <sys_updated_by>ritesh.jangid</sys_updated_by>
+        <sys_updated_on>2026-11-24 09:39:53</sys_updated_on>
+        <type>PAR Dashboard</type>
+        <update_guid>ba5306700b341710fd2cb27d36e11f48</update_guid>
+        <update_guid_history>ba5306700b341710fd2cb27d36e11f48:-1761867730</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="Apollo - Hospital Administrator Cash &amp; Revenue Dashboard">84002e8547389710273a565a516d4305</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>ritesh.jangid</sys_created_by>
+        <sys_created_on>2026-11-25 06:23:32</sys_created_on>
+        <sys_db_object display_value="" name="par_dashboard">par_dashboard</sys_db_object>
+        <sys_id>782951cf4a644fa8ac98e4ec7693e4a4</sys_id>
+        <sys_metadata>ebf28a3047341710273a565a516d4346</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Apollo - Hospital Administrator Cash &amp; Revenue Dashboard</sys_name>
+        <sys_package display_value="Apollo-Hospitals" source="x_2223823_apollo_0">87c1422693c89b507b3a7c5efaba1008</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
+        <sys_scope_delete display_value="">1a2f7aa8dfc34e3a86d3f0bede3c2784</sys_scope_delete>
+        <sys_update_name>par_dashboard_ebf28a3047341710273a565a516d4346</sys_update_name>
+        <sys_update_version display_value="par_dashboard_ebf28a3047341710273a565a516d4346">fa53067047341710273a565a516d4348</sys_update_version>
+        <sys_updated_by>ritesh.jangid</sys_updated_by>
+        <sys_updated_on>2026-11-25 06:23:32</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

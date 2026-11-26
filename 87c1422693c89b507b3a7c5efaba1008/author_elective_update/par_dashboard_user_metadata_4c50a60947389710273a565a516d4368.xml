@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="par_dashboard_user_metadata">
+    <par_dashboard_user_metadata action="DELETE">
+        <background_color/>
+        <cache_expiration_time>24</cache_expiration_time>
+        <card_bg_image/>
+        <created_by_user display_value="Ritesh Jangid">7e8088e447705310273a565a516d43f9</created_by_user>
+        <created_on>2026-11-25 06:24:52</created_on>
+        <dashboard display_value="Apollo - Hospital Administrator Cash &amp; Revenue Dashboard">cc50260947389710273a565a516d4393</dashboard>
+        <edit_locked>{"sysId":"7e8088e447705310273a565a516d43f9","name":"Ritesh Jangid","lockedOn":"1795595584696"}</edit_locked>
+        <enable_data_cache>false</enable_data_cache>
+        <include_custom_insights>true</include_custom_insights>
+        <include_insight_sentiment>false</include_insight_sentiment>
+        <include_key_contributors>true</include_key_contributors>
+        <include_kpi_signals>true</include_kpi_signals>
+        <include_predictive_target>true</include_predictive_target>
+        <include_predictive_thresholds>true</include_predictive_thresholds>
+        <include_process_mining>true</include_process_mining>
+        <include_severity>true</include_severity>
+        <include_target>true</include_target>
+        <include_thresholds>true</include_thresholds>
+        <include_trends>true</include_trends>
+        <include_widget_notification>true</include_widget_notification>
+        <last_deactivated_on/>
+        <last_updated_on>2026-11-25 08:51:33</last_updated_on>
+        <po_project_id_list>[]</po_project_id_list>
+        <refresh_information>false</refresh_information>
+        <refresh_interval/>
+        <requested_by_user/>
+        <schedule_repetition>false</schedule_repetition>
+        <show_ai_insights_panel>false</show_ai_insights_panel>
+        <show_ai_summary>true</show_ai_summary>
+        <show_insights_panel>true</show_insights_panel>
+        <sys_class_name>par_dashboard_user_metadata</sys_class_name>
+        <sys_created_by>ritesh.jangid</sys_created_by>
+        <sys_created_on>2026-11-25 06:24:52</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>4c50a60947389710273a565a516d4368</sys_id>
+        <sys_mod_count>28</sys_mod_count>
+        <sys_name/>
+        <sys_overrides/>
+        <sys_package display_value="Apollo-Hospitals" source="x_2223823_apollo_0">87c1422693c89b507b3a7c5efaba1008</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
+        <sys_update_name>par_dashboard_user_metadata_4c50a60947389710273a565a516d4368</sys_update_name>
+        <sys_updated_by>ritesh.jangid</sys_updated_by>
+        <sys_updated_on>2026-11-25 08:51:33</sys_updated_on>
+        <updated_by_user display_value="Ritesh Jangid">7e8088e447705310273a565a516d43f9</updated_by_user>
+        <use_custom_tab_colors>false</use_custom_tab_colors>
+        <widgets_margin>$now-global-space--sm</widgets_margin>
+    </par_dashboard_user_metadata>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</application>
+        <file_path/>
+        <instance_id>5ada7edb93d06e50d9f6ddd548373c9d</instance_id>
+        <instance_name>dev304851</instance_name>
+        <name>par_dashboard_user_metadata_4c50a60947389710273a565a516d4368</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="par_dashboard_user_metadata"><par_dashboard_user_metadata action="INSERT_OR_UPDATE"><background_color/><cache_expiration_time>24</cache_expiration_time><card_bg_image/><created_by_user display_value="Ritesh Jangid">7e8088e447705310273a565a516d43f9</created_by_user><created_on>2026-11-25 06:24:52</created_on><dashboard display_value="Apollo - Hospital Administrator Cash &amp; Revenue Dashboard">cc50260947389710273a565a516d4393</dashboard><edit_locked>{"sysId":"7e8088e447705310273a565a516d43f9","name":"Ritesh Jangid","lockedOn":"1795595584696"}</edit_locked><enable_data_cache>false</enable_data_cache><include_custom_insights>true</include_custom_insights><include_insight_sentiment>false</include_insight_sentiment><include_key_contributors>true</include_key_contributors><include_kpi_signals>true</include_kpi_signals><include_predictive_target>true</include_predictive_target><include_predictive_thresholds>true</include_predictive_thresholds><include_process_mining>true</include_process_mining><include_severity>true</include_severity><include_target>true</include_target><include_thresholds>true</include_thresholds><include_trends>true</include_trends><include_widget_notification>true</include_widget_notification><last_deactivated_on/><last_updated_on>2026-11-25 08:51:33</last_updated_on><po_project_id_list>[]</po_project_id_list><refresh_information>false</refresh_information><refresh_interval/><requested_by_user/><schedule_repetition>false</schedule_repetition><show_ai_insights_panel>false</show_ai_insights_panel><show_ai_summary>true</show_ai_summary><show_insights_panel>true</show_insights_panel><sys_class_name>par_dashboard_user_metadata</sys_class_name><sys_created_by>ritesh.jangid</sys_created_by><sys_created_on>2026-11-25 06:24:52</sys_created_on><sys_domain>global</sys_domain><sys_domain_path>/</sys_domain_path><sys_id>4c50a60947389710273a565a516d4368</sys_id><sys_mod_count>28</sys_mod_count><sys_name/><sys_overrides/><sys_package display_value="Apollo-Hospitals" source="x_2223823_apollo_0">87c1422693c89b507b3a7c5efaba1008</sys_package><sys_policy/><sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope><sys_update_name>par_dashboard_user_metadata_4c50a60947389710273a565a516d4368</sys_update_name><sys_updated_by>ritesh.jangid</sys_updated_by><sys_updated_on>2026-11-25 08:51:33</sys_updated_on><updated_by_user display_value="Ritesh Jangid">7e8088e447705310273a565a516d43f9</updated_by_user><use_custom_tab_colors>false</use_custom_tab_colors><widgets_margin>$now-global-space--sm</widgets_margin></par_dashboard_user_metadata></record_update>]]></payload>
+        <payload_hash>-361755731</payload_hash>
+        <record_name/>
+        <reverted_from/>
+        <source>9135e5a047fc5310273a565a516d4398</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>ritesh.jangid</sys_created_by>
+        <sys_created_on>2026-11-25 08:51:33</sys_created_on>
+        <sys_id>78e187c14730d710273a565a516d4329</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1a211e730db0000001</sys_recorded_at>
+        <sys_updated_by>ritesh.jangid</sys_updated_by>
+        <sys_updated_on>2026-11-25 08:51:33</sys_updated_on>
+        <type>PAR Dashboard Metadata</type>
+        <update_guid>b4e187c19830d710683d88a21b5e7d28</update_guid>
+        <update_guid_history>b4e187c19830d710683d88a21b5e7d28:-361755731,45814b41ae30d710f764df7a4a47c819:1252761445,d9500f4d9cfc9710620d4246aee3eea9:755370604,8fbf3a0d4cfc9710299479fae00d00fe:-1427072716,2d6f7ec93cfc971083f74b5a67c1641f:-130110742,5e0ffe89cefc9710f7534a920e3fe2bc:-1764048055,285e724976fc97107c3b2d07f183d80b:-2128748437,ab0ef60989fc971012226461da1680fd:-453445139,8eadf2c5ddfc9710c829de987e6d0ce3:2094375612,71adf2c57efc9710e0af76571f0fe0db:-1658537384,df582e85523c9710aefe0f3d8ee1130b:1835743753,c348e685003c9710e085ac972d795827:1131920162,65a76605a83c9710b8e6d619b3e44d2c:-1305056220,b737a6c13d3c9710e417a1a0a85bf61f:1211356996,42362a0d8bf8971070fc5bc22252e89c:1841014471,c0952a0128f897108c966c7f3ab56402:-1132290585,75656e4d46b8971091385efb728b57c3:562703209,6d352a89cdb89710c59f3654c7847030:654047017,81d4e605b3b89710d1072f9ef3695a93:-2047211608,5d94aecd1d789710887d846703c69645:185228869,0333a2412c7897107a7927d286d35f1f:1272915527,d413aa01d378971013f699e55443cb74:-962549727,1ad2220192789710a9a8bec5edaf6c4c:-17322043,f581aa0da6389710931f91ec85d90f13:-1146528152,7251eec9a6389710c48b0e1a0c8b8d0a:1849570402,79e0ea89e6389710e1d23e3d6ee40b0b:-2089770843,5dd02a8995389710d5423874a914eabc:-942769558,aa506e090c389710334a81f6cf8e85b0:-178254315,8050a6091c38971063b8882e42a56a6c:1051948478</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="">0404c7494730d710273a565a516d4375</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>ritesh.jangid</sys_created_by>
+        <sys_created_on>2026-11-25 09:00:48</sys_created_on>
+        <sys_db_object display_value="" name="par_dashboard_user_metadata">par_dashboard_user_metadata</sys_db_object>
+        <sys_id>07cde5a442ed454f80b30e78f2517741</sys_id>
+        <sys_metadata>4c50a60947389710273a565a516d4368</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Apollo-Hospitals" source="x_2223823_apollo_0">87c1422693c89b507b3a7c5efaba1008</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
+        <sys_scope_delete display_value="">1a2f7aa8dfc34e3a86d3f0bede3c2784</sys_scope_delete>
+        <sys_update_name>par_dashboard_user_metadata_4c50a60947389710273a565a516d4368</sys_update_name>
+        <sys_update_version display_value="par_dashboard_user_metadata_4c50a60947389710273a565a516d4368">78e187c14730d710273a565a516d4329</sys_update_version>
+        <sys_updated_by>ritesh.jangid</sys_updated_by>
+        <sys_updated_on>2026-11-25 09:00:48</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

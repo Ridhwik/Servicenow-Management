@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="par_dashboard_widget">
+    <par_dashboard_widget action="DELETE">
+        <canvas display_value="">4450a60947389710273a565a516d437b</canvas>
+        <component display_value="Single score">d24d53f60350de7a652caf3188a46ed2</component>
+        <component_props>{"configVersion":"23.0.0-ci-SNAPSHOT","scoreSize":"auto","scoreAlignment":"start","headingPosition":"top","sparklineStyle":"area","scoreIcon":"","iconStyle":"background","showScoreDate":false,"useRelativeScoreTime":false,"showScoreUpdateTime":false,"showZero":true,"wrapElements":false,"colorConfig":{"type":"default"},"newReporting":false,"enableAddZerosAtApi":true,"additionalGroupByConfig":[],"dataSources":[{"isDatabaseView":false,"allowRealTime":true,"label":"Appointment","sourceType":"table","tableOrViewName":"x_2223823_apollo_0_appointment","filterQuery":"start_timeONToday@javascript:gs.beginningOfToday()@javascript:gs.endOfToday()^active=true","preferredVisualizations":["d24d53f60350de7a652caf3188a46ed2"],"id":"dGFibGV4XzIyMjM4MjNfYXBvbGxvXzBfYXBwb2ludG1lbnQxNzk1NTg5Njk2MDMx","dataCategories":["trend","group","simple"]}],"showHeader":true,"showTotalAggregate":false,"showSubAggregate":false,"showFirstGroupAggregate":false,"showSecondGroupAggregate":false,"hideMatrixAggregate":false,"lineClamp":1,"headerTitleAlignment":"start","wrapTitle":false,"showLoadingIndicator":false,"showHeaderSeparator":false,"contextMenuActions":[],"headerTitle":"Appointments for Today","headingLevel":2,"showBorder":true,"bareBorder":false,"telemetry":null,"showDataPassthrough":false,"showAdditionalGroupBySelector":false,"allowAdditionalGroupByPerMetric":false,"metrics":[{"dataSource":"dGFibGV4XzIyMjM4MjNfYXBvbGxvXzBfYXBwb2ludG1lbnQxNzk1NTg5Njk2MDMx","id":"ZEdGaWJHVjRYekl5TWpNNE1qTmZZWEJ2Ykd4dlh6QmZZWEJ3YjJsdWRHMWxiblF4TnprMU5UZzVOamsyTURNeDE3OTU1ODk2OTcxNzI=","aggregateFunction":"COUNT","numberFormat":{"customFormat":false},"axisId":"primary"}],"groupBy":null,"filterPerMetric":[],"sortBy":"value","sortByOrder":"desc","trendBy":null,"showChange":false,"showChangePercentage":false,"showTarget":false,"showForecast":false,"showForecastRange":false,"showTrend":false,"showConfidenceBand":false,"showGapPercentage":false,"showSparkline":false,"showMetricLabel":false,"showThreshold":false,"showComment":false,"followFilters":true,"showFilterIcon":true,"enableRealTimeUpdate":false,"enableDrilldown":true,"enableClickAndStay":false,"showDataTable":false,"enableCustomEmptyState":false,"componentId":"kyzeddyj","emptyStateIllustration":"no-data","emptyStateHeading":"No data available.","emptyStateHeadingLevel":3,"emptyStateContent":"There are no scores available for the selected criteria. Contact your admin for more info.","emptyStateAlignment":"vertical-centered","refreshFrequency":null,"hideDevSettings":false,"configPropModifiers":{},"filterConfigurations":"@state.parFilters","showMaximumRange":false,"allowChangeDateRange":false,"showDateRangeByDefault":false,"applyDateRange":false,"numberOfPeriods":3,"showAbsolutePeriod":false,"autoAggregatePeriods":false,"scoreType":null,"showChangeFrom":false,"useCurrentDateForEnd":false,"period":"M","useDataCache":false,"cacheExpirationTime":0,"showCacheTime":true,"dateFormat":"default","showRefresh":true,"showExportOptions":true,"showFilterAsSeparateSeries":false,"userInfo":"@context.session.user","colors":{}}</component_props>
+        <h>16</h>
+        <name/>
+        <required_translations>[{"message":"Appointment","comment":"","code":"PAR_DASHBOARD.4450a60947389710273a565a516d437b.bf3766c1473c9710273a565a516d43f3"},{"message":"Appointments for Today","comment":"","code":"PAR_DASHBOARD.4450a60947389710273a565a516d437b.bf3766c1473c9710273a565a516d43f3"},{"message":"No data available.","comment":"","code":"PAR_DASHBOARD.4450a60947389710273a565a516d437b.bf3766c1473c9710273a565a516d43f3"},{"message":"There are no scores available for the selected criteria. Contact your admin for more info.","comment":"","code":"PAR_DASHBOARD.4450a60947389710273a565a516d437b.bf3766c1473c9710273a565a516d43f3"}]</required_translations>
+        <stored_component/>
+        <sys_class_name>par_dashboard_widget</sys_class_name>
+        <sys_created_by>ritesh.jangid</sys_created_by>
+        <sys_created_on>2026-11-25 06:55:10</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>bf3766c1473c9710273a565a516d43f3</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_overrides/>
+        <sys_package display_value="Apollo-Hospitals" source="x_2223823_apollo_0">87c1422693c89b507b3a7c5efaba1008</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
+        <sys_update_name>par_dashboard_widget_bf3766c1473c9710273a565a516d43f3</sys_update_name>
+        <sys_updated_by>ritesh.jangid</sys_updated_by>
+        <sys_updated_on>2026-11-25 06:55:10</sys_updated_on>
+        <visualization/>
+        <w>14</w>
+        <widget_props>{"filterPerMetric":[],"refreshFrequency":null,"headerTitle":"Appointments for Today"}</widget_props>
+        <x>17</x>
+        <y>24</y>
+    </par_dashboard_widget>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</application>
+        <file_path/>
+        <instance_id>5ada7edb93d06e50d9f6ddd548373c9d</instance_id>
+        <instance_name>dev304851</instance_name>
+        <name>par_dashboard_widget_bf3766c1473c9710273a565a516d43f3</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="par_dashboard_widget"><par_dashboard_widget action="INSERT_OR_UPDATE"><canvas display_value="">4450a60947389710273a565a516d437b</canvas><component display_value="Single score">d24d53f60350de7a652caf3188a46ed2</component><component_props>{"configVersion":"23.0.0-ci-SNAPSHOT","scoreSize":"auto","scoreAlignment":"start","headingPosition":"top","sparklineStyle":"area","scoreIcon":"","iconStyle":"background","showScoreDate":false,"useRelativeScoreTime":false,"showScoreUpdateTime":false,"showZero":true,"wrapElements":false,"colorConfig":{"type":"default"},"newReporting":false,"enableAddZerosAtApi":true,"additionalGroupByConfig":[],"dataSources":[{"isDatabaseView":false,"allowRealTime":true,"label":"Appointment","sourceType":"table","tableOrViewName":"x_2223823_apollo_0_appointment","filterQuery":"start_timeONToday@javascript:gs.beginningOfToday()@javascript:gs.endOfToday()^active=true","preferredVisualizations":["d24d53f60350de7a652caf3188a46ed2"],"id":"dGFibGV4XzIyMjM4MjNfYXBvbGxvXzBfYXBwb2ludG1lbnQxNzk1NTg5Njk2MDMx","dataCategories":["trend","group","simple"]}],"showHeader":true,"showTotalAggregate":false,"showSubAggregate":false,"showFirstGroupAggregate":false,"showSecondGroupAggregate":false,"hideMatrixAggregate":false,"lineClamp":1,"headerTitleAlignment":"start","wrapTitle":false,"showLoadingIndicator":false,"showHeaderSeparator":false,"contextMenuActions":[],"headerTitle":"Appointments for Today","headingLevel":2,"showBorder":true,"bareBorder":false,"telemetry":null,"showDataPassthrough":false,"showAdditionalGroupBySelector":false,"allowAdditionalGroupByPerMetric":false,"metrics":[{"dataSource":"dGFibGV4XzIyMjM4MjNfYXBvbGxvXzBfYXBwb2ludG1lbnQxNzk1NTg5Njk2MDMx","id":"ZEdGaWJHVjRYekl5TWpNNE1qTmZZWEJ2Ykd4dlh6QmZZWEJ3YjJsdWRHMWxiblF4TnprMU5UZzVOamsyTURNeDE3OTU1ODk2OTcxNzI=","aggregateFunction":"COUNT","numberFormat":{"customFormat":false},"axisId":"primary"}],"groupBy":null,"filterPerMetric":[],"sortBy":"value","sortByOrder":"desc","trendBy":null,"showChange":false,"showChangePercentage":false,"showTarget":false,"showForecast":false,"showForecastRange":false,"showTrend":false,"showConfidenceBand":false,"showGapPercentage":false,"showSparkline":false,"showMetricLabel":false,"showThreshold":false,"showComment":false,"followFilters":true,"showFilterIcon":true,"enableRealTimeUpdate":false,"enableDrilldown":true,"enableClickAndStay":false,"showDataTable":false,"enableCustomEmptyState":false,"componentId":"kyzeddyj","emptyStateIllustration":"no-data","emptyStateHeading":"No data available.","emptyStateHeadingLevel":3,"emptyStateContent":"There are no scores available for the selected criteria. Contact your admin for more info.","emptyStateAlignment":"vertical-centered","refreshFrequency":null,"hideDevSettings":false,"configPropModifiers":{},"filterConfigurations":"@state.parFilters","showMaximumRange":false,"allowChangeDateRange":false,"showDateRangeByDefault":false,"applyDateRange":false,"numberOfPeriods":3,"showAbsolutePeriod":false,"autoAggregatePeriods":false,"scoreType":null,"showChangeFrom":false,"useCurrentDateForEnd":false,"period":"M","useDataCache":false,"cacheExpirationTime":0,"showCacheTime":true,"dateFormat":"default","showRefresh":true,"showExportOptions":true,"showFilterAsSeparateSeries":false,"userInfo":"@context.session.user","colors":{}}</component_props><h>16</h><name/><required_translations>[{"message":"Appointment","comment":"","code":"PAR_DASHBOARD.4450a60947389710273a565a516d437b.bf3766c1473c9710273a565a516d43f3"},{"message":"Appointments for Today","comment":"","code":"PAR_DASHBOARD.4450a60947389710273a565a516d437b.bf3766c1473c9710273a565a516d43f3"},{"message":"No data available.","comment":"","code":"PAR_DASHBOARD.4450a60947389710273a565a516d437b.bf3766c1473c9710273a565a516d43f3"},{"message":"There are no scores available for the selected criteria. Contact your admin for more info.","comment":"","code":"PAR_DASHBOARD.4450a60947389710273a565a516d437b.bf3766c1473c9710273a565a516d43f3"}]</required_translations><stored_component/><sys_class_name>par_dashboard_widget</sys_class_name><sys_created_by>ritesh.jangid</sys_created_by><sys_created_on>2026-11-25 06:55:10</sys_created_on><sys_domain>global</sys_domain><sys_domain_path>/</sys_domain_path><sys_id>bf3766c1473c9710273a565a516d43f3</sys_id><sys_mod_count>0</sys_mod_count><sys_name/><sys_overrides/><sys_package display_value="Apollo-Hospitals" source="x_2223823_apollo_0">87c1422693c89b507b3a7c5efaba1008</sys_package><sys_policy/><sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope><sys_update_name>par_dashboard_widget_bf3766c1473c9710273a565a516d43f3</sys_update_name><sys_updated_by>ritesh.jangid</sys_updated_by><sys_updated_on>2026-11-25 06:55:10</sys_updated_on><visualization/><w>14</w><widget_props>{"filterPerMetric":[],"refreshFrequency":null,"headerTitle":"Appointments for Today"}</widget_props><x>17</x><y>24</y></par_dashboard_widget></record_update>]]></payload>
+        <payload_hash>-1033209235</payload_hash>
+        <record_name/>
+        <reverted_from/>
+        <source>9135e5a047fc5310273a565a516d4398</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>ritesh.jangid</sys_created_by>
+        <sys_created_on>2026-11-25 06:55:10</sys_created_on>
+        <sys_id>bb3766c1473c9710273a565a516d43f8</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1a2117ca2130000001</sys_recorded_at>
+        <sys_updated_by>ritesh.jangid</sys_updated_by>
+        <sys_updated_on>2026-11-25 06:55:10</sys_updated_on>
+        <type>PAR Dashboard Widget</type>
+        <update_guid>7b3766c1443c97108df610450d41c6f7</update_guid>
+        <update_guid_history>7b3766c1443c97108df610450d41c6f7:-1033209235</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="">dda76605473c9710273a565a516d4315</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>ritesh.jangid</sys_created_by>
+        <sys_created_on>2026-11-25 06:56:55</sys_created_on>
+        <sys_db_object display_value="" name="par_dashboard_widget">par_dashboard_widget</sys_db_object>
+        <sys_id>d24ef085636d4760ae0215eb96373590</sys_id>
+        <sys_metadata>bf3766c1473c9710273a565a516d43f3</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Apollo-Hospitals" source="x_2223823_apollo_0">87c1422693c89b507b3a7c5efaba1008</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
+        <sys_scope_delete display_value="">1a2f7aa8dfc34e3a86d3f0bede3c2784</sys_scope_delete>
+        <sys_update_name>par_dashboard_widget_bf3766c1473c9710273a565a516d43f3</sys_update_name>
+        <sys_update_version display_value="par_dashboard_widget_bf3766c1473c9710273a565a516d43f3">bb3766c1473c9710273a565a516d43f8</sys_update_version>
+        <sys_updated_by>ritesh.jangid</sys_updated_by>
+        <sys_updated_on>2026-11-25 06:56:55</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

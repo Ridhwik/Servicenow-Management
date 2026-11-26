@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="par_dashboard_widget">
+    <par_dashboard_widget action="DELETE">
+        <canvas display_value="">4450a60947389710273a565a516d437b</canvas>
+        <component display_value="Donut">a2b0596cec6b9d49dd1ff9bf76b5084b</component>
+        <component_props>{"showDataLabels":true,"dataLabelsType":"both","truncationType":"end","showRegister":true,"registerPosition":"bottom","registerOrientation":"horizontal","showRegisterOnSameLine":false,"showRegisterValue":true,"legendHorizontalAlignment":"center","legendExpandToFit":false,"showRegisterPercentage":false,"showPercentageOfTotalInTooltip":true,"newReporting":false,"enableAddZerosAtApi":true,"additionalGroupByConfig":[],"showHeader":true,"showTotalAggregate":false,"showSubAggregate":false,"showFirstGroupAggregate":false,"showSecondGroupAggregate":false,"hideMatrixAggregate":false,"lineClamp":1,"headerTitleAlignment":"start","wrapTitle":false,"showLoadingIndicator":false,"showHeaderSeparator":false,"contextMenuActions":[],"headingLevel":2,"showBorder":true,"bareBorder":false,"telemetry":null,"showDataPassthrough":false,"showAdditionalGroupBySelector":false,"allowAdditionalGroupByPerMetric":false,"sortByOrder":"desc","showChange":false,"showChangePercentage":false,"showTarget":false,"showForecast":false,"showForecastRange":false,"showTrend":false,"showConfidenceBand":false,"showGapPercentage":false,"showSparkline":false,"showMetricLabel":true,"showThreshold":false,"showComment":false,"followFilters":true,"showFilterIcon":true,"enableRealTimeUpdate":false,"enableDrilldown":true,"enableClickAndStay":false,"showDataTable":true,"enableCustomEmptyState":false,"emptyStateIllustration":"no-data","emptyStateHeading":"No data available.","emptyStateHeadingLevel":3,"emptyStateContent":"There are no scores available for the selected criteria. Contact your admin for more info.","emptyStateAlignment":"vertical-centered","hideDevSettings":false,"configPropModifiers":{},"showMaximumRange":false,"allowChangeDateRange":false,"showDateRangeByDefault":false,"applyDateRange":false,"numberOfPeriods":3,"showAbsolutePeriod":false,"autoAggregatePeriods":false,"scoreType":null,"showChangeFrom":"previous","useCurrentDateForEnd":false,"period":"M","useDataCache":false,"cacheExpirationTime":0,"showCacheTime":true,"dateFormat":"default","showRefresh":true,"showExportOptions":true,"showFilterAsSeparateSeries":false,"userInfo":"@context.session.user","colors":{},"filterConfigurations":"@state.parFilters","componentId":"blxz6cy","filterPerMetric":[],"sortBy":"value","configVersion":"23.0.0-ci-SNAPSHOT","description":"","showTotalValue":true,"rangesConfig":{},"colorConfig":{"type":"default"},"dataSources":[{"isDatabaseView":false,"allowRealTime":true,"label":"Revenue Ledger","sourceType":"table","tableOrViewName":"x_2223823_apollo_0_revenue_ledger","filterQuery":"revenue_typeINconsultation,lab,bed_or_room,surgery^posting_dateONThis month@javascript:gs.beginningOfThisMonth()@javascript:gs.endOfThisMonth()","preferredVisualizations":["d24d53f60350de7a652caf3188a46ed2"],"id":"dGFibGV4XzIyMjM4MjNfYXBvbGxvXzBfcmV2ZW51ZV9sZWRnZXIxNzk1NTExNjcyNDgw","dataCategories":["trend","group","simple"]}],"groupBy":[{"groupBy":[{"dataSource":"dGFibGV4XzIyMjM4MjNfYXBvbGxvXzBfcmV2ZW51ZV9sZWRnZXIxNzk1NTExNjcyNDgw","groupByField":"revenue_type","isRange":false,"isChoice":true,"isPaBucket":false}],"maxNumberOfGroups":10,"numberOfGroupsBasedOn":"NO_OF_GROUP_BASED_ON_PER_METRIC","showOthers":false,"disableRanges":false}],"metrics":[{"dataSource":"dGFibGV4XzIyMjM4MjNfYXBvbGxvXzBfcmV2ZW51ZV9sZWRnZXIxNzk1NTExNjcyNDgw","id":"ZEdGaWJHVjRYekl5TWpNNE1qTmZZWEJ2Ykd4dlh6QmZjbVYyWlc1MVpWOXNaV1JuWlhJeE56azFOVEV4TmpjeU5EZ3cxNzk1NTExNjczNDg2","aggregateFunction":"SUM","numberFormat":{"customFormat":false},"axisId":"primary","aggregateField":"amount"}],"headerTitle":"Local Hospital Revenue by Category"}</component_props>
+        <h>26</h>
+        <name>HOSP - DB-02 - Hospital Revenue by Category</name>
+        <required_translations>[{"message":"Revenue Ledger","comment":"","code":"PAR_DASHBOARD.4450a60947389710273a565a516d437b.fa51aec947389710273a565a516d43a9"},{"message":"Local Hospital Revenue by Category","comment":"","code":"PAR_DASHBOARD.4450a60947389710273a565a516d437b.fa51aec947389710273a565a516d43a9"},{"message":"No data available.","comment":"","code":"PAR_DASHBOARD.4450a60947389710273a565a516d437b.fa51aec947389710273a565a516d43a9"},{"message":"There are no scores available for the selected criteria. Contact your admin for more info.","comment":"","code":"PAR_DASHBOARD.4450a60947389710273a565a516d437b.fa51aec947389710273a565a516d43a9"}]</required_translations>
+        <stored_component display_value="HOSP - DB-02 - Hospital Revenue by Category">2e4db1b047f01710273a565a516d4371</stored_component>
+        <sys_class_name>par_dashboard_widget</sys_class_name>
+        <sys_created_by>ritesh.jangid</sys_created_by>
+        <sys_created_on>2026-11-25 06:29:26</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>fa51aec947389710273a565a516d43a9</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_name>HOSP - DB-02 - Hospital Revenue by Category</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Apollo-Hospitals" source="x_2223823_apollo_0">87c1422693c89b507b3a7c5efaba1008</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
+        <sys_update_name>par_dashboard_widget_fa51aec947389710273a565a516d43a9</sys_update_name>
+        <sys_updated_by>ritesh.jangid</sys_updated_by>
+        <sys_updated_on>2026-11-25 08:34:49</sys_updated_on>
+        <visualization/>
+        <w>31</w>
+        <widget_props/>
+        <x>17</x>
+        <y>12</y>
+    </par_dashboard_widget>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</application>
+        <file_path/>
+        <instance_id>5ada7edb93d06e50d9f6ddd548373c9d</instance_id>
+        <instance_name>dev304851</instance_name>
+        <name>par_dashboard_widget_fa51aec947389710273a565a516d43a9</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="par_dashboard_widget"><par_dashboard_widget action="INSERT_OR_UPDATE"><canvas display_value="">4450a60947389710273a565a516d437b</canvas><component display_value="Donut">a2b0596cec6b9d49dd1ff9bf76b5084b</component><component_props>{"showDataLabels":true,"dataLabelsType":"both","truncationType":"end","showRegister":true,"registerPosition":"bottom","registerOrientation":"horizontal","showRegisterOnSameLine":false,"showRegisterValue":true,"legendHorizontalAlignment":"center","legendExpandToFit":false,"showRegisterPercentage":false,"showPercentageOfTotalInTooltip":true,"newReporting":false,"enableAddZerosAtApi":true,"additionalGroupByConfig":[],"showHeader":true,"showTotalAggregate":false,"showSubAggregate":false,"showFirstGroupAggregate":false,"showSecondGroupAggregate":false,"hideMatrixAggregate":false,"lineClamp":1,"headerTitleAlignment":"start","wrapTitle":false,"showLoadingIndicator":false,"showHeaderSeparator":false,"contextMenuActions":[],"headingLevel":2,"showBorder":true,"bareBorder":false,"telemetry":null,"showDataPassthrough":false,"showAdditionalGroupBySelector":false,"allowAdditionalGroupByPerMetric":false,"sortByOrder":"desc","showChange":false,"showChangePercentage":false,"showTarget":false,"showForecast":false,"showForecastRange":false,"showTrend":false,"showConfidenceBand":false,"showGapPercentage":false,"showSparkline":false,"showMetricLabel":true,"showThreshold":false,"showComment":false,"followFilters":true,"showFilterIcon":true,"enableRealTimeUpdate":false,"enableDrilldown":true,"enableClickAndStay":false,"showDataTable":true,"enableCustomEmptyState":false,"emptyStateIllustration":"no-data","emptyStateHeading":"No data available.","emptyStateHeadingLevel":3,"emptyStateContent":"There are no scores available for the selected criteria. Contact your admin for more info.","emptyStateAlignment":"vertical-centered","hideDevSettings":false,"configPropModifiers":{},"showMaximumRange":false,"allowChangeDateRange":false,"showDateRangeByDefault":false,"applyDateRange":false,"numberOfPeriods":3,"showAbsolutePeriod":false,"autoAggregatePeriods":false,"scoreType":null,"showChangeFrom":"previous","useCurrentDateForEnd":false,"period":"M","useDataCache":false,"cacheExpirationTime":0,"showCacheTime":true,"dateFormat":"default","showRefresh":true,"showExportOptions":true,"showFilterAsSeparateSeries":false,"userInfo":"@context.session.user","colors":{},"filterConfigurations":"@state.parFilters","componentId":"blxz6cy","filterPerMetric":[],"sortBy":"value","configVersion":"23.0.0-ci-SNAPSHOT","description":"","showTotalValue":true,"rangesConfig":{},"colorConfig":{"type":"default"},"dataSources":[{"isDatabaseView":false,"allowRealTime":true,"label":"Revenue Ledger","sourceType":"table","tableOrViewName":"x_2223823_apollo_0_revenue_ledger","filterQuery":"revenue_typeINconsultation,lab,bed_or_room,surgery^posting_dateONThis month@javascript:gs.beginningOfThisMonth()@javascript:gs.endOfThisMonth()","preferredVisualizations":["d24d53f60350de7a652caf3188a46ed2"],"id":"dGFibGV4XzIyMjM4MjNfYXBvbGxvXzBfcmV2ZW51ZV9sZWRnZXIxNzk1NTExNjcyNDgw","dataCategories":["trend","group","simple"]}],"groupBy":[{"groupBy":[{"dataSource":"dGFibGV4XzIyMjM4MjNfYXBvbGxvXzBfcmV2ZW51ZV9sZWRnZXIxNzk1NTExNjcyNDgw","groupByField":"revenue_type","isRange":false,"isChoice":true,"isPaBucket":false}],"maxNumberOfGroups":10,"numberOfGroupsBasedOn":"NO_OF_GROUP_BASED_ON_PER_METRIC","showOthers":false,"disableRanges":false}],"metrics":[{"dataSource":"dGFibGV4XzIyMjM4MjNfYXBvbGxvXzBfcmV2ZW51ZV9sZWRnZXIxNzk1NTExNjcyNDgw","id":"ZEdGaWJHVjRYekl5TWpNNE1qTmZZWEJ2Ykd4dlh6QmZjbVYyWlc1MVpWOXNaV1JuWlhJeE56azFOVEV4TmpjeU5EZ3cxNzk1NTExNjczNDg2","aggregateFunction":"SUM","numberFormat":{"customFormat":false},"axisId":"primary","aggregateField":"amount"}],"headerTitle":"Local Hospital Revenue by Category"}</component_props><h>26</h><name>HOSP - DB-02 - Hospital Revenue by Category</name><required_translations>[{"message":"Revenue Ledger","comment":"","code":"PAR_DASHBOARD.4450a60947389710273a565a516d437b.fa51aec947389710273a565a516d43a9"},{"message":"Local Hospital Revenue by Category","comment":"","code":"PAR_DASHBOARD.4450a60947389710273a565a516d437b.fa51aec947389710273a565a516d43a9"},{"message":"No data available.","comment":"","code":"PAR_DASHBOARD.4450a60947389710273a565a516d437b.fa51aec947389710273a565a516d43a9"},{"message":"There are no scores available for the selected criteria. Contact your admin for more info.","comment":"","code":"PAR_DASHBOARD.4450a60947389710273a565a516d437b.fa51aec947389710273a565a516d43a9"}]</required_translations><stored_component display_value="HOSP - DB-02 - Hospital Revenue by Category">2e4db1b047f01710273a565a516d4371</stored_component><sys_class_name>par_dashboard_widget</sys_class_name><sys_created_by>ritesh.jangid</sys_created_by><sys_created_on>2026-11-25 06:29:26</sys_created_on><sys_domain>global</sys_domain><sys_domain_path>/</sys_domain_path><sys_id>fa51aec947389710273a565a516d43a9</sys_id><sys_mod_count>4</sys_mod_count><sys_name>HOSP - DB-02 - Hospital Revenue by Category</sys_name><sys_overrides/><sys_package display_value="Apollo-Hospitals" source="x_2223823_apollo_0">87c1422693c89b507b3a7c5efaba1008</sys_package><sys_policy/><sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope><sys_update_name>par_dashboard_widget_fa51aec947389710273a565a516d43a9</sys_update_name><sys_updated_by>ritesh.jangid</sys_updated_by><sys_updated_on>2026-11-25 08:34:49</sys_updated_on><visualization/><w>31</w><widget_props/><x>17</x><y>12</y></par_dashboard_widget></record_update>]]></payload>
+        <payload_hash>-838522600</payload_hash>
+        <record_name>HOSP - DB-02 - Hospital Revenue by Category</record_name>
+        <reverted_from/>
+        <source>9135e5a047fc5310273a565a516d4398</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>ritesh.jangid</sys_created_by>
+        <sys_created_on>2026-11-25 08:34:49</sys_created_on>
+        <sys_id>530ef60947fc9710273a565a516d43da</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1a211d7dca20000001</sys_recorded_at>
+        <sys_updated_by>ritesh.jangid</sys_updated_by>
+        <sys_updated_on>2026-11-25 08:34:49</sys_updated_on>
+        <type>PAR Dashboard Widget</type>
+        <update_guid>9f0ef6097bfc97103eb478e44df609d8</update_guid>
+        <update_guid_history>9f0ef6097bfc97103eb478e44df609d8:-838522600,99a72605523c9710815bedcc1d9890b8:-778907969,f1656e4d6db89710b4a11f3838a58a02:-1422464240,d6d2220138789710f0bf8977185b462f:1898311585,fe51aec99c3897105c7e3a53879236ea:-890228565</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="HOSP - DB-02 - Hospital Revenue by Category">8404c7494730d710273a565a516d4313</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>ritesh.jangid</sys_created_by>
+        <sys_created_on>2026-11-25 09:00:47</sys_created_on>
+        <sys_db_object display_value="" name="par_dashboard_widget">par_dashboard_widget</sys_db_object>
+        <sys_id>52fe810c55d04136a02ba8adc73ba361</sys_id>
+        <sys_metadata>fa51aec947389710273a565a516d43a9</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>HOSP - DB-02 - Hospital Revenue by Category</sys_name>
+        <sys_package display_value="Apollo-Hospitals" source="x_2223823_apollo_0">87c1422693c89b507b3a7c5efaba1008</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
+        <sys_scope_delete display_value="">1a2f7aa8dfc34e3a86d3f0bede3c2784</sys_scope_delete>
+        <sys_update_name>par_dashboard_widget_fa51aec947389710273a565a516d43a9</sys_update_name>
+        <sys_update_version display_value="par_dashboard_widget_fa51aec947389710273a565a516d43a9">530ef60947fc9710273a565a516d43da</sys_update_version>
+        <sys_updated_by>ritesh.jangid</sys_updated_by>
+        <sys_updated_on>2026-11-25 09:00:47</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

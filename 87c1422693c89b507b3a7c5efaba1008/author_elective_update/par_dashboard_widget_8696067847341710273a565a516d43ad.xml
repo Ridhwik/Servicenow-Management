@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="par_dashboard_widget">
+    <par_dashboard_widget action="DELETE">
+        <canvas display_value="">ebf2ca3047341710273a565a516d4398</canvas>
+        <component display_value="Single score">d24d53f60350de7a652caf3188a46ed2</component>
+        <component_props>{"scoreSize":"auto","scoreAlignment":"start","headingPosition":"top","sparklineStyle":"area","scoreIcon":"","iconStyle":"background","showScoreDate":false,"useRelativeScoreTime":true,"showScoreUpdateTime":true,"showZero":true,"wrapElements":false,"newReporting":false,"enableAddZerosAtApi":true,"additionalGroupByConfig":[],"showHeader":true,"showTotalAggregate":false,"showSubAggregate":false,"showFirstGroupAggregate":false,"showSecondGroupAggregate":false,"hideMatrixAggregate":false,"lineClamp":1,"headerTitleAlignment":"start","wrapTitle":false,"showLoadingIndicator":false,"showHeaderSeparator":true,"contextMenuActions":[],"headingLevel":2,"showBorder":true,"bareBorder":false,"telemetry":null,"showDataPassthrough":false,"showAdditionalGroupBySelector":false,"allowAdditionalGroupByPerMetric":false,"sortByOrder":"desc","showChange":false,"showChangePercentage":false,"showTarget":false,"showForecast":false,"showForecastRange":false,"showTrend":false,"showConfidenceBand":false,"showGapPercentage":false,"showSparkline":false,"showMetricLabel":false,"showThreshold":false,"showComment":false,"followFilters":true,"showFilterIcon":true,"enableRealTimeUpdate":false,"enableDrilldown":true,"enableClickAndStay":false,"showDataTable":false,"enableCustomEmptyState":false,"emptyStateIllustration":"no-data","emptyStateHeading":"No data available.","emptyStateHeadingLevel":3,"emptyStateContent":"There are no scores available for the selected criteria. Contact your admin for more info.","emptyStateAlignment":"vertical-centered","hideDevSettings":false,"configPropModifiers":{},"showMaximumRange":false,"allowChangeDateRange":false,"showDateRangeByDefault":false,"applyDateRange":false,"numberOfPeriods":3,"showAbsolutePeriod":false,"autoAggregatePeriods":false,"scoreType":null,"showChangeFrom":false,"useCurrentDateForEnd":false,"period":"M","useDataCache":false,"cacheExpirationTime":0,"showCacheTime":true,"dateFormat":"default","showRefresh":true,"showExportOptions":true,"showFilterAsSeparateSeries":false,"userInfo":"@context.session.user","colors":{},"filterConfigurations":[],"componentId":"8rmop4w6","filterPerMetric":[],"sortBy":"value","configVersion":"23.0.0-ci-SNAPSHOT","colorConfig":{"type":"default"},"dataSources":[{"isDatabaseView":false,"allowRealTime":true,"label":"Payment","sourceType":"table","tableOrViewName":"x_2223823_apollo_0_payment","filterQuery":"mode=cash^status=succeeded^kindINpayment,advance^sys_created_onONToday@javascript:gs.beginningOfToday()@javascript:gs.endOfToday()^hospital.hospital_administratorDYNAMIC90d1921e5f510100a9ad2572f2b477fe","preferredVisualizations":["d24d53f60350de7a652caf3188a46ed2"],"id":"dGFibGV4XzIyMjM4MjNfYXBvbGxvXzBfcGF5bWVudDE3OTU1MTE0NzkyMjk=","dataCategories":["trend","group","simple"]}],"metrics":[{"dataSource":"dGFibGV4XzIyMjM4MjNfYXBvbGxvXzBfcGF5bWVudDE3OTU1MTE0NzkyMjk=","id":"ZEdGaWJHVjRYekl5TWpNNE1qTmZZWEJ2Ykd4dlh6QmZjR0Y1YldWdWRERTNPVFUxTVRFME56a3lNams9MTc5NTUxMTQ4MTY5Mg==","aggregateFunction":"SUM","numberFormat":{"customFormat":false},"axisId":"primary","aggregateField":"amount"}],"headerTitle":"Real-Time Cash in Drawer (for Today)","description":"The moment reception collects cash, this score updates immediately.","refreshFrequency":"60"}</component_props>
+        <h>12</h>
+        <name>HOSP - DB-02 - Cash Collected Today</name>
+        <required_translations>[{"message":"Payment","comment":"","code":"PAR_DASHBOARD.ebf2ca3047341710273a565a516d4398.8696067847341710273a565a516d43ad"},{"message":"Real-Time Cash in Drawer (for Today)","comment":"","code":"PAR_DASHBOARD.ebf2ca3047341710273a565a516d4398.8696067847341710273a565a516d43ad"},{"message":"The moment reception collects cash, this score updates immediately.","comment":"","code":"PAR_DASHBOARD.ebf2ca3047341710273a565a516d4398.8696067847341710273a565a516d43ad"},{"message":"No data available.","comment":"","code":"PAR_DASHBOARD.ebf2ca3047341710273a565a516d4398.8696067847341710273a565a516d43ad"},{"message":"There are no scores available for the selected criteria. Contact your admin for more info.","comment":"","code":"PAR_DASHBOARD.ebf2ca3047341710273a565a516d4398.8696067847341710273a565a516d43ad"}]</required_translations>
+        <stored_component/>
+        <sys_class_name>par_dashboard_widget</sys_class_name>
+        <sys_created_by>ritesh.jangid</sys_created_by>
+        <sys_created_on>2026-11-24 09:54:01</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>8696067847341710273a565a516d43ad</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name>HOSP - DB-02 - Cash Collected Today</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Apollo-Hospitals" source="x_2223823_apollo_0">87c1422693c89b507b3a7c5efaba1008</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
+        <sys_update_name>par_dashboard_widget_8696067847341710273a565a516d43ad</sys_update_name>
+        <sys_updated_by>ritesh.jangid</sys_updated_by>
+        <sys_updated_on>2026-11-25 05:06:12</sys_updated_on>
+        <visualization/>
+        <w>18</w>
+        <widget_props/>
+        <x>0</x>
+        <y>0</y>
+    </par_dashboard_widget>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</application>
+        <file_path/>
+        <instance_id>5ada7edb93d06e50d9f6ddd548373c9d</instance_id>
+        <instance_name>dev304851</instance_name>
+        <name>par_dashboard_widget_8696067847341710273a565a516d43ad</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="par_dashboard_widget"><par_dashboard_widget action="INSERT_OR_UPDATE"><canvas display_value="">ebf2ca3047341710273a565a516d4398</canvas><component display_value="Single score">d24d53f60350de7a652caf3188a46ed2</component><component_props>{"scoreSize":"auto","scoreAlignment":"start","headingPosition":"top","sparklineStyle":"area","scoreIcon":"","iconStyle":"background","showScoreDate":false,"useRelativeScoreTime":true,"showScoreUpdateTime":true,"showZero":true,"wrapElements":false,"newReporting":false,"enableAddZerosAtApi":true,"additionalGroupByConfig":[],"showHeader":true,"showTotalAggregate":false,"showSubAggregate":false,"showFirstGroupAggregate":false,"showSecondGroupAggregate":false,"hideMatrixAggregate":false,"lineClamp":1,"headerTitleAlignment":"start","wrapTitle":false,"showLoadingIndicator":false,"showHeaderSeparator":true,"contextMenuActions":[],"headingLevel":2,"showBorder":true,"bareBorder":false,"telemetry":null,"showDataPassthrough":false,"showAdditionalGroupBySelector":false,"allowAdditionalGroupByPerMetric":false,"sortByOrder":"desc","showChange":false,"showChangePercentage":false,"showTarget":false,"showForecast":false,"showForecastRange":false,"showTrend":false,"showConfidenceBand":false,"showGapPercentage":false,"showSparkline":false,"showMetricLabel":false,"showThreshold":false,"showComment":false,"followFilters":true,"showFilterIcon":true,"enableRealTimeUpdate":false,"enableDrilldown":true,"enableClickAndStay":false,"showDataTable":false,"enableCustomEmptyState":false,"emptyStateIllustration":"no-data","emptyStateHeading":"No data available.","emptyStateHeadingLevel":3,"emptyStateContent":"There are no scores available for the selected criteria. Contact your admin for more info.","emptyStateAlignment":"vertical-centered","hideDevSettings":false,"configPropModifiers":{},"showMaximumRange":false,"allowChangeDateRange":false,"showDateRangeByDefault":false,"applyDateRange":false,"numberOfPeriods":3,"showAbsolutePeriod":false,"autoAggregatePeriods":false,"scoreType":null,"showChangeFrom":false,"useCurrentDateForEnd":false,"period":"M","useDataCache":false,"cacheExpirationTime":0,"showCacheTime":true,"dateFormat":"default","showRefresh":true,"showExportOptions":true,"showFilterAsSeparateSeries":false,"userInfo":"@context.session.user","colors":{},"filterConfigurations":[],"componentId":"8rmop4w6","filterPerMetric":[],"sortBy":"value","configVersion":"23.0.0-ci-SNAPSHOT","colorConfig":{"type":"default"},"dataSources":[{"isDatabaseView":false,"allowRealTime":true,"label":"Payment","sourceType":"table","tableOrViewName":"x_2223823_apollo_0_payment","filterQuery":"mode=cash^status=succeeded^kindINpayment,advance^sys_created_onONToday@javascript:gs.beginningOfToday()@javascript:gs.endOfToday()^hospital.hospital_administratorDYNAMIC90d1921e5f510100a9ad2572f2b477fe","preferredVisualizations":["d24d53f60350de7a652caf3188a46ed2"],"id":"dGFibGV4XzIyMjM4MjNfYXBvbGxvXzBfcGF5bWVudDE3OTU1MTE0NzkyMjk=","dataCategories":["trend","group","simple"]}],"metrics":[{"dataSource":"dGFibGV4XzIyMjM4MjNfYXBvbGxvXzBfcGF5bWVudDE3OTU1MTE0NzkyMjk=","id":"ZEdGaWJHVjRYekl5TWpNNE1qTmZZWEJ2Ykd4dlh6QmZjR0Y1YldWdWRERTNPVFUxTVRFME56a3lNams9MTc5NTUxMTQ4MTY5Mg==","aggregateFunction":"SUM","numberFormat":{"customFormat":false},"axisId":"primary","aggregateField":"amount"}],"headerTitle":"Real-Time Cash in Drawer (for Today)","description":"The moment reception collects cash, this score updates immediately.","refreshFrequency":"60"}</component_props><h>12</h><name>HOSP - DB-02 - Cash Collected Today</name><required_translations>[{"message":"Payment","comment":"","code":"PAR_DASHBOARD.ebf2ca3047341710273a565a516d4398.8696067847341710273a565a516d43ad"},{"message":"Real-Time Cash in Drawer (for Today)","comment":"","code":"PAR_DASHBOARD.ebf2ca3047341710273a565a516d4398.8696067847341710273a565a516d43ad"},{"message":"The moment reception collects cash, this score updates immediately.","comment":"","code":"PAR_DASHBOARD.ebf2ca3047341710273a565a516d4398.8696067847341710273a565a516d43ad"},{"message":"No data available.","comment":"","code":"PAR_DASHBOARD.ebf2ca3047341710273a565a516d4398.8696067847341710273a565a516d43ad"},{"message":"There are no scores available for the selected criteria. Contact your admin for more info.","comment":"","code":"PAR_DASHBOARD.ebf2ca3047341710273a565a516d4398.8696067847341710273a565a516d43ad"}]</required_translations><stored_component/><sys_class_name>par_dashboard_widget</sys_class_name><sys_created_by>ritesh.jangid</sys_created_by><sys_created_on>2026-11-24 09:54:01</sys_created_on><sys_domain>global</sys_domain><sys_domain_path>/</sys_domain_path><sys_id>8696067847341710273a565a516d43ad</sys_id><sys_mod_count>3</sys_mod_count><sys_name>HOSP - DB-02 - Cash Collected Today</sys_name><sys_overrides/><sys_package display_value="Apollo-Hospitals" source="x_2223823_apollo_0">87c1422693c89b507b3a7c5efaba1008</sys_package><sys_policy/><sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope><sys_update_name>par_dashboard_widget_8696067847341710273a565a516d43ad</sys_update_name><sys_updated_by>ritesh.jangid</sys_updated_by><sys_updated_on>2026-11-25 05:06:12</sys_updated_on><visualization/><w>18</w><widget_props/><x>0</x><y>0</y></par_dashboard_widget></record_update>]]></payload>
+        <payload_hash>-1351288127</payload_hash>
+        <record_name>HOSP - DB-02 - Cash Collected Today</record_name>
+        <reverted_from/>
+        <source>9135e5a047fc5310273a565a516d4398</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>ritesh.jangid</sys_created_by>
+        <sys_created_on>2026-11-25 05:06:12</sys_created_on>
+        <sys_id>274e06cd47749710273a565a516d4392</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1a21118de4e0000001</sys_recorded_at>
+        <sys_updated_by>ritesh.jangid</sys_updated_by>
+        <sys_updated_on>2026-11-25 05:06:12</sys_updated_on>
+        <type>PAR Dashboard Widget</type>
+        <update_guid>634e06cd1d74971043006b6f24bd2191</update_guid>
+        <update_guid_history>634e06cd1d74971043006b6f24bd2191:-1351288127,001eca8d8c7497104b0e4c9521ef8c89:-195243432,af502a74e538171016b43689b97bc6cb:-1351288127,469606787b3417105e8ad5150d4578b0:-716973771</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="HOSP - DB-02 - Cash Collected Today">4000ae8547389710273a565a516d4338</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>ritesh.jangid</sys_created_by>
+        <sys_created_on>2026-11-25 06:23:31</sys_created_on>
+        <sys_db_object display_value="" name="par_dashboard_widget">par_dashboard_widget</sys_db_object>
+        <sys_id>194e1853ca4344c4849dd20c6356da64</sys_id>
+        <sys_metadata>8696067847341710273a565a516d43ad</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>HOSP - DB-02 - Cash Collected Today</sys_name>
+        <sys_package display_value="Apollo-Hospitals" source="x_2223823_apollo_0">87c1422693c89b507b3a7c5efaba1008</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
+        <sys_scope_delete display_value="">1a2f7aa8dfc34e3a86d3f0bede3c2784</sys_scope_delete>
+        <sys_update_name>par_dashboard_widget_8696067847341710273a565a516d43ad</sys_update_name>
+        <sys_update_version display_value="par_dashboard_widget_8696067847341710273a565a516d43ad">274e06cd47749710273a565a516d4392</sys_update_version>
+        <sys_updated_by>ritesh.jangid</sys_updated_by>
+        <sys_updated_on>2026-11-25 06:23:31</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>
