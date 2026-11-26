@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="par_dashboard_permission">
+    <par_dashboard_permission action="DELETE">
+        <can_read>true</can_read>
+        <can_share>false</can_share>
+        <can_write>false</can_write>
+        <dashboard display_value="Apollo - Hospital Administrator Cash &amp; Revenue Dashboard">ebf28a3047341710273a565a516d4346</dashboard>
+        <group/>
+        <owner>false</owner>
+        <role display_value="x_2223823_apollo_0.corporate_executive" name="x_2223823_apollo_0.corporate_executive">166a2d8e4750d310273a565a516d4376</role>
+        <sys_class_name>par_dashboard_permission</sys_class_name>
+        <sys_created_by>ritesh.jangid</sys_created_by>
+        <sys_created_on>2026-11-24 12:55:56</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>7230b67847b81710273a565a516d43ca</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>ebf28a3047341710273a565a516d4346</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Apollo-Hospitals" source="x_2223823_apollo_0">87c1422693c89b507b3a7c5efaba1008</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
+        <sys_update_name>par_dashboard_permission_7230b67847b81710273a565a516d43ca</sys_update_name>
+        <sys_updated_by>ritesh.jangid</sys_updated_by>
+        <sys_updated_on>2026-11-24 12:55:56</sys_updated_on>
+        <user/>
+    </par_dashboard_permission>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</application>
+        <file_path/>
+        <instance_id>5ada7edb93d06e50d9f6ddd548373c9d</instance_id>
+        <instance_name>dev304851</instance_name>
+        <name>par_dashboard_permission_7230b67847b81710273a565a516d43ca</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="par_dashboard_permission"><par_dashboard_permission action="INSERT_OR_UPDATE"><can_read>true</can_read><can_share>false</can_share><can_write>false</can_write><dashboard display_value="Apollo - Hospital Administrator Cash &amp; Revenue Dashboard">ebf28a3047341710273a565a516d4346</dashboard><group/><owner>false</owner><role display_value="x_2223823_apollo_0.corporate_executive" name="x_2223823_apollo_0.corporate_executive">166a2d8e4750d310273a565a516d4376</role><sys_class_name>par_dashboard_permission</sys_class_name><sys_created_by>ritesh.jangid</sys_created_by><sys_created_on>2026-11-24 12:55:56</sys_created_on><sys_domain>global</sys_domain><sys_domain_path>/</sys_domain_path><sys_id>7230b67847b81710273a565a516d43ca</sys_id><sys_mod_count>0</sys_mod_count><sys_name>ebf28a3047341710273a565a516d4346</sys_name><sys_overrides/><sys_package display_value="Apollo-Hospitals" source="x_2223823_apollo_0">87c1422693c89b507b3a7c5efaba1008</sys_package><sys_policy/><sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope><sys_update_name>par_dashboard_permission_7230b67847b81710273a565a516d43ca</sys_update_name><sys_updated_by>ritesh.jangid</sys_updated_by><sys_updated_on>2026-11-24 12:55:56</sys_updated_on><user/></par_dashboard_permission></record_update>]]></payload>
+        <payload_hash>1817411967</payload_hash>
+        <record_name>ebf28a3047341710273a565a516d4346</record_name>
+        <reverted_from/>
+        <source>9135e5a047fc5310273a565a516d4398</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>ritesh.jangid</sys_created_by>
+        <sys_created_on>2026-11-24 12:55:56</sys_created_on>
+        <sys_id>b630b67847b81710273a565a516d43cf</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1a20da0916c0000001</sys_recorded_at>
+        <sys_updated_by>ritesh.jangid</sys_updated_by>
+        <sys_updated_on>2026-11-24 12:55:56</sys_updated_on>
+        <type>PAR Dashboard Permission</type>
+        <update_guid>3630b678d8b81710e2afc2dbadf3a4ce</update_guid>
+        <update_guid_history>3630b678d8b81710e2afc2dbadf3a4ce:1817411967</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="">9c00ae8547389710273a565a516d4365</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>ritesh.jangid</sys_created_by>
+        <sys_created_on>2026-11-25 06:23:31</sys_created_on>
+        <sys_db_object display_value="" name="par_dashboard_permission">par_dashboard_permission</sys_db_object>
+        <sys_id>2c6965cee8884fb1a25eaea35951b771</sys_id>
+        <sys_metadata>7230b67847b81710273a565a516d43ca</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>ebf28a3047341710273a565a516d4346</sys_name>
+        <sys_package display_value="Apollo-Hospitals" source="x_2223823_apollo_0">87c1422693c89b507b3a7c5efaba1008</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
+        <sys_scope_delete display_value="">1a2f7aa8dfc34e3a86d3f0bede3c2784</sys_scope_delete>
+        <sys_update_name>par_dashboard_permission_7230b67847b81710273a565a516d43ca</sys_update_name>
+        <sys_update_version display_value="par_dashboard_permission_7230b67847b81710273a565a516d43ca">b630b67847b81710273a565a516d43cf</sys_update_version>
+        <sys_updated_by>ritesh.jangid</sys_updated_by>
+        <sys_updated_on>2026-11-25 06:23:31</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

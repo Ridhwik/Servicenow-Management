@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="par_visualization">
+    <par_visualization action="DELETE">
+        <active>true</active>
+        <certified>false</certified>
+        <description/>
+        <macroponent display_value="List">7ff373544303121093711347efb8f23c</macroponent>
+        <name>HOSP - DB-02 - Reconciliation Audit List</name>
+        <properties>{"metrics":[{"dataSource":"dGFibGV4XzIyMjM4MjNfYXBvbGxvXzBfaW52b2ljZTE3OTU1MTI2OTU3NjM=","id":"ZEdGaWJHVjRYekl5TWpNNE1qTmZZWEJ2Ykd4dlh6QmZhVzUyYjJsalpURTNPVFUxTVRJMk9UVTNOak09MTc5NTUxMjY5Nzk5Nw==","aggregateFunction":"COUNT","numberFormat":{"customFormat":false},"axisId":"primary"}],"showHeader":true,"wrapTitle":false,"showLoadingIndicator":false,"showHeaderSeparator":true,"contextMenuActions":[],"headingLevel":2,"limit":10,"columnLimit":0,"maxCharLimit":40,"columnPreferenceKey":"","showPersonalization":false,"hideDotwalk":false,"showColumnReorder":true,"showColumnGrouping":true,"showColumnResizing":true,"showColumnFiltering":false,"showColumnSorting":true,"parFilter":"","allowAdditionalGroupByPerMetric":false,"parFilterConfig":[],"groupBy":[],"sortByOrder":"ORDERBY","followFilters":true,"showFilterIcon":true,"enableRealTimeUpdate":false,"enableDrilldown":true,"enableCustomEmptyState":false,"emptyStateIllustration":"no-data","emptyStateHeading":"No data available.","emptyStateHeadingLevel":3,"emptyStateContent":"There are no scores available for the selected criteria. Contact your admin for more info.","emptyStateAlignment":"vertical-centered","groupByField":"","showLinks":true,"wrapCellContent":"useLineBreaksUserPref","showViewAll":false,"showInlineEditing":true,"allowListPagination":true,"lineClamp":1,"headerTitleAlignment":"start","showBorder":true,"showExportOption":true,"dataSources":[{"isDatabaseView":false,"allowRealTime":true,"label":"Invoice","sourceType":"table","tableOrViewName":"x_2223823_apollo_0_invoice","filterQuery":"statusINpaid,partially_paid","preferredVisualizations":["d24d53f60350de7a652caf3188a46ed2"],"id":"dGFibGV4XzIyMjM4MjNfYXBvbGxvXzBfaW52b2ljZTE3OTU1MTI2OTU3NjM=","dataCategories":["trend","group","simple"]}],"filterConfigurations":"@state.parFilters","bareBorder":false,"additionalGroupByConfig":[],"showAdditionalGroupBySelector":false,"table":"x_2223823_apollo_0_invoice","description":null,"componentId":"45vux9ib","headerTitle":"Invoice &amp; Payment Reconciliation List","columns":"number,patient,total_amount,paid_amount,status","headerSectionMessage":{"text":"Header and border changes are saved on this dashboard, not in the visualization."},"dataUpdateSectionMessage":{"text":"These data update changes are saved on this dashboard, not in the visualization."}}</properties>
+        <requested_by/>
+        <required_translations>[{"message":"No data available.","comment":"","code":"PAR_COMPONENT.8841863c47f01710273a565a516d431b"},{"message":"There are no scores available for the selected criteria. Contact your admin for more info.","comment":"","code":"PAR_COMPONENT.8841863c47f01710273a565a516d431b"},{"message":"Invoice &amp; Payment Reconciliation List","comment":"","code":"PAR_COMPONENT.8841863c47f01710273a565a516d431b"},{"message":"Invoice","comment":"","code":"PAR_COMPONENT.8841863c47f01710273a565a516d431b"}]</required_translations>
+        <scheduled_count>0</scheduled_count>
+        <sys_class_name>par_visualization</sys_class_name>
+        <sys_created_by>ritesh.jangid</sys_created_by>
+        <sys_created_on>2026-11-24 09:30:41</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>global</sys_domain_path>
+        <sys_id>8841863c47f01710273a565a516d431b</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_name>HOSP - DB-02 - Reconciliation Audit List</sys_name>
+        <sys_package display_value="Apollo-Hospitals" source="x_2223823_apollo_0">87c1422693c89b507b3a7c5efaba1008</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
+        <sys_update_name>par_visualization_8841863c47f01710273a565a516d431b</sys_update_name>
+        <sys_updated_by>ritesh.jangid</sys_updated_by>
+        <sys_updated_on>2026-11-24 09:53:07</sys_updated_on>
+        <type>List</type>
+    </par_visualization>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</application>
+        <file_path/>
+        <instance_id>5ada7edb93d06e50d9f6ddd548373c9d</instance_id>
+        <instance_name>dev304851</instance_name>
+        <name>par_visualization_8841863c47f01710273a565a516d431b</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="par_visualization"><par_visualization action="INSERT_OR_UPDATE"><active>true</active><certified>false</certified><description/><macroponent display_value="List">7ff373544303121093711347efb8f23c</macroponent><name>HOSP - DB-02 - Reconciliation Audit List</name><properties>{"metrics":[{"dataSource":"dGFibGV4XzIyMjM4MjNfYXBvbGxvXzBfaW52b2ljZTE3OTU1MTI2OTU3NjM=","id":"ZEdGaWJHVjRYekl5TWpNNE1qTmZZWEJ2Ykd4dlh6QmZhVzUyYjJsalpURTNPVFUxTVRJMk9UVTNOak09MTc5NTUxMjY5Nzk5Nw==","aggregateFunction":"COUNT","numberFormat":{"customFormat":false},"axisId":"primary"}],"showHeader":true,"wrapTitle":false,"showLoadingIndicator":false,"showHeaderSeparator":true,"contextMenuActions":[],"headingLevel":2,"limit":10,"columnLimit":0,"maxCharLimit":40,"columnPreferenceKey":"","showPersonalization":false,"hideDotwalk":false,"showColumnReorder":true,"showColumnGrouping":true,"showColumnResizing":true,"showColumnFiltering":false,"showColumnSorting":true,"parFilter":"","allowAdditionalGroupByPerMetric":false,"parFilterConfig":[],"groupBy":[],"sortByOrder":"ORDERBY","followFilters":true,"showFilterIcon":true,"enableRealTimeUpdate":false,"enableDrilldown":true,"enableCustomEmptyState":false,"emptyStateIllustration":"no-data","emptyStateHeading":"No data available.","emptyStateHeadingLevel":3,"emptyStateContent":"There are no scores available for the selected criteria. Contact your admin for more info.","emptyStateAlignment":"vertical-centered","groupByField":"","showLinks":true,"wrapCellContent":"useLineBreaksUserPref","showViewAll":false,"showInlineEditing":true,"allowListPagination":true,"lineClamp":1,"headerTitleAlignment":"start","showBorder":true,"showExportOption":true,"dataSources":[{"isDatabaseView":false,"allowRealTime":true,"label":"Invoice","sourceType":"table","tableOrViewName":"x_2223823_apollo_0_invoice","filterQuery":"statusINpaid,partially_paid","preferredVisualizations":["d24d53f60350de7a652caf3188a46ed2"],"id":"dGFibGV4XzIyMjM4MjNfYXBvbGxvXzBfaW52b2ljZTE3OTU1MTI2OTU3NjM=","dataCategories":["trend","group","simple"]}],"filterConfigurations":"@state.parFilters","bareBorder":false,"additionalGroupByConfig":[],"showAdditionalGroupBySelector":false,"table":"x_2223823_apollo_0_invoice","description":null,"componentId":"45vux9ib","headerTitle":"Invoice &amp; Payment Reconciliation List","columns":"number,patient,total_amount,paid_amount,status","headerSectionMessage":{"text":"Header and border changes are saved on this dashboard, not in the visualization."},"dataUpdateSectionMessage":{"text":"These data update changes are saved on this dashboard, not in the visualization."}}</properties><requested_by/><required_translations>[{"message":"No data available.","comment":"","code":"PAR_COMPONENT.8841863c47f01710273a565a516d431b"},{"message":"There are no scores available for the selected criteria. Contact your admin for more info.","comment":"","code":"PAR_COMPONENT.8841863c47f01710273a565a516d431b"},{"message":"Invoice &amp; Payment Reconciliation List","comment":"","code":"PAR_COMPONENT.8841863c47f01710273a565a516d431b"},{"message":"Invoice","comment":"","code":"PAR_COMPONENT.8841863c47f01710273a565a516d431b"}]</required_translations><scheduled_count>0</scheduled_count><sys_class_name>par_visualization</sys_class_name><sys_created_by>ritesh.jangid</sys_created_by><sys_created_on>2026-11-24 09:30:41</sys_created_on><sys_domain>global</sys_domain><sys_domain_path>global</sys_domain_path><sys_id>8841863c47f01710273a565a516d431b</sys_id><sys_mod_count>4</sys_mod_count><sys_name>HOSP - DB-02 - Reconciliation Audit List</sys_name><sys_package display_value="Apollo-Hospitals" source="x_2223823_apollo_0">87c1422693c89b507b3a7c5efaba1008</sys_package><sys_policy/><sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope><sys_update_name>par_visualization_8841863c47f01710273a565a516d431b</sys_update_name><sys_updated_by>ritesh.jangid</sys_updated_by><sys_updated_on>2026-11-24 09:53:07</sys_updated_on><type>List</type></par_visualization></record_update>]]></payload>
+        <payload_hash>1434009033</payload_hash>
+        <record_name>HOSP - DB-02 - Reconciliation Audit List</record_name>
+        <reverted_from/>
+        <source>9135e5a047fc5310273a565a516d4398</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>ritesh.jangid</sys_created_by>
+        <sys_created_on>2026-11-24 09:53:07</sys_created_on>
+        <sys_id>74668e3847341710273a565a516d4338</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1a20cf931880000001</sys_recorded_at>
+        <sys_updated_by>ritesh.jangid</sys_updated_by>
+        <sys_updated_on>2026-11-24 09:53:07</sys_updated_on>
+        <type>PAR Visualization</type>
+        <update_guid>b0668e386a341710d87f7d617fb6f837</update_guid>
+        <update_guid_history>b0668e386a341710d87f7d617fb6f837:1434009033,c9d2823068341710166b8842589eb4bb:1301609168,4841863c86f01710e9138baead60d2df:-344263041</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="HOSP - DB-02 - Reconciliation Audit List">afa1624d47389710273a565a516d4327</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>ritesh.jangid</sys_created_by>
+        <sys_created_on>2026-11-25 06:30:51</sys_created_on>
+        <sys_db_object display_value="" name="par_visualization">par_visualization</sys_db_object>
+        <sys_id>3358defa3a5d40ea8c37a6e09b090c84</sys_id>
+        <sys_metadata>8841863c47f01710273a565a516d431b</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>HOSP - DB-02 - Reconciliation Audit List</sys_name>
+        <sys_package display_value="Apollo-Hospitals" source="x_2223823_apollo_0">87c1422693c89b507b3a7c5efaba1008</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
+        <sys_scope_delete display_value="">1a2f7aa8dfc34e3a86d3f0bede3c2784</sys_scope_delete>
+        <sys_update_name>par_visualization_8841863c47f01710273a565a516d431b</sys_update_name>
+        <sys_update_version display_value="par_visualization_8841863c47f01710273a565a516d431b">74668e3847341710273a565a516d4338</sys_update_version>
+        <sys_updated_by>ritesh.jangid</sys_updated_by>
+        <sys_updated_on>2026-11-25 06:30:51</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

@@ -2,12 +2,14 @@
     <element attributes="enforce_dot_walk_cross_scope_access=true" db_object_id="d5ce9c3147941310273a565a516d434c" label="Charge Line" max_length="40" name="x_2223823_apollo_0_charge_line" type="collection">
         <element label="Description" max_length="255" name="description" type="string"/>
         <element label="Amount" mandatory="true" max_length="20" name="amount" type="currency"/>
+        <element label="Payment" max_length="32" name="payment" reference="x_2223823_apollo_0_payment" type="reference"/>
         <element label="Invoice" max_length="32" name="invoice" reference="x_2223823_apollo_0_invoice" reference_qual="javascript:new ChargeLine().getInvoiceRefQual(current);" type="reference" use_reference_qualifier="advanced"/>
         <element label="Patient" mandatory="true" max_length="32" name="patient" reference="x_2223823_apollo_0_patient" type="reference"/>
         <element dependent="description" label="Source Table" max_length="32" name="source_table" type="string"/>
         <element choice="1" label="Status" mandatory="true" max_length="40" name="status" type="choice">
             <choice>
                 <element inactive_on_update="false" label="Cancelled" sequence="3" value="cancelled"/>
+                <element inactive_on_update="false" label="Paid" sequence="4" value="paid"/>
                 <element inactive_on_update="false" label="Invoiced" sequence="2" value="invoiced"/>
                 <element inactive_on_update="false" label="Pending" sequence="1" value="pending"/>
             </choice>
@@ -36,6 +38,9 @@
         </index>
         <index name="index3">
             <element name="patient"/>
+        </index>
+        <index name="index4">
+            <element name="payment"/>
         </index>
         <index name="index4">
             <element name="source_record"/>
