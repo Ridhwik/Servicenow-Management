@@ -2,7 +2,7 @@
     <item_option_new action="INSERT_OR_UPDATE">
         <active>true</active>
         <attributes/>
-        <cat_item display_value="Housekeeping">bb36bf2547101310273a565a516d4376</cat_item>
+        <cat_item display_value="Wheelchair and assistance">6e08693c4794d310273a565a516d432e</cat_item>
         <category/>
         <choice_direction>down</choice_direction>
         <choice_field/>
@@ -47,15 +47,15 @@
         <map_to_field>false</map_to_field>
         <mask_use_confirmation>false</mask_use_confirmation>
         <mask_use_encryption>false</mask_use_encryption>
-        <name>preferred_time</name>
+        <name>related_appointment</name>
         <no_auto_populate_also_request_for>false</no_auto_populate_also_request_for>
         <not_available_conversation>false</not_available_conversation>
-        <order>400</order>
+        <order>700</order>
         <post_insert_script/>
         <price_if_checked>0</price_if_checked>
         <pricing_implications>false</pricing_implications>
         <published_ref/>
-        <question_text>Preferred time</question_text>
+        <question_text>Related Appointment</question_text>
         <read_only>false</read_only>
         <read_roles/>
         <read_script/>
@@ -63,7 +63,7 @@
         <rec_price_if_checked>0</rec_price_if_checked>
         <record/>
         <record_producer_table/>
-        <reference/>
+        <reference>x_2223823_apollo_0_appointment</reference>
         <reference_qual/>
         <reference_qual_condition/>
         <rich_text/>
@@ -83,20 +83,20 @@
         <summary_macro/>
         <sys_class_name>item_option_new</sys_class_name>
         <sys_created_by>nilesh.chaurasia</sys_created_by>
-        <sys_created_on>2026-11-02 05:39:24</sys_created_on>
-        <sys_id>c6397be947101310273a565a516d431f</sys_id>
+        <sys_created_on>2026-11-27 09:17:40</sys_created_on>
+        <sys_id>bb6a99f547341f10273a565a516d4375</sys_id>
         <sys_mod_count>1</sys_mod_count>
-        <sys_name>Preferred time</sys_name>
+        <sys_name>Related Appointment</sys_name>
         <sys_package display_value="Apollo-Hospitals" source="x_2223823_apollo_0">87c1422693c89b507b3a7c5efaba1008</sys_package>
         <sys_policy/>
         <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
-        <sys_update_name>item_option_new_c6397be947101310273a565a516d431f</sys_update_name>
+        <sys_update_name>item_option_new_bb6a99f547341f10273a565a516d4375</sys_update_name>
         <sys_updated_by>nilesh.chaurasia</sys_updated_by>
-        <sys_updated_on>2026-11-02 05:40:06</sys_updated_on>
+        <sys_updated_on>2026-11-27 09:20:21</sys_updated_on>
         <table/>
         <tooltip/>
         <topic_block/>
-        <type>5</type>
+        <type>8</type>
         <ui_page/>
         <unique>false</unique>
         <use_dynamic_default>false</use_dynamic_default>
@@ -112,39 +112,39 @@
         <visible_summary>true</visible_summary>
         <write_roles/>
     </item_option_new>
-    <sys_translated_text action="delete_multiple" query="documentkey=c6397be947101310273a565a516d431f"/>
-    <fx_price action="delete_multiple" query="id=c6397be947101310273a565a516d431f"/>
+    <sys_translated_text action="delete_multiple" query="documentkey=bb6a99f547341f10273a565a516d4375"/>
+    <fx_price action="delete_multiple" query="id=bb6a99f547341f10273a565a516d4375"/>
     <fx_price action="INSERT_OR_UPDATE">
         <amount>0</amount>
-        <currency display_value="USD">USD</currency>
+        <currency display_value="INR">INR</currency>
         <field>price_if_checked</field>
-        <id>c6397be947101310273a565a516d431f</id>
+        <id>bb6a99f547341f10273a565a516d4375</id>
         <parent/>
         <reference_amount>0</reference_amount>
         <reference_currency display_value="USD">USD</reference_currency>
         <sys_created_by>nilesh.chaurasia</sys_created_by>
-        <sys_created_on>2026-11-02 05:39:25</sys_created_on>
-        <sys_id>75597fe947101310273a565a516d4386</sys_id>
+        <sys_created_on>2026-11-27 09:17:40</sys_created_on>
+        <sys_id>7e0bdd3947341f10273a565a516d4391</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_updated_by>nilesh.chaurasia</sys_updated_by>
-        <sys_updated_on>2026-11-02 05:39:25</sys_updated_on>
+        <sys_updated_on>2026-11-27 09:17:40</sys_updated_on>
         <table>item_option_new</table>
         <type>calculated</type>
     </fx_price>
     <fx_price action="INSERT_OR_UPDATE">
         <amount>0</amount>
-        <currency display_value="USD">USD</currency>
+        <currency display_value="INR">INR</currency>
         <field>rec_price_if_checked</field>
-        <id>c6397be947101310273a565a516d431f</id>
+        <id>bb6a99f547341f10273a565a516d4375</id>
         <parent/>
         <reference_amount>0</reference_amount>
         <reference_currency display_value="USD">USD</reference_currency>
         <sys_created_by>nilesh.chaurasia</sys_created_by>
-        <sys_created_on>2026-11-02 05:39:25</sys_created_on>
-        <sys_id>3d597fe947101310273a565a516d4385</sys_id>
+        <sys_created_on>2026-11-27 09:17:40</sys_created_on>
+        <sys_id>760bdd3947341f10273a565a516d4390</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_updated_by>nilesh.chaurasia</sys_updated_by>
-        <sys_updated_on>2026-11-02 05:39:25</sys_updated_on>
+        <sys_updated_on>2026-11-27 09:17:40</sys_updated_on>
         <table>item_option_new</table>
         <type>calculated</type>
     </fx_price>

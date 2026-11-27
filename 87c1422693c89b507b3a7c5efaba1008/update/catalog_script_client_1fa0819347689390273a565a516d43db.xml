@@ -50,6 +50,7 @@
         g_form.setValue('contact_name', '');
         g_form.setValue('contact_phone', '');
         g_form.setValue('drop_address', '');
+		g_form.setValue('pickup_datetime','');
 
     } else if (newValue == '2' || newValue == '3') {
         // related_admission mandatory karo
@@ -79,6 +80,7 @@
             g_form.setValue('contact_phone', '');
             g_form.setValue('contact_name', '');
             g_form.setValue('drop_address', '');
+			g_form.setValue('pickup_datetime','');
         }
 
         // Hospital se pickup_address populate karo
@@ -106,6 +108,7 @@
 
         g_form.setValue('pickup_address', '');
         g_form.setValue('drop_address', '');
+		g_form.setValue('pickup_datetime','');
     }
 }]]></script>
         <sys_class_name>catalog_script_client</sys_class_name>
@@ -114,7 +117,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>1fa0819347689390273a565a516d43db</sys_id>
-        <sys_mod_count>46</sys_mod_count>
+        <sys_mod_count>47</sys_mod_count>
         <sys_name>when transfer type is "from Hospital to anywhere"</sys_name>
         <sys_overrides/>
         <sys_package display_value="Apollo-Hospitals" source="x_2223823_apollo_0">87c1422693c89b507b3a7c5efaba1008</sys_package>
@@ -122,7 +125,7 @@
         <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
         <sys_update_name>catalog_script_client_1fa0819347689390273a565a516d43db</sys_update_name>
         <sys_updated_by>nilesh.chaurasia</sys_updated_by>
-        <sys_updated_on>2026-11-24 05:40:29</sys_updated_on>
+        <sys_updated_on>2026-11-27 08:37:52</sys_updated_on>
         <table/>
         <type>onChange</type>
         <ui_type>10</ui_type>
