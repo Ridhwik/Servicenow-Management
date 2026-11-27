@@ -6,7 +6,7 @@
         <created_by_user display_value="Ritesh Jangid">7e8088e447705310273a565a516d43f9</created_by_user>
         <created_on>2026-11-24 06:47:21</created_on>
         <dashboard display_value="Apollo - Corporate Executive Revenue Dashboard">abdb117447bcd310273a565a516d43d2</dashboard>
-        <edit_locked>{"sysId":"7e8088e447705310273a565a516d43f9","name":"Ritesh Jangid","lockedOn":"1795526655447"}</edit_locked>
+        <edit_locked>{"sysId":"7e8088e447705310273a565a516d43f9","name":"Ritesh Jangid","lockedOn":"1795682366781"}</edit_locked>
         <enable_data_cache>false</enable_data_cache>
         <include_custom_insights>true</include_custom_insights>
         <include_insight_sentiment>false</include_insight_sentiment>
@@ -21,10 +21,10 @@
         <include_trends>true</include_trends>
         <include_widget_notification>true</include_widget_notification>
         <last_deactivated_on/>
-        <last_updated_on>2026-11-24 13:07:22</last_updated_on>
+        <last_updated_on>2026-11-26 09:37:26</last_updated_on>
         <po_project_id_list>[]</po_project_id_list>
         <refresh_information>false</refresh_information>
-        <refresh_interval>-1</refresh_interval>
+        <refresh_interval/>
         <requested_by_user/>
         <schedule_repetition>false</schedule_repetition>
         <show_ai_insights_panel>false</show_ai_insights_panel>
@@ -36,7 +36,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>a7db517447bcd310273a565a516d4380</sys_id>
-        <sys_mod_count>35</sys_mod_count>
+        <sys_mod_count>46</sys_mod_count>
         <sys_name/>
         <sys_overrides/>
         <sys_package display_value="Apollo-Hospitals" source="x_2223823_apollo_0">87c1422693c89b507b3a7c5efaba1008</sys_package>
@@ -44,7 +44,7 @@
         <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
         <sys_update_name>par_dashboard_user_metadata_a7db517447bcd310273a565a516d4380</sys_update_name>
         <sys_updated_by>ritesh.jangid</sys_updated_by>
-        <sys_updated_on>2026-11-24 13:24:15</sys_updated_on>
+        <sys_updated_on>2026-11-26 09:37:26</sys_updated_on>
         <updated_by_user display_value="Ritesh Jangid">7e8088e447705310273a565a516d43f9</updated_by_user>
         <use_custom_tab_colors>false</use_custom_tab_colors>
         <widgets_margin>$now-global-space--sm</widgets_margin>

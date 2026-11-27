@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="par_dashboard_widget">
+    <par_dashboard_widget action="INSERT_OR_UPDATE">
+        <canvas display_value="">895487894730d710273a565a516d43f1</canvas>
+        <component display_value="Single score">d24d53f60350de7a652caf3188a46ed2</component>
+        <component_props>{"scoreSize":"auto","scoreAlignment":"start","headingPosition":"top","sparklineStyle":"area","scoreIcon":"","iconStyle":"background","showScoreDate":false,"useRelativeScoreTime":true,"showScoreUpdateTime":true,"showZero":true,"wrapElements":false,"newReporting":false,"enableAddZerosAtApi":true,"additionalGroupByConfig":[],"showHeader":true,"showTotalAggregate":false,"showSubAggregate":false,"showFirstGroupAggregate":false,"showSecondGroupAggregate":false,"hideMatrixAggregate":false,"lineClamp":1,"headerTitleAlignment":"start","wrapTitle":false,"showLoadingIndicator":false,"showHeaderSeparator":true,"contextMenuActions":[],"headingLevel":2,"showBorder":true,"bareBorder":false,"telemetry":null,"showDataPassthrough":false,"showAdditionalGroupBySelector":false,"allowAdditionalGroupByPerMetric":false,"sortByOrder":"desc","showChange":false,"showChangePercentage":false,"showTarget":false,"showForecast":false,"showForecastRange":false,"showTrend":false,"showConfidenceBand":false,"showGapPercentage":false,"showSparkline":false,"showMetricLabel":false,"showThreshold":false,"showComment":false,"followFilters":true,"showFilterIcon":true,"enableRealTimeUpdate":false,"enableDrilldown":true,"enableClickAndStay":false,"showDataTable":false,"enableCustomEmptyState":false,"emptyStateIllustration":"no-data","emptyStateHeading":"No data available.","emptyStateHeadingLevel":3,"emptyStateContent":"There are no scores available for the selected criteria. Contact your admin for more info.","emptyStateAlignment":"vertical-centered","hideDevSettings":false,"configPropModifiers":{},"showMaximumRange":false,"allowChangeDateRange":false,"showDateRangeByDefault":false,"applyDateRange":false,"numberOfPeriods":3,"showAbsolutePeriod":false,"autoAggregatePeriods":false,"scoreType":null,"showChangeFrom":false,"useCurrentDateForEnd":false,"period":"M","useDataCache":false,"cacheExpirationTime":0,"showCacheTime":true,"dateFormat":"default","showRefresh":true,"showExportOptions":true,"showFilterAsSeparateSeries":false,"userInfo":"@context.session.user","colors":{},"filterConfigurations":[],"componentId":"bwttsjww","filterPerMetric":[],"sortBy":"value","configVersion":"23.0.0-ci-SNAPSHOT","colorConfig":{"type":"singleColor","values":[{"color":"bcaf762443500210c25373e60db8f2e2","metric":"ZEdGaWJHVjRYekl5TWpNNE1qTmZZWEJ2Ykd4dlh6QmZhVzUyYjJsalpURTNPVFUyT0RVek1EUXlNVGs9MTc5NTY4NTMwNjgxNQ=="}]},"dataSources":[{"isDatabaseView":false,"allowRealTime":true,"label":"Invoice","sourceType":"table","tableOrViewName":"x_2223823_apollo_0_invoice","filterQuery":"appointment.end_timeONLast 30 days@javascript:gs.beginningOfLast30Days()@javascript:gs.endOfLast30Days()^appointment.status=6^hospital.hospital_administratorDYNAMIC90d1921e5f510100a9ad2572f2b477fe^NQadmission.admission_dateONLast 30 days@javascript:gs.beginningOfLast30Days()@javascript:gs.endOfLast30Days()^admission.approval_state=3^hospital.hospital_administratorDYNAMIC90d1921e5f510100a9ad2572f2b477fe","preferredVisualizations":["d24d53f60350de7a652caf3188a46ed2"],"id":"dGFibGV4XzIyMjM4MjNfYXBvbGxvXzBfaW52b2ljZTE3OTU2ODUzMDQyMTk=","dataCategories":["trend","group","simple"]}],"metrics":[{"dataSource":"dGFibGV4XzIyMjM4MjNfYXBvbGxvXzBfaW52b2ljZTE3OTU2ODUzMDQyMTk=","id":"ZEdGaWJHVjRYekl5TWpNNE1qTmZZWEJ2Ykd4dlh6QmZhVzUyYjJsalpURTNPVFUyT0RVek1EUXlNVGs9MTc5NTY4NTMwNjgxNQ==","aggregateFunction":"COUNT","numberFormat":{"customFormat":false},"axisId":"primary"}],"description":"number of total visitors in this month.  ","rangesConfig":{},"groupBy":null,"headerTitle":"Total Visitor in last 30 Days ( includes Addmission and Appointment)"}</component_props>
+        <h>14</h>
+        <name>HOSP-DB-02 - FootFall. - Copy</name>
+        <required_translations>[{"message":"Invoice","comment":"","code":"PAR_DASHBOARD.895487894730d710273a565a516d43f1.057d98e9473c5b10273a565a516d43ef"},{"message":"Total Visitor in last 30 Days ( includes Addmission and Appointment)","comment":"","code":"PAR_DASHBOARD.895487894730d710273a565a516d43f1.057d98e9473c5b10273a565a516d43ef"},{"message":"number of total visitors in this month.  ","comment":"","code":"PAR_DASHBOARD.895487894730d710273a565a516d43f1.057d98e9473c5b10273a565a516d43ef"},{"message":"No data available.","comment":"","code":"PAR_DASHBOARD.895487894730d710273a565a516d43f1.057d98e9473c5b10273a565a516d43ef"},{"message":"There are no scores available for the selected criteria. Contact your admin for more info.","comment":"","code":"PAR_DASHBOARD.895487894730d710273a565a516d43f1.057d98e9473c5b10273a565a516d43ef"}]</required_translations>
+        <stored_component display_value="HOSP-DB-02 - FootFall. - Copy">62ccdc69473c5b10273a565a516d434b</stored_component>
+        <sys_class_name>par_dashboard_widget</sys_class_name>
+        <sys_created_by>ritesh.jangid</sys_created_by>
+        <sys_created_on>2026-11-26 10:10:06</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>057d98e9473c5b10273a565a516d43ef</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>HOSP-DB-02 - FootFall. - Copy</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Apollo-Hospitals" source="x_2223823_apollo_0">87c1422693c89b507b3a7c5efaba1008</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
+        <sys_update_name>par_dashboard_widget_057d98e9473c5b10273a565a516d43ef</sys_update_name>
+        <sys_updated_by>ritesh.jangid</sys_updated_by>
+        <sys_updated_on>2026-11-26 10:10:06</sys_updated_on>
+        <visualization/>
+        <w>15</w>
+        <widget_props/>
+        <x>0</x>
+        <y>14</y>
+    </par_dashboard_widget>
+</record_update>

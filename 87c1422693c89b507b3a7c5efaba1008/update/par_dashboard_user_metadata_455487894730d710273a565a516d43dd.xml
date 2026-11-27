@@ -21,10 +21,10 @@
         <include_trends>true</include_trends>
         <include_widget_notification>true</include_widget_notification>
         <last_deactivated_on/>
-        <last_updated_on>2026-11-25 09:22:27</last_updated_on>
+        <last_updated_on>2026-11-26 10:10:06</last_updated_on>
         <po_project_id_list>[]</po_project_id_list>
         <refresh_information>false</refresh_information>
-        <refresh_interval>-1</refresh_interval>
+        <refresh_interval/>
         <requested_by_user/>
         <schedule_repetition>false</schedule_repetition>
         <show_ai_insights_panel>false</show_ai_insights_panel>
@@ -36,7 +36,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>455487894730d710273a565a516d43dd</sys_id>
-        <sys_mod_count>18</sys_mod_count>
+        <sys_mod_count>20</sys_mod_count>
         <sys_name/>
         <sys_overrides/>
         <sys_package display_value="Apollo-Hospitals" source="x_2223823_apollo_0">87c1422693c89b507b3a7c5efaba1008</sys_package>
@@ -44,7 +44,7 @@
         <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
         <sys_update_name>par_dashboard_user_metadata_455487894730d710273a565a516d43dd</sys_update_name>
         <sys_updated_by>ritesh.jangid</sys_updated_by>
-        <sys_updated_on>2026-11-25 09:22:27</sys_updated_on>
+        <sys_updated_on>2026-11-26 10:10:06</sys_updated_on>
         <updated_by_user display_value="Ritesh Jangid">7e8088e447705310273a565a516d43f9</updated_by_user>
         <use_custom_tab_colors>false</use_custom_tab_colors>
         <widgets_margin>$now-global-space--sm</widgets_margin>
