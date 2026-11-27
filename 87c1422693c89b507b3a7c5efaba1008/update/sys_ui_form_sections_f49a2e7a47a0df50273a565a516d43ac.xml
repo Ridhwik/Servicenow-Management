@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_ui_form_sections form_id="f49a2e7a47a0df50273a565a516d43ac" sys_domain="global" table="x_2223823_apollo_0_medical_equipment_assets" version="3">
+        <sys_ui_form_section action="INSERT_OR_UPDATE">
+            <position>0</position>
+            <sys_created_by>akshat.bari</sys_created_by>
+            <sys_created_on>2026-11-18 07:23:24</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>8d9a6e7a47a0df50273a565a516d4329</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_overrides/>
+            <sys_ui_form display_value="x_2223823_apollo_0_medical_equipment_assets" name="x_2223823_apollo_0_medical_equipment_assets" sys_domain="global" view="Default view">f49a2e7a47a0df50273a565a516d43ac</sys_ui_form>
+            <sys_ui_section caption="NULL" display_value="" name="x_2223823_apollo_0_medical_equipment_assets" sys_domain="global" view="Default view">099a6e7a47a0df50273a565a516d4301</sys_ui_section>
+            <sys_updated_by>akshat.bari</sys_updated_by>
+            <sys_updated_on>2026-11-18 07:23:24</sys_updated_on>
+        </sys_ui_form_section>
+        <sys_ui_form_section action="INSERT_OR_UPDATE">
+            <position>1</position>
+            <sys_created_by>akshat.bari</sys_created_by>
+            <sys_created_on>2026-11-18 07:23:24</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>c59a6e7a47a0df50273a565a516d4353</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_overrides/>
+            <sys_ui_form display_value="x_2223823_apollo_0_medical_equipment_assets" name="x_2223823_apollo_0_medical_equipment_assets" sys_domain="global" view="Default view">f49a2e7a47a0df50273a565a516d43ac</sys_ui_form>
+            <sys_ui_section caption="General" display_value="General" name="x_2223823_apollo_0_medical_equipment_assets" sys_domain="global" view="Default view">099a6e7a47a0df50273a565a516d432a</sys_ui_section>
+            <sys_updated_by>akshat.bari</sys_updated_by>
+            <sys_updated_on>2026-11-18 07:23:24</sys_updated_on>
+        </sys_ui_form_section>
+        <sys_ui_form_section action="INSERT_OR_UPDATE">
+            <position>2</position>
+            <sys_created_by>akshat.bari</sys_created_by>
+            <sys_created_on>2026-11-18 07:23:24</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>459a2e7a47a0df50273a565a516d43e6</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_overrides/>
+            <sys_ui_form display_value="x_2223823_apollo_0_medical_equipment_assets" name="x_2223823_apollo_0_medical_equipment_assets" sys_domain="global" view="Default view">f49a2e7a47a0df50273a565a516d43ac</sys_ui_form>
+            <sys_ui_section caption="Financial" display_value="Financial" name="x_2223823_apollo_0_medical_equipment_assets" sys_domain="global" view="Default view">cd9a2e7a47a0df50273a565a516d43bf</sys_ui_section>
+            <sys_updated_by>akshat.bari</sys_updated_by>
+            <sys_updated_on>2026-11-18 07:23:24</sys_updated_on>
+        </sys_ui_form_section>
+        <sys_ui_form_section action="INSERT_OR_UPDATE">
+            <position>3</position>
+            <sys_created_by>akshat.bari</sys_created_by>
+            <sys_created_on>2026-11-18 07:23:24</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>8d9a6e7a47a0df50273a565a516d4300</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_overrides/>
+            <sys_ui_form display_value="x_2223823_apollo_0_medical_equipment_assets" name="x_2223823_apollo_0_medical_equipment_assets" sys_domain="global" view="Default view">f49a2e7a47a0df50273a565a516d43ac</sys_ui_form>
+            <sys_ui_section caption="Contracts" display_value="Contracts" name="x_2223823_apollo_0_medical_equipment_assets" sys_domain="global" view="Default view">cd9a2e7a47a0df50273a565a516d43e6</sys_ui_section>
+            <sys_updated_by>akshat.bari</sys_updated_by>
+            <sys_updated_on>2026-11-18 07:23:24</sys_updated_on>
+        </sys_ui_form_section>
+        <sys_ui_form_section action="INSERT_OR_UPDATE">
+            <position>4</position>
+            <sys_created_by>akshat.bari</sys_created_by>
+            <sys_created_on>2026-11-18 07:23:24</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>499a6e7a47a0df50273a565a516d435b</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_overrides/>
+            <sys_ui_form display_value="x_2223823_apollo_0_medical_equipment_assets" name="x_2223823_apollo_0_medical_equipment_assets" sys_domain="global" view="Default view">f49a2e7a47a0df50273a565a516d43ac</sys_ui_form>
+            <sys_ui_section caption="Activities" display_value="Activities" name="x_2223823_apollo_0_medical_equipment_assets" sys_domain="global" view="Default view">419a6e7a47a0df50273a565a516d4354</sys_ui_section>
+            <sys_updated_by>akshat.bari</sys_updated_by>
+            <sys_updated_on>2026-11-18 07:23:24</sys_updated_on>
+        </sys_ui_form_section>
+        <sys_ui_form_section action="INSERT_OR_UPDATE">
+            <position>5</position>
+            <sys_created_by>akshat.bari</sys_created_by>
+            <sys_created_on>2026-11-18 07:23:24</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>459a2e7a47a0df50273a565a516d43bf</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_overrides/>
+            <sys_ui_form display_value="x_2223823_apollo_0_medical_equipment_assets" name="x_2223823_apollo_0_medical_equipment_assets" sys_domain="global" view="Default view">f49a2e7a47a0df50273a565a516d43ac</sys_ui_form>
+            <sys_ui_section caption="Depreciation" display_value="Depreciation" name="x_2223823_apollo_0_medical_equipment_assets" sys_domain="global" view="Default view">7c9a2e7a47a0df50273a565a516d43b0</sys_ui_section>
+            <sys_updated_by>akshat.bari</sys_updated_by>
+            <sys_updated_on>2026-11-18 07:23:24</sys_updated_on>
+        </sys_ui_form_section>
+        <sys_ui_form action="INSERT_OR_UPDATE">
+            <name>x_2223823_apollo_0_medical_equipment_assets</name>
+            <roles/>
+            <sys_class_name>sys_ui_form</sys_class_name>
+            <sys_created_by>akshat.bari</sys_created_by>
+            <sys_created_on>2026-11-18 07:23:23</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>f49a2e7a47a0df50273a565a516d43ac</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>x_2223823_apollo_0_medical_equipment_assets</sys_name>
+            <sys_overrides/>
+            <sys_package display_value="Apollo-Hospitals" source="x_2223823_apollo_0">87c1422693c89b507b3a7c5efaba1008</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
+            <sys_update_name>sys_ui_form_sections_f49a2e7a47a0df50273a565a516d43ac</sys_update_name>
+            <sys_updated_by>akshat.bari</sys_updated_by>
+            <sys_updated_on>2026-11-18 07:23:23</sys_updated_on>
+            <sys_user/>
+            <view display_value="Default view" name="NULL">Default view</view>
+            <view_name/>
+        </sys_ui_form>
+    </sys_ui_form_sections>
+</record_update>

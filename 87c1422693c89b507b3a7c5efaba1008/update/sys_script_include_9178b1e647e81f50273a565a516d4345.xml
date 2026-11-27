@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>x_2223823_apollo_0.EquipmentAvailabilityService</api_name>
+        <caller_access/>
+        <client_callable>false</client_callable>
+        <description>Evaluates lab equipment availability and supports automated scheduling for `lab_test_result` records. Validates machines against operational status, maintenance schedules, overlapping lab test result bookings, and scheduled Change Requests, while providing daily load-balanced equipment selection, next-available window suggestions.</description>
+        <mobile_callable>false</mobile_callable>
+        <name>EquipmentAvailabilityService</name>
+        <sandbox_callable>false</sandbox_callable>
+        <script><![CDATA[var EquipmentAvailabilityService = Class.create();
+EquipmentAvailabilityService.prototype = {
+    initialize: function() {
+        this.lastFailureReasons = [];
+    },
+
+    /**
+     * Checks if a specific piece of equipment is free for the entire window.
+     * @param {GlideRecord|String} equipmentOrId - Equipment GlideRecord or sys_id
+     * @param {GlideDateTime} startGdt
+     * @param {GlideDateTime} endGdt
+     * @param {String} [excludeResultSysId] - Current lab_test_result sys_id (for updates)
+     * @returns {Boolean}
+     */
+    isFree: function(equipmentOrId, startGdt, endGdt, excludeResultSysId) {
+        var eqGr = this._getEquipmentRecord(equipmentOrId);
+        if (!eqGr) {
+            this._addReason('equipment record not found');
+            return false;
+        }
+
+        // 1. Operational status check
+        if (eqGr.ci.operational_status.toString() !== '1') {
+			gs.addInfoMessage('Serial Number: '+eqGr.getValue('serial_number') + 'Op Status: '+eqGr.ci.operational_status.toString());
+            this._addReason('equipment status is not Operational');
+            return false;
+        }
+
+		if(eqGr.getValue('install_status') !== '6' && eqGr.getValue('substatus') !== 'available'){
+			gs.addInfoMessage('Serial Number: '+eqGr.getValue('serial_number') + 'Asset Status: '+eqGr.getDisplayValue('install_status') + 'Asset Substatus: '+eqGr.getDisplayValue('substatus'));
+            this._addReason('equipment is not in stock and available');
+            return false;
+		}
+
+        // Validate that end time is strictly after start time
+        var requestedMs = GlideDateTime.subtract(startGdt, endGdt).getNumericValue();
+        if (requestedMs <= 0) {
+            this._addReason('invalid scheduled start and end window');
+            return false;
+        }
+
+        // 2. Maintenance schedule check (test window must fall completely OUTSIDE the schedule)
+        var scheduleId = eqGr.ci.maintenance_schedule; // Reference to cmn_schedule
+        if (scheduleId) {
+            var maintenanceSched = new GlideSchedule(scheduleId);
+            var maintenanceOverlapMs = maintenanceSched.duration(startGdt, endGdt).getNumericValue();
+
+            if (maintenanceOverlapMs > 0) {
+                this._addReason('overlaps with the equipment maintenance schedule');
+                return false;
+            }
+        }
+
+        // 3. Overlapping active lab_test_result check
+        var testGr = new GlideRecord('x_2223823_apollo_0_lab_test_result');
+        testGr.addQuery('equipment', eqGr.getUniqueValue());
+        testGr.addQuery('status', 'IN', '1,2,5');
+        testGr.addQuery('scheduled_start', '<', endGdt);
+        testGr.addQuery('scheduled_end', '>', startGdt);
+        if (excludeResultSysId) {
+            testGr.addQuery('sys_id', '!=', excludeResultSysId);
+        }
+        testGr.setLimit(1);
+        testGr.query();
+        if (testGr.hasNext()) {
+            this._addReason('already booked for another lab test');
+            return false;
+        }
+
+        // 4. Overlapping Change Request on the equipment's CI
+        var ciId = eqGr.getValue('ci');
+        if (ciId) {
+            var chgGr = new GlideRecord('change_request');
+            chgGr.addQuery('cmdb_ci', ciId);
+            chgGr.addQuery('state', 'IN', '-2,-1,0'); // Scheduled, Implement, Review
+            chgGr.addQuery('start_date', '<', endGdt);
+            chgGr.addQuery('end_date', '>', startGdt);
+            chgGr.setLimit(1);
+            chgGr.query();
+            if (chgGr.hasNext()) {
+                this._addReason('blocked by a scheduled Change Request on its CI');
+                return false;
+            }
+        }
+
+        return true;
+    },
+
+    /**
+     * Finds operational equipment at the same hospital/model that are free for the window.
+     */
+    getFreeCandidates: function(hospitalId, modelId, startGdt, endGdt, excludeResultSysId) {
+        this.lastFailureReasons = [];
+        var candidates = [];
+
+        var eqGr = new GlideRecord('x_2223823_apollo_0_medical_equipment_assets');
+        eqGr.addQuery('hospital', hospitalId);
+        eqGr.addQuery('model', modelId);
+		eqGr.addQuery('install_status', 6);
+		eqGr.addQuery('substatus', 'available');
+        eqGr.addQuery('ci.operational_status', '1');
+        eqGr.query();
+
+        if (!eqGr.hasNext()) {
+            this._addReason('no operational equipment of the required model exists at this hospital');
+            return candidates;
+        }
+
+        while (eqGr.next()) {
+            if (this.isFree(eqGr, startGdt, endGdt, excludeResultSysId)) {
+                candidates.push(eqGr.getUniqueValue());
+            }
+        }
+        return candidates;
+    },
+
+    /**
+     * Returns the sys_id of the candidate with the fewest scheduled tests on that day.
+     */
+    getLeastLoadedEquipment: function(candidateSysIds, startGdt) {
+        if (candidateSysIds.length === 1) {
+            return candidateSysIds[0];
+        }
+
+        // Define day boundaries in user/system timezone
+        var dayStart = new GlideDateTime(startGdt);
+        dayStart.setDisplayValue(startGdt.getDate() + ' 00:00:00');
+        var dayEnd = new GlideDateTime(dayStart);
+        dayEnd.addDaysLocalTime(1);
+
+        // Initialize counts to 0 so idle machines win immediately
+        var loadMap = {};
+        for (var i = 0; i < candidateSysIds.length; i++) {
+            loadMap[candidateSysIds[i]] = 0;
+        }
+
+        var agg = new GlideAggregate('x_2223823_apollo_0_lab_test_result');
+        agg.addQuery('equipment', 'IN', candidateSysIds.join(','));
+        agg.addQuery('scheduled_start', '>=', dayStart);
+        agg.addQuery('scheduled_start', '<', dayEnd);
+        agg.addAggregate('COUNT');
+        agg.groupBy('equipment');
+        agg.query();
+
+        while (agg.next()) {
+            var eqId = agg.getValue('equipment');
+            loadMap[eqId] = parseInt(agg.getAggregate('COUNT'), 10);
+        }
+
+        var bestEq = candidateSysIds[0];
+        var minLoad = loadMap[bestEq];
+        for (var j = 1; j < candidateSysIds.length; j++) {
+            var currentId = candidateSysIds[j];
+            if (loadMap[currentId] < minLoad) {
+                minLoad = loadMap[currentId];
+                bestEq = currentId;
+            }
+        }
+        return bestEq;
+    },
+
+    /**
+     * Finds the next available windows (stepping in 15-min increments over the next 7 days).
+     */
+    getNextFreeWindows: function(hospitalId, modelId, origStartGdt, origEndGdt, maxSuggestions) {
+        maxSuggestions = maxSuggestions || 3;
+        var suggestions = [];
+        var durationMs = GlideDateTime.subtract(origStartGdt, origEndGdt).getNumericValue();
+        if (durationMs <= 0) return suggestions;
+
+        var probeStart = new GlideDateTime(origStartGdt);
+        var searchLimit = new GlideDateTime(origStartGdt);
+        searchLimit.addDaysLocalTime(7);
+
+        while (probeStart.compareTo(searchLimit) < 0 && suggestions.length < maxSuggestions) {
+            probeStart.addSeconds(900); // Step forward 15 minutes
+            var probeEnd = new GlideDateTime(probeStart);
+            probeEnd.add(durationMs);
+
+            var freeEq = this.getFreeCandidates(hospitalId, modelId, probeStart, probeEnd);
+            if (freeEq.length > 0) {
+                suggestions.push(probeStart.getDisplayValue() + ' to ' + probeEnd.getDisplayValue());
+                // Jump past this found window to avoid suggesting overlapping 15-min shifts
+                probeStart = new GlideDateTime(probeEnd);
+            }
+        }
+        return suggestions;
+    },
+
+    getFailureSummary: function() {
+        if (this.lastFailureReasons.length === 0) {
+            return 'no matching operational equipment was available';
+        }
+        return this.lastFailureReasons.join('; ');
+    },
+
+    _addReason: function(reason) {
+        if (this.lastFailureReasons.indexOf(reason) === -1) {
+            this.lastFailureReasons.push(reason);
+        }
+    },
+
+    _getEquipmentRecord: function(equipmentOrId) {
+        if (typeof equipmentOrId === 'object' && equipmentOrId !== null) {
+            return equipmentOrId;
+        }
+        var gr = new GlideRecord('x_2223823_apollo_0_medical_equipment_assets');
+        return gr.get(equipmentOrId) ? gr : null;
+    },
+
+    type: 'EquipmentAvailabilityService'
+};]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>akshat.bari</sys_created_by>
+        <sys_created_on>2026-11-17 09:06:12</sys_created_on>
+        <sys_id>9178b1e647e81f50273a565a516d4345</sys_id>
+        <sys_mod_count>13</sys_mod_count>
+        <sys_name>EquipmentAvailabilityService</sys_name>
+        <sys_package display_value="Apollo-Hospitals" source="x_2223823_apollo_0">87c1422693c89b507b3a7c5efaba1008</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
+        <sys_update_name>sys_script_include_9178b1e647e81f50273a565a516d4345</sys_update_name>
+        <sys_updated_by>akshat.bari</sys_updated_by>
+        <sys_updated_on>2026-11-23 11:04:40</sys_updated_on>
+    </sys_script_include>
+</record_update>

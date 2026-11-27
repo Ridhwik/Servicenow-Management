@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_choice action="INSERT_OR_UPDATE" field="x_2223823_apollo_0_equipment_type" table="alm_asset" version="3">
+        <sys_choice_set action="INSERT_OR_UPDATE">
+            <element>x_2223823_apollo_0_equipment_type</element>
+            <name>alm_asset</name>
+            <sys_class_name>sys_choice_set</sys_class_name>
+            <sys_created_by>akshat.bari</sys_created_by>
+            <sys_created_on>2026-11-18 06:34:54</sys_created_on>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>x_2223823_apollo_0_equipment_type</sys_name>
+            <sys_package display_value="Apollo-Hospitals" source="x_2223823_apollo_0">87c1422693c89b507b3a7c5efaba1008</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
+            <sys_update_name>sys_choice_alm_asset_x_2223823_apollo_0_equipment_type</sys_update_name>
+            <sys_updated_by>akshat.bari</sys_updated_by>
+            <sys_updated_on>2026-11-18 06:34:54</sys_updated_on>
+        </sys_choice_set>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>x_2223823_apollo_0_equipment_type</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>CT</label>
+            <language>en</language>
+            <name>alm_asset</name>
+            <sequence/>
+            <synonyms/>
+            <sys_created_by>akshat.bari</sys_created_by>
+            <sys_created_on>2026-11-18 06:35:07</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>akshat.bari</sys_updated_by>
+            <sys_updated_on>2026-11-18 06:35:12</sys_updated_on>
+            <value>CT</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>x_2223823_apollo_0_equipment_type</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>ECG</label>
+            <language>en</language>
+            <name>alm_asset</name>
+            <sequence/>
+            <synonyms/>
+            <sys_created_by>akshat.bari</sys_created_by>
+            <sys_created_on>2026-11-18 06:36:09</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>akshat.bari</sys_updated_by>
+            <sys_updated_on>2026-11-18 06:36:14</sys_updated_on>
+            <value>ECG</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>x_2223823_apollo_0_equipment_type</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>MRI</label>
+            <language>en</language>
+            <name>alm_asset</name>
+            <sequence/>
+            <synonyms/>
+            <sys_created_by>akshat.bari</sys_created_by>
+            <sys_created_on>2026-11-18 06:34:54</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>akshat.bari</sys_updated_by>
+            <sys_updated_on>2026-11-18 06:34:58</sys_updated_on>
+            <value>MRI</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>x_2223823_apollo_0_equipment_type</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Patient Monitor</label>
+            <language>en</language>
+            <name>alm_asset</name>
+            <sequence/>
+            <synonyms/>
+            <sys_created_by>akshat.bari</sys_created_by>
+            <sys_created_on>2026-11-18 06:36:46</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>akshat.bari</sys_updated_by>
+            <sys_updated_on>2026-11-18 06:36:53</sys_updated_on>
+            <value>Patient Monitor</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>x_2223823_apollo_0_equipment_type</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Ultrasound</label>
+            <language>en</language>
+            <name>alm_asset</name>
+            <sequence/>
+            <synonyms/>
+            <sys_created_by>akshat.bari</sys_created_by>
+            <sys_created_on>2026-11-18 06:35:47</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>akshat.bari</sys_updated_by>
+            <sys_updated_on>2026-11-18 06:36:00</sys_updated_on>
+            <value>Ultrasound</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>x_2223823_apollo_0_equipment_type</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Vantilator</label>
+            <language>en</language>
+            <name>alm_asset</name>
+            <sequence/>
+            <synonyms/>
+            <sys_created_by>akshat.bari</sys_created_by>
+            <sys_created_on>2026-11-18 06:36:26</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>akshat.bari</sys_updated_by>
+            <sys_updated_on>2026-11-18 06:36:33</sys_updated_on>
+            <value>Ventilator</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>x_2223823_apollo_0_equipment_type</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>X-ray</label>
+            <language>en</language>
+            <name>alm_asset</name>
+            <sequence/>
+            <synonyms/>
+            <sys_created_by>akshat.bari</sys_created_by>
+            <sys_created_on>2026-11-18 06:35:30</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>akshat.bari</sys_updated_by>
+            <sys_updated_on>2026-11-18 06:35:35</sys_updated_on>
+            <value>X-ray</value>
+        </sys_choice>
+    </sys_choice>
+</record_update>

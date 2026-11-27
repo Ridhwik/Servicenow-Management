@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script">
+    <sys_script action="INSERT_OR_UPDATE">
+        <abort_action>false</abort_action>
+        <access>package_private</access>
+        <action_delete>false</action_delete>
+        <action_insert>true</action_insert>
+        <action_query>false</action_query>
+        <action_update>true</action_update>
+        <active>true</active>
+        <add_message>false</add_message>
+        <advanced>true</advanced>
+        <change_fields>false</change_fields>
+        <client_callable>false</client_callable>
+        <collection>x_2223823_apollo_0_lab_test_result</collection>
+        <condition/>
+        <description/>
+        <execute_function>false</execute_function>
+        <filter_condition table="x_2223823_apollo_0_lab_test_result">statusCHANGESTO2^ORstatus=2^ORscheduled_startVALCHANGES^ORscheduled_endVALCHANGES^NQlab_test.required_equipmentVALCHANGES^EQ<item display_value="Scheduled" endquery="false" field="status" goto="false" newquery="false" operator="CHANGESTO" or="false" value="2"/>
+            <item display_value="Scheduled" endquery="false" field="status" goto="false" newquery="false" operator="=" or="true" value="2"/>
+            <item endquery="false" field="scheduled_start" goto="false" newquery="false" operator="VALCHANGES" or="true" value=""/>
+            <item endquery="false" field="scheduled_end" goto="false" newquery="false" operator="VALCHANGES" or="true" value=""/>
+            <item endquery="false" field="lab_test.required_equipment" goto="false" newquery="true" operator="VALCHANGES" or="false" value=""/>
+            <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
+        </filter_condition>
+        <is_rest>false</is_rest>
+        <message/>
+        <name>Block scheduling when equipment unavailable</name>
+        <order>100</order>
+        <priority>100</priority>
+        <rest_method/>
+        <rest_method_text/>
+        <rest_service/>
+        <rest_service_text/>
+        <rest_variables/>
+        <role_conditions/>
+        <script><![CDATA[(function executeRule(current, previous /*null when async*/) {
+    // 1. Check if the test requires equipment
+    var requiredModel = current.lab_test.required_equipment.toString();
+    if (!requiredModel) {
+        return; // Skip: no equipment required
+    }
+
+    var startGdt = new GlideDateTime(current.getValue('scheduled_start'));
+    var endGdt = new GlideDateTime(current.getValue('scheduled_end'));
+    if (!startGdt.isValid() || !endGdt.isValid() || endGdt.compareTo(startGdt) <= 0) {
+        gs.addErrorMessage('Please provide a valid Scheduled Start and Scheduled End window.');
+        current.setAbortAction(true);
+        return;
+    }
+
+    var hospitalId = current.getValue('hospital');
+    if (!hospitalId) {
+        gs.addErrorMessage('Scheduling aborted: Hospital is required to validate or assign equipment.');
+        current.setAbortAction(true);
+        return;
+    }
+
+    var excludeId = current.isNewRecord() ? null : current.getUniqueValue();
+    var service = new x_2223823_apollo_0.EquipmentAvailabilityService();
+
+    // 2. If equipment is already populated (selected by user or retained on reschedule),
+    // validate it strictly and NEVER silently overwrite it with another machine.
+    if (!current.equipment.nil()) {
+        var chosenEq = current.equipment.getRefRecord();
+        var eqName = chosenEq.isValidRecord() ? chosenEq.getDisplayValue() : 'Selected equipment';
+        var abortReason = '';
+
+        if (!chosenEq.isValidRecord()) {
+            abortReason = 'The selected equipment record no longer exists.';
+        } else if (chosenEq.getValue('hospital') !== hospitalId) {
+            abortReason = eqName + ' belongs to a different hospital than the lab test.';
+        } else if (chosenEq.getValue('model') !== requiredModel) {
+            abortReason = eqName + ' does not match the required equipment model for this test.';
+        } else {
+            // Reset failure reasons before direct isFree() check
+            service.lastFailureReasons = [];
+            if (!service.isFree(chosenEq, startGdt, endGdt, excludeId)) {
+                abortReason = eqName + ' is unavailable (' + service.getFailureSummary() + ').';
+            }
+        }
+
+        // Valid equipment: allow save without modifying current.equipment
+        if (!abortReason) {
+            return;
+        }
+
+        // Invalid equipment: block save, show exact reason, and suggest next free windows
+        var altWindows = service.getNextFreeWindows(hospitalId, requiredModel, startGdt, endGdt, 3);
+        var blockMsg = 'Unable to schedule test: ' + abortReason;
+        blockMsg += ' Clear the Equipment field to allow automatic assignment.';
+
+        if (altWindows.length > 0) {
+            blockMsg += '<br/><b>Next available windows for this test:</b><ul><li>' + altWindows.join('</li><li>') + '</li></ul>';
+        }
+
+        gs.addErrorMessage(blockMsg);
+        current.setAbortAction(true);
+        return;
+    }
+
+    // 3. Auto-assignment path (only runs when current.equipment is empty)
+    var candidates = service.getFreeCandidates(hospitalId, requiredModel, startGdt, endGdt, excludeId);
+
+    // 4. Assign least loaded equipment and allow Scheduled status
+    if (candidates.length > 0) {
+        var selectedEqId = service.getLeastLoadedEquipment(candidates, startGdt);
+        current.setValue('equipment', selectedEqId);
+        // current.setValue('status', 'Scheduled');
+        return;
+    }
+
+    // 5. Block save and provide failure reasons + next free windows
+    var reasons = service.getFailureSummary();
+    var nextWindows = service.getNextFreeWindows(hospitalId, requiredModel, startGdt, endGdt, 3);
+
+    var msg = 'Unable to schedule test: ' + reasons + '.';
+    if (nextWindows.length > 0) {
+        msg += '<br/><b>Next available windows:</b><ul><li>' + nextWindows.join('</li><li>') + '</li></ul>';
+    } else {
+        msg += ' No free windows were found in the next 7 days.';
+    }
+
+    gs.addErrorMessage(msg);
+    current.setAbortAction(true);
+
+})(current, previous);]]></script>
+        <sys_class_name>sys_script</sys_class_name>
+        <sys_created_by>akshat.bari</sys_created_by>
+        <sys_created_on>2026-11-17 13:14:05</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>94ef26ee47a05f50273a565a516d438f</sys_id>
+        <sys_mod_count>18</sys_mod_count>
+        <sys_name>Block scheduling when equipment unavailable</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Apollo-Hospitals" source="x_2223823_apollo_0">87c1422693c89b507b3a7c5efaba1008</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
+        <sys_update_name>sys_script_94ef26ee47a05f50273a565a516d438f</sys_update_name>
+        <sys_updated_by>akshat.bari</sys_updated_by>
+        <sys_updated_on>2026-11-20 12:03:22</sys_updated_on>
+        <template/>
+        <when>before</when>
+    </sys_script>
+    <sys_translated_text action="delete_multiple" query="documentkey=94ef26ee47a05f50273a565a516d438f"/>
+</record_update>

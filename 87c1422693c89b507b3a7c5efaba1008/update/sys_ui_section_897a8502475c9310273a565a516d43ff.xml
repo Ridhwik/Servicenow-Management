@@ -3,140 +3,140 @@
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>name</element>
             <position>0</position>
-            <sys_created_by>harshvardhan.chhapola</sys_created_by>
-            <sys_created_on>2026-11-03 06:13:03</sys_created_on>
-            <sys_id>5caa0142475c9310273a565a516d4375</sys_id>
+            <sys_created_by>akshat.bari</sys_created_by>
+            <sys_created_on>2026-11-20 06:42:36</sys_created_on>
+            <sys_id>7264342b47e41790273a565a516d43a2</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_2223823_apollo_0_cmdb_ci_medical_equipments" sys_domain="global" view="Default view">897a8502475c9310273a565a516d43ff</sys_ui_section>
-            <sys_updated_by>harshvardhan.chhapola</sys_updated_by>
-            <sys_updated_on>2026-11-03 06:13:03</sys_updated_on>
+            <sys_updated_by>akshat.bari</sys_updated_by>
+            <sys_updated_on>2026-11-20 06:42:36</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>asset_tag</element>
             <position>1</position>
-            <sys_created_by>harshvardhan.chhapola</sys_created_by>
-            <sys_created_on>2026-11-03 06:13:03</sys_created_on>
-            <sys_id>18aa0142475c9310273a565a516d4376</sys_id>
+            <sys_created_by>akshat.bari</sys_created_by>
+            <sys_created_on>2026-11-20 06:42:36</sys_created_on>
+            <sys_id>7264342b47e41790273a565a516d43a3</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_2223823_apollo_0_cmdb_ci_medical_equipments" sys_domain="global" view="Default view">897a8502475c9310273a565a516d43ff</sys_ui_section>
-            <sys_updated_by>harshvardhan.chhapola</sys_updated_by>
-            <sys_updated_on>2026-11-03 06:13:03</sys_updated_on>
+            <sys_updated_by>akshat.bari</sys_updated_by>
+            <sys_updated_on>2026-11-20 06:42:36</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>assigned_to</element>
             <position>2</position>
-            <sys_created_by>harshvardhan.chhapola</sys_created_by>
-            <sys_created_on>2026-11-03 06:13:03</sys_created_on>
-            <sys_id>d0aa0142475c9310273a565a516d4377</sys_id>
+            <sys_created_by>akshat.bari</sys_created_by>
+            <sys_created_on>2026-11-20 06:42:36</sys_created_on>
+            <sys_id>fe64342b47e41790273a565a516d43a3</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_2223823_apollo_0_cmdb_ci_medical_equipments" sys_domain="global" view="Default view">897a8502475c9310273a565a516d43ff</sys_ui_section>
-            <sys_updated_by>harshvardhan.chhapola</sys_updated_by>
-            <sys_updated_on>2026-11-03 06:13:03</sys_updated_on>
-            <sys_user/>
-            <type/>
-        </sys_ui_element>
-        <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>x_2223823_apollo_0_hospital</element>
-            <position>3</position>
-            <sys_created_by>harshvardhan.chhapola</sys_created_by>
-            <sys_created_on>2026-11-03 06:13:03</sys_created_on>
-            <sys_id>9caa0142475c9310273a565a516d4377</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_ui_formatter/>
-            <sys_ui_section caption="NULL" display_value="" name="x_2223823_apollo_0_cmdb_ci_medical_equipments" sys_domain="global" view="Default view">897a8502475c9310273a565a516d43ff</sys_ui_section>
-            <sys_updated_by>harshvardhan.chhapola</sys_updated_by>
-            <sys_updated_on>2026-11-03 06:13:03</sys_updated_on>
-            <sys_user/>
-            <type/>
-        </sys_ui_element>
-        <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>u_equipment_type</element>
-            <position>4</position>
-            <sys_created_by>harshvardhan.chhapola</sys_created_by>
-            <sys_created_on>2026-11-03 06:13:03</sys_created_on>
-            <sys_id>58aa0142475c9310273a565a516d4378</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_ui_formatter/>
-            <sys_ui_section caption="NULL" display_value="" name="x_2223823_apollo_0_cmdb_ci_medical_equipments" sys_domain="global" view="Default view">897a8502475c9310273a565a516d43ff</sys_ui_section>
-            <sys_updated_by>harshvardhan.chhapola</sys_updated_by>
-            <sys_updated_on>2026-11-03 06:13:03</sys_updated_on>
+            <sys_updated_by>akshat.bari</sys_updated_by>
+            <sys_updated_on>2026-11-20 06:42:36</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>category</element>
-            <position>5</position>
-            <sys_created_by>harshvardhan.chhapola</sys_created_by>
-            <sys_created_on>2026-11-03 06:13:03</sys_created_on>
-            <sys_id>14aa0142475c9310273a565a516d4379</sys_id>
+            <position>3</position>
+            <sys_created_by>akshat.bari</sys_created_by>
+            <sys_created_on>2026-11-20 06:42:36</sys_created_on>
+            <sys_id>4f64342b47e41790273a565a516d43a4</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_2223823_apollo_0_cmdb_ci_medical_equipments" sys_domain="global" view="Default view">897a8502475c9310273a565a516d43ff</sys_ui_section>
-            <sys_updated_by>harshvardhan.chhapola</sys_updated_by>
-            <sys_updated_on>2026-11-03 06:13:03</sys_updated_on>
+            <sys_updated_by>akshat.bari</sys_updated_by>
+            <sys_updated_on>2026-11-20 06:42:36</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>fault_count</element>
-            <position>6</position>
-            <sys_created_by>harshvardhan.chhapola</sys_created_by>
-            <sys_created_on>2026-11-03 06:13:03</sys_created_on>
-            <sys_id>dcaa0142475c9310273a565a516d4379</sys_id>
+            <position>4</position>
+            <sys_created_by>akshat.bari</sys_created_by>
+            <sys_created_on>2026-11-20 06:42:36</sys_created_on>
+            <sys_id>cb64342b47e41790273a565a516d43a5</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_2223823_apollo_0_cmdb_ci_medical_equipments" sys_domain="global" view="Default view">897a8502475c9310273a565a516d43ff</sys_ui_section>
-            <sys_updated_by>harshvardhan.chhapola</sys_updated_by>
-            <sys_updated_on>2026-11-03 06:13:03</sys_updated_on>
+            <sys_updated_by>akshat.bari</sys_updated_by>
+            <sys_updated_on>2026-11-20 06:42:36</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>install_date</element>
-            <position>7</position>
-            <sys_created_by>harshvardhan.chhapola</sys_created_by>
-            <sys_created_on>2026-11-03 06:13:03</sys_created_on>
-            <sys_id>98aa0142475c9310273a565a516d437a</sys_id>
+            <position>5</position>
+            <sys_created_by>akshat.bari</sys_created_by>
+            <sys_created_on>2026-11-20 06:42:36</sys_created_on>
+            <sys_id>4b64342b47e41790273a565a516d43a6</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_2223823_apollo_0_cmdb_ci_medical_equipments" sys_domain="global" view="Default view">897a8502475c9310273a565a516d43ff</sys_ui_section>
-            <sys_updated_by>harshvardhan.chhapola</sys_updated_by>
-            <sys_updated_on>2026-11-03 06:13:03</sys_updated_on>
+            <sys_updated_by>akshat.bari</sys_updated_by>
+            <sys_updated_on>2026-11-20 06:42:36</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>install_status</element>
-            <position>8</position>
-            <sys_created_by>harshvardhan.chhapola</sys_created_by>
-            <sys_created_on>2026-11-03 06:13:03</sys_created_on>
-            <sys_id>54aa0142475c9310273a565a516d437b</sys_id>
+            <position>6</position>
+            <sys_created_by>akshat.bari</sys_created_by>
+            <sys_created_on>2026-11-20 06:42:36</sys_created_on>
+            <sys_id>c764342b47e41790273a565a516d43a7</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_2223823_apollo_0_cmdb_ci_medical_equipments" sys_domain="global" view="Default view">897a8502475c9310273a565a516d43ff</sys_ui_section>
-            <sys_updated_by>harshvardhan.chhapola</sys_updated_by>
-            <sys_updated_on>2026-11-03 06:13:03</sys_updated_on>
+            <sys_updated_by>akshat.bari</sys_updated_by>
+            <sys_updated_on>2026-11-20 06:42:36</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>operational_status</element>
+            <position>7</position>
+            <sys_created_by>akshat.bari</sys_created_by>
+            <sys_created_on>2026-11-20 06:42:36</sys_created_on>
+            <sys_id>4764342b47e41790273a565a516d43a8</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_2223823_apollo_0_cmdb_ci_medical_equipments" sys_domain="global" view="Default view">897a8502475c9310273a565a516d43ff</sys_ui_section>
+            <sys_updated_by>akshat.bari</sys_updated_by>
+            <sys_updated_on>2026-11-20 06:42:36</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>x_2223823_apollo_0_scheduled_for_lab</element>
-            <position>9</position>
-            <sys_created_by>harshvardhan.chhapola</sys_created_by>
-            <sys_created_on>2026-11-03 06:13:03</sys_created_on>
-            <sys_id>10aa0142475c9310273a565a516d437c</sys_id>
+            <position>8</position>
+            <sys_created_by>akshat.bari</sys_created_by>
+            <sys_created_on>2026-11-20 06:42:36</sys_created_on>
+            <sys_id>c364342b47e41790273a565a516d43a9</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_2223823_apollo_0_cmdb_ci_medical_equipments" sys_domain="global" view="Default view">897a8502475c9310273a565a516d43ff</sys_ui_section>
-            <sys_updated_by>harshvardhan.chhapola</sys_updated_by>
-            <sys_updated_on>2026-11-03 06:13:03</sys_updated_on>
+            <sys_updated_by>akshat.bari</sys_updated_by>
+            <sys_updated_on>2026-11-20 06:42:36</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>maintenance_schedule</element>
+            <position>9</position>
+            <sys_created_by>akshat.bari</sys_created_by>
+            <sys_created_on>2026-11-20 06:42:36</sys_created_on>
+            <sys_id>4364342b47e41790273a565a516d43aa</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_2223823_apollo_0_cmdb_ci_medical_equipments" sys_domain="global" view="Default view">897a8502475c9310273a565a516d43ff</sys_ui_section>
+            <sys_updated_by>akshat.bari</sys_updated_by>
+            <sys_updated_on>2026-11-20 06:42:36</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
