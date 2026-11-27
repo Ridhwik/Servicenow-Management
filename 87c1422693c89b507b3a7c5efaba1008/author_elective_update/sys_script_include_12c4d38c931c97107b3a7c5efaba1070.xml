@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="DELETE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>x_2223823_apollo_0.CheckUniquenessUtils</api_name>
+        <caller_access/>
+        <client_callable>true</client_callable>
+        <description/>
+        <mobile_callable>false</mobile_callable>
+        <name>CheckUniquenessUtils</name>
+        <sandbox_callable>false</sandbox_callable>
+        <script><![CDATA[var CheckUniquenessUtils = Class.create();
+CheckUniquenessUtils.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
+
+	isNumberUnique: function() {
+        var numVal = this.getParameter('sysparm_number_val');
+        var currentSysId = this.getParameter('sysparm_current_id');
+        
+        var gr = new GlideRecord('x_2223823_apollo_0_patient');
+        gr.addQuery('abha_number', numVal);
+        // Exclude the current record if it's an existing record being updated
+        if (currentSysId) {
+            gr.addQuery('sys_id', '!=', currentSysId);
+        }
+        gr.query();
+        
+        return !gr.hasNext();
+    },
+
+
+    type: 'CheckUniquenessUtils'
+});]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>jenish.jain</sys_created_by>
+        <sys_created_on>2026-10-28 11:16:57</sys_created_on>
+        <sys_id>12c4d38c931c97107b3a7c5efaba1070</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>CheckUniquenessUtils</sys_name>
+        <sys_package display_value="Apollo-Hospitals" source="x_2223823_apollo_0">87c1422693c89b507b3a7c5efaba1008</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
+        <sys_update_name>sys_script_include_12c4d38c931c97107b3a7c5efaba1070</sys_update_name>
+        <sys_updated_by>jenish.jain</sys_updated_by>
+        <sys_updated_on>2026-10-28 11:16:57</sys_updated_on>
+    </sys_script_include>
+<sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</application>
+        <file_path/>
+        <instance_id>5ada7edb93d06e50d9f6ddd548373c9d</instance_id>
+        <instance_name>dev304851</instance_name>
+        <name>sys_script_include_12c4d38c931c97107b3a7c5efaba1070</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sys_script_include"&gt;
+    &lt;sys_script_include action="INSERT_OR_UPDATE"&gt;
+        &lt;access&gt;package_private&lt;/access&gt;
+        &lt;active&gt;true&lt;/active&gt;
+        &lt;api_name&gt;x_2223823_apollo_0.CheckUniquenessUtils&lt;/api_name&gt;
+        &lt;caller_access/&gt;
+        &lt;client_callable&gt;true&lt;/client_callable&gt;
+        &lt;description/&gt;
+        &lt;mobile_callable&gt;false&lt;/mobile_callable&gt;
+        &lt;name&gt;CheckUniquenessUtils&lt;/name&gt;
+        &lt;sandbox_callable&gt;false&lt;/sandbox_callable&gt;
+        &lt;script&gt;&lt;![CDATA[var CheckUniquenessUtils = Class.create();
+CheckUniquenessUtils.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
+
+	isNumberUnique: function() {
+        var numVal = this.getParameter('sysparm_number_val');
+        var currentSysId = this.getParameter('sysparm_current_id');
+        
+        var gr = new GlideRecord('x_2223823_apollo_0_patient');
+        gr.addQuery('abha_number', numVal);
+        // Exclude the current record if it's an existing record being updated
+        if (currentSysId) {
+            gr.addQuery('sys_id', '!=', currentSysId);
+        }
+        gr.query();
+        
+        return !gr.hasNext();
+    },
+
+
+    type: 'CheckUniquenessUtils'
+});]]&gt;&lt;/script&gt;
+        &lt;sys_class_name&gt;sys_script_include&lt;/sys_class_name&gt;
+        &lt;sys_created_by&gt;jenish.jain&lt;/sys_created_by&gt;
+        &lt;sys_created_on&gt;2026-10-28 11:16:57&lt;/sys_created_on&gt;
+        &lt;sys_id&gt;12c4d38c931c97107b3a7c5efaba1070&lt;/sys_id&gt;
+        &lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;
+        &lt;sys_name&gt;CheckUniquenessUtils&lt;/sys_name&gt;
+        &lt;sys_package display_value="Apollo-Hospitals" source="x_2223823_apollo_0"&gt;87c1422693c89b507b3a7c5efaba1008&lt;/sys_package&gt;
+        &lt;sys_policy&gt;read&lt;/sys_policy&gt;
+        &lt;sys_scope display_value="Apollo-Hospitals"&gt;87c1422693c89b507b3a7c5efaba1008&lt;/sys_scope&gt;
+        &lt;sys_update_name&gt;sys_script_include_12c4d38c931c97107b3a7c5efaba1070&lt;/sys_update_name&gt;
+        &lt;sys_updated_by&gt;jenish.jain&lt;/sys_updated_by&gt;
+        &lt;sys_updated_on&gt;2026-10-28 11:16:57&lt;/sys_updated_on&gt;
+    &lt;/sys_script_include&gt;
+&lt;/record_update&gt;</payload>
+        <payload_hash>1343462092</payload_hash>
+        <record_name>CheckUniquenessUtils</record_name>
+        <reverted_from/>
+        <source>cef7071247549710273a565a516d432e</source>
+        <source_table>sys_upgrade_history</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-11-04 10:05:49</sys_created_on>
+        <sys_id>b379871647949710273a565a516d4388</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1a1a605a1950000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-11-04 10:05:49</sys_updated_on>
+        <type>Script Include</type>
+        <update_guid>fb798716ba949710ce0d485ded3ab687</update_guid>
+        <update_guid_history>fb798716ba949710ce0d485ded3ab687:0,bb860f52da1497104a4d79e73d8d6051:1459719715,36cfde1e52d85710f4c1b93fbc6acc98:0,5d2f0df0fe90d310c139b18b38450709:139332410,2dfe0d70f290d310178ee9d4761f7a75:0,36d920f0999093103f54916c46b96af4:139332410,6abf1c7c27109310cddb5ea31544acfa:1343462092</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>jenish.jain</sys_created_by>
+        <sys_created_on>2026-11-26 09:48:25</sys_created_on>
+        <sys_db_object display_value="" name="sys_script_include">sys_script_include</sys_db_object>
+        <sys_id>2584394d936c412894e252b358716179</sys_id>
+        <sys_metadata>12c4d38c931c97107b3a7c5efaba1070</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>CheckUniquenessUtils</sys_name>
+        <sys_package display_value="Apollo-Hospitals" source="x_2223823_apollo_0">87c1422693c89b507b3a7c5efaba1008</sys_package>
+        <sys_parent/>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
+        <sys_scope_delete display_value="">1a2f7aa8dfc34e3a86d3f0bede3c2784</sys_scope_delete>
+        <sys_update_name>sys_script_include_12c4d38c931c97107b3a7c5efaba1070</sys_update_name>
+        <sys_update_version display_value="sys_script_include_12c4d38c931c97107b3a7c5efaba1070">b379871647949710273a565a516d4388</sys_update_version>
+        <sys_updated_by>jenish.jain</sys_updated_by>
+        <sys_updated_on>2026-11-26 09:48:25</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

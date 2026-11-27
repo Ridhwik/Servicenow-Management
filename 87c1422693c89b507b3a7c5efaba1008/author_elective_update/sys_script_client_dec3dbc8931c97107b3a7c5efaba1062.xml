@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script_client">
+    <sys_script_client action="DELETE">
+        <active>true</active>
+        <applies_extended>false</applies_extended>
+        <condition/>
+        <description/>
+        <field>abha_number</field>
+        <global>true</global>
+        <isolate_script>true</isolate_script>
+        <messages/>
+        <name>Duplicate ABHA Number</name>
+        <order/>
+        <script><![CDATA[function onChange(control, oldValue, newValue, isLoading, isTemplate) {
+   if (isLoading || newValue === '') {
+      return;
+   }
+
+   if(newValue.length < 14){
+		g_form.showFieldMsg('abha_number', 'Fill Correct ABHA Number', 'error');
+		return;
+   }
+
+   var ga = new GlideAjax('CheckUniquenessUtils');
+    ga.addParam('sysparm_name', 'isNumberUnique');
+    ga.addParam('sysparm_number_val', newValue);
+    ga.addParam('sysparm_current_id', g_form.getUniqueValue());
+    
+    ga.getXMLAnswer(function(response) {
+        if (response === 'false') {
+            g_form.showFieldMsg('abha_number', 'This value already exists. Please enter a unique number.', 'error');
+            // g_form.setValue('your_number_field', '');
+        } else {
+            g_form.hideFieldMsg('abha_number');
+        }
+    });
+   
+}]]></script>
+        <sys_class_name>sys_script_client</sys_class_name>
+        <sys_created_by>jenish.jain</sys_created_by>
+        <sys_created_on>2026-10-28 11:17:51</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>dec3dbc8931c97107b3a7c5efaba1062</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_name>Duplicate ABHA Number</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Apollo-Hospitals" source="x_2223823_apollo_0">87c1422693c89b507b3a7c5efaba1008</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
+        <sys_update_name>sys_script_client_dec3dbc8931c97107b3a7c5efaba1062</sys_update_name>
+        <sys_updated_by>jenish.jain</sys_updated_by>
+        <sys_updated_on>2026-10-28 11:26:06</sys_updated_on>
+        <table>x_2223823_apollo_0_patient</table>
+        <type>onChange</type>
+        <ui_type>0</ui_type>
+        <view/>
+    </sys_script_client>
+<sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</application>
+        <file_path/>
+        <instance_id>5ada7edb93d06e50d9f6ddd548373c9d</instance_id>
+        <instance_name>dev304851</instance_name>
+        <name>sys_script_client_dec3dbc8931c97107b3a7c5efaba1062</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update sys_domain="global" table="sys_script_client"&gt;
+    &lt;sys_script_client action="INSERT_OR_UPDATE"&gt;
+        &lt;active&gt;true&lt;/active&gt;
+        &lt;applies_extended&gt;false&lt;/applies_extended&gt;
+        &lt;condition/&gt;
+        &lt;description/&gt;
+        &lt;field&gt;abha_number&lt;/field&gt;
+        &lt;global&gt;true&lt;/global&gt;
+        &lt;isolate_script&gt;true&lt;/isolate_script&gt;
+        &lt;messages/&gt;
+        &lt;name&gt;Duplicate ABHA Number&lt;/name&gt;
+        &lt;order/&gt;
+        &lt;script&gt;&lt;![CDATA[function onChange(control, oldValue, newValue, isLoading, isTemplate) {
+   if (isLoading || newValue === '') {
+      return;
+   }
+
+   if(newValue.length &lt; 14){
+		g_form.showFieldMsg('abha_number', 'Fill Correct ABHA Number', 'error');
+		return;
+   }
+
+   var ga = new GlideAjax('CheckUniquenessUtils');
+    ga.addParam('sysparm_name', 'isNumberUnique');
+    ga.addParam('sysparm_number_val', newValue);
+    ga.addParam('sysparm_current_id', g_form.getUniqueValue());
+    
+    ga.getXMLAnswer(function(response) {
+        if (response === 'false') {
+            g_form.showFieldMsg('abha_number', 'This value already exists. Please enter a unique number.', 'error');
+            // g_form.setValue('your_number_field', '');
+        } else {
+            g_form.hideFieldMsg('abha_number');
+        }
+    });
+   
+}]]&gt;&lt;/script&gt;
+        &lt;sys_class_name&gt;sys_script_client&lt;/sys_class_name&gt;
+        &lt;sys_created_by&gt;jenish.jain&lt;/sys_created_by&gt;
+        &lt;sys_created_on&gt;2026-10-28 11:17:51&lt;/sys_created_on&gt;
+        &lt;sys_domain&gt;global&lt;/sys_domain&gt;
+        &lt;sys_domain_path&gt;/&lt;/sys_domain_path&gt;
+        &lt;sys_id&gt;dec3dbc8931c97107b3a7c5efaba1062&lt;/sys_id&gt;
+        &lt;sys_mod_count&gt;4&lt;/sys_mod_count&gt;
+        &lt;sys_name&gt;Duplicate ABHA Number&lt;/sys_name&gt;
+        &lt;sys_overrides/&gt;
+        &lt;sys_package display_value="Apollo-Hospitals" source="x_2223823_apollo_0"&gt;87c1422693c89b507b3a7c5efaba1008&lt;/sys_package&gt;
+        &lt;sys_policy/&gt;
+        &lt;sys_scope display_value="Apollo-Hospitals"&gt;87c1422693c89b507b3a7c5efaba1008&lt;/sys_scope&gt;
+        &lt;sys_update_name&gt;sys_script_client_dec3dbc8931c97107b3a7c5efaba1062&lt;/sys_update_name&gt;
+        &lt;sys_updated_by&gt;jenish.jain&lt;/sys_updated_by&gt;
+        &lt;sys_updated_on&gt;2026-10-28 11:26:06&lt;/sys_updated_on&gt;
+        &lt;table&gt;x_2223823_apollo_0_patient&lt;/table&gt;
+        &lt;type&gt;onChange&lt;/type&gt;
+        &lt;ui_type&gt;0&lt;/ui_type&gt;
+        &lt;view/&gt;
+    &lt;/sys_script_client&gt;
+&lt;/record_update&gt;</payload>
+        <payload_hash>901469233</payload_hash>
+        <record_name>Duplicate ABHA Number</record_name>
+        <reverted_from/>
+        <source>cef7071247549710273a565a516d432e</source>
+        <source_table>sys_upgrade_history</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-11-04 10:05:49</sys_created_on>
+        <sys_id>f379871647949710273a565a516d437c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1a1a605a12f0000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-11-04 10:05:49</sys_updated_on>
+        <type>Client Script</type>
+        <update_guid>3f798716fd9497108fca4242628c657b</update_guid>
+        <update_guid_history>3f798716fd9497108fca4242628c657b:0,54d587d64ad09710c52b8baf3fc0fe3d:-1218981964,76cfde1e48d857100221820f64a56784:0,f22f01341790d3103bb7ee1402191484:1453239865,ddfe0d70ad90d310f6b391e3dc9f0851:0,80e924f058909310511f3607404ab880:1453239865,6ebf1c7c1c109310cfeb81c05da674ee:901469233</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>jenish.jain</sys_created_by>
+        <sys_created_on>2026-11-26 09:48:39</sys_created_on>
+        <sys_db_object display_value="" name="sys_script_client">sys_script_client</sys_db_object>
+        <sys_id>15fedff1114b4aee833455e0be803f24</sys_id>
+        <sys_metadata>dec3dbc8931c97107b3a7c5efaba1062</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Duplicate ABHA Number</sys_name>
+        <sys_package display_value="Apollo-Hospitals" source="x_2223823_apollo_0">87c1422693c89b507b3a7c5efaba1008</sys_package>
+        <sys_parent display_value="Patient">7a45ece3938c13107b3a7c5efaba1039</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
+        <sys_scope_delete display_value="">1a2f7aa8dfc34e3a86d3f0bede3c2784</sys_scope_delete>
+        <sys_update_name>sys_script_client_dec3dbc8931c97107b3a7c5efaba1062</sys_update_name>
+        <sys_update_version display_value="sys_script_client_dec3dbc8931c97107b3a7c5efaba1062">f379871647949710273a565a516d437c</sys_update_version>
+        <sys_updated_by>jenish.jain</sys_updated_by>
+        <sys_updated_on>2026-11-26 09:48:39</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>
