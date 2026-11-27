@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>x_2223823_apollo_0.ConflictService</api_name>
+        <caller_access/>
+        <client_callable>false</client_callable>
+        <description/>
+        <mobile_callable>false</mobile_callable>
+        <name>ConflictService</name>
+        <sandbox_callable>false</sandbox_callable>
+        <script><![CDATA[var ConflictService = Class.create();
+ConflictService.prototype = {
+    initialize: function() {
+        this.LAB_TEST_RESULT_TABLE = 'x_2223823_apollo_0_lab_test_result';
+        this.ASSET_TABLE = 'x_2223823_apollo_0_medical_equipment_assets';
+        this.RESCHEDULE_OFFER_TABLE = 'x_2223823_apollo_0_reschedule_offer';
+    },
+
+    /**
+     * Resolves the Asset GlideRecord corresponding to a given CMDB CI.
+     * @param {String} ciId
+     * @returns {GlideRecord|null}
+     */
+    getAssetFromCI: function(ciId) {
+        if (!ciId) return null;
+        var assetGr = new GlideRecord(this.ASSET_TABLE);
+        assetGr.addQuery('ci', ciId);
+        assetGr.setLimit(1);
+        assetGr.query();
+        return assetGr.next() ? assetGr : null;
+    },
+
+    /**
+     * Finds active lab test results overlapping the window.
+     * Overlap condition: (scheduled_start < windowEnd) AND (scheduled_end > windowStart)
+     *
+     * @param {String} equipmentAssetId
+     * @param {GlideDateTime} startGdt
+     * @param {GlideDateTime} endGdt
+     * @param {String} [hospitalId]
+     * @returns {Array} Array of conflicting GlideRecords / sys_ids
+     */
+    findConflictingLabTests: function(equipmentAssetId, startGdt, endGdt, hospitalId) {
+        var conflicts = [];
+        if (!equipmentAssetId || !startGdt || !endGdt) {
+            return conflicts;
+        }
+
+        var labGr = new GlideRecord(this.LAB_TEST_RESULT_TABLE);
+        labGr.addQuery('equipment', equipmentAssetId);
+		labGr.addEncodedQuery('statusNOT IN1,7,8,9,10');
+        labGr.addQuery('scheduled_start', '<', endGdt);
+        labGr.addQuery('scheduled_end', '>', startGdt);
+        if (hospitalId) {
+            labGr.addQuery('hospital', hospitalId);
+        }
+        labGr.query();
+
+        while (labGr.next()) {
+            conflicts.push({
+                sys_id: labGr.getUniqueValue(),
+                patient: labGr.getValue('patient'),
+                hospital: labGr.getValue('hospital'),
+                scheduled_start: labGr.getValue('scheduled_start'),
+                scheduled_end: labGr.getValue('scheduled_end'),
+            });
+        }
+        return conflicts;
+    },
+
+    /**
+     * Passive Conflict Detection: Counts conflicts and flags the change request.
+     * DOES NOT modify any lab test records.
+     *
+     * @param {GlideRecord} chgGr - change_request GlideRecord
+     */
+    detectConflicts: function(chgGr) {
+        if (!chgGr || chgGr.cmdb_ci.nil() || chgGr.start_date.nil() || chgGr.end_date.nil()) {
+            return;
+        }
+
+        var assetGr = this.getAssetFromCI(chgGr.getValue('cmdb_ci'));
+        if (!assetGr) {
+            return; // Not a medical equipment CI
+        }
+
+        var startGdt = new GlideDateTime(chgGr.getValue('start_date'));
+        var endGdt = new GlideDateTime(chgGr.getValue('end_date'));
+        var hospitalId = chgGr.getValue('x_2223823_apollo_0_hospital') || assetGr.getValue('hospital');
+
+        var conflicts = this.findConflictingLabTests(assetGr.getUniqueValue(), startGdt, endGdt, hospitalId);
+        var conflictCount = conflicts.length;
+
+        var chgUpdate = new GlideRecord('change_request');
+        if (chgUpdate.get(chgGr.getUniqueValue())) {
+            chgUpdate.setValue('x_2223823_apollo_0_conflict_count', conflictCount);
+            chgUpdate.setValue('x_2223823_apollo_0_conflicts_resolved', conflictCount === 0);
+            chgUpdate.update();
+        }
+
+        if (conflictCount > 0) {
+            // Notify responsible Lab Staff
+            this._notifyLabTeam(chgGr, assetGr, conflictCount);
+        }
+    },
+
+    /**
+     * Active Conflict Resolution: Triggered ONLY when user confirms via the UI Action.
+     * 1. Moves conflicting Lab Test Results to 'Needs Rescheduling' (10).
+     * 2. Creates Reschedule Offer for each test with free alternative windows.
+     * 3. Updates change_request counters (conflict_count = 0, conflicts_resolved = true).
+     *
+     * @param {GlideRecord} chgGr
+     * @returns {Number} Number of records resolved
+     */
+    resolveConflictsForChange: function(chgGr) {
+        if (!chgGr || chgGr.cmdb_ci.nil() || chgGr.start_date.nil() || chgGr.end_date.nil()) {
+            return 0;
+        }
+
+        var assetGr = this.getAssetFromCI(chgGr.getValue('cmdb_ci'));
+        if (!assetGr) return 0;
+
+        var startGdt = new GlideDateTime(chgGr.getValue('start_date'));
+        var endGdt = new GlideDateTime(chgGr.getValue('end_date'));
+        var hospitalId = chgGr.getValue('x_2223823_apollo_0_hospital') || assetGr.getValue('hospital');
+
+        var conflicts = this.findConflictingLabTests(assetGr.getUniqueValue(), startGdt, endGdt, hospitalId);
+        if (conflicts.length === 0) {
+            // Already 0 conflicts, mark resolved
+            chgGr.setValue('x_2223823_apollo_0_conflict_count', 0);
+            chgGr.setValue('x_2223823_apollo_0_conflicts_resolved', true);
+            chgGr.update();
+            return 0;
+        }
+
+        var resolvedCount = 0;
+        var eqService = new x_2223823_apollo_0.EquipmentAvailabilityService();
+
+        for (var i = 0; i < conflicts.length; i++) {
+            var item = conflicts[i];
+
+            // 1. Move Lab Test Result to 'Needs Rescheduling' (10)
+            var labGr = new GlideRecord(this.LAB_TEST_RESULT_TABLE);
+            if (labGr.get(item.sys_id)) {
+                labGr.setValue('status', '10'); // Needs Rescheduling
+                var note = 'Moved to Needs Rescheduling due to planned maintenance window for Change ' +
+                    chgGr.getValue('number') + ' on ' + assetGr.getDisplayValue('display_name') + '.';
+                labGr.work_notes = note;
+                labGr.update();
+
+                // 2. Generate Reschedule Offer with up to 3 alternative options
+                var origStart = new GlideDateTime(item.scheduled_start);
+                var origEnd = new GlideDateTime(item.scheduled_end);
+                var altWindows = eqService.getNextFreeWindows(item.hospital, assetGr.getValue('model'), origStart, origEnd, 3);
+
+                var offerGr = new GlideRecord(this.RESCHEDULE_OFFER_TABLE);
+                offerGr.initialize();
+                offerGr.setValue('hospital', item.hospital);
+                offerGr.setValue('patient', item.patient);
+                offerGr.setValue('trigger', '3'); // Equipment conflict
+                offerGr.setValue('status', '1'); // Offered
+                offerGr.setValue('offered_on', new GlideDateTime());
+                if (offerGr.isValidField('lab_test_result')) {
+					offerGr.setValue('booking_type', 'lab_test_result');
+                    offerGr.setValue('lab_test_result', item.sys_id);
+                }
+
+                if (altWindows.length > 0 && offerGr.isValidField('option_1_start')) {
+                    offerGr.setValue('option_1_start', this._parseWindowStart(altWindows[0]));
+                    if (altWindows.length > 1) offerGr.setValue('option_2_start', this._parseWindowStart(altWindows[1]));
+                    if (altWindows.length > 2) offerGr.setValue('option_3_start', this._parseWindowStart(altWindows[2]));
+                }
+
+                // 24 hours respond_by deadline
+                // var respondBy = new GlideDateTime();
+                // respondBy.addDaysLocalTime(1);
+                // offerGr.setValue('respond_by', respondBy);
+                offerGr.insert();
+
+                // Fire event for patient notification
+                gs.eventQueue('x_hospital.reschedule_offer', offerGr, item.patient, item.hospital);
+                resolvedCount++;
+            }
+        }
+
+        // 3. Update Change Request
+        // chgGr.setValue('x_2223823_apollo_0_conflict_count', 0);
+        // chgGr.setValue('x_2223823_apollo_0_conflicts_resolved', true);
+        chgGr.work_notes = 'All ' + resolvedCount + ' conflicting lab tests transitioned to Needs Rescheduling.';
+        chgGr.update();
+
+        return resolvedCount;
+    },
+
+    _notifyLabTeam: function(chgGr, assetGr, count) {
+        var group = this._getLabGroup(assetGr.getValue('hospital'));
+        var summary = count + ' booking conflict(s) detected on ' + assetGr.getDisplayValue('display_name') +
+            ' for change ' + chgGr.getValue('number') + '.';
+        gs.eventQueue('x_2223823_apollo_0.lab_equipment_unavailable', chgGr, group, summary);
+    },
+
+    _getLabGroup: function(hospitalId) {
+        if (!hospitalId) return 'Lab Team';
+        var hospGr = new GlideRecord('x_2223823_apollo_0_hospital');
+        if (hospGr.get(hospitalId)) {
+            var hospName = hospGr.getValue('name');
+            var candidateName = hospName + ' - Lab staff';
+            var grp = new GlideRecord('sys_user_group');
+            grp.addQuery('name', candidateName);
+            grp.setLimit(1);
+            grp.query();
+            if (grp.hasNext()) return grp;
+        }
+        return 'Lab Team';
+    },
+
+    _parseWindowStart: function(windowString) {
+        if (!windowString) return null;
+        var parts = windowString.split(' to ');
+        if (parts.length > 0) {
+            var gdt = new GlideDateTime();
+            gdt.setDisplayValue(parts[0].trim());
+            return gdt;
+        }
+        return null;
+    },
+
+    type: 'ConflictService'
+};]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>akshat.bari</sys_created_by>
+        <sys_created_on>2026-11-23 11:55:13</sys_created_on>
+        <sys_id>0504592c473c5310273a565a516d4390</sys_id>
+        <sys_mod_count>11</sys_mod_count>
+        <sys_name>ConflictService</sys_name>
+        <sys_package display_value="Apollo-Hospitals" source="x_2223823_apollo_0">87c1422693c89b507b3a7c5efaba1008</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
+        <sys_update_name>sys_script_include_0504592c473c5310273a565a516d4390</sys_update_name>
+        <sys_updated_by>akshat.bari</sys_updated_by>
+        <sys_updated_on>2026-11-25 07:42:59</sys_updated_on>
+    </sys_script_include>
+</record_update>

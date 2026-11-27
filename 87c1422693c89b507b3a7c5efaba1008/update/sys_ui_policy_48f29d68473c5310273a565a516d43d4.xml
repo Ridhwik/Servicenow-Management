@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_ui_policy">
+    <sys_ui_policy action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <conditions table="x_2223823_apollo_0_reschedule_offer">booking_type=lab_test_result<item display_value="Lab test result" endquery="false" field="booking_type" goto="false" newquery="false" operator="=" or="false" value="lab_test_result"/>
+        </conditions>
+        <description/>
+        <global>true</global>
+        <inherit>false</inherit>
+        <isolate_script>true</isolate_script>
+        <model_id/>
+        <model_table/>
+        <on_load>true</on_load>
+        <order>100</order>
+        <reverse_if_false>true</reverse_if_false>
+        <run_scripts>false</run_scripts>
+        <script_false><![CDATA[function onCondition() {}]]></script_false>
+        <script_true><![CDATA[function onCondition() {}]]></script_true>
+        <set_values/>
+        <short_description>make lab_test_result visible and mandatory when booking type is lab test result</short_description>
+        <sys_class_name>sys_ui_policy</sys_class_name>
+        <sys_created_by>akshat.bari</sys_created_by>
+        <sys_created_on>2026-11-23 11:29:52</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>48f29d68473c5310273a565a516d43d4</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>make lab_test_result visible and mandatory when booking type is lab test result</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Apollo-Hospitals" source="x_2223823_apollo_0">87c1422693c89b507b3a7c5efaba1008</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
+        <sys_update_name>sys_ui_policy_48f29d68473c5310273a565a516d43d4</sys_update_name>
+        <sys_updated_by>akshat.bari</sys_updated_by>
+        <sys_updated_on>2026-11-23 11:29:52</sys_updated_on>
+        <table>x_2223823_apollo_0_reschedule_offer</table>
+        <ui_type>0</ui_type>
+        <view/>
+    </sys_ui_policy>
+</record_update>

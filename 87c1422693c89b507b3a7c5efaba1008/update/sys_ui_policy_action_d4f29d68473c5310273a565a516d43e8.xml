@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ui_policy_action">
+    <sys_ui_policy_action action="INSERT_OR_UPDATE">
+        <cleared>false</cleared>
+        <disabled>ignore</disabled>
+        <field>lab_test_result</field>
+        <field_message/>
+        <field_message_type>none</field_message_type>
+        <mandatory>true</mandatory>
+        <sys_class_name>sys_ui_policy_action</sys_class_name>
+        <sys_created_by>akshat.bari</sys_created_by>
+        <sys_created_on>2026-11-23 11:29:52</sys_created_on>
+        <sys_id>d4f29d68473c5310273a565a516d43e8</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>lab_test_result</sys_name>
+        <sys_package display_value="Apollo-Hospitals" source="x_2223823_apollo_0">87c1422693c89b507b3a7c5efaba1008</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
+        <sys_update_name>sys_ui_policy_action_d4f29d68473c5310273a565a516d43e8</sys_update_name>
+        <sys_updated_by>akshat.bari</sys_updated_by>
+        <sys_updated_on>2026-11-23 11:29:52</sys_updated_on>
+        <table>x_2223823_apollo_0_reschedule_offer</table>
+        <ui_policy display_value="make lab_test_result visible and mandatory when booking type is lab test result">48f29d68473c5310273a565a516d43d4</ui_policy>
+        <value/>
+        <value_action>ignore</value_action>
+        <visible>true</visible>
+    </sys_ui_policy_action>
+    <sys_translated_text action="delete_multiple" query="documentkey=d4f29d68473c5310273a565a516d43e8"/>
+</record_update>

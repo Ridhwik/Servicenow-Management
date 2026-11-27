@@ -3,7 +3,7 @@
         <active>true</active>
         <array>false</array>
         <attributes>enforce_dot_walk_cross_scope_access=true</attributes>
-        <audit>false</audit>
+        <audit>true</audit>
         <calculation><![CDATA[(function calculatedFieldValue(current) {
 
 	// Add your code here
@@ -58,8 +58,8 @@
         <sys_policy/>
         <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
         <sys_update_name>sys_dictionary_x_2223823_apollo_0_lab_test_result_null</sys_update_name>
-        <sys_updated_by>vikas.singh</sys_updated_by>
-        <sys_updated_on>2026-11-04 07:09:36</sys_updated_on>
+        <sys_updated_by>akshat.bari</sys_updated_by>
+        <sys_updated_on>2026-11-24 10:30:23</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>

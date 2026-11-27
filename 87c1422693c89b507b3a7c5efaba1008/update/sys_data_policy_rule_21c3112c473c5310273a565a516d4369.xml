@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_data_policy_rule">
+    <sys_data_policy_rule action="INSERT_OR_UPDATE">
+        <disabled>ignore</disabled>
+        <field>lab_test_result</field>
+        <mandatory>true</mandatory>
+        <sys_class_name>sys_data_policy_rule</sys_class_name>
+        <sys_created_by>akshat.bari</sys_created_by>
+        <sys_created_on>2026-11-23 11:33:41</sys_created_on>
+        <sys_data_policy display_value="make lab test result mandatory when booking type is lab test result">7a9319e8473c5310273a565a516d43e1</sys_data_policy>
+        <sys_id>21c3112c473c5310273a565a516d4369</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>lab_test_result</sys_name>
+        <sys_package display_value="Apollo-Hospitals" source="x_2223823_apollo_0">87c1422693c89b507b3a7c5efaba1008</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
+        <sys_update_name>sys_data_policy_rule_21c3112c473c5310273a565a516d4369</sys_update_name>
+        <sys_updated_by>akshat.bari</sys_updated_by>
+        <sys_updated_on>2026-11-23 11:33:41</sys_updated_on>
+        <table>x_2223823_apollo_0_reschedule_offer</table>
+    </sys_data_policy_rule>
+</record_update>

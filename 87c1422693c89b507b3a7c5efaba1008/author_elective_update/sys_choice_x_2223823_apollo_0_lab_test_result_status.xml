@@ -186,5 +186,24 @@
             <sys_updated_on>2026-11-04 12:00:07</sys_updated_on>
             <value>9</value>
         </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>status</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Needs Rescheduling</label>
+            <language>en</language>
+            <name>x_2223823_apollo_0_lab_test_result</name>
+            <sequence>10</sequence>
+            <synonyms/>
+            <sys_created_by>akshat.bari</sys_created_by>
+            <sys_created_on>2026-11-23 11:08:19</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>akshat.bari</sys_updated_by>
+            <sys_updated_on>2026-11-23 11:08:19</sys_updated_on>
+            <value>10</value>
+        </sys_choice>
     </sys_choice>
 </record_update>

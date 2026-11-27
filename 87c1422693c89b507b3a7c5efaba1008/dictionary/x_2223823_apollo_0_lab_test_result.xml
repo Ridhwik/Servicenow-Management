@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
-    <element attributes="enforce_dot_walk_cross_scope_access=true" db_object_id="90bede9247d85710273a565a516d431f" label="Lab Test Result" max_length="40" name="x_2223823_apollo_0_lab_test_result" type="collection">
+    <element attributes="enforce_dot_walk_cross_scope_access=true" audit="true" db_object_id="90bede9247d85710273a565a516d431f" label="Lab Test Result" max_length="40" name="x_2223823_apollo_0_lab_test_result" type="collection">
         <element label="Patient" mandatory="true" max_length="32" name="patient" reference="x_2223823_apollo_0_patient" type="reference"/>
         <element attributes="edge_encryption_enabled=true" label="Scheduled start" max_length="40" name="scheduled_start" type="glide_date_time"/>
         <element attributes="ref_qual_elements=lab_test" label="Equipment" max_length="32" name="equipment" reference="alm_asset" reference_qual="javascript: 'model=' + current.lab_test.required_equipment;" type="reference" use_reference_qualifier="advanced"/>
@@ -15,6 +15,7 @@
         <element label="Urgent" max_length="40" name="urgent" type="boolean"/>
         <element choice="1" label="Status" mandatory="true" max_length="40" name="status" type="choice">
             <choice>
+                <element inactive_on_update="false" label="Needs Rescheduling" sequence="10" value="10"/>
                 <element inactive_on_update="false" label="Testing In Progress" sequence="4" value="5"/>
                 <element inactive_on_update="false" label="Sample Collection" sequence="2" value="3"/>
                 <element inactive_on_update="false" label="Patient Notified" sequence="8" value="9"/>
@@ -28,6 +29,8 @@
         </element>
         <element label="Request" mandatory="true" max_length="32" name="request" reference="sc_req_item" type="reference"/>
         <element label="Published at" max_length="40" name="published_at" type="glide_date_time"/>
+        <element attributes="edge_encryption_enabled=true" label="Work notes" max_length="40" name="work_notes" type="journal_input"/>
+        <element attributes="ignore_filter_on_new=true" default="javascript:global.getNextObjNumberPadded();" display="true" label="Number" max_length="40" name="number" type="string"/>
         <element label="Verified at" max_length="40" name="verified_at" type="glide_date_time"/>
         <index name="index">
             <element name="equipment"/>

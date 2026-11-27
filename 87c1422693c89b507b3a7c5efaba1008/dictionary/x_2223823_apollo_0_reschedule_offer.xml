@@ -20,10 +20,17 @@
             </choice>
         </element>
         <element label="Offered On" max_length="40" name="offered_on" type="glide_date_time"/>
+        <element choice="3" default="appointment" label="Booking type" max_length="255" name="booking_type" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Appointment" sequence="0" value="appointment"/>
+                <element inactive_on_update="false" label="Lab test result" sequence="1" value="lab_test_result"/>
+            </choice>
+        </element>
         <element label="Patient's own date and time" max_length="40" name="patient_proposed_start" type="glide_date_time"/>
         <element label="Selected start" max_length="40" name="selected_start" type="glide_date_time"/>
         <element label="Patient" mandatory="true" max_length="32" name="patient" reference="x_2223823_apollo_0_patient" type="reference"/>
-        <element label="Appointment" mandatory="true" max_length="32" name="appointment" reference="x_2223823_apollo_0_appointment" type="reference"/>
+        <element label="Lab test result" max_length="32" name="lab_test_result" reference="x_2223823_apollo_0_lab_test_result" type="reference"/>
+        <element label="Appointment" max_length="32" name="appointment" reference="x_2223823_apollo_0_appointment" type="reference"/>
         <element label="Option 1 start" max_length="40" name="option_1_start" type="glide_date_time"/>
         <element label="Option 3 start" max_length="40" name="option_3_start" type="glide_date_time"/>
         <element label="Option 2 start" max_length="40" name="option_2_start" type="glide_date_time"/>
@@ -33,6 +40,9 @@
         </index>
         <index name="index2">
             <element name="hospital"/>
+        </index>
+        <index name="index3">
+            <element name="lab_test_result"/>
         </index>
         <index name="index3">
             <element name="patient"/>

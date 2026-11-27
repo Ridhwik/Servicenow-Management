@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script">
+    <sys_script action="INSERT_OR_UPDATE">
+        <abort_action>false</abort_action>
+        <access>package_private</access>
+        <action_delete>false</action_delete>
+        <action_insert>false</action_insert>
+        <action_query>false</action_query>
+        <action_update>true</action_update>
+        <active>true</active>
+        <add_message>false</add_message>
+        <advanced>true</advanced>
+        <change_fields>false</change_fields>
+        <client_callable>false</client_callable>
+        <collection>x_2223823_apollo_0_reschedule_offer</collection>
+        <condition/>
+        <description/>
+        <execute_function>false</execute_function>
+        <filter_condition table="x_2223823_apollo_0_reschedule_offer">statusIN2,3,4,5^EQ<item display_value="2,3,4,5" endquery="false" field="status" goto="false" newquery="false" operator="IN" or="false" value="2,3,4,5"/>
+            <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
+        </filter_condition>
+        <is_rest>false</is_rest>
+        <message/>
+        <name>BR-09 Update Change Conflicts Resolved</name>
+        <order>100</order>
+        <priority>100</priority>
+        <rest_method/>
+        <rest_method_text/>
+        <rest_service/>
+        <rest_service_text/>
+        <rest_variables/>
+        <role_conditions/>
+        <script><![CDATA[(function executeRule(current, previous /*null when async*/ ) {
+    // If this offer was linked to a lab_test_result
+    var labResultId = current.getValue('lab_test_result');
+    if (!labResultId) return;
+
+    var labGr = new GlideRecord('x_2223823_apollo_0_lab_test_result');
+    if (!labGr.get(labResultId)) return;
+
+    var equipmentAssetId = labGr.getValue('equipment');
+    if (!equipmentAssetId) return;
+
+    // Find any planned changes currently in Authorize for this equipment
+    var chgGr = new GlideRecord('change_request');
+    chgGr.addQuery('state', '-3').addOrCondition('type', 'emergency')
+	chgGr.addQuery('cmdb_ci', labGr.equipment.ci.toString());
+    chgGr.addQuery('x_2223823_apollo_0_conflicts_resolved', false);
+    chgGr.query();
+
+    var conflictService = new x_2223823_apollo_0.ConflictService();
+
+    while (chgGr.next()) {
+        var startGdt = new GlideDateTime(chgGr.getValue('start_date'));
+        var endGdt = new GlideDateTime(chgGr.getValue('end_date'));
+        var remainingConflicts = conflictService.findConflictingLabTests(equipmentAssetId, startGdt, endGdt, chgGr.getValue('x_2223823_apollo_0_hospital'));
+
+        if (remainingConflicts.length === 0) {
+            chgGr.setValue('x_2223823_apollo_0_conflict_count', 0);
+            chgGr.setValue('x_2223823_apollo_0_conflicts_resolved', true);
+            chgGr.work_notes = 'All conflicting patient bookings have been resolved. Change is now clear to move forward.';
+            chgGr.update();
+        } else {
+            chgGr.setValue('x_2223823_apollo_0_conflict_count', remainingConflicts.length);
+            chgGr.update();
+        }
+    }
+})(current, previous);]]></script>
+        <sys_class_name>sys_script</sys_class_name>
+        <sys_created_by>akshat.bari</sys_created_by>
+        <sys_created_on>2026-11-25 07:39:26</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>b20072c5477c9710273a565a516d4320</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>BR-09 Update Change Conflicts Resolved</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Apollo-Hospitals" source="x_2223823_apollo_0">87c1422693c89b507b3a7c5efaba1008</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
+        <sys_update_name>sys_script_b20072c5477c9710273a565a516d4320</sys_update_name>
+        <sys_updated_by>akshat.bari</sys_updated_by>
+        <sys_updated_on>2026-11-25 08:09:56</sys_updated_on>
+        <template/>
+        <when>after</when>
+    </sys_script>
+    <sys_translated_text action="delete_multiple" query="documentkey=b20072c5477c9710273a565a516d4320"/>
+</record_update>

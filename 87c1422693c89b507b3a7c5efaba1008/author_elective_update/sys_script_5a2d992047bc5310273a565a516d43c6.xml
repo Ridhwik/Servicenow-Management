@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script">
+    <sys_script action="DELETE">
+        <abort_action>false</abort_action>
+        <access>package_private</access>
+        <action_delete>false</action_delete>
+        <action_insert>false</action_insert>
+        <action_query>false</action_query>
+        <action_update>true</action_update>
+        <active>true</active>
+        <add_message>false</add_message>
+        <advanced>true</advanced>
+        <change_fields>false</change_fields>
+        <client_callable>false</client_callable>
+        <collection>change_request</collection>
+        <condition/>
+        <description/>
+        <execute_function>false</execute_function>
+        <filter_condition table="change_request">stateCHANGESTO-2^type!=emergency^EQ<item display_value="Scheduled" endquery="false" field="state" goto="false" newquery="false" operator="CHANGESTO" or="false" value="-2"/>
+            <item display_value="Emergency" endquery="false" field="type" goto="false" newquery="false" operator="!=" or="false" value="emergency"/>
+            <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
+        </filter_condition>
+        <is_rest>false</is_rest>
+        <message/>
+        <name>BR-09 Change Conflict Gate</name>
+        <order>100</order>
+        <priority>100</priority>
+        <rest_method/>
+        <rest_method_text/>
+        <rest_service/>
+        <rest_service_text/>
+        <rest_variables/>
+        <role_conditions/>
+        <script><![CDATA[(function executeRule(current, previous /*null when async*/) {
+    var count = parseInt(current.getValue('conflict_count') || '0', 10);
+    var resolved = (current.getValue('conflicts_resolved') == '1' || current.getValue('conflicts_resolved') === true);
+
+    // If change request is flagged with unresolved conflicts, block immediately
+    if (!resolved || count > 0) {
+        var msg = '<b>Cannot move Change Request to Scheduled:</b><br/>' +
+            'There are <b>' + count + '</b> unresolved booking conflict(s) on equipment ' +
+            current.cmdb_ci.getDisplayValue() + ' during this maintenance window.<br/>' +
+            'Please use the <b>Resolve Conflicts</b> button to resolve all affected bookings before confirming the schedule.';
+        gs.addErrorMessage(msg);
+        current.setAbortAction(true);
+    }
+})(current, previous);]]></script>
+        <sys_class_name>sys_script</sys_class_name>
+        <sys_created_by>akshat.bari</sys_created_by>
+        <sys_created_on>2026-11-23 12:16:11</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>5a2d992047bc5310273a565a516d43c6</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_name>BR-09 Change Conflict Gate</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Apollo-Hospitals" source="x_2223823_apollo_0">87c1422693c89b507b3a7c5efaba1008</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
+        <sys_update_name>sys_script_5a2d992047bc5310273a565a516d43c6</sys_update_name>
+        <sys_updated_by>akshat.bari</sys_updated_by>
+        <sys_updated_on>2026-11-24 09:21:33</sys_updated_on>
+        <template/>
+        <when>before</when>
+    </sys_script>
+    <sys_translated_text action="DELETE" query="documentkey=5a2d992047bc5310273a565a516d43c6"/>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</application>
+        <file_path/>
+        <instance_id>5ada7edb93d06e50d9f6ddd548373c9d</instance_id>
+        <instance_name>dev304851</instance_name>
+        <name>sys_script_5a2d992047bc5310273a565a516d43c6</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update sys_domain="global" table="sys_script"&gt;&lt;sys_script action="INSERT_OR_UPDATE"&gt;&lt;abort_action&gt;false&lt;/abort_action&gt;&lt;access&gt;package_private&lt;/access&gt;&lt;action_delete&gt;false&lt;/action_delete&gt;&lt;action_insert&gt;false&lt;/action_insert&gt;&lt;action_query&gt;false&lt;/action_query&gt;&lt;action_update&gt;true&lt;/action_update&gt;&lt;active&gt;true&lt;/active&gt;&lt;add_message&gt;false&lt;/add_message&gt;&lt;advanced&gt;true&lt;/advanced&gt;&lt;change_fields&gt;false&lt;/change_fields&gt;&lt;client_callable&gt;false&lt;/client_callable&gt;&lt;collection&gt;change_request&lt;/collection&gt;&lt;condition/&gt;&lt;description/&gt;&lt;execute_function&gt;false&lt;/execute_function&gt;&lt;filter_condition table="change_request"&gt;stateCHANGESTO-2^type!=emergency^EQ&lt;item display_value="Scheduled" endquery="false" field="state" goto="false" newquery="false" operator="CHANGESTO" or="false" value="-2"/&gt;&lt;item display_value="Emergency" endquery="false" field="type" goto="false" newquery="false" operator="!=" or="false" value="emergency"/&gt;&lt;item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/&gt;&lt;/filter_condition&gt;&lt;is_rest&gt;false&lt;/is_rest&gt;&lt;message/&gt;&lt;name&gt;BR-09 Change Conflict Gate&lt;/name&gt;&lt;order&gt;100&lt;/order&gt;&lt;priority&gt;100&lt;/priority&gt;&lt;rest_method/&gt;&lt;rest_method_text/&gt;&lt;rest_service/&gt;&lt;rest_service_text/&gt;&lt;rest_variables/&gt;&lt;role_conditions/&gt;&lt;script&gt;&lt;![CDATA[(function executeRule(current, previous /*null when async*/) {
+    var count = parseInt(current.getValue('conflict_count') || '0', 10);
+    var resolved = (current.getValue('conflicts_resolved') == '1' || current.getValue('conflicts_resolved') === true);
+
+    // If change request is flagged with unresolved conflicts, block immediately
+    if (!resolved || count &gt; 0) {
+        var msg = '&lt;b&gt;Cannot move Change Request to Scheduled:&lt;/b&gt;&lt;br/&gt;' +
+            'There are &lt;b&gt;' + count + '&lt;/b&gt; unresolved booking conflict(s) on equipment ' +
+            current.cmdb_ci.getDisplayValue() + ' during this maintenance window.&lt;br/&gt;' +
+            'Please use the &lt;b&gt;Resolve Conflicts&lt;/b&gt; button to resolve all affected bookings before confirming the schedule.';
+        gs.addErrorMessage(msg);
+        current.setAbortAction(true);
+    }
+})(current, previous);]]&gt;&lt;/script&gt;&lt;sys_class_name&gt;sys_script&lt;/sys_class_name&gt;&lt;sys_created_by&gt;akshat.bari&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2026-11-23 12:16:11&lt;/sys_created_on&gt;&lt;sys_domain&gt;global&lt;/sys_domain&gt;&lt;sys_domain_path&gt;/&lt;/sys_domain_path&gt;&lt;sys_id&gt;5a2d992047bc5310273a565a516d43c6&lt;/sys_id&gt;&lt;sys_mod_count&gt;4&lt;/sys_mod_count&gt;&lt;sys_name&gt;BR-09 Change Conflict Gate&lt;/sys_name&gt;&lt;sys_overrides/&gt;&lt;sys_package display_value="Apollo-Hospitals" source="x_2223823_apollo_0"&gt;87c1422693c89b507b3a7c5efaba1008&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Apollo-Hospitals"&gt;87c1422693c89b507b3a7c5efaba1008&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_script_5a2d992047bc5310273a565a516d43c6&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;akshat.bari&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2026-11-24 09:21:33&lt;/sys_updated_on&gt;&lt;template/&gt;&lt;when&gt;before&lt;/when&gt;&lt;/sys_script&gt;&lt;sys_translated_text action="delete_multiple" query="documentkey=5a2d992047bc5310273a565a516d43c6"/&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>-1040532957</payload_hash>
+        <record_name>BR-09 Change Conflict Gate</record_name>
+        <reverted_from/>
+        <source>28b9e3cb472c5390273a565a516d430b</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>akshat.bari</sys_created_by>
+        <sys_created_on>2026-11-24 09:21:33</sys_created_on>
+        <sys_id>da2fbdb447f01710273a565a516d43e8</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1a20cdc49be0000001</sys_recorded_at>
+        <sys_updated_by>akshat.bari</sys_updated_by>
+        <sys_updated_on>2026-11-24 09:21:33</sys_updated_on>
+        <type>Business Rule</type>
+        <update_guid>d22fbdb430f01710ed27356de84282e7</update_guid>
+        <update_guid_history>d22fbdb430f01710ed27356de84282e7:-1040532957,2ccef574cef017101b7b717951518bae:-304570678,3ade29fccd301710b1d5cd93b12dab5b:-1040532957,159d996063bc53108372d7af20e0c308:-304570678,b68d19605bbc53102b581387421e7ad6:-1040532957</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>akshat.bari</sys_created_by>
+        <sys_created_on>2026-11-24 10:18:35</sys_created_on>
+        <sys_db_object display_value="" name="sys_script">sys_script</sys_db_object>
+        <sys_id>1093556d334a46a5af3390e1a51ee1b9</sys_id>
+        <sys_metadata>5a2d992047bc5310273a565a516d43c6</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>BR-09 Change Conflict Gate</sys_name>
+        <sys_package display_value="Apollo-Hospitals" source="x_2223823_apollo_0">87c1422693c89b507b3a7c5efaba1008</sys_package>
+        <sys_parent display_value="Change Request">7deea349f077031001ffe61a9d6c4843</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="Apollo-Hospitals">87c1422693c89b507b3a7c5efaba1008</sys_scope>
+        <sys_scope_delete display_value="">1a2f7aa8dfc34e3a86d3f0bede3c2784</sys_scope_delete>
+        <sys_update_name>sys_script_5a2d992047bc5310273a565a516d43c6</sys_update_name>
+        <sys_update_version display_value="sys_script_5a2d992047bc5310273a565a516d43c6">da2fbdb447f01710273a565a516d43e8</sys_update_version>
+        <sys_updated_by>akshat.bari</sys_updated_by>
+        <sys_updated_on>2026-11-24 10:18:35</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>
